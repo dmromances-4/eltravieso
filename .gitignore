@@ -1,0 +1,23 @@
+# Dependencias
+node_modules/
+.next/
+out/
+
+# Entorno
+.env
+.env.local
+.env*.local
+
+# Archivos pesados
+public/images/*
+!public/images/logo.png
+!public/images/hero/*
+public/videos/
+*.psd
+*.ai
+*.zip
+*.rar
+
+# Mac
+.DS_Store
+Thumbs.db
