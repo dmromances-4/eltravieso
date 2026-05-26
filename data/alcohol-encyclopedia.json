@@ -1,0 +1,1063 @@
+[
+  {
+    "id": "SP-001",
+    "family_id": "Spirit>Whisky>Scotch>Single Malt",
+    "category": "Espirituosos",
+    "subcategory": "Whisky",
+    "producer_group": "Edrington Group",
+    "denomination_of_origin": "Scotch Whisky Association",
+    "producer_type": "Destilería de conglomerado",
+    "identity": {
+      "name_exact": "The Macallan 18 Year Old Sherry Oak",
+      "brand": "The Macallan",
+      "producer": "The Macallan Distillery",
+      "country": "Escocia",
+      "region": "Highlands",
+      "sub_region": "Speyside"
+    },
+    "technical": {
+      "raw_material": "Cebada malteada (Hordeum vulgare)",
+      "fermentation_type": "Fermentación alcohólica convencional",
+      "distillation_method": "Alambiques de cobre tipo Pot Still",
+      "abv": 43.0
+    },
+    "chronology": {
+      "vintage": "No vintage (NV)",
+      "maturation_time": "18 años",
+      "barrel_type": "Butt de roble español y roble americano, previamente contenedor de Jerez"
+    },
+    "sensory": {
+      "sight": "Ámbar profundo con reflejos cobrizos",
+      "nose": "Frutos secos, naranja confitada, especias dulces y roble",
+      "palate": "Jerez seco, dátiles, cedro y vainilla"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta demanda global, disponibilidad selectiva",
+      "bottle_formats": [
+        "700 ml",
+        "750 ml",
+        "1 L"
+      ]
+    },
+    "didactic": {
+      "history_context": "Fundada en 1824; reputación construida sobre el uso de barricas de Jerez para malta escocesa.",
+      "mixology_role": "Base",
+      "iconic_cocktails": [
+        "Rob Roy",
+        "Blood and Sand"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Cebada malteada (Hordeum vulgare)",
+      "vessel_type": "Butt de roble español y roble americano, ex-Oloroso",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Single malt de Speyside envejecido en ex-Jerez"
+    },
+    "slug": "the-macallan-18-year-old-sherry-oak"
+  },
+  {
+    "id": "WI-001",
+    "family_id": "Wine>Espumosos>Champagne>Vintage",
+    "category": "Vinos",
+    "subcategory": "Espumosos",
+    "producer_group": "LVMH",
+    "denomination_of_origin": "Champagne AOC",
+    "producer_type": "Bodega de conglomerado",
+    "identity": {
+      "name_exact": "Dom Pérignon 2010",
+      "brand": "Dom Pérignon",
+      "producer": "Moët & Chandon",
+      "country": "Francia",
+      "region": "Champagne",
+      "sub_region": "Montagne de Reims / Côte des Blancs"
+    },
+    "technical": {
+      "raw_material": "Pinot Noir / Chardonnay",
+      "fermentation_type": "Fermentación alcohólica primaria y segunda fermentación en botella (Méthode Champenoise)",
+      "distillation_method": "No aplica",
+      "abv": 12.5
+    },
+    "chronology": {
+      "vintage": "2010",
+      "maturation_time": "Mínimo 8 años sobre lías",
+      "barrel_type": "Crianza sobre lías en botella"
+    },
+    "sensory": {
+      "sight": "Amarillo paja brillante con burbuja fina persistente",
+      "nose": "Flores blancas, brioche, cítricos y mineralidad",
+      "palate": "Fruta blanca, pan tostado y almendra"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta, añada selecta premium",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Nombrado en honor al monje Dom Pérignon; el lanzamiento vintage celebra añadas excepcionales.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Champagne Cocktail",
+        "French 75"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Mezcla de Pinot Noir y Chardonnay",
+      "vessel_type": "Botella de vidrio con crianza sobre lías",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Champagne vintage de referencia"
+    },
+    "slug": "dom-p-rignon-2010"
+  },
+  {
+    "id": "WI-002",
+    "family_id": "Wine>Tranquilo>Rojo>Rioja",
+    "category": "Vinos",
+    "subcategory": "Tranquilos",
+    "producer_group": "Bodega independiente",
+    "denomination_of_origin": "DOCa Rioja",
+    "producer_type": "Bodega independiente",
+    "identity": {
+      "name_exact": "Viña Tondonia Reserva 2011",
+      "brand": "López de Heredia",
+      "producer": "Bodegas R. López de Heredia Viña Tondonia",
+      "country": "España",
+      "region": "La Rioja",
+      "sub_region": "Haro"
+    },
+    "technical": {
+      "raw_material": "Tempranillo / Garnacha / Graciano",
+      "fermentation_type": "Fermentación alcohólica en depósito de roble",
+      "distillation_method": "No aplica",
+      "abv": 13.5
+    },
+    "chronology": {
+      "vintage": "2011",
+      "maturation_time": "3 años en barrica, 3 años en botella",
+      "barrel_type": "Roble americano usado"
+    },
+    "sensory": {
+      "sight": "Rojo granate con ribete teja",
+      "nose": "Frutos rojos secos, cuero, especias y balsámicos",
+      "palate": "Taninos redondos, tabaco, vainilla y madera suave"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta en canales internacionales por stock limitado",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Casa fundada en 1877, promotora del envejecimiento largo en barrica y botella para Rioja tradicional.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Sangría tradicional",
+        "Tinto de verano"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Mezcla de Tempranillo, Garnacha y Graciano",
+      "vessel_type": "Barrica de roble americano usado",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Rioja clásica de larga crianza"
+    },
+    "slug": "vi-a-tondonia-reserva-2011"
+  },
+  {
+    "id": "WI-003",
+    "family_id": "Wine>Fortificado>Port>Ruby/Tawny",
+    "category": "Vinos",
+    "subcategory": "Fortificados",
+    "producer_group": "Fladgate Partnership",
+    "denomination_of_origin": "Porto / Douro DOC",
+    "producer_type": "Casa de vinos fortificados",
+    "identity": {
+      "name_exact": "Taylor Fladgate 20 Year Old Tawny Port",
+      "brand": "Taylor Fladgate",
+      "producer": "Taylor Fladgate",
+      "country": "Portugal",
+      "region": "Douro",
+      "sub_region": "Upper Douro"
+    },
+    "technical": {
+      "raw_material": "Vinhas do Douro (Touriga Nacional, Touriga Franca, Tinta Roriz, Tinta Barroca)",
+      "fermentation_type": "Fermentación parcial seguida de fortificación con aguardente vínica",
+      "distillation_method": "No aplica",
+      "abv": 20.0
+    },
+    "chronology": {
+      "vintage": "Blend de añadas seleccionadas",
+      "maturation_time": "20 años en barrica",
+      "barrel_type": "Roble americano y europeo usado"
+    },
+    "sensory": {
+      "sight": "Ámbar profundo con reflejos caoba",
+      "nose": "Nuez, toffee, higos secos y especias dulces",
+      "palate": "Caramelo, frutos secos, roble suave y final persistente"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Muy alta en la categoría de tawnies premium",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Porto envejecido en madera por décadas para desarrollar complejidad cromática y aromática.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Port Old Fashioned",
+        "Port & Tonic"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Blend de uvas del Douro",
+      "vessel_type": "Barricas de roble americano y europeo usadas",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Tawny port de 20 años de la región del Douro"
+    },
+    "slug": "taylor-fladgate-20-year-old-tawny-port"
+  },
+  {
+    "id": "SP-002",
+    "family_id": "Spirit>Tequila>Tequila>Añejo",
+    "category": "Espirituosos",
+    "subcategory": "Tequila",
+    "producer_group": "Diageo",
+    "denomination_of_origin": "Tequila Appellation of Origin",
+    "producer_type": "Destilería de conglomerado",
+    "identity": {
+      "name_exact": "Don Julio 1942",
+      "brand": "Don Julio",
+      "producer": "Casa Don Julio",
+      "country": "México",
+      "region": "Jalisco",
+      "sub_region": "Valle de Tequila"
+    },
+    "technical": {
+      "raw_material": "Agave azul (Agave tequilana Weber azul)",
+      "fermentation_type": "Fermentación alcohólica en tinas de acero inoxidable",
+      "distillation_method": "Doble destilación en alambiques de cobre",
+      "abv": 38.0
+    },
+    "chronology": {
+      "vintage": "No vintage (NV)",
+      "maturation_time": "Mínimo 2.5 años",
+      "barrel_type": "Barricas de roble blanco americano"
+    },
+    "sensory": {
+      "sight": "Dorado claro",
+      "nose": "Chocolate con leche, vainilla, agave cocido y notas de chile seco",
+      "palate": "Caramelo, especias dulces y final suave ligeramente ahumado"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta en el segmento premium de tequila añejo",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Lanzado para honrar la primera cosecha de agave de Don Julio González y su legado de suavidad en añejos.",
+      "mixology_role": "Base",
+      "iconic_cocktails": [
+        "Tequila Old Fashioned",
+        "Añejo Margarita"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Agave azul (Agave tequilana Weber azul)",
+      "vessel_type": "Barricas de roble blanco americano",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Tequila de lujo con maduración prolongada"
+    },
+    "slug": "don-julio-1942"
+  },
+  {
+    "id": "SP-003",
+    "family_id": "Spirit>Mezcal>Oaxaca>Joven",
+    "category": "Espirituosos",
+    "subcategory": "Mezcal",
+    "producer_group": "Grupo Del Maguey",
+    "denomination_of_origin": "Mezcal DO",
+    "producer_type": "Destilería independiente",
+    "identity": {
+      "name_exact": "Del Maguey Vida",
+      "brand": "Del Maguey",
+      "producer": "Del Maguey Single Village Mezcal",
+      "country": "México",
+      "region": "Oaxaca",
+      "sub_region": "Sierra Madre del Sur"
+    },
+    "technical": {
+      "raw_material": "Agave espadín (Agave angustifolia)",
+      "fermentation_type": "Fermentación natural en tina de madera",
+      "distillation_method": "Alambique de cobre tipo olla",
+      "abv": 42.0
+    },
+    "chronology": {
+      "vintage": "No vintage (NV)",
+      "maturation_time": "No en barrica, reposo en tanque",
+      "barrel_type": "No aplica"
+    },
+    "sensory": {
+      "sight": "Transparente",
+      "nose": "Humo ligero, hierbas, cítricos y tierra húmeda",
+      "palate": "Agave asado, pimienta blanca y final vegetal"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Disponibilidad amplia para mezcal artesanal",
+      "bottle_formats": [
+        "700 ml",
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Pionero en la trazabilidad de mezcales de pueblo, destacando la singularidad de cada región.",
+      "mixology_role": "Modificador",
+      "iconic_cocktails": [
+        "Mezcal Negroni",
+        "Oaxacan Old Fashioned"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Agave espadín (Agave angustifolia)",
+      "vessel_type": "Tanques de acero inoxidable",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Mezcal joven de pueblo con perfil ahumado suave"
+    },
+    "slug": "del-maguey-vida"
+  },
+  {
+    "id": "SP-004",
+    "family_id": "Spirit>Whisky>American>Bourbon",
+    "category": "Espirituosos",
+    "subcategory": "Bourbon",
+    "producer_group": "Beam Suntory",
+    "denomination_of_origin": "Bourbon (Estados Unidos)",
+    "producer_type": "Destilería de conglomerado",
+    "identity": {
+      "name_exact": "Maker's Mark 46",
+      "brand": "Maker's Mark",
+      "producer": "Maker's Mark Distillery",
+      "country": "Estados Unidos",
+      "region": "Kentucky",
+      "sub_region": "Loretto"
+    },
+    "technical": {
+      "raw_material": "Maíz, cebada malteada, centeno",
+      "fermentation_type": "Fermentación alcohólica de mosto dulce",
+      "distillation_method": "Destilación en columnas y alambique",
+      "abv": 47.0
+    },
+    "chronology": {
+      "vintage": "No vintage (NV)",
+      "maturation_time": "Mínimo 6 años en barrica",
+      "barrel_type": "Barricas de roble blanco americano tostado"
+    },
+    "sensory": {
+      "sight": "Ámbar oscuro",
+      "nose": "Vainilla, caramelo tostado, especias y roble dulce",
+      "palate": "Dulzor de maíz, canela, chocolate negro y final cálido"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta, disponible globalmente en la categoría premium",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Producido en Loretto con la técnica propia de añadir vigas de roble francés a las barricas para intensificar el sabor.",
+      "mixology_role": "Base",
+      "iconic_cocktails": [
+        "Old Fashioned",
+        "Boulevardier"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Maíz, cebada malteada, centeno",
+      "vessel_type": "Barrica de roble blanco americano tostado con vigas de roble francés",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Bourbon de acabado especial con roble francés"
+    },
+    "slug": "maker-s-mark-46"
+  },
+  {
+    "id": "BE-001",
+    "family_id": "Beer>Ale>American IPA",
+    "category": "Cervezas",
+    "subcategory": "Ale",
+    "producer_group": "Cervecería independiente",
+    "denomination_of_origin": "Sin DO formal",
+    "producer_type": "Cervecería craft independiente",
+    "identity": {
+      "name_exact": "Sierra Nevada Pale Ale",
+      "brand": "Sierra Nevada",
+      "producer": "Sierra Nevada Brewing Co.",
+      "country": "Estados Unidos",
+      "region": "California",
+      "sub_region": "Chico"
+    },
+    "technical": {
+      "raw_material": "Malta de cebada, lúpulo Cascade",
+      "fermentation_type": "Fermentación alta Ale",
+      "distillation_method": "No aplica",
+      "abv": 5.6
+    },
+    "chronology": {
+      "vintage": "No aplica",
+      "maturation_time": "Maduración en tanque de acero inoxidable",
+      "barrel_type": "No aplica"
+    },
+    "sensory": {
+      "sight": "Ámbar brillante con espuma cremosa",
+      "nose": "Cítricos, pino y malta dulce",
+      "palate": "Amargor equilibrado, lúpulo fresco y notas de caramelo"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Amplia disponibilidad global",
+      "bottle_formats": [
+        "355 ml",
+        "650 ml",
+        "Caja 12 x 355 ml",
+        "Keg"
+      ]
+    },
+    "didactic": {
+      "history_context": "Una de las cervezas que ayudó a definir la IPA americana y el movimiento craft de los años 80.",
+      "mixology_role": "Base",
+      "iconic_cocktails": [
+        "Michelada",
+        "Beer Shandy"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Malta de cebada, lúpulo Cascade",
+      "vessel_type": "Tanques de acero inoxidable",
+      "master_creator": "Ken Grossman (fundador)",
+      "history_context_short": "IPA americana emblemática del movimiento craft"
+    },
+    "slug": "sierra-nevada-pale-ale"
+  },
+  {
+    "id": "BE-002",
+    "family_id": "Beer>Trappist>Belgian Quadrupel",
+    "category": "Cervezas",
+    "subcategory": "Trappist",
+    "producer_group": "Brouwerij Westvleteren",
+    "denomination_of_origin": "Trappist",
+    "producer_type": "Monasterio trapense",
+    "identity": {
+      "name_exact": "Westvleteren 12",
+      "brand": "Westvleteren",
+      "producer": "Sint-Sixtusabdij van Westvleteren",
+      "country": "Bélgica",
+      "region": "Flandes Occidental",
+      "sub_region": "Westvleteren"
+    },
+    "technical": {
+      "raw_material": "Malta de cebada, trigo malteado, azúcar candi",
+      "fermentation_type": "Fermentación alta Ale",
+      "distillation_method": "No aplica",
+      "abv": 10.2
+    },
+    "chronology": {
+      "vintage": "No aplica",
+      "maturation_time": "Maduración en botella",
+      "barrel_type": "No aplica"
+    },
+    "sensory": {
+      "sight": "Marrón oscuro con espuma beige",
+      "nose": "Pasas, caramelo oscuro, café y especias",
+      "palate": "Frutas maduras, chocolate y final seco con madera"
+    },
+    "market": {
+      "production_status": "En producción limitada",
+      "rarity": "Muy alta debido a la producción controlada monástica",
+      "bottle_formats": [
+        "330 ml",
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Cerveza elaborada por monjes trapenses con distribución limitada y reputación de calidad.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Stout Float",
+        "Trappist Beer Cocktail"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Mezcla de maltas y azúcar candi",
+      "vessel_type": "Maduración en botella",
+      "master_creator": "Monjes trapenses de Westvleteren",
+      "history_context_short": "Quadrupel trapense extremadamente rara"
+    },
+    "slug": "westvleteren-12"
+  },
+  {
+    "id": "LI-001",
+    "family_id": "Liqueur>Herbal>Chartreuse>Green",
+    "category": "Licores",
+    "subcategory": "Herbales",
+    "producer_group": "Monasterio de la Cartuja",
+    "denomination_of_origin": "Chartreuse (indicación protegida)",
+    "producer_type": "Destilería monástica",
+    "identity": {
+      "name_exact": "Chartreuse Verte",
+      "brand": "Chartreuse",
+      "producer": "Les Pères Chartreux",
+      "country": "Francia",
+      "region": "Auvernia-Ródano-Alpes",
+      "sub_region": "Grande Chartreuse"
+    },
+    "technical": {
+      "raw_material": "Alcohol neutro con destilado de 130 hierbas y plantas",
+      "fermentation_type": "No aplica",
+      "distillation_method": "Destilación a vapor de macerado",
+      "abv": 55.0
+    },
+    "chronology": {
+      "vintage": "No vintage (NV)",
+      "maturation_time": "Reposo en alambique y maduración en tanque de madera",
+      "barrel_type": "Tanques de madera"
+    },
+    "sensory": {
+      "sight": "Verde brillante",
+      "nose": "Hierbas aromáticas, anís, menta y canela",
+      "palate": "Pimienta, regaliz, limón y persistente dulzor herbal"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta visibilidad global, producción controlada",
+      "bottle_formats": [
+        "700 ml",
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Receta monástica del siglo XVIII elaborada por los cartujos de la Gran Cartuja.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Last Word",
+        "Bijou"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Alcohol neutro y 130 hierbas y plantas",
+      "vessel_type": "Tanques de madera",
+      "master_creator": "Cartujos monjes",
+      "history_context_short": "Elixir herbal monástico secreto"
+    },
+    "slug": "chartreuse-verte"
+  },
+  {
+    "id": "RF-001",
+    "family_id": "Fermented>Pulque>Traditional>Mexican",
+    "category": "Elixires y Bebidas Fermentadas Regionales",
+    "subcategory": "Pulque",
+    "producer_group": "Productor tradicional",
+    "denomination_of_origin": "Pulque (bebida tradicional mexicana)",
+    "producer_type": "Productor artesanal",
+    "identity": {
+      "name_exact": "Pulque tradicional de Tlacolula",
+      "brand": "Pulque artesanal",
+      "producer": "Cooperativa regional",
+      "country": "México",
+      "region": "Oaxaca",
+      "sub_region": "Tlacolula"
+    },
+    "technical": {
+      "raw_material": "Aguamiel de agave (varias especies)",
+      "fermentation_type": "Fermentación espontánea con levaduras indígenas",
+      "distillation_method": "No aplica",
+      "abv": "Pendiente de Validación Oficial"
+    },
+    "chronology": {
+      "vintage": "No aplica",
+      "maturation_time": "Fermentación corta (24–72 horas)",
+      "barrel_type": "No aplica"
+    },
+    "sensory": {
+      "sight": "Blanco lechoso cremoso",
+      "nose": "Dulzor lácteo, notas de hongo y maíz",
+      "palate": "Acidez suave, textura cremosa y final ligeramente ácido"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Común en regiones de producción, rara fuera de México",
+      "bottle_formats": [
+        "Servicio en vaso local",
+        "Jarabe de 1 L",
+        "Recipientes de arcilla"
+      ]
+    },
+    "didactic": {
+      "history_context": "Bebida prehispánica fermentada del agave, con papel ritual y comunitario en México central.",
+      "mixology_role": "Modificador",
+      "iconic_cocktails": [
+        "Pulque Margarita",
+        "Pulque Sour"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Aguamiel de agave",
+      "vessel_type": "Recipientes de madera o fibra natural",
+      "master_creator": "Productor artesanal local",
+      "history_context_short": "Bebida fermentada tradicional mexicana"
+    },
+    "slug": "pulque-tradicional-de-tlacolula"
+  },
+  {
+    "id": "RF-002",
+    "family_id": "Fermented>Chicha>Jora>Andina",
+    "category": "Elixires y Bebidas Fermentadas Regionales",
+    "subcategory": "Chicha de jora",
+    "producer_group": "Productor regional",
+    "denomination_of_origin": "Chicha de jora (tradición andina)",
+    "producer_type": "Productor artesanal",
+    "identity": {
+      "name_exact": "Chicha de jora artesanal",
+      "brand": "Chicha andina",
+      "producer": "Comunidad campesina",
+      "country": "Perú",
+      "region": "Andes",
+      "sub_region": "Valle Sagrado"
+    },
+    "technical": {
+      "raw_material": "Maíz amarillo germinado",
+      "fermentation_type": "Fermentación espontánea con levaduras indígenas",
+      "distillation_method": "No aplica",
+      "abv": "Pendiente de Validación Oficial"
+    },
+    "chronology": {
+      "vintage": "No aplica",
+      "maturation_time": "Fermentación corta en 1–3 días",
+      "barrel_type": "No aplica"
+    },
+    "sensory": {
+      "sight": "Amarillo pajizo turbio",
+      "nose": "Maíz cocido, pan salvado y notas florales",
+      "palate": "Dulzor suave, ligera acidez y textura cremosa"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Común en producción local, muy rara en exportación",
+      "bottle_formats": [
+        "Servicio en vaso regional",
+        "Botella de vidrio local"
+      ]
+    },
+    "didactic": {
+      "history_context": "Bebida tradicional inca usada en festividades agrícolas y ofrendas comunitarias.",
+      "mixology_role": "Modificador",
+      "iconic_cocktails": [
+        "Chicha Punch",
+        "Andean Spritz"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Maíz amarillo germinado",
+      "vessel_type": "Tinas de cerámica o madera",
+      "master_creator": "Comunidad productora local",
+      "history_context_short": "Chicha ancestral andina"
+    },
+    "slug": "chicha-de-jora-artesanal"
+  },
+  {
+    "id": "RF-003",
+    "family_id": "Fermented>Sake>Junmai Daiginjo>Premium",
+    "category": "Elixires y Bebidas Fermentadas Regionales",
+    "subcategory": "Sake",
+    "producer_group": "Asahi Breweries",
+    "denomination_of_origin": "Sake (Nihonshu)",
+    "producer_type": "Bodega de sake tradicional",
+    "identity": {
+      "name_exact": "Dassai 23 Junmai Daiginjo",
+      "brand": "Dassai",
+      "producer": "Asahi Shuzo Co., Ltd.",
+      "country": "Japón",
+      "region": "Yamaguchi",
+      "sub_region": "Iwakuni"
+    },
+    "technical": {
+      "raw_material": "Arroz Yamada Nishiki pulido al 23%",
+      "fermentation_type": "Fermentación alcohólica con koji y levaduras de sake",
+      "distillation_method": "No aplica",
+      "abv": 16.0
+    },
+    "chronology": {
+      "vintage": "No vintage (NV)",
+      "maturation_time": "Reposo corto en frío tras filtrado",
+      "barrel_type": "No aplica"
+    },
+    "sensory": {
+      "sight": "Transparente con ligeros reflejos oro pálido",
+      "nose": "Melón, pera, flor de cerezo y notas herbales",
+      "palate": "Suave, elegante, con dulce de arroz y acidez delicada"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta en exportación, limitado por la selección de arroz premium",
+      "bottle_formats": [
+        "720 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Representa la categoría Junmai Daiginjo de sake moderno, enfocada en arroz altamente pulido y fermentación delicada.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Sake Martini",
+        "Sake Spritz"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Arroz Yamada Nishiki pulido al 23%",
+      "vessel_type": "No aplica",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Sake premium de arroz pulido extremo"
+    },
+    "slug": "dassai-23-junmai-daiginjo"
+  },
+  {
+    "id": "SP-005",
+    "family_id": "Spirit>Cognac>Grande Champagne>VSOP",
+    "category": "Espirituosos",
+    "subcategory": "Cognac",
+    "producer_group": "LVMH",
+    "denomination_of_origin": "AOC Cognac",
+    "producer_type": "Casa de coñac de conglomerado",
+    "identity": {
+      "name_exact": "Hennessy VSOP Privilege",
+      "brand": "Hennessy",
+      "producer": "Hennessy",
+      "country": "Francia",
+      "region": "Cognac",
+      "sub_region": "Grande Champagne"
+    },
+    "technical": {
+      "raw_material": "Uvas blancas (principalmente Ugni Blanc)",
+      "fermentation_type": "Fermentación alcohólica de vino base",
+      "distillation_method": "Alambiques Charentais de cobre",
+      "abv": 40.0
+    },
+    "chronology": {
+      "vintage": "NV",
+      "maturation_time": "Mínimo 4 años en roble",
+      "barrel_type": "Barricas de roble francés usadas"
+    },
+    "sensory": {
+      "sight": "Ámbar claro con reflejos dorados",
+      "nose": "Canela, vainilla, frutas maduras y almendras",
+      "palate": "Frutos secos, naranja confitada, roble y final especiado"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta, producto global de categoría VSOP",
+      "bottle_formats": [
+        "700 ml",
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Hennessy es una casa pionera de cognac con raíces en el siglo XVIII y uno de los emblemas de LVMH.",
+      "mixology_role": "Base",
+      "iconic_cocktails": [
+        "Sidecar",
+        "Vieux Carré"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Ugni Blanc y otras variedades blancas de Cognac",
+      "vessel_type": "Barricas de roble francés usado",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Cognac clásico de LVMH con crianza en roble francés"
+    },
+    "slug": "hennessy-vsop-privilege"
+  },
+  {
+    "id": "SP-006",
+    "family_id": "Spirit>Whisky>Scotch>Blended",
+    "category": "Espirituosos",
+    "subcategory": "Whisky",
+    "producer_group": "Diageo",
+    "denomination_of_origin": "Scotch Whisky Association",
+    "producer_type": "Destilería de conglomerado",
+    "identity": {
+      "name_exact": "Chivas Regal 12 Year Old",
+      "brand": "Chivas Regal",
+      "producer": "Chivas Brothers",
+      "country": "Escocia",
+      "region": "Highlands",
+      "sub_region": "Blend regional"
+    },
+    "technical": {
+      "raw_material": "Cebada malteada y cebada de grano",
+      "fermentation_type": "Fermentación alcohólica de malta y grano",
+      "distillation_method": "Alambiques de cobre Pot Still y columnas de destilación",
+      "abv": 40.0
+    },
+    "chronology": {
+      "vintage": "12 años",
+      "maturation_time": "12 años en roble",
+      "barrel_type": "Barricas de roble americano y europeo usadas"
+    },
+    "sensory": {
+      "sight": "Dorado brillante",
+      "nose": "Miel, manzana, vainilla y especias suaves",
+      "palate": "Fruta madura, caramelo, chocolate con leche y final suave"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Amplia disponibilidad global",
+      "bottle_formats": [
+        "700 ml",
+        "750 ml",
+        "1 L"
+      ]
+    },
+    "didactic": {
+      "history_context": "Chivas Regal es un blend escocés emblemático de la casa Chivas Brothers, propiedad de Diageo.",
+      "mixology_role": "Base",
+      "iconic_cocktails": [
+        "Whisky Sour",
+        "Rusty Nail"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Cebada malteada y cebada de grano",
+      "vessel_type": "Barricas de roble americano y europeo usadas",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Blend de Diageo de estilo suave y cremoso"
+    },
+    "slug": "chivas-regal-12-year-old"
+  },
+  {
+    "id": "SP-007",
+    "family_id": "Spirit>Tequila>Tequila>Añejo",
+    "category": "Espirituosos",
+    "subcategory": "Tequila",
+    "producer_group": "Bacardi",
+    "denomination_of_origin": "Tequila Appellation of Origin",
+    "producer_type": "Destilería de conglomerado",
+    "identity": {
+      "name_exact": "Patrón Añejo",
+      "brand": "Patrón",
+      "producer": "Patrón Spirits Company",
+      "country": "México",
+      "region": "Jalisco",
+      "sub_region": "Valle de Tequila"
+    },
+    "technical": {
+      "raw_material": "Agave azul (Agave tequilana Weber azul)",
+      "fermentation_type": "Fermentación alcohólica en tanques de acero inoxidable",
+      "distillation_method": "Destilación doble en alambiques de cobre",
+      "abv": 40.0
+    },
+    "chronology": {
+      "vintage": "No vintage (NV)",
+      "maturation_time": "Mínimo 12 meses en roble",
+      "barrel_type": "Barricas de roble blanco americano"
+    },
+    "sensory": {
+      "sight": "Ámbar suave",
+      "nose": "Vainilla, caramelo, roble y cítricos maduros",
+      "palate": "Agave cocido, fruta seca, especias dulces y final equilibrado"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta visibilidad global en la categoría de tequila premium",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Patrón fue uno de los primeros tequilas de lujo en posicionarse globalmente bajo Bacardi.",
+      "mixology_role": "Base",
+      "iconic_cocktails": [
+        "Añejo Margarita",
+        "Tequila Old Fashioned"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Agave azul (Agave tequilana Weber azul)",
+      "vessel_type": "Barricas de roble blanco americano",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Tequila añejo de Bacardi con perfil dulce y suave"
+    },
+    "slug": "patr-n-a-ejo"
+  },
+  {
+    "id": "WI-004",
+    "family_id": "Wine>Tranquilo>Rojo>Ribera del Duero",
+    "category": "Vinos",
+    "subcategory": "Tranquilos",
+    "producer_group": "Tempos Vega Sicilia",
+    "denomination_of_origin": "DO Ribera del Duero",
+    "producer_type": "Bodega de alta gama",
+    "identity": {
+      "name_exact": "Vega Sicilia Único 2015",
+      "brand": "Vega Sicilia",
+      "producer": "Bodegas Vega Sicilia",
+      "country": "España",
+      "region": "Castilla y León",
+      "sub_region": "Ribera del Duero"
+    },
+    "technical": {
+      "raw_material": "Tempranillo, Cabernet Sauvignon",
+      "fermentation_type": "Fermentación alcohólica en depósitos de acero inoxidable y roble",
+      "distillation_method": "No aplica",
+      "abv": 14.0
+    },
+    "chronology": {
+      "vintage": "2015",
+      "maturation_time": "Entre 10 y 12 años en barrica y botella",
+      "barrel_type": "Barricas de roble francés usadas"
+    },
+    "sensory": {
+      "sight": "Rojo profundo con reflejos púrpura",
+      "nose": "Frutos negros, cuero, tierra húmeda, balsámicos y cedro",
+      "palate": "Taninos firmes, fruta negra, tabaco y silicio mineral"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Muy alta, uno de los vinos más codiciados de España",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Único es el buque insignia de Vega Sicilia, referencia del envejecimiento prolongado en Ribera del Duero.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Tinto de verano premium",
+        "Vega Sicilia Spritz"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Tempranillo y Cabernet Sauvignon",
+      "vessel_type": "Barricas de roble francés usadas",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Vino de culto de Ribera del Duero con crianza histórica"
+    },
+    "slug": "vega-sicilia-nico-2015"
+  },
+  {
+    "id": "WI-005",
+    "family_id": "Wine>Tranquilo>Rojo>Barolo",
+    "category": "Vinos",
+    "subcategory": "Tranquilos",
+    "producer_group": "Bodega independiente",
+    "denomination_of_origin": "DOCG Barolo",
+    "producer_type": "Bodega independiente",
+    "identity": {
+      "name_exact": "Pio Cesare Barolo 2016",
+      "brand": "Pio Cesare",
+      "producer": "Cantina Pio Cesare",
+      "country": "Italia",
+      "region": "Piamonte",
+      "sub_region": "Barolo"
+    },
+    "technical": {
+      "raw_material": "Nebbiolo",
+      "fermentation_type": "Fermentación alcohólica en acero inoxidable y roble",
+      "distillation_method": "No aplica",
+      "abv": 14.5
+    },
+    "chronology": {
+      "vintage": "2016",
+      "maturation_time": "Mínimo 24 meses en barrica, más de 12 meses en botella",
+      "barrel_type": "Barricas de roble francés"
+    },
+    "sensory": {
+      "sight": "Rojo granate con borde anaranjado",
+      "nose": "Rosas, alquitrán, cereza negra y tierra seca",
+      "palate": "Taninos firmes, ciruela, especias y final persistente"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Alta dentro de Barolo de calidad tradicional",
+      "bottle_formats": [
+        "750 ml"
+      ]
+    },
+    "didactic": {
+      "history_context": "Pio Cesare es una de las casas históricas de Barolo, fundada a principios del siglo XIX.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Italian Red Spritz",
+        "Barolo Old Fashioned"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Nebbiolo",
+      "vessel_type": "Barricas de roble francés",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Barolo DOCG clásico con envejecimiento tradicional"
+    },
+    "slug": "pio-cesare-barolo-2016"
+  },
+  {
+    "id": "LI-002",
+    "family_id": "Liqueur>Bitter>Aperitif>Italian",
+    "category": "Licores",
+    "subcategory": "Amaro aperitivo",
+    "producer_group": "Campari Group",
+    "denomination_of_origin": "No DO formal",
+    "producer_type": "Destilería de conglomerado",
+    "identity": {
+      "name_exact": "Campari",
+      "brand": "Campari",
+      "producer": "Davide Campari-Milano S.p.A.",
+      "country": "Italia",
+      "region": "Lombardía",
+      "sub_region": "Milán"
+    },
+    "technical": {
+      "raw_material": "Alcohol neutro infusionado con hierbas, fruta y especias",
+      "fermentation_type": "No aplica",
+      "distillation_method": "Maceración y filtración",
+      "abv": 25.0
+    },
+    "chronology": {
+      "vintage": "No aplica",
+      "maturation_time": "Reposo en tanques tras maceración",
+      "barrel_type": "No aplica"
+    },
+    "sensory": {
+      "sight": "Rojo brillante transparente",
+      "nose": "Naranja amarga, hierbas, especias y cedro",
+      "palate": "Amargo, cítrico, floral y final seco"
+    },
+    "market": {
+      "production_status": "En producción",
+      "rarity": "Extremadamente disponible globalmente",
+      "bottle_formats": [
+        "700 ml",
+        "750 ml",
+        "1 L"
+      ]
+    },
+    "didactic": {
+      "history_context": "Campari es el aperitivo italiano icónico del siglo XX con una receta constante de extractos botánicos.",
+      "mixology_role": "Acentuador",
+      "iconic_cocktails": [
+        "Negroni",
+        "Americano"
+      ]
+    },
+    "advanced": {
+      "raw_material": "Alcohol neutro con cítricos, hierbas y especias",
+      "vessel_type": "Tanques de acero inoxidable",
+      "master_creator": "Pendiente de Validación Oficial",
+      "history_context_short": "Aperitivo italiano de Campari Group"
+    },
+    "slug": "campari"
+  }
+]

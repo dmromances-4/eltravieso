@@ -1,0 +1,64 @@
+import prisma from '@/lib/prisma'
+import Link from 'next/link'
+
+export default async function AdminDashboardPage() {
+  const productsCount = await prisma.product.count()
+  const usersCount = await prisma.user.count()
+  const blogPostsCount = await prisma.blogPost.count()
+
+  return (
+    <div className="space-y-12">
+      <div className="mb-8">
+        <h1 className="text-4xl font-display font-bold tracking-tight text-white mb-2">Dashboard</h1>
+        <p className="text-slate-400">Resumen general de tu tienda y contenido.</p>
+      </div>
+
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        {/* Products Stat */}
+        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-neon relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,204,0,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+          <div className="relative z-10">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Productos</h2>
+            <p className="text-5xl font-display font-bold text-white mb-6">{productsCount}</p>
+            <Link href="/admin/products" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-electric-yellow transition-colors hover:text-white">
+              Gestionar →
+            </Link>
+          </div>
+        </div>
+
+        {/* Users Stat */}
+        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(0,163,224,0.1)] relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,163,224,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+          <div className="relative z-10">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Usuarios Registrados</h2>
+            <p className="text-5xl font-display font-bold text-white mb-6">{usersCount}</p>
+          </div>
+        </div>
+
+        {/* Blog Stat */}
+        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(239,68,68,0.1)] relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(239,68,68,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+          <div className="relative z-10">
+            <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Blog Posts</h2>
+            <p className="text-5xl font-display font-bold text-white mb-6">{blogPostsCount}</p>
+            <Link href="/admin/blog" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-red-500 transition-colors hover:text-white">
+              Editar Blog →
+            </Link>
+          </div>
+        </div>
+      </div>
+      
+      <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 mt-12">
+        <h2 className="text-2xl font-display font-bold text-white mb-6">Acciones Rápidas</h2>
+        <div className="flex flex-wrap gap-4">
+          <Link href="/admin/products/new" className="rounded-full bg-electric-yellow px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110">
+            + Nuevo Producto
+          </Link>
+          <Link href="/admin/blog/new" className="rounded-full border border-white/20 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:border-white/40">
+            + Nueva Entrada Blog
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

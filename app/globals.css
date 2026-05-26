@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    color-scheme: dark;
+    --background: #0F0F0F;
+    --foreground: #F8F8F8;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0f0f0f 0%, #080808 100%);
+    color: var(--foreground);
+    /* Custom scrollbar */
+    &::-webkit-scrollbar {
+      width: 10px;
+    }
+    &::-webkit-scrollbar-track {
+      background: #0F0F0F;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #272727;
+      border-radius: 5px;
+      &:hover {
+        background: #FFCC00;
+      }
+    }
+  }
+
+  #__next {
+    isolation: isolate;
+  }
+
+  ::selection {
+    background: #FFCC00;
+    color: #0F0F0F;
+  }
+
+  button, input, textarea, select {
+    font: inherit;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer utilities {
+  .glass-panel {
+    @apply bg-[#111111]/80 backdrop-blur-md border border-white/10;
+  }
+  
+  .neon-focus {
+    @apply focus:outline-none focus:ring-1 focus:ring-electric-yellow focus:border-electric-yellow transition-all;
+  }
+}
+
+@layer components {
+  /* Toggle Switch for Cookie Banner */
+  .toggle-checkbox:checked {
+    right: 0;
+    border-color: #FFCC00;
+  }
+  .toggle-checkbox:checked + .toggle-label {
+    background-color: #FFCC00;
+  }
+  .toggle-checkbox {
+    right: 0;
+    z-index: 1;
+    border-color: #272727;
+    transition: all 0.3s;
+  }
+  .toggle-label {
+    width: 3rem;
+    height: 1.5rem;
+    background-color: #272727;
+    border-radius: 9999px;
+    transition: all 0.3s;
+  }
+}
