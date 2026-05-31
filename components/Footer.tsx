@@ -17,8 +17,9 @@ export default function Footer() {
           <div>
             <h3 className="text-sm font-semibold uppercase tracking-[0.2em] text-white mb-6">Navegación</h3>
             <ul className="space-y-4 text-sm">
-              <li><Link href="/cocteles" className="hover:text-electric-yellow transition-colors">Cócteles</Link></li>
-              <li><Link href="/alcoholes" className="hover:text-electric-yellow transition-colors">Alcoholes</Link></li>
+              <li><Link href="/cuenta" className="hover:text-electric-yellow transition-colors">Mi cuenta</Link></li>
+              <li><Link href="/recetas" className="hover:text-electric-yellow transition-colors">Recetas</Link></li>
+              <li><Link href="/pro/tech-generator" className="hover:text-electric-yellow transition-colors">Barra IA</Link></li>
               <li><Link href="/shop" className="hover:text-electric-yellow transition-colors">Shop</Link></li>
               <li><Link href="/blog" className="hover:text-electric-yellow transition-colors">Blog</Link></li>
             </ul>

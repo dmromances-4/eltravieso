@@ -1,4 +1,4 @@
-// File: /Users/daniromances/Documents/Proyects/Ecomerce Vermut/app/layout.tsx
+// File: /Users/daniromances/Documents/Proyects/Ecomerce/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

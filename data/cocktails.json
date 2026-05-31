@@ -1,11 +1,12 @@
 [
   {
-    "title": "Sweet Martini",
-    "slug": "sweet-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 40,
     "glass": "Serve in a Martini glass",
     "ingredients": [
-      "75 ml Hayman's London Dry Gin\n- 15 ml Strucchi Rosso Vermouth"
+      "75 ml Hayman's London Dry Gin",
+      "15 ml Strucchi Rosso Vermouth"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -13,12 +14,13 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Vermouth & Soda",
-    "slug": "vermouth-soda",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 12,
     "glass": "Photographed in an Urban Bar Fluet Old Fashioned 34cl",
     "ingredients": [
-      "60 ml Strucchi Rosso Vermouth chilled\n- 60 ml Thomas Henry Soda Water chilled"
+      "60 ml Strucchi Rosso Vermouth chilled",
+      "60 ml Thomas Henry Soda Water chilled"
     ],
     "method": "Select and pre-chill an OLD-FASHIONED GLASS.\nPrepare garnish of half orange slice wheel skewered with green olive.\nPOUR all ingredients into ice-filled glass.\nGarnish with orange slice skewered with olive.",
     "abv": "No especificado",
@@ -26,12 +28,18 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Sweet Manhattan (batched recipe)",
-    "slug": "sweet-manhattan-batched-recipe",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 9,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "300 ml Bourbon whiskey\n- 300 ml Straight rye whiskey (100 proof /50% alc./vol.)\n- 300 ml Strucchi Rosso Vermouth\n- 25 ml Luxardo Maraschino liqueur\n- 25 ml Heering Cherry Liqueur\n- 10 ml Angostura Aromatic Bitters\n- 5 ml Peychaud's or other Creole-style bitters"
+      "300 ml Bourbon whiskey",
+      "300 ml Straight rye whiskey (100 proof /50% alc./vol.)",
+      "300 ml Strucchi Rosso Vermouth",
+      "25 ml Luxardo Maraschino liqueur",
+      "25 ml Heering Cherry Liqueur",
+      "10 ml Angostura Aromatic Bitters",
+      "5 ml Peychaud's or other Creole-style bitters"
     ],
     "method": "COMBINE all ingredients and stir (without ice).\nPOUR into a litre bottle and leave to chill in a refrigerator.\nTo serve, STIR 2 shots / 2oz / 60ml of the bottled mixture with ice and strain into chilled glass.",
     "abv": "No especificado",
@@ -39,12 +47,18 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Sweet Virginia",
-    "slug": "sweet-virginia",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 7,
     "glass": "Photographed in an Urban Bar Alto Coupe 18cl",
     "ingredients": [
-      "45 ml Bourbon whiskey\n- 20 ml Heering Cherry Liqueur\n- 15 ml Ferrand Dry Curaçao\n- 15 ml Strucchi Rosso Vermouth\n- 15 ml Pineapple juice\n- 1 dash Boker's style bitters\n- 1 dash Peychaud's or other Creole-style bitters"
+      "45 ml Bourbon whiskey",
+      "20 ml Heering Cherry Liqueur",
+      "15 ml Ferrand Dry Curaçao",
+      "15 ml Strucchi Rosso Vermouth",
+      "15 ml Pineapple juice",
+      "1 dash Boker's style bitters",
+      "1 dash Peychaud's or other Creole-style bitters"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -52,12 +66,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Manhattan (Sweet)",
-    "slug": "manhattan-sweet",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 528,
     "glass": "Photographed in an UB Retro Coupe Gold 7.75oz",
     "ingredients": [
-      "45 ml Bourbon whiskey\n- 15 ml Straight rye whiskey (100 proof /50% alc./vol.)\n- 30 ml Strucchi Rosso Vermouth\n- 1 dash Angostura Aromatic Bitters"
+      "45 ml Bourbon whiskey",
+      "15 ml Straight rye whiskey (100 proof /50% alc./vol.)",
+      "30 ml Strucchi Rosso Vermouth",
+      "1 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -65,12 +82,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "High Ryeser",
-    "slug": "high-ryeser",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 222,
     "glass": "Photographed in an UB Retro Coupe 1910",
     "ingredients": [
-      "45 ml Straight rye whiskey (100 proof /50% alc./vol.)\n- 45 ml Strucchi Rosso Vermouth\n- 1 dash Angostura Aromatic Bitters"
+      "45 ml Straight rye whiskey (100 proof /50% alc./vol.)",
+      "45 ml Strucchi Rosso Vermouth",
+      "1 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -78,12 +97,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Manhattan (Sweet with Bitter Chocolate)",
-    "slug": "manhattan-sweet-with-bitter-chocolate",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 79,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "60 ml Bourbon whiskey\n- 22.5 ml Strucchi Rosso Vermouth\n- 5 ml De Kuyper Brown Crème de Cacao\n- 5 ml Luxardo Maraschino liqueur\n- 6 drop Bob's Chocolate bitters"
+      "60 ml Bourbon whiskey",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "5 ml De Kuyper Brown Crème de Cacao",
+      "5 ml Luxardo Maraschino liqueur",
+      "6 drop Bob's Chocolate bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -91,12 +114,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Negroni Cocktail",
-    "slug": "negroni-cocktail",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 1519,
     "glass": "Photographed in an Urban Bar Fluet Old Fashioned 34cl",
     "ingredients": [
-      "30 ml Hayman's London Dry Gin\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Strucchi Rosso Vermouth"
+      "30 ml Hayman's London Dry Gin",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth"
     ],
     "method": "POUR all ingredients into ice-filled glass.\nSTIR.",
     "abv": "No especificado",
@@ -104,12 +129,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Fridge Negroni",
-    "slug": "fridge-negroni",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 15,
     "glass": "Serve in a Bottle",
     "ingredients": [
-      "30 ml Hayman's London Dry Gin\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Strucchi Rosso Vermouth\n- 10 ml Chilled water"
+      "30 ml Hayman's London Dry Gin",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth",
+      "10 ml Chilled water"
     ],
     "method": "Use the serve number selector (below the ingredients) to set the number of serves you want in your pre-batch. (x7 serves is recommended as this will fill a standard bottle – see below for x7 volumes and weights).\nPOUR all ingredients into a clean, resealable 70cl or 75cl bottle.\nSeal the bottle and turn/shake to ensure the integration of ingredients.\nPlace in a refrigerator to chill for at least 4 hours prior to serving.\nFor each Individual serve: POUR 100ml into an ice-filled old-fashioned glass.",
     "abv": "No especificado",
@@ -117,12 +145,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Million Dollar Cocktail",
-    "slug": "million-dollar-cocktail",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 56,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Hayman's London Dry Gin\n- 22.5 ml Strucchi Rosso Vermouth chilled\n- 15 ml Pineapple juice\n- 7.5 ml Grenadine/pomegranate syrup\n- 15 ml Egg white (pasteurised) or Vegg White vegan egg white alternative\n- 2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s"
+      "45 ml Hayman's London Dry Gin",
+      "22.5 ml Strucchi Rosso Vermouth chilled",
+      "15 ml Pineapple juice",
+      "7.5 ml Grenadine/pomegranate syrup",
+      "15 ml Egg white (pasteurised) or Vegg White vegan egg white alternative",
+      "2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s"
     ],
     "method": "SHAKE all ingredients with ice and strain back into shaker.\nDRY SHAKE (without ice).\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -130,12 +163,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Man O' War",
-    "slug": "man-o-war",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 879,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Bourbon whiskey\n- 15 ml De Kuyper Triple Sec (40%)\n- 15 ml Strucchi Rosso Vermouth\n- 15 ml Lemon juice (freshly squeezed)\n- 2.5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix) optional\n- 3 drop Saline solution (20g sea salt to 80g water) or merest pinch of s optional"
+      "45 ml Bourbon whiskey",
+      "15 ml De Kuyper Triple Sec (40%)",
+      "15 ml Strucchi Rosso Vermouth",
+      "15 ml Lemon juice (freshly squeezed)",
+      "2.5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix) optional",
+      "3 drop Saline solution (20g sea salt to 80g water) or merest pinch of s optional"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -143,12 +181,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "J & Tony's Hot Negroni",
-    "slug": "j-tony-s-hot-negroni",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 30,
     "glass": "Serve in a Toddy glass",
     "ingredients": [
-      "15 ml Hayman's London Dry Gin\n- 15 ml Strucchi Red Bitter (Campari-style liqueur)\n- 15 ml Strucchi Rosso Vermouth\n- 5 ml Lemon juice (freshly squeezed)\n- 5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)\n- 80 ml Boiling water"
+      "15 ml Hayman's London Dry Gin",
+      "15 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "15 ml Strucchi Rosso Vermouth",
+      "5 ml Lemon juice (freshly squeezed)",
+      "5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)",
+      "80 ml Boiling water"
     ],
     "method": "Select and pre-heat a TODDY GLASS.\nPrepare garnish of orange zest twist.\nPOUR all ingredients into pre-warmed heat-proof glass.\nEXPRESS orange zest twist over the cocktail and use as garnish.",
     "abv": "No especificado",
@@ -156,12 +199,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Old Flame",
-    "slug": "old-flame",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 195,
     "glass": "Serve in a Martini glass",
     "ingredients": [
-      "30 ml Hayman's London Dry Gin\n- 15 ml De Kuyper Triple Sec (40%)\n- 15 ml Strucchi Rosso Vermouth\n- 15 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Orange juice (freshly squeezed)"
+      "30 ml Hayman's London Dry Gin",
+      "15 ml De Kuyper Triple Sec (40%)",
+      "15 ml Strucchi Rosso Vermouth",
+      "15 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Orange juice (freshly squeezed)"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -169,12 +216,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Marianito",
-    "slug": "marianito",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 58,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "75 ml Strucchi Rosso Vermouth\n- 15 ml Hayman's London Dry Gin\n- 15 ml Strucchi Red Bitter (Campari-style liqueur)\n- 3 dash Angostura Aromatic Bitters\n- 2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s"
+      "75 ml Strucchi Rosso Vermouth",
+      "15 ml Hayman's London Dry Gin",
+      "15 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "3 dash Angostura Aromatic Bitters",
+      "2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass.",
     "abv": "No especificado",
@@ -182,12 +233,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Adonis",
-    "slug": "adonis",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 56,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "30 ml Lustau Palo Cortado Península Sherry\n- 30 ml Lustau Amontillado Los Arcos Sherry\n- 30 ml Strucchi Rosso Vermouth\n- 2.5 ml Strucchi Red Bitter (Campari-style liqueur)"
+      "30 ml Lustau Palo Cortado Península Sherry",
+      "30 ml Lustau Amontillado Los Arcos Sherry",
+      "30 ml Strucchi Rosso Vermouth",
+      "2.5 ml Strucchi Red Bitter (Campari-style liqueur)"
     ],
     "method": "THROW (or STIR) all ingredients with ice.\nSTRAIN into chilled glass.",
     "abv": "No especificado",
@@ -195,12 +249,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Flying Scotsman",
-    "slug": "flying-scotsman",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 158,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "50 ml Blended Scotch whisky\n- 45 ml Strucchi Rosso Vermouth\n- 5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)\n- 2 dash Angostura Aromatic Bitters"
+      "50 ml Blended Scotch whisky",
+      "45 ml Strucchi Rosso Vermouth",
+      "5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)",
+      "2 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -208,12 +265,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Hearst Martini",
-    "slug": "hearst-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 40,
     "glass": "Serve in a Martini glass",
     "ingredients": [
-      "45 ml Hayman's London Dry Gin from freezer\n- 45 ml Strucchi Rosso Vermouth chilled\n- 2 dash Orange Bitters by Angostura\n- 1 dash Angostura Aromatic Bitters"
+      "45 ml Hayman's London Dry Gin from freezer",
+      "45 ml Strucchi Rosso Vermouth chilled",
+      "2 dash Orange Bitters by Angostura",
+      "1 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -221,12 +281,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Italian G&T",
-    "slug": "italian-g-t",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 73,
     "glass": "Photographed in an Urban Bar Fluet Highball Gold Rim 45cl",
     "ingredients": [
-      "60 ml Hayman's London Dry Gin\n- 15 ml Strucchi Red Bitter (Campari-style liqueur)\n- 15 ml Strucchi Rosso Vermouth\n- 90 ml Thomas Henry Tonic Water"
+      "60 ml Hayman's London Dry Gin",
+      "15 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "15 ml Strucchi Rosso Vermouth",
+      "90 ml Thomas Henry Tonic Water"
     ],
     "method": "POUR all ingredients into chilled glass.\nFILL glass with ice.",
     "abv": "No especificado",
@@ -234,12 +297,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Disco Mi-To",
-    "slug": "disco-mi-to",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 17,
     "glass": "Photographed in an Urban Bar Retro Optic Coupette 15cl",
     "ingredients": [
-      "45 ml Ketel One Vodka\n- 22.5 ml Strucchi Red Bitter (Campari-style liqueur)\n- 22.5 ml Strucchi Rosso Vermouth chilled\n- 2 dash Orange Bitters by Angostura"
+      "45 ml Ketel One Vodka",
+      "22.5 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "22.5 ml Strucchi Rosso Vermouth chilled",
+      "2 dash Orange Bitters by Angostura"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into chilled glass.",
     "abv": "No especificado",
@@ -247,12 +313,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Americano",
-    "slug": "americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 477,
     "glass": "Serve in a Collins glass",
     "ingredients": [
-      "45 ml Strucchi Red Bitter (Campari-style liqueur)\n- 45 ml Strucchi Rosso Vermouth\n- 75 ml Thomas Henry Soda Water"
+      "45 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "45 ml Strucchi Rosso Vermouth",
+      "75 ml Thomas Henry Soda Water"
     ],
     "method": "POUR all ingredients into ice-filled glass.\nBriefly STIR.",
     "abv": "No especificado",
@@ -260,12 +328,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Gin & It",
-    "slug": "gin-it",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 133,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "52.5 ml Hayman's London Dry Gin\n- 22.5 ml Strucchi Rosso Vermouth\n- 1 dash Orange Bitters by Angostura"
+      "52.5 ml Hayman's London Dry Gin",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "1 dash Orange Bitters by Angostura"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass. (Or if serving on-the-rocks, strain into ice-filled old-fashioned glass, preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -273,12 +343,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Milano",
-    "slug": "milano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 93,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "30 ml Ketel One Vodka\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Strucchi Rosso Vermouth"
+      "30 ml Ketel One Vodka",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass.",
     "abv": "No especificado",
@@ -286,12 +358,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Scotch Negroni",
-    "slug": "scotch-negroni",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 142,
     "glass": "Photographed in an UB Ginza Old Fashioned 10.5oz",
     "ingredients": [
-      "40 ml Blended Scotch whisky\n- 30 ml Strucchi Rosso Vermouth\n- 20 ml Strucchi Red Bitter (Campari-style liqueur)"
+      "40 ml Blended Scotch whisky",
+      "30 ml Strucchi Rosso Vermouth",
+      "20 ml Strucchi Red Bitter (Campari-style liqueur)"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -299,12 +373,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Boulevardier Cocktail",
-    "slug": "boulevardier-cocktail",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 757,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "45 ml Bourbon whiskey\n- 22.5 ml Strucchi Rosso Vermouth\n- 22.5 ml Strucchi Red Bitter (Campari-style liqueur)"
+      "45 ml Bourbon whiskey",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "22.5 ml Strucchi Red Bitter (Campari-style liqueur)"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -312,12 +388,13 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Vermuttino",
-    "slug": "vermuttino",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 15,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "60 ml Strucchi Rosso Vermouth\n- 60 ml Thomas Henry Soda Water"
+      "60 ml Strucchi Rosso Vermouth",
+      "60 ml Thomas Henry Soda Water"
     ],
     "method": "POUR ingredients into chilled glass and fill with ice.",
     "abv": "No especificado",
@@ -325,12 +402,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Red Manhattan",
-    "slug": "red-manhattan",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 42,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "60 ml Bourbon whiskey\n- 30 ml Strucchi Rosso Vermouth\n- 7.5 ml Claret wine (Bordeaux red)\n- 5 ml Luxardo Maraschino liqueur\n- 2 dash Angostura Aromatic Bitters"
+      "60 ml Bourbon whiskey",
+      "30 ml Strucchi Rosso Vermouth",
+      "7.5 ml Claret wine (Bordeaux red)",
+      "5 ml Luxardo Maraschino liqueur",
+      "2 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -338,12 +419,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Four Poster Red",
-    "slug": "four-poster-red",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 5,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "30 ml Strucchi Rosso Vermouth\n- 30 ml Dolin Chamberyzette\n- 30 ml Cockburn's Tawny Eyes Port\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)"
+      "30 ml Strucchi Rosso Vermouth",
+      "30 ml Dolin Chamberyzette",
+      "30 ml Cockburn's Tawny Eyes Port",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)"
     ],
     "method": "Select and pre-chill an OLD-FASHIONED GLASS.\nPrepare garnish of Luxardo Maraschino Cherry or strawberry.\nSTIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -351,12 +435,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Redwood Heights",
-    "slug": "redwood-heights",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 93,
     "glass": "Photographed in an Urban Bar Alto Coupe 18cl",
     "ingredients": [
-      "3 dash La Fée Parisienne absinthe\n- 60 ml Hayman's London Dry Gin\n- 30 ml Strucchi Rosso Vermouth\n- 15 ml Cynar or other carciofo amaro\n- 1 dash Orange Bitters by Angostura"
+      "3 dash La Fée Parisienne absinthe",
+      "60 ml Hayman's London Dry Gin",
+      "30 ml Strucchi Rosso Vermouth",
+      "15 ml Cynar or other carciofo amaro",
+      "1 dash Orange Bitters by Angostura"
     ],
     "method": "RINSE chilled glass with absinthe and discard excess.\nSTIR other ingredients with ice.\nSTRAIN into absinthe-rinsed glass.",
     "abv": "No especificado",
@@ -364,12 +452,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Negroni Tredici",
-    "slug": "negroni-tredici",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 119,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "60 ml Hayman's London Dry Gin\n- 7.5 ml Cynar or other carciofo amaro\n- 7.5 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Strucchi Rosso Vermouth"
+      "60 ml Hayman's London Dry Gin",
+      "7.5 ml Cynar or other carciofo amaro",
+      "7.5 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -377,12 +468,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Dutch Count Negroni / Red Light Negron",
-    "slug": "dutch-count-negroni-red-light-negron",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 44,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "30 ml Oude genever\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Strucchi Rosso Vermouth"
+      "30 ml Oude genever",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth"
     ],
     "method": "POUR ingredients into ice-filled glass.\nSTIR.",
     "abv": "No especificado",
@@ -390,12 +483,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "1794",
-    "slug": "1794",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 27,
     "glass": "Photographed in an Urban Bar 1910 Retro Coupette 15cl",
     "ingredients": [
-      "45 ml Straight rye whiskey (100 proof /50% alc./vol.)\n- 22.5 ml Strucchi Rosso Vermouth\n- 22.5 ml Strucchi Red Bitter (Campari-style liqueur)\n- 1 dash Xocolatl mole bitters optional"
+      "45 ml Straight rye whiskey (100 proof /50% alc./vol.)",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "22.5 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "1 dash Xocolatl mole bitters optional"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into chilled glass.",
     "abv": "No especificado",
@@ -403,12 +499,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Bamboo Cocktail (Stuart's 1904 recipe)",
-    "slug": "bamboo-cocktail-stuart-s-1904-recipe",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 26,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "60 ml Lustau Jarana Fino Sherry\n- 30 ml Strucchi Rosso Vermouth\n- 1 dash Orange Bitters by Angostura"
+      "60 ml Lustau Jarana Fino Sherry",
+      "30 ml Strucchi Rosso Vermouth",
+      "1 dash Orange Bitters by Angostura"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -416,12 +514,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Bijou Cocktail (inspired by Lawlor's 1895 recipe)",
-    "slug": "bijou-cocktail-inspired-by-lawlor-s-1895-recipe",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 120,
     "glass": "Photographed in a Waterford Mixology Coupe Clear",
     "ingredients": [
-      "45 ml Hayman's London Dry Gin\n- 22.5 ml Grand Marnier or other cognac orange liqueur\n- 22.5 ml Strucchi Rosso Vermouth"
+      "45 ml Hayman's London Dry Gin",
+      "22.5 ml Grand Marnier or other cognac orange liqueur",
+      "22.5 ml Strucchi Rosso Vermouth"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -429,12 +529,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Copenhagen Cocktail 1939",
-    "slug": "copenhagen-cocktail-1939",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 69,
     "glass": "Photographed in a Bespoke Nick & Nora",
     "ingredients": [
-      "22.5 ml Hayman's London Dry Gin\n- 22.5 ml Heering Cherry Liqueur\n- 22.5 ml Strucchi Rosso Vermouth\n- 7.5 ml Lemon juice (freshly squeezed)\n- 2 dash Angostura Aromatic Bitters"
+      "22.5 ml Hayman's London Dry Gin",
+      "22.5 ml Heering Cherry Liqueur",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "7.5 ml Lemon juice (freshly squeezed)",
+      "2 dash Angostura Aromatic Bitters"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -442,12 +546,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Italian Dandy",
-    "slug": "italian-dandy",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 24,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Liquore Strega\n- 45 ml Strucchi Rosso Vermouth\n- 30 ml Ferrand Dry Curaçao\n- 2 dash Angostura Aromatic Bitters"
+      "45 ml Liquore Strega",
+      "45 ml Strucchi Rosso Vermouth",
+      "30 ml Ferrand Dry Curaçao",
+      "2 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -455,12 +562,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Commedia All'italiana",
-    "slug": "commedia-all-italiana",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 25,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "25 ml Strucchi Red Bitter (Campari-style liqueur)\n- 25 ml Aperitivo Luxardo (Aperol-style liqueur)\n- 25 ml Strucchi Rosso Vermouth\n- 15 ml Nonino Il Moscato Grappa Monovitigno\n- 15 ml Luxardo Maraschino liqueur"
+      "25 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "25 ml Aperitivo Luxardo (Aperol-style liqueur)",
+      "25 ml Strucchi Rosso Vermouth",
+      "15 ml Nonino Il Moscato Grappa Monovitigno",
+      "15 ml Luxardo Maraschino liqueur"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into chilled glass.",
     "abv": "No especificado",
@@ -468,12 +579,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Caffè American Italiano",
-    "slug": "caff-american-italiano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 1,
     "glass": "Photographed in an UB Ginza Old Fashioned 10.5oz",
     "ingredients": [
-      "37.5 ml Hayman's London Dry Gin\n- 37.5 ml Strucchi Rosso Vermouth chilled\n- 10 ml Exprè Caffè Italiano (or freshly made hot Espresso Coffee)"
+      "37.5 ml Hayman's London Dry Gin",
+      "37.5 ml Strucchi Rosso Vermouth chilled",
+      "10 ml Exprè Caffè Italiano (or freshly made hot Espresso Coffee)"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -481,12 +594,18 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "The Burly French Man",
-    "slug": "the-burly-french-man",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 4,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "5 ml La Fée Parisienne absinthe\n- 50 ml Cognac (brandy)\n- 20 ml Strucchi Rosso Vermouth\n- 20 ml Green Chartreuse (or alternative herbal liqueur)\n- 10 ml Damson liqueur\n- 1 dash Orange Bitters by Angostura\n- 1 dash Angostura Aromatic Bitters"
+      "5 ml La Fée Parisienne absinthe",
+      "50 ml Cognac (brandy)",
+      "20 ml Strucchi Rosso Vermouth",
+      "20 ml Green Chartreuse (or alternative herbal liqueur)",
+      "10 ml Damson liqueur",
+      "1 dash Orange Bitters by Angostura",
+      "1 dash Angostura Aromatic Bitters"
     ],
     "method": "RINSE chilled glass with absinthe and set to one side. STIR other ingredients with ice and strain into absinthe rinsed glass.",
     "abv": "No especificado",
@@ -494,12 +613,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Orange Bloom Martini",
-    "slug": "orange-bloom-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 64,
     "glass": "Serve in a Martini glass",
     "ingredients": [
-      "45 ml Hayman's London Dry Gin\n- 22.5 ml De Kuyper Triple Sec (40%)\n- 22.5 ml Strucchi Rosso Vermouth"
+      "45 ml Hayman's London Dry Gin",
+      "22.5 ml De Kuyper Triple Sec (40%)",
+      "22.5 ml Strucchi Rosso Vermouth"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -507,12 +628,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Army Martini",
-    "slug": "army-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 48,
     "glass": "Photographed in a Speakeasy Martini 5.75oz",
     "ingredients": [
-      "75 ml Hayman's London Dry Gin\n- 7.5 ml Strucchi Rosso Vermouth\n- 7.5 ml Grenadine/pomegranate syrup"
+      "75 ml Hayman's London Dry Gin",
+      "7.5 ml Strucchi Rosso Vermouth",
+      "7.5 ml Grenadine/pomegranate syrup"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -520,12 +643,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Martini Special",
-    "slug": "martini-special",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 26,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "60 ml Hayman's London Dry Gin\n- 22.5 ml Strucchi Rosso Vermouth\n- 1.25 ml Orange blossom water / Orange flower water\n- 2 dash La Fée Parisienne absinthe\n- 1 dash Angostura Aromatic Bitters"
+      "60 ml Hayman's London Dry Gin",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "1.25 ml Orange blossom water / Orange flower water",
+      "2 dash La Fée Parisienne absinthe",
+      "1 dash Angostura Aromatic Bitters"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -533,12 +660,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "After Midnight Martini",
-    "slug": "after-midnight-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 4,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "22.5 ml Ketel One Vodka\n- 22.5 ml De Kuyper Crème de Cafe\n- 22.5 ml Strucchi Rosso Vermouth chilled\n- 15 ml Lustau San Emilio Pedro Ximénez Sherry chilled\n- 15 ml Egg white (pasteurised) or Vegg White vegan egg white alternative"
+      "22.5 ml Ketel One Vodka",
+      "22.5 ml De Kuyper Crème de Cafe",
+      "22.5 ml Strucchi Rosso Vermouth chilled",
+      "15 ml Lustau San Emilio Pedro Ximénez Sherry chilled",
+      "15 ml Egg white (pasteurised) or Vegg White vegan egg white alternative"
     ],
     "method": "SHAKE all ingredients with ice and strain back into shaker.\nDRY SHAKE (without ice) to emulsify.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -546,12 +677,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Wonky Martini",
-    "slug": "wonky-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 5,
     "glass": "Serve in a Martini glass",
     "ingredients": [
-      "60 ml Vanilla flavoured vodka\n- 15 ml Tuaca liqueur\n- 22.5 ml Strucchi Rosso Vermouth\n- 2 dash Bob's Grapefruit Bitters"
+      "60 ml Vanilla flavoured vodka",
+      "15 ml Tuaca liqueur",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "2 dash Bob's Grapefruit Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -559,12 +693,18 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Raspberry Deluxe Martini",
-    "slug": "raspberry-deluxe-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 6,
     "glass": "Photographed in a Modern America Martini",
     "ingredients": [
-      "8 fresh Raspberries\n- 45 ml Ketel One Vodka\n- 15 ml Framboise/raspberry eau-de-vie\n- 10 ml Strucchi Rosso Vermouth\n- 7.5 ml Giffard Crème de Framboise\n- 5 ml Pomegranate molasses\n- 2 dash Orange Bitters by Angostura"
+      "8 fresh Raspberries",
+      "45 ml Ketel One Vodka",
+      "15 ml Framboise/raspberry eau-de-vie",
+      "10 ml Strucchi Rosso Vermouth",
+      "7.5 ml Giffard Crème de Framboise",
+      "5 ml Pomegranate molasses",
+      "2 dash Orange Bitters by Angostura"
     ],
     "method": "MUDDLE raspberries in base of shaker.\nAdd other ingredients.\nSHAKE with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -572,12 +712,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Black Coffee Martini",
-    "slug": "black-coffee-martini",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 1,
     "glass": "Photographed in a Speakeasy Martini 5.75oz",
     "ingredients": [
-      "40 ml Cacao & coffee spiced rum\n- 5 ml Crème brulée/caramel syrups\n- 5 ml Caramel sugar syrup\n- 10 ml Coffee Schnapps liqueur\n- 15 ml Strucchi Rosso Vermouth\n- 35 ml Exprè Caffè Italiano (or freshly made hot Espresso Coffee)"
+      "40 ml Cacao & coffee spiced rum",
+      "5 ml Crème brulée/caramel syrups",
+      "5 ml Caramel sugar syrup",
+      "10 ml Coffee Schnapps liqueur",
+      "15 ml Strucchi Rosso Vermouth",
+      "35 ml Exprè Caffè Italiano (or freshly made hot Espresso Coffee)"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -585,12 +730,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Ruby 'Martini' #2",
-    "slug": "ruby-martini-2",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 12,
     "glass": "Serve in a Martini glass",
     "ingredients": [
-      "45 ml Cognac (brandy)\n- 15 ml De Kuyper Triple Sec (40%)\n- 15 ml Giffard Crème de Framboise\n- 15 ml Strucchi Rosso Vermouth"
+      "45 ml Cognac (brandy)",
+      "15 ml De Kuyper Triple Sec (40%)",
+      "15 ml Giffard Crème de Framboise",
+      "15 ml Strucchi Rosso Vermouth"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -598,12 +746,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Americano Branco (Ferroviario)",
-    "slug": "americano-branco-ferroviario",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 27,
     "glass": "Serve in a Highball (max 10oz/300ml)",
     "ingredients": [
-      "25 ml Fernet Branca liqueur\n- 37.5 ml Strucchi Rosso Vermouth\n- 67.5 ml Thomas Henry Soda Water"
+      "25 ml Fernet Branca liqueur",
+      "37.5 ml Strucchi Rosso Vermouth",
+      "67.5 ml Thomas Henry Soda Water"
     ],
     "method": "Select and pre-chill a HIGHBALL (MAX 10OZ/300ML) GLASS.\nPrepare garnish of lemon zest twist.\nPOUR ingredients into ice-filled glass.\nEXPRESS lemon zest twist over the cocktail and use as garnish.",
     "abv": "No especificado",
@@ -611,12 +761,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Blood and Sand (Classic formula)",
-    "slug": "blood-and-sand-classic-formula",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 276,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "22.5 ml Blended Scotch whisky\n- 22.5 ml Heering Cherry Liqueur\n- 22.5 ml Strucchi Rosso Vermouth\n- 22.5 ml Orange juice (freshly squeezed)"
+      "22.5 ml Blended Scotch whisky",
+      "22.5 ml Heering Cherry Liqueur",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "22.5 ml Orange juice (freshly squeezed)"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -624,12 +777,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Stanley Tucci's Negroni",
-    "slug": "stanley-tucci-s-negroni",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 20,
     "glass": "Photographed in an Urban Bar Alto Coupe 18cl",
     "ingredients": [
-      "45 ml Hayman's London Dry Gin\n- 22.5 ml Strucchi Red Bitter (Campari-style liqueur)\n- 22.5 ml Carpano Antica Formula Vermouth"
+      "45 ml Hayman's London Dry Gin",
+      "22.5 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "22.5 ml Carpano Antica Formula Vermouth"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -637,12 +792,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Tequila Negroni",
-    "slug": "tequila-negroni",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 22,
     "glass": "Photographed in an UB Koto Old Fashioned 30cl",
     "ingredients": [
-      "30 ml Patrón Reposado tequila\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Carpano Antica Formula Vermouth"
+      "30 ml Patrón Reposado tequila",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Carpano Antica Formula Vermouth"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -650,12 +807,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Capitano",
-    "slug": "capitano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 12,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Strucchi Red Bitter (Campari-style liqueur)\n- 45 ml Carpano Antica Formula Vermouth\n- 15 ml Lemon juice (freshly squeezed)\n- 5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)"
+      "45 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "45 ml Carpano Antica Formula Vermouth",
+      "15 ml Lemon juice (freshly squeezed)",
+      "5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -663,12 +823,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Precursory Cocktail",
-    "slug": "precursory-cocktail",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 37,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Cockburn's Tawny Eyes Port\n- 45 ml Carpano Antica Formula Vermouth\n- 7.5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)\n- 5 ml Lemon juice (freshly squeezed)\n- 3 dash Angostura Aromatic Bitters\n- 3 dash Orange Bitters by Angostura optional"
+      "45 ml Cockburn's Tawny Eyes Port",
+      "45 ml Carpano Antica Formula Vermouth",
+      "7.5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)",
+      "5 ml Lemon juice (freshly squeezed)",
+      "3 dash Angostura Aromatic Bitters",
+      "3 dash Orange Bitters by Angostura optional"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -676,12 +841,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "New Orleans Minute",
-    "slug": "new-orleans-minute",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 74,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "7.5 ml Del Maguey Vida Clásico Mezcal\n- 50 ml Patrón Reposado tequila\n- 20 ml Carpano Antica Formula Vermouth\n- 15 ml Luxardo Maraschino liqueur\n- 5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)\n- 2 dash Orange Bitters by Angostura"
+      "7.5 ml Del Maguey Vida Clásico Mezcal",
+      "50 ml Patrón Reposado tequila",
+      "20 ml Carpano Antica Formula Vermouth",
+      "15 ml Luxardo Maraschino liqueur",
+      "5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)",
+      "2 dash Orange Bitters by Angostura"
     ],
     "method": "RINSE glass with mezcal (swirl around to coat and discard excess) and set to one side.\nSTIR other ingredients with ice.\nSTRAIN into mezcal rinsed glass.",
     "abv": "No especificado",
@@ -689,12 +859,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Negroni Flip",
-    "slug": "negroni-flip",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 20,
     "glass": "Photographed in an UB Retro Coupe Gold 7.75oz",
     "ingredients": [
-      "30 ml Hayman's London Dry Gin\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Carpano Antica Formula Vermouth\n- 2.5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)\n- 2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s\n- 1 whole Egg (white & yolk)"
+      "30 ml Hayman's London Dry Gin",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Carpano Antica Formula Vermouth",
+      "2.5 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)",
+      "2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s",
+      "1 whole Egg (white & yolk)"
     ],
     "method": "DRY SHAKE all ingredients (without ice) to emulsify.\nSHAKE again with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -702,12 +877,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Game Set Match",
-    "slug": "game-set-match",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 95,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "50 ml Bourbon whiskey\n- 15 ml Carpano Antica Formula Vermouth\n- 15 ml Cynar or other carciofo amaro\n- 1 dash Angostura Aromatic Bitters\n- 1 dash Orange Bitters by Angostura"
+      "50 ml Bourbon whiskey",
+      "15 ml Carpano Antica Formula Vermouth",
+      "15 ml Cynar or other carciofo amaro",
+      "1 dash Angostura Aromatic Bitters",
+      "1 dash Orange Bitters by Angostura"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -715,12 +894,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Del Famoso (The Famous)",
-    "slug": "del-famoso-the-famous",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 90,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Patrón Silver blanco tequila\n- 22.5 ml Fernet Branca liqueur\n- 15 ml Carpano Antica Formula Vermouth\n- 15 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)\n- 2 dash Angostura Aromatic Bitters"
+      "45 ml Patrón Silver blanco tequila",
+      "22.5 ml Fernet Branca liqueur",
+      "15 ml Carpano Antica Formula Vermouth",
+      "15 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)",
+      "2 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -728,12 +911,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Bitter Giuseppe",
-    "slug": "bitter-giuseppe",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 173,
     "glass": "Photographed in an UB Koto Old Fashioned 30cl",
     "ingredients": [
-      "1 swath Lemon peel\n- 60 ml Cynar or other carciofo amaro\n- 30 ml Carpano Antica Formula Vermouth\n- 7.5 ml Lemon juice (freshly squeezed)\n- 3 dash Orange Bitters by Angostura"
+      "1 swath Lemon peel",
+      "60 ml Cynar or other carciofo amaro",
+      "30 ml Carpano Antica Formula Vermouth",
+      "7.5 ml Lemon juice (freshly squeezed)",
+      "3 dash Orange Bitters by Angostura"
     ],
     "method": "SQUEEZE the oils from a lemon zest into stirring glass and drop zest in.\nAdd other ingredients and REGAL STIR with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -741,12 +928,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Rhubarb Lucca Negroni",
-    "slug": "rhubarb-lucca-negroni",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 41,
     "glass": "Photographed in an Urban Bar Fluet Old Fashioned 1910 34cl",
     "ingredients": [
-      "30 ml Hayman's London Dry Gin\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 15 ml Carpano Antica Formula Vermouth\n- 15 ml Rabarbaro liqueur"
+      "30 ml Hayman's London Dry Gin",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "15 ml Carpano Antica Formula Vermouth",
+      "15 ml Rabarbaro liqueur"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably over a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -754,12 +944,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Negroni and the Goat",
-    "slug": "negroni-and-the-goat",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 164,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "45 ml Hayman's London Dry Gin\n- 22.5 ml Aperitivo Luxardo (Aperol-style liqueur)\n- 22.5 ml Carpano Antica Formula Vermouth\n- 15 ml Amaro (e.g. Averna)"
+      "45 ml Hayman's London Dry Gin",
+      "22.5 ml Aperitivo Luxardo (Aperol-style liqueur)",
+      "22.5 ml Carpano Antica Formula Vermouth",
+      "15 ml Amaro (e.g. Averna)"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass.",
     "abv": "No especificado",
@@ -767,12 +960,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Munich Negroni Western Style",
-    "slug": "munich-negroni-western-style",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 114,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "20 ml Bourbon whiskey\n- 20 ml Strucchi Red Bitter (Campari-style liqueur)\n- 20 ml Hazelnut liqueur\n- 10 ml Carpano Antica Formula Vermouth"
+      "20 ml Bourbon whiskey",
+      "20 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "20 ml Hazelnut liqueur",
+      "10 ml Carpano Antica Formula Vermouth"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass.",
     "abv": "No especificado",
@@ -780,12 +976,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Left Hand",
-    "slug": "left-hand",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 126,
     "glass": "Photographed in a Modern America Cocktail",
     "ingredients": [
-      "45 ml Bourbon whiskey\n- 22.5 ml Strucchi Red Bitter (Campari-style liqueur)\n- 22.5 ml Carpano Antica Formula Vermouth\n- 4 drop Bob's Chocolate bitters"
+      "45 ml Bourbon whiskey",
+      "22.5 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "22.5 ml Carpano Antica Formula Vermouth",
+      "4 drop Bob's Chocolate bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -793,12 +992,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Stiletta",
-    "slug": "stiletta",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 18,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "1 dried Star anise\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 45 ml Patrón Silver blanco tequila\n- 30 ml Carpano Antica Formula Vermouth"
+      "1 dried Star anise",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "45 ml Patrón Silver blanco tequila",
+      "30 ml Carpano Antica Formula Vermouth"
     ],
     "method": "MUDDLE (smash) a star anise in base of stirring glass. Add other ingredients, STIR with ice and extra fine strain into chilled glass. <b>OR</b> Omit the muddled star anise and instead pre-prepare Star anise-infused Italian red bitter liqueur by infusing 18-20 star anise pods into a 70-75cl bottle. Seal and shake periodically over 8 hours, then strain through a dampened coffee filter or cheesecloth.",
     "abv": "No especificado",
@@ -806,12 +1008,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Lucky Luke",
-    "slug": "lucky-luke",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 7,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "60 ml Hayman's London Dry Gin\n- 30 ml Carpano Antica Formula Vermouth\n- 10 ml Lucano amaro\n- 2 dash Angostura Aromatic Bitters"
+      "60 ml Hayman's London Dry Gin",
+      "30 ml Carpano Antica Formula Vermouth",
+      "10 ml Lucano amaro",
+      "2 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -819,12 +1024,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Enzo",
-    "slug": "enzo",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 24,
     "glass": "Photographed in an Urban Bar Freddo Highball",
     "ingredients": [
-      "22.5 ml Fernet Branca liqueur\n- 22.5 ml Strucchi Red Bitter (Campari-style liqueur)\n- 45 ml Carpano Antica Formula Vermouth\n- 90 ml Thomas Henry Soda Water chilled"
+      "22.5 ml Fernet Branca liqueur",
+      "22.5 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "45 ml Carpano Antica Formula Vermouth",
+      "90 ml Thomas Henry Soda Water chilled"
     ],
     "method": "POUR all ingredients into chilled glass.\nFILL glass with ice.",
     "abv": "No especificado",
@@ -832,12 +1040,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Sharon",
-    "slug": "sharon",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 22,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Lustau Manzanilla Papirusa Sherry\n- 30 ml Carpano Antica Formula Vermouth\n- 22.5 ml Strucchi Red Bitter (Campari-style liqueur)"
+      "45 ml Lustau Manzanilla Papirusa Sherry",
+      "30 ml Carpano Antica Formula Vermouth",
+      "22.5 ml Strucchi Red Bitter (Campari-style liqueur)"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -845,12 +1055,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Subourbon",
-    "slug": "subourbon",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 13,
     "glass": "Serve in a Collins glass",
     "ingredients": [
-      "2 fresh Blackberries\n- 45 ml Bourbon whiskey\n- 22.5 ml Carpano Antica Formula Vermouth\n- 60 ml Cranberry juice (sweetened)\n- 2 dash Angostura Aromatic Bitters"
+      "2 fresh Blackberries",
+      "45 ml Bourbon whiskey",
+      "22.5 ml Carpano Antica Formula Vermouth",
+      "60 ml Cranberry juice (sweetened)",
+      "2 dash Angostura Aromatic Bitters"
     ],
     "method": "Select and pre-chill a COLLINS GLASS.\nPrepare garnish of blackberries\n.\nSHAKE all ingredients with ice.\nFINE STRAIN into ice-filled glass.",
     "abv": "No especificado",
@@ -858,12 +1072,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Eastern Promises",
-    "slug": "eastern-promises",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 35,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "60 ml Light white rum (charcoal-filtered 1-4 years old)\n- 15 ml Strucchi Rosso Vermouth\n- 30 ml Orange juice (freshly squeezed)\n- 10 ml Lime juice (freshly squeezed)\n- 10 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)\n- 2 dash Peychaud's or other Creole-style bitters"
+      "60 ml Light white rum (charcoal-filtered 1-4 years old)",
+      "15 ml Strucchi Rosso Vermouth",
+      "30 ml Orange juice (freshly squeezed)",
+      "10 ml Lime juice (freshly squeezed)",
+      "10 ml Sugar syrup 'rich' (2 sugar to 1 water, 65.0°Brix)",
+      "2 dash Peychaud's or other Creole-style bitters"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -871,12 +1090,19 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Behemoth",
-    "slug": "behemoth",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 18,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "25 ml Bourbon whiskey\n- 25 ml Strucchi Rosso Vermouth\n- 20 ml Straight rye whiskey (100 proof /50% alc./vol.)\n- 20 ml De Kuyper White Crème de Cacao\n- 10 ml Lemon juice (freshly squeezed) optional\n- 10 ml Maple syrup optional\n- 15 ml Egg white (pasteurised) or Vegg White vegan egg white alternative\n- 2 dash Peychaud's or other Creole-style bitters"
+      "25 ml Bourbon whiskey",
+      "25 ml Strucchi Rosso Vermouth",
+      "20 ml Straight rye whiskey (100 proof /50% alc./vol.)",
+      "20 ml De Kuyper White Crème de Cacao",
+      "10 ml Lemon juice (freshly squeezed) optional",
+      "10 ml Maple syrup optional",
+      "15 ml Egg white (pasteurised) or Vegg White vegan egg white alternative",
+      "2 dash Peychaud's or other Creole-style bitters"
     ],
     "method": "SHAKE all ingredients with ice and strain back into shaker.\nDRY SHAKE (without ice).\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -884,12 +1110,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Artillery",
-    "slug": "artillery",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 156,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "50 ml Hayman's London Dry Gin\n- 25 ml Strucchi Rosso Vermouth\n- 1 dash Angostura Aromatic Bitters"
+      "50 ml Hayman's London Dry Gin",
+      "25 ml Strucchi Rosso Vermouth",
+      "1 dash Angostura Aromatic Bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -897,12 +1125,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Negronic",
-    "slug": "negronic",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 67,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "30 ml Hayman's London Dry Gin\n- 30 ml Strucchi Rosso Vermouth\n- 30 ml Thomas Henry Tonic Water"
+      "30 ml Hayman's London Dry Gin",
+      "30 ml Strucchi Rosso Vermouth",
+      "30 ml Thomas Henry Tonic Water"
     ],
     "method": "POUR ingredients into ice-filed glass (preferably over a large cube or chunk of block ice) and briefly stir to combine.",
     "abv": "No especificado",
@@ -910,12 +1140,13 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Milano Torino (Mi-To)",
-    "slug": "milano-torino-mi-to",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 160,
     "glass": "Photographed in a Nude Bar/Giani Old Fashioned Cocktail Glass",
     "ingredients": [
-      "45 ml Strucchi Red Bitter (Campari-style liqueur)\n- 45 ml Strucchi Rosso Vermouth"
+      "45 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "45 ml Strucchi Rosso Vermouth"
     ],
     "method": "STIR all ingredients with ice.\nSTRAIN into ice-filled glass (preferably a large cube or chunk of block ice).",
     "abv": "No especificado",
@@ -923,12 +1154,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Father's Advice",
-    "slug": "father-s-advice",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 4,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Havana Club Original Añejo 3 Años Cuban rum\n- 15 ml Punt E Mes vermouth amaro\n- 15 ml Vermouth amaro - medium (e.g. Cocchi Vermouth Amaro)\n- 15 ml Lustau Amontillado Los Arcos Sherry\n- 7.5 ml Giffard Banane du Brésil liqueur"
+      "45 ml Havana Club Original Añejo 3 Años Cuban rum",
+      "15 ml Punt E Mes vermouth amaro",
+      "15 ml Vermouth amaro",
+      "medium (e.g. Cocchi Vermouth Amaro)",
+      "15 ml Lustau Amontillado Los Arcos Sherry",
+      "7.5 ml Giffard Banane du Brésil liqueur"
     ],
     "method": "SHAKE all ingredients and fine strain into chilled glass.",
     "abv": "No especificado",
@@ -936,12 +1172,13 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "L'Americano",
-    "slug": "l-americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 3,
     "glass": "Serve in a Highball (max 10oz/300ml)",
     "ingredients": [
-      "50 ml Savoia Americano Rosso\n- 50 ml Thomas Henry Soda Water"
+      "50 ml Savoia Americano Rosso",
+      "50 ml Thomas Henry Soda Water"
     ],
     "method": "Select and pre-chill a HIGHBALL (MAX 10OZ/300ML) GLASS.\nPrepare garnish of 3 skewered fresh grapes.\nPOUR all ingredients into ice-filled glass.\nBriefly STIR.",
     "abv": "No especificado",
@@ -949,12 +1186,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "L' Italo Americano",
-    "slug": "l-italo-americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 4,
     "glass": "Serve in a Highball (max 10oz/300ml)",
     "ingredients": [
-      "45 ml Italicus liqueur\n- 45 ml Savoia Americano Rosso\n- 45 ml Thomas Henry Pink Grapefruit soda\n- 6 drop Bob's Grapefruit Bitters"
+      "45 ml Italicus liqueur",
+      "45 ml Savoia Americano Rosso",
+      "45 ml Thomas Henry Pink Grapefruit soda",
+      "6 drop Bob's Grapefruit Bitters"
     ],
     "method": "POUR all ingredients into chilled glass and the add ice to fill.",
     "abv": "No especificado",
@@ -962,12 +1202,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Pink Americano",
-    "slug": "pink-americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 59,
     "glass": "Serve in a Collins glass",
     "ingredients": [
-      "30 ml Strucchi Rosso Vermouth\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- Top up with Thomas Henry Pink Grapefruit soda"
+      "30 ml Strucchi Rosso Vermouth",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "Top up with Thomas Henry Pink Grapefruit soda"
     ],
     "method": "POUR all ingredients into ice-filled glass.\nLightly stir.",
     "abv": "No especificado",
@@ -975,12 +1217,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Fig Leaf Americano",
-    "slug": "fig-leaf-americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 2,
     "glass": "Serve in a Collins glass",
     "ingredients": [
-      "30 ml Strucchi Rosso Vermouth\n- 25 ml Strucchi Red Bitter (Campari-style liqueur)\n- 120 ml Fig Leaf Soda chilled"
+      "30 ml Strucchi Rosso Vermouth",
+      "25 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "120 ml Fig Leaf Soda chilled"
     ],
     "method": "POUR all ingredients into chilled glass.\nFILL glass with ice.",
     "abv": "No especificado",
@@ -988,12 +1232,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Champino",
-    "slug": "champino",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 21,
     "glass": "Serve in a Flute glass",
     "ingredients": [
-      "30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Strucchi Rosso Vermouth\n- 60 ml Brut champagne/sparkling wine"
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth",
+      "60 ml Brut champagne/sparkling wine"
     ],
     "method": "SHAKE first 2 ingredients with ice.\nFINE STRAIN into chilled glass.\nTOP with sparkling wine.",
     "abv": "No especificado",
@@ -1001,12 +1247,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Winter Americano",
-    "slug": "winter-americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 2,
     "glass": "Photographed in an Urban Bar Fluet Highball 45cl",
     "ingredients": [
-      "40 ml Strucchi Red Bitter (Campari-style liqueur)\n- 40 ml Strucchi Rosso Vermouth\n- 90 ml Mandarin soda"
+      "40 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "40 ml Strucchi Rosso Vermouth",
+      "90 ml Mandarin soda"
     ],
     "method": "Select and pre-chill a COLLINS GLASS.\nPrepare garnish of lemon and orange zest twist.\nPOUR all ingredients into glass.\nFILL glass with ice.",
     "abv": "No especificado",
@@ -1014,12 +1262,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Americano Perfecto",
-    "slug": "americano-perfecto",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 14,
     "glass": "Photographed in a Modern America Collins",
     "ingredients": [
-      "45 ml Strucchi Red Bitter (Campari-style liqueur)\n- 22.5 ml Strucchi Rosso Vermouth\n- 22.5 ml Carpano Antica Formula Vermouth\n- 120 ml Pilsner lager"
+      "45 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "22.5 ml Carpano Antica Formula Vermouth",
+      "120 ml Pilsner lager"
     ],
     "method": "STIR first 3 ingredients with ice.\nSTRAIN into ice-filled glass.\nTOP with beer and briefly stir",
     "abv": "No especificado",
@@ -1027,12 +1278,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Summer Americano",
-    "slug": "summer-americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 14,
     "glass": "Serve in a Highball (max 10oz/300ml)",
     "ingredients": [
-      "30 ml Rubino/Rosso/Rojo (sweet, fruity) vermouth\n- 30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 5 ml Gentian liqueur (e.g. Suze, Salers etc)\n- 3 drop Bob's Cardamom bitters\n- 30 ml Thomas Henry Tonic Water"
+      "30 ml Rubino/Rosso/Rojo (sweet, fruity) vermouth",
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "5 ml Gentian liqueur (e.g. Suze, Salers etc)",
+      "3 drop Bob's Cardamom bitters",
+      "30 ml Thomas Henry Tonic Water"
     ],
     "method": "STIR first 4 ingredients with ice.\nSTRAIN into ice-filled glass whilst also pouring tonic water.",
     "abv": "No especificado",
@@ -1040,12 +1295,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "A Lucky Roman Americano",
-    "slug": "a-lucky-roman-americano",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 5,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "30 ml Strucchi Red Bitter (Campari-style liqueur)\n- 30 ml Strucchi Rosso Vermouth\n- 30 ml Cynar or other carciofo amaro\n- 2 dash Bob's Peppermint Bitters\n- Top up with *Special ingredient #1 (see above)"
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth",
+      "30 ml Cynar or other carciofo amaro",
+      "2 dash Bob's Peppermint Bitters",
+      "Top up with *Special ingredient #1 (see above)"
     ],
     "method": "THROW first 4 ingredients with ice and strain into ice-filled glass. Top with rosemary soda. <strong>Special ingredient #1: Rosemary soda</strong>",
     "abv": "No especificado",
@@ -1053,12 +1312,14 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "L'Americano Moderno",
-    "slug": "l-americano-moderno",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 2,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "60 ml Savoia Americano Rosso\n- 4 dash Orange Bitters by Angostura\n- 40 ml Elderberry & hibiscus soda"
+      "60 ml Savoia Americano Rosso",
+      "4 dash Orange Bitters by Angostura",
+      "40 ml Elderberry & hibiscus soda"
     ],
     "method": "Select and pre-chill an OLD-FASHIONED GLASS.\nPrepare garnish of edible flower or orange slice.\nPOUR all ingredients into ice-filled glass.\nBriefly STIR.",
     "abv": "No especificado",
@@ -1066,12 +1327,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "D&B Shakerato",
-    "slug": "d-b-shakerato",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 8,
     "glass": "Photographed in a ZigZag Coupe",
     "ingredients": [
-      "50 ml Savoia Americano Rosso\n- 20 ml Pink grapefruit juice (freshly squeezed)\n- 10 ml Honey syrup (3 parts honey to 1 water by weight)\n- 2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s"
+      "50 ml Savoia Americano Rosso",
+      "20 ml Pink grapefruit juice (freshly squeezed)",
+      "10 ml Honey syrup (3 parts honey to 1 water by weight)",
+      "2 drop Saline solution (20g sea salt to 80g water) or merest pinch of s"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -1079,12 +1343,13 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Less is More Negroni",
-    "slug": "less-is-more-negroni",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 21,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "50 ml Savoia Americano Rosso\n- 25 ml Hayman's London Dry Gin"
+      "50 ml Savoia Americano Rosso",
+      "25 ml Hayman's London Dry Gin"
     ],
     "method": "POUR all ingredients into ice-filled glass.\nBriefly STIR.",
     "abv": "No especificado",
@@ -1092,12 +1357,13 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Casa Savoia Garibaldi",
-    "slug": "casa-savoia-garibaldi",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 8,
     "glass": "Serve in a Highball (max 10oz/300ml)",
     "ingredients": [
-      "50 ml Savoia Americano Rosso\n- 90 ml Orange juice (freshly squeezed)"
+      "50 ml Savoia Americano Rosso",
+      "90 ml Orange juice (freshly squeezed)"
     ],
     "method": "Squeeze orange juice using pillar or elbow press and fine strain to remove any flesh.\nDRY BLEND the freshly squeezed juice at high speed (without ice) to make \"fluffy\".\nPOUR rosso americano/quinquina and half of the orange juice into glass over 2 cubes of ice and STIR.\nFill glass with more ice (3 cubes) and fill with rest of fluffy orange juice.",
     "abv": "No especificado",
@@ -1105,12 +1371,13 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Casa Savoia Boulevardier",
-    "slug": "casa-savoia-boulevardier",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 23,
     "glass": "Serve in an Old-fashioned glass",
     "ingredients": [
-      "50 ml Savoia Americano Rosso\n- 25 ml Bourbon whiskey"
+      "50 ml Savoia Americano Rosso",
+      "25 ml Bourbon whiskey"
     ],
     "method": "POUR all ingredients into ice-filled glass (preferably over a large cube or junk of block ice).",
     "abv": "No especificado",
@@ -1118,12 +1385,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Difford's Fruit Cup No.1 (gin based & Pimm's Cup-like)",
-    "slug": "difford-s-fruit-cup-no-1-gin-based-pimm-s-cup-like",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 119,
     "glass": "Serve in a Collins glass",
     "ingredients": [
-      "25 ml Hayman's London Dry Gin\n- 25 ml Ferrand Dry Curaçao\n- 25 ml Strucchi Rosso Vermouth\n- 2 dash Angostura Aromatic Bitters\n- 50 ml Thomas Henry Ginger Ale\n- 50 ml Cola (e.g. Coca-Cola or Pepsi)"
+      "25 ml Hayman's London Dry Gin",
+      "25 ml Ferrand Dry Curaçao",
+      "25 ml Strucchi Rosso Vermouth",
+      "2 dash Angostura Aromatic Bitters",
+      "50 ml Thomas Henry Ginger Ale",
+      "50 ml Cola (e.g. Coca-Cola or Pepsi)"
     ],
     "method": "POUR all ingredients into glass.\nHalf fill glass with ice.\nAdd a citrus slice and a couple of mint leaves from garnish\nFill to brim with ice.",
     "abv": "No especificado",
@@ -1131,12 +1403,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Meditation",
-    "slug": "meditation",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 27,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "60 ml Lustau Amontillado Los Arcos Sherry\n- 22.5 ml Strucchi Rosso Vermouth\n- 5 ml Green Chartreuse (or alternative herbal liqueur)\n- 5 ml Fernet Branca liqueur\n- 5 ml Grenadine/pomegranate syrup"
+      "60 ml Lustau Amontillado Los Arcos Sherry",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "5 ml Green Chartreuse (or alternative herbal liqueur)",
+      "5 ml Fernet Branca liqueur",
+      "5 ml Grenadine/pomegranate syrup"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -1144,12 +1420,16 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Bobby Burns (Difford's own)",
-    "slug": "bobby-burns-difford-s-own",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 314,
     "glass": "Serve in a Nick & Nora glass",
     "ingredients": [
-      "37.5 ml Blended Scotch whisky\n- 30 ml Strucchi Rosso Vermouth\n- 10 ml Bénédictine D.O.M. liqueur\n- 2 dash Peychaud's or other Creole-style bitters\n- 1 dash La Fée Parisienne absinthe"
+      "37.5 ml Blended Scotch whisky",
+      "30 ml Strucchi Rosso Vermouth",
+      "10 ml Bénédictine D.O.M. liqueur",
+      "2 dash Peychaud's or other Creole-style bitters",
+      "1 dash La Fée Parisienne absinthe"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -1157,12 +1437,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "The Addington",
-    "slug": "the-addington",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 59,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Cognac (brandy)\n- 22.5 ml Strucchi Rosso Vermouth\n- 10 ml Bénédictine D.O.M. liqueur\n- 1 dash Boker's style bitters"
+      "45 ml Cognac (brandy)",
+      "22.5 ml Strucchi Rosso Vermouth",
+      "10 ml Bénédictine D.O.M. liqueur",
+      "1 dash Boker's style bitters"
     ],
     "method": "STIR all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",
@@ -1170,12 +1453,17 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "Tequila Fruit Cup (Difford's Cup No.7)",
-    "slug": "tequila-fruit-cup-difford-s-cup-no-7",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 12,
     "glass": "Serve in a Collins glass",
     "ingredients": [
-      "25 ml Patrón Reposado tequila\n- 25 ml Ferrand Dry Curaçao\n- 25 ml Strucchi Rosso Vermouth\n- 2 dash Bob's Lavender Bitters\n- 50 ml Thomas Henry Ginger Ale\n- 50 ml Cola (e.g. Coca-Cola or Pepsi)"
+      "25 ml Patrón Reposado tequila",
+      "25 ml Ferrand Dry Curaçao",
+      "25 ml Strucchi Rosso Vermouth",
+      "2 dash Bob's Lavender Bitters",
+      "50 ml Thomas Henry Ginger Ale",
+      "50 ml Cola (e.g. Coca-Cola or Pepsi)"
     ],
     "method": "POUR all ingredients into glass.\nHalf fill glass with ice.\nAdd a citrus slice and a couple of mint leaves from garnish\nFill to brim with ice.",
     "abv": "No especificado",
@@ -1183,12 +1471,15 @@
     "cover": "/cocktail-placeholder.svg"
   },
   {
-    "title": "La Familia",
-    "slug": "la-familia",
+    "title": "Cóctel sin título",
+    "slug": "c-ctel-sin-t-tulo",
     "rating": 3,
     "glass": "Serve in a Coupe glass",
     "ingredients": [
-      "45 ml Light white rum (charcoal-filtered 1-4 years old)\n- 30 ml Lustau Amontillado Los Arcos Sherry\n- 30 ml Orange juice (freshly squeezed)\n- 2 barspoon Strucchi Rosso Vermouth"
+      "45 ml Light white rum (charcoal-filtered 1-4 years old)",
+      "30 ml Lustau Amontillado Los Arcos Sherry",
+      "30 ml Orange juice (freshly squeezed)",
+      "2 barspoon Strucchi Rosso Vermouth"
     ],
     "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
     "abv": "No especificado",

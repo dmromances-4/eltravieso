@@ -3,6 +3,8 @@ import { Montserrat } from 'next/font/google'
 import type { ReactNode } from 'react'
 import './globals.css'
 import ScrollProvider from '@/components/ScrollProvider'
+import Providers from '@/components/Providers'
+import AgeGateModal from '@/components/AgeGateModal'
 import CookieBanner from '@/components/CookieBanner'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -25,12 +27,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es" className={`${montserrat.variable} ${montserrat.className}`}>
       <body className="min-h-screen bg-night text-white antialiased">
-        <ScrollProvider>
-          <Header />
-          <CookieBanner />
-          {children}
-          <Footer />
-        </ScrollProvider>
+        <Providers>
+          <AgeGateModal />
+          <ScrollProvider>
+            <Header />
+            <CookieBanner />
+            {children}
+            <Footer />
+          </ScrollProvider>
+        </Providers>
       </body>
     </html>
   )

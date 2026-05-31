@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import ai from "@/lib/ai/provider";
+import { isTextAiAvailable } from "@/lib/ai/availability";
 
 type ReqBody = { baseRecipe?: string };
 type Ingredient = { name: string; amount: string };
@@ -120,6 +121,16 @@ async function uploadSupabaseImage(imageUrl: string, title: string): Promise<str
 
 export async function POST(request: Request) {
   try {
+    if (!isTextAiAvailable()) {
+      return NextResponse.json(
+        {
+          message:
+            "La generación con IA no está disponible. Configura GEMINI_API_KEY, GROQ_API_KEY u otra clave en .env.local (ver .env.example).",
+        },
+        { status: 503 },
+      );
+    }
+
     const body: ReqBody = await request.json();
     const base = (body.baseRecipe || "").trim();
 
@@ -142,13 +153,19 @@ export async function POST(request: Request) {
     const abv = parsed.abv != null ? Number(parsed.abv) : null;
 
     const imagePrompt = `Fotografía elegante de un cóctel premium llamado ${title}, preparado con ${base}. Ambiente de barra moderna, iluminación cálida y enfoque altísimo.`;
-    const imageRes = await ai.generateImage(imagePrompt);
-    let finalImageUrl: string | null = imageRes.url ?? null;
-
-    if (finalImageUrl) {
-      const uploaded = await uploadSupabaseImage(finalImageUrl, title);
-      if (uploaded) finalImageUrl = uploaded;
+    
+    let finalImageUrl: string | null = null;
+    try {
+      const imageRes = await ai.generateImage(imagePrompt);
+      if (imageRes.url) {
+        finalImageUrl = imageRes.url;
+        const uploaded = await uploadSupabaseImage(finalImageUrl, title);
+        if (uploaded) finalImageUrl = uploaded;
+      }
+    } catch (imageErr: any) {
+      console.warn("Image generation failed (likely due to missing API keys or paid-tier limitations), skipping image:", imageErr.message);
     }
+
 
     return NextResponse.json({
       title,

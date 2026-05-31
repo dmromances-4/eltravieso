@@ -1,24 +1,16 @@
 'use client'
 
 import { ReactNode, useEffect } from 'react'
-import Lenis from '@studio-freight/lenis'
 
 export default function ScrollProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 1.4,
-      easing: (t: number) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-      direction: 'vertical'
-    })
-
-    function raf(time: number) {
-      lenis.raf(time)
-      requestAnimationFrame(raf)
+    // Smooth scroll behavior via CSS is already defined in globals.css
+    // This component is a placeholder for future smooth scroll libraries
+    // Current smooth scroll is handled by: html { scroll-behavior: smooth; }
+    
+    return () => {
+      // Cleanup
     }
-
-    requestAnimationFrame(raf)
-    return () => lenis.destroy()
   }, [])
 
   return <>{children}</>

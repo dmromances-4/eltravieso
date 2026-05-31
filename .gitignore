@@ -8,6 +8,9 @@ out/
 .env.local
 .env*.local
 
+# Subidas de usuarios
+public/uploads/
+
 # Archivos pesados
 public/images/*
 !public/images/logo.png

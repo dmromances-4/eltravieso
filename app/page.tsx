@@ -9,16 +9,63 @@ import type { AlcoholRecord } from '@/types/alcohol'
 import Link from 'next/link'
 
 export default function Home() {
-  const cocktails = data.cocktails as CocktailRecord[]
-  const alcohols = alcoholData.alcohols as AlcoholRecord[]
+  const cocktails = data as CocktailRecord[]
+  const alcohols = alcoholData as AlcoholRecord[]
   
   // Show only 3 items on home page
-  const featuredCocktails = cocktails.slice(0, 3)
-  const featuredAlcohols = alcohols.slice(0, 3)
+  const featuredCocktails = cocktails?.slice(0, 3) || []
+  const featuredAlcohols = alcohols?.slice(0, 3) || []
 
   return (
     <main className="min-h-screen bg-[#0A0A0A]">
       <HeroSection />
+
+      {/* Portal Quick Links */}
+      <section id="portal" className="border-t border-white/5 bg-[#0f0f0f] py-24 sm:py-32">
+        <div className="mx-auto max-w-7xl px-6 sm:px-8">
+          <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-display tracking-tight text-white sm:text-5xl">Portal El Travieso</h2>
+              <p className="max-w-xl text-slate-400">Accede rápido a las recetas, la enciclopedia, la tienda y el blog sin perder el ritmo.</p>
+            </div>
+            <Link href="/cuenta" className="inline-flex items-center gap-2 rounded-full border border-electric-yellow bg-electric-yellow/5 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-electric-yellow transition-all hover:bg-electric-yellow/10 shrink-0">
+              Mi Cuenta
+            </Link>
+          </div>
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+            <Link href="/recetas" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-yellow/30 hover:bg-[#141414]/95">
+              <h3 className="text-xl font-bold text-white">Cócteles</h3>
+              <p className="mt-4 text-sm leading-7 text-slate-400">Descubre recetas maestras, secretos de mezcla y presentación canalla.</p>
+              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-yellow">Explorar →</span>
+            </Link>
+
+            <Link href="/alcoholes" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-blue/30 hover:bg-[#141414]/95">
+              <h3 className="text-xl font-bold text-white">Alcoholes</h3>
+              <p className="mt-4 text-sm leading-7 text-slate-400">Conoce el origen, las notas y la historia de cada destilado.</p>
+              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-blue">Ver ficha →</span>
+            </Link>
+
+            <Link href="/shop" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-yellow/30 hover:bg-[#141414]/95">
+              <h3 className="text-xl font-bold text-white">Tienda</h3>
+              <p className="mt-4 text-sm leading-7 text-slate-400">Encuentra packs exclusivos, vermuts premium y regalos con actitud.</p>
+              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-yellow">Comprar →</span>
+            </Link>
+
+            <Link href="/blog" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-blue/30 hover:bg-[#141414]/95">
+              <h3 className="text-xl font-bold text-white">Blog</h3>
+              <p className="mt-4 text-sm leading-7 text-slate-400">Inspírate con artículos, tendencias y notas para profesionales.</p>
+              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-blue">Leer →</span>
+            </Link>
+
+            <Link href="/pro/tech-generator?tab=agent" className="group rounded-[2rem] border border-red-500/20 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-red-500/40 hover:bg-[#141414]/95">
+              <h3 className="text-xl font-bold text-white">Barra IA</h3>
+              <p className="mt-4 text-sm leading-7 text-slate-400">Agente de recetas y fichas técnicas generadas con IA para tu barra.</p>
+              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-red-400">Abrir agente →</span>
+            </Link>
+          </div>
+        </div>
+      </section>
 
       {/* Cocktails Section */}
       <section id="catalogo" className="py-24 sm:py-32">
@@ -28,22 +75,22 @@ export default function Home() {
               <h2 className="text-4xl font-display tracking-tight text-white sm:text-5xl">Catálogo Canalla</h2>
               <p className="max-w-xl text-slate-400">Las recetas maestras que no encontrarás en ningún bar aburrido.</p>
             </div>
-            <Link href="/cocteles" className="inline-flex items-center gap-2 rounded-full border border-electric-yellow bg-electric-yellow/5 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-electric-yellow transition-all hover:bg-electric-yellow/10 shrink-0">
+            <Link href="/recetas" className="inline-flex items-center gap-2 rounded-full border border-electric-yellow bg-electric-yellow/5 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-electric-yellow transition-all hover:bg-electric-yellow/10 shrink-0">
               Ver todos →
             </Link>
           </div>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {featuredCocktails.map((cocktail) => (
               <CocktailCard
-                key={cocktail.id}
-                title={cocktail.identity.name}
-                slug={cocktail.id}
-                rating={cocktail.performance.complexity / 2}
-                glass={cocktail.presentation.glassware}
-                ingredients={cocktail.recipe.ingredients.map(i => i.name)}
-                abv={cocktail.performance.estimated_abv}
-                kcal={cocktail.performance.kcal}
-                cover="/cocktail-placeholder.svg"
+                key={cocktail.slug}
+                title={cocktail.title}
+                slug={cocktail.slug}
+                rating={cocktail.rating}
+                glass={cocktail.glass}
+                ingredients={cocktail.ingredients}
+                abv={cocktail.abv}
+                kcal={cocktail.kcal}
+                cover={cocktail.cover}
               />
             ))}
           </div>

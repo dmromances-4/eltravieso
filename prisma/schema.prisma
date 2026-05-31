@@ -14,6 +14,12 @@ model User {
   name               String?
   email              String    @unique
   password           String
+  imageUrl           String?
+  birthDate          DateTime?
+  address            String?
+  city               String?
+  postalCode         String?
+  country            String?   @default("España")
   emailVerified      DateTime?
   role               String    @default("USER")
   twoFactorSecret    String?
@@ -21,10 +27,11 @@ model User {
   createdAt          DateTime  @default(now())
   updatedAt          DateTime  @updatedAt
 
-  recipes   Recipe[]  @relation("AuthorRecipes")
-  posts     BlogPost[]
-  accounts  Account[]
-  sessions  Session[]
+  recipes        Recipe[]  @relation("AuthorRecipes")
+  favoriteRecipes Recipe[] @relation("UserFavorites")
+  posts          BlogPost[]
+  accounts       Account[]
+  sessions       Session[]
 }
 
 model Account {
@@ -71,6 +78,7 @@ model Product {
   priceCents      Int
   currency        String      @default("EUR")
   type            String      @default("CONSUMABLE")
+  category        String      @default("MERCH")
   stripeProductId String?
   stripePriceId   String?
   imageUrl        String?
@@ -88,6 +96,7 @@ model Recipe {
   method      String?
   authorId    String
   author      User             @relation(fields: [authorId], references: [id], name: "AuthorRecipes")
+  favoritedBy User[]           @relation("UserFavorites")
   technical   TechnicalSheet?
   createdAt   DateTime         @default(now())
   updatedAt   DateTime         @updatedAt

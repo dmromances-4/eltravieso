@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{}"
+self.__REACT_LOADABLE_MANIFEST="{\"components/PDFExport.tsx -> @react-pdf/renderer\":{\"id\":\"components/PDFExport.tsx -> @react-pdf/renderer\",\"files\":[]}}"

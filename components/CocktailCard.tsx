@@ -50,7 +50,7 @@ export default function CocktailCard({ title, slug, rating, glass, ingredients, 
             </span>
             Vermut
           </div>
-          <Link href={`/cocteles/${slug}`} className="group/link flex items-center gap-2 text-sm font-bold uppercase tracking-[0.3em] text-electric-yellow transition-colors hover:text-white">
+          <Link href={`/recetas/${slug}`} className="group/link flex items-center gap-2 text-sm font-bold uppercase tracking-[0.3em] text-electric-yellow transition-colors hover:text-white">
             Ver ficha
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover/link:translate-x-1"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
           </Link>

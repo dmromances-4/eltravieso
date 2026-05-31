@@ -35,20 +35,21 @@ Purpose: Help AI agents make safe, accurate edits in this Next.js 14 App Router 
   - `app/api/checkout/route.ts` validates cart items against Holded stock before creating a Stripe session.
   - Holded integration is in `lib/holded/api.ts`; `app/api/stripe/webhook/route.ts` syncs completed checkout sessions to Holded.
   - The Stripe webhook currently does not validate signatures; preserve the existing behavior unless explicitly asked to harden it.
-  - AI generation is routed through `lib/ai/provider.ts`, which prefers `OPENAI_API_KEY` but can fall back to `HUGGINGFACE_API_KEY`.
-  - `app/api/ai/generate-sheet/route.ts` can optionally upload generated images to Supabase if `SUPABASE_URL` and `SUPABASE_SERVICE_ROLE_KEY` are configured.
-  - `app/api/ai/agent/route.ts` uses server-side auth and can persist generated recipes to Prisma when a user is logged in.
-  - Note: `package.json` also lists `@google/generative-ai`, but current source code does not import or use it.
+  - AI text/image generation uses `lib/ai/provider.ts` (`@google/genai`, Groq via OpenAI-compatible API, OpenAI, HuggingFace). Provider priority and fallbacks are documented in that file; availability helpers live in `lib/ai/availability.ts`.
+  - `app/api/ai/generate-sheet/route.ts` creates technical sheets; optional Supabase image upload when `SUPABASE_*` is set.
+  - **Recipe agent**: UI at `app/pro/tech-generator/page.tsx` (tab *Agente de Recetas*), API `POST /api/ai/agent`, health `GET /api/ai/status`. Persists to Prisma when the user has a session. See `AGENTS.md` for setup.
 
 - Environment variables to preserve:
   - `DATABASE_URL`
-  - `NEXTAUTH_SECRET`
+  - `NEXTAUTH_SECRET`, `NEXTAUTH_URL`
   - `STRIPE_SECRET_KEY`
   - `NEXT_PUBLIC_APP_URL`
   - `HOLDED_API_KEY`
+  - `GEMINI_API_KEY`, `GEMINI_MODEL`, `GEMINI_IMAGE_MODEL`
+  - `GROQ_API_KEY`, `GROQ_MODEL`
   - `OPENAI_API_KEY`, `OPENAI_MODEL`, `OPENAI_IMAGE_MODEL`
   - `HUGGINGFACE_API_KEY`
-  - `AI_PROVIDER`
+  - `AI_PROVIDER`, `AI_IMAGE_PROVIDER`
   - `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `SUPABASE_BUCKET`
 
 - Data and seeding:
@@ -62,7 +63,8 @@ Purpose: Help AI agents make safe, accurate edits in this Next.js 14 App Router 
   - `app/api/checkout/route.ts`
   - `app/api/stripe/webhook/route.ts`
   - `app/api/holded/stock/route.ts`
-  - `lib/stripe/api.ts`, `lib/holded/api.ts`, `lib/ai/provider.ts`, `lib/prisma.ts`
+  - `app/api/ai/agent/route.ts`, `app/api/ai/generate-sheet/route.ts`, `app/api/ai/status/route.ts`
+  - `lib/stripe/api.ts`, `lib/holded/api.ts`, `lib/ai/provider.ts`, `lib/ai/availability.ts`, `lib/prisma.ts`
   - `scripts/seed-cocktails.ts`, `data/alcohol-encyclopedia.json`, `data/cocktails.json`
 
 - Editing rules for this repo:
