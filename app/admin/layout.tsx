@@ -6,6 +6,8 @@ import type { ReactNode } from "react";
 import LogoutButton from "@/components/LogoutButton";
 import { adminAccessRedirect, evaluateAdminAccess } from "@/lib/auth/admin-access";
 
+export const dynamic = 'force-dynamic';
+
 export default async function AdminLayout({ children }: { children: ReactNode }) {
   const session = await getServerSession(authOptions);
   const access = await evaluateAdminAccess(session);
@@ -40,16 +42,52 @@ export default async function AdminLayout({ children }: { children: ReactNode })
             Productos
           </Link>
           <Link
-            href="/admin/orders"
+            href="/admin/marketplace"
             className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
           >
-            Pedidos
+            Marketplace
           </Link>
           <Link
-            href="/admin/blog"
+            href="/admin/wholesale"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Mayorista
+          </Link>
+          <Link
+            href="/admin/production"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Producción
+          </Link>
+          <Link
+            href="/admin/recipes"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Recetas
+          </Link>
+          <Link
+            href="/admin/posts"
             className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
           >
             Blog
+          </Link>
+          <Link
+            href="/admin/delivery"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Reparto
+          </Link>
+          <Link
+            href="/admin/tax-registry"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Fiscal
+          </Link>
+          <Link
+            href="/admin/forum"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Foro
           </Link>
         </nav>
         <div className="p-4 border-t border-white/10">

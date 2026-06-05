@@ -46,7 +46,7 @@ export default async function AdminDashboardPage() {
           <div className="relative z-10">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Blog Posts</h2>
             <p className="text-5xl font-display font-bold text-white mb-6">{blogPostsCount}</p>
-            <Link href="/admin/blog" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-red-500 transition-colors hover:text-white">
+            <Link href="/admin/posts" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-red-500 transition-colors hover:text-white">
               Editar Blog →
             </Link>
           </div>
@@ -91,14 +91,14 @@ export default async function AdminDashboardPage() {
       <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 mt-12">
         <h2 className="text-2xl font-display font-bold text-white mb-6">Acciones Rápidas</h2>
         <div className="flex flex-wrap gap-4">
-          <Link href="/admin/products/new" className="rounded-full bg-electric-yellow px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110">
-            + Nuevo Producto
+          <Link href="/admin/marketplace" className="rounded-full bg-electric-yellow px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110">
+            Revisar Marketplace
           </Link>
-          <Link href="/admin/blog/new" className="rounded-full border border-white/20 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:border-white/40">
+          <Link href="/admin/posts" className="rounded-full border border-white/20 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:border-white/40">
             + Nueva Entrada Blog
           </Link>
-          <Link href="/admin/marketplace" className="rounded-full border border-white/20 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:border-white/40">
-            Revisar Marketplace
+          <Link href="/admin/wholesale" className="rounded-full border border-white/20 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-white transition-all hover:border-white/40">
+            Pedidos mayoristas
           </Link>
         </div>
       </div>
