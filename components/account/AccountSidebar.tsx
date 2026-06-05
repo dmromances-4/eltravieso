@@ -5,16 +5,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { signOut, useSession } from "next-auth/react";
 
-const links = [
-  { href: "/cuenta", label: "Resumen", exact: true },
-  { href: "/cuenta/configuracion", label: "Perfil" },
-  { href: "/cuenta/seguridad", label: "Seguridad" },
-  { href: "/cuenta/recetas", label: "Mis recetas" },
-];
-
 export default function AccountSidebar() {
   const pathname = usePathname();
   const { data: session } = useSession();
+
+  const links = [
+    { href: "/cuenta", label: "Resumen", exact: true },
+    { href: "/cuenta/configuracion", label: "Perfil" },
+    { href: "/cuenta/seguridad", label: "Seguridad" },
+    ...(session?.user?.role === "ADMIN" || session?.user?.role === "BAR_OWNER"
+      ? [{ href: "/cuenta/bar", label: "Mi local" }]
+      : []),
+    { href: "/cuenta/recetas", label: "Mis recetas" },
+    { href: "/cuenta/marketplace", label: "Vender" },
+  ];
 
   return (
     <aside className="rounded-[2rem] border border-white/10 bg-[#111111]/90 p-6 lg:sticky lg:top-28">

@@ -5,6 +5,7 @@ import { parseStoredIngredients } from "@/lib/recipes/parse";
 
 export type CatalogRecipe = CocktailRecord & {
   summary?: string;
+  videoUrl?: string;
   source: "static" | "database";
 };
 
@@ -43,6 +44,7 @@ function dbToCatalog(recipe: {
   summary: string | null;
   ingredients: string;
   method: string | null;
+  videoUrl?: string | null;
   technical?: { abv: number | null; imageUrl: string | null } | null;
 }): CatalogRecipe {
   const ingredients = parseStoredIngredients(recipe.ingredients);
@@ -52,6 +54,7 @@ function dbToCatalog(recipe: {
     title: recipe.title,
     slug: recipe.slug,
     summary: recipe.summary ?? undefined,
+    videoUrl: recipe.videoUrl ?? undefined,
     rating: 8,
     glass: "Copa de autor",
     ingredients: ingredients.length > 0 ? ingredients : ["Consultar ficha para cantidades"],
@@ -64,12 +67,19 @@ function dbToCatalog(recipe: {
 }
 
 export async function getDatabaseRecipes(): Promise<CatalogRecipe[]> {
-  const rows = await prisma.recipe.findMany({
-    include: { technical: true },
-    orderBy: { createdAt: "desc" },
-  });
+  // Tolerante a fallos: si la BD no responde (sin red/local caída), devolvemos
+  // [] para que el catálogo siga mostrando las recetas estáticas de cocktails.json.
+  try {
+    const rows = await prisma.recipe.findMany({
+      include: { technical: true },
+      orderBy: { createdAt: "desc" },
+    });
 
-  return rows.map((row) => dbToCatalog(row));
+    return rows.map((row) => dbToCatalog(row));
+  } catch (error) {
+    console.error("[catalog] getDatabaseRecipes falló, usando recetas estáticas:", error);
+    return [];
+  }
 }
 
 export async function getCatalogRecipes(): Promise<CatalogRecipe[]> {
@@ -83,12 +93,16 @@ export async function getCatalogRecipes(): Promise<CatalogRecipe[]> {
 }
 
 export async function getRecipeBySlug(slug: string): Promise<CatalogRecipe | null> {
-  const dbRecipe = await prisma.recipe.findUnique({
-    where: { slug },
-    include: { technical: true },
-  });
+  try {
+    const dbRecipe = await prisma.recipe.findUnique({
+      where: { slug },
+      include: { technical: true },
+    });
 
-  if (dbRecipe) return dbToCatalog(dbRecipe);
+    if (dbRecipe) return dbToCatalog(dbRecipe);
+  } catch (error) {
+    console.error("[catalog] getRecipeBySlug falló, usando recetas estáticas:", error);
+  }
 
   const staticRecipe = staticCocktails.find((item) => item.slug === slug);
   return staticRecipe ? staticToCatalog(staticRecipe) : null;

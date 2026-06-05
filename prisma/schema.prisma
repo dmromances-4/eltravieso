@@ -1,13 +1,129 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// Vermut El Travieso — Prisma Schema (Fase 1: Arquitectura Unificada B2B/B2C)
+// Provider: PostgreSQL · All monetary values in Int (cents) · No floats.
+// ─────────────────────────────────────────────────────────────────────────────
+
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql"
   url      = env("DATABASE_URL")
 }
 
-// SQLite does not support enums in this environment, so use string literals instead.
+// ═══════════════════════════════════════════════════════════════════════════════
+// ENUMS (PostgreSQL native)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+enum UserRole {
+  USER
+  ADMIN
+  BAR_OWNER
+  WHOLESALER
+}
+
+enum ProductType {
+  CONSUMABLE
+  MERCH
+  CONSERVA
+}
+
+enum ProductCategory {
+  VERMUT
+  COCTELERIA
+  MERCH
+  CONSERVA_LATERIO
+  ALCOHOL
+  SIROPE
+  SODA
+  CRISTALERIA
+  MATERIAL
+  ROPA
+  INGREDIENTE
+}
+
+enum ProductFormat {
+  BOTTLE_75CL
+  BAG_IN_BOX_3L
+  CASE_6
+  CASE_12
+  PALET
+  UNIT
+}
+
+enum ProductChannel {
+  B2C
+  B2B
+  BOTH
+}
+
+enum ListingStatus {
+  DRAFT
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  RETURNED
+}
+
+enum WholesaleOrderStatus {
+  DRAFT
+  PENDING_APPROVAL
+  APPROVED
+  DISPATCHED
+  INVOICED
+  PAID
+  CANCELLED
+}
+
+enum InvoiceStatus {
+  DRAFT
+  SENT
+  PAID
+  OVERDUE
+  CANCELLED
+}
+
+enum DeliveryRouteStatus {
+  PLANNED
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+enum BatchStatus {
+  IN_PRODUCTION
+  QUALITY_CHECK
+  AVAILABLE
+  DEPLETED
+  RECALLED
+}
+
+enum ForumTopicStatus {
+  OPEN
+  CLOSED
+  PINNED
+  ARCHIVED
+}
+
+enum BarOnlineSessionType {
+  CHAT
+  VIDEO_CALL
+  TASTING_EVENT
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// AUTH & USER
+// ═══════════════════════════════════════════════════════════════════════════════
 
 model User {
   id                 String    @id @default(uuid())
@@ -16,41 +132,55 @@ model User {
   password           String
   imageUrl           String?
   birthDate          DateTime?
+  ageVerifiedAt      DateTime? // AgeGate verification timestamp
   address            String?
   city               String?
   postalCode         String?
   country            String?   @default("España")
+  phone              String?
   emailVerified      DateTime?
-  role               String    @default("USER")
+  role               UserRole  @default(USER)
   twoFactorSecret    String?
   isTwoFactorEnabled Boolean   @default(false)
   createdAt          DateTime  @default(now())
   updatedAt          DateTime  @updatedAt
 
-  recipes        Recipe[]  @relation("AuthorRecipes")
-  favoriteRecipes Recipe[] @relation("UserFavorites")
-  posts          BlogPost[]
-  accounts       Account[]
-  sessions       Session[]
+  // Relations
+  recipes           Recipe[]            @relation("AuthorRecipes")
+  favoriteRecipes   Recipe[]            @relation("UserFavorites")
+  posts             BlogPost[]
+  accounts          Account[]
+  sessions          Session[]
+  orders            Order[]
+  barProfile        BarProfile?
+  forumTopics       ForumTopic[]
+  forumComments     ForumComment[]
+  barOnlineSessions BarOnlineSession[]  @relation("BarOnlineHost")
+  barOnlineJoined   BarOnlineSession[]  @relation("BarOnlineParticipants")
+  listings          Listing[]           @relation("UserListings")
+
+  @@index([email])
+  @@index([role])
 }
 
 model Account {
-  id                 String  @id @default(cuid())
-  userId             String
-  type               String
-  provider           String
-  providerAccountId  String
-  refresh_token      String?
-  access_token       String?
-  expires_at         Int?
-  token_type         String?
-  scope              String?
-  id_token           String?
-  session_state      String?
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.Text
+  access_token      String? @db.Text
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.Text
+  session_state     String?
 
-  user User @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
+  @@index([userId])
 }
 
 model Session {
@@ -59,7 +189,9 @@ model Session {
   userId       String
   expires      DateTime
 
-  user User @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model VerificationToken {
@@ -70,62 +202,509 @@ model VerificationToken {
   @@unique([identifier, token])
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// PRODUCT CATALOG (B2C + B2B Unified)
+// ═══════════════════════════════════════════════════════════════════════════════
+
 model Product {
-  id              String      @id @default(uuid())
+  id              String          @id @default(uuid())
   title           String
-  slug            String      @unique
-  description     String?
-  priceCents      Int
-  currency        String      @default("EUR")
-  type            String      @default("CONSUMABLE")
-  category        String      @default("MERCH")
-  stripeProductId String?
-  stripePriceId   String?
+  slug            String          @unique
+  description     String?         @db.Text
+  type            ProductType     @default(CONSUMABLE)
+  category        ProductCategory @default(VERMUT)
+  channel         ProductChannel  @default(BOTH)
   imageUrl        String?
-  metadata        String?
-  createdAt       DateTime    @default(now())
-  updatedAt       DateTime    @updatedAt
+  galleryUrls     String[]        // PostgreSQL native array
+  abv             Int?            // Alcohol percentage x100 (e.g. 1500 = 15.00%)
+  volumeMl        Int?            // Volume in milliliters
+  weightGrams     Int?            // Weight in grams (merch, conservas)
+  isActive        Boolean         @default(true)
+  metadata        Json?           // Flexible extra data
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+
+  // Relations
+  variants         ProductVariant[]
+  orderItems       OrderItem[]
+  barStockEntries  BarStock[]
+  taxRegistries    LiquorsTaxRegistry[]
+
+  @@index([slug])
+  @@index([category, channel])
+  @@index([type])
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// MARKETPLACE — Listings subidos por usuarios (con aprobación admin)
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model Listing {
+  id               String          @id @default(uuid())
+  sellerId         String
+  title            String
+  slug             String          @unique
+  description      String?         @db.Text
+  category         ProductCategory @default(MATERIAL)
+  priceCents       Int
+  imageUrl         String?
+  format           ProductFormat   @default(UNIT)
+  status           ListingStatus   @default(PENDING)
+  reviewNotes      String?         @db.Text
+  createdProductId String? // Product generado al aprobar
+  createdAt        DateTime        @default(now())
+  updatedAt        DateTime        @updatedAt
+
+  seller User @relation("UserListings", fields: [sellerId], references: [id], onDelete: Cascade)
+
+  @@index([sellerId])
+  @@index([status])
+}
+
+model ProductVariant {
+  id              String         @id @default(uuid())
+  productId       String
+  sku             String         @unique
+  format          ProductFormat
+  channel         ProductChannel @default(BOTH)
+  priceCents      Int            // Retail price in cents (B2C)
+  wholesaleCents  Int?           // Wholesale price in cents (B2B)
+  currency        String         @default("EUR")
+  unitsPerCase    Int?           // Units per case (B2B packaging)
+  casesPerPalet   Int?           // Cases per palet (B2B logistics)
+  minOrderQty     Int            @default(1)
+  stock           Int            @default(0)
+  barcode         String?        // EAN-13
+  stripeProductId String?
+  stripePriceId   String?
+  isActive        Boolean        @default(true)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  // Relations
+  product                Product                 @relation(fields: [productId], references: [id], onDelete: Cascade)
+  orderItems             OrderItem[]
+  wholesaleOrderItems    WholesaleOrderItem[]
+  barStockEntries        BarStock[]
+
+  @@index([productId])
+  @@index([sku])
+  @@index([format, channel])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// B2C ORDERS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model Order {
+  id                String      @id @default(uuid())
+  orderNumber       String      @unique // VT-2024-000001
+  userId            String
+  status            OrderStatus @default(PENDING)
+  subtotalCents     Int
+  taxCents          Int
+  shippingCents     Int         @default(0)
+  totalCents        Int
+  currency          String      @default("EUR")
+  stripePaymentId   String?
+  shippingAddress   Json?       // { street, city, postalCode, country }
+  billingAddress    Json?
+  notes             String?     @db.Text
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+
+  // Relations
+  user  User        @relation(fields: [userId], references: [id])
+  items OrderItem[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([orderNumber])
+}
+
+model OrderItem {
+  id              String  @id @default(uuid())
+  orderId         String
+  productId       String
+  variantId       String?
+  quantity        Int
+  unitPriceCents  Int
+  totalCents      Int
+
+  // Relations
+  order   Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product         @relation(fields: [productId], references: [id])
+  variant ProductVariant? @relation(fields: [variantId], references: [id])
+
+  @@index([orderId])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// ERP HORECA — BAR PROFILE & STOCK
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model BarProfile {
+  id                   String   @id @default(uuid())
+  userId               String   @unique // Bar owner
+  businessName         String
+  taxId                String   @unique // CIF/NIF
+  licenseNumber        String?           // Licencia de actividad
+  googleBusinessId     String?
+  coverManagerUrl      String?           // iFrame URL
+  theForkUrl           String?           // iFrame URL
+  tpvProvider          String?           // "revo" | "lightspeed" | "square"
+  tpvToken             String?           @db.Text
+  tpvWebhookUrl        String?
+  address              String
+  city                 String
+  postalCode           String
+  province             String?
+  country              String   @default("España")
+  phone                String?
+  email                String?
+  autoReorderEnabled   Boolean  @default(false)
+  autoReorderThreshold Int?     // Min units before trigger
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  // Relations
+  user              User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+  stockEntries      BarStock[]
+  wholesaleOrders   WholesaleOrder[]
+  deliveryStops     DeliveryStop[]
+
+  @@index([taxId])
+  @@index([city])
+}
+
+model BarStock {
+  id              String   @id @default(uuid())
+  barProfileId    String
+  productId       String
+  variantId       String?
+  currentUnits    Int      @default(0)
+  minThreshold    Int      @default(0) // Auto-reorder trigger
+  maxCapacity     Int?
+  lastSyncedAt    DateTime? // Last TPV webhook sync
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  // Relations
+  barProfile BarProfile      @relation(fields: [barProfileId], references: [id], onDelete: Cascade)
+  product    Product         @relation(fields: [productId], references: [id])
+  variant    ProductVariant? @relation(fields: [variantId], references: [id])
+
+  @@unique([barProfileId, productId, variantId])
+  @@index([barProfileId])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// ERP HORECA — WHOLESALE ORDERS & INVOICING
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model WholesaleOrder {
+  id                  String               @id @default(uuid())
+  orderNumber         String               @unique // WS-2024-000001
+  barProfileId        String
+  status              WholesaleOrderStatus  @default(DRAFT)
+  subtotalCents       Int
+  exciseTaxCents      Int                   // Impuestos Especiales (8%) — cents
+  vatCents            Int                   // IVA (21%) — cents
+  totalCents          Int
+  currency            String                @default("EUR")
+  notes               String?               @db.Text
+  requestedDeliveryAt DateTime?
+  approvedAt          DateTime?
+  dispatchedAt        DateTime?
+  deliveryRouteId     String?
+  createdAt           DateTime              @default(now())
+  updatedAt           DateTime              @updatedAt
+
+  // Relations
+  barProfile    BarProfile           @relation(fields: [barProfileId], references: [id])
+  items         WholesaleOrderItem[]
+  invoice       WholesaleInvoice?
+  deliveryRoute DeliveryRoute?       @relation("RouteOrders", fields: [deliveryRouteId], references: [id])
+
+  @@index([barProfileId])
+  @@index([status])
+  @@index([orderNumber])
+  @@index([deliveryRouteId])
+}
+
+model WholesaleOrderItem {
+  id                String  @id @default(uuid())
+  wholesaleOrderId  String
+  variantId         String
+  batchId           String? // FIFO dispatch from ProductionBatch
+  quantity          Int
+  unitPriceCents    Int
+  totalCents        Int
+
+  // Relations
+  wholesaleOrder WholesaleOrder  @relation(fields: [wholesaleOrderId], references: [id], onDelete: Cascade)
+  variant        ProductVariant  @relation(fields: [variantId], references: [id])
+  batch          ProductionBatch? @relation(fields: [batchId], references: [id])
+
+  @@index([wholesaleOrderId])
+  @@index([batchId])
+}
+
+model WholesaleInvoice {
+  id                 String        @id @default(uuid())
+  invoiceNumber      String        @unique // FV-2024-000001
+  wholesaleOrderId   String        @unique
+  status             InvoiceStatus @default(DRAFT)
+  issuedAt           DateTime      @default(now())
+  dueAt              DateTime
+  subtotalCents      Int
+  exciseTaxCents     Int
+  vatCents           Int
+  totalCents         Int
+  currency           String        @default("EUR")
+  pdfUrl             String?
+  ticketBaiId        String?       // TicketBAI / Veri*factu reference
+  notes              String?       @db.Text
+  paidAt             DateTime?
+  createdAt          DateTime      @default(now())
+  updatedAt          DateTime      @updatedAt
+
+  // Relations
+  wholesaleOrder WholesaleOrder @relation(fields: [wholesaleOrderId], references: [id])
+
+  @@index([status])
+  @@index([invoiceNumber])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PRODUCTION & TRACEABILITY
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model ProductionBatch {
+  id              String      @id @default(uuid())
+  batchCode       String      @unique // LOT-2024-A001
+  productId       String?
+  status          BatchStatus @default(IN_PRODUCTION)
+  totalUnits      Int
+  remainingUnits  Int
+  bottlingDate    DateTime?
+  expiryDate      DateTime?
+  abv             Int?        // Actual ABV x100
+  notes           String?     @db.Text
+  createdAt       DateTime    @default(now())
+  updatedAt       DateTime    @updatedAt
+
+  // Relations
+  wholesaleOrderItems WholesaleOrderItem[]
+  taxRegistries       LiquorsTaxRegistry[]
+
+  @@index([batchCode])
+  @@index([status])
+}
+
+model LiquorsTaxRegistry {
+  id              String   @id @default(uuid())
+  productId       String
+  batchId         String?
+  caeCode         String   // Código de Actividad del Establecimiento
+  sealNumber      String?  // Precinta fiscal number
+  exciseTaxCents  Int      // Tax amount in cents
+  taxRateBps      Int      @default(800) // 8% = 800 basis points
+  declaredLiters  Int      // Liters x100 for precision (e.g. 7500 = 75.00L)
+  declaredAbv     Int      // ABV x100
+  declarationDate DateTime
+  fiscalPeriod    String   // "2024-Q1"
+  documentRef     String?  // AEAT reference
+  notes           String?  @db.Text
+  createdAt       DateTime @default(now())
+
+  // Relations
+  product Product          @relation(fields: [productId], references: [id])
+  batch   ProductionBatch? @relation(fields: [batchId], references: [id])
+
+  @@index([caeCode])
+  @@index([productId])
+  @@index([fiscalPeriod])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// DELIVERY & LOGISTICS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model DeliveryRoute {
+  id          String              @id @default(uuid())
+  routeCode   String              @unique // RT-2024-BCN-001
+  status      DeliveryRouteStatus @default(PLANNED)
+  driverId    String?
+  vehiclePlate String?
+  plannedDate DateTime
+  startedAt   DateTime?
+  completedAt DateTime?
+  notes       String?             @db.Text
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
+
+  // Relations
+  stops  DeliveryStop[]
+  orders WholesaleOrder[] @relation("RouteOrders")
+
+  @@index([status])
+  @@index([plannedDate])
+}
+
+model DeliveryStop {
+  id              String   @id @default(uuid())
+  deliveryRouteId String
+  barProfileId    String
+  stopOrder       Int      // Sequence in route
+  estimatedArrival DateTime?
+  actualArrival    DateTime?
+  signature        String?  // Base64 signature on delivery
+  notes            String?
+  createdAt        DateTime @default(now())
+
+  // Relations
+  deliveryRoute DeliveryRoute @relation(fields: [deliveryRouteId], references: [id], onDelete: Cascade)
+  barProfile    BarProfile    @relation(fields: [barProfileId], references: [id])
+
+  @@index([deliveryRouteId])
+  @@index([barProfileId])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// RECIPES & TECHNICAL SHEETS
+// ═══════════════════════════════════════════════════════════════════════════════
+
 model Recipe {
-  id          String           @id @default(uuid())
+  id          String          @id @default(uuid())
   title       String
-  slug        String           @unique
-  summary     String?
-  ingredients String
-  method      String?
+  slug        String          @unique
+  summary     String?         @db.Text
+  ingredients String          @db.Text
+  method      String?         @db.Text
+  imageUrl    String?
+  videoUrl    String?
+  difficulty  Int?            @default(1) // 1-5
+  prepTimeMins Int?
+  servings    Int?
+  tags        String[]        // PostgreSQL native array
+  isPublished Boolean         @default(true)
   authorId    String
-  author      User             @relation(fields: [authorId], references: [id], name: "AuthorRecipes")
-  favoritedBy User[]           @relation("UserFavorites")
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  // Relations
+  author      User            @relation(fields: [authorId], references: [id], name: "AuthorRecipes")
+  favoritedBy User[]          @relation("UserFavorites")
   technical   TechnicalSheet?
-  createdAt   DateTime         @default(now())
-  updatedAt   DateTime         @updatedAt
+
+  @@index([slug])
+  @@index([authorId])
 }
 
 model TechnicalSheet {
   id          String   @id @default(uuid())
   recipeId    String   @unique
-  recipe      Recipe   @relation(fields: [recipeId], references: [id])
   costCents   Int?
-  abv         Float?
-  tasting     String?
+  abv         Int?     // ABV x100 (e.g. 1200 = 12.00%)
+  tasting     String?  @db.Text
   imageUrl    String?
   pdfUrl      String?
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+
+  // Relations
+  recipe Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
 }
 
+// ═══════════════════════════════════════════════════════════════════════════════
+// COMMUNITY — BLOG, FORUM, BAR ONLINE
+// ═══════════════════════════════════════════════════════════════════════════════
+
 model BlogPost {
-  id          String   @id @default(uuid())
+  id          String    @id @default(uuid())
   title       String
-  slug        String   @unique
-  content     String
-  excerpt     String?
-  published   Boolean  @default(false)
+  slug        String    @unique
+  content     String    @db.Text
+  excerpt     String?   @db.Text
+  coverUrl    String?
+  tags        String[]
+  published   Boolean   @default(false)
   publishedAt DateTime?
-  metadata    String?
+  metadata    Json?
   authorId    String?
-  author      User?    @relation(fields: [authorId], references: [id])
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  // Relations
+  author User? @relation(fields: [authorId], references: [id])
+
+  @@index([slug])
+  @@index([published])
+  @@index([authorId])
+}
+
+model ForumTopic {
+  id          String           @id @default(uuid())
+  title       String
+  slug        String           @unique
+  content     String           @db.Text
+  status      ForumTopicStatus @default(OPEN)
+  isPinned    Boolean          @default(false)
+  viewCount   Int              @default(0)
+  authorId    String
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  // Relations
+  author   User           @relation(fields: [authorId], references: [id])
+  comments ForumComment[]
+
+  @@index([slug])
+  @@index([status])
+  @@index([authorId])
+}
+
+model ForumComment {
+  id        String   @id @default(uuid())
+  content   String   @db.Text
+  topicId   String
+  authorId  String
+  parentId  String?  // Nested replies
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  topic    ForumTopic    @relation(fields: [topicId], references: [id], onDelete: Cascade)
+  author   User          @relation(fields: [authorId], references: [id])
+  parent   ForumComment? @relation("CommentReplies", fields: [parentId], references: [id])
+  replies  ForumComment[] @relation("CommentReplies")
+
+  @@index([topicId])
+  @@index([authorId])
+  @@index([parentId])
+}
+
+model BarOnlineSession {
+  id           String                @id @default(uuid())
+  title        String
+  description  String?               @db.Text
+  type         BarOnlineSessionType  @default(CHAT)
+  hostId       String
+  maxUsers     Int                   @default(10)
+  isActive     Boolean               @default(true)
+  scheduledAt  DateTime?
+  startedAt    DateTime?
+  endedAt      DateTime?
+  roomId       String?               @unique // WebSocket/WebRTC room identifier
+  createdAt    DateTime              @default(now())
+  updatedAt    DateTime              @updatedAt
+
+  // Relations
+  host         User   @relation("BarOnlineHost", fields: [hostId], references: [id])
+  participants User[] @relation("BarOnlineParticipants")
+
+  @@index([hostId])
+  @@index([isActive])
+  @@index([type])
 }

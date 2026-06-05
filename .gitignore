@@ -3,6 +3,12 @@ node_modules/
 .next/
 out/
 
+# Base de datos local (embedded-postgres)
+.localpg/
+
+# Cache del scraper de productos
+.scrape-cache/
+
 # Entorno
 .env
 .env.local
