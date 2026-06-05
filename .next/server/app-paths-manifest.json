@@ -1,9 +1,0 @@
-{
-  "/page": "app/page.js",
-  "/login/page": "app/login/page.js",
-  "/cocteles/[slug]/page": "app/cocteles/[slug]/page.js",
-  "/blog/page": "app/blog/page.js",
-  "/cocteles/page": "app/cocteles/page.js",
-  "/pro/tech-generator/page": "app/pro/tech-generator/page.js",
-  "/register/page": "app/register/page.js"
-}

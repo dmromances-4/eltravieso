@@ -3,19 +3,34 @@ node_modules/
 .next/
 out/
 
-# Base de datos local (embedded-postgres)
+# Build / cache
+tsconfig.tsbuildinfo
+.turbo/
+.vercel/
+
+# Base de datos local
 .localpg/
+prisma/dev.db
+prisma/*.db
+prisma/*.db-journal
 
 # Cache del scraper de productos
 .scrape-cache/
 
-# Entorno
+# Entorno (nunca commitear secretos)
 .env
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 .env*.local
 
 # Subidas de usuarios
 public/uploads/
+
+# Temp / sync
+.tmp.driveupload/
+.tmp/
 
 # Archivos pesados
 public/images/*
@@ -27,6 +42,13 @@ public/videos/
 *.zip
 *.rar
 
-# Mac
+# Mac / OS
 .DS_Store
 Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+
+# Test / coverage
+coverage/
