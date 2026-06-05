@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
-import { getServerSession } from "next-auth/next";
-import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
+import { AdminApiError, adminApiErrorResponse, requireAdminUser } from "@/lib/auth/admin-api";
+import { clientSafeErrorMessage } from "@/lib/security/safe-error";
 
 function typeForCategory(category: string): "CONSUMABLE" | "MERCH" | "CONSERVA" {
   if (category === "CONSERVA_LATERIO") return "CONSERVA";
@@ -9,19 +9,12 @@ function typeForCategory(category: string): "CONSUMABLE" | "MERCH" | "CONSERVA" 
   return "CONSUMABLE";
 }
 
-async function isAdmin(userId: string): Promise<boolean> {
-  const user = await prisma.user.findUnique({ where: { id: userId }, select: { role: true } });
-  return user?.role === "ADMIN";
-}
-
-// Aprobar / rechazar un listing (solo ADMIN).
+// Aprobar / rechazar un listing (solo ADMIN con 2FA).
 export async function PATCH(request: Request, { params }: { params: { id: string } }) {
-  const session = await getServerSession(authOptions);
-  if (!session?.user?.id) {
-    return NextResponse.json({ message: "No autorizado" }, { status: 401 });
-  }
-  if (!(await isAdmin(session.user.id))) {
-    return NextResponse.json({ message: "Solo administradores pueden revisar artículos." }, { status: 403 });
+  try {
+    await requireAdminUser();
+  } catch (error) {
+    return adminApiErrorResponse(error);
   }
 
   try {
@@ -93,8 +86,11 @@ export async function PATCH(request: Request, { params }: { params: { id: string
     }
 
     return NextResponse.json({ message: "Acción no válida (approve | reject)." }, { status: 400 });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("[LISTING_REVIEW_ERROR]:", error);
-    return NextResponse.json({ message: error.message || "Error al revisar el artículo." }, { status: 500 });
+    return NextResponse.json(
+      { message: clientSafeErrorMessage(error, "Error al revisar el artículo.") },
+      { status: 500 },
+    );
   }
 }

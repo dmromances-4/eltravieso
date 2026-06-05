@@ -1,11 +1,20 @@
 import Stripe from 'stripe'
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {
-  apiVersion: '2022-11-15'
-})
+let stripeClient: Stripe | null = null
+
+export function getStripe() {
+  if (!stripeClient) {
+    stripeClient = new Stripe(process.env.STRIPE_SECRET_KEY ?? '', {
+      apiVersion: '2022-11-15',
+    })
+  }
+  return stripeClient
+}
 
 export type CheckoutItem = {
   id: string
+  productId?: string
+  sku?: string
   name: string
   description: string
   amount: number
@@ -17,7 +26,7 @@ export type CheckoutItem = {
 export async function createCheckoutSession(items: CheckoutItem[], customerEmail: string) {
   const url = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
 
-  const session = await stripe.checkout.sessions.create({
+  const session = await getStripe().checkout.sessions.create({
     payment_method_types: ['card'],
     mode: 'payment',
     customer_email: customerEmail,

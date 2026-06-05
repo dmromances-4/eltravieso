@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { getAiStatus, isTextAiAvailable } from "@/lib/ai/availability";
 import { createRecipeFromPrompt } from "@/lib/recipes/agent";
+import { checkRateLimit, getAiAgentRateLimits, getClientIp } from "@/lib/rate-limit";
 
 export async function GET() {
   const status = getAiStatus();
@@ -17,6 +18,23 @@ export async function GET() {
 
 export async function POST(request: Request) {
   try {
+    const session = await getServerSession(authOptions);
+    const rateKey = `ai-agent:${session?.user?.id ?? getClientIp(request)}`;
+    const rate = checkRateLimit(rateKey, getAiAgentRateLimits(Boolean(session?.user?.id)));
+
+    if (!rate.allowed) {
+      return NextResponse.json(
+        { message: "Demasiadas solicitudes al agente. Espera un momento e inténtalo de nuevo." },
+        {
+          status: 429,
+          headers: {
+            "Retry-After": String(rate.retryAfterSec),
+            "X-RateLimit-Remaining": "0",
+          },
+        },
+      );
+    }
+
     if (!isTextAiAvailable()) {
       return NextResponse.json(
         {
@@ -37,7 +55,6 @@ export async function POST(request: Request) {
       );
     }
 
-    const session = await getServerSession(authOptions);
     const result = await createRecipeFromPrompt(promptText, { userId: session?.user?.id ?? null });
 
     return NextResponse.json(result);

@@ -1,38 +1,22 @@
-import Link from 'next/link'
-import type { Metadata } from 'next'
+import Link from "next/link";
+import type { Metadata } from "next";
+import prisma from "@/lib/prisma";
+
+export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-  title: 'Blog | Vermut El Travieso',
-  description: 'Artículos, recetas y la cultura más canalla del vermut.',
-}
+  title: "Blog | Vermut El Travieso",
+  description: "Artículos, recetas y la cultura más canalla del vermut.",
+};
 
-export default function BlogPage() {
-  const posts = [
-    {
-      id: '1',
-      title: 'La Historia del Vermut en Barcelona',
-      slug: 'historia-vermut-barcelona',
-      excerpt: 'Descubre cómo el vermut se convirtió en la bebida más icónica de la capital catalana.',
-      createdAt: new Date('2024-05-20'),
-      author: { name: 'Juan El Travieso' }
+export default async function BlogPage() {
+  const posts = await prisma.blogPost.findMany({
+    where: { published: true },
+    orderBy: { publishedAt: "desc" },
+    include: {
+      author: { select: { name: true } },
     },
-    {
-      id: '2',
-      title: '5 Errores que Cometes al Preparar un Vermut',
-      slug: 'errores-vermut',
-      excerpt: 'Desde la temperatura hasta la presentación, aquí están los errores más comunes.',
-      createdAt: new Date('2024-05-15'),
-      author: { name: 'Laura Barman' }
-    },
-    {
-      id: '3',
-      title: 'Guía: Los Vermuts Premium Más Exclusivos',
-      slug: 'vermuts-premium',
-      excerpt: 'Análisis de los vermuts artesanales que están revolucionando el mercado.',
-      createdAt: new Date('2024-05-10'),
-      author: { name: 'Carlos Destilador' }
-    },
-  ]
+  });
 
   return (
     <main className="min-h-screen bg-[#0A0A0A] pt-32 pb-24 text-white">
@@ -49,36 +33,53 @@ export default function BlogPage() {
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-          {posts.map(post => (
-            <Link key={post.id} href={`/blog/${post.slug}`} className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-2 hover:border-electric-blue/30 hover:shadow-[0_0_40px_rgba(0,163,224,0.15)] flex flex-col">
-              <div className="p-8 flex flex-col flex-grow">
-                <div className="mb-6 flex items-center justify-between">
-                  <span className="rounded-full bg-white/5 border border-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                    {post.createdAt.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' })}
-                  </span>
-                  <span className="text-xs uppercase tracking-widest text-electric-yellow">Leer →</span>
-                </div>
-                
-                <h2 className="text-2xl font-display font-bold text-white mb-4 group-hover:text-electric-blue transition-colors">
-                  {post.title}
-                </h2>
-                
-                <p className="text-sm leading-relaxed text-slate-400 mb-8 line-clamp-3">
-                  {post.excerpt}
-                </p>
-                
-                <div className="mt-auto flex items-center gap-3 pt-6 border-t border-white/10">
-                  <div className="h-8 w-8 rounded-full bg-electric-yellow/20 flex items-center justify-center text-electric-yellow font-display font-bold">
-                    {post.author.name ? post.author.name.charAt(0) : 'U'}
+        {posts.length === 0 ? (
+          <p className="text-slate-400">Pronto habrá artículos publicados por la comunidad.</p>
+        ) : (
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {posts.map((post) => (
+              <Link
+                key={post.id}
+                href={`/blog/${post.slug}`}
+                className="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-2 hover:border-electric-blue/30 hover:shadow-[0_0_40px_rgba(0,163,224,0.15)]"
+              >
+                {post.coverUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={post.coverUrl} alt="" className="h-48 w-full object-cover" />
+                ) : null}
+                <div className="flex flex-grow flex-col p-8">
+                  <div className="mb-6 flex items-center justify-between">
+                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                      {(post.publishedAt ?? post.createdAt).toLocaleDateString("es-ES", {
+                        month: "long",
+                        year: "numeric",
+                      })}
+                    </span>
+                    <span className="text-xs uppercase tracking-widest text-electric-yellow">Leer →</span>
                   </div>
-                  <span className="text-xs font-bold uppercase tracking-widest text-slate-300">{post.author.name}</span>
+
+                  <h2 className="mb-4 font-display text-2xl font-bold text-white transition-colors group-hover:text-electric-blue">
+                    {post.title}
+                  </h2>
+
+                  {post.excerpt ? (
+                    <p className="mb-8 line-clamp-3 text-sm leading-relaxed text-slate-400">{post.excerpt}</p>
+                  ) : null}
+
+                  <div className="mt-auto flex items-center gap-3 border-t border-white/10 pt-6">
+                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-electric-yellow/20 font-display font-bold text-electric-yellow">
+                      {(post.author?.name ?? "U").charAt(0)}
+                    </div>
+                    <span className="text-xs font-bold uppercase tracking-widest text-slate-300">
+                      {post.author?.name ?? "Autor"}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </main>
-  )
+  );
 }

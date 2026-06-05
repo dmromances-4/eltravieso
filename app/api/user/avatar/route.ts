@@ -4,11 +4,17 @@ import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 import { uploadUserAvatar } from "@/lib/storage/upload-avatar";
 import { serializeUserProfile } from "@/lib/user/profile";
+import { enforceUserRateLimit, RATE_LIMITS } from "@/lib/rate-limit";
 
 export async function POST(request: Request) {
   const session = await getServerSession(authOptions);
   if (!session?.user?.id) {
     return NextResponse.json({ message: "No autorizado" }, { status: 401 });
+  }
+
+  const limited = await enforceUserRateLimit(session.user.id, "avatar-upload", RATE_LIMITS.upload);
+  if (limited) {
+    return NextResponse.json({ message: limited.message }, { status: limited.status, headers: limited.headers });
   }
 
   try {

@@ -144,7 +144,12 @@ export default function BarSettingsForm() {
       const data = await res.json();
       if (res.ok) {
         setHasTpvToken(Boolean(data.profile?.hasTpvToken));
-        setFormData((prev) => ({ ...prev, tpvToken: "" }));
+        setFormData((prev) => ({
+          ...prev,
+          tpvToken: "",
+          slug: data.profile?.slug ?? prev.slug,
+        }));
+        setWorlds50Rank(data.profile?.guideEntry?.worlds50bestRank ?? null);
         setMessage({ type: "success", text: "Datos del local actualizados con éxito." });
       } else {
         setMessage({ type: "error", text: data.message || "Error al actualizar." });

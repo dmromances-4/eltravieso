@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 320" fill="none">
+  <g id="body" stroke="#EF2A2A" stroke-width="4" fill="none">
+    <path d="M70 140 Q100 110 130 140 L125 220 Q100 235 75 220 Z"/>
+    <path d="M85 220 L85 280 M115 220 L115 280"/>
+  </g>
+  <g id="head" stroke="#EF2A2A" stroke-width="4" fill="none">
+    <ellipse cx="100" cy="95" rx="38" ry="42"/>
+    <circle cx="88" cy="90" r="3" fill="#EF2A2A"/>
+    <circle cx="112" cy="90" r="3" fill="#EF2A2A"/>
+  </g>
+  <g id="arm-left" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M70 155 Q50 175 60 195"/>
+  </g>
+  <g id="arm-right" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M130 155 Q150 120 140 95"/>
+  </g>
+  <g id="spoon" stroke="#FFCC00" stroke-width="3" fill="none">
+    <line x1="140" y1="95" x2="165" y2="75"/>
+    <circle cx="168" cy="72" r="8"/>
+  </g>
+  <g id="glass" stroke="#00A3E0" stroke-width="3" fill="none">
+    <path d="M55 195 L65 240 L85 240 L95 195 Z"/>
+  </g>
+</svg>

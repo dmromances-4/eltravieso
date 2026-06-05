@@ -1,14 +1,42 @@
-export default function AdminPostsPage() {
+import Link from "next/link";
+import prisma from "@/lib/prisma";
+import AdminPostsList from "@/components/admin/AdminPostsList";
+
+export const dynamic = "force-dynamic";
+
+export default async function AdminPostsPage() {
+  const posts = await prisma.blogPost.findMany({
+    orderBy: { updatedAt: "desc" },
+    include: {
+      author: { select: { email: true, name: true } },
+    },
+  });
+
+  const mapped = posts.map((post) => ({
+    id: post.id,
+    title: post.title,
+    slug: post.slug,
+    published: post.published,
+    updatedAt: post.updatedAt.toISOString(),
+    author: post.author,
+  }));
+
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <h2 className="text-2xl font-bold">Blog Posts</h2>
-        <a href="/admin/posts/new" className="bg-red-600 text-white px-4 py-2 rounded">New Post</a>
+    <div className="space-y-8">
+      <div className="flex flex-wrap items-center justify-between gap-4">
+        <div>
+          <h1 className="text-4xl font-display font-bold tracking-tight text-white">Blog</h1>
+          <p className="mt-2 text-slate-400">Gestiona artículos SEO y contenido editorial.</p>
+        </div>
+        <Link
+          href="/admin/posts/new"
+          className="rounded-full bg-red-600 px-6 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:bg-red-500"
+        >
+          Nuevo artículo
+        </Link>
       </div>
 
-      <div className="bg-zinc-900 border border-zinc-800 rounded p-4">
-        <p className="text-zinc-400">No posts yet — use this area to create and manage SEO content. For full management, this page will be enhanced to query `prisma.blogPost` once the Prisma client types are available.</p>
-      </div>
+      <AdminPostsList posts={mapped} />
     </div>
   );
 }

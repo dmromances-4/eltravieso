@@ -3,14 +3,6 @@
 import Link from "next/link";
 import { Suspense, useEffect, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
-import PDFExport from "@/components/PDFExport";
-
-const tabs = [
-  { id: "sheet", label: "Generar Ficha Técnica" },
-  { id: "agent", label: "Creador de Recetas" },
-] as const;
-
-type TabId = (typeof tabs)[number]["id"];
 
 type AiStatusResponse = {
   available: boolean;
@@ -27,6 +19,7 @@ type SearchMatch = {
 type AgentResult = {
   title?: string;
   summary?: string;
+  glass?: string;
   ingredients?: Array<{ name: string; amount: string }>;
   method?: string;
   abv?: number | null;
@@ -40,8 +33,6 @@ type AgentResult = {
 
 function TechGeneratorContent() {
   const searchParams = useSearchParams();
-  const [tab, setTab] = useState<TabId>(() => (searchParams.get("tab") === "agent" ? "agent" : "sheet"));
-  const [baseRecipe, setBaseRecipe] = useState("");
   const [promptText, setPromptText] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<AgentResult | null>(null);
@@ -52,8 +43,8 @@ function TechGeneratorContent() {
   const [searchLoading, setSearchLoading] = useState(false);
 
   useEffect(() => {
-    if (searchParams.get("tab") === "agent") {
-      setTab("agent");
+    if (searchParams.get("prompt")) {
+      setPromptText(searchParams.get("prompt") ?? "");
     }
   }, [searchParams]);
 
@@ -79,8 +70,6 @@ function TechGeneratorContent() {
   }, []);
 
   useEffect(() => {
-    if (tab !== "agent") return;
-
     const query = promptText.trim();
     if (query.length < 3) {
       setSearchMatches([]);
@@ -101,7 +90,7 @@ function TechGeneratorContent() {
     }, 400);
 
     return () => clearTimeout(timer);
-  }, [promptText, tab]);
+  }, [promptText]);
 
   const handleGenerate = async (e: FormEvent) => {
     e.preventDefault();
@@ -115,19 +104,16 @@ function TechGeneratorContent() {
     setError("");
     setResult(null);
 
-    const route = tab === "sheet" ? "/api/ai/generate-sheet" : "/api/ai/agent";
-    const body = tab === "sheet" ? { baseRecipe } : { prompt: promptText };
-
     try {
-      const res = await fetch(route, {
+      const res = await fetch("/api/ai/agent", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ prompt: promptText }),
       });
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.message || "Error al generar el contenido");
+        throw new Error(data.message || "Error al generar la receta");
       }
 
       setResult(data);
@@ -137,16 +123,6 @@ function TechGeneratorContent() {
       setLoading(false);
     }
   };
-
-  const promptLabel =
-    tab === "sheet"
-      ? "Ingredientes Base (ej: Vermut rojo, naranja amarga, ginebra)"
-      : "Describe tu idea, comentarios o adaptación (ej: daiquiri de melocotón con vermut, menos dulce)";
-
-  const promptPlaceholder =
-    tab === "sheet"
-      ? "Escribe los ingredientes base aquí..."
-      : "Ej: Quiero un cóctel cítrico y refrescante con vermut rojo para terraza, inspirado en un daiquiri...";
 
   const agentReady = !statusLoading && aiStatus?.available;
   const hasIngredients = Array.isArray(result?.ingredients) && result.ingredients.length > 0;
@@ -167,7 +143,8 @@ function TechGeneratorContent() {
             <p className="mt-2 text-sm text-amber-200/90">
               Añade <code className="rounded bg-black/30 px-1.5 py-0.5">GEMINI_API_KEY</code> o{" "}
               <code className="rounded bg-black/30 px-1.5 py-0.5">GROQ_API_KEY</code> en{" "}
-              <code className="rounded bg-black/30 px-1.5 py-0.5">.env.local</code> y reinicia el servidor.
+              <code className="rounded bg-black/30 px-1.5 py-0.5">.env.local</code>, o activa{" "}
+              <code className="rounded bg-black/30 px-1.5 py-0.5">AI_MOCK=true</code> para demo local.
             </p>
           </div>
         ) : null}
@@ -178,29 +155,12 @@ function TechGeneratorContent() {
           </p>
         ) : null}
 
-        <div className="flex gap-2 mb-8">
-          {tabs.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => setTab(item.id)}
-              className={`flex-1 rounded-full px-5 py-3 text-sm font-semibold transition ${
-                tab === item.id
-                  ? "bg-red-600 text-white shadow-lg"
-                  : "bg-zinc-900 text-zinc-300 hover:bg-zinc-800"
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
-        </div>
-
         <div className="bg-zinc-900 shadow sm:rounded-2xl border border-zinc-800 mb-8">
           <div className="px-4 py-6 sm:p-8">
             <form onSubmit={handleGenerate}>
               <div className="mb-5">
                 <label htmlFor="input" className="block text-sm font-medium text-zinc-300">
-                  {promptLabel}
+                  Describe tu idea, comentarios o adaptación (ej: daiquiri de melocotón con vermut, menos dulce)
                 </label>
                 <div className="mt-3">
                   <textarea
@@ -208,16 +168,16 @@ function TechGeneratorContent() {
                     name="input"
                     rows={5}
                     className="shadow-sm focus:ring-red-500 focus:border-red-500 block w-full sm:text-sm border-zinc-700 bg-zinc-950 text-white rounded-2xl p-4"
-                    placeholder={promptPlaceholder}
-                    value={tab === "sheet" ? baseRecipe : promptText}
-                    onChange={(e) => (tab === "sheet" ? setBaseRecipe(e.target.value) : setPromptText(e.target.value))}
+                    placeholder="Ej: Quiero un cóctel cítrico y refrescante con vermut rojo para terraza, inspirado en un daiquiri..."
+                    value={promptText}
+                    onChange={(e) => setPromptText(e.target.value)}
                     required
-                    disabled={!agentReady}
+                    disabled={!agentReady || loading}
                   />
                 </div>
               </div>
 
-              {tab === "agent" && promptText.trim().length >= 3 ? (
+              {promptText.trim().length >= 3 ? (
                 <div className="mb-5 rounded-2xl border border-zinc-800 bg-zinc-950/80 p-4">
                   <p className="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500 mb-3">
                     {searchLoading ? "Buscando en el recetario…" : "Recetas relacionadas en el catálogo"}
@@ -248,15 +208,18 @@ function TechGeneratorContent() {
                 <button
                   type="submit"
                   disabled={loading || !agentReady}
-                  className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-semibold rounded-full shadow-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent text-base font-semibold rounded-full shadow-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 transition-colors"
                 >
-                  {loading ? "Creando receta…" : tab === "sheet" ? "Generar Ficha Técnica" : "Crear receta"}
+                  {loading ? (
+                    <>
+                      <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                      Creando receta…
+                    </>
+                  ) : (
+                    "Crear receta"
+                  )}
                 </button>
-                <p className="text-sm text-zinc-500">
-                  {tab === "sheet"
-                    ? "Ficha técnica lista para barra y PDF."
-                    : "Se publica en /recetas con ingredientes y método completos."}
-                </p>
+                <p className="text-sm text-zinc-500">Se publica en /recetas con ingredientes, método y tipo de vaso.</p>
               </div>
             </form>
           </div>
@@ -270,21 +233,25 @@ function TechGeneratorContent() {
 
         {result ? (
           <div className="bg-zinc-900 shadow overflow-hidden sm:rounded-2xl border border-zinc-800">
-            <div className="px-5 py-5 sm:px-6 flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 border-b border-zinc-800">
-              <div>
-                <h3 className="text-2xl font-bold text-white">{result.title}</h3>
-                {result.slug ? <p className="mt-1 text-sm text-zinc-400">Slug: {result.slug}</p> : null}
-                {result.message ? <p className="mt-2 text-sm text-emerald-300">{result.message}</p> : null}
-                {result.viewUrl ? (
-                  <Link href={result.viewUrl} className="mt-3 inline-flex text-sm font-semibold text-red-400 hover:text-red-300">
-                    Ver en el recetario →
-                  </Link>
-                ) : null}
-              </div>
-              <div>{result.title ? <PDFExport data={result} /> : null}</div>
+            <div className="px-5 py-5 sm:px-6 border-b border-zinc-800">
+              <h3 className="text-2xl font-bold text-white">{result.title}</h3>
+              {result.slug ? <p className="mt-1 text-sm text-zinc-400">Slug: {result.slug}</p> : null}
+              {result.message ? <p className="mt-2 text-sm text-emerald-300">{result.message}</p> : null}
+              {result.viewUrl ? (
+                <Link href={result.viewUrl} className="mt-3 inline-flex text-sm font-semibold text-red-400 hover:text-red-300">
+                  Ver en el recetario →
+                </Link>
+              ) : null}
             </div>
             <div className="border-t border-zinc-800 px-4 py-5 sm:p-6">
               <dl className="space-y-6">
+                {result.glass ? (
+                  <div className="space-y-2">
+                    <dt className="text-sm font-semibold text-zinc-400">Tipo de vaso</dt>
+                    <dd className="text-white text-base">{result.glass}</dd>
+                  </div>
+                ) : null}
+
                 {result.summary ? (
                   <div className="space-y-2">
                     <dt className="text-sm font-semibold text-zinc-400">Resumen</dt>
@@ -314,7 +281,7 @@ function TechGeneratorContent() {
                 </div>
 
                 <div className="space-y-2">
-                  <dt className="text-sm font-semibold text-zinc-400">Método</dt>
+                  <dt className="text-sm font-semibold text-zinc-400">Instrucciones paso a paso</dt>
                   <dd className="whitespace-pre-line text-zinc-200 text-sm leading-7 rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
                     {result.method}
                   </dd>

@@ -1,32 +1,39 @@
 import { NextResponse } from 'next/server'
-import { createCheckoutSession, type CheckoutItem } from '@/lib/stripe/api'
-import { fetchHoldedStock } from '@/lib/holded/api'
+import { createCheckoutSession } from '@/lib/stripe/api'
+import { CartValidationError, validateCartLines } from '@/lib/checkout/validate-cart'
+import { enforceRateLimit, RATE_LIMITS } from '@/lib/rate-limit'
+import { clientSafeErrorMessage } from '@/lib/security/safe-error'
 
 export async function POST(request: Request) {
-  const body = await request.json()
-  const items = body.items as CheckoutItem[] | undefined
-  const email = body.email as string | undefined
-
-  if (!items || !items.length) {
-    return NextResponse.json({ error: 'No hay artículos en el carrito' }, { status: 400 })
+  const limited = await enforceRateLimit(request, 'checkout', RATE_LIMITS.checkout)
+  if (limited) {
+    return NextResponse.json({ error: limited.message }, { status: limited.status, headers: limited.headers })
   }
 
-  if (!email) {
-    return NextResponse.json({ error: 'Debe proporcionar un email' }, { status: 400 })
+  let body: { items?: unknown; email?: string }
+  try {
+    body = await request.json()
+  } catch {
+    return NextResponse.json({ error: 'Cuerpo de petición inválido' }, { status: 400 })
+  }
+
+  const email = typeof body.email === 'string' ? body.email.trim() : ''
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return NextResponse.json({ error: 'Debe proporcionar un email válido' }, { status: 400 })
   }
 
   try {
-    await Promise.all(
-      items.map(async (item) => {
-        if (item.id) {
-          await fetchHoldedStock(item.id)
-        }
-      })
-    )
-
+    const items = await validateCartLines(body.items as { id: string; quantity: number }[])
     const session = await createCheckoutSession(items, email)
     return NextResponse.json({ url: session.url })
   } catch (error) {
-    return NextResponse.json({ error: error instanceof Error ? error.message : 'Error creando sesión de Stripe' }, { status: 500 })
+    if (error instanceof CartValidationError) {
+      return NextResponse.json({ error: error.message }, { status: error.status })
+    }
+    console.error('[CHECKOUT_ERROR]:', error)
+    return NextResponse.json(
+      { error: clientSafeErrorMessage(error, 'Error creando sesión de pago') },
+      { status: 500 },
+    )
   }
 }

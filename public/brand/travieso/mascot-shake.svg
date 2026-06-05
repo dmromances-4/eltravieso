@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 320" fill="none">
+  <g id="body" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M70 140 Q100 110 130 140 L125 220 Q100 235 75 220 Z"/>
+    <path d="M85 220 L85 280 M115 220 L115 280"/>
+  </g>
+  <g id="head" stroke="#EF2A2A" stroke-width="4" fill="none">
+    <ellipse cx="100" cy="95" rx="38" ry="42"/>
+    <circle cx="88" cy="90" r="3" fill="#EF2A2A"/>
+    <circle cx="112" cy="90" r="3" fill="#EF2A2A"/>
+    <path d="M92 108 Q100 118 108 108"/>
+  </g>
+  <g id="arm-left" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M70 150 Q40 130 55 110"/>
+  </g>
+  <g id="arm-right" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M130 150 Q160 130 145 110"/>
+  </g>
+  <g id="shaker" stroke="#FFCC00" stroke-width="3" fill="none">
+    <path d="M130 100 L150 80 L155 130 L135 150 Z"/>
+  </g>
+</svg>

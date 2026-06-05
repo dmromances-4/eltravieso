@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
+import { slugify } from "@/lib/utils/slug";
 
 const VALID_CATEGORIES = [
   "VERMUT",
@@ -18,15 +19,6 @@ const VALID_CATEGORIES = [
 ];
 
 const VALID_FORMATS = ["UNIT", "BOTTLE_75CL", "BAG_IN_BOX_3L", "CASE_6", "CASE_12", "PALET"];
-
-function slugify(value: string): string {
-  return value
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
-}
 
 export async function GET() {
   const session = await getServerSession(authOptions);

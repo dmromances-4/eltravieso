@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 320" fill="none">
+  <!-- El Travieso mascot  idle pose (red line-art, layered for Remotion) -->
+  <g id="bg-accent" opacity="0">
+    <rect width="200" height="320" fill="#00A3E0"/>
+  </g>
+  <g id="body" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M70 140 Q100 110 130 140 L125 220 Q100 235 75 220 Z"/>
+    <path d="M85 220 L85 280 M115 220 L115 280"/>
+  </g>
+  <g id="head" stroke="#EF2A2A" stroke-width="4" fill="none">
+    <ellipse cx="100" cy="95" rx="38" ry="42"/>
+    <circle cx="88" cy="90" r="3" fill="#EF2A2A"/>
+    <circle cx="112" cy="90" r="3" fill="#EF2A2A"/>
+    <path d="M92 108 Q100 118 108 108" stroke-width="3"/>
+    <path d="M95 102 Q100 98 105 102" stroke-width="2"/>
+  </g>
+  <g id="arm-left" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M70 150 Q45 170 50 200"/>
+  </g>
+  <g id="arm-right" stroke="#EF2A2A" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M130 150 Q155 170 150 200"/>
+  </g>
+  <g id="bottle-left" stroke="#EF2A2A" stroke-width="3" fill="none">
+    <rect x="35" y="185" width="18" height="50" rx="3"/>
+    <text x="38" y="210" fill="#EF2A2A" font-size="6" font-family="Arial">CANALLA</text>
+  </g>
+  <g id="bottle-right" stroke="#EF2A2A" stroke-width="3" fill="none">
+    <rect x="147" y="185" width="18" height="50" rx="3"/>
+    <text x="149" y="210" fill="#EF2A2A" font-size="5" font-family="Arial">TRAVIESO</text>
+  </g>
+</svg>

@@ -6,12 +6,16 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion'
 import { usePathname } from 'next/navigation'
 import { useSession } from 'next-auth/react'
+import { useCart } from '@/lib/cart/CartContext'
 
 const navLinks = [
   { name: 'Inicio', href: '/' },
   { name: 'Recetas', href: '/recetas' },
   { name: 'Barra IA', href: '/pro/tech-generator' },
+  { name: 'Bar Online', href: '/bar-online' },
   { name: 'Shop', href: '/shop' },
+  { name: 'Mapa', href: '/mapa' },
+  { name: 'Comunidad', href: '/comunidad' },
   { name: 'Blog', href: '/blog' },
 ]
 
@@ -20,6 +24,7 @@ export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const pathname = usePathname()
   const { data: session, status } = useSession()
+  const { count: cartCount } = useCart()
 
   const isAuthenticated = status === 'authenticated' && session?.user
   const accountHref = isAuthenticated ? '/cuenta' : '/login'
@@ -70,8 +75,13 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-4 z-50">
-            <Link href="/cart" className="relative group p-2">
+            <Link href="/cart" className="relative group p-2" aria-label={`Carrito${cartCount > 0 ? ` (${cartCount})` : ''}`}>
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white group-hover:text-electric-yellow transition-colors"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+              {cartCount > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-[1.25rem] items-center justify-center rounded-full bg-electric-yellow px-1 text-[10px] font-bold text-black">
+                  {cartCount > 99 ? '99+' : cartCount}
+                </span>
+              )}
             </Link>
 
             {isAuthenticated ? (

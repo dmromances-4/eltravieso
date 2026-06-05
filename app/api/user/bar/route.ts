@@ -43,7 +43,9 @@ export async function GET() {
       },
     });
 
-    return NextResponse.json({ profile: sanitizeBarProfileForClient(profile) });
+    return NextResponse.json({
+      profile: profile ? sanitizeBarProfileForClient(profile) : null,
+    });
   } catch (error: unknown) {
     console.error("[BAR_PROFILE_GET_ERROR]:", error);
     const message = error instanceof Error ? error.message : "Error al obtener el perfil de bar.";

@@ -31,12 +31,16 @@ export function getConfiguredImageProviders(): AiImageProvider[] {
   return IMAGE_PROVIDERS.filter(hasImageKey);
 }
 
+export function isDevelopmentMockEnabled(): boolean {
+  return process.env.AI_MOCK === "true";
+}
+
 export function isTextAiAvailable(): boolean {
-  return getConfiguredTextProviders().length > 0;
+  return getConfiguredTextProviders().length > 0 || isDevelopmentMockEnabled();
 }
 
 export function isImageAiAvailable(): boolean {
-  return getConfiguredImageProviders().length > 0;
+  return getConfiguredImageProviders().length > 0 || isDevelopmentMockEnabled();
 }
 
 export function resolveTextProvider(): AiTextProvider | null {
@@ -51,18 +55,19 @@ export function getAiStatus() {
   const textProviders = getConfiguredTextProviders();
   const imageProviders = getConfiguredImageProviders();
   const preferredText = resolveTextProvider();
+  const mockEnabled = isDevelopmentMockEnabled();
 
   return {
-    available: textProviders.length > 0,
+    available: textProviders.length > 0 || mockEnabled,
     text: {
-      available: textProviders.length > 0,
-      providers: textProviders,
-      preferred: preferredText,
+      available: textProviders.length > 0 || mockEnabled,
+      providers: mockEnabled ? ["mock"] : textProviders,
+      preferred: mockEnabled ? "mock" : preferredText,
       explicit: process.env.AI_PROVIDER ?? null,
     },
     image: {
-      available: imageProviders.length > 0,
-      providers: imageProviders,
+      available: imageProviders.length > 0 || mockEnabled,
+      providers: mockEnabled ? ["mock"] : imageProviders,
       explicit: process.env.AI_IMAGE_PROVIDER ?? null,
     },
     agent: {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CocktailCard from "@/components/CocktailCard";
+import RecetasClient from "@/components/recetas/RecetasClient";
 import { getCatalogRecipes } from "@/lib/recipes/catalog";
 
 export const dynamic = "force-dynamic";
@@ -28,11 +28,7 @@ export default async function CocktailsPage() {
           </div>
         </section>
 
-        <section className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {cocktails.map((cocktail) => (
-            <CocktailCard key={`${cocktail.source}-${cocktail.slug}`} {...cocktail} />
-          ))}
-        </section>
+        <RecetasClient recipes={cocktails} />
       </div>
     </main>
   );

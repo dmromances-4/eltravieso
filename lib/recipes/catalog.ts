@@ -42,6 +42,8 @@ function dbToCatalog(recipe: {
   title: string;
   slug: string;
   summary: string | null;
+  glass?: string | null;
+  imageUrl?: string | null;
   ingredients: string;
   method: string | null;
   videoUrl?: string | null;
@@ -49,6 +51,10 @@ function dbToCatalog(recipe: {
 }): CatalogRecipe {
   const ingredients = parseStoredIngredients(recipe.ingredients);
   const abvValue = recipe.technical?.abv;
+  const cover =
+    recipe.imageUrl ??
+    recipe.technical?.imageUrl ??
+    "/cocktail-placeholder.svg";
 
   return {
     title: recipe.title,
@@ -56,12 +62,12 @@ function dbToCatalog(recipe: {
     summary: recipe.summary ?? undefined,
     videoUrl: recipe.videoUrl ?? undefined,
     rating: 8,
-    glass: "Copa de autor",
+    glass: recipe.glass ?? "Copa de autor",
     ingredients: ingredients.length > 0 ? ingredients : ["Consultar ficha para cantidades"],
     method: recipe.method ?? "Preparar y servir bien frío.",
     abv: abvValue != null ? `${abvValue}%` : "—",
     kcal: 120,
-    cover: recipe.technical?.imageUrl ?? "/cocktail-placeholder.svg",
+    cover,
     source: "database",
   };
 }
@@ -84,12 +90,15 @@ export async function getDatabaseRecipes(): Promise<CatalogRecipe[]> {
 
 export async function getCatalogRecipes(): Promise<CatalogRecipe[]> {
   const dbRecipes = await getDatabaseRecipes();
-  const dbSlugs = new Set(dbRecipes.map((recipe) => recipe.slug));
-  const staticFiltered = staticCocktails
-    .filter((recipe) => !dbSlugs.has(recipe.slug))
-    .map(staticToCatalog);
+  if (dbRecipes.length > 0) {
+    const dbSlugs = new Set(dbRecipes.map((recipe) => recipe.slug));
+    const staticFiltered = staticCocktails
+      .filter((recipe) => !dbSlugs.has(recipe.slug))
+      .map(staticToCatalog);
+    return [...dbRecipes, ...staticFiltered];
+  }
 
-  return [...dbRecipes, ...staticFiltered];
+  return staticCocktails.map(staticToCatalog);
 }
 
 export async function getRecipeBySlug(slug: string): Promise<CatalogRecipe | null> {
@@ -120,9 +129,71 @@ export function searchCatalog(recipes: CatalogRecipe[], query: string, limit = 6
     .map((entry) => entry.recipe);
 }
 
-export async function searchRecipes(query: string, limit = 6): Promise<CatalogRecipe[]> {
+export async function searchRecipesInDb(query: string, limit = 6): Promise<CatalogRecipe[]> {
+  const tokens = tokenizeQuery(query);
+  if (!tokens.length) return [];
+
+  try {
+    const rows = await prisma.recipe.findMany({
+      where: {
+        isPublished: true,
+        OR: tokens.flatMap((token) => [
+          { title: { contains: token, mode: "insensitive" as const } },
+          { summary: { contains: token, mode: "insensitive" as const } },
+          { ingredients: { contains: token, mode: "insensitive" as const } },
+          { glass: { contains: token, mode: "insensitive" as const } },
+        ]),
+      },
+      include: { technical: true },
+      orderBy: { updatedAt: "desc" },
+      take: Math.max(limit * 3, 12),
+    });
+
+    const dbResults = rows.map((row) => dbToCatalog(row));
+    return searchCatalog(dbResults, query, limit);
+  } catch (error) {
+    console.error("[catalog] searchRecipesInDb falló:", error);
+    return [];
+  }
+}
+
+export async function getRelatedRecipes(slug: string, limit = 3): Promise<CatalogRecipe[]> {
+  try {
+    const rows = await prisma.recipe.findMany({
+      where: { slug: { not: slug }, isPublished: true },
+      include: { technical: true },
+      orderBy: { createdAt: "desc" },
+      take: limit,
+    });
+    if (rows.length > 0) {
+      return rows.map((row) => dbToCatalog(row));
+    }
+  } catch (error) {
+    console.error("[catalog] getRelatedRecipes falló:", error);
+  }
+
   const catalog = await getCatalogRecipes();
-  return searchCatalog(catalog, query, limit);
+  return catalog.filter((r) => r.slug !== slug).slice(0, limit);
+}
+
+export async function searchRecipes(query: string, limit = 6): Promise<CatalogRecipe[]> {
+  const dbMatches = await searchRecipesInDb(query, limit);
+  if (dbMatches.length >= limit) return dbMatches;
+
+  const catalog = await getCatalogRecipes();
+  const staticMatches = searchCatalog(catalog, query, limit);
+  const seen = new Set(dbMatches.map((r) => r.slug));
+  const merged = [...dbMatches];
+
+  for (const recipe of staticMatches) {
+    if (merged.length >= limit) break;
+    if (!seen.has(recipe.slug)) {
+      merged.push(recipe);
+      seen.add(recipe.slug);
+    }
+  }
+
+  return merged;
 }
 
 export function buildSearchContext(matches: CatalogRecipe[]): string {

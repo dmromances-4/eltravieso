@@ -12,7 +12,9 @@ Purpose: Help AI agents make safe, accurate edits in this Next.js 14 App Router 
   - `npm run dev` → `next dev`
   - `npm run build` → `next build`
   - `npm run start` → `next start`
-  - `npm run lint` → `next lint`
+  - `npm run lint` → `next lint` (ESLint runs during `npm run build`)
+  - `npm run test` → Vitest unit tests; set `SMOKE_BASE_URL` for E2E smoke tests
+  - `npm run smoke` → `scripts/smoke-routes.ts` (requires dev server)
   - `npm run seed:cocktails` → `ts-node scripts/seed-cocktails.ts`
   - After Prisma schema edits, run `npx prisma generate` and/or `npx prisma migrate dev` as needed.
 
@@ -33,18 +35,24 @@ Purpose: Help AI agents make safe, accurate edits in this Next.js 14 App Router 
 - Integrations / external dependencies:
   - Stripe checkout is implemented in `lib/stripe/api.ts` and used by `app/api/checkout/route.ts`.
   - `app/api/checkout/route.ts` validates cart items against Holded stock before creating a Stripe session.
-  - Holded integration is in `lib/holded/api.ts`; `app/api/stripe/webhook/route.ts` syncs completed checkout sessions to Holded.
-  - The Stripe webhook currently does not validate signatures; preserve the existing behavior unless explicitly asked to harden it.
+  - Holded integration is in `lib/holded/api.ts` and `lib/holded.service.ts`; catalog sync in `lib/integrations/holded-catalog.ts`.
+  - Square catalog sync: `lib/integrations/square-catalog.ts`; TPV variant resolution: `lib/integrations/resolve-variant.ts`.
+  - Shopify OAuth/sync/webhook: `lib/integrations/shopify.ts`; shared upsert: `lib/integrations/catalog-upsert.ts`.
+  - TPV webhook: `app/api/tpv/webhook/route.ts` (token + provider + HMAC). UI: `/cuenta/integraciones`.
+  - Stripe webhook validates signatures via `STRIPE_WEBHOOK_SECRET` in `app/api/stripe/webhook/route.ts`.
+  - See `docs/INTEGRACIONES.md` for integration details.
   - AI text/image generation uses `lib/ai/provider.ts` (`@google/genai`, Groq via OpenAI-compatible API, OpenAI, HuggingFace). Provider priority and fallbacks are documented in that file; availability helpers live in `lib/ai/availability.ts`.
-  - `app/api/ai/generate-sheet/route.ts` creates technical sheets; optional Supabase image upload when `SUPABASE_*` is set.
+  - `app/api/ai/agent/route.ts` creates and persists recipes with validated structure (title, glass, ingredients, method).
   - **Recipe agent**: UI at `app/pro/tech-generator/page.tsx` (tab *Agente de Recetas*), API `POST /api/ai/agent`, health `GET /api/ai/status`. Persists to Prisma when the user has a session. See `AGENTS.md` for setup.
 
 - Environment variables to preserve:
   - `DATABASE_URL`
   - `NEXTAUTH_SECRET`, `NEXTAUTH_URL`
-  - `STRIPE_SECRET_KEY`
+  - `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`
   - `NEXT_PUBLIC_APP_URL`
-  - `HOLDED_API_KEY`
+  - `HOLDED_API_KEY`, `SQUARE_ENVIRONMENT`
+  - `SHOPIFY_CLIENT_ID`, `SHOPIFY_CLIENT_SECRET`
+  - `AI_RATE_LIMIT_WINDOW_MS`, `AI_RATE_LIMIT_ANON_MAX`, `AI_RATE_LIMIT_AUTH_MAX`
   - `GEMINI_API_KEY`, `GEMINI_MODEL`, `GEMINI_IMAGE_MODEL`
   - `GROQ_API_KEY`, `GROQ_MODEL`
   - `OPENAI_API_KEY`, `OPENAI_MODEL`, `OPENAI_IMAGE_MODEL`
@@ -63,7 +71,7 @@ Purpose: Help AI agents make safe, accurate edits in this Next.js 14 App Router 
   - `app/api/checkout/route.ts`
   - `app/api/stripe/webhook/route.ts`
   - `app/api/holded/stock/route.ts`
-  - `app/api/ai/agent/route.ts`, `app/api/ai/generate-sheet/route.ts`, `app/api/ai/status/route.ts`
+  - `app/api/ai/agent/route.ts`, `app/api/ai/status/route.ts`
   - `lib/stripe/api.ts`, `lib/holded/api.ts`, `lib/ai/provider.ts`, `lib/ai/availability.ts`, `lib/prisma.ts`
   - `scripts/seed-cocktails.ts`, `data/alcohol-encyclopedia.json`, `data/cocktails.json`
 

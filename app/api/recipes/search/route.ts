@@ -1,7 +1,13 @@
 import { NextResponse } from "next/server";
 import { searchRecipes } from "@/lib/recipes/catalog";
+import { enforceRateLimit, RATE_LIMITS } from "@/lib/rate-limit";
 
 export async function GET(request: Request) {
+  const limited = await enforceRateLimit(request, "recipe-search", RATE_LIMITS.recipeSearch);
+  if (limited) {
+    return NextResponse.json({ message: limited.message }, { status: limited.status, headers: limited.headers });
+  }
+
   const url = new URL(request.url);
   const q = String(url.searchParams.get("q") ?? "").trim();
 

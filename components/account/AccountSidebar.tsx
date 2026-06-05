@@ -17,7 +17,11 @@ export default function AccountSidebar() {
       ? [{ href: "/cuenta/bar", label: "Mi local" }]
       : []),
     { href: "/cuenta/recetas", label: "Mis recetas" },
+    { href: "/cuenta/blog", label: "Blog" },
     { href: "/cuenta/marketplace", label: "Vender" },
+    ...(session?.user?.role === "ADMIN" || session?.user?.role === "BAR_OWNER"
+      ? [{ href: "/cuenta/integraciones", label: "Integraciones" }]
+      : []),
   ];
 
   return (

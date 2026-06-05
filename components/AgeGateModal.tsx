@@ -5,19 +5,27 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 type ConsentState = 'unknown' | 'accepted' | 'declined'
 
+const STORAGE_KEY = 'vermut_age_verified'
 const COOKIE_NAME = 'vermut_age_verified'
 const EXIT_URL = 'https://www.google.com'
 
-function readAgeCookie(): ConsentState {
-  if (typeof document === 'undefined') return 'unknown'
-  const match = document.cookie.match(new RegExp('(^| )' + COOKIE_NAME + '=([^;]+)'))
-  if (!match) return 'unknown'
-  return match[2] === '1' ? 'accepted' : 'declined'
+function readAgeState(): ConsentState {
+  if (typeof window === 'undefined') return 'unknown'
+
+  const stored = window.localStorage.getItem(STORAGE_KEY)
+  if (stored === 'accepted' || stored === 'declined') {
+    return stored
+  }
+
+  const cookieMatch = document.cookie.match(new RegExp('(^| )' + COOKIE_NAME + '=([^;]+)'))
+  if (!cookieMatch) return 'unknown'
+  return cookieMatch[2] === '1' ? 'accepted' : 'declined'
 }
 
-function writeAgeCookie(value: ConsentState) {
-  if (typeof document === 'undefined') return
+function writeAgeState(value: ConsentState) {
+  if (typeof window === 'undefined') return
   const maxAge = 60 * 60 * 24 * 365
+  window.localStorage.setItem(STORAGE_KEY, value)
   document.cookie = `${COOKIE_NAME}=${value === 'accepted' ? '1' : '0'}; path=/; max-age=${maxAge}; SameSite=Lax`
 }
 
@@ -28,7 +36,7 @@ export default function AgeGateModal() {
   const modalRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const stored = readAgeCookie()
+    const stored = readAgeState()
     setConsent(stored)
 
     if (stored === 'unknown') {
@@ -80,7 +88,7 @@ export default function AgeGateModal() {
   }, [visible])
 
   const handleAccept = () => {
-    writeAgeCookie('accepted')
+    writeAgeState('accepted')
     setConsent('accepted')
     setVisible(false)
     setBlocked(false)
@@ -88,7 +96,7 @@ export default function AgeGateModal() {
   }
 
   const handleDecline = () => {
-    writeAgeCookie('declined')
+    writeAgeState('declined')
     setConsent('declined')
     setVisible(false)
     setBlocked(true)

@@ -43,6 +43,39 @@ enum ProductCategory {
   INGREDIENTE
 }
 
+enum ReservationProvider {
+  COVER_MANAGER
+  THE_FORK
+  SEVEN_ROOMS
+  OPEN_TABLE
+  EXTERNAL
+}
+
+enum Worlds50BestCategory {
+  BARS
+  RESTAURANTS
+}
+
+enum VenueSource {
+  WORLDS_50_BEST
+  MANUAL
+}
+
+enum VenueContinent {
+  GLOBAL
+  EUROPE
+  ASIA
+  NORTH_AMERICA
+  LATIN_AMERICA
+  MIDDLE_EAST_AFRICA
+  OCEANIA
+}
+
+enum VenueListScope {
+  GLOBAL
+  REGIONAL
+}
+
 enum ProductFormat {
   BOTTLE_75CL
   BAG_IN_BOX_3L
@@ -355,6 +388,37 @@ model BarProfile {
   tpvProvider          String?           // "revo" | "lightspeed" | "square"
   tpvToken             String?           @db.Text
   tpvWebhookUrl        String?
+  shopifyShopName      String?
+  shopifyApiKey        String?           @db.Text
+  shopifyAccessToken   String?           @db.Text
+  shopifyScopes        String?
+  shopifyLastSyncAt    DateTime?
+  shopifySyncStatus    String?           // idle | syncing | ok | error
+  shopifySyncError     String?           @db.Text
+  holdedApiKey         String?           @db.Text
+  holdedWebhookToken   String?           @db.Text
+  holdedLastSyncAt     DateTime?
+  holdedSyncStatus     String?
+  holdedSyncError      String?           @db.Text
+  squareAccessToken    String?           @db.Text
+  squareLocationId     String?
+  squareLastSyncAt     DateTime?
+  squareSyncStatus     String?
+  squareSyncError      String?           @db.Text
+  latitude             Float?
+  longitude            Float?
+  venueType            String?           // cocteleria | restaurante | bar | bodega
+  photoUrl             String?
+  isPublicOnMap        Boolean  @default(false)
+  slug                 String?  @unique
+  history              String?  @db.Text
+  foundationYear       Int?
+  signatureDrink       String?
+  dressCode            String?
+  vibeTags             String[]
+  verdict              String?  @db.Text
+  reservationProvider  ReservationProvider?
+  reservationUrl       String?
   address              String
   city                 String
   postalCode           String
@@ -372,8 +436,48 @@ model BarProfile {
   stockEntries      BarStock[]
   wholesaleOrders   WholesaleOrder[]
   deliveryStops     DeliveryStop[]
+  guideEntry        VenueGuideEntry?
 
   @@index([taxId])
+  @@index([city])
+}
+
+model VenueGuideEntry {
+  id                   String               @id @default(uuid())
+  slug                 String               @unique
+  name                 String
+  city                 String
+  country              String?
+  address              String?
+  venueType            String
+  photoUrl             String?
+  history              String?              @db.Text
+  verdict              String?              @db.Text
+  chefName             String?
+  worlds50bestRank     Int
+  worlds50bestCategory Worlds50BestCategory
+  worlds50bestYear     Int?
+  continent            VenueContinent?
+  listScope            VenueListScope       @default(GLOBAL)
+  regionalRank         Int?
+  additionalRankings   Json?
+  sourceUrl            String               @unique
+  externalWebsite      String?
+  tripadvisorUrl       String?
+  tripadvisorRating    Float?
+  enrichmentSource     String?
+  latitude             Float?
+  longitude            Float?
+  isPublished          Boolean              @default(true)
+  barProfileId         String?              @unique
+  source               VenueSource          @default(WORLDS_50_BEST)
+  scrapedAt            DateTime?
+  createdAt            DateTime             @default(now())
+  updatedAt            DateTime             @updatedAt
+
+  barProfile BarProfile? @relation(fields: [barProfileId], references: [id])
+
+  @@index([worlds50bestCategory, worlds50bestRank])
   @@index([city])
 }
 
@@ -580,6 +684,7 @@ model Recipe {
   title       String
   slug        String          @unique
   summary     String?         @db.Text
+  glass       String?
   ingredients String          @db.Text
   method      String?         @db.Text
   imageUrl    String?
@@ -707,4 +812,17 @@ model BarOnlineSession {
   @@index([hostId])
   @@index([isActive])
   @@index([type])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// WEBHOOK IDEMPOTENCY
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model ProcessedWebhook {
+  id        String   @id @default(uuid())
+  eventId   String   @unique
+  source    String
+  createdAt DateTime @default(now())
+
+  @@index([source])
 }

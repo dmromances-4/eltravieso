@@ -1,8 +1,26 @@
 'use client';
 
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
+import Link from 'next/link';
 import AlcoholCard from '@/components/AlcoholCard';
 import type { AlcoholRecord } from '@/types/alcohol';
+
+const LETTERS = ['#', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')];
+
+function normalizeText(value: string) {
+  return value
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '');
+}
+
+function firstLetter(title: string): string {
+  const char = normalizeText(title).trim().charAt(0);
+  if (char >= 'a' && char <= 'z') {
+    return char.toUpperCase();
+  }
+  return '#';
+}
 
 type Product = {
   id: string;
@@ -102,8 +120,29 @@ function productEmoji(product: Product): string {
 
 export default function ShopClient({ products, alcohols }: ShopClientProps) {
   const [activeTab, setActiveTab] = useState<TabId>('TODOS');
+  const [query, setQuery] = useState('');
+  const [activeLetter, setActiveLetter] = useState<string | null>(null);
 
-  const filteredProducts = products.filter((p) => matchesTab(p, activeTab));
+  const filteredProducts = useMemo(() => {
+    const normalizedQuery = normalizeText(query).trim();
+
+    return products.filter((p) => {
+      if (!matchesTab(p, activeTab)) return false;
+
+      if (activeLetter && firstLetter(p.title) !== activeLetter) {
+        return false;
+      }
+
+      if (normalizedQuery) {
+        const haystack = normalizeText(`${p.title} ${p.description ?? ''}`);
+        if (!haystack.includes(normalizedQuery)) {
+          return false;
+        }
+      }
+
+      return true;
+    });
+  }, [products, activeTab, query, activeLetter]);
 
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-8">
@@ -135,6 +174,48 @@ export default function ShopClient({ products, alcohols }: ShopClientProps) {
         ))}
       </div>
 
+      {activeTab !== 'ENCICLOPEDIA' && (
+        <div className="mb-12 space-y-4">
+          <div className="relative max-w-xl">
+            <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-5 text-slate-500">
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
+            </span>
+            <input
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Busca por nombre o descripción…"
+              className="w-full rounded-full border border-white/10 bg-[#0f0f0f] py-3.5 pl-12 pr-4 text-white outline-none transition-all focus:border-electric-yellow focus:ring-1 focus:ring-electric-yellow placeholder:text-slate-600"
+            />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              onClick={() => setActiveLetter(null)}
+              className={`rounded-full px-4 py-1.5 text-xs font-bold uppercase tracking-widest transition-colors ${
+                activeLetter === null
+                  ? 'bg-electric-yellow text-black'
+                  : 'border border-white/20 text-slate-300 hover:border-electric-yellow'
+              }`}
+            >
+              Todas
+            </button>
+            {LETTERS.map((letter) => (
+              <button
+                key={letter}
+                onClick={() => setActiveLetter(letter)}
+                className={`h-8 w-8 rounded-full text-xs font-bold uppercase tracking-widest transition-colors ${
+                  activeLetter === letter
+                    ? 'bg-electric-yellow text-black'
+                    : 'border border-white/20 text-slate-300 hover:border-electric-yellow'
+                }`}
+              >
+                {letter}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       {activeTab === 'ENCICLOPEDIA' ? (
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {alcohols.map((alcohol) => (
@@ -144,7 +225,11 @@ export default function ShopClient({ products, alcohols }: ShopClientProps) {
       ) : (
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {filteredProducts.map(product => (
-            <article key={product.id} className="group relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-2 hover:border-electric-yellow/30 hover:shadow-[0_0_40px_rgba(255,204,0,0.15)]">
+            <Link
+              key={product.id}
+              href={`/shop/${product.slug}`}
+              className="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-2 hover:border-electric-yellow/30 hover:shadow-[0_0_40px_rgba(255,204,0,0.15)]"
+            >
               <div className="relative aspect-square overflow-hidden bg-[#161616] p-8">
                 {product.imageUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -165,15 +250,16 @@ export default function ShopClient({ products, alcohols }: ShopClientProps) {
                   <h2 className="text-2xl font-display font-bold text-white mb-2">{product.title}</h2>
                   <p className="text-sm text-slate-400 mb-6 line-clamp-3">{product.description}</p>
                 </div>
-                
+
                 <div className="flex items-center justify-between pt-6 border-t border-white/10 mt-auto">
                   <p className="text-2xl font-bold text-electric-yellow">{(product.priceCents / 100).toFixed(2)} €</p>
-                  <button className="rounded-full bg-white px-6 py-3 text-xs font-bold uppercase tracking-widest text-black transition-all hover:bg-electric-yellow">
-                    Comprar
-                  </button>
+                  <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-electric-yellow transition-colors group-hover:text-white">
+                    Ver producto
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+                  </span>
                 </div>
               </div>
-            </article>
+            </Link>
           ))}
           {filteredProducts.length === 0 && (
             <p className="text-slate-400 col-span-full py-12 text-center">No hay productos en esta categoría por el momento.</p>

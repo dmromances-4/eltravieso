@@ -1,6 +1,6 @@
-import OpenAI from "openai";
-import { GoogleGenAI } from "@google/genai";
 import { resolveTextProvider, type AiTextProvider } from "@/lib/ai/availability";
+
+type GoogleGenAI = any;
 
 // ─── Types ────────────────────────────────────────────────────────────
 type TextResponse = { text: string };
@@ -39,6 +39,9 @@ function detectImageProvider(): ImageProvider {
 function getGeminiClient(): GoogleGenAI {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new Error("Missing GEMINI_API_KEY. Get a free key at https://aistudio.google.com/");
+  // Lazy import to avoid hard crash when package is not installed
+  // eslint-disable-next-line
+  const { GoogleGenAI } = require("@google/genai");
   return new GoogleGenAI({ apiKey });
 }
 
@@ -85,11 +88,10 @@ async function geminiGenerateImage(prompt: string): Promise<ImageResponse> {
 async function groqGenerateText(prompt: string, opts: { maxTokens?: number } = {}): Promise<TextResponse> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("Missing GROQ_API_KEY. Get a free key at https://console.groq.com");
-
-  const client = new OpenAI({
-    apiKey,
-    baseURL: "https://api.groq.com/openai/v1",
-  });
+  // Lazy import OpenAI-compatible client to avoid crashing when package missing
+  // eslint-disable-next-line
+  const OpenAI = require("openai").default;
+  const client = new OpenAI({ apiKey, baseURL: "https://api.groq.com/openai/v1" });
 
   const model = process.env.GROQ_MODEL ?? "llama-3.3-70b-versatile";
 
@@ -109,6 +111,9 @@ async function openaiGenerateText(prompt: string, opts: { maxTokens?: number } =
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
 
+  // Lazy import OpenAI to avoid hard dependency at startup
+  // eslint-disable-next-line
+  const OpenAI = require("openai").default;
   const client = new OpenAI({ apiKey });
   const response = await client.chat.completions.create({
     model: process.env.OPENAI_MODEL ?? "gpt-4o-mini",
@@ -123,12 +128,11 @@ async function openaiGenerateText(prompt: string, opts: { maxTokens?: number } =
 async function openaiGenerateImage(prompt: string): Promise<ImageResponse> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
-
+  // Lazy import OpenAI to avoid hard dependency at startup
+  // eslint-disable-next-line
+  const OpenAI = require("openai").default;
   const client = new OpenAI({ apiKey });
-  const r = await client.images.generate({
-    model: process.env.OPENAI_IMAGE_MODEL ?? "gpt-image-1",
-    prompt,
-  });
+  const r = await client.images.generate({ model: process.env.OPENAI_IMAGE_MODEL ?? "gpt-image-1", prompt });
   const url = r.data?.[0]?.url ?? (r.data?.[0]?.b64_json ? `data:image/png;base64,${r.data[0].b64_json}` : "");
   return { url };
 }
@@ -189,6 +193,11 @@ const TEXT_GENERATORS: Record<TextProvider, TextGeneratorFn> = {
 const TEXT_FALLBACK_ORDER: TextProvider[] = ["gemini", "groq", "openai", "huggingface"];
 
 export async function generateText(prompt: string, opts: { maxTokens?: number } = {}): Promise<TextResponse> {
+  // Development mock mode: return a predictable response when AI_MOCK=true
+  if (process.env.AI_MOCK === "true") {
+    return { text: `RESPUESTA_MOCK: Generación simulada para: ${prompt.slice(0, 120)}` };
+  }
+
   const primary = detectTextProvider();
 
   // Try the primary provider first
@@ -237,6 +246,13 @@ const IMAGE_GENERATORS: Record<ImageProvider, ImageGeneratorFn> = {
 const IMAGE_FALLBACK_ORDER: ImageProvider[] = ["gemini", "openai", "huggingface"];
 
 export async function generateImage(prompt: string): Promise<ImageResponse> {
+  // Development mock mode: return a tiny placeholder PNG data URL
+  if (process.env.AI_MOCK === "true") {
+    const placeholder =
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAAWgmWQ0AAAAASUVORK5CYII=";
+    return { url: placeholder };
+  }
+
   const primary = detectImageProvider();
 
   // Try the primary provider first

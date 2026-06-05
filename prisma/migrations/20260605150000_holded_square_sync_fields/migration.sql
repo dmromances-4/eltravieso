@@ -1,0 +1,10 @@
+-- AlterTable
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "holdedApiKey" TEXT;
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "holdedLastSyncAt" TIMESTAMP(3);
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "holdedSyncStatus" TEXT;
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "holdedSyncError" TEXT;
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "squareAccessToken" TEXT;
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "squareLocationId" TEXT;
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "squareLastSyncAt" TIMESTAMP(3);
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "squareSyncStatus" TEXT;
+ALTER TABLE "BarProfile" ADD COLUMN IF NOT EXISTS "squareSyncError" TEXT;

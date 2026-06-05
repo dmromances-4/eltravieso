@@ -8,11 +8,12 @@ import AgeGateModal from '@/components/AgeGateModal'
 import CookieBanner from '@/components/CookieBanner'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { cn } from "@/lib/utils";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-montserrat',
+  variable: '--font-sans',
 })
 
 export const metadata: Metadata = {
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={`${montserrat.variable} ${montserrat.className}`}>
+    <html lang="es" className={cn(montserrat.variable, montserrat.className, "font-sans")}>
       <body className="min-h-screen bg-night text-white antialiased">
         <Providers>
           <AgeGateModal />

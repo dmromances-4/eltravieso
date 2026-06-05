@@ -2,8 +2,14 @@ import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { normalizeEmail, validateEmail, validateName, validatePassword } from "@/lib/validations/user";
+import { enforceRateLimit, RATE_LIMITS } from "@/lib/rate-limit";
 
 export async function POST(req: Request) {
+  const limited = await enforceRateLimit(req, "register", RATE_LIMITS.register);
+  if (limited) {
+    return NextResponse.json({ message: limited.message }, { status: limited.status, headers: limited.headers });
+  }
+
   try {
     const { email, password, name, confirmPassword } = await req.json();
 

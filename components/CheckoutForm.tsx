@@ -1,36 +1,46 @@
 'use client'
 
-import { ChangeEvent, useMemo, useState } from 'react'
+import { ChangeEvent, useState } from 'react'
+import Link from 'next/link'
+import { useCart } from '@/lib/cart/CartContext'
 
-interface CheckoutFormProps {
-  items: Array<{ id: string; name: string; description: string; amount: number; quantity: number; image: string }>
-}
-
-export default function CheckoutForm({ items }: CheckoutFormProps) {
+export default function CheckoutForm() {
+  const { items, subtotalCents, clear } = useCart()
   const [email, setEmail] = useState('')
   const [acceptedTerms, setAcceptedTerms] = useState(false)
   const [acceptedPrivacy, setAcceptedPrivacy] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
 
-  const total = useMemo(() => items.reduce((sum, item) => sum + item.amount * item.quantity, 0), [items])
+  const total = subtotalCents
 
   const handleCheckout = async () => {
     setError(null)
+    if (items.length === 0) {
+      setError('Tu carrito está vacío.')
+      return
+    }
     if (!email || !acceptedTerms || !acceptedPrivacy) {
       setError('Debes completar el email y aceptar los términos y la política de privacidad.')
       return
     }
     setLoading(true)
 
+    const payloadItems = items.map((item) => ({
+      id: item.id,
+      quantity: item.quantity,
+    }))
+
     try {
       const response = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, items })
+        body: JSON.stringify({ email, items: payloadItems })
       })
       const payload = await response.json()
       if (payload.url) {
+        // Vaciamos el carrito una vez iniciada la redirección al pago.
+        clear()
         window.location.href = payload.url
       } else {
         setError(payload.error ?? 'Error desconocido creando la sesión de pago')
@@ -40,6 +50,21 @@ export default function CheckoutForm({ items }: CheckoutFormProps) {
     } finally {
       setLoading(false)
     }
+  }
+
+  if (items.length === 0) {
+    return (
+      <div className="space-y-6 rounded-[2.5rem] border border-white/10 bg-[#111111]/90 p-10 text-center shadow-neon backdrop-blur-xl">
+        <div className="mx-auto flex h-20 w-20 items-center justify-center rounded-full bg-white/5 border border-white/10">
+          <span className="text-3xl">🛒</span>
+        </div>
+        <h2 className="text-2xl font-display text-white">Tu carrito está vacío</h2>
+        <p className="text-sm text-slate-400">Añade productos desde la tienda antes de pasar por caja.</p>
+        <Link href="/shop" className="inline-flex items-center justify-center rounded-full bg-electric-yellow px-8 py-4 text-sm font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110">
+          Ir a la tienda
+        </Link>
+      </div>
+    )
   }
 
   return (

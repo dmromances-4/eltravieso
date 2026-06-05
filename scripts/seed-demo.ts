@@ -14,6 +14,7 @@ import path from "path";
 import bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
 import type { NormalizedProduct } from "./build-products";
+import { slugify } from "../lib/utils/slug";
 
 const prisma = new PrismaClient();
 
@@ -40,15 +41,6 @@ function typeForCategory(category: string): "CONSUMABLE" | "MERCH" | "CONSERVA" 
   if (category === "MERCH" || category === "ROPA" || category === "MATERIAL" || category === "CRISTALERIA")
     return "MERCH";
   return "CONSUMABLE";
-}
-
-function slugify(value: string): string {
-  return value
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-+|-+$/g, "");
 }
 
 function readJson<T>(rel: string, fallback: T): T {
@@ -266,7 +258,13 @@ async function seedDemoRecipes(authorId: string, cocktails: Cocktail[]): Promise
 async function seedB2B(userId: string) {
   const bar = await prisma.barProfile.upsert({
     where: { userId },
-    update: {},
+    update: {
+      latitude: 41.3825,
+      longitude: 2.1769,
+      venueType: "cocteleria",
+      isPublicOnMap: true,
+      photoUrl: "/cocktail-placeholder.svg",
+    },
     create: {
       userId,
       businessName: "Bar El Travieso (Demo)",
@@ -279,6 +277,11 @@ async function seedB2B(userId: string) {
       email: DEMO_EMAIL,
       autoReorderEnabled: true,
       autoReorderThreshold: 12,
+      latitude: 41.3825,
+      longitude: 2.1769,
+      venueType: "cocteleria",
+      isPublicOnMap: true,
+      photoUrl: "/cocktail-placeholder.svg",
     },
   });
 
@@ -302,21 +305,23 @@ async function seedB2B(userId: string) {
     },
   });
 
-  if (vermut) {
-    const variant = await prisma.productVariant.findFirst({ where: { productId: vermut.id } });
+  const variant = vermut
+    ? await prisma.productVariant.findFirst({ where: { productId: vermut.id } })
+    : null;
+  if (vermut && variant) {
     await prisma.barStock.upsert({
       where: {
         barProfileId_productId_variantId: {
           barProfileId: bar.id,
           productId: vermut.id,
-          variantId: variant?.id ?? null,
+          variantId: variant.id,
         },
       },
       update: { currentUnits: 8, minThreshold: 12 },
       create: {
         barProfileId: bar.id,
         productId: vermut.id,
-        variantId: variant?.id ?? null,
+        variantId: variant.id,
         currentUnits: 8,
         minThreshold: 12,
         maxCapacity: 60,

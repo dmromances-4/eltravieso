@@ -1,16 +1,5 @@
 import CheckoutForm from '@/components/CheckoutForm'
 
-const checkoutItems = [
-  {
-    id: 'vermut-rojo-001',
-    name: 'Vermut El Travieso Rojo',
-    description: 'Botella premium de vermut rojo con carácter intenso.',
-    amount: 2999,
-    quantity: 1,
-    image: '/cocktail-placeholder.svg'
-  }
-]
-
 export default function CheckoutPage() {
   return (
     <main className="min-h-screen bg-night px-6 py-16 text-white sm:px-8">
@@ -22,7 +11,7 @@ export default function CheckoutPage() {
             <p className="max-w-2xl text-sm leading-7 text-slate-300">El paso final para tu pedido canalla. Comprobamos stock, firmamos la compra y generamos la factura automática en Holded.</p>
           </div>
           <div className="mt-12">
-            <CheckoutForm items={checkoutItems} />
+            <CheckoutForm />
           </div>
         </div>
       </div>

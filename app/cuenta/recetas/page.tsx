@@ -2,6 +2,10 @@ import Link from "next/link";
 import { getCurrentUser } from "@/lib/auth/session";
 import prisma from "@/lib/prisma";
 import { parseStoredIngredients } from "@/lib/recipes/parse";
+import RecipeVideoEditor from "@/components/account/RecipeVideoEditor";
+import RegenerateRecipeImageButton from "@/components/account/RegenerateRecipeImageButton";
+
+export const dynamic = 'force-dynamic';
 
 export default async function AccountRecipesPage() {
   const user = await getCurrentUser();
@@ -65,6 +69,8 @@ export default async function AccountRecipesPage() {
                     Ver ficha
                   </Link>
                 </div>
+                <RecipeVideoEditor recipeId={recipe.id} initialUrl={recipe.videoUrl} />
+                <RegenerateRecipeImageButton recipeId={recipe.id} slug={recipe.slug} />
               </li>
             );
           })}

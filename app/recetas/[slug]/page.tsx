@@ -3,7 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import GeneratedCocktailImage from "@/components/GeneratedCocktailImage";
 import IngredientTechSheet from "@/components/IngredientTechSheet";
-import { getCatalogRecipes, getRecipeBySlug } from "@/lib/recipes/catalog";
+import RecipeCoverImage from "@/components/RecipeCoverImage";
+import RecipeVideo from "@/components/RecipeVideo";
+import { getRecipeBySlug, getRelatedRecipes } from "@/lib/recipes/catalog";
 
 export const dynamic = "force-dynamic";
 
@@ -28,7 +30,7 @@ export default async function CocktailPage({ params }: { params: { slug: string 
     notFound();
   }
 
-  const catalog = await getCatalogRecipes();
+  const relatedRecipes = await getRelatedRecipes(params.slug, 3);
   const steps = cocktail.method.split("\n").filter(Boolean);
 
   return (
@@ -45,7 +47,7 @@ export default async function CocktailPage({ params }: { params: { slug: string 
         <div className="grid gap-12 lg:grid-cols-3 lg:gap-16">
           <div className="lg:col-span-1">
             <div className="sticky top-32 space-y-6">
-              <GeneratedCocktailImage title={cocktail.title} />
+              <RecipeCoverImage title={cocktail.title} cover={cocktail.cover} />
               <div className="rounded-[2rem] border border-white/10 bg-[#111111]/90 p-6 shadow-neon backdrop-blur-xl">
                 <div className="grid gap-4">
                   <div className="rounded-lg bg-white/5 p-4 border border-white/10">
@@ -78,6 +80,8 @@ export default async function CocktailPage({ params }: { params: { slug: string 
             <section className="space-y-6">
               <IngredientTechSheet ingredients={normalizeIngredients(cocktail.ingredients)} />
             </section>
+
+            <RecipeVideo url={cocktail.videoUrl} />
 
             <section className="space-y-6">
               <h2 className="text-3xl font-display font-bold text-white">Preparación</h2>
@@ -112,10 +116,7 @@ export default async function CocktailPage({ params }: { params: { slug: string 
         <div className="mt-24 border-t border-white/10 pt-16">
           <h2 className="text-3xl font-display font-bold text-white mb-8">Otras Recetas</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {catalog
-              .filter((item) => item.slug !== cocktail.slug)
-              .slice(0, 3)
-              .map((related) => (
+            {relatedRecipes.map((related) => (
                 <Link
                   key={`${related.source}-${related.slug}`}
                   href={`/recetas/${related.slug}`}
