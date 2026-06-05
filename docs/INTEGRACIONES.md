@@ -18,6 +18,7 @@
 - Sync manual: `POST /api/integrations/shopify/sync`
 - Webhook: `POST /api/integrations/shopify/webhook` (HMAC, re-sync en eventos de producto)
 - Lógica: [`lib/integrations/shopify.ts`](../lib/integrations/shopify.ts)
+- Plugin Cursor / validación GraphQL: [`docs/SHOPIFY-PLUGIN.md`](./SHOPIFY-PLUGIN.md)
 - Campos en `BarProfile`: `shopifyShopName`, `shopifyAccessToken`, `shopifySyncStatus`, etc.
 
 ### Holded (bidireccional)
@@ -96,3 +97,9 @@ npm run dev
 npm run smoke
 SMOKE_BASE_URL=http://localhost:3000 npm run test
 ```
+
+## Documentación relacionada
+
+- [docs/README.md](./README.md) — índice general
+- [docs/ADMIN.md](./ADMIN.md) — panel mayorista y producción
+- [AGENTS.md](../AGENTS.md) — guía para agentes IA

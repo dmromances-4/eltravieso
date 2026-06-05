@@ -2,6 +2,8 @@
 
 import dynamic from "next/dynamic";
 import Link from "next/link";
+import { CONTINENT_LABELS } from "@/lib/venues/continents";
+import type { VenueContinent } from "@prisma/client";
 
 const VenueMap = dynamic(() => import("@/components/map/VenueMap"), {
   ssr: false,
@@ -18,13 +20,46 @@ type EditorialVenue = {
   city: string;
   worlds50bestRank: number;
   worlds50bestCategory: string;
+  regionalRank?: number | null;
+};
+
+type ContinentalSection = {
+  continent: VenueContinent;
+  venues: EditorialVenue[];
 };
 
 type Props = {
   editorialIndex?: EditorialVenue[];
+  continentalSections?: ContinentalSection[];
 };
 
-export default function MapaPageClient({ editorialIndex = [] }: Props) {
+function VenueList({ venues }: { venues: EditorialVenue[] }) {
+  return (
+    <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      {venues.map((v) => (
+        <li key={v.slug}>
+          <Link
+            href={`/locales/${v.slug}`}
+            className="block border-2 border-black bg-black px-4 py-3 font-mono text-sm transition hover:border-electric-yellow hover:text-electric-yellow"
+          >
+            {v.regionalRank ? (
+              <span className="text-electric-blue">#{v.regionalRank} regional</span>
+            ) : (
+              <span className="text-electric-yellow">#{v.worlds50bestRank}</span>
+            )}{" "}
+            {v.name}
+            <span className="block text-xs text-slate-500">{v.city}</span>
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+export default function MapaPageClient({
+  editorialIndex = [],
+  continentalSections = [],
+}: Props) {
   return (
     <main className="min-h-screen bg-night pb-12 pt-28 text-white">
       <div className="mx-auto max-w-7xl space-y-8 px-6 sm:px-8">
@@ -35,30 +70,32 @@ export default function MapaPageClient({ editorialIndex = [] }: Props) {
           <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Guía de locales</h1>
           <p className="max-w-2xl text-slate-400">
             Coctelerías y restaurantes de la red El Travieso, más los destacados del ranking
-            World&apos;s 50 Best. Activa las capas en el mapa para explorar.
+            World&apos;s 50 Best global y regional. Activa las capas y filtra por continente.
           </p>
         </section>
 
         <VenueMap />
 
-        {editorialIndex.length > 0 ? (
+        {continentalSections.length > 0
+          ? continentalSections.map((section) => (
+              <section
+                key={section.continent}
+                className="border-4 border-black bg-zinc-900 p-6 shadow-[6px_6px_0px_#000000]"
+              >
+                <h2 className="mb-4 font-display text-2xl font-bold uppercase text-electric-yellow">
+                  {CONTINENT_LABELS[section.continent]}
+                </h2>
+                <VenueList venues={section.venues} />
+              </section>
+            ))
+          : null}
+
+        {editorialIndex.length > 0 && continentalSections.length === 0 ? (
           <section className="border-4 border-black bg-zinc-900 p-6 shadow-[6px_6px_0px_#000000]">
             <h2 className="mb-4 font-display text-2xl font-bold uppercase text-electric-yellow">
               Destacados World&apos;s 50 Best
             </h2>
-            <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-              {editorialIndex.map((v) => (
-                <li key={v.slug}>
-                  <Link
-                    href={`/locales/${v.slug}`}
-                    className="block border-2 border-black bg-black px-4 py-3 font-mono text-sm transition hover:border-electric-yellow hover:text-electric-yellow"
-                  >
-                    <span className="text-electric-yellow">#{v.worlds50bestRank}</span> {v.name}
-                    <span className="block text-xs text-slate-500">{v.city}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <VenueList venues={editorialIndex} />
           </section>
         ) : null}
       </div>

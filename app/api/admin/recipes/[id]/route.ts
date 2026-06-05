@@ -53,6 +53,7 @@ export async function PATCH(request: Request, { params }: RouteContext) {
     const summary = body.summary != null ? String(body.summary).trim() || null : existing.summary;
     const imageUrl = body.imageUrl != null ? (body.imageUrl ? String(body.imageUrl) : null) : existing.imageUrl;
     const isPublished = body.isPublished != null ? Boolean(body.isPublished) : existing.isPublished;
+    const isPremium = body.isPremium != null ? Boolean(body.isPremium) : existing.isPremium;
 
     const slug =
       title !== existing.title
@@ -61,7 +62,7 @@ export async function PATCH(request: Request, { params }: RouteContext) {
 
     const recipe = await prisma.recipe.update({
       where: { id: params.id },
-      data: { title, slug, ingredients, method, glass, summary, imageUrl, isPublished },
+      data: { title, slug, ingredients, method, glass, summary, imageUrl, isPublished, isPremium },
     });
 
     return NextResponse.json({ recipe, message: "Receta actualizada." });

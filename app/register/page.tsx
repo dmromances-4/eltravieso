@@ -12,6 +12,8 @@ export default function RegisterPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [acceptTerms, setAcceptTerms] = useState(false);
+  const [marketingEmailOptIn, setMarketingEmailOptIn] = useState(false);
+  const [marketingSmsOptIn, setMarketingSmsOptIn] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -36,7 +38,14 @@ export default function RegisterPage() {
       const res = await fetch("/api/auth/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, password, confirmPassword }),
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+          confirmPassword,
+          marketingEmailOptIn,
+          marketingSmsOptIn,
+        }),
       });
 
       const data = await res.json();
@@ -174,6 +183,26 @@ export default function RegisterPage() {
                 </Link>
                 .
               </span>
+            </label>
+
+            <label className="flex items-start gap-3 text-sm text-slate-400">
+              <input
+                type="checkbox"
+                checked={marketingEmailOptIn}
+                onChange={(e) => setMarketingEmailOptIn(e.target.checked)}
+                className="mt-1 rounded border-white/20"
+              />
+              <span>Quiero recibir novedades y ofertas por email.</span>
+            </label>
+
+            <label className="flex items-start gap-3 text-sm text-slate-400">
+              <input
+                type="checkbox"
+                checked={marketingSmsOptIn}
+                onChange={(e) => setMarketingSmsOptIn(e.target.checked)}
+                className="mt-1 rounded border-white/20"
+              />
+              <span>Quiero recibir comunicaciones por SMS o WhatsApp (requiere teléfono en mi perfil).</span>
             </label>
 
             <button

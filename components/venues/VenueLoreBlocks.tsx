@@ -67,6 +67,22 @@ export default function VenueLoreBlocks({ venue }: Props) {
               <dd className="text-slate-200">{venue.email}</dd>
             </div>
           ) : null}
+          {venue.tripadvisorUrl ? (
+            <div>
+              <dt className="text-xs uppercase tracking-widest text-slate-500">TripAdvisor</dt>
+              <dd>
+                <a
+                  href={venue.tripadvisorUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-electric-yellow underline"
+                >
+                  Ver en TripAdvisor
+                  {venue.tripadvisorRating != null ? ` (${venue.tripadvisorRating.toFixed(1)}★)` : ""}
+                </a>
+              </dd>
+            </div>
+          ) : null}
         </dl>
       </section>
 

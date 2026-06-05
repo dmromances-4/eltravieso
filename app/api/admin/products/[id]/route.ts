@@ -41,10 +41,33 @@ export async function PATCH(request: Request, { params }: RouteContext) {
     const description = body.description != null ? String(body.description).trim() || null : existing.description;
     const imageUrl = body.imageUrl != null ? (body.imageUrl ? String(body.imageUrl) : null) : existing.imageUrl;
     const isActive = body.isActive != null ? Boolean(body.isActive) : existing.isActive;
+    const source = body.source != null ? String(body.source) : existing.source;
+    const affiliateUrl =
+      body.affiliateUrl != null ? (body.affiliateUrl ? String(body.affiliateUrl).trim() : null) : existing.affiliateUrl;
+    const affiliatePlatform =
+      body.affiliatePlatform != null ? String(body.affiliatePlatform) : existing.affiliatePlatform;
+
+    const existingMeta =
+      existing.metadata && typeof existing.metadata === "object"
+        ? (existing.metadata as Record<string, unknown>)
+        : {};
+    const matchTerms = Array.isArray(body.matchTerms)
+      ? body.matchTerms.map((t: unknown) => String(t).trim()).filter(Boolean)
+      : (existingMeta.matchTerms as string[] | undefined);
+    const metadata = { ...existingMeta, matchTerms: matchTerms ?? [] };
 
     const product = await prisma.product.update({
       where: { id: params.id },
-      data: { title, description, imageUrl, isActive },
+      data: {
+        title,
+        description,
+        imageUrl,
+        isActive,
+        source: source as typeof existing.source,
+        affiliateUrl: source === "AFILIADO" ? affiliateUrl : null,
+        affiliatePlatform: source === "AFILIADO" ? (affiliatePlatform as typeof existing.affiliatePlatform) : "NONE",
+        metadata,
+      },
       include: { variants: true },
     });
 

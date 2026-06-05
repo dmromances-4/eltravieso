@@ -58,6 +58,9 @@ export async function PATCH(request: Request, { params }: { params: { id: string
             channel: "B2C",
             imageUrl: listing.imageUrl,
             isActive: true,
+            source: "MARKETPLACE",
+            partnerId: listing.sellerId,
+            commissionRateBps: parseInt(process.env.MARKETPLACE_DEFAULT_COMMISSION_BPS ?? "2000", 10) || 2000,
             metadata: { source: "marketplace", listingId: listing.id, sellerId: listing.sellerId },
           },
         });

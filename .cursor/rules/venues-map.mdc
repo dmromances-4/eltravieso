@@ -1,0 +1,14 @@
+---
+description: Guía de locales — mapa, fichas y pipeline de datos
+globs: lib/venues/**,lib/geocoding/**,app/mapa/**,app/locales/**,components/map/**,components/venues/**,scripts/scrape-worlds50best.ts,scripts/seed-venues-guide.ts,scripts/geocode-venues-guide.ts,scripts/enrich-venues-tripadvisor.ts,data/venues-worlds50best.json
+alwaysApply: false
+---
+
+# Guía de locales
+
+- Mapa: `/mapa` · ficha pública: `/locales/[slug]`
+- Catálogo: `lib/venues/catalog.ts` · reservas: `lib/venues/reservation.ts`
+- Pipeline: `scrape:venues` → `seed:venues` → `geocode:venues` → `enrich:tripadvisor`
+- Datos scrape: `data/venues-worlds50best.json`
+- Bares afiliados editan lore en `/cuenta/bar`
+- Doc: `docs/GUIA-LOCALES.md`

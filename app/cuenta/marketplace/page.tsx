@@ -1,5 +1,6 @@
 import { getCurrentUser } from "@/lib/auth/session";
 import ListingForm from "@/components/marketplace/ListingForm";
+import PartnerSalesPanel from "@/components/marketplace/PartnerSalesPanel";
 
 export const dynamic = "force-dynamic";
 
@@ -15,6 +16,7 @@ export default async function AccountMarketplacePage() {
           Sube tus propios artículos (cristalería, material, ropa, siropes...). Pasarán por revisión antes de publicarse.
         </p>
       </div>
+      <PartnerSalesPanel />
       <ListingForm />
     </div>
   );

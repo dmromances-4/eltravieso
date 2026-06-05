@@ -1,0 +1,13 @@
+---
+description: Panel admin — acceso, rutas y API protegida
+globs: app/admin/**,app/api/admin/**,lib/auth/admin*.ts,components/admin/**
+alwaysApply: false
+---
+
+# Panel admin
+
+- Layout y nav: `app/admin/layout.tsx`
+- Requiere rol admin + 2FA salvo `ADMIN_REQUIRE_2FA=false` (`lib/auth/admin-2fa-policy.ts`)
+- API admin: `requireAdminUser` en `lib/auth/admin-api.ts`
+- Secciones: productos, marketplace, mayorista, producción, recetas, auditoría Difford's, **campañas** (`/admin/campaigns`), blog, reparto, fiscal, foro
+- Doc índice de rutas: `docs/ADMIN.md` · mapa completo en `AGENTS.md`

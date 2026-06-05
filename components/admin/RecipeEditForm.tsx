@@ -14,6 +14,7 @@ type RecipeEditFormProps = {
     method: string | null;
     imageUrl: string | null;
     isPublished: boolean;
+    isPremium: boolean;
   };
 };
 
@@ -27,6 +28,7 @@ export default function RecipeEditForm({ recipe }: RecipeEditFormProps) {
   const [method, setMethod] = useState(recipe?.method ?? "");
   const [imageUrl, setImageUrl] = useState(recipe?.imageUrl ?? "");
   const [isPublished, setIsPublished] = useState(recipe?.isPublished ?? true);
+  const [isPremium, setIsPremium] = useState(recipe?.isPremium ?? false);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
@@ -49,6 +51,7 @@ export default function RecipeEditForm({ recipe }: RecipeEditFormProps) {
           method,
           imageUrl: imageUrl || null,
           isPublished,
+          isPremium,
         }),
       });
       const data = await res.json();
@@ -154,6 +157,16 @@ export default function RecipeEditForm({ recipe }: RecipeEditFormProps) {
           className="w-full rounded-2xl border border-white/10 bg-[#121212] px-4 py-3 text-white focus:border-electric-yellow focus:outline-none"
         />
       </div>
+
+      <label className="flex items-center gap-3 text-sm text-slate-300">
+        <input
+          type="checkbox"
+          checked={isPremium}
+          onChange={(e) => setIsPremium(e.target.checked)}
+          className="h-4 w-4 rounded border-white/20"
+        />
+        Contenido Club VIP (ficha técnica premium)
+      </label>
 
       <label className="flex items-center gap-3 text-sm text-slate-300">
         <input

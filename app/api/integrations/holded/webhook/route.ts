@@ -6,7 +6,7 @@ import {
   resolveHoldedWebhookSecret,
   verifyHoldedWebhookSignature,
 } from "@/lib/integrations/holded-webhook";
-
+import { logServerError } from "@/lib/security/safe-error";
 export async function POST(request: Request) {
   const rawBody = await request.text();
   const signature =
@@ -56,9 +56,8 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ ok: true, event, result });
   } catch (error) {
-    const message = error instanceof Error ? error.message : "Error procesando webhook Holded";
-    console.error("[HOLDED_WEBHOOK]", error);
-    return NextResponse.json({ message }, { status: 500 });
+    logServerError("holded-webhook", error);
+    const message = error instanceof Error ? error.message : "Error procesando webhook Holded";    return NextResponse.json({ message }, { status: 500 });
   }
 }
 

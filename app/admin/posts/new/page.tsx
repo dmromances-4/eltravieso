@@ -14,7 +14,7 @@ export default function AdminNewPostPage() {
         <h1 className="text-3xl font-display font-bold text-white">Nuevo artículo</h1>
         <p className="mt-2 text-slate-400">Publica contenido en el blog de El Travieso.</p>
       </div>
-      <PostEditor redirectPath="/admin/posts" />
+      <PostEditor allowPremiumToggle redirectPath="/admin/posts" />
     </div>
   );
 }

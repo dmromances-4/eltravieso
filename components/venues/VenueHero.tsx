@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { REGIONAL_LIST_LABELS } from "@/lib/venues/continents";
 import type { VenuePublicDTO } from "@/lib/venues/types";
 
 const VENUE_LABELS: Record<string, string> = {
@@ -13,10 +14,28 @@ const CATEGORY_LABELS = {
   RESTAURANTS: "World's 50 Best Restaurants",
 } as const;
 
+function regionalBadgeLabel(venue: VenuePublicDTO): string | null {
+  const regional = venue.additionalRankings.find((r) => r.scope === "REGIONAL");
+  if (regional) {
+    const label =
+      REGIONAL_LIST_LABELS[regional.continent]?.[regional.category] ??
+      `${regional.continent} ${regional.category}`;
+    return `#${regional.rank} ${label}`;
+  }
+  if (venue.regionalRank && venue.continent && venue.continent !== "GLOBAL") {
+    const label =
+      REGIONAL_LIST_LABELS[venue.continent]?.[venue.worlds50bestCategory ?? "BARS"] ??
+      venue.continent;
+    return `#${venue.regionalRank} ${label}`;
+  }
+  return null;
+}
+
 type Props = { venue: VenuePublicDTO };
 
 export default function VenueHero({ venue }: Props) {
   const typeLabel = VENUE_LABELS[venue.venueType] ?? venue.venueType;
+  const regionalBadge = regionalBadgeLabel(venue);
 
   return (
     <section className="border-4 border-black bg-zinc-900 shadow-[10px_10px_0px_#000000]">
@@ -38,14 +57,26 @@ export default function VenueHero({ venue }: Props) {
           )}
         </div>
         <div className="flex flex-col justify-center gap-4 p-8">
-          {venue.worlds50bestRank ? (
-            <span className="inline-flex w-fit border-4 border-black bg-electric-yellow px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-black shadow-[4px_4px_0px_#000000]">
-              #{venue.worlds50bestRank}{" "}
-              {venue.worlds50bestCategory
-                ? CATEGORY_LABELS[venue.worlds50bestCategory]
-                : "World's 50 Best"}
-            </span>
-          ) : null}
+          <div className="flex flex-wrap gap-2">
+            {venue.worlds50bestRank ? (
+              <span className="inline-flex w-fit border-4 border-black bg-electric-yellow px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-black shadow-[4px_4px_0px_#000000]">
+                #{venue.worlds50bestRank}{" "}
+                {venue.worlds50bestCategory
+                  ? CATEGORY_LABELS[venue.worlds50bestCategory]
+                  : "World's 50 Best"}
+              </span>
+            ) : null}
+            {regionalBadge ? (
+              <span className="inline-flex w-fit border-4 border-black bg-electric-blue px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-black shadow-[4px_4px_0px_#000000]">
+                {regionalBadge}
+              </span>
+            ) : null}
+            {venue.isPremium ? (
+              <span className="inline-flex w-fit border-4 border-black bg-electric-red px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-white shadow-[4px_4px_0px_#000000]">
+                Top del Barrio
+              </span>
+            ) : null}
+          </div>
           <p className="font-mono text-xs uppercase tracking-[0.3em] text-electric-yellow">{typeLabel}</p>
           <h1 className="font-display text-4xl font-bold uppercase leading-tight text-white sm:text-5xl">
             {venue.name}

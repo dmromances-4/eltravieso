@@ -23,7 +23,13 @@ const TYPE_LABELS: Record<SessionType, string> = {
   TASTING_EVENT: "Cata en directo",
 };
 
-export default function BarOnlineLobby({ canCreate }: { canCreate: boolean }) {
+export default function BarOnlineLobby({
+  canCreate,
+  isVip = false,
+}: {
+  canCreate: boolean;
+  isVip?: boolean;
+}) {
   const [sessions, setSessions] = useState<BarOnlineSessionDTO[]>([]);
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
@@ -32,7 +38,9 @@ export default function BarOnlineLobby({ canCreate }: { canCreate: boolean }) {
     title: "",
     description: "",
     type: "CHAT" as SessionType,
-    maxUsers: 10,
+    maxUsers: isVip ? 50 : 10,
+    isPrivate: false,
+    hdEnabled: false,
   });
 
   async function loadSessions() {
@@ -65,7 +73,7 @@ export default function BarOnlineLobby({ canCreate }: { canCreate: boolean }) {
       if (!res.ok) {
         setError(data.message || "Error al crear la sesión.");
       } else {
-        setForm({ title: "", description: "", type: "CHAT", maxUsers: 10 });
+        setForm({ title: "", description: "", type: "CHAT", maxUsers: isVip ? 50 : 10, isPrivate: false, hdEnabled: false });
         await loadSessions();
       }
     } catch {
@@ -144,6 +152,41 @@ export default function BarOnlineLobby({ canCreate }: { canCreate: boolean }) {
                 className="w-full border-4 border-black bg-black px-4 py-3 text-white shadow-[4px_4px_0px_#000000] focus:border-electric-yellow focus:outline-none"
               />
             </div>
+            {isVip ? (
+              <>
+                <div className="flex items-center gap-3">
+                  <input
+                    id="isPrivate"
+                    type="checkbox"
+                    checked={form.isPrivate}
+                    onChange={(e) => setForm({ ...form, isPrivate: e.target.checked })}
+                    className="accent-electric-yellow"
+                  />
+                  <label htmlFor="isPrivate" className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                    Sala privada (solo VIP)
+                  </label>
+                </div>
+                <div className="flex items-center gap-3">
+                  <input
+                    id="hdEnabled"
+                    type="checkbox"
+                    checked={form.hdEnabled}
+                    onChange={(e) => setForm({ ...form, hdEnabled: e.target.checked })}
+                    className="accent-electric-yellow"
+                  />
+                  <label htmlFor="hdEnabled" className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                    Calidad HD
+                  </label>
+                </div>
+              </>
+            ) : (
+              <p className="md:col-span-2 text-xs text-slate-500">
+                <Link href="/cuenta/membresia" className="text-electric-yellow hover:underline">
+                  Club VIP
+                </Link>
+                : salas privadas, más aforo y HD.
+              </p>
+            )}
           </div>
           <div className="mt-6 flex justify-end">
             <button

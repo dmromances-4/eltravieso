@@ -31,7 +31,7 @@ export default async function BarOnlinePage() {
         </header>
 
         {session?.user?.id ? (
-          <BarOnlineLobby canCreate />
+          <BarOnlineLobby canCreate isVip={Boolean(session.user.isVip)} />
         ) : (
           <div className="space-y-8">
             <div className="border-4 border-black bg-electric-red p-6 font-mono font-bold text-white shadow-[6px_6px_0px_#000000]">

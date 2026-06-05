@@ -1,0 +1,21 @@
+---
+description: Agente IA de recetas y auditoría Difford's
+globs: lib/ai/**,lib/recipes/**,lib/diffords/**,app/api/ai/**,app/api/admin/recipes-audit/**,app/pro/tech-generator/**,scripts/audit-recipes.ts,components/admin/RecipeAudit*,data/cocktails.json
+alwaysApply: false
+---
+
+# Recetas e IA
+
+## Agente (Barra Inteligente)
+
+- UI: `/pro/tech-generator` · API: `POST /api/ai/agent` · estado: `GET /api/ai/status`
+- Proveedores: `lib/ai/provider.ts` (gemini → groq → openai → huggingface).
+- Rate limit: `lib/rate-limit.ts` + env `AI_RATE_LIMIT_*`.
+- Persiste en Prisma; catálogo estático en `data/cocktails.json` (`lib/recipes/cocktails-io.ts`).
+
+## Auditoría Difford's
+
+- Admin: `/admin/recetas-auditoria` · CLI: `npm run audit:recipes`
+- Parser: `lib/diffords/` · comparación: `lib/recipes/compare-recipes.ts`
+- Throttle 2s al scrapear; caché en `.scrape-cache/diffords/`
+- Doc: `docs/AUDITORIA-RECETAS.md`

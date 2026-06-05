@@ -1,0 +1,15 @@
+---
+description: Integraciones TPV, catálogo y mayorista
+globs: lib/integrations/**,lib/holded/**,lib/tpv/**,lib/wholesale/**,app/api/integrations/**,app/api/tpv/**,app/cuenta/integraciones/**,components/account/IntegrationsPanel.tsx
+alwaysApply: false
+---
+
+# Integraciones y mayorista
+
+- UI: `/cuenta/integraciones` · doc: `docs/INTEGRACIONES.md`
+- Sync: Shopify, Holded, Square vía `POST /api/integrations/{provider}/sync`
+- TPV: `POST /api/tpv/webhook` (HMAC + token por bar)
+- Upsert compartido: `lib/integrations/catalog-upsert.ts`
+- Tras venta TPV: reposición mayorista en `lib/wholesale/reposition.ts`
+- Admin pedidos/producción: `/admin/wholesale`, `/admin/production`
+- No duplicar lógica Holded/Stripe; usar `lib/holded/` y `lib/stripe/`

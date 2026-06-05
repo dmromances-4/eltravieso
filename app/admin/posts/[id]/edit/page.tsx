@@ -26,6 +26,8 @@ export default async function AdminEditPostPage({ params }: { params: { id: stri
         initialTitle={post.title}
         initialContent={post.content}
         initialCoverUrl={post.coverUrl}
+        initialIsPremium={post.isPremium}
+        allowPremiumToggle
         redirectPath="/admin/posts"
       />
     </div>

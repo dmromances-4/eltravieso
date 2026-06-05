@@ -79,7 +79,7 @@ export default function TwoFactorSettings() {
         <p className="mt-2 text-sm text-slate-400">
           Protege tu cuenta con un código adicional al iniciar sesión (Google Authenticator).
         </p>
-        {status?.role === "ADMIN" ? (
+        {status?.adminRequires2fa ? (
           <p className="mt-3 text-sm text-amber-200/90">
             Como administrador, el 2FA es obligatorio para acceder al panel de ventas y clientes.
           </p>
@@ -87,7 +87,7 @@ export default function TwoFactorSettings() {
       </div>
 
       {status?.isTwoFactorEnabled ? (
-        status?.role === "ADMIN" ? (
+        status?.adminRequires2fa ? (
           <p className="text-sm text-slate-400 rounded-2xl border border-white/10 p-4">
             No puedes desactivar 2FA en una cuenta de administración.
           </p>

@@ -1,0 +1,25 @@
+# Render Blueprint — Bar Online realtime (WebSocket)
+# Next.js stays on Vercel. See docs/ESCALADO.md
+
+services:
+  - type: web
+    name: bar-online-realtime
+    runtime: node
+    plan: starter
+    region: frankfurt
+    buildCommand: npm install && npx prisma generate
+    startCommand: npm run start:ws
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NEXT_PUBLIC_APP_URL
+        sync: false
+      - key: NEXTAUTH_SECRET
+        sync: false
+      - key: REDIS_URL
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+      - key: SENTRY_ENVIRONMENT
+        value: production

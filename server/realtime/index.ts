@@ -17,13 +17,15 @@ import { createServer } from "http";
 import { randomUUID } from "crypto";
 import { Server, type Socket } from "socket.io";
 import { getToken } from "next-auth/jwt";
+import { initRealtimeSentry, Sentry } from "../../lib/sentry/init-realtime.js";
 import {
   createMemoryPresenceStore,
   createRedisPresenceStore,
   type PresenceStore,
 } from "./presence.js";
 
-const PORT = Number(process.env.WS_PORT ?? 3001);
+initRealtimeSentry();
+const PORT = Number(process.env.PORT ?? process.env.WS_PORT ?? 3001);
 const APP_ORIGIN = process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000";
 const NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET;
 const REDIS_URL = process.env.REDIS_URL;
@@ -65,11 +67,16 @@ async function bootstrap() {
     );
   }
 
-  const httpServer = createServer((_req, res) => {
-    res.writeHead(200, { "Content-Type": "application/json" });
-    res.end(JSON.stringify({ service: "bar-online-realtime", ok: true }));
+  const httpServer = createServer((req, res) => {
+    const path = req.url?.split("?")[0] ?? "/";
+    if (path === "/health" || path === "/") {
+      res.writeHead(200, { "Content-Type": "application/json" });
+      res.end(JSON.stringify({ service: "bar-online-realtime", ok: true }));
+      return;
+    }
+    res.writeHead(404, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ ok: false, error: "Not found" }));
   });
-
   const io = new Server(httpServer, {
     cors: {
       origin: APP_ORIGIN,
@@ -116,10 +123,10 @@ async function bootstrap() {
       socket.join(userRoom(socket.user.userId));
       next();
     } catch (error) {
+      Sentry.captureException(error);
       console.error("[realtime] handshake auth failed:", error);
       next(new Error("UNAUTHORIZED"));
-    }
-  });
+    }  });
 
   io.on("connection", (socket: Socket) => {
     const user = socket.user!;
@@ -195,6 +202,7 @@ async function bootstrap() {
 }
 
 bootstrap().catch((error) => {
+  Sentry.captureException(error);
   console.error("[realtime] fatal bootstrap error:", error);
-  process.exit(1);
+  Sentry.flush(2000).finally(() => process.exit(1));
 });

@@ -30,7 +30,10 @@ function inferProviderFromUrl(url: string): ReservationProvider {
   return "EXTERNAL";
 }
 
-export function resolveReservationConfig(bar: BarReservationFields): ReservationConfig {
+export function resolveReservationConfig(
+  bar: BarReservationFields,
+  options?: { bookingWidgetEnabled?: boolean },
+): ReservationConfig {
   let provider = bar.reservationProvider ?? null;
   let url = bar.reservationUrl?.trim() || null;
 
@@ -51,7 +54,9 @@ export function resolveReservationConfig(bar: BarReservationFields): Reservation
     return { provider: null, url: null, mode: "cta" };
   }
 
-  if (provider === "COVER_MANAGER" && isCoverEmbedUrl(url)) {
+  const allowEmbed = options?.bookingWidgetEnabled !== false;
+
+  if (allowEmbed && provider === "COVER_MANAGER" && isCoverEmbedUrl(url)) {
     return { provider, url, mode: "iframe", embedUrl: url };
   }
 

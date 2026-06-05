@@ -34,6 +34,9 @@ function variantFixture(overrides: Record<string, unknown> = {}) {
       imageUrl: null,
       isActive: true,
       channel: "B2C",
+      source: "PROPIO",
+      partnerId: null,
+      commissionRateBps: 2000,
     },
     ...overrides,
   };
@@ -55,7 +58,7 @@ describe("validateCartLines", () => {
     const items = await validateCartLines([{ id: "var-1", quantity: 2 }]);
 
     expect(items).toHaveLength(1);
-    expect(items[0].amount).toBe(2499);
+    expect(items[0].unitPriceCents).toBe(2499);
     expect(items[0].quantity).toBe(2);
     expect(items[0].name).toBe("Vermut Rojo");
   });
@@ -81,6 +84,28 @@ describe("validateCartLines", () => {
 
     await expect(validateCartLines([{ id: "missing", quantity: 1 }])).rejects.toMatchObject({
       message: expect.stringContaining("no existen"),
+    });
+  });
+
+  it("rejects affiliate products in cart", async () => {
+    findManyMock.mockResolvedValue([
+      variantFixture({
+        product: {
+          id: "prod-aff",
+          title: "Shaker Boston",
+          description: "Utillaje",
+          imageUrl: null,
+          isActive: true,
+          channel: "B2C",
+          source: "AFILIADO",
+          partnerId: null,
+          commissionRateBps: 0,
+        },
+      }),
+    ]);
+
+    await expect(validateCartLines([{ id: "var-1", quantity: 1 }])).rejects.toMatchObject({
+      message: expect.stringContaining("afiliado"),
     });
   });
 });

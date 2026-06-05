@@ -1,10 +1,18 @@
 import fs from 'fs'
 import path from 'path'
 import csvParser from 'csv-parser'
+import {
+  cocktailIdFromDiffordsId,
+  cocktailIdFromSlug,
+  extractDiffordsIdFromUrl,
+} from '../lib/diffords/ids'
 
 type CocktailRow = Record<string, string>
 
 type CocktailRecord = {
+  id: string
+  diffordsId?: number
+  sourceUrl?: string
   title: string
   slug: string
   rating: number
@@ -14,6 +22,7 @@ type CocktailRecord = {
   abv: string
   kcal: number
   cover: string
+  reviewStatus?: 'pending' | 'ok' | 'fixed' | 'manual'
 }
 
 const inputFiles = [
@@ -26,9 +35,9 @@ const outputMarkdownDir = path.join(outputDir, 'cocktails-md')
 const shouldWriteMarkdown = process.argv.includes('--md')
 
 function normalizeHeader(header: string) {
-  const value = header.toLowerCase().trim()
+  const value = header.toLowerCase().trim().replace(/^\ufeff/, '')
 
-  if (value.includes('título') || value.includes('title')) return 'title'
+  if (value.includes('título') || value.includes('title') || value.includes('nombre')) return 'title'
   if (value.includes('slug')) return 'slug'
   if (value.includes('puntuación') || value.includes('rating') || value.includes('score')) return 'rating'
   if (value.includes('cristal') || value.includes('vaso') || value.includes('glass')) return 'glass'
@@ -36,6 +45,7 @@ function normalizeHeader(header: string) {
   if (value.includes('método') || value.includes('method') || value.includes('preparación')) return 'method'
   if (value.includes('abv') || value.includes('alcohólico') || value.includes('grado')) return 'abv'
   if (value.includes('kcal') || value.includes('calorías') || value.includes('calorias')) return 'kcal'
+  if (value.includes('enlace') || value.includes('original') || value.includes('url')) return 'sourceUrl'
 
   return value.replace(/\s+/g, '_')
 }
@@ -43,6 +53,8 @@ function normalizeHeader(header: string) {
 function slugify(value: string) {
   return value
     .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
 }
@@ -105,8 +117,14 @@ async function seed() {
       .on('data', (row: CocktailRow) => {
         const title = row.title?.trim() || 'Cóctel sin título'
         const slug = slugify(row.slug || title)
+        const sourceUrl = row.sourceUrl?.trim()
+        const diffordsId = sourceUrl ? extractDiffordsIdFromUrl(sourceUrl) : undefined
+        const id = diffordsId != null ? cocktailIdFromDiffordsId(diffordsId) : cocktailIdFromSlug(slug)
 
         cocktails.push({
+          id,
+          diffordsId,
+          sourceUrl,
           title,
           slug,
           rating: Number(String(row.rating || '0').replace(/[^0-9.]/g, '')) || 0,
@@ -115,7 +133,8 @@ async function seed() {
           method: row.method?.trim() || 'Mezclar todos los ingredientes con hielo y servir.',
           abv: row.abv?.trim() || 'No especificado',
           kcal: Number(String(row.kcal || row.calories || '0').replace(/[^0-9.]/g, '')) || 0,
-          cover: '/cocktail-placeholder.svg'
+          cover: '/cocktail-placeholder.svg',
+          reviewStatus: 'pending',
         })
       })
       .on('end', () => resolve())

@@ -1,0 +1,8776 @@
+[
+  {
+    "id": "dg-2887",
+    "title": "Sweet Martini",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:49:15.973Z"
+  },
+  {
+    "id": "dg-2887",
+    "title": "Sweet Martini",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:53:47.954Z"
+  },
+  {
+    "id": "dg-35966",
+    "title": "Vermouth & Soda",
+    "score": 68,
+    "issues": [
+      "method_untranslated",
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:53:48.329Z"
+  },
+  {
+    "id": "dg-3943",
+    "title": "Sweet Manhattan (batched recipe)",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:53:50.280Z"
+  },
+  {
+    "id": "dg-31242",
+    "title": "Sweet Virginia",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:53:52.153Z"
+  },
+  {
+    "id": "dg-1247",
+    "title": "Manhattan (Sweet)",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:53:54.252Z"
+  },
+  {
+    "id": "dg-6281",
+    "title": "High Ryeser",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:53:56.417Z"
+  },
+  {
+    "id": "dg-4111",
+    "title": "Manhattan (Sweet with Bitter Chocolate)",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:53:58.742Z"
+  },
+  {
+    "id": "dg-1392",
+    "title": "Negroni Cocktail",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:00.234Z"
+  },
+  {
+    "id": "dg-30008",
+    "title": "Fridge Negroni",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:02.247Z"
+  },
+  {
+    "id": "dg-1319",
+    "title": "Million Dollar Cocktail",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:04.451Z"
+  },
+  {
+    "id": "dg-4819",
+    "title": "Man O' War",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:06.186Z"
+  },
+  {
+    "id": "dg-21824",
+    "title": "J & Tony's Hot Negroni",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:08.291Z"
+  },
+  {
+    "id": "dg-2721",
+    "title": "Old Flame",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:10.339Z"
+  },
+  {
+    "id": "dg-29929",
+    "title": "Marianito",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:12.259Z"
+  },
+  {
+    "id": "dg-18",
+    "title": "Adonis",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:14.452Z"
+  },
+  {
+    "id": "dg-776",
+    "title": "Flying Scotsman",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:16.299Z"
+  },
+  {
+    "id": "dg-2684",
+    "title": "Hearst Martini",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:18.325Z"
+  },
+  {
+    "id": "dg-22522",
+    "title": "Italian G&T",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:20.413Z"
+  },
+  {
+    "id": "dg-39309",
+    "title": "Disco Mi-To",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:22.650Z"
+  },
+  {
+    "id": "dg-61",
+    "title": "Americano",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:24.239Z"
+  },
+  {
+    "id": "dg-833",
+    "title": "Gin & It",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:26.235Z"
+  },
+  {
+    "id": "dg-1325",
+    "title": "Milano",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:28.491Z"
+  },
+  {
+    "id": "dg-1759",
+    "title": "Scotch Negroni",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:30.303Z"
+  },
+  {
+    "id": "dg-2955",
+    "title": "Boulevardier Cocktail",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:32.347Z"
+  },
+  {
+    "id": "dg-29594",
+    "title": "Vermuttino",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:34.293Z"
+  },
+  {
+    "id": "dg-3016",
+    "title": "Red Manhattan",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:36.492Z"
+  },
+  {
+    "id": "dg-4570",
+    "title": "Four Poster Red",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:38.363Z"
+  },
+  {
+    "id": "dg-32608",
+    "title": "Redwood Heights",
+    "score": 68,
+    "issues": [
+      "method_untranslated",
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:40.542Z"
+  },
+  {
+    "id": "dg-2826",
+    "title": "Negroni Tredici",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:42.394Z"
+  },
+  {
+    "id": "dg-3090",
+    "title": "Dutch Count Negroni / Red Light Negron",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:44.322Z"
+  },
+  {
+    "id": "dg-36336",
+    "title": "1794",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:46.230Z"
+  },
+  {
+    "id": "dg-4140",
+    "title": "Bamboo Cocktail (Stuart's 1904 recipe)",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:48.428Z"
+  },
+  {
+    "id": "dg-3656",
+    "title": "Bijou Cocktail (inspired by Lawlor's 1895 recipe)",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:50.226Z"
+  },
+  {
+    "id": "dg-17178",
+    "title": "Copenhagen Cocktail 1939",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:52.276Z"
+  },
+  {
+    "id": "dg-4574",
+    "title": "Italian Dandy",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:54.477Z"
+  },
+  {
+    "id": "dg-4068",
+    "title": "Commedia All'italiana",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:54:56.164Z"
+  },
+  {
+    "id": "dg-37996",
+    "title": "Caffè American Italiano",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:54:58.226Z"
+  },
+  {
+    "id": "dg-3781",
+    "title": "The Burly French Man",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:00.233Z"
+  },
+  {
+    "id": "dg-1439",
+    "title": "Orange Bloom Martini",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:02.254Z"
+  },
+  {
+    "id": "dg-2258",
+    "title": "Army Martini",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:04.299Z"
+  },
+  {
+    "id": "dg-1266",
+    "title": "Martini Special",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:06.547Z"
+  },
+  {
+    "id": "dg-37614",
+    "title": "After Midnight Martini",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:08.200Z"
+  },
+  {
+    "id": "dg-2108",
+    "title": "Wonky Martini",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:10.377Z"
+  },
+  {
+    "id": "dg-19263",
+    "title": "Raspberry Deluxe Martini",
+    "score": 68,
+    "issues": [
+      "method_untranslated",
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:12.490Z"
+  },
+  {
+    "id": "dg-5463",
+    "title": "Black Coffee Martini",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:14.343Z"
+  },
+  {
+    "id": "dg-1708",
+    "title": "Ruby 'Martini' #2",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:16.255Z"
+  },
+  {
+    "id": "dg-30037",
+    "title": "Americano Branco (Ferroviario)",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:18.172Z"
+  },
+  {
+    "id": "dg-244",
+    "title": "Blood and Sand (Classic formula)",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:20.519Z"
+  },
+  {
+    "id": "dg-35968",
+    "title": "Stanley Tucci's Negroni",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:22.321Z"
+  },
+  {
+    "id": "dg-32060",
+    "title": "Tequila Negroni",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:24.332Z"
+  },
+  {
+    "id": "dg-2331",
+    "title": "Capitano",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:26.314Z"
+  },
+  {
+    "id": "dg-2835",
+    "title": "Precursory Cocktail",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:28.239Z"
+  },
+  {
+    "id": "dg-3520",
+    "title": "New Orleans Minute",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:30.489Z"
+  },
+  {
+    "id": "dg-28918",
+    "title": "Negroni Flip",
+    "score": 68,
+    "issues": [
+      "method_untranslated",
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:32.462Z"
+  },
+  {
+    "id": "dg-3438",
+    "title": "Game Set Match",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:34.508Z"
+  },
+  {
+    "id": "dg-4379",
+    "title": "Del Famoso (The Famous)",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:36.352Z"
+  },
+  {
+    "id": "dg-4856",
+    "title": "Bitter Giuseppe",
+    "score": 68,
+    "issues": [
+      "method_untranslated",
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:38.592Z"
+  },
+  {
+    "id": "dg-3304",
+    "title": "Rhubarb Lucca Negroni",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:40.425Z"
+  },
+  {
+    "id": "dg-3474",
+    "title": "Negroni and the Goat",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:42.461Z"
+  },
+  {
+    "id": "dg-3810",
+    "title": "Munich Negroni Western Style",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:44.300Z"
+  },
+  {
+    "id": "dg-16297",
+    "title": "Left Hand",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:46.348Z"
+  },
+  {
+    "id": "dg-16618",
+    "title": "Stiletta",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:48.550Z"
+  },
+  {
+    "id": "dg-25781",
+    "title": "Lucky Luke",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:50.630Z"
+  },
+  {
+    "id": "dg-35012",
+    "title": "Enzo",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:52.293Z"
+  },
+  {
+    "id": "dg-10505",
+    "title": "Sharon",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:54.449Z"
+  },
+  {
+    "id": "dg-3046",
+    "title": "Subourbon",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:55:56.312Z"
+  },
+  {
+    "id": "dg-3275",
+    "title": "Eastern Promises",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:55:58.376Z"
+  },
+  {
+    "id": "dg-198",
+    "title": "Behemoth",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:00.589Z"
+  },
+  {
+    "id": "dg-11248",
+    "title": "Artillery",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:02.481Z"
+  },
+  {
+    "id": "dg-16514",
+    "title": "Negronic",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:04.424Z"
+  },
+  {
+    "id": "dg-3495",
+    "title": "Milano Torino (Mi-To)",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:06.301Z"
+  },
+  {
+    "id": "dg-3933",
+    "title": "Father's Advice",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:08.148Z"
+  },
+  {
+    "id": "dg-10630",
+    "title": "L'Americano",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:10.345Z"
+  },
+  {
+    "id": "dg-19654",
+    "title": "L' Italo Americano",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:12.308Z"
+  },
+  {
+    "id": "dg-3931",
+    "title": "Pink Americano",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:14.439Z"
+  },
+  {
+    "id": "dg-32311",
+    "title": "Fig Leaf Americano",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:16.312Z"
+  },
+  {
+    "id": "dg-2335",
+    "title": "Champino",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:18.348Z"
+  },
+  {
+    "id": "dg-30036",
+    "title": "Winter Americano",
+    "score": 68,
+    "issues": [
+      "method_untranslated",
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:20.337Z"
+  },
+  {
+    "id": "dg-20322",
+    "title": "Americano Perfecto",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:22.532Z"
+  },
+  {
+    "id": "dg-3966",
+    "title": "Summer Americano",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:24.477Z"
+  },
+  {
+    "id": "dg-4061",
+    "title": "A Lucky Roman Americano",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:26.449Z"
+  },
+  {
+    "id": "dg-11082",
+    "title": "L'Americano Moderno",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:28.248Z"
+  },
+  {
+    "id": "dg-10623",
+    "title": "D&B Shakerato",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:30.376Z"
+  },
+  {
+    "id": "dg-11084",
+    "title": "Less is More Negroni",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:32.251Z"
+  },
+  {
+    "id": "dg-11086",
+    "title": "Casa Savoia Garibaldi",
+    "score": 84,
+    "issues": [
+      "method_untranslated"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:34.375Z"
+  },
+  {
+    "id": "dg-11090",
+    "title": "Casa Savoia Boulevardier",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:36.457Z"
+  },
+  {
+    "id": "dg-2169",
+    "title": "Difford's Fruit Cup No.1 (gin based & Pimm's Cup-like)",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:38.426Z"
+  },
+  {
+    "id": "dg-25029",
+    "title": "Meditation",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:40.432Z"
+  },
+  {
+    "id": "dg-4109",
+    "title": "Bobby Burns (Difford's own)",
+    "score": 84,
+    "issues": [
+      "glass_mismatch"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:42.775Z"
+  },
+  {
+    "id": "dg-3755",
+    "title": "The Addington",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:44.316Z"
+  },
+  {
+    "id": "dg-4210",
+    "title": "Tequila Fruit Cup (Difford's Cup No.7)",
+    "score": 100,
+    "issues": [],
+    "action": "marked_ok",
+    "at": "2026-06-05T14:56:46.389Z"
+  },
+  {
+    "id": "dg-3980",
+    "title": "La Familia",
+    "score": 84,
+    "issues": [
+      "ingredient_count"
+    ],
+    "action": "applied_diffords",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-classic-vermouth-cocktail",
+    "title": "Classic Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-improved-vermouth-cocktail",
+    "title": "Improved Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-vermouth-cooler",
+    "title": "Vermouth Cooler",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-vermouth-cocktail",
+    "title": "Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-vc-vermouth-cassis",
+    "title": "VC (Vermouth & Cassis)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweetheart",
+    "title": "Sweetheart",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweetie-pie",
+    "title": "Sweetie Pie",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweetie-darling",
+    "title": "Sweetie Darling",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-tears-of-mine",
+    "title": "Sweet Tears of Mine",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-science",
+    "title": "Sweet Science",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-liberty-s-sherry-cobbler",
+    "title": "Sweet Liberty's Sherry Cobbler",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-lady-no-2",
+    "title": "Sweet Lady No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-nutcracker-sweet",
+    "title": "Nutcracker Sweet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-grape-caipirinha-caipirinha-d-uva",
+    "title": "Sweet Grape Caipirinha (Caipirinha D'uva)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-lady-no-1",
+    "title": "Sweet Lady No. 1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-tart",
+    "title": "Sweet Tart",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-sweet-louise",
+    "title": "Sweet Louise",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-semi-dry-martini",
+    "title": "Semi-Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-dry-martini-preferred-5-1-ratio",
+    "title": "Dry Martini 'Preferred' (5:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-dry-martini-15-1-ratio-montgomery-s",
+    "title": "Dry Martini (15:1 ratio) Montgomery's",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-dry-martini-15-5-dumped-franklin",
+    "title": "Dry Martini (15:5 dumped) Franklin",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.277Z"
+  },
+  {
+    "id": "slug-dry-martini-7-1-ratio-embury-s",
+    "title": "Dry Martini (7:1 ratio) Embury's",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-martini-10-1-ratio",
+    "title": "Dry Martini (10:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-orange-martini",
+    "title": "Dry Orange Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-martini-2-1-ratio-wet",
+    "title": "Dry Martini (2:1 ratio) Wet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-martini-3-1-ratio",
+    "title": "Dry Martini (3:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-martini-4-1-ratio",
+    "title": "Dry Martini (4:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-martini-1-1-ratio-fifty-fifty",
+    "title": "Dry Martini (1:1 ratio) Fifty-Fifty",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-martini-2-1-5-ratio-sopping-wet",
+    "title": "Dry Martini (2:1.5 ratio) Sopping Wet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-martini-no-2",
+    "title": "Dry Martini No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dry-ice-martini",
+    "title": "Dry Ice Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-oddball-manhattan-dry",
+    "title": "Oddball Manhattan Dry",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-gin-salad-dry-martini",
+    "title": "Gin Salad Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dickens-dry-martini",
+    "title": "Dickens' Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-duke-s-dry-martini-the-naked-or-direct-martini",
+    "title": "Duke's Dry Martini - The 'Naked' or 'Direct' Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-gibson-dry-martini",
+    "title": "Gibson Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-holland-house-craddock-s-london-dry-gin-based",
+    "title": "Holland House (Craddock's London dry gin-based)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-manhattan-dry",
+    "title": "Manhattan (Dry)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-malty-dry-martini",
+    "title": "Malty Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-bronx-difford-s",
+    "title": "Bronx (Difford's)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-negroni-bianco",
+    "title": "Negroni Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-americano-bianco",
+    "title": "Americano Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-negroni-bianco-bergamotto",
+    "title": "Negroni Bianco Bergamotto",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-matcha-bianco",
+    "title": "Matcha Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-bijou-blanc",
+    "title": "Bijou Blanc",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-benny-blanco",
+    "title": "Benny Blanco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-blanche-corpse-reviver",
+    "title": "Blanche Corpse Reviver",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-blanche-refresher",
+    "title": "Blanche Refresher",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-reggatta-de-blanc",
+    "title": "Reggatta de Blanc",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-blanco-43",
+    "title": "Blanco 43",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-dama-blanca",
+    "title": "Dama Blanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-sauvignon-blanc-punch",
+    "title": "Sauvignon Blanc Punch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-white-cosmo",
+    "title": "White Cosmo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-casablanca",
+    "title": "Casablanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-reborn-padre-blanco",
+    "title": "Reborn Padre Blanco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-casablanca-no-2",
+    "title": "Casablanca No.2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-la-blanca",
+    "title": "La Blanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-bitter-margarita",
+    "title": "Bitter Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-the-lady-wears-red",
+    "title": "The Lady Wears Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-1920-cocktail",
+    "title": "1920 Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-bamboo-savoy-s-1930-recipe",
+    "title": "Bamboo (Savoy's 1930 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-cosmopolitan-1927-recipe",
+    "title": "Cosmopolitan (1927 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-killer-in-red",
+    "title": "Killer in Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-the-angel-wore-red",
+    "title": "The Angel Wore Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-ripe-red-slice",
+    "title": "Ripe Red Slice",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-turf-club-1939-charles-h-baker",
+    "title": "Turf Club (1939. Charles H. Baker)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-red-grape-caipirinha",
+    "title": "Red Grape Caipirinha",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-red-cosmic-alaska",
+    "title": "Red Cosmic Alaska",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.278Z"
+  },
+  {
+    "id": "slug-red-thorn",
+    "title": "Red Thorn",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-montana-jacques-straub-1913",
+    "title": "Montana (Jacques Straub, 1913)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-montana-harry-johnson-1900",
+    "title": "Montana (Harry Johnson, 1900)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-banana-daiquiri",
+    "title": "Red Banana Daiquiri",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-snapper",
+    "title": "Red Snapper",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-two-one-two-212",
+    "title": "Two-One-Two (212)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-raider",
+    "title": "Red Raider",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-swizzle",
+    "title": "Red Swizzle",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-lion-difford-s-recipe",
+    "title": "Red Lion (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-rhode-island-red",
+    "title": "Rhode Island Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-apple",
+    "title": "Red Apple",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-breast",
+    "title": "Red Breast",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-lion-tarling-s-recipe",
+    "title": "Red Lion (Tarling's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-marauder",
+    "title": "Red Marauder",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-earl",
+    "title": "Red Earl",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-dragon",
+    "title": "Red Dragon",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-neck",
+    "title": "Red Neck",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-hooker",
+    "title": "Red Hooker",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-sacred",
+    "title": "Sacred",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-headed-slut-shot",
+    "title": "Red Headed Slut Shot",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-redback",
+    "title": "Redback",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-opal-cocktail",
+    "title": "Red Opal Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-dog-smash",
+    "title": "Red Dog Smash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-earl-by-salvatore-calabrese",
+    "title": "Red Earl (by Salvatore Calabrese)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-red-haven",
+    "title": "Red Haven",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-lulu-white",
+    "title": "Lulu White",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-christmas-martini",
+    "title": "White Christmas Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-stinger",
+    "title": "White Stinger",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-witch",
+    "title": "White Witch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-all-white-frappe",
+    "title": "All White Frappé",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-chocolate-macadamia-flip",
+    "title": "White Chocolate & Macadamia Flip",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-water-ride",
+    "title": "White Water Ride",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-elephant",
+    "title": "White Elephant",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-grasshopper",
+    "title": "White Grasshopper",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-rob-roy",
+    "title": "White Rob Roy",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-bee-groni",
+    "title": "White Bee-Groni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-mezcal-negroni",
+    "title": "White Mezcal Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-negroni-sbagliato",
+    "title": "White Negroni Sbagliato",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-horse",
+    "title": "White Horse",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-monkey",
+    "title": "White Monkey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-cuban",
+    "title": "White Cuban",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-lion-david-embury-s-recipe",
+    "title": "White Lion (David Embury's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-white-lotus",
+    "title": "White Lotus",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-italian-milk-punch",
+    "title": "Italian Milk Punch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.279Z"
+  },
+  {
+    "id": "slug-italian-gentleman",
+    "title": "Italian Gentleman",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-spritz-al-bitter-spritz-veneziano",
+    "title": "Spritz Al Bitter (Spritz Veneziano)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-sour",
+    "title": "Italian Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-margarita",
+    "title": "Italian Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-passion-margarita",
+    "title": "Italian Passion Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-coffee",
+    "title": "Italian Coffee",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-mezcal-margarita",
+    "title": "Italian Mezcal Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-chocolate-martini",
+    "title": "Italian Chocolate Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-buck",
+    "title": "Italian Buck",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-fascination",
+    "title": "Italian Fascination",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-espresso-martini",
+    "title": "Italian Espresso Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-surfer-with-a-russian-attitude",
+    "title": "Italian Surfer with a Russian Attitude",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-italian-sun",
+    "title": "Italian Sun",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-gin-french",
+    "title": "Gin & French",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-rose-french-style-no-1",
+    "title": "Rose (French style) No. 1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-sherbet",
+    "title": "French Sherbet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-75",
+    "title": "French 75",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-pearl",
+    "title": "French Pearl",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-75-judge-jr-s-1927-recipe",
+    "title": "French 75 (Judge Jr's 1927 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-95-a-french-75-with-bourbon",
+    "title": "French 95 (a French '75' with bourbon)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-gimlet",
+    "title": "French Gimlet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-martini",
+    "title": "French Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-mule",
+    "title": "French Mule",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-bulldog",
+    "title": "French Bulldog",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-76",
+    "title": "French 76",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-monkey",
+    "title": "French Monkey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-kiss-1",
+    "title": "French Kiss #1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-leave",
+    "title": "French Leave",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-125-french-75-with-cognac",
+    "title": "French 125 (French '75' with cognac)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-french-mojito",
+    "title": "French Mojito",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-queen-martini",
+    "title": "Queen Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-medium-martini",
+    "title": "Medium Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-montana-club-martini",
+    "title": "Montana Club Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-orange-martini",
+    "title": "Orange Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-hawaiian-martini",
+    "title": "Hawaiian Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-knickerbocker-martini",
+    "title": "Knickerbocker Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-merry-go-round-martini",
+    "title": "Merry-Go-Round Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-pall-mall-martini",
+    "title": "Pall Mall Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-perfect-martini",
+    "title": "Perfect Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-cowboy-hoof-martini",
+    "title": "Cowboy Hoof Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-julep-martini",
+    "title": "Julep Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-mexican-jumping-bean",
+    "title": "Mexican Jumping Bean",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-detroit-martini",
+    "title": "Detroit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-churchill-martini",
+    "title": "Churchill Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-tequila-martini",
+    "title": "Tequila Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-gin-blossom-martini",
+    "title": "Gin Blossom Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-francophile-martini",
+    "title": "Francophile Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-balmoral-martini",
+    "title": "Balmoral Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.280Z"
+  },
+  {
+    "id": "slug-blackberry-martini",
+    "title": "Blackberry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-medium-dry-martini",
+    "title": "Medium Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-breakfast-special-marmalade-martini",
+    "title": "Breakfast Special Marmalade Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-big-apple-martini",
+    "title": "Big Apple Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-cucumber-martini",
+    "title": "Cucumber Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-verdant-martini",
+    "title": "Verdant Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-emerald-martini",
+    "title": "Emerald Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-kiwi-fresh-fruit-martini",
+    "title": "Kiwi Fresh Fruit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-paddington-bear-martini",
+    "title": "Paddington Bear Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-misty-martini",
+    "title": "Misty Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-alpine-martini",
+    "title": "Alpine Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-watermelon-vodka-martini",
+    "title": "Watermelon Vodka Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-mango-vodka-martini",
+    "title": "Mango Vodka Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-mango-gin-martini",
+    "title": "Mango Gin Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-passion-fruit-martini",
+    "title": "Passion Fruit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-salt-pepper-martini",
+    "title": "Salt & Pepper Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-fresh-martini",
+    "title": "Fresh Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-ginger-martini",
+    "title": "Ginger Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-freezer-martini",
+    "title": "Freezer Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-bradford-martini",
+    "title": "Bradford Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-reverse-martini",
+    "title": "Reverse Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-roselyn-cocktail",
+    "title": "Roselyn Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.281Z"
+  },
+  {
+    "id": "slug-tiny-tini",
+    "title": "Tiny 'Tini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-bohemian-martini",
+    "title": "Bohemian Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-singapore-sling-raffles-formula",
+    "title": "Singapore Sling (Raffles Formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-singapore-sling-baker-s-formula",
+    "title": "Singapore Sling (Baker's Formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-6-2-1-formula",
+    "title": "Daiquiri No. 1 (6:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-embury-s-8-2-1-formula",
+    "title": "Daiquiri No. 1 (Embury's 8:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-countdown-3-2-1-formula",
+    "title": "Daiquiri No. 1 (countdown 3:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-rum-barrel-by-donn-beach",
+    "title": "Rum Barrel (by Donn Beach)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-zombie",
+    "title": "Zombie",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-boston-tea-party",
+    "title": "Boston Tea Party",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-billionaire",
+    "title": "Billionaire",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-maple-bourbon-smash",
+    "title": "Maple Bourbon Smash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-pirate-queen",
+    "title": "Pirate Queen",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-mulled-wine",
+    "title": "Mulled Wine",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-bermuda-rum-swizzle",
+    "title": "Bermuda Rum Swizzle",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-perfect-blood-sand",
+    "title": "Perfect Blood & Sand",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-elements",
+    "title": "Elements",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-3-monkeys-a-dash",
+    "title": "3 Monkeys & a dash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-mai-tai-difford-s-recipe",
+    "title": "Mai Tai (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-texas-iced-tea",
+    "title": "Texas Iced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-rob-roy-no-3",
+    "title": "Rob Roy No. 3",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-grapefruit-whisky-fizz",
+    "title": "Grapefruit Whisky Fizz",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-smoked-salty-sour",
+    "title": "Smoked Salty Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-ramos-gin-fizz",
+    "title": "Ramos Gin Fizz",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-hurricane",
+    "title": "Hurricane",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-miami-vice",
+    "title": "Miami Vice",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-old-fashioned-cocktail-muddled-fruit-version",
+    "title": "Old Fashioned Cocktail (muddled fruit version)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.282Z"
+  },
+  {
+    "id": "slug-strawberry-jive",
+    "title": "Strawberry Jive",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-diable-rouge",
+    "title": "Diable Rouge",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-finn-rouge",
+    "title": "Finn Rouge",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-dry-martini-no-3",
+    "title": "Dry Martini No. 3",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-filthy-dirty-martini",
+    "title": "Filthy Dirty Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-affinity",
+    "title": "Affinity",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-hamilton-the-hipster",
+    "title": "Hamilton the Hipster",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-cherry-velvet",
+    "title": "Cherry Velvet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-panamericano",
+    "title": "Panamericano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-white-americano",
+    "title": "White Americano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-mex-martini",
+    "title": "Mex Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.283Z"
+  },
+  {
+    "id": "slug-itty-bitty-pretty",
+    "title": "Itty Bitty Pretty",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-abbey",
+    "title": "Abbey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-it-s-always-sunny",
+    "title": "It's Always Sunny",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-twentieth-century",
+    "title": "Twentieth Century",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-dill-or-no-dill",
+    "title": "DILL or no dill",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-dirty-shirley",
+    "title": "Dirty Shirley",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-dingo",
+    "title": "Dingo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-diplomat",
+    "title": "Diplomat",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-diamond-dog",
+    "title": "Diamond Dog",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-dixie-cosmopolitan",
+    "title": "Dixie Cosmopolitan",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-diki-diki",
+    "title": "Diki-Diki",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-diable-a-quattre",
+    "title": "Diable à Quattre",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-singapore-sling-difford-s-recipe",
+    "title": "Singapore Sling (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-garibaldi",
+    "title": "Garibaldi",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.284Z"
+  },
+  {
+    "id": "slug-diplomat-sour",
+    "title": "Diplomat Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-diana-s-bitter",
+    "title": "Diana's Bitter",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-blood-orange-garibaldi",
+    "title": "Blood Orange Garibaldi",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-amaretto-sour",
+    "title": "Amaretto Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-division-bell",
+    "title": "Division Bell",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-great-gatsby",
+    "title": "Great Gatsby",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-golden-hour",
+    "title": "Golden Hour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-vive-l-aperitif",
+    "title": "Vive l'apéritif",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-unusual-negroni",
+    "title": "Unusual Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-corpse-reviver-no-4",
+    "title": "Corpse Reviver No.4",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-corpse-reviver-no-2-savoy-recipe",
+    "title": "Corpse Reviver No.2 (Savoy Recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-cadaver-reviver",
+    "title": "Cadáver Reviver",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-south-slope",
+    "title": "South Slope",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-pomegranate-negroni",
+    "title": "Pomegranate Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-the-montford",
+    "title": "The Montford",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-white-negroni",
+    "title": "White Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-reverse-vesper-martini",
+    "title": "Reverse Vesper Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-old-etonian",
+    "title": "Old Etonian",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-lily",
+    "title": "Lily",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-absolute-gangster",
+    "title": "Absolute Gangster",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-19th-century",
+    "title": "19th Century",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-copper-bullet",
+    "title": "Copper Bullet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-campden",
+    "title": "Campden",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-sherry-kicker-martini",
+    "title": "Sherry Kicker Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-smoky-mizu",
+    "title": "Smoky Mizu",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-la-alianza",
+    "title": "La Alianza",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-perennial",
+    "title": "Perennial",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-raimbaut",
+    "title": "Raimbaut",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-hey-hey",
+    "title": "Hey Hey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-ranch-water",
+    "title": "Ranch Water",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-white-dragon",
+    "title": "White Dragon",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-juschu",
+    "title": "Juschu",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-azalea-margarita",
+    "title": "Azalea Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-johnny-s-dream",
+    "title": "Johnny's Dream",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-young-man-s-delight",
+    "title": "Young Man's Delight",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-batanga",
+    "title": "Batanga",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-chepari",
+    "title": "Chepari",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-christine-wiseman-s-margarita",
+    "title": "Christine Wiseman's Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-zaza",
+    "title": "Zaza",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-dubonnet-cocktail-no-1",
+    "title": "Dubonnet Cocktail No.1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-dubonnet-cocktail-no-2",
+    "title": "Dubonnet Cocktail No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-zegroni",
+    "title": "Zegroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-arnaud-s-special",
+    "title": "Arnaud's Special",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-paris-sour",
+    "title": "Paris Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-dandy-cocktail",
+    "title": "Dandy Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-the-wentworth",
+    "title": "The Wentworth",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-pippin-no-2",
+    "title": "Pippin No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-hi-falutin",
+    "title": "Hi Falutin",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-gen-tonique",
+    "title": "Gen'tonique",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-beer-on-the-rocks",
+    "title": "Beer on-the-rocks",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-thuir-sour",
+    "title": "Thuir Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-don-t-give-up-the-ship",
+    "title": "Don't Give Up The Ship",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-kiss",
+    "title": "Kiss",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-ante",
+    "title": "Ante",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-to-be-oranged",
+    "title": "To Be Oranged",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-home-on-the-range",
+    "title": "Home On The Range",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-queen-mother",
+    "title": "Queen Mother",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-rosina",
+    "title": "Rosina",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-st-george-s-negroni",
+    "title": "St. George's Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-pince-nez",
+    "title": "Pince-Nez",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-dan-s-pier",
+    "title": "Dan's Pier",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-queen-s-jubilee-martini",
+    "title": "Queen's Jubilee Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-pepper-vanilla",
+    "title": "Pepper & Vanilla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-teaquila",
+    "title": "Teaquila",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-black-mamba",
+    "title": "Black Mamba",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-elmo-cola",
+    "title": "Elmo Cola",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-tea-quila",
+    "title": "Tea-Quila",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.285Z"
+  },
+  {
+    "id": "slug-last-palabra",
+    "title": "Last Palabra",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-la-perla",
+    "title": "La Perla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-sea-o-la",
+    "title": "Sea O La",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-black-cocktail",
+    "title": "Black Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-la-rosa-margarita",
+    "title": "La Rosa Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-latin-quarter",
+    "title": "Latin Quarter",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-l-aristocrate",
+    "title": "L'Aristocrate",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-buckaroo",
+    "title": "Buckaroo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-piscola",
+    "title": "Piscola",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-lavender-margarita",
+    "title": "Lavender Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-chocolate-cranberry-martini",
+    "title": "Chocolate & Cranberry 'Martini'",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-long-island-iced-tea",
+    "title": "Long Island Iced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-long-island-spiced-tea",
+    "title": "Long Island Spiced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-long-island-iced-tea-no-added-sugar-low-calorie",
+    "title": "Long Island Iced Tea (no added sugar* & low-calorie)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-l-auberge-espanol",
+    "title": "L'Auberge Español",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-thriller-from-vanilla",
+    "title": "Thriller From Vanilla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-blackberry-mint-margarita-julep",
+    "title": "Blackberry Mint Margarita Julep",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-blackthorn-english",
+    "title": "Blackthorn (English)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-english-rose",
+    "title": "English Rose",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-rose-english",
+    "title": "Rose (English)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-english-marmalade-a-k-a-hawksmoor-marmalade-martini",
+    "title": "English Marmalade (a.k.a. Hawksmoor Marmalade Martini)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-english-martini",
+    "title": "English Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-english-garden",
+    "title": "English Garden",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-english-breakfast-cocktail",
+    "title": "English Breakfast Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-english-channel",
+    "title": "English Channel",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "slug-caffa-american-italiano",
+    "title": "CaffÃ¨ American Italiano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:56:48.286Z"
+  },
+  {
+    "id": "dg-2887",
+    "title": "Sweet Martini",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.351Z"
+  },
+  {
+    "id": "dg-35966",
+    "title": "Vermouth and Soda",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.355Z"
+  },
+  {
+    "id": "dg-3943",
+    "title": "Sweet Manhattan (batched recipe)",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.359Z"
+  },
+  {
+    "id": "dg-31242",
+    "title": "Sweet Virginia",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.362Z"
+  },
+  {
+    "id": "dg-1247",
+    "title": "Manhattan (Sweet)",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.365Z"
+  },
+  {
+    "id": "dg-6281",
+    "title": "High Ryeser",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.368Z"
+  },
+  {
+    "id": "dg-4111",
+    "title": "Manhattan (Sweet with Bitter Chocolate)",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.372Z"
+  },
+  {
+    "id": "dg-1392",
+    "title": "Negroni Cocktail",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.375Z"
+  },
+  {
+    "id": "dg-30008",
+    "title": "Fridge Negroni",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.379Z"
+  },
+  {
+    "id": "dg-1319",
+    "title": "Million Dollar Cocktail",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:41.385Z"
+  },
+  {
+    "id": "slug-classic-vermouth-cocktail",
+    "title": "Classic Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.975Z"
+  },
+  {
+    "id": "slug-improved-vermouth-cocktail",
+    "title": "Improved Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.976Z"
+  },
+  {
+    "id": "slug-vermouth-cooler",
+    "title": "Vermouth Cooler",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-vermouth-cocktail",
+    "title": "Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-vc-vermouth-cassis",
+    "title": "VC (Vermouth & Cassis)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweetheart",
+    "title": "Sweetheart",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweetie-pie",
+    "title": "Sweetie Pie",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweetie-darling",
+    "title": "Sweetie Darling",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-tears-of-mine",
+    "title": "Sweet Tears of Mine",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-science",
+    "title": "Sweet Science",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-liberty-s-sherry-cobbler",
+    "title": "Sweet Liberty's Sherry Cobbler",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-lady-no-2",
+    "title": "Sweet Lady No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-nutcracker-sweet",
+    "title": "Nutcracker Sweet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-grape-caipirinha-caipirinha-d-uva",
+    "title": "Sweet Grape Caipirinha (Caipirinha D'uva)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-lady-no-1",
+    "title": "Sweet Lady No. 1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-tart",
+    "title": "Sweet Tart",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-sweet-louise",
+    "title": "Sweet Louise",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-semi-dry-martini",
+    "title": "Semi-Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.977Z"
+  },
+  {
+    "id": "slug-dry-martini-preferred-5-1-ratio",
+    "title": "Dry Martini 'Preferred' (5:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-15-1-ratio-montgomery-s",
+    "title": "Dry Martini (15:1 ratio) Montgomery's",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-15-5-dumped-franklin",
+    "title": "Dry Martini (15:5 dumped) Franklin",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-7-1-ratio-embury-s",
+    "title": "Dry Martini (7:1 ratio) Embury's",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-10-1-ratio",
+    "title": "Dry Martini (10:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-orange-martini",
+    "title": "Dry Orange Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-2-1-ratio-wet",
+    "title": "Dry Martini (2:1 ratio) Wet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-3-1-ratio",
+    "title": "Dry Martini (3:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-4-1-ratio",
+    "title": "Dry Martini (4:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-1-1-ratio-fifty-fifty",
+    "title": "Dry Martini (1:1 ratio) Fifty-Fifty",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-2-1-5-ratio-sopping-wet",
+    "title": "Dry Martini (2:1.5 ratio) Sopping Wet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-martini-no-2",
+    "title": "Dry Martini No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dry-ice-martini",
+    "title": "Dry Ice Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-oddball-manhattan-dry",
+    "title": "Oddball Manhattan Dry",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-gin-salad-dry-martini",
+    "title": "Gin Salad Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dickens-dry-martini",
+    "title": "Dickens' Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-duke-s-dry-martini-the-naked-or-direct-martini",
+    "title": "Duke's Dry Martini - The 'Naked' or 'Direct' Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-gibson-dry-martini",
+    "title": "Gibson Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-holland-house-craddock-s-london-dry-gin-based",
+    "title": "Holland House (Craddock's London dry gin-based)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-manhattan-dry",
+    "title": "Manhattan (Dry)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-malty-dry-martini",
+    "title": "Malty Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-bronx-difford-s",
+    "title": "Bronx (Difford's)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-negroni-bianco",
+    "title": "Negroni Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-americano-bianco",
+    "title": "Americano Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-negroni-bianco-bergamotto",
+    "title": "Negroni Bianco Bergamotto",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-matcha-bianco",
+    "title": "Matcha Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-bijou-blanc",
+    "title": "Bijou Blanc",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-benny-blanco",
+    "title": "Benny Blanco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-blanche-corpse-reviver",
+    "title": "Blanche Corpse Reviver",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-blanche-refresher",
+    "title": "Blanche Refresher",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-reggatta-de-blanc",
+    "title": "Reggatta de Blanc",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-blanco-43",
+    "title": "Blanco 43",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-dama-blanca",
+    "title": "Dama Blanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-sauvignon-blanc-punch",
+    "title": "Sauvignon Blanc Punch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-white-cosmo",
+    "title": "White Cosmo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-casablanca",
+    "title": "Casablanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-reborn-padre-blanco",
+    "title": "Reborn Padre Blanco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-casablanca-no-2",
+    "title": "Casablanca No.2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-la-blanca",
+    "title": "La Blanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-bitter-margarita",
+    "title": "Bitter Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-the-lady-wears-red",
+    "title": "The Lady Wears Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-1920-cocktail",
+    "title": "1920 Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-bamboo-savoy-s-1930-recipe",
+    "title": "Bamboo (Savoy's 1930 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-cosmopolitan-1927-recipe",
+    "title": "Cosmopolitan (1927 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-killer-in-red",
+    "title": "Killer in Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-the-angel-wore-red",
+    "title": "The Angel Wore Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-ripe-red-slice",
+    "title": "Ripe Red Slice",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-turf-club-1939-charles-h-baker",
+    "title": "Turf Club (1939. Charles H. Baker)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-red-grape-caipirinha",
+    "title": "Red Grape Caipirinha",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-red-cosmic-alaska",
+    "title": "Red Cosmic Alaska",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-red-thorn",
+    "title": "Red Thorn",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-montana-jacques-straub-1913",
+    "title": "Montana (Jacques Straub, 1913)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-montana-harry-johnson-1900",
+    "title": "Montana (Harry Johnson, 1900)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-red-banana-daiquiri",
+    "title": "Red Banana Daiquiri",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-red-snapper",
+    "title": "Red Snapper",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-two-one-two-212",
+    "title": "Two-One-Two (212)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.978Z"
+  },
+  {
+    "id": "slug-red-raider",
+    "title": "Red Raider",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-swizzle",
+    "title": "Red Swizzle",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-lion-difford-s-recipe",
+    "title": "Red Lion (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-rhode-island-red",
+    "title": "Rhode Island Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-apple",
+    "title": "Red Apple",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-breast",
+    "title": "Red Breast",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-lion-tarling-s-recipe",
+    "title": "Red Lion (Tarling's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-marauder",
+    "title": "Red Marauder",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-earl",
+    "title": "Red Earl",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-dragon",
+    "title": "Red Dragon",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-neck",
+    "title": "Red Neck",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-hooker",
+    "title": "Red Hooker",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-sacred",
+    "title": "Sacred",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-headed-slut-shot",
+    "title": "Red Headed Slut Shot",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-redback",
+    "title": "Redback",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-opal-cocktail",
+    "title": "Red Opal Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-dog-smash",
+    "title": "Red Dog Smash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-earl-by-salvatore-calabrese",
+    "title": "Red Earl (by Salvatore Calabrese)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-red-haven",
+    "title": "Red Haven",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-lulu-white",
+    "title": "Lulu White",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-christmas-martini",
+    "title": "White Christmas Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-stinger",
+    "title": "White Stinger",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-witch",
+    "title": "White Witch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-all-white-frappe",
+    "title": "All White Frappé",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-chocolate-macadamia-flip",
+    "title": "White Chocolate & Macadamia Flip",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-water-ride",
+    "title": "White Water Ride",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-elephant",
+    "title": "White Elephant",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-grasshopper",
+    "title": "White Grasshopper",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-rob-roy",
+    "title": "White Rob Roy",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-bee-groni",
+    "title": "White Bee-Groni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-mezcal-negroni",
+    "title": "White Mezcal Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-negroni-sbagliato",
+    "title": "White Negroni Sbagliato",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-horse",
+    "title": "White Horse",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-monkey",
+    "title": "White Monkey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-cuban",
+    "title": "White Cuban",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-lion-david-embury-s-recipe",
+    "title": "White Lion (David Embury's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-white-lotus",
+    "title": "White Lotus",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-milk-punch",
+    "title": "Italian Milk Punch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-gentleman",
+    "title": "Italian Gentleman",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-spritz-al-bitter-spritz-veneziano",
+    "title": "Spritz Al Bitter (Spritz Veneziano)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-sour",
+    "title": "Italian Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-margarita",
+    "title": "Italian Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-passion-margarita",
+    "title": "Italian Passion Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-coffee",
+    "title": "Italian Coffee",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-mezcal-margarita",
+    "title": "Italian Mezcal Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-chocolate-martini",
+    "title": "Italian Chocolate Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-buck",
+    "title": "Italian Buck",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-fascination",
+    "title": "Italian Fascination",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-espresso-martini",
+    "title": "Italian Espresso Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-surfer-with-a-russian-attitude",
+    "title": "Italian Surfer with a Russian Attitude",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-italian-sun",
+    "title": "Italian Sun",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-gin-french",
+    "title": "Gin & French",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-rose-french-style-no-1",
+    "title": "Rose (French style) No. 1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.979Z"
+  },
+  {
+    "id": "slug-french-sherbet",
+    "title": "French Sherbet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-75",
+    "title": "French 75",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-pearl",
+    "title": "French Pearl",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-75-judge-jr-s-1927-recipe",
+    "title": "French 75 (Judge Jr's 1927 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-95-a-french-75-with-bourbon",
+    "title": "French 95 (a French '75' with bourbon)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-gimlet",
+    "title": "French Gimlet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-martini",
+    "title": "French Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-mule",
+    "title": "French Mule",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-bulldog",
+    "title": "French Bulldog",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-76",
+    "title": "French 76",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-monkey",
+    "title": "French Monkey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-kiss-1",
+    "title": "French Kiss #1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-leave",
+    "title": "French Leave",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-125-french-75-with-cognac",
+    "title": "French 125 (French '75' with cognac)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-french-mojito",
+    "title": "French Mojito",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-queen-martini",
+    "title": "Queen Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-medium-martini",
+    "title": "Medium Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-montana-club-martini",
+    "title": "Montana Club Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-orange-martini",
+    "title": "Orange Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-hawaiian-martini",
+    "title": "Hawaiian Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-knickerbocker-martini",
+    "title": "Knickerbocker Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-merry-go-round-martini",
+    "title": "Merry-Go-Round Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-pall-mall-martini",
+    "title": "Pall Mall Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-perfect-martini",
+    "title": "Perfect Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-cowboy-hoof-martini",
+    "title": "Cowboy Hoof Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-julep-martini",
+    "title": "Julep Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-mexican-jumping-bean",
+    "title": "Mexican Jumping Bean",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.980Z"
+  },
+  {
+    "id": "slug-detroit-martini",
+    "title": "Detroit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-churchill-martini",
+    "title": "Churchill Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-tequila-martini",
+    "title": "Tequila Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-gin-blossom-martini",
+    "title": "Gin Blossom Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-francophile-martini",
+    "title": "Francophile Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-balmoral-martini",
+    "title": "Balmoral Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-blackberry-martini",
+    "title": "Blackberry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-medium-dry-martini",
+    "title": "Medium Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-breakfast-special-marmalade-martini",
+    "title": "Breakfast Special Marmalade Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-big-apple-martini",
+    "title": "Big Apple Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-cucumber-martini",
+    "title": "Cucumber Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-verdant-martini",
+    "title": "Verdant Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-emerald-martini",
+    "title": "Emerald Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-kiwi-fresh-fruit-martini",
+    "title": "Kiwi Fresh Fruit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-paddington-bear-martini",
+    "title": "Paddington Bear Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-misty-martini",
+    "title": "Misty Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-alpine-martini",
+    "title": "Alpine Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-watermelon-vodka-martini",
+    "title": "Watermelon Vodka Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-mango-vodka-martini",
+    "title": "Mango Vodka Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-mango-gin-martini",
+    "title": "Mango Gin Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-passion-fruit-martini",
+    "title": "Passion Fruit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-salt-pepper-martini",
+    "title": "Salt & Pepper Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-fresh-martini",
+    "title": "Fresh Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-ginger-martini",
+    "title": "Ginger Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-freezer-martini",
+    "title": "Freezer Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.981Z"
+  },
+  {
+    "id": "slug-bradford-martini",
+    "title": "Bradford Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-reverse-martini",
+    "title": "Reverse Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-roselyn-cocktail",
+    "title": "Roselyn Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-tiny-tini",
+    "title": "Tiny 'Tini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-bohemian-martini",
+    "title": "Bohemian Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-singapore-sling-raffles-formula",
+    "title": "Singapore Sling (Raffles Formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-singapore-sling-baker-s-formula",
+    "title": "Singapore Sling (Baker's Formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-6-2-1-formula",
+    "title": "Daiquiri No. 1 (6:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-embury-s-8-2-1-formula",
+    "title": "Daiquiri No. 1 (Embury's 8:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-countdown-3-2-1-formula",
+    "title": "Daiquiri No. 1 (countdown 3:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-rum-barrel-by-donn-beach",
+    "title": "Rum Barrel (by Donn Beach)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-zombie",
+    "title": "Zombie",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-boston-tea-party",
+    "title": "Boston Tea Party",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-billionaire",
+    "title": "Billionaire",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-maple-bourbon-smash",
+    "title": "Maple Bourbon Smash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-pirate-queen",
+    "title": "Pirate Queen",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-mulled-wine",
+    "title": "Mulled Wine",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-bermuda-rum-swizzle",
+    "title": "Bermuda Rum Swizzle",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-perfect-blood-sand",
+    "title": "Perfect Blood & Sand",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-elements",
+    "title": "Elements",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-3-monkeys-a-dash",
+    "title": "3 Monkeys & a dash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-mai-tai-difford-s-recipe",
+    "title": "Mai Tai (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-texas-iced-tea",
+    "title": "Texas Iced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-rob-roy-no-3",
+    "title": "Rob Roy No. 3",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-grapefruit-whisky-fizz",
+    "title": "Grapefruit Whisky Fizz",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-smoked-salty-sour",
+    "title": "Smoked Salty Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-ramos-gin-fizz",
+    "title": "Ramos Gin Fizz",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-hurricane",
+    "title": "Hurricane",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-miami-vice",
+    "title": "Miami Vice",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-old-fashioned-cocktail-muddled-fruit-version",
+    "title": "Old Fashioned Cocktail (muddled fruit version)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-strawberry-jive",
+    "title": "Strawberry Jive",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-diable-rouge",
+    "title": "Diable Rouge",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.982Z"
+  },
+  {
+    "id": "slug-finn-rouge",
+    "title": "Finn Rouge",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-dry-martini-no-3",
+    "title": "Dry Martini No. 3",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-filthy-dirty-martini",
+    "title": "Filthy Dirty Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-affinity",
+    "title": "Affinity",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-hamilton-the-hipster",
+    "title": "Hamilton the Hipster",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-cherry-velvet",
+    "title": "Cherry Velvet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-panamericano",
+    "title": "Panamericano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-white-americano",
+    "title": "White Americano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-mex-martini",
+    "title": "Mex Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-itty-bitty-pretty",
+    "title": "Itty Bitty Pretty",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-abbey",
+    "title": "Abbey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-it-s-always-sunny",
+    "title": "It's Always Sunny",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-twentieth-century",
+    "title": "Twentieth Century",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-dill-or-no-dill",
+    "title": "DILL or no dill",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-dirty-shirley",
+    "title": "Dirty Shirley",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-dingo",
+    "title": "Dingo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-diplomat",
+    "title": "Diplomat",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-diamond-dog",
+    "title": "Diamond Dog",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-dixie-cosmopolitan",
+    "title": "Dixie Cosmopolitan",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-diki-diki",
+    "title": "Diki-Diki",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-diable-a-quattre",
+    "title": "Diable à Quattre",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-singapore-sling-difford-s-recipe",
+    "title": "Singapore Sling (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-garibaldi",
+    "title": "Garibaldi",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-diplomat-sour",
+    "title": "Diplomat Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-diana-s-bitter",
+    "title": "Diana's Bitter",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-blood-orange-garibaldi",
+    "title": "Blood Orange Garibaldi",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-amaretto-sour",
+    "title": "Amaretto Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-division-bell",
+    "title": "Division Bell",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-great-gatsby",
+    "title": "Great Gatsby",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-golden-hour",
+    "title": "Golden Hour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-vive-l-aperitif",
+    "title": "Vive l'apéritif",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-unusual-negroni",
+    "title": "Unusual Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-corpse-reviver-no-4",
+    "title": "Corpse Reviver No.4",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.983Z"
+  },
+  {
+    "id": "slug-corpse-reviver-no-2-savoy-recipe",
+    "title": "Corpse Reviver No.2 (Savoy Recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-cadaver-reviver",
+    "title": "Cadáver Reviver",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-south-slope",
+    "title": "South Slope",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-pomegranate-negroni",
+    "title": "Pomegranate Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-the-montford",
+    "title": "The Montford",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-white-negroni",
+    "title": "White Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-reverse-vesper-martini",
+    "title": "Reverse Vesper Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-old-etonian",
+    "title": "Old Etonian",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-lily",
+    "title": "Lily",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-absolute-gangster",
+    "title": "Absolute Gangster",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-19th-century",
+    "title": "19th Century",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-copper-bullet",
+    "title": "Copper Bullet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-campden",
+    "title": "Campden",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-sherry-kicker-martini",
+    "title": "Sherry Kicker Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-smoky-mizu",
+    "title": "Smoky Mizu",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-la-alianza",
+    "title": "La Alianza",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-perennial",
+    "title": "Perennial",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-raimbaut",
+    "title": "Raimbaut",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-hey-hey",
+    "title": "Hey Hey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-ranch-water",
+    "title": "Ranch Water",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-white-dragon",
+    "title": "White Dragon",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-juschu",
+    "title": "Juschu",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-azalea-margarita",
+    "title": "Azalea Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-johnny-s-dream",
+    "title": "Johnny's Dream",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-young-man-s-delight",
+    "title": "Young Man's Delight",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-batanga",
+    "title": "Batanga",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-chepari",
+    "title": "Chepari",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-christine-wiseman-s-margarita",
+    "title": "Christine Wiseman's Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-zaza",
+    "title": "Zaza",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-dubonnet-cocktail-no-1",
+    "title": "Dubonnet Cocktail No.1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-dubonnet-cocktail-no-2",
+    "title": "Dubonnet Cocktail No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-zegroni",
+    "title": "Zegroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.984Z"
+  },
+  {
+    "id": "slug-arnaud-s-special",
+    "title": "Arnaud's Special",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-paris-sour",
+    "title": "Paris Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-dandy-cocktail",
+    "title": "Dandy Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-the-wentworth",
+    "title": "The Wentworth",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-pippin-no-2",
+    "title": "Pippin No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-hi-falutin",
+    "title": "Hi Falutin",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-gen-tonique",
+    "title": "Gen'tonique",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-beer-on-the-rocks",
+    "title": "Beer on-the-rocks",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-thuir-sour",
+    "title": "Thuir Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-don-t-give-up-the-ship",
+    "title": "Don't Give Up The Ship",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-kiss",
+    "title": "Kiss",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-ante",
+    "title": "Ante",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-to-be-oranged",
+    "title": "To Be Oranged",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-home-on-the-range",
+    "title": "Home On The Range",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-queen-mother",
+    "title": "Queen Mother",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-rosina",
+    "title": "Rosina",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-st-george-s-negroni",
+    "title": "St. George's Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-pince-nez",
+    "title": "Pince-Nez",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-dan-s-pier",
+    "title": "Dan's Pier",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-queen-s-jubilee-martini",
+    "title": "Queen's Jubilee Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-pepper-vanilla",
+    "title": "Pepper & Vanilla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-teaquila",
+    "title": "Teaquila",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-black-mamba",
+    "title": "Black Mamba",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-elmo-cola",
+    "title": "Elmo Cola",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-tea-quila",
+    "title": "Tea-Quila",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-last-palabra",
+    "title": "Last Palabra",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-la-perla",
+    "title": "La Perla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-sea-o-la",
+    "title": "Sea O La",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-black-cocktail",
+    "title": "Black Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-la-rosa-margarita",
+    "title": "La Rosa Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-latin-quarter",
+    "title": "Latin Quarter",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-l-aristocrate",
+    "title": "L'Aristocrate",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-buckaroo",
+    "title": "Buckaroo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-piscola",
+    "title": "Piscola",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-lavender-margarita",
+    "title": "Lavender Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-chocolate-cranberry-martini",
+    "title": "Chocolate & Cranberry 'Martini'",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.985Z"
+  },
+  {
+    "id": "slug-long-island-iced-tea",
+    "title": "Long Island Iced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-long-island-spiced-tea",
+    "title": "Long Island Spiced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-long-island-iced-tea-no-added-sugar-low-calorie",
+    "title": "Long Island Iced Tea (no added sugar* & low-calorie)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-l-auberge-espanol",
+    "title": "L'Auberge Español",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-thriller-from-vanilla",
+    "title": "Thriller From Vanilla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-blackberry-mint-margarita-julep",
+    "title": "Blackberry Mint Margarita Julep",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-blackthorn-english",
+    "title": "Blackthorn (English)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-english-rose",
+    "title": "English Rose",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-rose-english",
+    "title": "Rose (English)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-english-marmalade-a-k-a-hawksmoor-marmalade-martini",
+    "title": "English Marmalade (a.k.a. Hawksmoor Marmalade Martini)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-english-martini",
+    "title": "English Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-english-garden",
+    "title": "English Garden",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-english-breakfast-cocktail",
+    "title": "English Breakfast Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-english-channel",
+    "title": "English Channel",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "slug-caffa-american-italiano",
+    "title": "CaffÃ¨ American Italiano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:41.986Z"
+  },
+  {
+    "id": "dg-2887",
+    "title": "Sweet Martini",
+    "score": 100,
+    "issues": [],
+    "action": "none",
+    "at": "2026-06-05T14:58:42.582Z"
+  },
+  {
+    "id": "slug-classic-vermouth-cocktail",
+    "title": "Classic Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.973Z"
+  },
+  {
+    "id": "slug-improved-vermouth-cocktail",
+    "title": "Improved Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-vermouth-cooler",
+    "title": "Vermouth Cooler",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-vermouth-cocktail",
+    "title": "Vermouth Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-vc-vermouth-cassis",
+    "title": "VC (Vermouth & Cassis)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweetheart",
+    "title": "Sweetheart",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweetie-pie",
+    "title": "Sweetie Pie",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweetie-darling",
+    "title": "Sweetie Darling",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-tears-of-mine",
+    "title": "Sweet Tears of Mine",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-science",
+    "title": "Sweet Science",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-liberty-s-sherry-cobbler",
+    "title": "Sweet Liberty's Sherry Cobbler",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-lady-no-2",
+    "title": "Sweet Lady No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-nutcracker-sweet",
+    "title": "Nutcracker Sweet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-grape-caipirinha-caipirinha-d-uva",
+    "title": "Sweet Grape Caipirinha (Caipirinha D'uva)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-lady-no-1",
+    "title": "Sweet Lady No. 1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-tart",
+    "title": "Sweet Tart",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sweet-louise",
+    "title": "Sweet Louise",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-semi-dry-martini",
+    "title": "Semi-Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-preferred-5-1-ratio",
+    "title": "Dry Martini 'Preferred' (5:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-15-1-ratio-montgomery-s",
+    "title": "Dry Martini (15:1 ratio) Montgomery's",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-15-5-dumped-franklin",
+    "title": "Dry Martini (15:5 dumped) Franklin",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-7-1-ratio-embury-s",
+    "title": "Dry Martini (7:1 ratio) Embury's",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-10-1-ratio",
+    "title": "Dry Martini (10:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-orange-martini",
+    "title": "Dry Orange Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-2-1-ratio-wet",
+    "title": "Dry Martini (2:1 ratio) Wet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-3-1-ratio",
+    "title": "Dry Martini (3:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-4-1-ratio",
+    "title": "Dry Martini (4:1 ratio)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-1-1-ratio-fifty-fifty",
+    "title": "Dry Martini (1:1 ratio) Fifty-Fifty",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-2-1-5-ratio-sopping-wet",
+    "title": "Dry Martini (2:1.5 ratio) Sopping Wet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-martini-no-2",
+    "title": "Dry Martini No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dry-ice-martini",
+    "title": "Dry Ice Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-oddball-manhattan-dry",
+    "title": "Oddball Manhattan Dry",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-gin-salad-dry-martini",
+    "title": "Gin Salad Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dickens-dry-martini",
+    "title": "Dickens' Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-duke-s-dry-martini-the-naked-or-direct-martini",
+    "title": "Duke's Dry Martini - The 'Naked' or 'Direct' Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-gibson-dry-martini",
+    "title": "Gibson Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-holland-house-craddock-s-london-dry-gin-based",
+    "title": "Holland House (Craddock's London dry gin-based)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-manhattan-dry",
+    "title": "Manhattan (Dry)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-malty-dry-martini",
+    "title": "Malty Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-bronx-difford-s",
+    "title": "Bronx (Difford's)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-negroni-bianco",
+    "title": "Negroni Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-americano-bianco",
+    "title": "Americano Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-negroni-bianco-bergamotto",
+    "title": "Negroni Bianco Bergamotto",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-matcha-bianco",
+    "title": "Matcha Bianco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-bijou-blanc",
+    "title": "Bijou Blanc",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-benny-blanco",
+    "title": "Benny Blanco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-blanche-corpse-reviver",
+    "title": "Blanche Corpse Reviver",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-blanche-refresher",
+    "title": "Blanche Refresher",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-reggatta-de-blanc",
+    "title": "Reggatta de Blanc",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-blanco-43",
+    "title": "Blanco 43",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-dama-blanca",
+    "title": "Dama Blanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-sauvignon-blanc-punch",
+    "title": "Sauvignon Blanc Punch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-white-cosmo",
+    "title": "White Cosmo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-casablanca",
+    "title": "Casablanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.974Z"
+  },
+  {
+    "id": "slug-reborn-padre-blanco",
+    "title": "Reborn Padre Blanco",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-casablanca-no-2",
+    "title": "Casablanca No.2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-la-blanca",
+    "title": "La Blanca",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-bitter-margarita",
+    "title": "Bitter Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-the-lady-wears-red",
+    "title": "The Lady Wears Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-1920-cocktail",
+    "title": "1920 Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-bamboo-savoy-s-1930-recipe",
+    "title": "Bamboo (Savoy's 1930 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-cosmopolitan-1927-recipe",
+    "title": "Cosmopolitan (1927 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-killer-in-red",
+    "title": "Killer in Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-the-angel-wore-red",
+    "title": "The Angel Wore Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-ripe-red-slice",
+    "title": "Ripe Red Slice",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-turf-club-1939-charles-h-baker",
+    "title": "Turf Club (1939. Charles H. Baker)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-grape-caipirinha",
+    "title": "Red Grape Caipirinha",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-cosmic-alaska",
+    "title": "Red Cosmic Alaska",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-thorn",
+    "title": "Red Thorn",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-montana-jacques-straub-1913",
+    "title": "Montana (Jacques Straub, 1913)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-montana-harry-johnson-1900",
+    "title": "Montana (Harry Johnson, 1900)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-banana-daiquiri",
+    "title": "Red Banana Daiquiri",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-snapper",
+    "title": "Red Snapper",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-two-one-two-212",
+    "title": "Two-One-Two (212)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-raider",
+    "title": "Red Raider",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-swizzle",
+    "title": "Red Swizzle",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-lion-difford-s-recipe",
+    "title": "Red Lion (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-rhode-island-red",
+    "title": "Rhode Island Red",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-apple",
+    "title": "Red Apple",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-breast",
+    "title": "Red Breast",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-lion-tarling-s-recipe",
+    "title": "Red Lion (Tarling's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-marauder",
+    "title": "Red Marauder",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-earl",
+    "title": "Red Earl",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-dragon",
+    "title": "Red Dragon",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-neck",
+    "title": "Red Neck",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-hooker",
+    "title": "Red Hooker",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-sacred",
+    "title": "Sacred",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-headed-slut-shot",
+    "title": "Red Headed Slut Shot",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-redback",
+    "title": "Redback",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-opal-cocktail",
+    "title": "Red Opal Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-dog-smash",
+    "title": "Red Dog Smash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-earl-by-salvatore-calabrese",
+    "title": "Red Earl (by Salvatore Calabrese)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-red-haven",
+    "title": "Red Haven",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-lulu-white",
+    "title": "Lulu White",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-christmas-martini",
+    "title": "White Christmas Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-stinger",
+    "title": "White Stinger",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-witch",
+    "title": "White Witch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-all-white-frappe",
+    "title": "All White Frappé",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-chocolate-macadamia-flip",
+    "title": "White Chocolate & Macadamia Flip",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-water-ride",
+    "title": "White Water Ride",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-elephant",
+    "title": "White Elephant",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-grasshopper",
+    "title": "White Grasshopper",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-rob-roy",
+    "title": "White Rob Roy",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-bee-groni",
+    "title": "White Bee-Groni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-mezcal-negroni",
+    "title": "White Mezcal Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-negroni-sbagliato",
+    "title": "White Negroni Sbagliato",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-horse",
+    "title": "White Horse",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-monkey",
+    "title": "White Monkey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-cuban",
+    "title": "White Cuban",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-lion-david-embury-s-recipe",
+    "title": "White Lion (David Embury's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-white-lotus",
+    "title": "White Lotus",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-milk-punch",
+    "title": "Italian Milk Punch",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-gentleman",
+    "title": "Italian Gentleman",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-spritz-al-bitter-spritz-veneziano",
+    "title": "Spritz Al Bitter (Spritz Veneziano)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-sour",
+    "title": "Italian Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-margarita",
+    "title": "Italian Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-passion-margarita",
+    "title": "Italian Passion Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-coffee",
+    "title": "Italian Coffee",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-mezcal-margarita",
+    "title": "Italian Mezcal Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-chocolate-martini",
+    "title": "Italian Chocolate Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-buck",
+    "title": "Italian Buck",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-fascination",
+    "title": "Italian Fascination",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-espresso-martini",
+    "title": "Italian Espresso Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-surfer-with-a-russian-attitude",
+    "title": "Italian Surfer with a Russian Attitude",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-italian-sun",
+    "title": "Italian Sun",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-gin-french",
+    "title": "Gin & French",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-rose-french-style-no-1",
+    "title": "Rose (French style) No. 1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-sherbet",
+    "title": "French Sherbet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-75",
+    "title": "French 75",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-pearl",
+    "title": "French Pearl",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-75-judge-jr-s-1927-recipe",
+    "title": "French 75 (Judge Jr's 1927 recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-95-a-french-75-with-bourbon",
+    "title": "French 95 (a French '75' with bourbon)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-gimlet",
+    "title": "French Gimlet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-martini",
+    "title": "French Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-mule",
+    "title": "French Mule",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-bulldog",
+    "title": "French Bulldog",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-76",
+    "title": "French 76",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-monkey",
+    "title": "French Monkey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-kiss-1",
+    "title": "French Kiss #1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-leave",
+    "title": "French Leave",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-125-french-75-with-cognac",
+    "title": "French 125 (French '75' with cognac)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-french-mojito",
+    "title": "French Mojito",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-queen-martini",
+    "title": "Queen Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-medium-martini",
+    "title": "Medium Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-montana-club-martini",
+    "title": "Montana Club Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-orange-martini",
+    "title": "Orange Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.975Z"
+  },
+  {
+    "id": "slug-hawaiian-martini",
+    "title": "Hawaiian Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-knickerbocker-martini",
+    "title": "Knickerbocker Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-merry-go-round-martini",
+    "title": "Merry-Go-Round Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-pall-mall-martini",
+    "title": "Pall Mall Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-perfect-martini",
+    "title": "Perfect Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-cowboy-hoof-martini",
+    "title": "Cowboy Hoof Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-julep-martini",
+    "title": "Julep Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-mexican-jumping-bean",
+    "title": "Mexican Jumping Bean",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-detroit-martini",
+    "title": "Detroit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-churchill-martini",
+    "title": "Churchill Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-tequila-martini",
+    "title": "Tequila Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-gin-blossom-martini",
+    "title": "Gin Blossom Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-francophile-martini",
+    "title": "Francophile Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-balmoral-martini",
+    "title": "Balmoral Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-blackberry-martini",
+    "title": "Blackberry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-medium-dry-martini",
+    "title": "Medium Dry Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-breakfast-special-marmalade-martini",
+    "title": "Breakfast Special Marmalade Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-big-apple-martini",
+    "title": "Big Apple Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-cucumber-martini",
+    "title": "Cucumber Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-verdant-martini",
+    "title": "Verdant Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-emerald-martini",
+    "title": "Emerald Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-kiwi-fresh-fruit-martini",
+    "title": "Kiwi Fresh Fruit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-paddington-bear-martini",
+    "title": "Paddington Bear Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-misty-martini",
+    "title": "Misty Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-alpine-martini",
+    "title": "Alpine Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-watermelon-vodka-martini",
+    "title": "Watermelon Vodka Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-mango-vodka-martini",
+    "title": "Mango Vodka Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-mango-gin-martini",
+    "title": "Mango Gin Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-passion-fruit-martini",
+    "title": "Passion Fruit Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-salt-pepper-martini",
+    "title": "Salt & Pepper Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-fresh-martini",
+    "title": "Fresh Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-ginger-martini",
+    "title": "Ginger Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-freezer-martini",
+    "title": "Freezer Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-bradford-martini",
+    "title": "Bradford Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-reverse-martini",
+    "title": "Reverse Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-roselyn-cocktail",
+    "title": "Roselyn Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-tiny-tini",
+    "title": "Tiny 'Tini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-bohemian-martini",
+    "title": "Bohemian Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-singapore-sling-raffles-formula",
+    "title": "Singapore Sling (Raffles Formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-singapore-sling-baker-s-formula",
+    "title": "Singapore Sling (Baker's Formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-6-2-1-formula",
+    "title": "Daiquiri No. 1 (6:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-embury-s-8-2-1-formula",
+    "title": "Daiquiri No. 1 (Embury's 8:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-daiquiri-no-1-countdown-3-2-1-formula",
+    "title": "Daiquiri No. 1 (countdown 3:2:1 formula)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-rum-barrel-by-donn-beach",
+    "title": "Rum Barrel (by Donn Beach)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-zombie",
+    "title": "Zombie",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-boston-tea-party",
+    "title": "Boston Tea Party",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-billionaire",
+    "title": "Billionaire",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-maple-bourbon-smash",
+    "title": "Maple Bourbon Smash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-pirate-queen",
+    "title": "Pirate Queen",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-mulled-wine",
+    "title": "Mulled Wine",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-bermuda-rum-swizzle",
+    "title": "Bermuda Rum Swizzle",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-perfect-blood-sand",
+    "title": "Perfect Blood & Sand",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-elements",
+    "title": "Elements",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-3-monkeys-a-dash",
+    "title": "3 Monkeys & a dash",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-mai-tai-difford-s-recipe",
+    "title": "Mai Tai (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-texas-iced-tea",
+    "title": "Texas Iced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-rob-roy-no-3",
+    "title": "Rob Roy No. 3",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-grapefruit-whisky-fizz",
+    "title": "Grapefruit Whisky Fizz",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-smoked-salty-sour",
+    "title": "Smoked Salty Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-ramos-gin-fizz",
+    "title": "Ramos Gin Fizz",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-hurricane",
+    "title": "Hurricane",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-miami-vice",
+    "title": "Miami Vice",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-old-fashioned-cocktail-muddled-fruit-version",
+    "title": "Old Fashioned Cocktail (muddled fruit version)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-strawberry-jive",
+    "title": "Strawberry Jive",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-diable-rouge",
+    "title": "Diable Rouge",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-finn-rouge",
+    "title": "Finn Rouge",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-dry-martini-no-3",
+    "title": "Dry Martini No. 3",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-filthy-dirty-martini",
+    "title": "Filthy Dirty Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-affinity",
+    "title": "Affinity",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-hamilton-the-hipster",
+    "title": "Hamilton the Hipster",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-cherry-velvet",
+    "title": "Cherry Velvet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-panamericano",
+    "title": "Panamericano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-white-americano",
+    "title": "White Americano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-mex-martini",
+    "title": "Mex Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-itty-bitty-pretty",
+    "title": "Itty Bitty Pretty",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-abbey",
+    "title": "Abbey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-it-s-always-sunny",
+    "title": "It's Always Sunny",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-twentieth-century",
+    "title": "Twentieth Century",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-dill-or-no-dill",
+    "title": "DILL or no dill",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-dirty-shirley",
+    "title": "Dirty Shirley",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-dingo",
+    "title": "Dingo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-diplomat",
+    "title": "Diplomat",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-diamond-dog",
+    "title": "Diamond Dog",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-dixie-cosmopolitan",
+    "title": "Dixie Cosmopolitan",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-diki-diki",
+    "title": "Diki-Diki",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-diable-a-quattre",
+    "title": "Diable à Quattre",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-singapore-sling-difford-s-recipe",
+    "title": "Singapore Sling (Difford's recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-garibaldi",
+    "title": "Garibaldi",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-diplomat-sour",
+    "title": "Diplomat Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-diana-s-bitter",
+    "title": "Diana's Bitter",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-blood-orange-garibaldi",
+    "title": "Blood Orange Garibaldi",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-amaretto-sour",
+    "title": "Amaretto Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-division-bell",
+    "title": "Division Bell",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-great-gatsby",
+    "title": "Great Gatsby",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-golden-hour",
+    "title": "Golden Hour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-vive-l-aperitif",
+    "title": "Vive l'apéritif",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-unusual-negroni",
+    "title": "Unusual Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-corpse-reviver-no-4",
+    "title": "Corpse Reviver No.4",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-corpse-reviver-no-2-savoy-recipe",
+    "title": "Corpse Reviver No.2 (Savoy Recipe)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-cadaver-reviver",
+    "title": "Cadáver Reviver",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-south-slope",
+    "title": "South Slope",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-pomegranate-negroni",
+    "title": "Pomegranate Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-the-montford",
+    "title": "The Montford",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-white-negroni",
+    "title": "White Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-reverse-vesper-martini",
+    "title": "Reverse Vesper Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.976Z"
+  },
+  {
+    "id": "slug-old-etonian",
+    "title": "Old Etonian",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-lily",
+    "title": "Lily",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-absolute-gangster",
+    "title": "Absolute Gangster",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-19th-century",
+    "title": "19th Century",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-copper-bullet",
+    "title": "Copper Bullet",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-campden",
+    "title": "Campden",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-sherry-kicker-martini",
+    "title": "Sherry Kicker Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-smoky-mizu",
+    "title": "Smoky Mizu",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-la-alianza",
+    "title": "La Alianza",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-perennial",
+    "title": "Perennial",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-raimbaut",
+    "title": "Raimbaut",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-hey-hey",
+    "title": "Hey Hey",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-ranch-water",
+    "title": "Ranch Water",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-white-dragon",
+    "title": "White Dragon",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-juschu",
+    "title": "Juschu",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-azalea-margarita",
+    "title": "Azalea Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-johnny-s-dream",
+    "title": "Johnny's Dream",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-young-man-s-delight",
+    "title": "Young Man's Delight",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-batanga",
+    "title": "Batanga",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-chepari",
+    "title": "Chepari",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-christine-wiseman-s-margarita",
+    "title": "Christine Wiseman's Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-zaza",
+    "title": "Zaza",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-dubonnet-cocktail-no-1",
+    "title": "Dubonnet Cocktail No.1",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-dubonnet-cocktail-no-2",
+    "title": "Dubonnet Cocktail No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-zegroni",
+    "title": "Zegroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-arnaud-s-special",
+    "title": "Arnaud's Special",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-paris-sour",
+    "title": "Paris Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-dandy-cocktail",
+    "title": "Dandy Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-the-wentworth",
+    "title": "The Wentworth",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-pippin-no-2",
+    "title": "Pippin No. 2",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-hi-falutin",
+    "title": "Hi Falutin",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-gen-tonique",
+    "title": "Gen'tonique",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-beer-on-the-rocks",
+    "title": "Beer on-the-rocks",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-thuir-sour",
+    "title": "Thuir Sour",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-don-t-give-up-the-ship",
+    "title": "Don't Give Up The Ship",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-kiss",
+    "title": "Kiss",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-ante",
+    "title": "Ante",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-to-be-oranged",
+    "title": "To Be Oranged",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-home-on-the-range",
+    "title": "Home On The Range",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-queen-mother",
+    "title": "Queen Mother",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-rosina",
+    "title": "Rosina",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-st-george-s-negroni",
+    "title": "St. George's Negroni",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-pince-nez",
+    "title": "Pince-Nez",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-dan-s-pier",
+    "title": "Dan's Pier",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-queen-s-jubilee-martini",
+    "title": "Queen's Jubilee Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-pepper-vanilla",
+    "title": "Pepper & Vanilla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.977Z"
+  },
+  {
+    "id": "slug-teaquila",
+    "title": "Teaquila",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-black-mamba",
+    "title": "Black Mamba",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-elmo-cola",
+    "title": "Elmo Cola",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-tea-quila",
+    "title": "Tea-Quila",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-last-palabra",
+    "title": "Last Palabra",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-la-perla",
+    "title": "La Perla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-sea-o-la",
+    "title": "Sea O La",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-black-cocktail",
+    "title": "Black Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-la-rosa-margarita",
+    "title": "La Rosa Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-latin-quarter",
+    "title": "Latin Quarter",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-l-aristocrate",
+    "title": "L'Aristocrate",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-buckaroo",
+    "title": "Buckaroo",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-piscola",
+    "title": "Piscola",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-lavender-margarita",
+    "title": "Lavender Margarita",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-chocolate-cranberry-martini",
+    "title": "Chocolate & Cranberry 'Martini'",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-long-island-iced-tea",
+    "title": "Long Island Iced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-long-island-spiced-tea",
+    "title": "Long Island Spiced Tea",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-long-island-iced-tea-no-added-sugar-low-calorie",
+    "title": "Long Island Iced Tea (no added sugar* & low-calorie)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-l-auberge-espanol",
+    "title": "L'Auberge Español",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-thriller-from-vanilla",
+    "title": "Thriller From Vanilla",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-blackberry-mint-margarita-julep",
+    "title": "Blackberry Mint Margarita Julep",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-blackthorn-english",
+    "title": "Blackthorn (English)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-english-rose",
+    "title": "English Rose",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-rose-english",
+    "title": "Rose (English)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-english-marmalade-a-k-a-hawksmoor-marmalade-martini",
+    "title": "English Marmalade (a.k.a. Hawksmoor Marmalade Martini)",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-english-martini",
+    "title": "English Martini",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-english-garden",
+    "title": "English Garden",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-english-breakfast-cocktail",
+    "title": "English Breakfast Cocktail",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-english-channel",
+    "title": "English Channel",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  },
+  {
+    "id": "slug-caffa-american-italiano",
+    "title": "CaffÃ¨ American Italiano",
+    "score": 0,
+    "issues": [],
+    "action": "skipped",
+    "at": "2026-06-05T14:58:59.978Z"
+  }
+]

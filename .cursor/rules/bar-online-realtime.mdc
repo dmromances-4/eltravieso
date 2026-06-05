@@ -1,0 +1,15 @@
+---
+description: Bar Online — Socket.IO y presencia en tiempo real
+globs: server/realtime/**,lib/realtime/**,app/bar-online/**,app/api/bar-online/**,components/bar-online/**
+alwaysApply: false
+---
+
+# Bar Online
+
+- Servidor **independiente** de Next.js: `server/realtime/index.ts`
+- Dev: `npm run dev` + `npm run dev:ws` (puerto `WS_PORT`, default 3001)
+- UI: `/bar-online`, `/bar-online/[roomId]` · API: `GET/POST /api/bar-online`
+- Hook cliente: `lib/realtime/useBarOnline.ts`
+- Env: `NEXT_PUBLIC_WS_URL`, `WS_PORT`, `REDIS_URL` (opcional; sin Redis = instancia única en memoria)
+- Producción: desplegar WS aparte (`npm run start:ws`); usar Redis si hay varias instancias
+- Doc: `docs/BAR-ONLINE.md`

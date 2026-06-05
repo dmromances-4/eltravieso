@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
+import MapPlanPanel from "@/components/account/MapPlanPanel";
 
 type BarProfileData = {
   businessName: string;
@@ -72,6 +73,10 @@ export default function BarSettingsForm() {
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
   const [worlds50Rank, setWorlds50Rank] = useState<number | null>(null);
   const [hasTpvToken, setHasTpvToken] = useState(false);
+  const [mapPlan, setMapPlan] = useState<"FREE" | "FEATURED" | "BOOKING_PLUS">("FREE");
+  const [mapPlanExpiresAt, setMapPlanExpiresAt] = useState<string | null>(null);
+  const [isPremium, setIsPremium] = useState(false);
+  const [stripeSubscriptionId, setStripeSubscriptionId] = useState<string | null>(null);
 
   useEffect(() => {
     async function loadBarProfile() {
@@ -113,6 +118,10 @@ export default function BarSettingsForm() {
             });
             setHasTpvToken(Boolean(data.profile.hasTpvToken));
             setWorlds50Rank(data.profile.guideEntry?.worlds50bestRank ?? null);
+            setMapPlan(data.profile.mapPlan ?? "FREE");
+            setMapPlanExpiresAt(data.profile.mapPlanExpiresAt ?? null);
+            setIsPremium(Boolean(data.profile.isPremium));
+            setStripeSubscriptionId(data.profile.stripeSubscriptionId ?? null);
           }
         }
       } catch (err) {
@@ -186,6 +195,12 @@ export default function BarSettingsForm() {
 
   return (
     <div className="font-mono text-white">
+      <MapPlanPanel
+        mapPlan={mapPlan}
+        mapPlanExpiresAt={mapPlanExpiresAt}
+        isPremium={isPremium}
+        stripeSubscriptionId={stripeSubscriptionId}
+      />
       <form onSubmit={handleSubmit} className="space-y-8">
         {message && (
           <div

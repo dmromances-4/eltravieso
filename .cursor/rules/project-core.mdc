@@ -1,0 +1,16 @@
+---
+description: Stack, auth y convenciones base del monorepo
+alwaysApply: true
+---
+
+# Núcleo — Vermut El Travieso
+
+- Next.js 14 App Router; rutas API en `app/api/**/route.ts` (export `GET`, `POST`, …).
+- Base de datos: `import prisma from '@/lib/prisma'` — nunca instanciar `PrismaClient` en rutas.
+- **Auth = NextAuth** (credentials, adapter Prisma, sesiones en BD, 2FA con `otplib`). No añadir Supabase Auth ni `@supabase/ssr`.
+- **Supabase = solo Storage REST** para imágenes/vídeos (`lib/storage/`).
+- Client components: `'use client'`; lógica de servidor en `app/api/*` o `lib/*`.
+- Alias: `@/lib`, `@/components`, `@/data` (ver `tsconfig.json`).
+- Cambios mínimos; reutilizar wrappers en `lib/` antes de duplicar integraciones.
+- Calidad: `npm run test`, `npm run lint`, `npm run build`.
+- Guías: `AGENTS.md`, `docs/README.md`, `.github/copilot-instructions.md`.

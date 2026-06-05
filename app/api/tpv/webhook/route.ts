@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { handleTpvStockWebhook } from "@/lib/wholesale/reposition";
 import prisma from "@/lib/prisma";
 import { verifyTpvSignature } from "@/lib/tpv/verify-signature";
+import { logServerError } from "@/lib/security/safe-error";
 
 export async function POST(req: Request) {
   try {
@@ -118,7 +119,7 @@ export async function POST(req: Request) {
       },
     });
   } catch (error) {
-    console.error("[TPV_WEBHOOK_ERROR]:", error);
+    logServerError("tpv-webhook", error);
     const message = error instanceof Error ? error.message : "Internal Server Error";
     return NextResponse.json({ error: message }, { status: 500 });
   }

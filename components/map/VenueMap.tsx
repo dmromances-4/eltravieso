@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { CONTINENT_LABELS } from "@/lib/venues/continents";
 
 type MapVenue = {
   id: string;
@@ -19,7 +20,12 @@ type MapVenue = {
   profileUrl: string;
   layer: "affiliate" | "editorial";
   worlds50bestRank: number | null;
+  continent?: string | null;
+  regionalRank?: number | null;
+  isPremium?: boolean;
 };
+
+type ContinentFilter = "" | "GLOBAL" | "EUROPE" | "ASIA" | "NORTH_AMERICA" | "LATIN_AMERICA";
 
 const VENUE_COLORS: Record<string, string> = {
   cocteleria: "#FFCC00",
@@ -28,10 +34,22 @@ const VENUE_COLORS: Record<string, string> = {
   bodega: "#9B59B6",
 };
 
-function affiliateIcon(venueType: string) {
-  const color = VENUE_COLORS[venueType] ?? VENUE_COLORS.bar;
+const CONTINENT_OPTIONS: { value: ContinentFilter; label: string }[] = [
+  { value: "", label: "Todos" },
+  { value: "GLOBAL", label: CONTINENT_LABELS.GLOBAL },
+  { value: "EUROPE", label: CONTINENT_LABELS.EUROPE },
+  { value: "ASIA", label: CONTINENT_LABELS.ASIA },
+  { value: "NORTH_AMERICA", label: CONTINENT_LABELS.NORTH_AMERICA },
+  { value: "LATIN_AMERICA", label: CONTINENT_LABELS.LATIN_AMERICA },
+];
+
+function affiliateIcon(venueType: string, isPremium?: boolean) {
+  const color = isPremium ? "#EF2A2A" : (VENUE_COLORS[venueType] ?? VENUE_COLORS.bar);
+  const star = isPremium
+    ? `<text x="14" y="17" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFCC00">★</text>`
+    : `<circle fill="#0a0a0a" cx="14" cy="14" r="5"/>`;
   const svg = encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path fill="${color}" stroke="#0a0a0a" stroke-width="1.5" d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z"/><circle fill="#0a0a0a" cx="14" cy="14" r="5"/></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path fill="${color}" stroke="#0a0a0a" stroke-width="1.5" d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z"/>${star}</svg>`,
   );
   return L.icon({
     iconUrl: `data:image/svg+xml,${svg}`,
@@ -58,19 +76,27 @@ export default function VenueMap() {
   const [editorial, setEditorial] = useState<MapVenue[]>([]);
   const [showAffiliates, setShowAffiliates] = useState(true);
   const [showEditorial, setShowEditorial] = useState(true);
+  const [continent, setContinent] = useState<ContinentFilter>("");
   const [loading, setLoading] = useState(true);
 
+  const loadEditorial = useCallback((filter: ContinentFilter) => {
+    const qs = filter ? `?continent=${filter}` : "";
+    return fetch(`/api/venues/guide${qs}`)
+      .then((r) => r.json())
+      .then((data) => setEditorial(data.venues ?? []));
+  }, []);
+
   useEffect(() => {
+    setLoading(true);
     Promise.all([
       fetch("/api/bars").then((r) => r.json()),
-      fetch("/api/venues/guide").then((r) => r.json()),
+      loadEditorial(continent),
     ])
-      .then(([barsData, guideData]) => {
+      .then(([barsData]) => {
         setAffiliates(barsData.bars ?? []);
-        setEditorial(guideData.venues ?? []);
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [continent, loadEditorial]);
 
   const visibleVenues = useMemo(() => {
     const out: MapVenue[] = [];
@@ -108,7 +134,7 @@ export default function VenueMap() {
 
   return (
     <div className="space-y-4">
-      <div className="flex flex-wrap items-center gap-6 text-xs font-bold uppercase tracking-widest">
+      <div className="flex flex-wrap items-center gap-4 text-xs font-bold uppercase tracking-widest">
         <label className="flex cursor-pointer items-center gap-2 text-slate-300">
           <input
             type="checkbox"
@@ -126,6 +152,20 @@ export default function VenueMap() {
             className="accent-electric-yellow"
           />
           Destacados 50 Best ({editorial.length})
+        </label>
+        <label className="flex items-center gap-2 border-l border-white/10 pl-4 text-slate-300">
+          <span>Continente</span>
+          <select
+            value={continent}
+            onChange={(e) => setContinent(e.target.value as ContinentFilter)}
+            className="rounded border border-white/20 bg-black px-2 py-1 font-mono text-xs normal-case text-white"
+          >
+            {CONTINENT_OPTIONS.map((opt) => (
+              <option key={opt.value || "all"} value={opt.value}>
+                {opt.label}
+              </option>
+            ))}
+          </select>
         </label>
         <div className="flex flex-wrap gap-4 border-l border-white/10 pl-4">
           {Object.entries(VENUE_COLORS).map(([type, color]) => (
@@ -152,10 +192,13 @@ export default function VenueMap() {
               <Marker
                 key={`${venue.layer}-${venue.id}`}
                 position={[venue.latitude, venue.longitude]}
-                icon={venue.layer === "editorial" ? editorialIcon() : affiliateIcon(venue.venueType)}
+                icon={venue.layer === "editorial" ? editorialIcon() : affiliateIcon(venue.venueType, venue.isPremium)}
               >
                 <Popup>
                   <div className="min-w-[200px] space-y-3 p-1 text-sm text-black">
+                    {venue.isPremium ? (
+                      <p className="text-xs font-bold uppercase text-red-600">Top del Barrio</p>
+                    ) : null}
                     {venue.photoUrl ? (
                       // eslint-disable-next-line @next/next/no-img-element
                       <img src={venue.photoUrl} alt={venue.name} className="h-24 w-full rounded-lg object-cover" />
@@ -163,6 +206,11 @@ export default function VenueMap() {
                     {venue.worlds50bestRank ? (
                       <p className="text-xs font-bold uppercase text-amber-600">
                         World&apos;s 50 Best #{venue.worlds50bestRank}
+                      </p>
+                    ) : null}
+                    {venue.regionalRank ? (
+                      <p className="text-xs font-bold uppercase text-sky-700">
+                        Regional #{venue.regionalRank}
                       </p>
                     ) : null}
                     <p className="font-bold">{venue.name}</p>

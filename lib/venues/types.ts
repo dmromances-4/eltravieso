@@ -49,6 +49,9 @@ export type VenuePublicDTO = {
   reservationUrl: string | null;
   coverManagerUrl: string | null;
   theForkUrl: string | null;
+  isPremium: boolean;
+  mapPlan: "FREE" | "FEATURED" | "BOOKING_PLUS";
+  bookingWidgetEnabled: boolean;
 };
 
 export type MapVenueDTO = {
@@ -66,6 +69,7 @@ export type MapVenueDTO = {
   worlds50bestRank: number | null;
   continent: VenueContinent | null;
   regionalRank: number | null;
+  isPremium?: boolean;
 };
 
 export type NormalizedVenueGuide = {

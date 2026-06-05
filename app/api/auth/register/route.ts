@@ -11,7 +11,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    const { email, password, name, confirmPassword } = await req.json();
+    const { email, password, name, confirmPassword, marketingEmailOptIn, marketingSmsOptIn } = await req.json();
 
     const emailError = validateEmail(String(email ?? ""));
     if (emailError) {
@@ -50,6 +50,15 @@ export async function POST(req: Request) {
         password: hashedPassword,
         name: String(name).trim(),
         role: "USER",
+        marketingConsent: {
+          create: {
+            emailOptIn: Boolean(marketingEmailOptIn),
+            smsOptIn: Boolean(marketingSmsOptIn),
+            whatsappOptIn: Boolean(marketingSmsOptIn),
+            consentSource: "register",
+            consentedAt: new Date(),
+          },
+        },
       },
       select: { id: true, email: true, name: true },
     });

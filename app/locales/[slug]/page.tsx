@@ -77,12 +77,18 @@ export default async function LocalePage({ params }: Props) {
   const venue = await getPublicVenueBySlug(params.slug);
   if (!venue) notFound();
 
-  const reservation = resolveReservationConfig({
-    reservationProvider: venue.reservationProvider,
-    reservationUrl: venue.reservationUrl,
-    coverManagerUrl: venue.coverManagerUrl,
-    theForkUrl: venue.theForkUrl,
-  });
+  const reservation = resolveReservationConfig(
+    {
+      reservationProvider: venue.reservationProvider,
+      reservationUrl: venue.reservationUrl,
+      coverManagerUrl: venue.coverManagerUrl,
+      theForkUrl: venue.theForkUrl,
+    },
+    {
+      bookingWidgetEnabled:
+        venue.source === "editorial" ? false : venue.bookingWidgetEnabled,
+    },
+  );
 
   const jsonLd = buildJsonLd(venue);
 

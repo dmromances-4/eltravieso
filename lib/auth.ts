@@ -59,6 +59,8 @@ export const authOptions: NextAuthOptions = {
           image: user.imageUrl ?? undefined,
           isTwoFactorEnabled: user.isTwoFactorEnabled,
           twoFactorVerified,
+          membershipStatus: user.membershipStatus,
+          isVip: user.membershipStatus === "ACTIVE" && (!user.membershipExpiresAt || user.membershipExpiresAt > new Date()),
         } as any;
       },
     }),
@@ -88,12 +90,29 @@ export const authOptions: NextAuthOptions = {
         token.picture = (user as any).image ?? token.picture;
         token.isTwoFactorEnabled = Boolean((user as any).isTwoFactorEnabled);
         token.twoFactorVerified = Boolean((user as any).twoFactorVerified);
+        token.membershipStatus = (user as any).membershipStatus ?? "NONE";
+        token.isVip = Boolean((user as any).isVip);
       }
 
       if (trigger === "update" && updateSession?.user) {
         if (updateSession.user.name) token.name = updateSession.user.name;
         if (updateSession.user.email) token.email = updateSession.user.email;
         if (updateSession.user.image !== undefined) token.picture = updateSession.user.image;
+        if (updateSession.user.isVip !== undefined) token.isVip = Boolean(updateSession.user.isVip);
+        if (updateSession.user.membershipStatus) token.membershipStatus = updateSession.user.membershipStatus;
+      }
+
+      if (token.id && trigger === "update") {
+        const dbUser = await prisma.user.findUnique({
+          where: { id: token.id as string },
+          select: { membershipStatus: true, membershipExpiresAt: true },
+        });
+        if (dbUser) {
+          token.membershipStatus = dbUser.membershipStatus;
+          token.isVip =
+            dbUser.membershipStatus === "ACTIVE" &&
+            (!dbUser.membershipExpiresAt || dbUser.membershipExpiresAt > new Date());
+        }
       }
 
       return token;
@@ -107,6 +126,8 @@ export const authOptions: NextAuthOptions = {
         session.user.image = (token.picture as string) ?? session.user.image ?? null;
         session.user.isTwoFactorEnabled = Boolean(token.isTwoFactorEnabled);
         session.user.twoFactorVerified = Boolean(token.twoFactorVerified);
+        session.user.membershipStatus = (token.membershipStatus as string) ?? "NONE";
+        session.user.isVip = Boolean(token.isVip);
       }
       return session;
     },

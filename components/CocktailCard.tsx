@@ -20,11 +20,10 @@ export default function CocktailCard({ title, slug, rating, glass, ingredients, 
 
   return (
     <motion.article
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-50px" }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-      className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#141414] transition-all duration-300 will-change-transform hover:-translate-y-2 hover:border-electric-yellow/30 hover:shadow-neon"
+      initial={false}
+      whileHover={{ y: -8 }}
+      transition={{ duration: 0.3, ease: 'easeOut' }}
+      className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-[#141414] transition-all duration-300 will-change-transform hover:border-electric-yellow/30 hover:shadow-neon"
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-slate-950">
         <Image src={cover} alt={title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover transition duration-700 group-hover:scale-105 group-hover:opacity-80" />

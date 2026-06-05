@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 import { evaluateAdminAccess, type AdminAccessDeniedReason } from "@/lib/auth/admin-access";
+import { isAdmin2faRequired } from "@/lib/auth/admin-2fa-policy";
 
 export class AdminApiError extends Error {
   constructor(
@@ -48,7 +49,9 @@ export async function isAdminUser(userId: string): Promise<boolean> {
     where: { id: userId },
     select: { role: true, isTwoFactorEnabled: true },
   });
-  return user?.role === "ADMIN" && Boolean(user.isTwoFactorEnabled);
+  if (!user || user.role !== "ADMIN") return false;
+  if (!isAdmin2faRequired()) return true;
+  return Boolean(user.isTwoFactorEnabled);
 }
 
 export function adminApiErrorResponse(error: unknown) {

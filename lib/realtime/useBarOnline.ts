@@ -34,10 +34,16 @@ export interface RtcSignal {
 
 export type ConnectionStatus = "connecting" | "connected" | "error" | "disconnected";
 
+export interface RoomAccessError {
+  roomId: string;
+  message: string;
+}
+
 export interface UseBarOnlineResult {
   status: ConnectionStatus;
   members: PresenceMember[];
   messages: ChatMessage[];
+  roomError: RoomAccessError | null;
   sendMessage: (text: string) => void;
   sendSignal: (targetId: string, data: unknown) => void;
   onSignal: (handler: (signal: RtcSignal) => void) => () => void;
@@ -47,6 +53,7 @@ export function useBarOnline(roomId: string | null): UseBarOnlineResult {
   const [status, setStatus] = useState<ConnectionStatus>("connecting");
   const [members, setMembers] = useState<PresenceMember[]>([]);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [roomError, setRoomError] = useState<RoomAccessError | null>(null);
   const socketRef = useRef<Socket | null>(null);
   const signalHandlers = useRef<Set<(signal: RtcSignal) => void>>(new Set());
 
@@ -85,6 +92,13 @@ export function useBarOnline(roomId: string | null): UseBarOnlineResult {
       signalHandlers.current.forEach((handler) => handler(signal));
     });
 
+    socket.on("room:error", (payload: RoomAccessError) => {
+      if (payload.roomId === roomId) {
+        setRoomError(payload);
+        setStatus("error");
+      }
+    });
+
     return () => {
       socket.emit("room:leave", { roomId });
       socket.removeAllListeners();
@@ -117,5 +131,5 @@ export function useBarOnline(roomId: string | null): UseBarOnlineResult {
     };
   }, []);
 
-  return { status, members, messages, sendMessage, sendSignal, onSignal };
+  return { status, members, messages, roomError, sendMessage, sendSignal, onSignal };
 }

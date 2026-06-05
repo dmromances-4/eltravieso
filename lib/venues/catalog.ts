@@ -1,6 +1,10 @@
 import prisma from "@/lib/prisma";
-import type { BarProfile, VenueGuideEntry } from "@prisma/client";
-import type { MapVenueDTO, VenuePublicDTO } from "@/lib/venues/types";
+import type { BarProfile, VenueContinent, VenueGuideEntry } from "@prisma/client";
+import {
+  parseAdditionalRankings,
+  type MapVenueDTO,
+  type VenuePublicDTO,
+} from "@/lib/venues/types";
 
 const barSelect = {
   id: true,
@@ -25,6 +29,9 @@ const barSelect = {
   reservationUrl: true,
   coverManagerUrl: true,
   theForkUrl: true,
+  isPremium: true,
+  mapPlan: true,
+  bookingWidgetEnabled: true,
   guideEntry: {
     select: {
       worlds50bestRank: true,
@@ -32,6 +39,11 @@ const barSelect = {
       sourceUrl: true,
       chefName: true,
       externalWebsite: true,
+      continent: true,
+      regionalRank: true,
+      additionalRankings: true,
+      tripadvisorUrl: true,
+      tripadvisorRating: true,
     },
   },
 } as const;
@@ -52,8 +64,14 @@ const guideSelect = {
   longitude: true,
   worlds50bestRank: true,
   worlds50bestCategory: true,
+  continent: true,
+  listScope: true,
+  regionalRank: true,
+  additionalRankings: true,
   sourceUrl: true,
   externalWebsite: true,
+  tripadvisorUrl: true,
+  tripadvisorRating: true,
 } as const;
 
 export function barToPublicDTO(
@@ -64,6 +82,11 @@ export function barToPublicDTO(
       sourceUrl: string;
       chefName: string | null;
       externalWebsite: string | null;
+      continent: VenueContinent | null;
+      regionalRank: number | null;
+      additionalRankings: unknown;
+      tripadvisorUrl: string | null;
+      tripadvisorRating: number | null;
     } | null;
   },
 ): VenuePublicDTO | null {
@@ -91,13 +114,21 @@ export function barToPublicDTO(
     source: "affiliate",
     worlds50bestRank: bar.guideEntry?.worlds50bestRank ?? null,
     worlds50bestCategory: bar.guideEntry?.worlds50bestCategory ?? null,
+    continent: bar.guideEntry?.continent ?? null,
+    regionalRank: bar.guideEntry?.regionalRank ?? null,
+    additionalRankings: parseAdditionalRankings(bar.guideEntry?.additionalRankings),
     sourceUrl: bar.guideEntry?.sourceUrl ?? null,
     externalWebsite: bar.guideEntry?.externalWebsite ?? null,
+    tripadvisorUrl: bar.guideEntry?.tripadvisorUrl ?? null,
+    tripadvisorRating: bar.guideEntry?.tripadvisorRating ?? null,
     chefName: bar.guideEntry?.chefName ?? null,
     reservationProvider: bar.reservationProvider,
     reservationUrl: bar.reservationUrl,
     coverManagerUrl: bar.coverManagerUrl,
     theForkUrl: bar.theForkUrl,
+    isPremium: bar.isPremium,
+    mapPlan: bar.mapPlan,
+    bookingWidgetEnabled: bar.bookingWidgetEnabled,
   };
 }
 
@@ -124,13 +155,21 @@ export function guideToPublicDTO(entry: VenueGuideEntry): VenuePublicDTO {
     source: "editorial",
     worlds50bestRank: entry.worlds50bestRank,
     worlds50bestCategory: entry.worlds50bestCategory,
+    continent: entry.continent,
+    regionalRank: entry.regionalRank,
+    additionalRankings: parseAdditionalRankings(entry.additionalRankings),
     sourceUrl: entry.sourceUrl,
     externalWebsite: entry.externalWebsite,
+    tripadvisorUrl: entry.tripadvisorUrl,
+    tripadvisorRating: entry.tripadvisorRating,
     chefName: entry.chefName,
     reservationProvider: null,
     reservationUrl: null,
     coverManagerUrl: null,
     theForkUrl: null,
+    isPremium: false,
+    mapPlan: "FREE",
+    bookingWidgetEnabled: false,
   };
 }
 
@@ -196,9 +235,12 @@ export async function listAffiliateMapVenues(): Promise<MapVenueDTO[]> {
       address: true,
       city: true,
       photoUrl: true,
-      guideEntry: { select: { worlds50bestRank: true } },
+      isPremium: true,
+      guideEntry: {
+        select: { worlds50bestRank: true, continent: true, regionalRank: true },
+      },
     },
-    orderBy: { businessName: "asc" },
+    orderBy: [{ isPremium: "desc" }, { businessName: "asc" }],
   });
 
   return bars.map((bar) => ({
@@ -214,10 +256,27 @@ export async function listAffiliateMapVenues(): Promise<MapVenueDTO[]> {
     profileUrl: `/locales/${bar.slug}`,
     layer: "affiliate" as const,
     worlds50bestRank: bar.guideEntry?.worlds50bestRank ?? null,
+    continent: bar.guideEntry?.continent ?? null,
+    regionalRank: bar.guideEntry?.regionalRank ?? null,
+    isPremium: bar.isPremium,
   }));
 }
 
-export async function listEditorialMapVenues(): Promise<MapVenueDTO[]> {
+function venueMatchesContinent(
+  continent: VenueContinent,
+  entryContinent: VenueContinent | null,
+  additionalRankings: unknown,
+): boolean {
+  if (continent === "GLOBAL") {
+    return !entryContinent || entryContinent === "GLOBAL";
+  }
+  if (entryContinent === continent) return true;
+  return parseAdditionalRankings(additionalRankings).some((r) => r.continent === continent);
+}
+
+export async function listEditorialMapVenues(
+  continent?: VenueContinent | null,
+): Promise<MapVenueDTO[]> {
   const entries = await prisma.venueGuideEntry.findMany({
     where: {
       isPublished: true,
@@ -235,11 +294,18 @@ export async function listEditorialMapVenues(): Promise<MapVenueDTO[]> {
       city: true,
       photoUrl: true,
       worlds50bestRank: true,
+      continent: true,
+      regionalRank: true,
+      additionalRankings: true,
     },
     orderBy: [{ worlds50bestCategory: "asc" }, { worlds50bestRank: "asc" }],
   });
 
-  return entries.map((entry) => ({
+  const filtered = continent
+    ? entries.filter((e) => venueMatchesContinent(continent, e.continent, e.additionalRankings))
+    : entries;
+
+  return filtered.map((entry) => ({
     id: entry.id,
     slug: entry.slug,
     name: entry.name,
@@ -252,11 +318,26 @@ export async function listEditorialMapVenues(): Promise<MapVenueDTO[]> {
     profileUrl: `/locales/${entry.slug}`,
     layer: "editorial" as const,
     worlds50bestRank: entry.worlds50bestRank,
+    continent: entry.continent,
+    regionalRank: entry.regionalRank,
   }));
 }
 
-export async function listEditorialVenuesForIndex(limit = 50) {
-  return prisma.venueGuideEntry.findMany({
+export async function listAllMapVenues(
+  continent?: VenueContinent | null,
+): Promise<MapVenueDTO[]> {
+  const [affiliates, editorial] = await Promise.all([
+    listAffiliateMapVenues(),
+    listEditorialMapVenues(continent),
+  ]);
+  return [...affiliates, ...editorial];
+}
+
+export async function listEditorialVenuesForIndex(
+  limit = 50,
+  continent?: VenueContinent | null,
+) {
+  const rows = await prisma.venueGuideEntry.findMany({
     where: { isPublished: true },
     select: {
       slug: true,
@@ -265,8 +346,35 @@ export async function listEditorialVenuesForIndex(limit = 50) {
       venueType: true,
       worlds50bestRank: true,
       worlds50bestCategory: true,
+      continent: true,
+      regionalRank: true,
+      additionalRankings: true,
     },
-    orderBy: [{ worlds50bestCategory: "asc" }, { worlds50bestRank: "asc" }],
-    take: limit,
+    orderBy: [{ regionalRank: "asc" }, { worlds50bestRank: "asc" }],
   });
+
+  const filtered = continent
+    ? rows.filter((e) => venueMatchesContinent(continent, e.continent, e.additionalRankings))
+    : rows;
+
+  return filtered.slice(0, limit).map(({ additionalRankings: _a, ...rest }) => rest);
+}
+
+export async function listEditorialVenuesByContinent(limitPerContinent = 50) {
+  const continents: VenueContinent[] = [
+    "GLOBAL",
+    "EUROPE",
+    "ASIA",
+    "NORTH_AMERICA",
+    "LATIN_AMERICA",
+  ];
+
+  const sections = await Promise.all(
+    continents.map(async (continent) => ({
+      continent,
+      venues: await listEditorialVenuesForIndex(limitPerContinent, continent),
+    })),
+  );
+
+  return sections.filter((s) => s.venues.length > 0);
 }

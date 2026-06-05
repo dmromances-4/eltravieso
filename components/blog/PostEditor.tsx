@@ -11,6 +11,8 @@ type PostEditorProps = {
   initialTitle?: string;
   initialContent?: string;
   initialCoverUrl?: string | null;
+  initialIsPremium?: boolean;
+  allowPremiumToggle?: boolean;
   redirectPath?: string;
 };
 
@@ -19,11 +21,14 @@ export default function PostEditor({
   initialTitle = "",
   initialContent = "",
   initialCoverUrl = null,
+  initialIsPremium = false,
+  allowPremiumToggle = false,
   redirectPath = "/cuenta/blog",
 }: PostEditorProps) {
   const router = useRouter();
   const [title, setTitle] = useState(initialTitle);
   const [coverUrl, setCoverUrl] = useState<string | null>(initialCoverUrl);
+  const [isPremium, setIsPremium] = useState(initialIsPremium);
   const [uploading, setUploading] = useState(false);
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState<{ type: "success" | "error"; text: string } | null>(null);
@@ -81,7 +86,12 @@ export default function PostEditor({
       const res = await fetch(url, {
         method,
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ title, content, coverUrl }),
+        body: JSON.stringify({
+          title,
+          content,
+          coverUrl,
+          ...(allowPremiumToggle ? { isPremium } : {}),
+        }),
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.message || "Error al publicar");
@@ -137,6 +147,20 @@ export default function PostEditor({
           ) : null}
         </div>
       </div>
+
+      {allowPremiumToggle ? (
+        <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-electric-red/30 bg-electric-red/5 px-5 py-4">
+          <input
+            type="checkbox"
+            checked={isPremium}
+            onChange={(e) => setIsPremium(e.target.checked)}
+            className="h-4 w-4 rounded border-white/20"
+          />
+          <span className="text-sm font-bold uppercase tracking-widest text-electric-red">
+            Contenido Club VIP
+          </span>
+        </label>
+      ) : null}
 
       <div>
         <p className="mb-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-400">Contenido</p>

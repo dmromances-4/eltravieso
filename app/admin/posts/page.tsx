@@ -17,6 +17,7 @@ export default async function AdminPostsPage() {
     title: post.title,
     slug: post.slug,
     published: post.published,
+    isPremium: post.isPremium,
     updatedAt: post.updatedAt.toISOString(),
     author: post.author,
   }));

@@ -4,6 +4,7 @@ import { authOptions } from "@/lib/auth";
 import { getAiStatus, isTextAiAvailable } from "@/lib/ai/availability";
 import { createRecipeFromPrompt } from "@/lib/recipes/agent";
 import { checkRateLimit, getAiAgentRateLimits, getClientIp } from "@/lib/rate-limit";
+import { logServerError } from "@/lib/security/safe-error";
 
 export async function GET() {
   const status = getAiStatus();
@@ -59,6 +60,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json(result);
   } catch (error: unknown) {
+    logServerError("ai-agent", error);
     const message = error instanceof Error ? error.message : "Error al generar la receta.";
     return NextResponse.json({ message }, { status: 500 });
   }

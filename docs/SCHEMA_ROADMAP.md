@@ -13,6 +13,8 @@ Decisión: **implementar superficies mínimas** en lugar de podar el schema. Los
 | Integraciones catálogo | Holded/Square/Shopify sync → `Product` + `BarStock` |
 | `BarProfile` lore + slug | `/locales/[slug]` — afiliados con `isPublicOnMap` |
 | `VenueGuideEntry` | Import editorial World's 50 Best — `/locales/[slug]`, `/mapa` capa destacados |
+| `MarketingConsent` | Opt-in GDPR por canal — registro `/register`, audiencia campañas |
+| `Campaign` / `CampaignMessage` | Campañas admin — `/admin/campaigns`, envío Resend/Twilio |
 
 ## Próximos pasos (no bloqueantes)
 
@@ -20,4 +22,4 @@ Decisión: **implementar superficies mínimas** en lugar de podar el schema. Los
 - Webhooks nativos Holded (API v2, previsto 2026) — endpoint propio ya listo
 - Cron reconciliación Shopify
 - Edición/eliminación de comentarios del foro
-- Rate limit IA con Redis en producción multi-instancia
+- ~~Rate limit IA con Redis en producción multi-instancia~~ → activar `REDIS_URL` (ver [`docs/ESCALADO.md`](./ESCALADO.md); código listo en `lib/rate-limit.ts`)

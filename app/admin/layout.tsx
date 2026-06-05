@@ -5,6 +5,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import LogoutButton from "@/components/LogoutButton";
 import { adminAccessRedirect, evaluateAdminAccess } from "@/lib/auth/admin-access";
+import { isAdmin2faRequired } from "@/lib/auth/admin-2fa-policy";
 
 export const dynamic = 'force-dynamic';
 
@@ -26,7 +27,9 @@ export default async function AdminLayout({ children }: { children: ReactNode })
           >
             El Travieso <span className="text-electric-yellow">Admin</span>
           </Link>
-          <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-400/90">Acceso protegido · 2FA</p>
+          <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.2em] text-emerald-400/90">
+            Acceso protegido{isAdmin2faRequired() ? " · 2FA" : ""}
+          </p>
         </div>
         <nav className="flex-1 px-4 space-y-2 overflow-y-auto">
           <Link
@@ -66,10 +69,28 @@ export default async function AdminLayout({ children }: { children: ReactNode })
             Recetas
           </Link>
           <Link
+            href="/admin/recetas-auditoria"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Auditoría Difford&apos;s
+          </Link>
+          <Link
             href="/admin/posts"
             className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
           >
             Blog
+          </Link>
+          <Link
+            href="/admin/campaigns"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Campañas
+          </Link>
+          <Link
+            href="/admin/vip-drops"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Drops VIP
           </Link>
           <Link
             href="/admin/delivery"

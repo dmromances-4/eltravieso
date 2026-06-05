@@ -23,6 +23,32 @@ enum UserRole {
   WHOLESALER
 }
 
+enum MembershipStatus {
+  NONE
+  ACTIVE
+  PAST_DUE
+  CANCELLED
+}
+
+enum ProductSource {
+  PROPIO
+  MARKETPLACE
+  AFILIADO
+}
+
+enum AffiliatePlatform {
+  AMAZON
+  TEMU
+  ALIEXPRESS
+  NONE
+}
+
+enum MapPlanTier {
+  FREE
+  FEATURED
+  BOOKING_PLUS
+}
+
 enum ProductType {
   CONSUMABLE
   MERCH
@@ -108,6 +134,13 @@ enum OrderStatus {
   RETURNED
 }
 
+enum DropFulfillmentStatus {
+  PENDING_PRODUCT
+  PENDING_ADDRESS
+  ORDER_CREATED
+  FULFILLED
+}
+
 enum WholesaleOrderStatus {
   DRAFT
   PENDING_APPROVAL
@@ -154,6 +187,26 @@ enum BarOnlineSessionType {
   TASTING_EVENT
 }
 
+enum CampaignChannel {
+  EMAIL
+  SMS
+  WHATSAPP
+}
+
+enum CampaignStatus {
+  DRAFT
+  SCHEDULED
+  SENDING
+  SENT
+  FAILED
+}
+
+enum CampaignMessageStatus {
+  QUEUED
+  SENT
+  FAILED
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // AUTH & USER
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -172,11 +225,15 @@ model User {
   country            String?   @default("España")
   phone              String?
   emailVerified      DateTime?
-  role               UserRole  @default(USER)
-  twoFactorSecret    String?
-  isTwoFactorEnabled Boolean   @default(false)
-  createdAt          DateTime  @default(now())
-  updatedAt          DateTime  @updatedAt
+  role                 UserRole         @default(USER)
+  twoFactorSecret      String?
+  isTwoFactorEnabled   Boolean          @default(false)
+  stripeCustomerId     String?          @unique
+  stripeSubscriptionId String?          @unique
+  membershipStatus     MembershipStatus @default(NONE)
+  membershipExpiresAt  DateTime?
+  createdAt            DateTime         @default(now())
+  updatedAt            DateTime         @updatedAt
 
   // Relations
   recipes           Recipe[]            @relation("AuthorRecipes")
@@ -191,6 +248,12 @@ model User {
   barOnlineSessions BarOnlineSession[]  @relation("BarOnlineHost")
   barOnlineJoined   BarOnlineSession[]  @relation("BarOnlineParticipants")
   listings          Listing[]           @relation("UserListings")
+  partnerProducts   Product[]           @relation("PartnerProducts")
+  orderSplitLines   OrderSplitLine[]    @relation("PartnerSplitLines")
+  dropFulfillments  MembershipDropFulfillment[]
+  marketingConsent  MarketingConsent?
+  campaignsCreated  Campaign[]          @relation("CampaignCreator")
+  campaignMessages  CampaignMessage[]
 
   @@index([email])
   @@index([role])
@@ -252,20 +315,29 @@ model Product {
   abv             Int?            // Alcohol percentage x100 (e.g. 1500 = 15.00%)
   volumeMl        Int?            // Volume in milliliters
   weightGrams     Int?            // Weight in grams (merch, conservas)
-  isActive        Boolean         @default(true)
-  metadata        Json?           // Flexible extra data
-  createdAt       DateTime        @default(now())
-  updatedAt       DateTime        @updatedAt
+  isActive          Boolean         @default(true)
+  source            ProductSource      @default(PROPIO)
+  partnerId         String?
+  commissionRateBps Int                @default(2000)
+  affiliateUrl      String?
+  affiliatePlatform AffiliatePlatform  @default(NONE)
+  metadata          Json?              // Flexible extra data (e.g. matchTerms: string[])
+  createdAt         DateTime        @default(now())
+  updatedAt         DateTime        @updatedAt
 
   // Relations
   variants         ProductVariant[]
   orderItems       OrderItem[]
   barStockEntries  BarStock[]
   taxRegistries    LiquorsTaxRegistry[]
+  partner          User?            @relation("PartnerProducts", fields: [partnerId], references: [id])
+  vipMonthlyDrops  VipMonthlyDrop[]
 
   @@index([slug])
   @@index([category, channel])
   @@index([type])
+  @@index([source])
+  @@index([partnerId])
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -318,6 +390,7 @@ model ProductVariant {
   product                Product                 @relation(fields: [productId], references: [id], onDelete: Cascade)
   orderItems             OrderItem[]
   wholesaleOrderItems    WholesaleOrderItem[]
+  vipMonthlyDrops        VipMonthlyDrop[]
   barStockEntries        BarStock[]
 
   @@index([productId])
@@ -332,7 +405,8 @@ model ProductVariant {
 model Order {
   id                String      @id @default(uuid())
   orderNumber       String      @unique // VT-2024-000001
-  userId            String
+  userId            String?
+  guestEmail        String?
   status            OrderStatus @default(PENDING)
   subtotalCents     Int
   taxCents          Int
@@ -340,6 +414,7 @@ model Order {
   totalCents        Int
   currency          String      @default("EUR")
   stripePaymentId   String?
+  stripeSessionId   String?     @unique
   shippingAddress   Json?       // { street, city, postalCode, country }
   billingAddress    Json?
   notes             String?     @db.Text
@@ -347,12 +422,14 @@ model Order {
   updatedAt         DateTime    @updatedAt
 
   // Relations
-  user  User        @relation(fields: [userId], references: [id])
-  items OrderItem[]
+  user       User?            @relation(fields: [userId], references: [id])
+  items      OrderItem[]
+  splitLines OrderSplitLine[]
 
   @@index([userId])
   @@index([status])
   @@index([orderNumber])
+  @@index([stripeSessionId])
 }
 
 model OrderItem {
@@ -370,6 +447,58 @@ model OrderItem {
   variant ProductVariant? @relation(fields: [variantId], references: [id])
 
   @@index([orderId])
+}
+
+model OrderSplitLine {
+  id            String   @id @default(uuid())
+  orderId       String
+  orderItemId   String   @unique
+  productId     String
+  partnerId     String?
+  grossCents    Int
+  platformCents Int
+  partnerCents  Int
+  settled       Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  order   Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  partner User? @relation("PartnerSplitLines", fields: [partnerId], references: [id])
+
+  @@index([orderId])
+  @@index([partnerId])
+  @@index([settled])
+}
+
+model VipMonthlyDrop {
+  id        String   @id @default(uuid())
+  dropMonth String   @unique // e.g. "2026-06"
+  productId String
+  variantId String?
+  label     String?
+  createdAt DateTime @default(now())
+
+  product Product         @relation(fields: [productId], references: [id])
+  variant ProductVariant? @relation(fields: [variantId], references: [id])
+
+  @@index([productId])
+}
+
+model MembershipDropFulfillment {
+  id          String                @id @default(uuid())
+  userId      String
+  dropMonth   String                // e.g. "2026-06"
+  productId   String?
+  orderId     String?
+  status      DropFulfillmentStatus @default(PENDING_PRODUCT)
+  fulfilledAt DateTime              @default(now())
+  updatedAt   DateTime              @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, dropMonth])
+  @@index([userId])
+  @@index([status])
+  @@index([dropMonth])
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -409,8 +538,13 @@ model BarProfile {
   longitude            Float?
   venueType            String?           // cocteleria | restaurante | bar | bodega
   photoUrl             String?
-  isPublicOnMap        Boolean  @default(false)
-  slug                 String?  @unique
+  isPublicOnMap        Boolean     @default(false)
+  mapPlan              MapPlanTier @default(FREE)
+  mapPlanExpiresAt     DateTime?
+  stripeSubscriptionId String?     @unique
+  isPremium            Boolean     @default(false)
+  bookingWidgetEnabled Boolean     @default(false)
+  slug                 String?     @unique
   history              String?  @db.Text
   foundationYear       Int?
   signatureDrink       String?
@@ -694,6 +828,7 @@ model Recipe {
   servings    Int?
   tags        String[]        // PostgreSQL native array
   isPublished Boolean         @default(true)
+  isPremium   Boolean         @default(false)
   authorId    String
   createdAt   DateTime        @default(now())
   updatedAt   DateTime        @updatedAt
@@ -735,6 +870,7 @@ model BlogPost {
   coverUrl    String?
   tags        String[]
   published   Boolean   @default(false)
+  isPremium   Boolean   @default(false)
   publishedAt DateTime?
   metadata    Json?
   authorId    String?
@@ -747,6 +883,7 @@ model BlogPost {
   @@index([slug])
   @@index([published])
   @@index([authorId])
+  @@index([isPremium])
 }
 
 model ForumTopic {
@@ -797,6 +934,8 @@ model BarOnlineSession {
   type         BarOnlineSessionType  @default(CHAT)
   hostId       String
   maxUsers     Int                   @default(10)
+  isPrivate    Boolean               @default(false)
+  hdEnabled    Boolean               @default(false)
   isActive     Boolean               @default(true)
   scheduledAt  DateTime?
   startedAt    DateTime?
@@ -825,4 +964,62 @@ model ProcessedWebhook {
   createdAt DateTime @default(now())
 
   @@index([source])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// MARKETING CAMPAIGNS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model MarketingConsent {
+  userId        String    @id
+  emailOptIn    Boolean   @default(false)
+  smsOptIn      Boolean   @default(false)
+  whatsappOptIn Boolean   @default(false)
+  consentedAt   DateTime?
+  consentSource String?
+  updatedAt     DateTime  @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
+
+model Campaign {
+  id          String          @id @default(uuid())
+  name        String
+  channel     CampaignChannel
+  status      CampaignStatus  @default(DRAFT)
+  subject     String?
+  bodyHtml    String?         @db.Text
+  bodyText    String          @db.Text
+  audience    Json            @default("{}")
+  scheduledAt DateTime?
+  sentAt      DateTime?
+  createdById String
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  createdBy User              @relation("CampaignCreator", fields: [createdById], references: [id])
+  messages  CampaignMessage[]
+
+  @@index([status])
+  @@index([channel])
+  @@index([createdById])
+}
+
+model CampaignMessage {
+  id         String                @id @default(uuid())
+  campaignId String
+  recipient  String
+  userId     String?
+  status     CampaignMessageStatus @default(QUEUED)
+  providerId String?
+  error      String?               @db.Text
+  sentAt     DateTime?
+  createdAt  DateTime              @default(now())
+
+  campaign Campaign @relation(fields: [campaignId], references: [id], onDelete: Cascade)
+  user     User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([campaignId])
+  @@index([userId])
+  @@index([status])
 }

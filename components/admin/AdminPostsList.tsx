@@ -9,6 +9,7 @@ type AdminPost = {
   title: string;
   slug: string;
   published: boolean;
+  isPremium: boolean;
   updatedAt: string;
   author: { email: string | null; name: string | null } | null;
 };
@@ -53,7 +54,10 @@ export default function AdminPostsList({ posts }: { posts: AdminPost[] }) {
                 <span className="text-emerald-400">Publicado</span>
               ) : (
                 <span className="text-amber-400">Borrador</span>
-              )}{" "}
+              )}
+              {post.isPremium ? (
+                <span className="ml-2 text-electric-red">VIP</span>
+              ) : null}{" "}
               · {new Date(post.updatedAt).toLocaleDateString("es-ES")}
             </p>
           </div>

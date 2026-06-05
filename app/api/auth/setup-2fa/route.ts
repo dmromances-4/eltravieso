@@ -8,6 +8,7 @@ import {
   createTwoFactorSecret,
   verifyTwoFactorToken,
 } from "@/lib/auth/two-factor";
+import { isAdmin2faRequired } from "@/lib/auth/admin-2fa-policy";
 
 async function getUserFromSession() {
   const session = await getServerSession(authOptions);
@@ -26,7 +27,7 @@ export async function GET() {
     isTwoFactorEnabled: user.isTwoFactorEnabled,
     hasSecret: Boolean(user.twoFactorSecret),
     role: user.role,
-    adminRequires2fa: user.role === "ADMIN",
+    adminRequires2fa: user.role === "ADMIN" && isAdmin2faRequired(),
   });
 }
 
@@ -100,7 +101,7 @@ export async function DELETE(req: Request) {
     return NextResponse.json({ message: "No autorizado" }, { status: 401 });
   }
 
-  if (user.role === "ADMIN") {
+  if (user.role === "ADMIN" && isAdmin2faRequired()) {
     return NextResponse.json(
       {
         message:

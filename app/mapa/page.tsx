@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import MapaPageClient from "@/components/map/MapaPageClient";
-import { listEditorialVenuesForIndex } from "@/lib/venues/catalog";
+import { listEditorialVenuesByContinent } from "@/lib/venues/catalog";
 
 export const metadata: Metadata = {
   title: "Guía de locales | Vermut El Travieso",
@@ -11,6 +11,6 @@ export const metadata: Metadata = {
 export const revalidate = 3600;
 
 export default async function MapaPage() {
-  const editorialIndex = await listEditorialVenuesForIndex(50);
-  return <MapaPageClient editorialIndex={editorialIndex} />;
+  const continentalSections = await listEditorialVenuesByContinent(50);
+  return <MapaPageClient continentalSections={continentalSections} />;
 }

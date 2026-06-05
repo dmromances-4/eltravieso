@@ -30,7 +30,7 @@ export default function BarOnlineRoom({
   type,
   currentUserId,
 }: BarOnlineRoomProps) {
-  const { status, members, messages, sendMessage, sendSignal, onSignal } =
+  const { status, members, messages, roomError, sendMessage, sendSignal, onSignal } =
     useBarOnline(roomId);
   const [draft, setDraft] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -201,6 +201,29 @@ export default function BarOnlineRoom({
     members.forEach((m) => (map[m.userId] = m.name));
     return map;
   }, [members]);
+
+  if (roomError) {
+    return (
+      <div className="mx-auto max-w-lg space-y-6 rounded-[2rem] border border-electric-red/30 bg-electric-red/10 p-8">
+        <h1 className="text-2xl font-display font-bold">No puedes entrar en esta sala</h1>
+        <p className="text-slate-300">{roomError.message}</p>
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/cuenta/membresia"
+            className="rounded-full bg-electric-red px-6 py-3 text-xs font-bold uppercase tracking-widest text-white"
+          >
+            Ver membresía VIP
+          </Link>
+          <Link
+            href="/bar-online"
+            className="rounded-full border border-white/20 px-6 py-3 text-xs font-bold uppercase tracking-widest text-white hover:border-electric-yellow"
+          >
+            Volver al lobby
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="grid gap-6 lg:grid-cols-[1fr_320px]">

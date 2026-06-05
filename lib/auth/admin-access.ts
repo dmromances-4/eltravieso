@@ -1,5 +1,6 @@
 import type { Session } from "next-auth";
 import prisma from "@/lib/prisma";
+import { isAdmin2faRequired } from "@/lib/auth/admin-2fa-policy";
 
 export type AdminAccessDeniedReason =
   | "unauthenticated"
@@ -27,6 +28,10 @@ export async function evaluateAdminAccess(session: Session | null): Promise<Admi
 
   if (!dbUser || dbUser.role !== "ADMIN") {
     return { allowed: false, reason: "not_admin" };
+  }
+
+  if (!isAdmin2faRequired()) {
+    return { allowed: true, userId: dbUser.id };
   }
 
   if (!dbUser.isTwoFactorEnabled) {

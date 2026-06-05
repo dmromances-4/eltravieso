@@ -143,6 +143,7 @@ export const RATE_LIMITS = {
   checkout: { max: 10, windowMs: 60 * 1000 },
   recipeSearch: { max: 60, windowMs: 60 * 1000 },
   upload: { max: 10, windowMs: 60 * 60 * 1000 },
+  campaignSend: { max: 5, windowMs: 60 * 60 * 1000 },
 } as const;
 
 export function getAiAgentRateLimits(isAuthenticated: boolean): RateLimitOptions {

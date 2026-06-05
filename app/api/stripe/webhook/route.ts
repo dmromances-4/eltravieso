@@ -2,6 +2,7 @@ import { NextResponse } from 'next/server'
 import type Stripe from 'stripe'
 import { getStripe } from '@/lib/stripe/api'
 import { syncSaleToHolded } from '@/lib/holded/api'
+import { buildHoldedOrderFromSession, processStripeWebhookEvent } from '@/lib/stripe/webhook-handlers'
 import prisma from '@/lib/prisma'
 import { clientSafeErrorMessage } from '@/lib/security/safe-error'
 
@@ -47,55 +48,23 @@ export async function POST(request: Request) {
     return NextResponse.json({ received: true, duplicate: true })
   }
 
-  if (event.type !== 'checkout.session.completed') {
-    await markWebhookProcessed(event.id, 'stripe')
-    return NextResponse.json({ received: true })
-  }
-
-  const session = event.data.object as Stripe.Checkout.Session
-  if (!session.id) {
-    await markWebhookProcessed(event.id, 'stripe')
-    return NextResponse.json({ received: true })
-  }
-
   try {
-    const fullSession = await getStripe().checkout.sessions.retrieve(session.id, {
-      expand: ['line_items'],
-    })
+    await processStripeWebhookEvent(event)
 
-    const lineItems = fullSession.line_items?.data ?? []
-    const items =
-      lineItems.length > 0
-        ? lineItems.map((item) => ({
-            description: item.description ?? item.price?.product?.toString() ?? 'Producto Vermut',
-            quantity: item.quantity ?? 1,
-            unitPrice: item.price?.unit_amount ? item.price.unit_amount / 100 : 0,
-            taxId: 'VAT',
-          }))
-        : [
-            {
-              description: 'Pedido Stripe Vermut',
-              quantity: 1,
-              unitPrice: fullSession.amount_total ? fullSession.amount_total / 100 : 0,
-              taxId: 'VAT',
-            },
-          ]
-
-    const order = {
-      contact: {
-        name: fullSession.customer_details?.name ?? 'Cliente Vermut',
-        email: fullSession.customer_details?.email ?? 'cliente@vermut.com',
-        phone: fullSession.customer_details?.phone ?? undefined,
-      },
-      items,
-      reference: fullSession.id,
+    if (event.type === 'checkout.session.completed') {
+      const session = event.data.object as Stripe.Checkout.Session
+      if (session.mode === 'payment' && session.metadata?.kind === 'shop_order') {
+        const order = await buildHoldedOrderFromSession(session)
+        const result = await syncSaleToHolded(order)
+        await markWebhookProcessed(event.id, 'stripe')
+        return NextResponse.json({ success: true, holded: result })
+      }
     }
 
-    const result = await syncSaleToHolded(order)
     await markWebhookProcessed(event.id, 'stripe')
-    return NextResponse.json({ success: true, holded: result })
+    return NextResponse.json({ received: true })
   } catch (error) {
-    console.error('[STRIPE_WEBHOOK] Holded sync failed:', error)
+    console.error('[STRIPE_WEBHOOK] Processing failed:', error)
     return NextResponse.json(
       { error: clientSafeErrorMessage(error, 'Error procesando el webhook') },
       { status: 500 },

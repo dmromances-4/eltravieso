@@ -6,6 +6,8 @@ declare module "next-auth" {
     role?: string;
     isTwoFactorEnabled?: boolean;
     twoFactorVerified?: boolean;
+    membershipStatus?: string;
+    isVip?: boolean;
   }
 
   interface Session {
@@ -15,6 +17,8 @@ declare module "next-auth" {
       image?: string | null;
       isTwoFactorEnabled?: boolean;
       twoFactorVerified?: boolean;
+      membershipStatus?: string;
+      isVip?: boolean;
     } & DefaultSession["user"];
   }
 }
@@ -26,5 +30,7 @@ declare module "next-auth/jwt" {
     picture?: string | null;
     isTwoFactorEnabled?: boolean;
     twoFactorVerified?: boolean;
+    membershipStatus?: string;
+    isVip?: boolean;
   }
 }

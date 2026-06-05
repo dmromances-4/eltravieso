@@ -23,8 +23,13 @@ export async function geocodeAddress(parts: {
   postalCode?: string;
   province?: string;
   country?: string;
+  /** Si es `null`, no se añade país por defecto (útil para locales internacionales). */
+  defaultCountry?: string | null;
 }): Promise<GeocodeResult | null> {
-  const query = [parts.address, parts.postalCode, parts.city, parts.province, parts.country ?? "España"]
+  const country =
+    parts.country ??
+    (parts.defaultCountry === null ? undefined : (parts.defaultCountry ?? "España"));
+  const query = [parts.address, parts.postalCode, parts.city, parts.province, country]
     .filter(Boolean)
     .join(", ");
 

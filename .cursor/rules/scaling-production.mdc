@@ -1,0 +1,14 @@
+---
+description: Stack de producción Vercel + Render + Redis + Sentry
+globs: docs/ESCALADO.md,render.yaml,instrumentation.ts,sentry*.ts,lib/sentry/**,server/realtime/**
+alwaysApply: false
+---
+
+# Escalado en producción
+
+- **Next.js** → Vercel (`npm run build`). No hospedar Socket.IO dentro de Vercel.
+- **Bar Online** → Render u otro PaaS persistente (`npm run start:ws`, health `/health`).
+- **Redis** → Upstash (`REDIS_URL`) compartido entre Vercel y Render; obligatorio multi-instancia.
+- **Postgres** → pooler en runtime (`DATABASE_URL` puerto 6543); `DIRECT_DATABASE_URL` solo migraciones.
+- **Sentry** → `SENTRY_DSN` en Vercel y Render; errores vía `logServerError`.
+- Guía: [`docs/ESCALADO.md`](docs/ESCALADO.md) · blueprint: [`render.yaml`](render.yaml)

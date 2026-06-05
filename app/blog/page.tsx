@@ -55,7 +55,14 @@ export default async function BlogPage() {
                         year: "numeric",
                       })}
                     </span>
-                    <span className="text-xs uppercase tracking-widest text-electric-yellow">Leer →</span>
+                    <div className="flex items-center gap-2">
+                      {post.isPremium ? (
+                        <span className="rounded-full border border-electric-red/40 bg-electric-red/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-electric-red">
+                          VIP
+                        </span>
+                      ) : null}
+                      <span className="text-xs uppercase tracking-widest text-electric-yellow">Leer →</span>
+                    </div>
                   </div>
 
                   <h2 className="mb-4 font-display text-2xl font-bold text-white transition-colors group-hover:text-electric-blue">

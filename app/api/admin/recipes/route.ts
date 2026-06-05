@@ -41,6 +41,7 @@ export async function POST(request: Request) {
     const glass = String(body.glass ?? "").trim() || null;
     const summary = String(body.summary ?? "").trim() || null;
     const imageUrl = body.imageUrl ? String(body.imageUrl) : null;
+    const isPremium = body.isPremium === true;
 
     if (!title || !ingredients) {
       return NextResponse.json({ message: "Título e ingredientes son obligatorios." }, { status: 400 });
@@ -59,6 +60,7 @@ export async function POST(request: Request) {
         imageUrl,
         authorId: admin.id,
         isPublished: true,
+        isPremium,
         tags: [],
       },
     });

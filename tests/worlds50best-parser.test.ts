@@ -6,6 +6,12 @@ import { parseDetailPage, parseListPage } from "@/lib/venues/worlds50best-parser
 const fixtures = path.join(process.cwd(), "tests/fixtures/w50best");
 
 describe("worlds50best parser", () => {
+  it("filters list items by maxRank", () => {
+    const html = fs.readFileSync(path.join(fixtures, "list-bars-snippet.html"), "utf-8");
+    const items = parseListPage(html, "https://www.theworlds50best.com", { maxRank: 50 });
+    expect(items.every((i) => i.rank <= 50)).toBe(true);
+  });
+
   it("parses list items from bars HTML", () => {
     const html = fs.readFileSync(path.join(fixtures, "list-bars-snippet.html"), "utf-8");
     const items = parseListPage(html, "https://www.theworlds50best.com");

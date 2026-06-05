@@ -62,3 +62,4 @@ coverage/
 # Datos temporales / backups
 data/*.bak
 data/.*.json
+data/exports/

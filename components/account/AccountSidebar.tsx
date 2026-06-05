@@ -16,6 +16,7 @@ export default function AccountSidebar() {
     ...(session?.user?.role === "ADMIN" || session?.user?.role === "BAR_OWNER"
       ? [{ href: "/cuenta/bar", label: "Mi local" }]
       : []),
+    { href: "/cuenta/membresia", label: "Club VIP" },
     { href: "/cuenta/recetas", label: "Mis recetas" },
     { href: "/cuenta/blog", label: "Blog" },
     { href: "/cuenta/marketplace", label: "Vender" },
