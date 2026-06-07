@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "dev:ws": "tsx watch server/realtime/index.ts",
-    "build": "next build",
+    "build": "prisma generate && next build",
+    "vercel-build": "prisma migrate deploy && prisma generate && next build",
     "start": "next start",
     "start:ws": "tsx server/realtime/index.ts",
     "lint": "next lint",
@@ -32,7 +33,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "smoke": "tsx scripts/smoke-routes.ts",
-    "smoke:marketing": "tsx scripts/smoke-marketing-campaign.ts"
+    "smoke:marketing": "tsx scripts/smoke-marketing-campaign.ts",
+    "check:marketing-prod": "tsx scripts/check-marketing-prod-env.ts"
   },
   "dependencies": {
     "@google/genai": "^2.7.0",

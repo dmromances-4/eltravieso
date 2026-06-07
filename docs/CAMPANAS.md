@@ -89,12 +89,27 @@ npm run test
 
 Smoke comprueba: token de baja HMAC, resolución de audiencia (BD local), estado de env vars.
 
+### Pre-flight producción (Vercel)
+
+Tras configurar variables en Vercel, validar antes del envío real:
+
+```bash
+# Con env de prod cargadas (vercel env pull .env.production.local)
+npm run check:marketing-prod
+```
+
+Generar secret de baja (pegar en Vercel como `MARKETING_UNSUBSCRIBE_SECRET`):
+
+```bash
+openssl rand -base64 32
+```
+
 ### Manual (producción)
 
 1. Crear usuario de prueba con opt-in email en `/register`.
 2. `/admin/campaigns/new` → borrador email → **Preview** → comprobar recepción.
 3. **Enviar** campaña de prueba con asunto `[TEST]`.
-4. Abrir enlace de baja del email → `GET /api/marketing/unsubscribe?token=…`.
+4. Abrir enlace de baja del email → redirección a `/marketing/unsubscribe?ok=1`.
 5. SMS/WhatsApp: repetir solo si `TWILIO_*` configurado; si no, anotar «bloqueado — sin credenciales».
 
 ### Resultados smoke local (2026-06-05)
@@ -108,8 +123,31 @@ Smoke comprueba: token de baja HMAC, resolución de audiencia (BD local), estado
 | `TWILIO_ACCOUNT_SID` | missing |
 | `MARKETING_MOCK` | true |
 
-Envío real prod: pendiente — configurar `RESEND_*` en Vercel y ejecutar pasos manuales arriba. Twilio: bloqueado sin credenciales.
+### Despliegue producción (2026-06-05)
+
+| Paso | Estado | Notas |
+|------|--------|-------|
+| Merge `cursor/fichas-campanas-shopify-close` → `main` | Hecho | Commit incluye `vercel-build` con `prisma migrate deploy` |
+| Migración `20260605210000_marketing_campaigns` | Auto en build | Script `vercel-build` en `package.json` |
+| Resend: dominio + API key | Pendiente manual | [resend.com/domains](https://resend.com/domains) |
+| Vercel env Production | Pendiente manual | Ver tabla abajo |
+| Preview admin en prod | Pendiente manual | Tras Resend + redeploy |
+| Send + unsubscribe E2E | Pendiente manual | Checklist arriba |
+
+Variables obligatorias en **Vercel → Production** (redeploy tras guardar):
+
+| Variable | Ejemplo | Obligatorio |
+|----------|---------|-------------|
+| `RESEND_API_KEY` | `re_…` | Sí |
+| `MARKETING_FROM_EMAIL` | `noreply@tudominio.com` | Sí (dominio verificado en Resend) |
+| `MARKETING_UNSUBSCRIBE_SECRET` | `openssl rand -base64 32` | Sí (≥32 chars) |
+| `MARKETING_MOCK` | `false` | Sí en prod real |
+| `NEXT_PUBLIC_APP_URL` | `https://tudominio.com` | Sí (sin barra final) |
+
+Twilio (`TWILIO_*`): opcional; sin credenciales solo canal email operativo.
 
 ## Próximo paso
 
-Configurar `RESEND_API_KEY` en Vercel Production y ejecutar verificación manual. Twilio opcional.
+1. Verificar dominio en Resend y crear API key.
+2. Pegar variables en Vercel Production y **Redeploy**.
+3. Ejecutar checklist manual y marcar filas «Pendiente manual» como OK en esta tabla.
