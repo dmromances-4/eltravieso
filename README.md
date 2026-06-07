@@ -29,7 +29,8 @@ Abre http://localhost:3000
 |---------|-------------|
 | `npm run dev` | Servidor Next.js |
 | `npm run dev:ws` | Socket.IO Bar Online (puerto 3001) |
-| `npm run build` | Build producción (incluye ESLint) |
+| `npm run build` | Build producción (Prisma generate + Next.js) |
+| `npm run vercel-build` | Build Vercel con `prisma migrate deploy` |
 | `npm run test` | Tests Vitest |
 | `npm run smoke` | Smoke de rutas (requiere `npm run dev`) |
 | `npm run lint` | ESLint |

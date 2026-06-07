@@ -96,13 +96,16 @@ Local con Docker: `docker compose up -d` → `REDIS_URL=redis://localhost:6379`
 ## Despliegue Vercel (Next.js)
 
 1. Importar repo GitHub en [Vercel](https://vercel.com)
-2. Framework: Next.js · Build: `npm run build` · Output: default
-3. Variables de entorno (ver matriz arriba)
-4. Build command recomendado con migraciones:
+2. Framework: Next.js · Output: default
+3. Variables de entorno (ver matriz arriba + campañas en [`CAMPANAS.md`](./CAMPANAS.md))
+4. Build: el script `vercel-build` en `package.json` ejecuta migraciones antes del build:
 
 ```bash
-npx prisma migrate deploy && npm run build
+npm run vercel-build
+# equivale a: prisma migrate deploy && prisma generate && next build
 ```
+
+   Vercel usa `vercel-build` automáticamente si existe; si no, configura Build Command manualmente como arriba.
 
 5. Dominio custom → actualizar `NEXTAUTH_URL` y `NEXT_PUBLIC_APP_URL`
 

@@ -127,12 +127,22 @@ openssl rand -base64 32
 
 | Paso | Estado | Notas |
 |------|--------|-------|
-| Merge `cursor/fichas-campanas-shopify-close` → `main` | Hecho | Commit incluye `vercel-build` con `prisma migrate deploy` |
-| Migración `20260605210000_marketing_campaigns` | Auto en build | Script `vercel-build` en `package.json` |
-| Resend: dominio + API key | Pendiente manual | [resend.com/domains](https://resend.com/domains) |
-| Vercel env Production | Pendiente manual | Ver tabla abajo |
+| Merge `cursor/fichas-campanas-shopify-close` → `main` | OK | Push a `origin/main` (`81fea9e4`) |
+| Migración `20260605210000_marketing_campaigns` | OK en build | `npm run vercel-build` → `prisma migrate deploy` |
+| Tablas `Campaign` / `MarketingConsent` | OK local | Verificado con `prisma migrate deploy` |
+| Resend: dominio + API key | Pendiente manual | `npm run setup:marketing-prod` |
+| Vercel env Production | Pendiente manual | `npm run check:marketing-prod` tras configurar |
 | Preview admin en prod | Pendiente manual | Tras Resend + redeploy |
-| Send + unsubscribe E2E | Pendiente manual | Checklist arriba |
+| Send + unsubscribe E2E prod | Pendiente manual | Automatizado en tests (ver abajo) |
+
+### Verificación automatizada añadida (2026-06-05)
+
+| Check | Comando | Resultado |
+|-------|---------|-----------|
+| Unsubscribe redirect + JSON | `npm run test -- tests/marketing-unsubscribe-route.test.ts` | 3 tests OK |
+| Smoke marketing local | `MARKETING_MOCK=true npm run smoke:marketing` | OK |
+| Pre-flight env prod | `npm run check:marketing-prod` | Falla hasta configurar Vercel (esperado) |
+| Guía Resend/Vercel | `npm run setup:marketing-prod` | Genera secret + checklist |
 
 Variables obligatorias en **Vercel → Production** (redeploy tras guardar):
 

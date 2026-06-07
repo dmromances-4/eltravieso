@@ -34,7 +34,8 @@
     "test:watch": "vitest",
     "smoke": "tsx scripts/smoke-routes.ts",
     "smoke:marketing": "tsx scripts/smoke-marketing-campaign.ts",
-    "check:marketing-prod": "tsx scripts/check-marketing-prod-env.ts"
+    "check:marketing-prod": "tsx scripts/check-marketing-prod-env.ts",
+    "setup:marketing-prod": "tsx scripts/setup-marketing-prod-guide.ts"
   },
   "dependencies": {
     "@google/genai": "^2.7.0",
