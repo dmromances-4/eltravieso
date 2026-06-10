@@ -2,7 +2,9 @@
 
 import { useState } from 'react'
 import type { AlcoholRecord } from '@/types/alcohol'
-import { motion, AnimatePresence } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
+import { MetaChip } from '@/components/ui/MetaChip'
+import { cn } from '@/lib/utils'
 
 interface AlcoholCardProps {
   alcohol: AlcoholRecord
@@ -10,7 +12,7 @@ interface AlcoholCardProps {
 
 export default function AlcoholCard({ alcohol }: AlcoholCardProps) {
   const [isExpanded, setIsExpanded] = useState(false)
-  
+
   const {
     identity,
     technical,
@@ -25,56 +27,64 @@ export default function AlcoholCard({ alcohol }: AlcoholCardProps) {
   } = alcohol
 
   return (
-    <article className="group overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#111111] transition-all duration-300 hover:-translate-y-1 hover:border-electric-yellow/30 hover:shadow-[0_0_40px_rgba(255,204,0,0.05)]">
-      <div className="p-8">
-        <div className="space-y-3 mb-8">
-          <div className="flex justify-between items-start">
-            <p className="inline-flex rounded-full bg-white/5 border border-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-              {category}
-            </p>
-            {subcategory && (
-              <span className="text-xs uppercase tracking-widest text-slate-500">{subcategory}</span>
-            )}
+    <article className="group overflow-hidden rounded-card border border-white/10 bg-[var(--surface-panel)] transition-colors hover:border-white/20">
+      <div className="p-6 sm:p-8">
+        <div className="mb-6 space-y-3">
+          <div className="flex flex-wrap items-start justify-between gap-2">
+            <MetaChip tone="blue">{category}</MetaChip>
+            {subcategory ? <span className="text-xs text-slate-500">{subcategory}</span> : null}
           </div>
-          <h3 className="text-3xl font-display font-bold tracking-tight text-white group-hover:text-electric-yellow transition-colors">{identity.name_exact}</h3>
-          <p className="text-sm font-medium text-slate-400">{identity.brand} · {identity.producer}</p>
+          <h3 className="font-display text-2xl font-semibold text-white transition-colors group-hover:text-electric-yellow">
+            {identity.name_exact}
+          </h3>
+          <p className="text-sm text-slate-400">
+            {identity.brand} · {identity.producer}
+          </p>
         </div>
 
-        <div className="grid gap-6 text-sm text-slate-300 sm:grid-cols-2 mb-6">
+        <div className="mb-6 grid gap-6 text-sm text-slate-300 sm:grid-cols-2">
           <div className="space-y-2">
-            <p className="font-bold uppercase tracking-widest text-[10px] text-slate-500">Origen</p>
+            <p className="text-caption text-slate-500">Origen</p>
             <div className="flex flex-col gap-1">
-              <span className="text-white font-medium">{identity.country}</span>
+              <span className="font-medium text-white">{identity.country}</span>
               <span>{identity.region}</span>
-              {identity.sub_region && <span className="text-slate-400">{identity.sub_region}</span>}
+              {identity.sub_region ? <span className="text-slate-400">{identity.sub_region}</span> : null}
             </div>
           </div>
           <div className="space-y-2">
-            <p className="font-bold uppercase tracking-widest text-[10px] text-slate-500">Técnica</p>
+            <p className="text-caption text-slate-500">Técnica</p>
             <div className="flex flex-col gap-1">
-              <span className="text-white font-medium">{technical.abv} % ABV</span>
+              <span className="font-medium text-white">{technical.abv} % ABV</span>
               <span>{technical.raw_material}</span>
-              <span className="text-slate-400 truncate">{technical.distillation_method}</span>
+              <span className="truncate text-slate-400">{technical.distillation_method}</span>
             </div>
           </div>
         </div>
 
-        <button 
+        <button
+          type="button"
           onClick={() => setIsExpanded(!isExpanded)}
-          className="w-full mt-4 flex items-center justify-between rounded-full border border-white/10 bg-[#161616] px-5 py-3 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-white/5 focus:outline-none focus:ring-2 focus:ring-electric-yellow"
+          className="flex w-full items-center justify-between rounded-pill border border-white/10 bg-charcoal px-5 py-3 text-sm font-medium text-white transition-colors hover:border-electric-blue/30 focus:outline-none focus:ring-2 focus:ring-electric-blue/40"
         >
           <span>{isExpanded ? 'Ocultar detalles' : 'Ver ficha técnica completa'}</span>
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" 
-            className={`transition-transform duration-300 ${isExpanded ? 'rotate-180' : ''}`}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className={cn('transition-transform duration-300', isExpanded && 'rotate-180')}
           >
-            <polyline points="6 9 12 15 18 9"></polyline>
+            <polyline points="6 9 12 15 18 9" />
           </svg>
         </button>
 
         <AnimatePresence>
-          {isExpanded && (
+          {isExpanded ? (
             <motion.div
               initial={{ height: 0, opacity: 0 }}
               animate={{ height: 'auto', opacity: 1 }}
@@ -82,10 +92,10 @@ export default function AlcoholCard({ alcohol }: AlcoholCardProps) {
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
             >
-              <div className="pt-6 space-y-6 border-t border-white/10 mt-6">
+              <div className="mt-6 space-y-6 border-t border-white/10 pt-6">
                 <div className="grid gap-6 text-sm text-slate-300 sm:grid-cols-2">
                   <div className="space-y-2">
-                    <p className="font-bold uppercase tracking-widest text-[10px] text-slate-500">Crianza</p>
+                    <p className="text-caption text-slate-500">Crianza</p>
                     <div className="flex flex-col gap-1">
                       <span>{alcohol.chronology.vintage || 'Sin añada'}</span>
                       <span>{alcohol.chronology.maturation_time}</span>
@@ -93,41 +103,41 @@ export default function AlcoholCard({ alcohol }: AlcoholCardProps) {
                     </div>
                   </div>
                   <div className="space-y-2">
-                    <p className="font-bold uppercase tracking-widest text-[10px] text-slate-500">Mercado</p>
+                    <p className="text-caption text-slate-500">Mercado</p>
                     <div className="flex flex-col gap-1">
-                      <span className="text-white font-medium">{market.production_status}</span>
+                      <span className="font-medium text-white">{market.production_status}</span>
                       <span>{market.rarity}</span>
-                      <span className="text-slate-400 text-xs">{market.bottle_formats.join(', ')}</span>
+                      <span className="text-xs text-slate-400">{market.bottle_formats.join(', ')}</span>
                     </div>
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-white/5 bg-[#0f0f0f] p-5 text-sm text-slate-300">
-                  <p className="font-bold uppercase tracking-widest text-[10px] text-electric-yellow mb-3">Notas de cata</p>
+                <div className="rounded-card border border-white/5 bg-charcoal p-5 text-sm text-slate-300">
+                  <p className="mb-3 text-caption text-electric-blue">Notas de cata</p>
                   <div className="space-y-3">
-                    <p><span className="text-slate-500 mr-2">Vista:</span> {alcohol.sensory.sight}</p>
-                    <p><span className="text-slate-500 mr-2">Nariz:</span> {alcohol.sensory.nose}</p>
-                    <p><span className="text-slate-500 mr-2">Boca:</span> {alcohol.sensory.palate}</p>
+                    <p><span className="mr-2 text-slate-500">Vista:</span> {alcohol.sensory.sight}</p>
+                    <p><span className="mr-2 text-slate-500">Nariz:</span> {alcohol.sensory.nose}</p>
+                    <p><span className="mr-2 text-slate-500">Boca:</span> {alcohol.sensory.palate}</p>
                   </div>
                 </div>
 
-                <div className="rounded-2xl border border-white/5 bg-[#0f0f0f] p-5 text-sm text-slate-300">
-                  <p className="font-bold uppercase tracking-widest text-[10px] text-electric-yellow mb-3">Valor didáctico</p>
-                  <p className="leading-relaxed mb-4">{didactic.history_context}</p>
+                <div className="rounded-card border border-white/5 bg-charcoal p-5 text-sm text-slate-300">
+                  <p className="mb-3 text-caption text-electric-blue">Valor didáctico</p>
+                  <p className="mb-4 leading-relaxed">{didactic.history_context}</p>
                   <div className="border-t border-white/5 pt-3">
-                    <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-2">Mixología</p>
+                    <p className="mb-2 text-caption text-slate-500">Mixología</p>
                     <p className="font-medium text-white">{didactic.mixology_role}</p>
-                    <p className="mt-1 text-slate-400 text-xs">Ideal en: {didactic.iconic_cocktails.join(', ')}</p>
+                    <p className="mt-1 text-xs text-slate-400">Ideal en: {didactic.iconic_cocktails.join(', ')}</p>
                   </div>
                 </div>
 
-                <div className="text-[9px] uppercase tracking-widest text-slate-600 border-t border-white/5 pt-4">
+                <div className="border-t border-white/5 pt-4 text-xs text-slate-600">
                   <p>{producer_group} · {denomination_of_origin} · {producer_type}</p>
                   <p className="mt-1 font-mono">{family_id}</p>
                 </div>
               </div>
             </motion.div>
-          )}
+          ) : null}
         </AnimatePresence>
       </div>
     </article>

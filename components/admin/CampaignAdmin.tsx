@@ -197,7 +197,7 @@ export function CampaignActions({ campaignId, status }: { campaignId: string; st
           type="button"
           onClick={() => run("send")}
           disabled={loading !== null || status === "SENT" || status === "SENDING"}
-          className="rounded-full bg-red-600 px-5 py-2 text-xs font-bold uppercase tracking-widest text-white disabled:opacity-50"
+          className="rounded-full bg-electric-red px-5 py-2 text-xs font-bold uppercase tracking-widest text-white disabled:opacity-50"
         >
           {loading === "send" ? "Enviando…" : "Enviar campaña"}
         </button>

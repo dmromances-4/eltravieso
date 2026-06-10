@@ -108,35 +108,47 @@ function pickBestMatch(
   return best
 }
 
-async function fetchProductCatalog(): Promise<CatalogProductRow[]> {
-  const products = await prisma.product.findMany({
-    where: { isActive: true },
-    include: {
-      variants: {
-        where: { isActive: true },
-        orderBy: { priceCents: 'asc' },
-        take: 1,
-      },
-    },
-  })
+export const EMPTY_RECIPE_MATCHES: RecipeProductMatches = {
+  ingredientMatches: [],
+  affiliateGear: [],
+}
 
-  return products.map((p) => {
-    const variant = p.variants[0]
-    return {
-      id: p.id,
-      title: p.title,
-      slug: p.slug,
-      description: p.description,
-      source: p.source,
-      category: p.category,
-      imageUrl: p.imageUrl,
-      affiliateUrl: p.affiliateUrl,
-      affiliatePlatform: p.affiliatePlatform,
-      metadata: p.metadata,
-      variantId: variant?.id ?? null,
-      priceCents: variant?.priceCents ?? 0,
+async function fetchProductCatalog(): Promise<CatalogProductRow[]> {
+  try {
+    const products = await prisma.product.findMany({
+      where: { isActive: true },
+      include: {
+        variants: {
+          where: { isActive: true },
+          orderBy: { priceCents: 'asc' },
+          take: 1,
+        },
+      },
+    })
+
+    return products.map((p) => {
+      const variant = p.variants[0]
+      return {
+        id: p.id,
+        title: p.title,
+        slug: p.slug,
+        description: p.description,
+        source: p.source,
+        category: p.category,
+        imageUrl: p.imageUrl,
+        affiliateUrl: p.affiliateUrl,
+        affiliatePlatform: p.affiliatePlatform,
+        metadata: p.metadata,
+        variantId: variant?.id ?? null,
+        priceCents: variant?.priceCents ?? 0,
+      }
+    })
+  } catch (error) {
+    if (process.env.NODE_ENV === 'development') {
+      console.error('[match-products] catalog unavailable:', error)
     }
-  })
+    return []
+  }
 }
 
 const getCachedProductCatalog = unstable_cache(
@@ -243,6 +255,13 @@ export async function matchProductsForRecipe(
   ingredients: string[] | string,
   context: RecipeMatchContext = {},
 ): Promise<RecipeProductMatches> {
-  const catalog = await getCachedProductCatalog()
-  return matchProductsFromCatalog(catalog, ingredients, context)
+  try {
+    const catalog = await getCachedProductCatalog()
+    return matchProductsFromCatalog(catalog, ingredients, context)
+  } catch (error) {
+    if (process.env.NODE_ENV === 'development') {
+      console.error('[match-products] match unavailable:', error)
+    }
+    return EMPTY_RECIPE_MATCHES
+  }
 }

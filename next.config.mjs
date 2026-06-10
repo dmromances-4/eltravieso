@@ -18,10 +18,10 @@ const csp = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://js.stripe.com",
   "style-src 'self' 'unsafe-inline'",
-  `img-src 'self' data: blob: https://${supabaseHost} https://www.theworlds50best.com https://theworlds50best.com`,
+  `img-src 'self' data: blob: https://${supabaseHost} https://www.theworlds50best.com https://theworlds50best.com https://image.tmdb.org https://www.decantalo.com https://www.bodeboca.com https://www.vilaviniteca.es https://lafuente.es`,
   "font-src 'self' data:",
-  `connect-src 'self' https://api.stripe.com https://${supabaseHost} ${wsUrl} https://*.ingest.sentry.io https://*.ingest.us.sentry.io`,
-  "frame-src https://js.stripe.com https://hooks.stripe.com",
+  `connect-src 'self' https://api.stripe.com https://${supabaseHost} ${wsUrl} https://*.ingest.sentry.io https://*.ingest.us.sentry.io https://api.themoviedb.org`,
+  "frame-src 'self' https://js.stripe.com https://hooks.stripe.com https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com https://open.spotify.com https://embed.podcasts.apple.com https:",
   "object-src 'none'",
   "base-uri 'self'",
   "form-action 'self'",
@@ -56,6 +56,31 @@ const nextConfig = {
       {
         protocol: "https",
         hostname: "theworlds50best.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.decantalo.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.bodeboca.com",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "www.vilaviniteca.es",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "lafuente.es",
+        pathname: "/**",
+      },
+      {
+        protocol: "https",
+        hostname: "image.tmdb.org",
         pathname: "/**",
       },
       ...(supabaseHost !== "*.supabase.co"

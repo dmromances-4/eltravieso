@@ -6,6 +6,7 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { CONTINENT_LABELS } from "@/lib/venues/continents";
+import { brandColors } from "@/lib/theme/tokens";
 
 type MapVenue = {
   id: string;
@@ -28,9 +29,9 @@ type MapVenue = {
 type ContinentFilter = "" | "GLOBAL" | "EUROPE" | "ASIA" | "NORTH_AMERICA" | "LATIN_AMERICA";
 
 const VENUE_COLORS: Record<string, string> = {
-  cocteleria: "#FFCC00",
-  restaurante: "#00A3E0",
-  bar: "#EF2A2A",
+  cocteleria: brandColors.yellow,
+  restaurante: brandColors.blue,
+  bar: brandColors.red,
   bodega: "#9B59B6",
 };
 
@@ -44,9 +45,9 @@ const CONTINENT_OPTIONS: { value: ContinentFilter; label: string }[] = [
 ];
 
 function affiliateIcon(venueType: string, isPremium?: boolean) {
-  const color = isPremium ? "#EF2A2A" : (VENUE_COLORS[venueType] ?? VENUE_COLORS.bar);
+  const color = isPremium ? brandColors.red : (VENUE_COLORS[venueType] ?? VENUE_COLORS.bar);
   const star = isPremium
-    ? `<text x="14" y="17" text-anchor="middle" font-size="9" font-weight="bold" fill="#FFCC00">★</text>`
+    ? `<text x="14" y="17" text-anchor="middle" font-size="9" font-weight="bold" fill="${brandColors.yellow}">★</text>`
     : `<circle fill="#0a0a0a" cx="14" cy="14" r="5"/>`;
   const svg = encodeURIComponent(
     `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="36" viewBox="0 0 28 36"><path fill="${color}" stroke="#0a0a0a" stroke-width="1.5" d="M14 0C6.3 0 0 6.3 0 14c0 10.5 14 22 14 22s14-11.5 14-22C28 6.3 21.7 0 14 0z"/>${star}</svg>`,
@@ -61,7 +62,7 @@ function affiliateIcon(venueType: string, isPremium?: boolean) {
 
 function editorialIcon() {
   const svg = encodeURIComponent(
-    `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="38" viewBox="0 0 30 38"><path fill="#FFCC00" stroke="#0a0a0a" stroke-width="2" d="M15 1C7 1 1 7 1 15c0 11 14 22 14 22s14-11 14-22C29 7 23 1 15 1z"/><text x="15" y="18" text-anchor="middle" font-size="10" font-weight="bold" fill="#0a0a0a">50</text></svg>`,
+    `<svg xmlns="http://www.w3.org/2000/svg" width="30" height="38" viewBox="0 0 30 38"><path fill="${brandColors.yellow}" stroke="#0a0a0a" stroke-width="2" d="M15 1C7 1 1 7 1 15c0 11 14 22 14 22s14-11 14-22C29 7 23 1 15 1z"/><text x="15" y="18" text-anchor="middle" font-size="10" font-weight="bold" fill="#0a0a0a">50</text></svg>`,
   );
   return L.icon({
     iconUrl: `data:image/svg+xml,${svg}`,

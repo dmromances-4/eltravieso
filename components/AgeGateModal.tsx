@@ -145,7 +145,7 @@ export default function AgeGateModal() {
                   <button
                     type="button"
                     onClick={handleAccept}
-                    className="rounded-full bg-electric-yellow px-8 py-3.5 text-sm font-semibold uppercase tracking-widest text-black transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(255,204,0,0.3)] focus:outline-none focus:ring-2 focus:ring-electric-yellow focus:ring-offset-2 focus:ring-offset-[#111111]"
+                    className="rounded-full bg-electric-yellow px-8 py-3.5 text-sm font-semibold uppercase tracking-widest text-black transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(249,209,66,0.3)] focus:outline-none focus:ring-2 focus:ring-electric-yellow focus:ring-offset-2 focus:ring-offset-[#111111]"
                   >
                     Sí, tengo 18+
                   </button>

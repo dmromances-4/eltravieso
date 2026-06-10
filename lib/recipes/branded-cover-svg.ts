@@ -1,4 +1,5 @@
 import { inferLiquidTone, type RecipeImageInput } from "@/lib/recipes/image-prompt";
+import { brandColors } from "@/lib/theme/tokens";
 
 function escapeXml(value: string) {
   return value
@@ -35,20 +36,20 @@ export function buildBrandedCoverSvg(input: RecipeImageInput): string {
       <stop offset="100%" stop-color="hsl(${(hue + 40) % 360}, 65%, 35%)"/>
     </linearGradient>
     <radialGradient id="glow" cx="50%" cy="35%" r="60%">
-      <stop offset="0%" stop-color="#FFCC00" stop-opacity="0.25"/>
-      <stop offset="100%" stop-color="#FFCC00" stop-opacity="0"/>
+      <stop offset="0%" stop-color="${brandColors.yellow}" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="${brandColors.yellow}" stop-opacity="0"/>
     </radialGradient>
   </defs>
   <rect width="800" height="1000" fill="url(#bg)"/>
   <rect width="800" height="1000" fill="url(#glow)"/>
-  <circle cx="680" cy="120" r="90" fill="#00A3E0" opacity="0.12"/>
-  <circle cx="120" cy="880" r="110" fill="#EF2A2A" opacity="0.1"/>
+  <circle cx="680" cy="120" r="90" fill="${brandColors.blue}" opacity="0.12"/>
+  <circle cx="120" cy="880" r="110" fill="${brandColors.red}" opacity="0.1"/>
   <path d="M280 720 Q400 520 520 720 L480 920 L320 920 Z" fill="url(#liquid)" opacity="0.95"/>
-  <ellipse cx="400" cy="720" rx="130" ry="22" fill="#FFCC00" opacity="0.35"/>
+  <ellipse cx="400" cy="720" rx="130" ry="22" fill="${brandColors.yellow}" opacity="0.35"/>
   <rect x="360" y="430" width="80" height="290" rx="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.15)"/>
-  <text x="48" y="96" fill="#FFCC00" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">EL TRAVIESO</text>
+  <text x="48" y="96" fill="${brandColors.yellow}" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="6">EL TRAVIESO</text>
   <text x="48" y="860" fill="#FFFFFF" font-family="Georgia, serif" font-size="52" font-weight="700">${title}</text>
-  <text x="48" y="910" fill="#00A3E0" font-family="Arial, sans-serif" font-size="22">${glass}</text>
+  <text x="48" y="910" fill="${brandColors.blue}" font-family="Arial, sans-serif" font-size="22">${glass}</text>
   <text x="48" y="948" fill="#B7B7B7" font-family="Arial, sans-serif" font-size="16">${subtitle}</text>
 </svg>`;
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import { Montserrat, Playfair_Display } from 'next/font/google'
 import type { ReactNode } from 'react'
 import './globals.css'
 import ScrollProvider from '@/components/ScrollProvider'
@@ -8,12 +8,19 @@ import AgeGateModal from '@/components/AgeGateModal'
 import CookieBanner from '@/components/CookieBanner'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import DevEnvironmentBanner from '@/components/DevEnvironmentBanner'
 import { cn } from "@/lib/utils";
 
 const montserrat = Montserrat({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-sans',
+})
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-display',
 })
 
 export const metadata: Metadata = {
@@ -26,7 +33,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es" className={cn(montserrat.variable, montserrat.className, "font-sans")}>
+    <html lang="es" className={cn(montserrat.variable, playfair.variable, montserrat.className, "dark font-sans")}>
       <body className="min-h-screen bg-night text-white antialiased">
         <Providers>
           <AgeGateModal />
@@ -35,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <CookieBanner />
             {children}
             <Footer />
+            <DevEnvironmentBanner />
           </ScrollProvider>
         </Providers>
       </body>

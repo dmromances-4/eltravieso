@@ -35,7 +35,12 @@
     "smoke": "tsx scripts/smoke-routes.ts",
     "smoke:marketing": "tsx scripts/smoke-marketing-campaign.ts",
     "check:marketing-prod": "tsx scripts/check-marketing-prod-env.ts",
-    "setup:marketing-prod": "tsx scripts/setup-marketing-prod-guide.ts"
+    "setup:marketing-prod": "tsx scripts/setup-marketing-prod-guide.ts",
+    "import:tmdb": "tsx scripts/import-tmdb.ts",
+    "import:spirits": "tsx scripts/import-spirits.ts",
+    "sync:podcast-feeds": "tsx scripts/sync-podcast-feeds.ts",
+    "check:local": "tsx scripts/check-local-env.ts",
+    "check:design": "tsx scripts/check-design.ts"
   },
   "dependencies": {
     "@google/genai": "^2.7.0",

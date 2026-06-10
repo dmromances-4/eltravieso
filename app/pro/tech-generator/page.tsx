@@ -208,7 +208,7 @@ function TechGeneratorContent() {
                 <button
                   type="submit"
                   disabled={loading || !agentReady}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-3 border border-transparent text-base font-semibold rounded-full shadow-lg text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500 disabled:opacity-50 transition-colors"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-electric-red px-6 py-3 text-base font-semibold text-white shadow-lg transition-colors hover:brightness-110 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-electric-red disabled:opacity-50"
                 >
                   {loading ? (
                     <>

@@ -37,7 +37,7 @@ export default async function AdminRecipesPage() {
           </Link>
           <Link
             href="/admin/recipes/new"
-            className="rounded-full bg-red-600 px-6 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:bg-red-500"
+            className="rounded-full bg-electric-red px-6 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:brightness-110"
           >
             Nueva receta
           </Link>

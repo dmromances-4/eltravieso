@@ -41,7 +41,7 @@ export default async function BlogPage() {
               <Link
                 key={post.id}
                 href={`/blog/${post.slug}`}
-                className="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-2 hover:border-electric-blue/30 hover:shadow-[0_0_40px_rgba(0,163,224,0.15)]"
+                className="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-2 hover:border-electric-blue/30 hover:shadow-[0_0_40px_rgba(43,135,185,0.15)]"
               >
                 {post.coverUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element

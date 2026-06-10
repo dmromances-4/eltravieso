@@ -4,6 +4,8 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { BrandButton } from "@/components/ui/BrandButton";
+import { PageHero } from "@/components/ui/PageHero";
 
 export default function RegisterPage() {
   const router = useRouter();
@@ -75,110 +77,72 @@ export default function RegisterPage() {
     }
   };
 
+  const inputClass =
+    "mt-2 block w-full rounded-pill border border-white/10 bg-[#0f0f0f] px-5 py-3 text-white placeholder-slate-600 focus:border-electric-blue focus:outline-none focus:ring-1 focus:ring-electric-blue sm:text-sm";
+
   return (
-    <div className="relative min-h-screen bg-[#0A0A0A] flex flex-col justify-center px-6 py-12 lg:px-8 overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,_rgba(255,204,0,0.1),_transparent_35%)]" />
+    <div className="relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#0A0A0A] px-6 py-12 lg:px-8">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(249,209,66,0.08),transparent_45%)]" />
 
-      <div className="relative sm:mx-auto sm:w-full sm:max-w-md">
-        <Link href="/" className="group mx-auto flex w-max items-center justify-center gap-2 mb-8 text-white transition-colors hover:text-electric-yellow">
-          <span className="font-display text-3xl font-bold tracking-tighter">EL TRAVIESO</span>
-        </Link>
-        <h2 className="text-center text-2xl font-bold tracking-tight text-white mb-2">Crea tu cuenta</h2>
-        <p className="text-center text-sm text-slate-400">
-          ¿Ya tienes cuenta?{" "}
-          <Link href="/login" className="font-semibold text-electric-yellow transition-colors hover:text-white">
-            Inicia sesión
+      <div className="relative mx-auto w-full max-w-md space-y-8">
+        <div className="text-center">
+          <Link href="/" className="font-display text-2xl font-semibold text-white transition-colors hover:text-electric-yellow">
+            El Travieso
           </Link>
-        </p>
-      </div>
+          <div className="mt-8 space-y-3">
+            <PageHero compact eyebrow="Comunidad" title="Crea tu cuenta" />
+            <p className="text-sm text-slate-400">
+              ¿Ya tienes cuenta?{" "}
+              <Link href="/login" className="font-medium text-electric-blue hover:text-white">
+                Inicia sesión
+              </Link>
+            </p>
+          </div>
+        </div>
 
-      <div className="relative mt-8 sm:mx-auto sm:w-full sm:max-w-md">
-        <div className="rounded-[2.5rem] border border-white/10 bg-[#121212]/90 p-8 shadow-neon backdrop-blur-xl sm:p-10">
+        <div className="rounded-card border border-white/10 bg-[var(--surface-panel)] p-8 sm:p-10">
           <form className="space-y-5" onSubmit={handleSubmit}>
-            {error && (
-              <div className="rounded-2xl border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-400">{error}</div>
-            )}
+            {error ? (
+              <div className="rounded-card border border-red-500/30 bg-red-500/10 p-4 text-sm text-red-400">{error}</div>
+            ) : null}
 
             <div>
-              <label htmlFor="name" className="block text-xs font-bold uppercase tracking-widest text-slate-300">
+              <label htmlFor="name" className="block text-sm font-medium text-slate-300">
                 Nombre
               </label>
-              <input
-                id="name"
-                type="text"
-                required
-                minLength={2}
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="mt-2 block w-full rounded-full border border-white/10 bg-[#0f0f0f] px-5 py-3 text-white placeholder-slate-600 focus:border-electric-yellow focus:outline-none focus:ring-1 focus:ring-electric-yellow sm:text-sm"
-                placeholder="Tu nombre"
-              />
+              <input id="name" type="text" required minLength={2} value={name} onChange={(e) => setName(e.target.value)} className={inputClass} placeholder="Tu nombre" />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-xs font-bold uppercase tracking-widest text-slate-300">
+              <label htmlFor="email" className="block text-sm font-medium text-slate-300">
                 Email
               </label>
-              <input
-                id="email"
-                type="email"
-                autoComplete="email"
-                required
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="mt-2 block w-full rounded-full border border-white/10 bg-[#0f0f0f] px-5 py-3 text-white placeholder-slate-600 focus:border-electric-yellow focus:outline-none focus:ring-1 focus:ring-electric-yellow sm:text-sm"
-                placeholder="tucorreo@ejemplo.com"
-              />
+              <input id="email" type="email" autoComplete="email" required value={email} onChange={(e) => setEmail(e.target.value)} className={inputClass} placeholder="tucorreo@ejemplo.com" />
             </div>
 
             <div>
-              <label htmlFor="password" className="block text-xs font-bold uppercase tracking-widest text-slate-300">
+              <label htmlFor="password" className="block text-sm font-medium text-slate-300">
                 Contraseña
               </label>
-              <input
-                id="password"
-                type="password"
-                autoComplete="new-password"
-                required
-                minLength={8}
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="mt-2 block w-full rounded-full border border-white/10 bg-[#0f0f0f] px-5 py-3 text-white placeholder-slate-600 focus:border-electric-yellow focus:outline-none focus:ring-1 focus:ring-electric-yellow sm:text-sm"
-                placeholder="Mínimo 8 caracteres"
-              />
+              <input id="password" type="password" autoComplete="new-password" required minLength={8} value={password} onChange={(e) => setPassword(e.target.value)} className={inputClass} placeholder="Mínimo 8 caracteres" />
             </div>
 
             <div>
-              <label htmlFor="confirm" className="block text-xs font-bold uppercase tracking-widest text-slate-300">
+              <label htmlFor="confirm" className="block text-sm font-medium text-slate-300">
                 Confirmar contraseña
               </label>
-              <input
-                id="confirm"
-                type="password"
-                autoComplete="new-password"
-                required
-                minLength={8}
-                value={confirmPassword}
-                onChange={(e) => setConfirmPassword(e.target.value)}
-                className="mt-2 block w-full rounded-full border border-white/10 bg-[#0f0f0f] px-5 py-3 text-white placeholder-slate-600 focus:border-electric-yellow focus:outline-none focus:ring-1 focus:ring-electric-yellow sm:text-sm"
-                placeholder="Repite la contraseña"
-              />
+              <input id="confirm" type="password" autoComplete="new-password" required minLength={8} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)} className={inputClass} placeholder="Repite la contraseña" />
             </div>
 
             <label className="flex items-start gap-3 text-sm text-slate-400">
-              <input
-                type="checkbox"
-                checked={acceptTerms}
-                onChange={(e) => setAcceptTerms(e.target.checked)}
-                className="mt-1 rounded border-white/20"
-              />
+              <input type="checkbox" checked={acceptTerms} onChange={(e) => setAcceptTerms(e.target.checked)} className="mt-1 rounded border-white/20" />
               <span>
                 Acepto los{" "}
-                <Link href="/terminos-y-condiciones" className="text-electric-yellow hover:text-white">
+                <Link href="/terminos-y-condiciones" className="text-electric-blue hover:text-white">
                   términos
                 </Link>{" "}
                 y la{" "}
-                <Link href="/politica-privacidad" className="text-electric-yellow hover:text-white">
+                <Link href="/politica-privacidad" className="text-electric-blue hover:text-white">
                   política de privacidad
                 </Link>
                 .
@@ -186,32 +150,18 @@ export default function RegisterPage() {
             </label>
 
             <label className="flex items-start gap-3 text-sm text-slate-400">
-              <input
-                type="checkbox"
-                checked={marketingEmailOptIn}
-                onChange={(e) => setMarketingEmailOptIn(e.target.checked)}
-                className="mt-1 rounded border-white/20"
-              />
+              <input type="checkbox" checked={marketingEmailOptIn} onChange={(e) => setMarketingEmailOptIn(e.target.checked)} className="mt-1 rounded border-white/20" />
               <span>Quiero recibir novedades y ofertas por email.</span>
             </label>
 
             <label className="flex items-start gap-3 text-sm text-slate-400">
-              <input
-                type="checkbox"
-                checked={marketingSmsOptIn}
-                onChange={(e) => setMarketingSmsOptIn(e.target.checked)}
-                className="mt-1 rounded border-white/20"
-              />
+              <input type="checkbox" checked={marketingSmsOptIn} onChange={(e) => setMarketingSmsOptIn(e.target.checked)} className="mt-1 rounded border-white/20" />
               <span>Quiero recibir comunicaciones por SMS o WhatsApp (requiere teléfono en mi perfil).</span>
             </label>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="flex w-full justify-center rounded-full bg-electric-yellow px-5 py-3.5 text-sm font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110 disabled:cursor-not-allowed disabled:opacity-60"
-            >
+            <BrandButton type="submit" disabled={loading} className="w-full">
               {loading ? "Creando cuenta…" : "Crear cuenta"}
-            </button>
+            </BrandButton>
           </form>
         </div>
       </div>

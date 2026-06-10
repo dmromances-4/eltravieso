@@ -6,7 +6,7 @@ export type RecipeImageInput = {
 };
 
 const BRAND_STYLE_SUFFIX =
-  "Style: premium Spanish vermut brand El Travieso — electric blue accent lighting (#00A3E0), warm yellow highlights (#FFCC00), subtle red artistic mood (#EF2A2A), dark moody bar background, cinematic editorial cocktail photography, no text, no logos, no human faces, photorealistic glass and liquid, shallow depth of field, 4:5 vertical composition.";
+  "Style: premium Spanish vermut brand El Travieso — electric blue accent lighting (#2B87B9), warm yellow highlights (#F9D142), subtle red artistic mood (#A62125), dark moody bar background, cinematic editorial cocktail photography, no text, no logos, no human faces, photorealistic glass and liquid, shallow depth of field, 4:5 vertical composition.";
 
 const COLOR_KEYWORDS: Array<{ pattern: RegExp; tone: string }> = [
   { pattern: /vermut|vermouth|rosso|rojo|sweet/i, tone: "deep amber-red vermouth tone" },

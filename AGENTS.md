@@ -7,6 +7,17 @@
 | Docker | `docker compose up -d` | Postgres `:5432`, Redis `:6379` |
 | Embedded Postgres | `npm run db:local` | Sin Docker; puerto `5433` |
 | Migraciones + demo | `npm run db:setup` | `migrate deploy` + seeds |
+| Diagnóstico | `npm run check:local` | BD, migraciones, WS, URLs auth |
+
+**Checklist local**
+
+1. Copiar `.env.example` → `.env.local` y elegir perfil `DATABASE_URL` (5432 Docker o 5433 embedded).
+2. Usar **siempre** `http://localhost:3000` en `NEXTAUTH_URL` y `NEXT_PUBLIC_APP_URL` (no `127.0.0.1`).
+3. `npm run check:local` — corregir avisos antes de probar features.
+4. `npm run dev` +, para Bar Online, `npm run dev:ws` en otra terminal.
+5. Banner amarillo en dev si falta BD/WS/migraciones.
+
+Paleta y componentes UI: [`docs/DISENO-MARCA.md`](docs/DISENO-MARCA.md).
 
 Copiar `.env.example` → `.env.local`. Auth = **NextAuth** (Prisma adapter, sesiones en BD, 2FA opcional). **No** uses Supabase Auth ni `@supabase/ssr`; Supabase aquí es solo Storage REST para imágenes/vídeos (`lib/storage/`).
 
@@ -92,6 +103,19 @@ npm run export:cocktails-fichas -- --limit 20 --format notion
 | Ficha web | `/recetas/[slug]` |
 
 Doc detallada: [`docs/FICHAS-COCTEL.md`](docs/FICHAS-COCTEL.md)
+
+## Biblioteca (libros de referencia)
+
+Catálogo editorial de libros de coctelería — clásicos, técnica, editoriales e historia — con fichas, filtros y enlace opcional a Shop o afiliado.
+
+| Recurso | Ruta |
+|--------|------|
+| Listado | `/biblioteca` |
+| Ficha | `/biblioteca/[slug]` |
+| Datos | `data/books.json` |
+| Catálogo | `lib/books/catalog.ts` |
+
+Cross-links: recetas con `cocktailSlugs` en el JSON muestran bloque «También en Biblioteca» en `/recetas/[slug]`.
 
 ## Guía de locales (mapa)
 
@@ -180,6 +204,29 @@ Email / SMS / WhatsApp desde admin con consentimiento GDPR.
 | Baja email | `/api/marketing/unsubscribe?token=…` |
 
 Doc detallada: [`docs/CAMPANAS.md`](docs/CAMPANAS.md)
+
+## Pantalla (media hub)
+
+Series, películas (TMDB), podcasts (RSS), eventos de bar y directos curados por admin.
+
+```bash
+npm run import:tmdb -- --tv 1399 --seasons all   # CLI import serie
+npm run sync:podcast-feeds                       # Sincronizar feeds RSS
+```
+
+| Recurso | Ruta |
+|--------|------|
+| Hub público | `/pantalla` |
+| Ficha | `/pantalla/[slug]` |
+| En directo | `/pantalla/directo` |
+| Admin catálogo | `/admin/pantalla` |
+| Admin directo | `/admin/pantalla/directo` |
+| Feeds RSS | `/admin/pantalla/feeds` |
+| Eventos bar | `/cuenta/bar/eventos` |
+
+Variables: `TMDB_API_KEY`, `SUPABASE_EVENT_VIDEOS_BUCKET`, `SUPABASE_MEDIA_BUCKET`.
+
+Doc detallada: [`docs/PANTALLA.md`](docs/PANTALLA.md)
 
 ## Integraciones (TPV / Shopify / Holded / Square)
 

@@ -8,6 +8,19 @@ import fs from "fs";
 import path from "path";
 import csvParser from "csv-parser";
 
+export interface ProductImportMetadata {
+  retailer?: string;
+  retailerLabel?: string;
+  brand?: string;
+  origin?: string;
+  spiritType?: string;
+  sku?: string;
+  history?: string;
+  referencePriceCents?: number;
+  referencePrices?: Record<string, number>;
+  importedAt?: string;
+}
+
 export interface NormalizedProduct {
   title: string;
   slug: string;
@@ -18,6 +31,7 @@ export interface NormalizedProduct {
   sourceUrl: string | null;
   format: string; // ProductFormat enum value
   volumeMl: number | null;
+  metadata?: ProductImportMetadata;
 }
 
 const PRODUCTOS_DIR = path.resolve(process.cwd(), "Productos");

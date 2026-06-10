@@ -14,7 +14,10 @@ export default function AccountSidebar() {
     { href: "/cuenta/configuracion", label: "Perfil" },
     { href: "/cuenta/seguridad", label: "Seguridad" },
     ...(session?.user?.role === "ADMIN" || session?.user?.role === "BAR_OWNER"
-      ? [{ href: "/cuenta/bar", label: "Mi local" }]
+      ? [
+          { href: "/cuenta/bar", label: "Mi local" },
+          { href: "/cuenta/bar/eventos", label: "Eventos vídeo" },
+        ]
       : []),
     { href: "/cuenta/membresia", label: "Club VIP" },
     { href: "/cuenta/recetas", label: "Mis recetas" },
@@ -26,7 +29,7 @@ export default function AccountSidebar() {
   ];
 
   return (
-    <aside className="rounded-[2rem] border border-white/10 bg-[#111111]/90 p-6 lg:sticky lg:top-28">
+    <aside className="rounded-card border border-white/10 bg-[var(--surface-panel)] p-6 lg:sticky lg:top-28">
       <div className="mb-6 border-b border-white/10 pb-6">
         <div className="mb-4 flex items-center gap-4">
           <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-full border border-electric-yellow/30 bg-[#0f0f0f]">
@@ -46,15 +49,15 @@ export default function AccountSidebar() {
             )}
           </div>
           <div className="min-w-0">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-electric-yellow">Mi cuenta</p>
-            <p className="mt-1 truncate font-display text-lg font-bold text-white">{session?.user?.name || "Usuario"}</p>
+            <p className="text-caption text-electric-blue">Mi cuenta</p>
+            <p className="mt-1 truncate font-display text-lg font-semibold text-white">{session?.user?.name || "Usuario"}</p>
           </div>
         </div>
         <p className="text-sm text-slate-400 truncate">{session?.user?.email}</p>
         {session?.user?.role === "ADMIN" ? (
           <Link
             href="/admin"
-            className="mt-3 inline-flex text-xs font-bold uppercase tracking-[0.2em] text-electric-blue hover:text-white"
+            className="mt-3 inline-flex text-sm font-medium text-electric-blue hover:text-white"
           >
             Panel admin →
           </Link>
@@ -68,7 +71,7 @@ export default function AccountSidebar() {
             <Link
               key={link.href}
               href={link.href}
-              className={`block rounded-2xl px-4 py-3 text-sm font-semibold transition ${
+              className={`block rounded-card px-4 py-3 text-sm font-medium transition ${
                 active
                   ? "bg-electric-yellow/10 text-electric-yellow"
                   : "text-slate-300 hover:bg-white/5 hover:text-white"
@@ -83,7 +86,7 @@ export default function AccountSidebar() {
       <button
         type="button"
         onClick={() => signOut({ callbackUrl: "/" })}
-        className="mt-6 w-full rounded-full border border-white/10 px-4 py-3 text-xs font-bold uppercase tracking-[0.2em] text-slate-400 transition hover:border-red-500/40 hover:text-red-400"
+        className="mt-6 w-full rounded-pill border border-white/10 px-4 py-3 text-sm font-medium text-slate-400 transition hover:border-electric-red/40 hover:text-electric-red"
       >
         Cerrar sesión
       </button>

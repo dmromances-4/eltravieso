@@ -144,7 +144,7 @@ export default function CheckoutForm() {
         type="button"
         disabled={loading}
         onClick={handleCheckout}
-        className="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-electric-yellow px-6 py-4 text-sm font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(255,204,0,0.3)] disabled:cursor-not-allowed disabled:opacity-60"
+        className="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-electric-yellow px-6 py-4 text-sm font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(249,209,66,0.3)] disabled:cursor-not-allowed disabled:opacity-60"
       >
         {loading ? (
           <>

@@ -18,7 +18,7 @@ export default function GeneratedCocktailImage({ title }: GeneratedCocktailImage
 
   return (
     <div className="relative overflow-hidden rounded-[1.5rem] border border-white/10 shadow-neon" style={{ background: gradient }}>
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,204,0,0.2),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(0,163,224,0.16),transparent_35%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(249,209,66,0.2),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(43,135,185,0.16),transparent_35%)]" />
       <div className="absolute -right-16 top-8 h-36 w-36 rounded-full bg-electric-yellow/10 blur-3xl" />
       <div className="absolute left-10 top-24 h-24 w-24 rounded-full bg-electric-blue/10 blur-3xl" />
       <div className="relative flex min-h-[420px] flex-col justify-between p-10">

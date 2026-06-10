@@ -217,7 +217,7 @@ export default function MembresiaClient({
             type="button"
             disabled={loading}
             onClick={subscribe}
-            className="border-4 border-black bg-electric-red px-6 py-3 font-mono text-sm font-bold uppercase tracking-widest text-white shadow-[4px_4px_0px_#000000] hover:bg-red-600 disabled:opacity-50"
+            className="border-4 border-black bg-electric-red px-6 py-3 font-mono text-sm font-bold uppercase tracking-widest text-white shadow-[4px_4px_0px_#000000] hover:brightness-110 disabled:opacity-50"
           >
             {loading ? "Redirigiendo…" : "15€/mes — Unirme"}
           </button>

@@ -35,7 +35,7 @@ export default async function ShopPage() {
   const alcohols = alcoholData as unknown as AlcoholRecord[];
 
   return (
-    <main className="min-h-screen bg-[#0A0A0A] pt-32 pb-24 text-white">
+    <main className="min-h-screen bg-[#0A0A0A] pt-24 pb-24 text-white">
       <ShopClient products={products} alcohols={alcohols} />
     </main>
   );

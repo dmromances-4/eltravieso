@@ -78,4 +78,10 @@ describe('matchProductsFromCatalog', () => {
     const result = matchProductsFromCatalog(catalog, ['45 ml Gin', '30 ml Gin seco'])
     expect(result.ingredientMatches).toHaveLength(1)
   })
+
+  it('returns empty matches when catalog is unavailable', () => {
+    const result = matchProductsFromCatalog([], ['45 ml Gin', '10 ml Vermut'])
+    expect(result.ingredientMatches).toHaveLength(0)
+    expect(result.affiliateGear).toHaveLength(0)
+  })
 })

@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss'
 import typography from '@tailwindcss/typography'
+import { brandColors, brandRadii, brandShadows, surfaceColors } from './lib/theme/tokens'
 
 const config: Config = {
   content: [
@@ -42,24 +43,36 @@ const config: Config = {
         'sidebar-border': 'var(--sidebar-border)',
         'sidebar-ring': 'var(--sidebar-ring)',
         electric: {
-          yellow: '#FFCC00',
-          blue: '#00A3E0',
-          red: '#EF2A2A'
+          yellow: brandColors.yellow,
+          blue: brandColors.blue,
+          red: brandColors.red,
         },
-        night: '#0F0F0F',
-        charcoal: '#141414',
-        steel: '#272727',
-        smoke: '#B7B7B7'
+        brand: {
+          yellow: brandColors.yellow,
+          blue: brandColors.blue,
+          red: brandColors.red,
+        },
+        night: surfaceColors.night,
+        charcoal: surfaceColors.charcoal,
+        steel: surfaceColors.steel,
+        smoke: surfaceColors.smoke,
       },
       outlineColor: {
         ring: 'var(--ring)',
       },
+      borderRadius: {
+        card: brandRadii.card,
+        pill: brandRadii.pill,
+      },
       boxShadow: {
-        neon: '0 0 0 1px rgba(255,204,0,0.16), 0 24px 60px rgba(0,0,0,0.45)'
+        card: brandShadows.card,
+        subtle: brandShadows.subtle,
+        neon: '0 0 0 1px rgba(249,209,66,0.16), 0 24px 60px rgba(0,0,0,0.45)',
+        'neon-glow': '0 0 20px rgba(249,209,66,0.3)',
       },
       fontFamily: {
-        sans: ['Satoshi', 'Montserrat', 'ui-sans-serif', 'system-ui'],
-        display: ['Genoir', 'ui-serif', 'Georgia']
+        sans: ['var(--font-sans)', 'Montserrat', 'ui-sans-serif', 'system-ui'],
+        display: ['var(--font-display)', 'Georgia', 'ui-serif'],
       }
     }
   },

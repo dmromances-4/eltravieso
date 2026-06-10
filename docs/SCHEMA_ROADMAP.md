@@ -15,6 +15,8 @@ Decisión: **implementar superficies mínimas** en lugar de podar el schema. Los
 | `VenueGuideEntry` | Import editorial World's 50 Best — `/locales/[slug]`, `/mapa` capa destacados |
 | `MarketingConsent` | Opt-in GDPR por canal — registro `/register`, audiencia campañas |
 | `Campaign` / `CampaignMessage` | Campañas admin — `/admin/campaigns`, envío Resend/Twilio |
+| `MediaItem` / `PodcastFeed` / `LiveStream` | Pantalla — `/pantalla`, import TMDB, RSS podcasts, directo, eventos bar |
+| `MediaComment` / `MediaRating` | Comentarios y valoraciones en fichas Pantalla |
 
 ## Próximos pasos (no bloqueantes)
 

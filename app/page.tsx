@@ -1,137 +1,153 @@
-import AgeGateModal from '@/components/AgeGateModal'
 import HeroSection from '@/components/HeroSection'
 import CocktailCard from '@/components/CocktailCard'
 import AlcoholCard from '@/components/AlcoholCard'
+import { BrandLinkButton } from '@/components/ui/BrandButton'
+import { Section } from '@/components/ui/Section'
+import { SurfaceCard } from '@/components/ui/SurfaceCard'
 import data from '@/data/cocktails.json'
 import alcoholData from '@/data/alcohol-encyclopedia.json'
 import type { CocktailRecord } from '@/types/cocktail'
 import type { AlcoholRecord } from '@/types/alcohol'
-import Link from 'next/link'
+import BookCard from '@/components/biblioteca/BookCard'
+import { getAllBooks } from '@/lib/books/catalog'
 
 export default function Home() {
   const cocktails = data as CocktailRecord[]
   const alcohols = alcoholData as AlcoholRecord[]
-  
-  // Show only 3 items on home page
-  const featuredCocktails = cocktails?.slice(0, 3) || []
-  const featuredAlcohols = alcohols?.slice(0, 3) || []
+  const featured = cocktails[0]
+  const featuredCocktails = cocktails.slice(0, 3)
+  const featuredAlcohols = alcohols.slice(0, 3)
+  const featuredBooks = getAllBooks().slice(0, 3)
 
   return (
     <main className="min-h-screen bg-[#0A0A0A]">
-      <HeroSection />
+      <HeroSection
+        featuredCover={featured?.cover}
+        featuredTitle={featured?.title ?? 'Receta destacada'}
+        featuredSlug={featured?.slug ?? 'sweet-martini'}
+      />
 
-      {/* Portal Quick Links */}
-      <section id="portal" className="border-t border-white/5 bg-[#0f0f0f] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-display tracking-tight text-white sm:text-5xl">Portal El Travieso</h2>
-              <p className="max-w-xl text-slate-400">Accede rápido a las recetas, la enciclopedia, la tienda y el blog sin perder el ritmo.</p>
-            </div>
-            <Link href="/cuenta" className="inline-flex items-center gap-2 rounded-full border border-electric-yellow bg-electric-yellow/5 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-electric-yellow transition-all hover:bg-electric-yellow/10 shrink-0">
-              Mi Cuenta
-            </Link>
+      <Section alt>
+        <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-3">
+            <p className="eyebrow">Portal</p>
+            <h2 className="text-title">Todo El Travieso, en un vistazo</h2>
+            <p className="max-w-xl text-body">Recetas, biblioteca, tienda, mapa y herramientas pro — sin perderte en el menú.</p>
           </div>
-
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
-            <Link href="/recetas" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-yellow/30 hover:bg-[#141414]/95">
-              <h3 className="text-xl font-bold text-white">Cócteles</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-400">Descubre recetas maestras, secretos de mezcla y presentación canalla.</p>
-              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-yellow">Explorar →</span>
-            </Link>
-
-            <Link href="/alcoholes" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-blue/30 hover:bg-[#141414]/95">
-              <h3 className="text-xl font-bold text-white">Alcoholes</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-400">Conoce el origen, las notas y la historia de cada destilado.</p>
-              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-blue">Ver ficha →</span>
-            </Link>
-
-            <Link href="/shop" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-yellow/30 hover:bg-[#141414]/95">
-              <h3 className="text-xl font-bold text-white">Tienda</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-400">Encuentra packs exclusivos, vermuts premium y regalos con actitud.</p>
-              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-yellow">Comprar →</span>
-            </Link>
-
-            <Link href="/blog" className="group rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-electric-blue/30 hover:bg-[#141414]/95">
-              <h3 className="text-xl font-bold text-white">Blog</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-400">Inspírate con artículos, tendencias y notas para profesionales.</p>
-              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-electric-blue">Leer →</span>
-            </Link>
-
-            <Link href="/pro/tech-generator?tab=agent" className="group rounded-[2rem] border border-red-500/20 bg-[#111111]/90 p-8 transition-all hover:-translate-y-1 hover:border-red-500/40 hover:bg-[#141414]/95">
-              <h3 className="text-xl font-bold text-white">Barra IA</h3>
-              <p className="mt-4 text-sm leading-7 text-slate-400">Agente de recetas y fichas técnicas generadas con IA para tu barra.</p>
-              <span className="mt-6 inline-flex items-center text-xs font-bold uppercase tracking-[0.3em] text-red-400">Abrir agente →</span>
-            </Link>
-          </div>
+          <BrandLinkButton href="/cuenta" variant="secondary" className="shrink-0">
+            Mi cuenta
+          </BrandLinkButton>
         </div>
-      </section>
 
-      {/* Cocktails Section */}
-      <section id="catalogo" className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-display tracking-tight text-white sm:text-5xl">Catálogo Canalla</h2>
-              <p className="max-w-xl text-slate-400">Las recetas maestras que no encontrarás en ningún bar aburrido.</p>
-            </div>
-            <Link href="/recetas" className="inline-flex items-center gap-2 rounded-full border border-electric-yellow bg-electric-yellow/5 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-electric-yellow transition-all hover:bg-electric-yellow/10 shrink-0">
-              Ver todos →
-            </Link>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredCocktails.map((cocktail) => (
-              <CocktailCard
-                key={cocktail.slug}
-                title={cocktail.title}
-                slug={cocktail.slug}
-                rating={cocktail.rating}
-                glass={cocktail.glass}
-                ingredients={cocktail.ingredients}
-                abv={cocktail.abv}
-                kcal={cocktail.kcal}
-                cover={cocktail.cover}
-              />
-            ))}
-          </div>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <SurfaceCard href="/recetas">
+            <h3 className="text-lg font-semibold text-white">Recetas</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-400">Catálogo editorial con fichas completas.</p>
+          </SurfaceCard>
+          <SurfaceCard href="/alcoholes">
+            <h3 className="text-lg font-semibold text-white">Alcoholes</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-400">Origen, notas y contexto de cada destilado.</p>
+          </SurfaceCard>
+          <SurfaceCard href="/biblioteca">
+            <h3 className="text-lg font-semibold text-white">Biblioteca</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-400">Libros de referencia para la barra y la coctelería.</p>
+          </SurfaceCard>
+          <SurfaceCard href="/shop">
+            <h3 className="text-lg font-semibold text-white">Tienda</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-400">Vermut, packs y regalos con actitud.</p>
+          </SurfaceCard>
+          <SurfaceCard href="/blog">
+            <h3 className="text-lg font-semibold text-white">Blog</h3>
+            <p className="mt-2 text-sm leading-7 text-slate-400">Tendencias y notas para profesionales.</p>
+          </SurfaceCard>
         </div>
-      </section>
 
-      {/* Encyclopedia Section */}
-      <section className="border-t border-white/5 bg-[#0f0f0f] py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 sm:px-8">
-          <div className="mb-16 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-display tracking-tight text-white sm:text-5xl">Enciclopedia del Alcohol</h2>
-              <p className="max-w-xl text-slate-400">Conoce lo que bebes. Fichas técnicas, procesos y origen de los destilados más importantes.</p>
-            </div>
-            <Link href="/alcoholes" className="inline-flex items-center gap-2 rounded-full border border-electric-blue bg-electric-blue/5 px-6 py-3 text-xs font-bold uppercase tracking-[0.2em] text-electric-blue transition-all hover:bg-electric-blue/10 shrink-0">
-              Explorar →
-            </Link>
-          </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {featuredAlcohols.map((alcohol) => (
-              <AlcoholCard key={alcohol.id} alcohol={alcohol} />
-            ))}
-          </div>
+        <div className="mt-4 grid gap-4 sm:grid-cols-3">
+          <SurfaceCard href="/pro/tech-generator" className="sm:col-span-1 hover:border-electric-red/30">
+            <h3 className="text-lg font-semibold text-white">Barra IA</h3>
+            <p className="mt-2 text-sm text-slate-400">Genera recetas y fichas técnicas.</p>
+          </SurfaceCard>
+          <SurfaceCard href="/mapa" className="sm:col-span-1">
+            <h3 className="text-lg font-semibold text-white">Mapa</h3>
+            <p className="mt-2 text-sm text-slate-400">Locales y coctelería de referencia.</p>
+          </SurfaceCard>
+          <SurfaceCard href="/pantalla" className="sm:col-span-1">
+            <h3 className="text-lg font-semibold text-white">Pantalla</h3>
+            <p className="mt-2 text-sm text-slate-400">Series, podcasts y directo.</p>
+          </SurfaceCard>
         </div>
-      </section>
-      
-      {/* Call to Action */}
-      <section className="relative overflow-hidden py-32 sm:py-40 border-t border-white/5">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(255,204,0,0.1),_transparent_40%)]" />
-        <div className="relative mx-auto max-w-3xl px-6 sm:px-8 text-center space-y-8">
-          <h2 className="text-4xl font-display font-bold tracking-tight text-white sm:text-6xl">Pasa a la acción.</h2>
-          <p className="text-lg leading-8 text-slate-400">
-            Descubre nuestra selección de vermuts premium y packs de degustación en la tienda oficial.
-          </p>
-          <div className="pt-4">
-            <Link href="/shop" className="inline-flex items-center justify-center rounded-full bg-electric-yellow px-10 py-5 text-sm font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(255,204,0,0.3)]">
-              Entrar a la Tienda
-            </Link>
+      </Section>
+
+      <Section id="catalogo">
+        <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-3">
+            <p className="eyebrow">Catálogo</p>
+            <h2 className="text-title">Recetas con carácter</h2>
           </div>
+          <BrandLinkButton href="/recetas" variant="secondary" className="shrink-0">
+            Ver todas
+          </BrandLinkButton>
         </div>
-      </section>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredCocktails.map((cocktail) => (
+            <CocktailCard
+              key={cocktail.slug}
+              title={cocktail.title}
+              slug={cocktail.slug}
+              rating={cocktail.rating}
+              glass={cocktail.glass}
+              ingredients={cocktail.ingredients}
+              abv={cocktail.abv}
+              kcal={cocktail.kcal}
+              cover={cocktail.cover}
+            />
+          ))}
+        </div>
+      </Section>
+
+      <Section alt>
+        <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-3">
+            <p className="eyebrow">Biblioteca</p>
+            <h2 className="text-title">Lecturas esenciales</h2>
+          </div>
+          <BrandLinkButton href="/biblioteca" variant="secondary" className="shrink-0">
+            Ver biblioteca
+          </BrandLinkButton>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredBooks.map((book) => (
+            <BookCard key={book.id} book={book} />
+          ))}
+        </div>
+      </Section>
+
+      <Section>
+        <div className="mb-12 flex flex-col gap-6 sm:flex-row sm:items-end sm:justify-between">
+          <div className="space-y-3">
+            <p className="eyebrow">Enciclopedia</p>
+            <h2 className="text-title">Conoce lo que bebes</h2>
+          </div>
+          <BrandLinkButton href="/alcoholes" variant="secondary" className="shrink-0 text-electric-blue">
+            Explorar
+          </BrandLinkButton>
+        </div>
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featuredAlcohols.map((alcohol) => (
+            <AlcoholCard key={alcohol.id} alcohol={alcohol} />
+          ))}
+        </div>
+      </Section>
+
+      <Section alt>
+        <div className="mx-auto max-w-2xl space-y-6 text-center">
+          <h2 className="text-title">Pasa a la acción</h2>
+          <p className="text-body">Vermut premium y packs de degustación en la tienda oficial.</p>
+          <BrandLinkButton href="/shop" size="lg">
+            Entrar a la tienda
+          </BrandLinkButton>
+        </div>
+      </Section>
     </main>
   )
 }

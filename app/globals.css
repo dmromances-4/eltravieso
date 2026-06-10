@@ -7,44 +7,46 @@
 @layer base {
   :root {
     color-scheme: dark;
-    --background: oklch(1 0 0);
-    --foreground: oklch(0.145 0 0);
-    --card: oklch(1 0 0);
-    --card-foreground: oklch(0.145 0 0);
-    --popover: oklch(1 0 0);
-    --popover-foreground: oklch(0.145 0 0);
-    --primary: oklch(0.205 0 0);
-    --primary-foreground: oklch(0.985 0 0);
-    --secondary: oklch(0.97 0 0);
-    --secondary-foreground: oklch(0.205 0 0);
-    --muted: oklch(0.97 0 0);
-    --muted-foreground: oklch(0.556 0 0);
-    --accent: oklch(0.97 0 0);
-    --accent-foreground: oklch(0.205 0 0);
-    --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.922 0 0);
-    --input: oklch(0.922 0 0);
-    --ring: oklch(0.708 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
+    --background: oklch(0.145 0 0);
+    --foreground: oklch(0.985 0 0);
+    --card: oklch(0.205 0 0);
+    --card-foreground: oklch(0.985 0 0);
+    --popover: oklch(0.205 0 0);
+    --popover-foreground: oklch(0.985 0 0);
+    --primary: #F9D142;
+    --primary-foreground: #0F0F0F;
+    --secondary: oklch(0.269 0 0);
+    --secondary-foreground: oklch(0.985 0 0);
+    --muted: oklch(0.269 0 0);
+    --muted-foreground: oklch(0.708 0 0);
+    --accent: oklch(0.269 0 0);
+    --accent-foreground: oklch(0.985 0 0);
+    --destructive: #A62125;
+    --border: oklch(1 0 0 / 10%);
+    --input: oklch(1 0 0 / 15%);
+    --ring: #F9D142;
+    --chart-1: #F9D142;
+    --chart-2: #2B87B9;
+    --chart-3: #A62125;
     --chart-4: oklch(0.371 0 0);
     --chart-5: oklch(0.269 0 0);
     --radius: 0.625rem;
-    --sidebar: oklch(0.985 0 0);
-    --sidebar-foreground: oklch(0.145 0 0);
-    --sidebar-primary: oklch(0.205 0 0);
+    --sidebar: oklch(0.205 0 0);
+    --sidebar-foreground: oklch(0.985 0 0);
+    --sidebar-primary: #2B87B9;
     --sidebar-primary-foreground: oklch(0.985 0 0);
-    --sidebar-accent: oklch(0.97 0 0);
-    --sidebar-accent-foreground: oklch(0.205 0 0);
-    --sidebar-border: oklch(0.922 0 0);
-    --sidebar-ring: oklch(0.708 0 0);
-    --brand-yellow: #FFCC00;
-    --brand-red: #EF2A2A;
-    --brand-blue: #00A3E0;
+    --sidebar-accent: oklch(0.269 0 0);
+    --sidebar-accent-foreground: oklch(0.985 0 0);
+    --sidebar-border: oklch(1 0 0 / 10%);
+    --sidebar-ring: #F9D142;
+    --brand-yellow: #F9D142;
+    --brand-blue: #2B87B9;
+    --brand-red: #A62125;
     --surface-strong: #090909;
     --surface-panel: #111111;
     --border-heavy: 4px solid #000000;
+    --radius-card: 1rem;
+    --radius-pill: 9999px;
   }
 
   html {
@@ -56,7 +58,6 @@
     min-height: 100vh;
     background: linear-gradient(180deg, #0f0f0f 0%, #080808 100%);
     color: var(--foreground);
-    /* Custom scrollbar */
     &::-webkit-scrollbar {
       width: 10px;
     }
@@ -67,10 +68,10 @@
       background: #272727;
       border-radius: 5px;
       &:hover {
-        background: #FFCC00;
+        background: var(--brand-yellow);
       }
     }
-    @apply bg-background text-foreground
+    @apply bg-background text-foreground;
   }
 
   #__next {
@@ -78,7 +79,7 @@
   }
 
   ::selection {
-    background: #FFCC00;
+    background: var(--brand-yellow);
     color: #0F0F0F;
   }
 
@@ -91,10 +92,7 @@
     @apply border-border;
     outline: 0;
   }
-  .theme {
-    --font-heading: var(--font-sans);
-    --font-sans: var(--font-sans);
-  }
+
   .dark {
     --background: oklch(0.145 0 0);
     --foreground: oklch(0.985 0 0);
@@ -102,41 +100,60 @@
     --card-foreground: oklch(0.985 0 0);
     --popover: oklch(0.205 0 0);
     --popover-foreground: oklch(0.985 0 0);
-    --primary: oklch(0.922 0 0);
-    --primary-foreground: oklch(0.205 0 0);
+    --primary: #F9D142;
+    --primary-foreground: #0F0F0F;
     --secondary: oklch(0.269 0 0);
     --secondary-foreground: oklch(0.985 0 0);
     --muted: oklch(0.269 0 0);
     --muted-foreground: oklch(0.708 0 0);
     --accent: oklch(0.269 0 0);
     --accent-foreground: oklch(0.985 0 0);
-    --destructive: oklch(0.704 0.191 22.216);
+    --destructive: #A62125;
     --border: oklch(1 0 0 / 10%);
     --input: oklch(1 0 0 / 15%);
-    --ring: oklch(0.556 0 0);
-    --chart-1: oklch(0.87 0 0);
-    --chart-2: oklch(0.556 0 0);
-    --chart-3: oklch(0.439 0 0);
-    --chart-4: oklch(0.371 0 0);
-    --chart-5: oklch(0.269 0 0);
+    --ring: #F9D142;
     --sidebar: oklch(0.205 0 0);
     --sidebar-foreground: oklch(0.985 0 0);
-    --sidebar-primary: oklch(0.488 0.243 264.376);
+    --sidebar-primary: #2B87B9;
     --sidebar-primary-foreground: oklch(0.985 0 0);
     --sidebar-accent: oklch(0.269 0 0);
     --sidebar-accent-foreground: oklch(0.985 0 0);
     --sidebar-border: oklch(1 0 0 / 10%);
-    --sidebar-ring: oklch(0.556 0 0);
+    --sidebar-ring: #F9D142;
   }
 }
 
 @layer utilities {
+  .section-shell {
+    @apply mx-auto max-w-7xl px-6 sm:px-8;
+  }
+
+  .text-display {
+    @apply font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl;
+  }
+
+  .text-title {
+    @apply font-display text-2xl font-semibold tracking-tight text-white sm:text-3xl;
+  }
+
+  .text-body {
+    @apply text-base leading-7 text-slate-300;
+  }
+
+  .text-caption {
+    @apply text-sm leading-6 text-slate-400;
+  }
+
+  .eyebrow {
+    @apply text-sm font-medium tracking-wide text-electric-blue;
+  }
+
   .glass-panel {
-    @apply bg-[#111111]/80 backdrop-blur-md border border-white/10;
+    @apply border border-white/10 bg-[var(--surface-panel)]/80 backdrop-blur-md;
   }
 
   .brutalist-panel {
-    @apply bg-[#090909] text-white;
+    @apply bg-[var(--surface-strong)] text-white;
     border: 4px solid #000;
     box-shadow: 8px 8px 0 rgba(0, 0, 0, 1);
   }
@@ -147,18 +164,17 @@
   }
 
   .neon-focus {
-    @apply focus:outline-none focus:ring-1 focus:ring-electric-yellow focus:border-electric-yellow transition-all;
+    @apply transition-all focus:border-electric-yellow focus:outline-none focus:ring-1 focus:ring-electric-yellow;
   }
 }
 
 @layer components {
-  /* Toggle Switch for Cookie Banner */
   .toggle-checkbox:checked {
     right: 0;
-    border-color: #FFCC00;
+    border-color: var(--brand-yellow);
   }
   .toggle-checkbox:checked + .toggle-label {
-    background-color: #FFCC00;
+    background-color: var(--brand-yellow);
   }
   .toggle-checkbox {
     right: 0;

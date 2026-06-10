@@ -24,6 +24,8 @@
 | [RECETAS-LIBRO-ESTILO.md](./RECETAS-LIBRO-ESTILO.md) | Estilo editorial del catálogo |
 | [FICHAS-COCTEL.md](./FICHAS-COCTEL.md) | Fichas editoriales Figma + Notion (+ Canva) |
 | [CAMPANAS.md](./CAMPANAS.md) | Campañas email / SMS / WhatsApp desde admin |
+| [PANTALLA.md](./PANTALLA.md) | Hub media: TMDB, podcasts RSS, directo, eventos |
+| [DISENO-MARCA.md](./DISENO-MARCA.md) | Paleta Amarillo/Azul/Rojo y componentes UI |
 | [SHOPIFY-PLUGIN.md](./SHOPIFY-PLUGIN.md) | Plugin Cursor Shopify: GraphQL, CLI, Liquid |
 
 ## Setup local

@@ -186,7 +186,7 @@ function Setup2FAContent() {
                   <button
                     type="submit"
                     disabled={loading}
-                    className="rounded-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 text-xs uppercase tracking-widest disabled:opacity-60"
+                    className="rounded-full bg-electric-red text-white font-bold py-3 px-6 text-xs uppercase tracking-widest hover:brightness-110 disabled:opacity-60"
                   >
                     Verificar
                   </button>

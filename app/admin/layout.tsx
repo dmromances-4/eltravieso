@@ -75,6 +75,12 @@ export default async function AdminLayout({ children }: { children: ReactNode })
             Auditoría Difford&apos;s
           </Link>
           <Link
+            href="/admin/pantalla"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Pantalla
+          </Link>
+          <Link
             href="/admin/posts"
             className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
           >

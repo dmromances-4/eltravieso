@@ -21,7 +21,7 @@ export default async function AdminDashboardPage() {
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
         {/* Products Stat */}
         <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-neon relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,204,0,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(249,209,66,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
           <div className="relative z-10">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Productos</h2>
             <p className="text-5xl font-display font-bold text-white mb-6">{productsCount}</p>
@@ -32,8 +32,8 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Users Stat */}
-        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(0,163,224,0.1)] relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,163,224,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(43,135,185,0.1)] relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(43,135,185,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
           <div className="relative z-10">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Usuarios Registrados</h2>
             <p className="text-5xl font-display font-bold text-white mb-6">{usersCount}</p>
@@ -53,8 +53,8 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Wholesale Orders Stat */}
-        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(0,163,224,0.1)] relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(0,163,224,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(43,135,185,0.1)] relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(43,135,185,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
           <div className="relative z-10">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Pedidos Mayoristas</h2>
             <p className="text-5xl font-display font-bold text-white mb-6">{wholesaleOrdersCount}</p>
@@ -65,8 +65,8 @@ export default async function AdminDashboardPage() {
         </div>
 
         {/* Production Batches Stat */}
-        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(255,204,0,0.1)] relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,204,0,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(249,209,66,0.1)] relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(249,209,66,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
           <div className="relative z-10">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Lotes de Producción</h2>
             <p className="text-5xl font-display font-bold text-white mb-6">{productionBatchesCount}</p>
@@ -76,8 +76,8 @@ export default async function AdminDashboardPage() {
           </div>
         </div>
         {/* Marketplace Stat */}
-        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(255,204,0,0.1)] relative overflow-hidden group">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(255,204,0,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
+        <div className="rounded-[2rem] border border-white/10 bg-[#121212] p-8 shadow-[0_0_40px_rgba(249,209,66,0.1)] relative overflow-hidden group">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_rgba(249,209,66,0.1),_transparent_50%)] opacity-0 transition-opacity group-hover:opacity-100" />
           <div className="relative z-10">
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-2">Marketplace · Pendientes</h2>
             <p className="text-5xl font-display font-bold text-white mb-6">{pendingListingsCount}</p>

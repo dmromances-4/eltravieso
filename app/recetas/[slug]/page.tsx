@@ -6,8 +6,14 @@ import RecipeCoverImage from "@/components/RecipeCoverImage";
 import RecipeVideo from "@/components/RecipeVideo";
 import RecipeCommerceBlock from "@/components/recipes/RecipeCommerceBlock";
 import RecipePremiumGate from "@/components/recipes/RecipePremiumGate";
+import CocktailCard from "@/components/CocktailCard";
+import { BrandLinkButton } from "@/components/ui/BrandButton";
+import { MetaChip } from "@/components/ui/MetaChip";
 import { getRecipeBySlug, getRelatedRecipes } from "@/lib/recipes/catalog";
 import { matchProductsForRecipe } from "@/lib/recipes/match-products";
+import { listMediaForCocktailSlug } from "@/lib/media/catalog";
+import { getBooksForCocktailSlug } from "@/lib/books/catalog";
+import BookCard from "@/components/biblioteca/BookCard";
 
 export const revalidate = 86400;
 
@@ -27,18 +33,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 }
 
 const premiumLockedFallback = (
-  <div className="space-y-4 rounded-[2rem] border border-electric-red/30 bg-electric-red/10 p-8 backdrop-blur-xl">
-    <h2 className="text-2xl font-display font-bold text-white">Ficha técnica premium</h2>
-    <p className="text-slate-300">
+  <div className="space-y-4 rounded-card border border-electric-red/30 bg-electric-red/10 p-8">
+    <h2 className="text-title text-white">Ficha técnica premium</h2>
+    <p className="text-body">
       Esta receta incluye detalle de destilados raros y técnicas avanzadas. Únete al Club de la Trastienda para
       desbloquearla.
     </p>
-    <Link
-      href="/cuenta/membresia"
-      className="inline-flex items-center justify-center rounded-full bg-electric-red px-8 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white"
-    >
+    <BrandLinkButton href="/cuenta/membresia" variant="danger">
       Ver membresía VIP
-    </Link>
+    </BrandLinkButton>
   </div>
 );
 
@@ -55,75 +58,53 @@ export default async function CocktailPage({ params }: { params: { slug: string 
   });
 
   const relatedRecipes = await getRelatedRecipes(params.slug, 3);
+  const pantallaLinks = await listMediaForCocktailSlug(params.slug, 6);
+  const bibliotecaLinks = getBooksForCocktailSlug(params.slug, 6);
   const steps = cocktail.method.split("\n").filter(Boolean);
   const hasCommerce =
     productMatches.ingredientMatches.length > 0 || productMatches.affiliateGear.length > 0;
 
   return (
-    <main className="min-h-screen bg-[#0A0A0A] pt-32 pb-24 text-white">
-      <div className="mx-auto max-w-5xl px-6 sm:px-8">
-        <nav className="mb-12 flex items-center gap-2 text-sm">
-          <Link href="/recetas" className="text-slate-400 hover:text-electric-yellow transition-colors">
+    <main className="min-h-screen bg-[#0A0A0A] pt-28 pb-24 text-white">
+      <div className="section-shell">
+        <nav className="mb-10 flex items-center gap-2 text-sm">
+          <Link href="/recetas" className="text-slate-400 transition-colors hover:text-electric-blue">
             Recetario
           </Link>
           <span className="text-slate-600">/</span>
-          <span className="text-electric-yellow font-semibold">{cocktail.title}</span>
+          <span className="font-medium text-white">{cocktail.title}</span>
         </nav>
 
-        <div className="grid gap-12 lg:grid-cols-3 lg:gap-16">
-          <div className="lg:col-span-1">
-            <div className="sticky top-32 space-y-6">
-              <RecipeCoverImage title={cocktail.title} cover={cocktail.cover} />
-              <div className="rounded-[2rem] border border-white/10 bg-[#111111]/90 p-6 shadow-neon backdrop-blur-xl">
-                <div className="grid gap-4">
-                  <div className="rounded-lg bg-white/5 p-4 border border-white/10">
-                    <p className="text-xs text-slate-400 uppercase tracking-widest mb-1">Potencia</p>
-                    <p className="text-2xl font-bold text-electric-yellow">{cocktail.abv}</p>
-                  </div>
-                  <div className="rounded-lg bg-white/5 p-4 border border-white/10">
-                    <p className="text-xs text-slate-400 uppercase tracking-widest mb-1">Calorías</p>
-                    <p className="text-2xl font-bold text-white">{cocktail.kcal} kcal</p>
-                  </div>
-                  <div className="rounded-lg bg-electric-yellow/10 p-4 border border-electric-yellow/20">
-                    <p className="text-xs text-slate-300 uppercase tracking-widest mb-1">Rating</p>
-                    <p className="text-2xl font-bold text-electric-yellow">★ {cocktail.rating.toFixed(1)}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="lg:col-span-2 space-y-12">
-            <div className="space-y-6">
-              <p className="inline-flex rounded-full border border-electric-yellow/20 bg-electric-yellow/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-electric-yellow">
+        <div className="grid gap-12 lg:grid-cols-[1fr_320px] lg:gap-16">
+          <div className="space-y-10">
+            <div className="space-y-5">
+              <p className="eyebrow">
                 {cocktail.source === "database" ? "Receta Barra IA" : "Receta Vermut"}
               </p>
-              <h1 className="text-5xl font-display font-bold tracking-tight text-white sm:text-6xl">{cocktail.title}</h1>
-              <p className="text-xl text-slate-400">{cocktail.glass}</p>
-              {cocktail.summary ? <p className="text-base leading-7 text-slate-300">{cocktail.summary}</p> : null}
+              <h1 className="text-display">{cocktail.title}</h1>
+              <p className="text-lg text-electric-blue">{cocktail.glass}</p>
+              {cocktail.summary ? <p className="max-w-2xl text-body">{cocktail.summary}</p> : null}
               {cocktail.isPremium ? (
-                <p className="inline-flex rounded-full border border-electric-red/40 bg-electric-red/10 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-electric-red">
-                  Contenido Club VIP
-                </p>
+                <MetaChip tone="red">Contenido Club VIP</MetaChip>
               ) : null}
             </div>
 
-            <RecipePremiumGate isPremium={Boolean(cocktail.isPremium)} lockedFallback={premiumLockedFallback}>
-              <section className="space-y-6">
-                <IngredientTechSheet ingredients={ingredientList} />
-              </section>
+            <div className="max-w-xl lg:hidden">
+              <RecipeCoverImage title={cocktail.title} cover={cocktail.cover} />
+            </div>
 
+            <RecipePremiumGate isPremium={Boolean(cocktail.isPremium)} lockedFallback={premiumLockedFallback}>
               <RecipeVideo url={cocktail.videoUrl} />
 
               <section className="space-y-6">
-                <h2 className="text-3xl font-display font-bold text-white">Preparación</h2>
-                <div className="rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 backdrop-blur-xl space-y-4">
+                <h2 className="text-title">Preparación</h2>
+                <div className="space-y-4 rounded-card border border-white/10 bg-[var(--surface-panel)] p-6 sm:p-8">
                   {steps.map((step, idx) => (
                     <div key={idx} className="flex gap-4">
-                      <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-electric-blue/20 text-electric-blue text-sm font-bold flex-shrink-0">
+                      <span className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-electric-blue/15 text-sm font-semibold text-electric-blue">
                         {idx + 1}
                       </span>
-                      <p className="text-base text-slate-300 leading-relaxed">{step.trim()}</p>
+                      <p className="text-base leading-relaxed text-slate-300">{step.trim()}</p>
                     </div>
                   ))}
                 </div>
@@ -132,43 +113,87 @@ export default async function CocktailPage({ params }: { params: { slug: string 
               <RecipeCommerceBlock matches={productMatches} ingredients={ingredientList} />
             </RecipePremiumGate>
 
-            {!hasCommerce && (
-              <div className="rounded-[2rem] border border-electric-yellow/20 bg-electric-yellow/5 p-8 backdrop-blur-xl">
-                <h3 className="text-xl font-display font-bold text-white mb-4">¿Quieres prepararlo?</h3>
-                <p className="text-slate-300 mb-6">
-                  Consigue todos los ingredientes premium en nuestra tienda official. Vermut, botellas y accesorios para
+            {!hasCommerce ? (
+              <div className="rounded-card border border-white/10 bg-[var(--surface-panel)] p-8">
+                <h3 className="text-title mb-3">¿Quieres prepararlo?</h3>
+                <p className="mb-6 text-body">
+                  Consigue todos los ingredientes premium en nuestra tienda oficial. Vermut, botellas y accesorios para
                   montar la barra perfecta.
                 </p>
-                <Link
-                  href="/shop"
-                  className="inline-flex items-center justify-center rounded-full bg-electric-yellow px-8 py-4 text-sm font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(255,204,0,0.3)]"
-                >
-                  Ir a la Tienda
-                </Link>
+                <BrandLinkButton href="/shop">Ir a la tienda</BrandLinkButton>
               </div>
-            )}
+            ) : null}
           </div>
+
+          <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
+            <div className="hidden lg:block">
+              <RecipeCoverImage title={cocktail.title} cover={cocktail.cover} />
+            </div>
+
+            <div className="rounded-card border border-white/10 bg-[var(--surface-panel)] p-6">
+              <div className="mb-6 flex flex-wrap gap-2">
+                {cocktail.abv !== "—" ? <MetaChip>{`${cocktail.abv} ABV`}</MetaChip> : null}
+                <MetaChip>{`${cocktail.kcal} kcal`}</MetaChip>
+                <MetaChip tone="yellow">{`★ ${cocktail.rating.toFixed(1)}`}</MetaChip>
+              </div>
+
+              <RecipePremiumGate
+                isPremium={Boolean(cocktail.isPremium)}
+                lockedFallback={
+                  <p className="text-sm text-slate-400">Desbloquea la membresía VIP para ver ingredientes.</p>
+                }
+              >
+                <h2 className="mb-4 text-lg font-semibold text-white">Ingredientes</h2>
+                <IngredientTechSheet ingredients={ingredientList} />
+              </RecipePremiumGate>
+            </div>
+          </aside>
         </div>
 
+        {bibliotecaLinks.length > 0 ? (
+          <div className="mt-24 border-t border-white/10 pt-16">
+            <h2 className="text-title mb-8">También en Biblioteca</h2>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+              {bibliotecaLinks.map((book) => (
+                <BookCard key={book.id} book={book} />
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {pantallaLinks.length > 0 ? (
+          <div className="mt-24 border-t border-white/10 pt-16">
+            <h2 className="text-title mb-8">También en Pantalla</h2>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {pantallaLinks.map((item) => (
+                <Link
+                  key={item.id}
+                  href={`/pantalla/${item.slug}`}
+                  className="rounded-card border border-white/10 bg-[var(--surface-panel)] p-5 transition-colors hover:border-electric-blue/30"
+                >
+                  <p className="text-caption text-slate-500">{item.kind}</p>
+                  <h3 className="mt-2 font-display text-lg font-semibold text-white">{item.title}</h3>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         <div className="mt-24 border-t border-white/10 pt-16">
-          <h2 className="text-3xl font-display font-bold text-white mb-8">Otras Recetas</h2>
+          <h2 className="text-title mb-8">Otras recetas</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {relatedRecipes.map((related) => (
-              <Link
+              <CocktailCard
                 key={`${related.source}-${related.slug}`}
-                href={`/recetas/${related.slug}`}
-                className="group rounded-[1.5rem] border border-white/10 bg-[#111111]/90 p-6 transition-all hover:-translate-y-1 hover:border-electric-yellow/30 hover:shadow-[0_0_40px_rgba(255,204,0,0.1)]"
-              >
-                <div className="mb-4 flex h-16 items-center justify-center rounded-lg bg-white/5">
-                  <span className="text-3xl">🍸</span>
-                </div>
-                <h3 className="font-display font-bold text-white group-hover:text-electric-yellow transition-colors">
-                  {related.title}
-                </h3>
-                <p className="mt-2 text-xs text-slate-400">
-                  {related.kcal} kcal • {related.abv} ABV
-                </p>
-              </Link>
+                title={related.title}
+                slug={related.slug}
+                rating={related.rating}
+                glass={related.glass}
+                ingredients={related.ingredients}
+                abv={related.abv}
+                kcal={related.kcal}
+                cover={related.cover}
+              />
             ))}
           </div>
         </div>

@@ -207,6 +207,35 @@ enum CampaignMessageStatus {
   FAILED
 }
 
+enum MediaKind {
+  FILM
+  SERIES
+  SERIES_EPISODE
+  PODCAST_SHOW
+  PODCAST_EPISODE
+  EVENT_VIDEO
+}
+
+enum MediaSourceType {
+  EMBED
+  UPLOAD
+  EXTERNAL_URL
+}
+
+enum MediaPublishStatus {
+  DRAFT
+  PENDING
+  PUBLISHED
+  ARCHIVED
+}
+
+enum LiveCategory {
+  GOLF
+  SPORTS
+  CULTURE
+  OTHER
+}
+
 // ═══════════════════════════════════════════════════════════════════════════════
 // AUTH & USER
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -254,6 +283,10 @@ model User {
   marketingConsent  MarketingConsent?
   campaignsCreated  Campaign[]          @relation("CampaignCreator")
   campaignMessages  CampaignMessage[]
+  mediaItemsCreated MediaItem[]         @relation("MediaCreator")
+  mediaComments     MediaComment[]
+  mediaRatings      MediaRating[]
+  liveStreamsCurated LiveStream[]       @relation("LiveStreamCurator")
 
   @@index([email])
   @@index([role])
@@ -571,6 +604,7 @@ model BarProfile {
   wholesaleOrders   WholesaleOrder[]
   deliveryStops     DeliveryStop[]
   guideEntry        VenueGuideEntry?
+  mediaEvents       MediaItem[]
 
   @@index([taxId])
   @@index([city])
@@ -1022,4 +1056,137 @@ model CampaignMessage {
   @@index([campaignId])
   @@index([userId])
   @@index([status])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// PANTALLA — MEDIA CATALOG
+// ═══════════════════════════════════════════════════════════════════════════════
+
+model MediaItem {
+  id            String             @id @default(uuid())
+  title         String
+  slug          String             @unique
+  kind          MediaKind
+  summary       String?            @db.Text
+  coverUrl      String?
+  mediaUrl      String?
+  playbackUrl   String?
+  sourceType    MediaSourceType    @default(EMBED)
+  parentId      String?
+  seasonNumber  Int?
+  episodeNumber Int?
+  eventDate     DateTime?
+  cocktailSlugs String[]           @default([])
+  tags          String[]           @default([])
+  status        MediaPublishStatus @default(DRAFT)
+  publishedAt   DateTime?
+  barProfileId  String?
+  createdById   String
+  tmdbId        Int?
+  tmdbType      String?
+  imdbId        String?
+  releaseYear   Int?
+  runtimeMins   Int?
+  metadata      Json?
+  episodeGuid   String?
+  ratingAvg     Float              @default(0)
+  ratingCount   Int                @default(0)
+  commentCount  Int                @default(0)
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+
+  parent     MediaItem?    @relation("MediaEpisodes", fields: [parentId], references: [id], onDelete: Cascade)
+  episodes   MediaItem[]   @relation("MediaEpisodes")
+  barProfile BarProfile?   @relation(fields: [barProfileId], references: [id], onDelete: SetNull)
+  createdBy  User          @relation("MediaCreator", fields: [createdById], references: [id])
+  podcastFeed PodcastFeed?
+  comments   MediaComment[]
+  ratings    MediaRating[]
+
+  @@index([kind])
+  @@index([status])
+  @@index([slug])
+  @@index([parentId])
+  @@index([barProfileId])
+  @@index([createdById])
+  @@index([tmdbId])
+  @@index([episodeGuid])
+}
+
+model PodcastFeed {
+  id           String    @id @default(uuid())
+  title        String
+  rssUrl       String    @unique
+  coverUrl     String?
+  mediaItemId  String    @unique
+  lastSyncedAt DateTime?
+  syncEnabled  Boolean   @default(true)
+  lastError    String?   @db.Text
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
+
+  show MediaItem @relation(fields: [mediaItemId], references: [id], onDelete: Cascade)
+}
+
+model LiveStream {
+  id              String             @id @default(uuid())
+  title           String
+  slug            String             @unique
+  category        LiveCategory       @default(OTHER)
+  embedUrl        String
+  backupEmbedUrl  String?
+  isLive          Boolean            @default(true)
+  scheduledStart  DateTime?
+  scheduledEnd    DateTime?
+  coverUrl        String?
+  summary         String?            @db.Text
+  status          MediaPublishStatus @default(DRAFT)
+  curatedById     String
+  sourceLabel     String?
+  lastCheckedAt   DateTime?
+  lastCheckOk     Boolean?
+  createdAt       DateTime           @default(now())
+  updatedAt       DateTime           @updatedAt
+
+  curatedBy User @relation("LiveStreamCurator", fields: [curatedById], references: [id])
+
+  @@index([status])
+  @@index([category])
+  @@index([isLive])
+  @@index([slug])
+}
+
+model MediaComment {
+  id          String   @id @default(uuid())
+  mediaItemId String
+  authorId    String
+  content     String   @db.Text
+  parentId    String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  mediaItem MediaItem      @relation(fields: [mediaItemId], references: [id], onDelete: Cascade)
+  author    User           @relation(fields: [authorId], references: [id])
+  parent    MediaComment?  @relation("MediaCommentReplies", fields: [parentId], references: [id])
+  replies   MediaComment[] @relation("MediaCommentReplies")
+
+  @@index([mediaItemId])
+  @@index([authorId])
+  @@index([parentId])
+}
+
+model MediaRating {
+  id          String   @id @default(uuid())
+  mediaItemId String
+  userId      String
+  score       Int
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  mediaItem MediaItem @relation(fields: [mediaItemId], references: [id], onDelete: Cascade)
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([mediaItemId, userId])
+  @@index([mediaItemId])
+  @@index([userId])
 }
