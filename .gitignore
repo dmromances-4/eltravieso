@@ -61,5 +61,12 @@ coverage/
 
 # Datos temporales / backups
 data/*.bak
+data/*.bak-*
+data/*.backup-*
 data/.*.json
 data/exports/
+
+# Duplicados accidentales (macOS "* 2.ext")
+* [0-9].ts
+* [0-9].tsx
+* [0-9].json
