@@ -1,4 +1,4 @@
-# Copilot / AI Agent Instructions for Vermut El Travieso
+# Copilot / AI Agent Instructions for eltravieso
 
 Purpose: Help AI agents make safe, accurate edits in this Next.js 14 App Router monorepo.
 

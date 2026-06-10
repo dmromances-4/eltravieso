@@ -1,6 +1,6 @@
 # Escalado y producción
 
-Arquitectura objetivo para Vermut El Travieso: **Vercel** (Next.js) + **Render** (Bar Online WebSocket) + **Upstash Redis** + **Postgres con pooler** + **Sentry**.
+Arquitectura objetivo para eltravieso: **Vercel** (Next.js) + **Render** (Bar Online WebSocket) + **Upstash Redis** + **Postgres con pooler** + **Sentry**.
 
 ## Diagrama
 

@@ -1,4 +1,4 @@
-# Vermut El Travieso
+# eltravieso
 
 Plataforma B2C/B2B de vermut: tienda, recetas con agente IA, comunidad, Bar Online, guía de locales y panel admin.
 

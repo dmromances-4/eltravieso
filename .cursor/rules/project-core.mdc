@@ -3,7 +3,7 @@ description: Stack, auth y convenciones base del monorepo
 alwaysApply: true
 ---
 
-# Núcleo — Vermut El Travieso
+# Núcleo — eltravieso
 
 - Next.js 14 App Router; rutas API en `app/api/**/route.ts` (export `GET`, `POST`, …).
 - Base de datos: `import prisma from '@/lib/prisma'` — nunca instanciar `PrismaClient` en rutas.

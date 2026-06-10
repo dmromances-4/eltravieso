@@ -1,4 +1,4 @@
-# Guía para agentes (Cursor / Copilot)
+# eltravieso — Guía para agentes (Cursor / Copilot)
 
 ## Desarrollo local
 
