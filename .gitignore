@@ -37,6 +37,7 @@ public/uploads/
 # Temp / sync
 .tmp.driveupload/
 .tmp/
+.tmp-recipe-videos/
 
 # Archivos pesados
 public/images/*
@@ -58,6 +59,9 @@ npm-debug.log*
 
 # Test / coverage
 coverage/
+
+# Corpus literario (copyright — no commitear EPUBs)
+corpus/epubs/*.epub
 
 # Datos temporales / backups
 data/*.bak

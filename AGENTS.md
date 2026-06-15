@@ -87,6 +87,71 @@ Acceso respetuoso: `robots.txt` permite `/cocktails/recipe/*`, throttle 2s (`RAT
 
 Doc detallada: [`docs/AUDITORIA-RECETAS.md`](docs/AUDITORIA-RECETAS.md)
 
+## Portadas de recetas
+
+Pipeline **100% gratuito** para fotografías editoriales: stock Pexels/Unsplash, referencia Difford's + Gemini (visión + Imagen 3).
+
+```bash
+npm run generate:recipe-images -- --discover-only --limit 10
+npm run generate:recipe-images -- --limit 5 --slug negroni
+npm run generate:recipe-images -- --import-cover ./photo.jpg --slug negroni
+```
+
+| Recurso | Ruta |
+|--------|------|
+| CLI | `scripts/generate-recipe-images.ts` |
+| Orquestador | `lib/recipes/generate-recipe-image.ts` |
+| Descubrimiento | `lib/recipes/cover-discovery.ts` |
+| IA gratuita | `lib/ai/provider.ts` (`generateFreeImage`) |
+| Regenerar (usuario) | `POST /api/user/recipes/:id/image` |
+
+Doc detallada: [`docs/PORTADAS-RECETAS.md`](docs/PORTADAS-RECETAS.md)
+
+## Vídeos de recetas (Remotion + cartoon clásico)
+
+Vídeos tutorial 9:16 con timeline por beats, mascota Travieso y estilo cartoon 60s–80s (sin copiar IP de referencia).
+
+```bash
+npm run render:recipe-videos -- --discover-only --slug negroni
+npm run render:recipe-videos -- --limit 5 --require-cover
+npm run render:recipe-videos -- --polish --discover-only --slug sweet-martini
+```
+
+| Recurso | Ruta |
+|--------|------|
+| Guía cartoon + integración | `docs/GUIA-REFERENCIA-ANIMACION.md` (§5) |
+| Pipeline operativo | `docs/VIDEOS-RECETAS.md` |
+| Composición Remotion | `remotion/recipe-tutorial/` |
+| CLI | `scripts/render-recipe-videos.ts` |
+| Mascota (poses SVG) | `public/brand/travieso/` |
+| Prompts cartoon | `lib/animation/classic-cartoon-prompts.ts` |
+| Timeline + beats | `lib/recipes/video-timeline.ts` |
+
+Requiere portada generada antes del render (`generate:recipe-images`). Ver [`docs/GUIA-REFERENCIA-ANIMACION.md`](docs/GUIA-REFERENCIA-ANIMACION.md).
+
+## Story Universe Engine
+
+Universo narrativo escalable: historias originales por cóctel → guiones 10–18 min → storyboard → prompts cartoon → Remotion.
+
+```bash
+npm run ingest:literary-corpus -- --limit 5
+npm run build:knowledge-base
+npm run build:cocktail-profiles
+npm run generate:stories -- --limit 20
+npm run generate:scripts -- --limit 5
+npm run export:story-universe
+```
+
+| Recurso | Ruta |
+|--------|------|
+| Índice docs | [`docs/story-universe/01_universe_overview.md`](docs/story-universe/01_universe_overview.md) |
+| Knowledge | `knowledge_base/` |
+| Módulos | `lib/story-universe/` |
+| Remotion episodios | `remotion/story-episode/` |
+| Prisma | `Story`, `StoryScript`, `CocktailNarrativeProfile`, … |
+
+**Fases 1–4 antes de historias.** EPUBs en `corpus/epubs/` (no commitear).
+
 ## Fichas editoriales (Figma + Notion)
 
 Exportación y publicación de fichas user-friendly desde `cocktails.json`.
@@ -270,6 +335,8 @@ Stack: **Vercel** (Next.js) + **Render** (Bar Online WS) + **Upstash Redis** + *
 ## Seguridad
 
 ### Rotación de claves (obligatorio si `.env.local` estuvo en git)
+
+Guía completa: [`docs/SECRETOS.md`](docs/SECRETOS.md). Verificación: `npm run check:env`.
 
 Rotar y actualizar en `.env.local` / Vercel:
 
