@@ -1,0 +1,23 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.870Z",
+  "items": [
+    {
+      "id": "noir_bar",
+      "label": "Bar noir urbano",
+      "weight": 1,
+      "sourceChunks": [],
+      "palette": [
+        "#1a1a1a",
+        "#F9D142",
+        "#2B87B9",
+        "#A62125"
+      ],
+      "lighting": "neón y contraluz cálida",
+      "cameraTendencies": [
+        "plano medio",
+        "primer plano reacción",
+        "travelling lento"
+      ]
+    }
+  ]
+}

@@ -32,7 +32,7 @@ type IntegrationsState = {
 
 type ProviderId = "shopify" | "holded" | "square";
 
-export default function IntegrationsPanel() {
+export default function IntegrationsPanel({ demoMode = false }: { demoMode?: boolean }) {
   const [data, setData] = useState<IntegrationsState | null>(null);
   const [loading, setLoading] = useState(true);
   const [activeModal, setActiveModal] = useState<ProviderId | null>(null);
@@ -182,6 +182,13 @@ export default function IntegrationsPanel() {
         <p className="mt-2 text-slate-400">Conecta tu TPV o tienda online para sincronizar catálogos.</p>
       </div>
 
+      {demoMode ? (
+        <div className="rounded-2xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+          Integraciones desactivadas en esta demo (Shopify, Holded, Square y TPV). La pantalla está disponible para
+          consulta, pero conectar cuentas y sincronizar catálogos no está habilitado.
+        </div>
+      ) : null}
+
       {data?.tpvWebhookUrl ? (
         <div className="rounded-2xl border border-white/10 bg-[#121212] p-5">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Webhook TPV (solo lectura)</p>
@@ -260,7 +267,7 @@ export default function IntegrationsPanel() {
               <button
                 type="button"
                 onClick={() => syncProvider(p.id)}
-                disabled={syncing === p.id}
+                disabled={syncing === p.id || demoMode}
                 className="mt-4 rounded-full border border-white/20 px-5 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:border-electric-yellow hover:text-electric-yellow disabled:opacity-50"
               >
                 {syncing === p.id ? "Sincronizando…" : "Sincronizar catálogo"}
@@ -269,7 +276,8 @@ export default function IntegrationsPanel() {
             <button
               type="button"
               onClick={() => setActiveModal(p.id)}
-              className="mt-4 rounded-full border border-white/20 px-5 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:border-electric-yellow hover:text-electric-yellow"
+              disabled={demoMode}
+              className="mt-4 rounded-full border border-white/20 px-5 py-3 text-xs font-bold uppercase tracking-widest text-white transition hover:border-electric-yellow hover:text-electric-yellow disabled:opacity-50"
             >
               {p.connected ? "Reconfigurar" : "Conectar cuenta"}
             </button>

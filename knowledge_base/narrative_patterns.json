@@ -1,0 +1,89 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.870Z",
+  "items": [
+    {
+      "id": "anecdota_circular",
+      "label": "anécdota circular",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "structure": "anécdota circular",
+      "pacing": "variable con pausas",
+      "endingTypes": [
+        "sin redención",
+        "ironía amarga",
+        "sin redención",
+        "ironía amarga",
+        "sin redención"
+      ]
+    },
+    {
+      "id": "tres_actos_minimos",
+      "label": "tres actos mínimos",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "structure": "tres actos mínimos",
+      "pacing": "variable con pausas",
+      "endingTypes": [
+        "sin redención",
+        "ironía amarga",
+        "sin redención",
+        "ironía amarga",
+        "sin redención"
+      ]
+    },
+    {
+      "id": "pausas_largas",
+      "label": "pausas largas",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "structure": "pausas largas",
+      "pacing": "variable con pausas",
+      "endingTypes": [
+        "sin redención",
+        "ironía amarga",
+        "sin redención",
+        "ironía amarga",
+        "sin redención"
+      ]
+    },
+    {
+      "id": "final_abrupto",
+      "label": "final abrupto",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "structure": "final abrupto",
+      "pacing": "variable con pausas",
+      "endingTypes": [
+        "sin redención",
+        "ironía amarga",
+        "sin redención",
+        "ironía amarga",
+        "sin redención"
+      ]
+    }
+  ]
+}

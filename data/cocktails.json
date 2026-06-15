@@ -439,7 +439,7 @@
     "method": "1. Prepara el vaso collins frío para servir.\n2. Vierte todos los ingredientes en un vaso mezclador con hielo cubito.\n3. Remueve con cuchara de bar unos 25-30 segundos hasta que la mezcla esté bien fría y diluida.\n4. Cuela en el vaso de servicio, con hielo fresco si la receta es on the rocks.\n5. Sirve de inmediato, bien frío.",
     "abv": "—",
     "kcal": 175,
-    "cover": "/uploads/recipe-covers/americano.svg",
+    "cover": "/uploads/recipe-covers/americano.jpg",
     "id": "dg-61",
     "reviewStatus": "ok",
     "diffordsId": 61,
@@ -543,13 +543,14 @@
     "method": "1. Enfría la an vaso vaso old fashioned con hielo y agua; descarta el hielo antes de servir.\n2. Vierte los ingredientes en el vaso en el orden indicado.\n3. Remueve suavemente con cuchara de bar para integrar y enfriar.\n4. Sirve de inmediato, bien frío.",
     "abv": "—",
     "kcal": 92,
-    "cover": "/cocktail-placeholder.svg",
+    "cover": "/uploads/recipe-covers/vermuttino.jpg",
     "id": "dg-29594",
     "reviewStatus": "ok",
     "diffordsId": 29594,
     "sourceUrl": "https://www.diffordsguide.com/cocktails/recipe/29594/vermuttino",
     "reviewedAt": "2026-06-05T14:54:34.293Z",
-    "reviewNotes": "Marcada ok por score alto"
+    "reviewNotes": "Marcada ok por score alto",
+    "coverAttribution": "Photo by Szymon Shields on Pexels"
   },
   {
     "title": "Red Manhattan",
@@ -566,13 +567,14 @@
     "method": "1. Enfría la copa coupe con hielo y agua; descarta el hielo antes de servir.\n2. Vierte todos los ingredientes en un vaso mezclador con hielo cubito.\n3. Remueve con cuchara de bar unos 25-30 segundos hasta que la mezcla esté bien fría y diluida.\n4. Cuela con colador fino en el vaso de servicio.\n5. Sirve de inmediato, bien frío.",
     "abv": "—",
     "kcal": 213,
-    "cover": "/cocktail-placeholder.svg",
+    "cover": "/uploads/recipe-covers/red-manhattan.jpg",
     "id": "dg-3016",
     "reviewStatus": "ok",
     "diffordsId": 3016,
     "sourceUrl": "https://www.diffordsguide.com/cocktails/recipe/3016/red-manhattan",
     "reviewedAt": "2026-06-05T14:54:36.491Z",
-    "reviewNotes": "Marcada ok por score alto"
+    "reviewNotes": "Marcada ok por score alto",
+    "coverAttribution": "Photo by Marcelo Verfe on Pexels"
   },
   {
     "title": "Four Poster Red",
@@ -588,13 +590,14 @@
     "method": "1. Prepara la guarnición: luxardo una cereza marrasquino or strawberry.\n2. Llena el vaso vaso old fashioned con hielo cubito fresco (o un cubo grande si la receta lo indica).\n3. Vierte todos los ingredientes en un vaso mezclador con hielo cubito hasta cubrir los dedos.\n4. Remueve con cuchara de bar unos 25-35 segundos, hasta que el vaso se empañe y la mezcla quede bien fría y diluida.\n5. Cuela en el vaso preparado, con hielo fresco si corresponde.\n6. Coloca la guarnición en el vaso con cuidado para realzar aroma y presentación.\n7. Sirve de inmediato, bien frío, y brinda con calma.",
     "abv": "—",
     "kcal": 179,
-    "cover": "/cocktail-placeholder.svg",
+    "cover": "/uploads/recipe-covers/four-poster-red.jpg",
     "id": "dg-4570",
     "reviewStatus": "fixed",
     "diffordsId": 4570,
     "sourceUrl": "https://www.diffordsguide.com/cocktails/recipe/4570/four-poster-red",
     "reviewedAt": "2026-06-05T14:54:38.363Z",
-    "reviewNotes": "Auto-aplicado por CLI"
+    "reviewNotes": "Auto-aplicado por CLI",
+    "coverAttribution": "Photo by Hunain Bin Shahid on Pexels"
   },
   {
     "title": "Redwood Heights",
@@ -8100,7 +8103,50 @@
     "abv": "No especificado",
     "kcal": 0,
     "cover": "/cocktail-placeholder.svg",
-    "id": "slug-caffa-american-italiano",
-    "reviewStatus": "pending"
+    "id": "dg-37996",
+    "reviewStatus": "pending",
+    "diffordsId": 37996,
+    "sourceUrl": "https://www.diffordsguide.com/cocktails/recipe/37996/caffe-american-italiano"
+  },
+  {
+    "title": "A Lucky Roman Americano",
+    "slug": "a-lucky-roman-americano",
+    "rating": 5,
+    "glass": "an Old-fashioned glass",
+    "ingredients": [
+      "30 ml Strucchi Red Bitter (Campari-style liqueur)",
+      "30 ml Strucchi Rosso Vermouth",
+      "30 ml Cynar or other carciofo amaro",
+      "2 dash Bob's Peppermint Bitters",
+      "Top up with *Special ingredient #1 (see above)"
+    ],
+    "method": "THROW first 4 ingredients with ice and strain into ice-filled glass. Top with rosemary soda. <strong>Special ingredient #1: Rosemary soda</strong>",
+    "abv": "No especificado",
+    "kcal": 165,
+    "cover": "/cocktail-placeholder.svg",
+    "id": "dg-4061",
+    "reviewStatus": "pending",
+    "diffordsId": 4061,
+    "sourceUrl": "https://www.diffordsguide.com/cocktails/recipe/4061/a-lucky-roman-americano"
+  },
+  {
+    "title": "La Familia",
+    "slug": "la-familia",
+    "rating": 3,
+    "glass": "a Coupe glass",
+    "ingredients": [
+      "45 ml Light white rum (charcoal-filtered 1-4 years old)",
+      "30 ml Lustau Amontillado Los Arcos Sherry",
+      "30 ml Orange juice (freshly squeezed)",
+      "2 barspoon Strucchi Rosso Vermouth"
+    ],
+    "method": "SHAKE all ingredients with ice.\nFINE STRAIN into chilled glass.",
+    "abv": "No especificado",
+    "kcal": 0,
+    "cover": "/cocktail-placeholder.svg",
+    "id": "dg-3980",
+    "reviewStatus": "pending",
+    "diffordsId": 3980,
+    "sourceUrl": "https://www.diffordsguide.com/cocktails/recipe/3980/la-familia"
   }
 ]

@@ -14,13 +14,15 @@ Browser ──► Next.js (app/bar-online, /api/bar-online)
 
 ## Rutas
 
-| Recurso | Ruta / comando |
-|---------|----------------|
-| Lobby | `/bar-online` |
-| Sala | `/bar-online/[roomId]` |
-| API sesiones | `GET/POST /api/bar-online` |
-| Servidor dev | `npm run dev:ws` |
-| Servidor prod | `npm run start:ws` |
+
+| Recurso       | Ruta / comando             |
+| ------------- | -------------------------- |
+| Lobby         | `/bar-online`              |
+| Sala          | `/bar-online/[roomId]`     |
+| API sesiones  | `GET/POST /api/bar-online` |
+| Servidor dev  | `npm run dev:ws`           |
+| Servidor prod | `npm run start:ws`         |
+
 
 Render inyecta `PORT` automáticamente; localmente usa `WS_PORT` (default 3001).
 
@@ -34,11 +36,13 @@ Render inyecta `PORT` automáticamente; localmente usa `WS_PORT` (default 3001).
 
 ## Variables de entorno
 
-| Variable | Uso |
-|----------|-----|
-| `NEXT_PUBLIC_WS_URL` | URL pública del socket (ej. `http://localhost:3001`) |
-| `WS_PORT` | Puerto local (default `3001`; Render usa `PORT`) |
-| `REDIS_URL` | Adapter Redis; vacío = presencia en memoria (una instancia) |
+
+| Variable             | Uso                                                         |
+| -------------------- | ----------------------------------------------------------- |
+| `NEXT_PUBLIC_WS_URL` | URL pública del socket (ej. `http://localhost:3001`)        |
+| `WS_PORT`            | Puerto local (default `3001`; Render usa `PORT`)            |
+| `REDIS_URL`          | Adapter Redis; vacío = presencia en memoria (una instancia) |
+
 
 ## Desarrollo
 

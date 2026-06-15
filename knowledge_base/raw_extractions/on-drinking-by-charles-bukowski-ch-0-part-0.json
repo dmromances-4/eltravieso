@@ -1,0 +1,93 @@
+{
+  "extraction": {
+    "chunkId": "on-drinking-by-charles-bukowski-ch-0-part-0",
+    "sourceTitle": "On Drinking",
+    "sourceAuthor": "Charles Bukowski",
+    "themes": [
+      "alcohol",
+      "soledad urbana",
+      "supervivencia"
+    ],
+    "subthemes": [
+      "taberna",
+      "escritura",
+      "apuestas"
+    ],
+    "emotions": [
+      "melancolía",
+      "cínico humor",
+      "nostalgia"
+    ],
+    "scenarios": [
+      "bar de barrio",
+      "habitación alquilada",
+      "calle de noche"
+    ],
+    "conflicts": [
+      "auto-sabotaje",
+      "deudas",
+      "relaciones tóxicas"
+    ],
+    "relationships": [
+      "amistad frágil",
+      "amor imposible"
+    ],
+    "symbols": [
+      "vaso vacío",
+      "máquina de escribir",
+      "neón"
+    ],
+    "recurringObjects": [
+      "botella",
+      "copa",
+      "billete arrugado"
+    ],
+    "archetypes": [
+      "poeta fracasado",
+      "camarero filósofo",
+      "apostador"
+    ],
+    "dialoguePatterns": [
+      "respuestas secas",
+      "monólogo interior breve"
+    ],
+    "narrativeStructures": [
+      "anécdota circular",
+      "tres actos mínimos"
+    ],
+    "narrativeRhythms": [
+      "pausas largas",
+      "final abrupto"
+    ],
+    "emotionalTone": "crudo y resignado con destellos de humor negro",
+    "endingTypes": [
+      "sin redención",
+      "ironía amarga"
+    ],
+    "characterTypes": [
+      "anti-héroe entrañable"
+    ],
+    "motivations": [
+      "escapar del aburrimiento",
+      "buscar una señal"
+    ],
+    "failures": [
+      "no sostener relaciones",
+      "autodestrucción"
+    ],
+    "desires": [
+      "ser visto",
+      "un trago más"
+    ],
+    "obsessions": [
+      "alcohol",
+      "escritura",
+      "mujeres"
+    ]
+  },
+  "legal": {
+    "passed": true,
+    "reasons": []
+  },
+  "analyzedAt": "2026-06-15T09:17:56.251Z"
+}

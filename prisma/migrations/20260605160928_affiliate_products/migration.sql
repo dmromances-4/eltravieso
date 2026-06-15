@@ -1,20 +1,10 @@
 -- CreateEnum
 CREATE TYPE "AffiliatePlatform" AS ENUM ('AMAZON', 'TEMU', 'ALIEXPRESS', 'NONE');
 
--- AlterEnum
-ALTER TYPE "ProductSource" ADD VALUE 'AFILIADO';
+-- ProductSource enum is created in monetization_canalla (later migration)
 
 -- DropForeignKey
 ALTER TABLE "Order" DROP CONSTRAINT "Order_userId_fkey";
-
--- DropIndex
-DROP INDEX "VenueGuideEntry_continent_idx";
-
--- AlterTable
-ALTER TABLE "BarProfile" ALTER COLUMN "vibeTags" DROP DEFAULT;
-
--- AlterTable
-ALTER TABLE "MembershipDropFulfillment" ALTER COLUMN "updatedAt" DROP DEFAULT;
 
 -- AlterTable
 ALTER TABLE "Product" ADD COLUMN     "affiliatePlatform" "AffiliatePlatform" NOT NULL DEFAULT 'NONE',

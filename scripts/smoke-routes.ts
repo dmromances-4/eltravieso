@@ -19,10 +19,18 @@ const checks: Check[] = [
   { name: "Recetas", path: "/recetas", expectStatus: 200 },
   { name: "Shop", path: "/shop", expectStatus: 200 },
   { name: "Comunidad", path: "/comunidad", expectStatus: 200 },
+  { name: "Blog", path: "/blog", expectStatus: 200 },
+  { name: "Mapa", path: "/mapa", expectStatus: 200 },
+  { name: "Biblioteca", path: "/biblioteca", expectStatus: 200 },
+  { name: "Pantalla", path: "/pantalla", expectStatus: 200 },
+  { name: "Bar Online", path: "/bar-online", expectStatus: 200 },
+  { name: "Tech generator", path: "/pro/tech-generator", expectStatus: 200 },
+  { name: "Login", path: "/login", expectStatus: 200 },
+  { name: "Membresia (auth)", path: "/cuenta/membresia", expectStatus: [200, 302, 307] },
+  { name: "Admin (auth)", path: "/admin", expectStatus: [302, 307] },
   { name: "AI status", path: "/api/ai/status", expectStatus: [200, 503] },
   { name: "Alcoholes API", path: "/api/alcoholes", expectStatus: 200 },
   { name: "Forum API", path: "/api/forum/topics", expectStatus: 200 },
-  { name: "Blog", path: "/blog", expectStatus: 200 },
   { name: "Holded sync (auth)", path: "/api/integrations/holded/sync", method: "POST", expectStatus: 401 },
   { name: "Holded webhook (no sig)", path: "/api/integrations/holded/webhook", method: "POST", expectStatus: [400, 401, 503] },
   { name: "Square sync (auth)", path: "/api/integrations/square/sync", method: "POST", expectStatus: 401 },
@@ -38,7 +46,10 @@ async function run() {
 
   for (const check of checks) {
     try {
-      const res = await fetch(`${BASE_URL}${check.path}`, { method: check.method ?? "GET" });
+      const res = await fetch(`${BASE_URL}${check.path}`, {
+        method: check.method ?? "GET",
+        redirect: "manual",
+      });
       if (!statusOk(res.status, check.expectStatus)) {
         console.error(`FAIL ${check.name}: ${res.status} ${check.path}`);
         failed += 1;

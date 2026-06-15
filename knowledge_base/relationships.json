@@ -1,0 +1,33 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.868Z",
+  "items": [
+    {
+      "id": "amistad_fragil",
+      "label": "amistad frágil",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "dynamic": "amistad frágil",
+      "tensionCurve": "ascendente con caída abrupta"
+    },
+    {
+      "id": "amor_imposible",
+      "label": "amor imposible",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "dynamic": "amor imposible",
+      "tensionCurve": "ascendente con caída abrupta"
+    }
+  ]
+}

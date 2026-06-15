@@ -4,7 +4,7 @@ import { ChangeEvent, useState } from 'react'
 import Link from 'next/link'
 import { useCart } from '@/lib/cart/CartContext'
 
-export default function CheckoutForm() {
+export default function CheckoutForm({ paymentsEnabled = true }: { paymentsEnabled?: boolean }) {
   const { items, subtotalCents, clear } = useCart()
   const [email, setEmail] = useState('')
   const [acceptedTerms, setAcceptedTerms] = useState(false)
@@ -71,8 +71,18 @@ export default function CheckoutForm() {
     <div className="space-y-8 rounded-[2.5rem] border border-white/10 bg-[#111111]/90 p-8 shadow-neon backdrop-blur-xl">
       <div className="space-y-4">
         <h2 className="text-3xl font-display font-bold tracking-tight text-white">Confirmación de pedido</h2>
-        <p className="text-sm leading-7 text-slate-300">Revisa tu carrito y completa tus datos antes de ir al pago seguro con Stripe.</p>
+        <p className="text-sm leading-7 text-slate-300">
+          {paymentsEnabled
+            ? 'Revisa tu carrito y completa tus datos antes de ir al pago seguro con Stripe.'
+            : 'Revisa tu carrito. En modo demo los pagos están desactivados.'}
+        </p>
       </div>
+
+      {!paymentsEnabled ? (
+        <div className="rounded-2xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+          Modo demo: pagos desactivados. Puedes añadir productos al carrito y llegar hasta aquí, pero no se procesará ningún cobro.
+        </div>
+      ) : null}
       
       <div className="grid gap-4">
         {items.map((item) => (
@@ -142,7 +152,7 @@ export default function CheckoutForm() {
       
       <button
         type="button"
-        disabled={loading}
+        disabled={loading || !paymentsEnabled}
         onClick={handleCheckout}
         className="group relative flex w-full items-center justify-center gap-3 overflow-hidden rounded-full bg-electric-yellow px-6 py-4 text-sm font-bold uppercase tracking-[0.2em] text-black transition-all hover:brightness-110 hover:shadow-[0_0_20px_rgba(249,209,66,0.3)] disabled:cursor-not-allowed disabled:opacity-60"
       >
@@ -153,8 +163,10 @@ export default function CheckoutForm() {
           </>
         ) : (
           <>
-            <span>Pagar con Stripe</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            <span>{paymentsEnabled ? 'Pagar con Stripe' : 'Pagos desactivados (demo)'}</span>
+            {paymentsEnabled ? (
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-1"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+            ) : null}
           </>
         )}
       </button>

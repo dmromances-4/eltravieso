@@ -1,0 +1,408 @@
+{
+  "generatedAt": "2026-06-15T09:18:08.728Z",
+  "profiles": [
+    {
+      "cocktailSlug": "sweet-martini",
+      "cocktailTitle": "Sweet Martini",
+      "aromaticProfile": [
+        "balsámico",
+        "herbal"
+      ],
+      "tasteProfile": [
+        "seco",
+        "amargo-dulce"
+      ],
+      "color": "deep amber-red vermouth tone, clear pale gin with botanical notes",
+      "intensity": 3,
+      "personality": [
+        "elegante",
+        "clásico"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ritual",
+        "distancia emocional"
+      ],
+      "evokedSensations": [
+        "frescura breve",
+        "calma momentánea",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Sweet Martini cuando ya no queda nada que perder",
+        "El Copa de martini refleja una promesa incumplida",
+        "Un elegante entra al bar y cambia la medida de todo",
+        "La receta del Sweet Martini es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (sweet_martini)"
+    },
+    {
+      "cocktailSlug": "vermouth-soda",
+      "cocktailTitle": "Vermouth and Soda",
+      "aromaticProfile": [
+        "herbal"
+      ],
+      "tasteProfile": [
+        "amargo-dulce"
+      ],
+      "color": "deep amber-red vermouth tone, clear sparkling bubbles",
+      "intensity": 2,
+      "personality": [
+        "clásico"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación"
+      ],
+      "evokedSensations": [
+        "frescura breve",
+        "calma momentánea",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Vermouth and Soda cuando ya no queda nada que perder",
+        "El Copa de cóctel refleja una promesa incumplida",
+        "Un clásico entra al bar y cambia la medida de todo",
+        "La receta del Vermouth and Soda es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (vermouth_soda)"
+    },
+    {
+      "cocktailSlug": "sweet-manhattan-batched-recipe",
+      "cocktailTitle": "Sweet Manhattan (batched recipe)",
+      "aromaticProfile": [
+        "herbal",
+        "ahumado",
+        "amargo cítrico"
+      ],
+      "tasteProfile": [
+        "amargo-dulce",
+        "cálido",
+        "intenso"
+      ],
+      "color": "deep amber-red vermouth tone, golden amber whiskey tone, bitter orange-red aperitif tone",
+      "intensity": 4,
+      "personality": [
+        "clásico",
+        "contundente",
+        "rebelde"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ironía",
+        "madurez amarga",
+        "transgresión",
+        "última ronda"
+      ],
+      "evokedSensations": [
+        "calor etílico",
+        "aftertaste seco",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Sweet Manhattan (batched recipe) cuando ya no queda nada que perder",
+        "El Copa coupe refleja una promesa incumplida",
+        "Un clásico entra al bar y cambia la medida de todo",
+        "La receta del Sweet Manhattan (batched recipe) es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (sweet_manhattan_batched_recipe)"
+    },
+    {
+      "cocktailSlug": "sweet-virginia",
+      "cocktailTitle": "Sweet Virginia",
+      "aromaticProfile": [
+        "herbal",
+        "ahumado",
+        "amargo cítrico"
+      ],
+      "tasteProfile": [
+        "amargo-dulce",
+        "cálido",
+        "intenso"
+      ],
+      "color": "deep amber-red vermouth tone, golden amber whiskey tone, bitter orange-red aperitif tone",
+      "intensity": 4,
+      "personality": [
+        "clásico",
+        "contundente",
+        "rebelde"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ironía",
+        "madurez amarga",
+        "transgresión",
+        "última ronda"
+      ],
+      "evokedSensations": [
+        "calor etílico",
+        "aftertaste seco",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Sweet Virginia cuando ya no queda nada que perder",
+        "El Copa de cóctel refleja una promesa incumplida",
+        "Un clásico entra al bar y cambia la medida de todo",
+        "Un twist de naranja cae como un recuerdo agridulce",
+        "La receta del Sweet Virginia es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (sweet_virginia)"
+    },
+    {
+      "cocktailSlug": "manhattan-sweet",
+      "cocktailTitle": "Manhattan (Sweet)",
+      "aromaticProfile": [
+        "herbal",
+        "ahumado",
+        "amargo cítrico"
+      ],
+      "tasteProfile": [
+        "amargo-dulce",
+        "cálido",
+        "intenso"
+      ],
+      "color": "deep amber-red vermouth tone, golden amber whiskey tone, bitter orange-red aperitif tone",
+      "intensity": 4,
+      "personality": [
+        "clásico",
+        "contundente",
+        "rebelde"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ironía",
+        "madurez amarga",
+        "transgresión",
+        "última ronda"
+      ],
+      "evokedSensations": [
+        "frescura breve",
+        "aftertaste seco",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Manhattan (Sweet) cuando ya no queda nada que perder",
+        "El Copa de cóctel refleja una promesa incumplida",
+        "Un clásico entra al bar y cambia la medida de todo",
+        "La receta del Manhattan (Sweet) es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (manhattan_sweet)"
+    },
+    {
+      "cocktailSlug": "high-ryeser",
+      "cocktailTitle": "High Ryeser",
+      "aromaticProfile": [
+        "herbal",
+        "ahumado",
+        "amargo cítrico"
+      ],
+      "tasteProfile": [
+        "amargo-dulce",
+        "cálido",
+        "intenso"
+      ],
+      "color": "deep amber-red vermouth tone, golden amber whiskey tone, bitter orange-red aperitif tone",
+      "intensity": 2,
+      "personality": [
+        "clásico",
+        "contundente",
+        "rebelde"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ironía",
+        "madurez amarga",
+        "transgresión",
+        "última ronda"
+      ],
+      "evokedSensations": [
+        "frescura breve",
+        "aftertaste seco",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un High Ryeser cuando ya no queda nada que perder",
+        "El Copa de cóctel refleja una promesa incumplida",
+        "Un clásico entra al bar y cambia la medida de todo",
+        "La receta del High Ryeser es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (high_ryeser)"
+    },
+    {
+      "cocktailSlug": "manhattan-sweet-with-bitter-chocolate",
+      "cocktailTitle": "Manhattan (Sweet with Bitter Chocolate)",
+      "aromaticProfile": [
+        "herbal",
+        "ahumado",
+        "amargo cítrico"
+      ],
+      "tasteProfile": [
+        "amargo-dulce",
+        "cálido",
+        "intenso"
+      ],
+      "color": "deep amber-red vermouth tone, golden amber whiskey tone, warm tropical rum tone",
+      "intensity": 4,
+      "personality": [
+        "clásico",
+        "contundente",
+        "rebelde"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "transgresión",
+        "última ronda"
+      ],
+      "evokedSensations": [
+        "calor etílico",
+        "aftertaste seco",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Manhattan (Sweet with Bitter Chocolate) cuando ya no queda nada que perder",
+        "El Copa coupe refleja una promesa incumplida",
+        "Un clásico entra al bar y cambia la medida de todo",
+        "La receta del Manhattan (Sweet with Bitter Chocolate) es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (manhattan_sweet_with_bitter_chocolate)"
+    },
+    {
+      "cocktailSlug": "negroni-cocktail",
+      "cocktailTitle": "Negroni Cocktail",
+      "aromaticProfile": [
+        "balsámico",
+        "herbal",
+        "amargo cítrico"
+      ],
+      "tasteProfile": [
+        "seco",
+        "amargo-dulce",
+        "intenso"
+      ],
+      "color": "deep amber-red vermouth tone, clear pale gin with botanical notes, bitter orange-red aperitif tone",
+      "intensity": 3,
+      "personality": [
+        "elegante",
+        "clásico",
+        "rebelde"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ironía",
+        "madurez amarga",
+        "ritual",
+        "distancia emocional",
+        "transgresión",
+        "última ronda"
+      ],
+      "evokedSensations": [
+        "frescura breve",
+        "aftertaste seco",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Negroni Cocktail cuando ya no queda nada que perder",
+        "El Copa de cóctel refleja una promesa incumplida",
+        "Un elegante entra al bar y cambia la medida de todo",
+        "La receta del Negroni Cocktail es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (negroni_cocktail)"
+    },
+    {
+      "cocktailSlug": "fridge-negroni",
+      "cocktailTitle": "Fridge Negroni",
+      "aromaticProfile": [
+        "balsámico",
+        "herbal",
+        "amargo cítrico"
+      ],
+      "tasteProfile": [
+        "seco",
+        "amargo-dulce",
+        "intenso"
+      ],
+      "color": "deep amber-red vermouth tone, clear pale gin with botanical notes, bitter orange-red aperitif tone",
+      "intensity": 3,
+      "personality": [
+        "elegante",
+        "clásico",
+        "rebelde"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ironía",
+        "madurez amarga",
+        "ritual",
+        "distancia emocional",
+        "transgresión",
+        "última ronda"
+      ],
+      "evokedSensations": [
+        "frescura breve",
+        "aftertaste seco",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Fridge Negroni cuando ya no queda nada que perder",
+        "El Bottle refleja una promesa incumplida",
+        "Un elegante entra al bar y cambia la medida de todo",
+        "La receta del Fridge Negroni es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (fridge_negroni)"
+    },
+    {
+      "cocktailSlug": "million-dollar-cocktail",
+      "cocktailTitle": "Million Dollar Cocktail",
+      "aromaticProfile": [
+        "balsámico",
+        "herbal"
+      ],
+      "tasteProfile": [
+        "seco",
+        "amargo-dulce"
+      ],
+      "color": "deep amber-red vermouth tone, clear pale gin with botanical notes, clear sparkling bubbles",
+      "intensity": 3,
+      "personality": [
+        "elegante",
+        "clásico"
+      ],
+      "symbolism": [
+        "brindis",
+        "noche",
+        "conversación",
+        "ritual",
+        "distancia emocional"
+      ],
+      "evokedSensations": [
+        "frescura breve",
+        "calma momentánea",
+        "clink de hielo"
+      ],
+      "narrativeHooks": [
+        "Alguien pide un Million Dollar Cocktail cuando ya no queda nada que perder",
+        "El Copa coupe refleja una promesa incumplida",
+        "Un elegante entra al bar y cambia la medida de todo",
+        "La receta del Million Dollar Cocktail es la única verdad compartida en la mesa"
+      ],
+      "originHint": "Inspiración clásica (million_dollar_cocktail)"
+    }
+  ]
+}

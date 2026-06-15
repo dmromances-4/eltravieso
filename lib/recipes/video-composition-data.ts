@@ -1,10 +1,19 @@
+import { buildVideoTimeline, type VideoTimeline } from "@/lib/recipes/video-timeline";
+import type { VideoBeat, MascotPose } from "@/lib/recipes/video-prompt";
+
 export type RecipeVideoProps = {
   title: string;
   glass: string;
   ingredients: string[];
   steps: string[];
   coverImageUrl?: string;
-  mascotPose?: "idle" | "stir" | "pour" | "shake" | "present";
+  mascotPose?: MascotPose;
+  introTagline?: string;
+  liquidTone?: string;
+  garnish?: string;
+  totalFrames?: number;
+  sceneDurations?: VideoTimeline["sceneDurations"];
+  beats?: VideoBeat[];
 };
 
 export function inferMascotPose(method: string): RecipeVideoProps["mascotPose"] {
@@ -29,12 +38,36 @@ export function recipeToVideoProps(input: {
   method: string;
   coverImageUrl?: string;
 }): RecipeVideoProps {
+  const timeline = buildVideoTimeline(input);
+  const stepTexts = timeline.beats
+    .filter((b) => b.kind === "step")
+    .map((b) => b.text)
+    .filter((t): t is string => Boolean(t));
+
+  const techniqueBeat = timeline.beats.find((b) => b.kind === "technique");
+
   return {
     title: input.title,
     glass: input.glass,
     ingredients: input.ingredients.slice(0, 8),
-    steps: methodToSteps(input.method).slice(0, 6),
+    steps: stepTexts.length ? stepTexts : ["Preparar y servir bien frío."],
     coverImageUrl: input.coverImageUrl,
-    mascotPose: inferMascotPose(input.method),
+    mascotPose: techniqueBeat?.mascotPose ?? inferMascotPose(input.method),
+    introTagline: timeline.introTagline,
+    liquidTone: timeline.liquidTone,
+    garnish: timeline.garnish,
+    totalFrames: timeline.totalFrames,
+    sceneDurations: timeline.sceneDurations,
+    beats: timeline.beats,
   };
+}
+
+export function recipeToVideoTimeline(input: {
+  title: string;
+  glass: string;
+  ingredients: string[];
+  method: string;
+  coverImageUrl?: string;
+}): VideoTimeline {
+  return buildVideoTimeline(input);
 }

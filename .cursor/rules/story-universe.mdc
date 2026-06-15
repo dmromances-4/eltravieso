@@ -1,0 +1,14 @@
+---
+description: Story Universe Engine — fases, CLI y reglas legales
+globs: lib/story-universe/**,scripts/ingest-literary-corpus.ts,scripts/build-knowledge-base.ts,scripts/build-cocktail-profiles.ts,scripts/generate-stories.ts,scripts/generate-scripts.ts,scripts/generate-storyboards.ts,scripts/generate-animation-prompts.ts,scripts/export-story-universe.ts,knowledge_base/**,docs/story-universe/**
+---
+
+# Story Universe Engine
+
+- **Fases 1–4 antes de historias:** ingest → knowledge base → taxonomía → perfiles cóctel.
+- EPUBs en `corpus/epubs/` (gitignored). No persistir prosa protegida.
+- Prisma: `CocktailNarrativeProfile`, `Story`, `StoryScript`, `StoryStoryboard`, `StoryAnimationPrompt`.
+- CLI: `npm run ingest:literary-corpus`, `build:knowledge-base`, `build:cocktail-profiles`, `generate:stories`, …
+- Docs: `docs/story-universe/01_universe_overview.md`
+- Remotion episodios: `remotion/story-episode/`
+- Reutilizar `lib/ai/provider.ts`, `classic-cartoon-prompts.ts`, `inferLiquidTone`.

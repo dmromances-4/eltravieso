@@ -90,7 +90,11 @@ export default async function CocktailPage({ params }: { params: { slug: string 
             </div>
 
             <div className="max-w-xl lg:hidden">
-              <RecipeCoverImage title={cocktail.title} cover={cocktail.cover} />
+              <RecipeCoverImage
+                title={cocktail.title}
+                cover={cocktail.cover}
+                attribution={cocktail.coverAttribution}
+              />
             </div>
 
             <RecipePremiumGate isPremium={Boolean(cocktail.isPremium)} lockedFallback={premiumLockedFallback}>
@@ -127,7 +131,11 @@ export default async function CocktailPage({ params }: { params: { slug: string 
 
           <aside className="space-y-6 lg:sticky lg:top-28 lg:self-start">
             <div className="hidden lg:block">
-              <RecipeCoverImage title={cocktail.title} cover={cocktail.cover} />
+              <RecipeCoverImage
+                title={cocktail.title}
+                cover={cocktail.cover}
+                attribution={cocktail.coverAttribution}
+              />
             </div>
 
             <div className="rounded-card border border-white/10 bg-[var(--surface-panel)] p-6">

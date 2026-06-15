@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.867Z",
+  "items": [
+    {
+      "id": "auto_sabotaje",
+      "label": "auto-sabotaje",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "type": "auto-sabotaje",
+      "stakes": "identidad y supervivencia emocional",
+      "resolutionPatterns": [
+        "aceptación amarga",
+        "fuga",
+        "pequeño gesto de dignidad"
+      ]
+    },
+    {
+      "id": "deudas",
+      "label": "deudas",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "type": "deudas",
+      "stakes": "identidad y supervivencia emocional",
+      "resolutionPatterns": [
+        "aceptación amarga",
+        "fuga",
+        "pequeño gesto de dignidad"
+      ]
+    },
+    {
+      "id": "relaciones_toxicas",
+      "label": "relaciones tóxicas",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "type": "relaciones tóxicas",
+      "stakes": "identidad y supervivencia emocional",
+      "resolutionPatterns": [
+        "aceptación amarga",
+        "fuga",
+        "pequeño gesto de dignidad"
+      ]
+    }
+  ]
+}

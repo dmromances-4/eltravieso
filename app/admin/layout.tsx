@@ -69,6 +69,12 @@ export default async function AdminLayout({ children }: { children: ReactNode })
             Recetas
           </Link>
           <Link
+            href="/admin/recipe-covers"
+            className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
+          >
+            Portadas
+          </Link>
+          <Link
             href="/admin/recetas-auditoria"
             className="flex items-center gap-3 px-4 py-3 text-sm font-bold uppercase tracking-widest text-slate-300 rounded-xl hover:bg-white/5 hover:text-white transition-colors"
           >

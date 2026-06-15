@@ -34,6 +34,16 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: 'Debe proporcionar un email válido' }, { status: 400 })
   }
 
+  if (!process.env.STRIPE_SECRET_KEY?.trim()) {
+    return NextResponse.json(
+      {
+        error:
+          'Los pagos están desactivados en este entorno de demo. Puedes navegar la tienda y el carrito, pero no completar la compra.',
+      },
+      { status: 503 },
+    )
+  }
+
   try {
     const lines = await validateCartLines(body.items as { id: string; quantity: number }[])
 

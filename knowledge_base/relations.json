@@ -1,0 +1,64 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.871Z",
+  "themeToEmotion": [
+    {
+      "themeId": "alcohol",
+      "emotionId": "melancolia",
+      "weight": 0.5
+    },
+    {
+      "themeId": "alcohol",
+      "emotionId": "cinico_humor",
+      "weight": 0.5
+    },
+    {
+      "themeId": "soledad_urbana",
+      "emotionId": "cinico_humor",
+      "weight": 0.5
+    },
+    {
+      "themeId": "soledad_urbana",
+      "emotionId": "nostalgia",
+      "weight": 0.5
+    },
+    {
+      "themeId": "supervivencia",
+      "emotionId": "nostalgia",
+      "weight": 0.5
+    }
+  ],
+  "themeToConflict": [
+    {
+      "themeId": "alcohol",
+      "conflictId": "auto_sabotaje",
+      "weight": 0.6
+    },
+    {
+      "themeId": "soledad_urbana",
+      "conflictId": "deudas",
+      "weight": 0.6
+    },
+    {
+      "themeId": "supervivencia",
+      "conflictId": "relaciones_toxicas",
+      "weight": 0.6
+    }
+  ],
+  "archetypeToTheme": [
+    {
+      "archetypeId": "poeta_fracasado",
+      "themeId": "alcohol",
+      "weight": 0.7
+    },
+    {
+      "archetypeId": "camarero_filosofo",
+      "themeId": "soledad_urbana",
+      "weight": 0.7
+    },
+    {
+      "archetypeId": "apostador",
+      "themeId": "supervivencia",
+      "weight": 0.7
+    }
+  ]
+}

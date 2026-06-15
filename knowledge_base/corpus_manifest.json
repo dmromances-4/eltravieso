@@ -1,0 +1,1916 @@
+{
+  "generatedAt": "2026-06-15T09:17:56.249Z",
+  "corpusPath": "/Users/daniromances/Documents/Proyects/eltravieso/corpus/epubs",
+  "sources": [
+    {
+      "file": "On Drinking by Charles Bukowski.epub",
+      "title": "On Drinking",
+      "author": "Charles Bukowski",
+      "chunkCount": 96
+    },
+    {
+      "file": "Women - Charles Bukowski.epub",
+      "title": "Women",
+      "author": "Charles Bukowski",
+      "chunkCount": 141
+    }
+  ],
+  "chunks": [
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-0-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 0,
+      "wordCount": 442
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-1-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 1,
+      "wordCount": 347
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-2-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 2,
+      "wordCount": 163
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-3-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 3,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-3-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 3,
+      "wordCount": 819
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-4-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 4,
+      "wordCount": 162
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-5-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 5,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-5-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 5,
+      "wordCount": 259
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-6-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 6,
+      "wordCount": 627
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-7-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 7,
+      "wordCount": 349
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-8-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 8,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-8-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 8,
+      "wordCount": 461
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-9-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 9,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-9-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 9,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-9-part-2",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 9,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-9-part-3",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 9,
+      "wordCount": 1149
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-10-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 10,
+      "wordCount": 369
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-11-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 11,
+      "wordCount": 368
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-12-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 12,
+      "wordCount": 127
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-13-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 13,
+      "wordCount": 91
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-14-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 14,
+      "wordCount": 280
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-15-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 15,
+      "wordCount": 428
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-16-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 16,
+      "wordCount": 669
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-17-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 17,
+      "wordCount": 109
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-18-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 18,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-18-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 18,
+      "wordCount": 418
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-19-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 19,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-19-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 19,
+      "wordCount": 427
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-20-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 20,
+      "wordCount": 479
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-21-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 21,
+      "wordCount": 218
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-22-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 22,
+      "wordCount": 266
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-23-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 23,
+      "wordCount": 99
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-24-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 24,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-24-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 24,
+      "wordCount": 1004
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-25-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 25,
+      "wordCount": 329
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-26-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 26,
+      "wordCount": 137
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-27-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 27,
+      "wordCount": 294
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-28-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 28,
+      "wordCount": 766
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-29-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 29,
+      "wordCount": 693
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-30-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 30,
+      "wordCount": 174
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-31-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 31,
+      "wordCount": 190
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-32-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 32,
+      "wordCount": 231
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-33-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 33,
+      "wordCount": 265
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-34-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 34,
+      "wordCount": 222
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-35-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 35,
+      "wordCount": 459
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-36-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 36,
+      "wordCount": 284
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-37-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 37,
+      "wordCount": 558
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-38-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 38,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-38-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 38,
+      "wordCount": 276
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-39-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 39,
+      "wordCount": 215
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-40-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 40,
+      "wordCount": 1064
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-41-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 41,
+      "wordCount": 234
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-42-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 42,
+      "wordCount": 133
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-43-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 43,
+      "wordCount": 293
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-44-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 44,
+      "wordCount": 291
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-45-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 45,
+      "wordCount": 233
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-46-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 46,
+      "wordCount": 585
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-47-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 47,
+      "wordCount": 552
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-48-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 48,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-48-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 48,
+      "wordCount": 300
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-49-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 49,
+      "wordCount": 473
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-50-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 50,
+      "wordCount": 239
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-51-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 51,
+      "wordCount": 267
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-52-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 52,
+      "wordCount": 331
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-53-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 53,
+      "wordCount": 585
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-54-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 54,
+      "wordCount": 158
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-55-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 55,
+      "wordCount": 188
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-56-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 56,
+      "wordCount": 108
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-57-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 57,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-57-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 57,
+      "wordCount": 36
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-58-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 58,
+      "wordCount": 524
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-59-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 59,
+      "wordCount": 173
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-60-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 60,
+      "wordCount": 563
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-61-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 61,
+      "wordCount": 178
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-62-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 62,
+      "wordCount": 305
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-63-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 63,
+      "wordCount": 668
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-64-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 64,
+      "wordCount": 457
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-65-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 65,
+      "wordCount": 672
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-66-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 66,
+      "wordCount": 275
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-67-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 67,
+      "wordCount": 344
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-68-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 68,
+      "wordCount": 503
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-69-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 69,
+      "wordCount": 308
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-70-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 70,
+      "wordCount": 820
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-71-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 71,
+      "wordCount": 338
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-72-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 72,
+      "wordCount": 502
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-73-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 73,
+      "wordCount": 219
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-74-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 74,
+      "wordCount": 213
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-75-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 75,
+      "wordCount": 1162
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-76-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 76,
+      "wordCount": 215
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-77-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 77,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-77-part-1",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 77,
+      "wordCount": 336
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-78-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 78,
+      "wordCount": 159
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-79-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 79,
+      "wordCount": 151
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-80-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 80,
+      "wordCount": 317
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-81-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 81,
+      "wordCount": 111
+    },
+    {
+      "chunkId": "on-drinking-by-charles-bukowski-ch-82-part-0",
+      "sourceFile": "On Drinking by Charles Bukowski.epub",
+      "sourceTitle": "On Drinking",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 82,
+      "wordCount": 96
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-0-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 0,
+      "wordCount": 93
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-1-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 1,
+      "wordCount": 91
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-2-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 2,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-2-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 2,
+      "wordCount": 110
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-3-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 3,
+      "wordCount": 802
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-4-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 4,
+      "wordCount": 834
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-5-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 5,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-5-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 5,
+      "wordCount": 163
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-6-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 6,
+      "wordCount": 1034
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-7-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 7,
+      "wordCount": 1033
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-8-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 8,
+      "wordCount": 1183
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-9-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 9,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-9-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 9,
+      "wordCount": 337
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-10-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 10,
+      "wordCount": 786
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-11-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 11,
+      "wordCount": 405
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-12-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 12,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-12-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 12,
+      "wordCount": 144
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-13-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 13,
+      "wordCount": 829
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-14-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 14,
+      "wordCount": 452
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-15-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 15,
+      "wordCount": 342
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-16-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 16,
+      "wordCount": 681
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-17-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 17,
+      "wordCount": 882
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-18-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 18,
+      "wordCount": 697
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-19-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 19,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-19-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 19,
+      "wordCount": 346
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-20-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 20,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-20-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 20,
+      "wordCount": 1082
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-21-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 21,
+      "wordCount": 966
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-22-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 22,
+      "wordCount": 768
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-23-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 23,
+      "wordCount": 768
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-24-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 24,
+      "wordCount": 954
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-25-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 25,
+      "wordCount": 192
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-26-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 26,
+      "wordCount": 630
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-27-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 27,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-27-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 27,
+      "wordCount": 151
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-28-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 28,
+      "wordCount": 312
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-29-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 29,
+      "wordCount": 474
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-30-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 30,
+      "wordCount": 324
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-31-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 31,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-31-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 31,
+      "wordCount": 1181
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-32-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 32,
+      "wordCount": 939
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-33-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 33,
+      "wordCount": 972
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-34-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 34,
+      "wordCount": 437
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-35-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 35,
+      "wordCount": 256
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-36-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 36,
+      "wordCount": 882
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-37-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 37,
+      "wordCount": 716
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-38-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 38,
+      "wordCount": 945
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-39-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 39,
+      "wordCount": 746
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-40-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 40,
+      "wordCount": 539
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-41-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 41,
+      "wordCount": 196
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-42-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 42,
+      "wordCount": 338
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-43-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 43,
+      "wordCount": 285
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-44-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 44,
+      "wordCount": 389
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-45-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 45,
+      "wordCount": 487
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-46-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 46,
+      "wordCount": 424
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-47-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 47,
+      "wordCount": 844
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-48-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 48,
+      "wordCount": 209
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-49-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 49,
+      "wordCount": 259
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-50-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 50,
+      "wordCount": 394
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-51-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 51,
+      "wordCount": 190
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-52-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 52,
+      "wordCount": 516
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-53-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 53,
+      "wordCount": 268
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-54-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 54,
+      "wordCount": 1032
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-55-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 55,
+      "wordCount": 678
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-56-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 56,
+      "wordCount": 182
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-57-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 57,
+      "wordCount": 390
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-58-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 58,
+      "wordCount": 527
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-59-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 59,
+      "wordCount": 788
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-60-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 60,
+      "wordCount": 225
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-61-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 61,
+      "wordCount": 696
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-62-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 62,
+      "wordCount": 480
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-63-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 63,
+      "wordCount": 286
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-64-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 64,
+      "wordCount": 579
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-65-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 65,
+      "wordCount": 1130
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-66-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 66,
+      "wordCount": 480
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-67-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 67,
+      "wordCount": 274
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-68-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 68,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-68-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 68,
+      "wordCount": 14
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-69-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 69,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-69-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 69,
+      "wordCount": 453
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-70-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 70,
+      "wordCount": 794
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-71-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 71,
+      "wordCount": 1129
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-72-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 72,
+      "wordCount": 449
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-73-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 73,
+      "wordCount": 602
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-74-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 74,
+      "wordCount": 589
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-75-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 75,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-75-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 75,
+      "wordCount": 327
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-76-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 76,
+      "wordCount": 218
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-77-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 77,
+      "wordCount": 302
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-78-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 78,
+      "wordCount": 401
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-79-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 79,
+      "wordCount": 489
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-80-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 80,
+      "wordCount": 364
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-81-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 81,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-81-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 81,
+      "wordCount": 119
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-82-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 82,
+      "wordCount": 480
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-83-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 83,
+      "wordCount": 393
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-84-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 84,
+      "wordCount": 827
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-85-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 85,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-85-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 85,
+      "wordCount": 262
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-86-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 86,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-86-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 86,
+      "wordCount": 735
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-87-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 87,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-87-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 87,
+      "wordCount": 19
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-88-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 88,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-88-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 88,
+      "wordCount": 49
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-89-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 89,
+      "wordCount": 1101
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-90-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 90,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-90-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 90,
+      "wordCount": 484
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-91-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 91,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-91-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 91,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-91-part-2",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 91,
+      "wordCount": 139
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-92-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 92,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-92-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 92,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-92-part-2",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 92,
+      "wordCount": 368
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-93-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 93,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-93-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 93,
+      "wordCount": 401
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-94-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 94,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-94-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 94,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-94-part-2",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 94,
+      "wordCount": 1042
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-95-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 95,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-95-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 95,
+      "wordCount": 114
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-96-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 96,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-96-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 96,
+      "wordCount": 255
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-97-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 97,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-97-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 97,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-97-part-2",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 97,
+      "wordCount": 7
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-98-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 98,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-98-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 98,
+      "wordCount": 280
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-99-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 99,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-99-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 99,
+      "wordCount": 711
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-100-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 100,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-100-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 100,
+      "wordCount": 415
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-101-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 101,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-101-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 101,
+      "wordCount": 125
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-102-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 102,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-102-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 102,
+      "wordCount": 754
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-103-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 103,
+      "wordCount": 243
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-104-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 104,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-104-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 104,
+      "wordCount": 123
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-105-part-0",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 105,
+      "wordCount": 1200
+    },
+    {
+      "chunkId": "women-charles-bukowski-ch-105-part-1",
+      "sourceFile": "Women - Charles Bukowski.epub",
+      "sourceTitle": "Women",
+      "sourceAuthor": "Charles Bukowski",
+      "chapterIndex": 105,
+      "wordCount": 561
+    }
+  ]
+}

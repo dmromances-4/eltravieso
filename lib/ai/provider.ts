@@ -1,4 +1,6 @@
-import { resolveTextProvider, type AiTextProvider } from "@/lib/ai/availability";
+import type { AiTextProvider } from "@/lib/ai/availability";
+import { resolveTextProvider } from "@/lib/ai/availability";
+import { readEnvKey } from "@/lib/recipes/cover-env";
 
 type GoogleGenAI = any;
 
@@ -26,9 +28,9 @@ function detectImageProvider(): ImageProvider {
   if (explicit && ["gemini", "openai", "huggingface"].includes(explicit)) {
     return explicit as ImageProvider;
   }
-  if (process.env.GEMINI_API_KEY) return "gemini";
-  if (process.env.OPENAI_API_KEY) return "openai";
-  if (process.env.HUGGINGFACE_API_KEY) return "huggingface";
+  if (readEnvKey("GEMINI_API_KEY")) return "gemini";
+  if (readEnvKey("OPENAI_API_KEY")) return "openai";
+  if (readEnvKey("HUGGINGFACE_API_KEY")) return "huggingface";
   return "gemini"; // default
 }
 
@@ -36,17 +38,21 @@ function detectImageProvider(): ImageProvider {
 // https://aistudio.google.com/ — No credit card required
 // ~1,500 RPD, 15-30 RPM, 1M TPM on Flash models
 
-function getGeminiClient(): GoogleGenAI {
-  const apiKey = process.env.GEMINI_API_KEY;
+let geminiClientCache: GoogleGenAI | null = null;
+let geminiClientKey: string | null = null;
+
+async function getGeminiClient(): Promise<GoogleGenAI> {
+  const apiKey = readEnvKey("GEMINI_API_KEY");
   if (!apiKey) throw new Error("Missing GEMINI_API_KEY. Get a free key at https://aistudio.google.com/");
-  // Lazy import to avoid hard crash when package is not installed
-  // eslint-disable-next-line
-  const { GoogleGenAI } = require("@google/genai");
-  return new GoogleGenAI({ apiKey });
+  if (geminiClientCache && geminiClientKey === apiKey) return geminiClientCache;
+  const { GoogleGenAI } = await import("@google/genai");
+  geminiClientCache = new GoogleGenAI({ apiKey });
+  geminiClientKey = apiKey;
+  return geminiClientCache;
 }
 
 async function geminiGenerateText(prompt: string, opts: { maxTokens?: number } = {}): Promise<TextResponse> {
-  const client = getGeminiClient();
+  const client = await getGeminiClient();
   const model = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
 
   const response = await client.models.generateContent({
@@ -62,23 +68,51 @@ async function geminiGenerateText(prompt: string, opts: { maxTokens?: number } =
 }
 
 async function geminiGenerateImage(prompt: string): Promise<ImageResponse> {
-  const client = getGeminiClient();
-  const model = process.env.GEMINI_IMAGE_MODEL ?? "imagen-3.0-generate-001";
+  const client = await getGeminiClient();
+  const imagenModel = process.env.GEMINI_IMAGE_MODEL ?? "imagen-4.0-fast-generate-001";
 
-  const response = await client.models.generateImages({
-    model,
-    prompt,
-    config: {
-      numberOfImages: 1,
-    },
-  });
+  try {
+    const response = await client.models.generateImages({
+      model: imagenModel,
+      prompt,
+      config: {
+        numberOfImages: 1,
+      },
+    });
 
-  const imageBytes = response?.generatedImages?.[0]?.image?.imageBytes;
-  if (!imageBytes) {
-    throw new Error("Gemini image generation returned no image data.");
+    const imageBytes = response?.generatedImages?.[0]?.image?.imageBytes;
+    if (!imageBytes) {
+      throw new Error("Gemini image generation returned no image data.");
+    }
+
+    return { url: `data:image/png;base64,${imageBytes}` };
+  } catch (imagenError: any) {
+    const msg = imagenError?.message ?? String(imagenError);
+    const useFlashImage =
+      /paid plans|INVALID_ARGUMENT|404|not found/i.test(msg) ||
+      process.env.GEMINI_IMAGE_MODEL?.includes("flash-image");
+    if (!useFlashImage) throw imagenError;
+
+    console.warn(`[AI] Imagen unavailable (${msg.slice(0, 80)}…). Trying gemini-2.5-flash-image…`);
+
+    const flashModel = process.env.GEMINI_FLASH_IMAGE_MODEL ?? "gemini-2.5-flash-image";
+    const response = await client.models.generateContent({
+      model: flashModel,
+      contents: prompt,
+      config: {
+        responseModalities: ["IMAGE", "TEXT"],
+      },
+    });
+
+    const parts = response.candidates?.[0]?.content?.parts ?? [];
+    const inline = parts.find((part: { inlineData?: { data?: string; mimeType?: string } }) => part.inlineData?.data);
+    if (!inline?.inlineData?.data) {
+      throw new Error("Gemini flash-image returned no image data.");
+    }
+
+    const mime = inline.inlineData.mimeType ?? "image/png";
+    return { url: `data:${mime};base64,${inline.inlineData.data}` };
   }
-
-  return { url: `data:image/png;base64,${imageBytes}` };
 }
 
 // ─── Groq (FREE — ultra-fast LPU inference) ───────────────────────────
@@ -135,6 +169,73 @@ async function openaiGenerateImage(prompt: string): Promise<ImageResponse> {
   const r = await client.images.generate({ model: process.env.OPENAI_IMAGE_MODEL ?? "gpt-image-1", prompt });
   const url = r.data?.[0]?.url ?? (r.data?.[0]?.b64_json ? `data:image/png;base64,${r.data[0].b64_json}` : "");
   return { url };
+}
+
+async function openaiGenerateImageWithReference(prompt: string, referenceBuffer: Buffer): Promise<ImageResponse> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
+  // eslint-disable-next-line
+  const OpenAI = require("openai").default;
+  // eslint-disable-next-line
+  const { toFile } = require("openai");
+  const client = new OpenAI({ apiKey });
+  const file = await toFile(referenceBuffer, "reference.png", { type: "image/png" });
+  const r = await client.images.edit({
+    model: process.env.OPENAI_IMAGE_MODEL ?? "gpt-image-1",
+    image: file,
+    prompt,
+  });
+  const url = r.data?.[0]?.url ?? (r.data?.[0]?.b64_json ? `data:image/png;base64,${r.data[0].b64_json}` : "");
+  if (!url) throw new Error("OpenAI image edit returned no image data.");
+  return { url };
+}
+
+async function geminiAnalyzeImage(imageBuffer: Buffer, prompt: string, mime = "image/jpeg"): Promise<TextResponse> {
+  const client = await getGeminiClient();
+  const model = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
+
+  const response = await client.models.generateContent({
+    model,
+    contents: [
+      {
+        role: "user",
+        parts: [
+          { inlineData: { mimeType: mime, data: imageBuffer.toString("base64") } },
+          { text: prompt },
+        ],
+      },
+    ],
+    config: {
+      maxOutputTokens: 400,
+    },
+  });
+
+  return { text: response.text ?? "" };
+}
+
+async function openaiAnalyzeImage(imageBuffer: Buffer, prompt: string, mime = "image/jpeg"): Promise<TextResponse> {
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
+  // eslint-disable-next-line
+  const OpenAI = require("openai").default;
+  const client = new OpenAI({ apiKey });
+  const dataUrl = `data:${mime};base64,${imageBuffer.toString("base64")}`;
+  const response = await client.chat.completions.create({
+    model: process.env.OPENAI_MODEL ?? "gpt-4o-mini",
+    messages: [
+      {
+        role: "user",
+        content: [
+          { type: "text", text: prompt },
+          { type: "image_url", image_url: { url: dataUrl } },
+        ],
+      },
+    ],
+    max_tokens: 400,
+  } as any);
+
+  const text = response.choices?.[0]?.message?.content ?? "";
+  return { text: typeof text === "string" ? text : JSON.stringify(text) };
 }
 
 // ─── HuggingFace (FREE — limited quality) ─────────────────────────────
@@ -267,9 +368,9 @@ export async function generateImage(prompt: string): Promise<ImageResponse> {
     if (fallback === primary) continue;
 
     const keyMap: Record<ImageProvider, string | undefined> = {
-      gemini: process.env.GEMINI_API_KEY,
-      openai: process.env.OPENAI_API_KEY,
-      huggingface: process.env.HUGGINGFACE_API_KEY,
+      gemini: readEnvKey("GEMINI_API_KEY"),
+      openai: readEnvKey("OPENAI_API_KEY"),
+      huggingface: readEnvKey("HUGGINGFACE_API_KEY"),
     };
     if (!keyMap[fallback]) continue;
 
@@ -286,5 +387,101 @@ export async function generateImage(prompt: string): Promise<ImageResponse> {
   );
 }
 
-const aiProvider = { generateText, generateImage };
+const FREE_IMAGE_FALLBACK_ORDER: ImageProvider[] = ["gemini", "huggingface"];
+
+/** Image generation for recipe covers — Gemini (free) then HuggingFace only. No paid APIs. */
+export async function generateFreeImage(prompt: string): Promise<ImageResponse> {
+  if (process.env.AI_MOCK === "true") {
+    const placeholder =
+      "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGNgYAAAAAMAAWgmWQ0AAAAASUVORK5CYII=";
+    return { url: placeholder };
+  }
+
+  for (const provider of FREE_IMAGE_FALLBACK_ORDER) {
+    const keyMap: Record<ImageProvider, string | undefined> = {
+      gemini: readEnvKey("GEMINI_API_KEY"),
+      openai: readEnvKey("OPENAI_API_KEY"),
+      huggingface: readEnvKey("HUGGINGFACE_API_KEY"),
+    };
+    if (!keyMap[provider]) continue;
+
+    try {
+      return await IMAGE_GENERATORS[provider](prompt);
+    } catch (error: any) {
+      console.warn(`[AI] Free image provider "${provider}" failed: ${error.message}`);
+    }
+  }
+
+  throw new Error(
+    "Portadas gratuitas requieren GEMINI_API_KEY (Imagen 4 en AI Studio) o HUGGINGFACE_API_KEY como fallback.",
+  );
+}
+
+/** Vision for recipe covers — Gemini only (free tier). */
+export async function analyzeImageForRecipeCover(
+  imageBuffer: Buffer,
+  prompt: string,
+  mime = "image/jpeg",
+): Promise<TextResponse> {
+  if (process.env.AI_MOCK === "true") {
+    return { text: "Mock reference: moody bar lighting, coupe glass, amber liquid, citrus garnish." };
+  }
+
+  if (!readEnvKey("GEMINI_API_KEY")) {
+    throw new Error("Portadas con referencia requieren GEMINI_API_KEY (visión + Imagen, gratis en AI Studio).");
+  }
+
+  return geminiAnalyzeImage(imageBuffer, prompt, mime);
+}
+
+/** Describe a reference photo for recipe-aware image prompts (vision). */
+export async function analyzeImageForRecipePrompt(
+  imageBuffer: Buffer,
+  prompt: string,
+  mime = "image/jpeg",
+): Promise<TextResponse> {
+  if (process.env.AI_MOCK === "true") {
+    return { text: "Mock reference: moody bar lighting, coupe glass, amber liquid, citrus garnish." };
+  }
+
+  if (readEnvKey("GEMINI_API_KEY")) {
+    try {
+      return await geminiAnalyzeImage(imageBuffer, prompt, mime);
+    } catch (error: any) {
+      console.warn(`[AI] Gemini vision failed: ${error.message}`);
+    }
+  }
+
+  if (readEnvKey("OPENAI_API_KEY")) {
+    return openaiAnalyzeImage(imageBuffer, prompt, mime);
+  }
+
+  throw new Error("Vision analysis requires GEMINI_API_KEY or OPENAI_API_KEY.");
+}
+
+/** Generate image using a reference photo (OpenAI edit, paid). Not used by recipe cover pipeline. */
+export async function generateImageWithReference(prompt: string, referenceBuffer: Buffer): Promise<ImageResponse> {
+  if (process.env.AI_MOCK === "true") {
+    return generateImage(prompt);
+  }
+
+  if (process.env.OPENAI_API_KEY) {
+    try {
+      return await openaiGenerateImageWithReference(prompt, referenceBuffer);
+    } catch (error: any) {
+      console.warn(`[AI] OpenAI reference edit failed: ${error.message}. Falling back to text-only.`);
+    }
+  }
+
+  return generateImage(prompt);
+}
+
+const aiProvider = {
+  generateText,
+  generateImage,
+  generateFreeImage,
+  analyzeImageForRecipePrompt,
+  analyzeImageForRecipeCover,
+  generateImageWithReference,
+};
 export default aiProvider;

@@ -1,0 +1,56 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.874Z",
+  "quotas": [
+    {
+      "categoryId": "bars",
+      "targetCount": 300,
+      "label": "Historias de bares"
+    },
+    {
+      "categoryId": "impossible_love",
+      "targetCount": 250,
+      "label": "Historias románticas"
+    },
+    {
+      "categoryId": "urban_stories",
+      "targetCount": 250,
+      "label": "Historias urbanas"
+    },
+    {
+      "categoryId": "melancholy",
+      "targetCount": 250,
+      "label": "Historias melancólicas"
+    },
+    {
+      "categoryId": "black_humor",
+      "targetCount": 200,
+      "label": "Historias humorísticas"
+    },
+    {
+      "categoryId": "absurd_stories",
+      "targetCount": 200,
+      "label": "Historias surrealistas"
+    },
+    {
+      "categoryId": "musicians",
+      "targetCount": 150,
+      "label": "Historias de músicos"
+    },
+    {
+      "categoryId": "gamblers",
+      "targetCount": 150,
+      "label": "Historias de apuestas"
+    },
+    {
+      "categoryId": "poets",
+      "targetCount": 150,
+      "label": "Historias de escritores"
+    },
+    {
+      "categoryId": "night_stories",
+      "targetCount": 100,
+      "label": "Historias experimentales"
+    }
+  ],
+  "totalTarget": 2000
+}

@@ -5,9 +5,11 @@ export async function getDisallows(origin: string, userAgent: string): Promise<s
 
   const disallows: string[] = [];
   try {
-    const res = await fetch(`${origin}/robots.txt`, {
-      headers: { "User-Agent": userAgent },
-    });
+    const res = await fetchWithTimeout(
+      `${origin}/robots.txt`,
+      { headers: { "User-Agent": userAgent } },
+      diffordsTimeoutMs(),
+    );
     if (res.ok) {
       const text = await res.text();
       let appliesToUs = true;

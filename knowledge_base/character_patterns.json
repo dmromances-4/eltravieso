@@ -1,0 +1,128 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.869Z",
+  "motivations": [
+    {
+      "id": "escapar_del_aburrimiento",
+      "label": "escapar del aburrimiento",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    },
+    {
+      "id": "buscar_una_senal",
+      "label": "buscar una señal",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    }
+  ],
+  "failures": [
+    {
+      "id": "no_sostener_relaciones",
+      "label": "no sostener relaciones",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    },
+    {
+      "id": "autodestruccion",
+      "label": "autodestrucción",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    }
+  ],
+  "desires": [
+    {
+      "id": "ser_visto",
+      "label": "ser visto",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    },
+    {
+      "id": "un_trago_mas",
+      "label": "un trago más",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    }
+  ],
+  "obsessions": [
+    {
+      "id": "alcohol",
+      "label": "alcohol",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    },
+    {
+      "id": "escritura",
+      "label": "escritura",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    },
+    {
+      "id": "mujeres",
+      "label": "mujeres",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "examples": []
+    }
+  ]
+}

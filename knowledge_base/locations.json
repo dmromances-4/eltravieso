@@ -1,0 +1,62 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.867Z",
+  "items": [
+    {
+      "id": "bar_de_barrio",
+      "label": "bar de barrio",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "atmosphere": "nocturna y humilde",
+      "timeOfDay": "noche",
+      "sensoryTags": [
+        "humo",
+        "neón",
+        "madera húmeda"
+      ]
+    },
+    {
+      "id": "habitacion_alquilada",
+      "label": "habitación alquilada",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "atmosphere": "nocturna y humilde",
+      "timeOfDay": "noche",
+      "sensoryTags": [
+        "humo",
+        "neón",
+        "madera húmeda"
+      ]
+    },
+    {
+      "id": "calle_de_noche",
+      "label": "calle de noche",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "atmosphere": "nocturna y humilde",
+      "timeOfDay": "noche",
+      "sensoryTags": [
+        "humo",
+        "neón",
+        "madera húmeda"
+      ]
+    }
+  ]
+}

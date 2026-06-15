@@ -6,6 +6,8 @@
 
 | Documento | Contenido |
 |-----------|-----------|
+| [AUDITORIA-TECNICA.md](./AUDITORIA-TECNICA.md) | Auditoría técnica exhaustiva (arquitectura, funcional, APIs, seguridad, 16 secciones) |
+| [MEMORIA-CODIGO.md](./MEMORIA-CODIGO.md) | Memoria del proyecto en lenguaje accesible + comandos |
 | [AGENTS.md](../AGENTS.md) | Guía principal (setup, módulos, calidad, seguridad) |
 | [.github/copilot-instructions.md](../.github/copilot-instructions.md) | Convenciones de código y archivos clave |
 | [.cursor/rules/](../.cursor/rules/) | Reglas Cursor por módulo (`.mdc`) |
@@ -22,6 +24,11 @@
 | [INTEGRACIONES.md](./INTEGRACIONES.md) | Shopify, Holded, Square, TPV |
 | [SCHEMA_ROADMAP.md](./SCHEMA_ROADMAP.md) | Modelos Prisma y superficies UI |
 | [RECETAS-LIBRO-ESTILO.md](./RECETAS-LIBRO-ESTILO.md) | Estilo editorial del catálogo |
+| [PORTADAS-RECETAS.md](./PORTADAS-RECETAS.md) | Portadas 100% gratuitas: Pexels/Unsplash + Gemini |
+| [SECRETOS.md](./SECRETOS.md) | Claves API, rotación, `npm run check:env` |
+| [GUIA-REFERENCIA-ANIMACION.md](./GUIA-REFERENCIA-ANIMACION.md) | Cartoon clásico 60s–80s: análisis, prompts IA, integración recipe-videos |
+| [VIDEOS-RECETAS.md](./VIDEOS-RECETAS.md) | Pipeline Remotion: beats, CLI, principios cartoon |
+| [story-universe/01_universe_overview.md](./story-universe/01_universe_overview.md) | Motor narrativo cócteles → historias → animación |
 | [FICHAS-COCTEL.md](./FICHAS-COCTEL.md) | Fichas editoriales Figma + Notion (+ Canva) |
 | [CAMPANAS.md](./CAMPANAS.md) | Campañas email / SMS / WhatsApp desde admin |
 | [PANTALLA.md](./PANTALLA.md) | Hub media: TMDB, podcasts RSS, directo, eventos |

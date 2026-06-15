@@ -2,7 +2,7 @@
 CREATE TYPE "MembershipStatus" AS ENUM ('NONE', 'ACTIVE', 'PAST_DUE', 'CANCELLED');
 
 -- CreateEnum
-CREATE TYPE "ProductSource" AS ENUM ('PROPIO', 'MARKETPLACE');
+CREATE TYPE "ProductSource" AS ENUM ('PROPIO', 'MARKETPLACE', 'AFILIADO');
 
 -- CreateEnum
 CREATE TYPE "MapPlanTier" AS ENUM ('FREE', 'FEATURED', 'BOOKING_PLUS');

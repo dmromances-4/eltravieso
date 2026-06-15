@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.866Z",
+  "items": [
+    {
+      "id": "poeta_fracasado",
+      "label": "poeta fracasado",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "traits": [],
+      "typicalConflicts": [],
+      "visualCues": []
+    },
+    {
+      "id": "camarero_filosofo",
+      "label": "camarero filósofo",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "traits": [],
+      "typicalConflicts": [],
+      "visualCues": []
+    },
+    {
+      "id": "apostador",
+      "label": "apostador",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "traits": [],
+      "typicalConflicts": [],
+      "visualCues": []
+    }
+  ]
+}

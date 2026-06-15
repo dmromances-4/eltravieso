@@ -1,0 +1,50 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.865Z",
+  "items": [
+    {
+      "id": "melancolia",
+      "label": "melancolía",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "valence": "negative",
+      "intensity": 1,
+      "pairedThemes": []
+    },
+    {
+      "id": "cinico_humor",
+      "label": "cínico humor",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "valence": "mixed",
+      "intensity": 1,
+      "pairedThemes": []
+    },
+    {
+      "id": "nostalgia",
+      "label": "nostalgia",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "valence": "neutral",
+      "intensity": 1,
+      "pairedThemes": []
+    }
+  ]
+}

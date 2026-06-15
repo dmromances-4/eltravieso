@@ -1,9 +1,10 @@
 import fs from "fs";
 import path from "path";
-import { isUrlAllowed } from "@/lib/scrape/robots";
+import { diffordsTimeoutMs, fetchWithTimeout } from "@/lib/recipes/fetch-with-timeout";
 import { parseDiffordsRecipePage } from "@/lib/diffords/parse-recipe-page";
 import type { DiffordsRecipe } from "@/lib/diffords/types";
 import { extractDiffordsIdFromUrl } from "@/lib/diffords/ids";
+import { isUrlAllowed } from "@/lib/scrape/robots";
 
 export const DIFFORDS_USER_AGENT = "ElTraviesoBot/1.0 (+auditoria-recetas-interna)";
 const RATE_MS = Number(process.env.RATE_MS ?? 2000);
@@ -29,7 +30,11 @@ async function throttle() {
   lastFetchAt = Date.now();
 }
 
-async function fetchHtml(url: string, forceFetch = false): Promise<string> {
+async function fetchHtml(
+  url: string,
+  forceFetch = false,
+  maxAttempts = 3,
+): Promise<string> {
   const allowed = await isUrlAllowed(url, DIFFORDS_USER_AGENT);
   if (!allowed) {
     throw new Error(`URL bloqueada por robots.txt: ${url}`);
@@ -43,14 +48,18 @@ async function fetchHtml(url: string, forceFetch = false): Promise<string> {
   await throttle();
 
   let lastError: unknown;
-  for (let attempt = 0; attempt < 3; attempt += 1) {
+  for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
     try {
-      const res = await fetch(url, {
-        headers: {
-          "User-Agent": DIFFORDS_USER_AGENT,
-          Accept: "text/html,application/xhtml+xml",
+      const res = await fetchWithTimeout(
+        url,
+        {
+          headers: {
+            "User-Agent": DIFFORDS_USER_AGENT,
+            Accept: "text/html,application/xhtml+xml",
+          },
         },
-      });
+        diffordsTimeoutMs(),
+      );
 
       if (res.status === 429 || res.status === 503) {
         await sleep(RATE_MS * (attempt + 2));
@@ -72,6 +81,16 @@ async function fetchHtml(url: string, forceFetch = false): Promise<string> {
   }
 
   throw lastError instanceof Error ? lastError : new Error(String(lastError));
+}
+
+/** HTML en caché o remoto (robots + throttle). Reutilizable para extraer og:image. */
+export async function fetchDiffordsHtml(
+  sourceUrl: string,
+  forceFetch = false,
+  maxAttempts = 3,
+): Promise<string> {
+  const normalized = sourceUrl.startsWith("http") ? sourceUrl : `${ORIGIN}${sourceUrl}`;
+  return fetchHtml(normalized, forceFetch, maxAttempts);
 }
 
 export async function fetchDiffordsRecipe(

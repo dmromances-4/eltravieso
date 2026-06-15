@@ -13,6 +13,7 @@ export interface CocktailRecord {
   abv: string;
   kcal: number;
   cover: string;
+  coverAttribution?: string;
   reviewStatus?: RecipeReviewStatus;
   reviewedAt?: string;
   reviewNotes?: string;

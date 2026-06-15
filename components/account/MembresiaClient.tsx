@@ -37,6 +37,7 @@ type Props = {
   membershipExpiresAt: string | null;
   isVip: boolean;
   hasStripeCustomer: boolean;
+  paymentsEnabled?: boolean;
 };
 
 export default function MembresiaClient({
@@ -44,6 +45,7 @@ export default function MembresiaClient({
   membershipExpiresAt,
   isVip,
   hasStripeCustomer,
+  paymentsEnabled = true,
 }: Props) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -145,6 +147,12 @@ export default function MembresiaClient({
 
       {error ? <p className="font-mono text-sm text-electric-red">{error}</p> : null}
 
+      {!paymentsEnabled ? (
+        <div className="rounded-2xl border border-amber-500/40 bg-amber-500/10 px-4 py-3 text-sm text-amber-100">
+          Modo demo: la suscripción VIP con pago no está activa en este entorno. Puedes ver las ventajas del club, pero no contratar online.
+        </div>
+      ) : null}
+
       {isVip ? (
         <div className="space-y-4 rounded-2xl border border-white/10 bg-black/40 p-6">
           <h3 className="font-mono text-xs font-bold uppercase tracking-widest text-electric-yellow">
@@ -215,11 +223,11 @@ export default function MembresiaClient({
         {!isVip ? (
           <button
             type="button"
-            disabled={loading}
+            disabled={loading || !paymentsEnabled}
             onClick={subscribe}
             className="border-4 border-black bg-electric-red px-6 py-3 font-mono text-sm font-bold uppercase tracking-widest text-white shadow-[4px_4px_0px_#000000] hover:brightness-110 disabled:opacity-50"
           >
-            {loading ? "Redirigiendo…" : "15€/mes — Unirme"}
+            {loading ? "Redirigiendo…" : paymentsEnabled ? "15€/mes — Unirme" : "Suscripción no disponible (demo)"}
           </button>
         ) : null}
         {hasStripeCustomer ? (

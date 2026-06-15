@@ -1,0 +1,35 @@
+{
+  "generatedAt": "2026-06-15T09:18:07.871Z",
+  "items": [
+    {
+      "id": "respuestas_secas",
+      "label": "respuestas secas",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "register": "coloquial seco",
+      "rhythm": "frases cortas",
+      "subtextLevel": "high"
+    },
+    {
+      "id": "monologo_interior_breve",
+      "label": "monólogo interior breve",
+      "weight": 1,
+      "sourceChunks": [
+        "on-drinking-by-charles-bukowski-ch-0-part-0",
+        "on-drinking-by-charles-bukowski-ch-1-part-0",
+        "on-drinking-by-charles-bukowski-ch-2-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-0",
+        "on-drinking-by-charles-bukowski-ch-3-part-1"
+      ],
+      "register": "coloquial seco",
+      "rhythm": "frases cortas",
+      "subtextLevel": "high"
+    }
+  ]
+}

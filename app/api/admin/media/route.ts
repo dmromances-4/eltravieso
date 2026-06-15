@@ -1,3 +1,4 @@
+import type { Prisma } from "@prisma/client";
 import { NextResponse } from "next/server";
 import { requireAdminUser, adminApiErrorResponse } from "@/lib/auth/admin-api";
 import { ensureUniqueMediaSlug } from "@/lib/media/slug";
@@ -64,7 +65,7 @@ export async function POST(request: Request) {
         imdbId: body.imdbId ?? null,
         releaseYear: body.releaseYear ?? null,
         runtimeMins: body.runtimeMins ?? null,
-        metadata: body.metadata ?? undefined,
+        metadata: (body.metadata ?? undefined) as Prisma.InputJsonValue | undefined,
       },
     });
 
