@@ -892,6 +892,110 @@ model TechnicalSheet {
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
+// STORY UNIVERSE — Cocktail narrative franchise
+// ═══════════════════════════════════════════════════════════════════════════════
+
+enum StoryStatus {
+  DRAFT
+  QC_PASSED
+  QC_FAILED
+  APPROVED
+  SCRIPTED
+  STORYBOARDED
+  READY
+}
+
+model CocktailNarrativeProfile {
+  id               String   @id @default(cuid())
+  cocktailSlug     String   @unique
+  cocktailTitle    String
+  aromaticProfile  String[]
+  tasteProfile     String[]
+  color            String   @db.Text
+  intensity        Int      @default(3)
+  personality      String[]
+  symbolism        String[]
+  evokedSensations String[]
+  narrativeHooks   String[]
+  originHint       String?  @db.Text
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  stories Story[]
+
+  @@index([cocktailSlug])
+}
+
+model Story {
+  id                 String       @id @default(cuid())
+  storyId            String       @unique
+  title              String
+  logline            String       @db.Text
+  theme              String
+  subthemes          String[]
+  cocktailSlug       String
+  emotionProfile     Json
+  characterList      Json
+  locations          Json
+  conflict           Json
+  resolution         Json
+  visualIdentity     Json
+  animationPotential Float        @default(0.7)
+  categoryId         String
+  status             StoryStatus  @default(DRAFT)
+  qcScore            Float?
+  createdAt          DateTime     @default(now())
+  updatedAt          DateTime     @updatedAt
+
+  cocktailProfile CocktailNarrativeProfile @relation(fields: [cocktailSlug], references: [cocktailSlug])
+  script          StoryScript?
+  storyboard      StoryStoryboard?
+  animationPrompts StoryAnimationPrompt[]
+
+  @@index([cocktailSlug])
+  @@index([categoryId])
+  @@index([status])
+}
+
+model StoryScript {
+  id                   String   @id @default(cuid())
+  storyId              String   @unique
+  synopsis             String   @db.Text
+  treatment            String   @db.Text
+  screenplay           Json
+  estimatedRuntimeMins Int
+  wordCount            Int
+  createdAt            DateTime @default(now())
+  updatedAt            DateTime @updatedAt
+
+  story Story @relation(fields: [storyId], references: [id], onDelete: Cascade)
+}
+
+model StoryStoryboard {
+  id        String   @id @default(cuid())
+  storyId   String   @unique
+  scenes    Json
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  story Story @relation(fields: [storyId], references: [id], onDelete: Cascade)
+}
+
+model StoryAnimationPrompt {
+  id          String   @id @default(cuid())
+  storyId     String
+  sceneNumber Int
+  prompts     Json
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  story Story @relation(fields: [storyId], references: [id], onDelete: Cascade)
+
+  @@unique([storyId, sceneNumber])
+  @@index([storyId])
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
 // COMMUNITY — BLOG, FORUM, BAR ONLINE
 // ═══════════════════════════════════════════════════════════════════════════════
 

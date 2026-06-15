@@ -19,3 +19,14 @@ alwaysApply: false
 - Parser: `lib/diffords/` · comparación: `lib/recipes/compare-recipes.ts`
 - Throttle 2s al scrapear; caché en `.scrape-cache/diffords/`
 - Doc: `docs/AUDITORIA-RECETAS.md`
+
+## Portadas de recetas
+
+- CLI: `npm run generate:recipe-images` · orquestador: `lib/recipes/generate-recipe-image.ts`
+- Doc: `docs/PORTADAS-RECETAS.md`
+
+## Vídeos de recetas (Remotion)
+
+- CLI: `npm run render:recipe-videos` · `--discover-only` exporta beats + cartoon prompts · `--polish` refina pasos con IA
+- Timeline: `lib/recipes/video-timeline.ts` · prompts: `lib/animation/classic-cartoon-prompts.ts`
+- Doc: `docs/VIDEOS-RECETAS.md` · estilo cartoon: `docs/GUIA-REFERENCIA-ANIMACION.md` (§5)
