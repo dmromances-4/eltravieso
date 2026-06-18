@@ -1,3 +1,5 @@
+import { diffordsTimeoutMs, fetchWithTimeout } from "@/lib/recipes/fetch-with-timeout";
+
 const robotsCache = new Map<string, string[]>();
 
 export async function getDisallows(origin: string, userAgent: string): Promise<string[]> {

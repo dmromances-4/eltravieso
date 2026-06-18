@@ -204,7 +204,12 @@ function buildTarget(
 
 ): RecipeTarget {
 
-  const ingredientsRaw = parseStoredIngredients(recipe.ingredients);
+  const ingredientsRaw =
+    typeof recipe.ingredients === "string"
+      ? parseStoredIngredients(recipe.ingredients)
+      : recipe.ingredients
+        ? parseStoredIngredients(JSON.stringify(recipe.ingredients))
+        : [];
 
   const ingredients = ingredientsRaw.length ? ingredientsRaw : staticFallback?.ingredients ?? [];
 
