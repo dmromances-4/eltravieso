@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { Link, usePathname } from "@/i18n/navigation";
 import type { NavLinkItem } from "@/lib/navigation/groups";
 import { cn } from "@/lib/utils";
 
@@ -15,7 +14,9 @@ type NavGroupProps = {
 export function NavGroup({ label, links, className }: NavGroupProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const isActive = links.some((l) => pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href)));
+  const isActive = links.some(
+    (l) => pathname === l.href || (l.href !== "/" && pathname.startsWith(l.href)),
+  );
 
   return (
     <div
@@ -45,7 +46,9 @@ export function NavGroup({ label, links, className }: NavGroupProps) {
               href={link.href}
               className={cn(
                 "block px-4 py-2.5 text-sm transition-colors",
-                pathname === link.href ? "bg-electric-yellow/10 text-electric-yellow" : "text-slate-300 hover:bg-white/5 hover:text-white",
+                pathname === link.href
+                  ? "bg-electric-yellow/10 text-electric-yellow"
+                  : "text-slate-300 hover:bg-white/5 hover:text-white",
               )}
             >
               {link.name}

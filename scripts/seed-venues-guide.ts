@@ -2,12 +2,17 @@ import fs from "fs";
 import path from "path";
 import type { Prisma } from "@prisma/client";
 import prisma from "../lib/prisma";
-import { geocodeAddress } from "../lib/geocoding/nominatim";
+import { geocodeVenue } from "../lib/geocoding/nominatim";
 import { mergeVenueGuides } from "../lib/venues/merge-guide";
+import { ensureUniqueVenueCode } from "../lib/venues/venue-code";
 import { normalizeVenueKey } from "../lib/venues/unique-slug";
 import type { NormalizedVenueGuide } from "../lib/venues/types";
 
-const DATA_FILE = path.resolve(process.cwd(), "data", "venues-worlds50best.json");
+import type { SyncPhaseResult } from "../lib/catalog/sync-report";
+import { pathToFileURL } from "url";
+
+export const VENUES_DATA_FILE = path.resolve(process.cwd(), "data", "venues-worlds50best.json");
+const DATA_FILE = VENUES_DATA_FILE;
 const GEOCODE = process.env.SEED_VENUES_GEOCODE === "true";
 
 function normalizeName(value: string): string {
@@ -18,7 +23,12 @@ function normalizeName(value: string): string {
     .trim();
 }
 
-function venueToDbFields(venue: NormalizedVenueGuide, latitude: number | null, longitude: number | null) {
+function venueToDbFields(
+  venue: NormalizedVenueGuide,
+  latitude: number | null,
+  longitude: number | null,
+  geocodeConfidence: string | null,
+) {
   return {
     slug: venue.slug,
     name: venue.name,
@@ -32,18 +42,36 @@ function venueToDbFields(venue: NormalizedVenueGuide, latitude: number | null, l
     chefName: venue.chefName ?? null,
     worlds50bestRank: venue.worlds50bestRank,
     worlds50bestCategory: venue.worlds50bestCategory,
+    worlds50bestYear: venue.worlds50bestYear ?? null,
     continent: venue.continent ?? null,
     listScope: venue.listScope ?? "GLOBAL",
     regionalRank: venue.regionalRank ?? null,
     additionalRankings: (venue.additionalRankings ?? []) as Prisma.InputJsonValue,
     sourceUrl: venue.sourceUrl,
     externalWebsite: venue.externalWebsite ?? null,
+    googleBusinessId: venue.googleBusinessId ?? null,
     tripadvisorUrl: venue.tripadvisorUrl ?? null,
+    tripadvisorPlaceId: venue.tripadvisorPlaceId ?? null,
     tripadvisorRating: venue.tripadvisorRating ?? null,
+    venueCode: venue.venueCode ?? null,
     enrichmentSource: venue.enrichmentSource ?? "worlds50best",
     latitude,
     longitude,
+    geocodeConfidence,
     scrapedAt: new Date(),
+    establishmentTypes: venue.establishmentTypes ?? [],
+    cuisineTypes: venue.cuisineTypes ?? [],
+    starDishes: venue.starDishes ?? [],
+    idealFor: venue.idealFor ?? [],
+    venueFeatures: venue.venueFeatures ?? [],
+    neighborhood: venue.neighborhood ?? null,
+    priceRange: venue.priceRange ?? null,
+    dailyMenuEnabled: venue.dailyMenuEnabled ?? false,
+    dailyMenuNote: venue.dailyMenuNote ?? null,
+    awards: venue.awards ?? [],
+    venuePreferences: venue.venuePreferences ?? [],
+    instagramUrl: venue.instagramUrl ?? null,
+    tiktokUrl: venue.tiktokUrl ?? null,
   };
 }
 
@@ -66,32 +94,45 @@ async function matchBarProfile(venue: NormalizedVenueGuide) {
   return null;
 }
 
-async function main() {
-  if (!fs.existsSync(DATA_FILE)) {
-    console.error(`No existe ${DATA_FILE}. Ejecuta: npm run scrape:venues`);
-    process.exit(1);
+export type SeedVenuesOptions = {
+  geocode?: boolean;
+  dataFile?: string;
+};
+
+export async function seedVenuesGuide(options: SeedVenuesOptions = {}): Promise<SyncPhaseResult> {
+  const dataFile = options.dataFile ?? DATA_FILE;
+  const geocode = options.geocode ?? GEOCODE;
+
+  if (!fs.existsSync(dataFile)) {
+    console.error(`No existe ${dataFile}. Ejecuta: npm run scrape:venues`);
+    return { added: 0, skipped: 0, total: 0, errors: 1 };
   }
 
-  const venues = JSON.parse(fs.readFileSync(DATA_FILE, "utf-8")) as NormalizedVenueGuide[];
+  const venues = JSON.parse(fs.readFileSync(dataFile, "utf-8")) as NormalizedVenueGuide[];
   console.log(`📥 Importando ${venues.length} locales editoriales…`);
 
   let upserted = 0;
   let linked = 0;
   let geocoded = 0;
+  let skipped = 0;
+  let created = 0;
 
   for (const venue of venues) {
     let latitude = venue.latitude ?? null;
     let longitude = venue.longitude ?? null;
+    let geocodeConfidence: string | null = null;
 
-    if (GEOCODE && (latitude == null || longitude == null) && venue.address) {
-      const coords = await geocodeAddress({
+    if (geocode && (latitude == null || longitude == null)) {
+      const coords = await geocodeVenue({
+        name: venue.name,
         address: venue.address,
         city: venue.city,
-        country: venue.country ?? undefined,
+        country: venue.country,
       });
       if (coords) {
         latitude = coords.latitude;
         longitude = coords.longitude;
+        geocodeConfidence = coords.confidence;
         geocoded += 1;
       }
     }
@@ -126,6 +167,7 @@ async function main() {
         chefName: existing.chefName,
         worlds50bestRank: existing.worlds50bestRank,
         worlds50bestCategory: existing.worlds50bestCategory,
+        worlds50bestYear: existing.worlds50bestYear,
         continent: existing.continent ?? undefined,
         listScope: existing.listScope,
         regionalRank: existing.regionalRank,
@@ -135,7 +177,10 @@ async function main() {
         sourceUrl: existing.sourceUrl,
         externalWebsite: existing.externalWebsite,
         tripadvisorUrl: existing.tripadvisorUrl,
+        tripadvisorPlaceId: existing.tripadvisorPlaceId,
         tripadvisorRating: existing.tripadvisorRating,
+        googleBusinessId: existing.googleBusinessId,
+        venueCode: existing.venueCode,
         enrichmentSource: existing.enrichmentSource,
         latitude: existing.latitude,
         longitude: existing.longitude,
@@ -149,24 +194,64 @@ async function main() {
       if (mergedVenue.tripadvisorRating == null && existing.tripadvisorRating != null) {
         mergedVenue.tripadvisorRating = existing.tripadvisorRating;
       }
+      if (!mergedVenue.venueCode && existing.venueCode) {
+        mergedVenue.venueCode = existing.venueCode;
+      }
+      if (!mergedVenue.googleBusinessId && existing.googleBusinessId) {
+        mergedVenue.googleBusinessId = existing.googleBusinessId;
+      }
+      if (!mergedVenue.tripadvisorPlaceId && existing.tripadvisorPlaceId) {
+        mergedVenue.tripadvisorPlaceId = existing.tripadvisorPlaceId;
+      }
     }
 
-    const data = venueToDbFields(mergedVenue, latitude, longitude);
+    if (!mergedVenue.venueCode) {
+      mergedVenue.venueCode = await ensureUniqueVenueCode(
+        existing?.id ? { venueGuideEntryId: existing.id } : undefined,
+      );
+    }
 
-    await prisma.venueGuideEntry.upsert({
-      where: { sourceUrl: venue.sourceUrl },
-      create: { ...data, barProfileId: matched?.id ?? null },
-      update: { ...data, barProfileId: matched?.id ?? null },
-    });
-    upserted += 1;
+    const data = venueToDbFields(mergedVenue, latitude, longitude, geocodeConfidence);
+
+    try {
+      await prisma.venueGuideEntry.upsert({
+        where: { sourceUrl: venue.sourceUrl },
+        create: { ...data, barProfileId: matched?.id ?? null },
+        update: { ...data, barProfileId: matched?.id ?? null },
+      });
+      upserted += 1;
+      if (!existing) created += 1;
+    } catch (err) {
+      console.warn(`  omitido ${venue.slug}:`, (err as Error).message.slice(0, 120));
+      skipped += 1;
+    }
   }
 
-  console.log(`✓ ${upserted} upserts, ${linked} vinculados a BarProfile, ${geocoded} geocodificados`);
+  console.log(
+    `✓ ${upserted} upserts, ${linked} vinculados a BarProfile, ${geocoded} geocodificados` +
+      (skipped ? `, ${skipped} omitidos (encoding u otro error)` : ""),
+  );
+
+  return {
+    added: created,
+    skipped: upserted - created + skipped,
+    total: venues.length,
+    errors: skipped,
+  };
 }
 
-main()
-  .catch((err) => {
-    console.error(err);
-    process.exit(1);
-  })
-  .finally(() => prisma.$disconnect());
+async function main() {
+  const result = await seedVenuesGuide();
+  if (result.errors > 0 && result.total === 0) process.exit(1);
+}
+
+const isDirectRun = import.meta.url === pathToFileURL(process.argv[1] ?? "").href;
+
+if (isDirectRun) {
+  main()
+    .catch((err) => {
+      console.error(err);
+      process.exit(1);
+    })
+    .finally(() => prisma.$disconnect());
+}

@@ -16,14 +16,17 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "slug y url son obligatorios." }, { status: 400 });
     }
 
+    const slug = body.slug.trim();
+    const url = body.url.trim();
+
     const recipes = loadCocktails();
-    const recipe = recipes.find((r) => r.slug === body.slug.trim());
-    const title = recipe?.title ?? body.slug.trim();
+    const recipe = recipes.find((r) => r.slug === slug);
+    const title = recipe?.title ?? slug;
 
     const result = await applyStockCoverFromUrl(
-      body.slug.trim(),
+      slug,
       title,
-      body.url.trim(),
+      url,
       body.attribution?.trim(),
     );
 

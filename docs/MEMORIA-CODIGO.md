@@ -61,8 +61,8 @@ Imagina el proyecto como un local con varias plantas:
 | Alcoholes | `/alcoholes` | Todos | Enciclopedia de destilados |
 | Blog | `/blog` | Todos | Artículos editoriales |
 | Comunidad | `/comunidad` | Usuarios | Foro de temas |
-| Mapa | `/mapa` | Todos | Mapa interactivo de locales |
-| Ficha local | `/locales/[slug]` | Todos | Detalle de un bar/restaurante |
+| Mapa | `/mapa` | Todos | Globo 3D interactivo de locales (capas, filtros, enlace desde ficha) |
+| Ficha local | `/locales/[slug]` | Todos | Detalle de un bar/restaurante (gastronomía, preferencias, links) |
 | Pantalla | `/pantalla` | Todos | Series, podcasts, eventos |
 | Bar Online | `/bar-online` | Usuarios logueados | Lobby de salas en directo |
 | Login | `/login` | Todos | Entrar en la cuenta |
@@ -131,9 +131,14 @@ cp .env.example .env.local
 docker compose up -d          # Postgres + Redis (opcional)
 npm install
 npm run db:setup              # Tablas + datos demo
-npm run seed:venues           # 350 locales en el mapa
+npm run scrape:venues -- --report  # checklist: history/verdict ≥80%, website ≥50%
+npm run seed:venues           # importar JSON a la base de datos
+npm run geocode:venues        # coordenadas en el mapa
+npm run enrich:tripadvisor -- --suggest  # CSV sugerencias TripAdvisor
 npm run check:local             # Diagnóstico
 ```
+
+Los afiliados completan **campos editoriales** (cocina, ambiente, precios, preferencias con dress code, Instagram/TikTok) en `/cuenta/bar`. Taxonomía: `lib/venues/taxonomy.ts`. Ficha pública: `VenueDetailBlocks`.
 
 ### Uso diario (dos terminales)
 
@@ -169,11 +174,14 @@ MARKETING_MOCK=true npm run smoke:marketing
 | `npm run seed:venues` | Locales del mapa desde JSON |
 | `npm run geocode:venues` | Geocodificar direcciones del mapa |
 | `npm run build:data` | Importar recetas + construir productos |
+| `npm run sync:catalog` | Orquestador: productos + recetas + locales (JSON; `--seed` para Postgres) |
 | `npm run scrape:products` | Scrapear URLs de productos |
 | `npm run scrape:venues` | Scrapear World's 50 Best |
 | `npm run import:spirits` | Importar destilados de retailers |
 | `npm run import:tmdb` | Importar cine/series en Pantalla |
 | `npm run sync:podcast-feeds` | Sincronizar podcasts RSS |
+
+**`sync:catalog`** — orden: productos (CSV → enrich → scrape) → recetas (import → normalize → audit pending) → locales (50 Best, `--detail-only` por defecto). Flags: `--only products|recipes|venues`, `--dry-run`, `--skip-scrape`, `--seed`, `--geocode`, `--tripadvisor-suggest`, `--limit N`, `--full-venues`. Informe en `.scrape-cache/sync-catalog/`. Dedup: productos/recetas por `slug`, recetas `id` (`dg-*` / `slug-*`), locales por `sourceUrl`.
 
 ### Recetas e IA
 
@@ -264,7 +272,7 @@ MARKETING_MOCK=true
 2. **`/shop`** — Catálogo + añadir al carrito  
 3. **`/recetas`** + una ficha — Catálogo editorial  
 4. **`/pro/tech-generator`** — Crear receta con IA  
-5. **`/mapa`** — Guía de locales (350 entradas)  
+5. **`/mapa`** — Globo 3D con ~350 locales (capas Red El Travieso / 50 Best, filtro por continente, «Mi ubicación»)  
 6. **`/bar-online`** — Sala en directo (con `dev:ws`)  
 7. **`/admin`** — Panel con `demo@eltravieso.bar`  
 

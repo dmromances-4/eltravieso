@@ -14,7 +14,10 @@ import path from "path";
 import bcrypt from "bcryptjs";
 import { PrismaClient } from "@prisma/client";
 import type { NormalizedProduct } from "./build-products";
+import { upsertProductFromJson } from "@/lib/catalog/seed-from-json";
 import { slugify } from "../lib/utils/slug";
+
+const skipStaticSlugs = process.argv.includes("--skip-static-slugs");
 
 const prisma = new PrismaClient();
 
@@ -52,7 +55,7 @@ function readJson<T>(rel: string, fallback: T): T {
   }
 }
 
-// Crea/actualiza un Product con una variante principal.
+// Crea/actualiza un Product con una variante principal (delegado a lib/catalog).
 async function upsertProductWithVariant(input: {
   title: string;
   slug: string;
@@ -65,47 +68,7 @@ async function upsertProductWithVariant(input: {
   skuPrefix: string;
   stock?: number;
 }) {
-  const price = input.priceCents > 0 ? input.priceCents : FALLBACK_PRICE[input.category] ?? 990;
-  const product = await prisma.product.upsert({
-    where: { slug: input.slug },
-    update: {
-      title: input.title,
-      description: input.description,
-      type: typeForCategory(input.category) as any,
-      category: input.category as any,
-      imageUrl: input.imageUrl,
-      volumeMl: input.volumeMl,
-      isActive: true,
-    },
-    create: {
-      title: input.title,
-      slug: input.slug,
-      description: input.description,
-      type: typeForCategory(input.category) as any,
-      category: input.category as any,
-      channel: "BOTH",
-      imageUrl: input.imageUrl,
-      volumeMl: input.volumeMl,
-      isActive: true,
-    },
-  });
-
-  const sku = `${input.skuPrefix}-${input.slug}`.slice(0, 60);
-  await prisma.productVariant.upsert({
-    where: { sku },
-    update: { priceCents: price, isActive: true },
-    create: {
-      productId: product.id,
-      sku,
-      format: input.format as any,
-      channel: "B2C",
-      priceCents: price,
-      minOrderQty: 1,
-      stock: input.stock ?? 100,
-    },
-  });
-
-  return product;
+  return upsertProductFromJson({ ...input, skuPrefix: input.skuPrefix });
 }
 
 // ── Ingredientes: normalizar nombre quitando cantidades/unidades ───────────────
@@ -228,7 +191,12 @@ async function seedCatalogProducts(): Promise<number> {
 }
 
 async function seedDemoRecipes(authorId: string, cocktails: Cocktail[]): Promise<number> {
-  const subset = cocktails.slice(0, 24);
+  const staticSlugSet = new Set(
+    readJson<Cocktail[]>("data/cocktails.json", []).map((c) => c.slug),
+  );
+  const subset = cocktails
+    .slice(0, 24)
+    .filter((c) => !skipStaticSlugs || !staticSlugSet.has(c.slug));
   for (const c of subset) {
     const ingredients = JSON.stringify(c.ingredients ?? []);
     const existing = await prisma.recipe.findUnique({ where: { slug: c.slug } });

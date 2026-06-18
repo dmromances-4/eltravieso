@@ -1,37 +1,24 @@
 // ─────────────────────────────────────────────────────────────────────────────
 // FASE B — Scraper de productos de webs de coctelería/hostelería.
-// Independiente de la demo (requiere red). Toma URLs semilla de la columna
-// "Enlace Web" de Productos/*.csv (+ TARGET_SEEDS), respeta robots.txt, limita
-// el ritmo, cachea en .scrape-cache/ y NORMALIZA al MISMO formato de
-// data/products.json (NormalizedProduct), fusionando por slug sin sobrescribir.
-//
-// Uso:
-//   npx tsx scripts/scrape-products.ts            # usa semillas de los CSV
-//   npx tsx scripts/scrape-products.ts <url> ...  # scrapea URLs concretas
-//   MAX_URLS=50 RATE_MS=1500 npx tsx scripts/scrape-products.ts
-//
-// Nota legal: respeta robots.txt y los Términos de Servicio de cada web. Úsalo
-// solo sobre webs que permitan el scraping. Pensado para catalogación interna.
 // ─────────────────────────────────────────────────────────────────────────────
 
 import fs from "fs";
 import path from "path";
 import { URL } from "url";
 import csvParser from "csv-parser";
-import type { NormalizedProduct } from "./build-products";
+import type { SyncPhaseResult } from "@/lib/catalog/sync-report";
+import { pathToFileURL } from "url";
+import {
+  loadProductsJson,
+  PRODUCTS_OUTPUT,
+  type NormalizedProduct,
+} from "./build-products";
 
 const USER_AGENT = "ElTraviesoBot/1.0 (+catalogacion-interna)";
-const RATE_MS = Number(process.env.RATE_MS ?? 1500);
-const MAX_URLS = Number(process.env.MAX_URLS ?? 40);
 const CACHE_DIR = path.resolve(process.cwd(), ".scrape-cache");
 const PRODUCTOS_DIR = path.resolve(process.cwd(), "Productos");
-const OUTPUT = path.resolve(process.cwd(), "data", "products.json");
 
-// Tiendas objetivo de ejemplo (rellenar con secciones de catálogo reales).
-const TARGET_SEEDS: string[] = [
-  // "https://tienda-cocteleria.example/cristaleria",
-  // "https://material-hosteleria.example/coctelera",
-];
+const TARGET_SEEDS: string[] = [];
 
 function slugify(value: string): string {
   return value
@@ -68,10 +55,7 @@ function ensureDir(dir: string) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
-
-// ── robots.txt (mínimo): cache por host, comprueba Disallow para nuestra ruta ──
-const robotsCache = new Map<string, string[]>(); // host -> disallow paths
+const robotsCache = new Map<string, string[]>();
 
 async function getDisallows(origin: string): Promise<string[]> {
   if (robotsCache.has(origin)) return robotsCache.get(origin)!;
@@ -80,7 +64,7 @@ async function getDisallows(origin: string): Promise<string[]> {
     const res = await fetch(`${origin}/robots.txt`, { headers: { "User-Agent": USER_AGENT } });
     if (res.ok) {
       const text = await res.text();
-      let appliesToUs = true; // por defecto consideramos el bloque "*"
+      let appliesToUs = true;
       for (const line of text.split(/\r?\n/)) {
         const l = line.trim();
         if (/^user-agent:/i.test(l)) {
@@ -93,7 +77,7 @@ async function getDisallows(origin: string): Promise<string[]> {
       }
     }
   } catch {
-    // sin robots.txt accesible: permitimos por defecto.
+    // sin robots.txt accesible
   }
   robotsCache.set(origin, disallows);
   return disallows;
@@ -109,8 +93,7 @@ async function isAllowed(target: string): Promise<boolean> {
   }
 }
 
-// ── Fetch con cache en disco ───────────────────────────────────────────────────
-async function fetchCached(target: string): Promise<string | null> {
+async function fetchCached(target: string, rateMs: number): Promise<string | null> {
   ensureDir(CACHE_DIR);
   const key = slugify(target).slice(0, 120) || "page";
   const cacheFile = path.join(CACHE_DIR, `${key}.html`);
@@ -121,7 +104,7 @@ async function fetchCached(target: string): Promise<string | null> {
     if (!res.ok) return null;
     const html = await res.text();
     fs.writeFileSync(cacheFile, html, "utf-8");
-    await sleep(RATE_MS); // rate-limit tras cada descarga real
+    await new Promise((r) => setTimeout(r, rateMs));
     return html;
   } catch (err) {
     console.warn(`  fetch falló: ${target}`, (err as Error).message);
@@ -129,7 +112,6 @@ async function fetchCached(target: string): Promise<string | null> {
   }
 }
 
-// ── Extracción: JSON-LD schema.org/Product + fallback OpenGraph ────────────────
 function extractJsonLdProducts(html: string): any[] {
   const out: any[] = [];
   const re = /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
@@ -144,7 +126,7 @@ function extractJsonLdProducts(html: string): any[] {
         if (isProduct) out.push(node);
       }
     } catch {
-      // JSON-LD inválido, ignorar.
+      // JSON-LD inválido
     }
   }
   return out;
@@ -186,7 +168,6 @@ function toProduct(node: any, html: string, sourceUrl: string): NormalizedProduc
   };
 }
 
-// ── Semillas desde Productos/*.csv (columna Enlace Web) ────────────────────────
 function readCsv(file: string): Promise<Record<string, string>[]> {
   return new Promise((resolve, reject) => {
     const rows: Record<string, string>[] = [];
@@ -198,8 +179,12 @@ function readCsv(file: string): Promise<Record<string, string>[]> {
   });
 }
 
-async function collectSeedUrls(): Promise<string[]> {
-  const urls = new Set<string>(TARGET_SEEDS);
+export async function collectProductSeedUrls(options?: {
+  maxUrls?: number;
+  extraUrls?: string[];
+}): Promise<string[]> {
+  const maxUrls = options?.maxUrls ?? Number(process.env.MAX_URLS ?? 40);
+  const urls = new Set<string>([...TARGET_SEEDS, ...(options?.extraUrls ?? [])]);
   const argUrls = process.argv.slice(2).filter((a) => /^https?:\/\//i.test(a));
   argUrls.forEach((u) => urls.add(u));
 
@@ -216,58 +201,102 @@ async function collectSeedUrls(): Promise<string[]> {
       }
     }
   }
-  return [...urls].slice(0, MAX_URLS);
+  return [...urls].slice(0, maxUrls);
 }
 
-function loadExisting(): NormalizedProduct[] {
-  try {
-    return JSON.parse(fs.readFileSync(OUTPUT, "utf-8")) as NormalizedProduct[];
-  } catch {
-    return [];
-  }
-}
+export type ProductScrapeOptions = {
+  dryRun?: boolean;
+  maxUrls?: number;
+  rateMs?: number;
+  extraUrls?: string[];
+  outputPath?: string;
+  existing?: NormalizedProduct[];
+};
 
-async function main() {
-  const seeds = await collectSeedUrls();
-  console.log(`🔎 ${seeds.length} URLs semilla (límite ${MAX_URLS}, rate ${RATE_MS}ms).`);
+export async function runProductScrape(options: ProductScrapeOptions = {}): Promise<{
+  phase: SyncPhaseResult;
+  products: NormalizedProduct[];
+}> {
+  const rateMs = options.rateMs ?? Number(process.env.RATE_MS ?? 1500);
+  const outputPath = options.outputPath ?? PRODUCTS_OUTPUT;
+  const seeds = await collectProductSeedUrls({ maxUrls: options.maxUrls, extraUrls: options.extraUrls });
+
   if (seeds.length === 0) {
-    console.log("No hay URLs semilla. Añade TARGET_SEEDS o pásalas como argumentos.");
-    return;
+    return {
+      phase: { added: 0, skipped: 0, total: 0, errors: 0, notes: ["No hay URLs semilla"] },
+      products: options.existing ?? loadProductsJson(outputPath),
+    };
   }
 
-  const existing = loadExisting();
+  const existing = options.existing ?? loadProductsJson(outputPath);
   const bySlug = new Map(existing.map((p) => [p.slug, p]));
   let scraped = 0;
   let added = 0;
+  let skipped = 0;
+  let errors = 0;
 
   for (const url of seeds) {
     if (!(await isAllowed(url))) {
       console.log(`  ⛔ robots.txt no permite: ${url}`);
+      errors += 1;
       continue;
     }
-    const html = await fetchCached(url);
-    if (!html) continue;
+    const html = await fetchCached(url, rateMs);
+    if (!html) {
+      errors += 1;
+      continue;
+    }
     scraped++;
 
     const nodes = extractJsonLdProducts(html);
-    const candidates = nodes.length ? nodes : [null]; // fallback OG si no hay JSON-LD
+    const candidates = nodes.length ? nodes : [null];
     for (const node of candidates) {
       const product = toProduct(node ?? {}, html, url);
       if (!product || !product.slug) continue;
       if (!bySlug.has(product.slug)) {
         bySlug.set(product.slug, product);
         added++;
+      } else {
+        skipped += 1;
       }
     }
   }
 
   const merged = [...bySlug.values()];
-  fs.writeFileSync(OUTPUT, JSON.stringify(merged, null, 2), "utf-8");
+  if (!options.dryRun) {
+    fs.writeFileSync(outputPath, `${JSON.stringify(merged, null, 2)}\n`, "utf-8");
+  }
+
   console.log(`✓ Scrapeadas ${scraped} páginas. Nuevos productos: ${added}. Total catálogo: ${merged.length}.`);
-  console.log("  Reseed para reflejarlo en la tienda:  npm run db:setup");
+  return {
+    phase: {
+      added,
+      skipped,
+      total: merged.length,
+      errors,
+      notes: [`scraped=${scraped}`],
+    },
+    products: merged,
+  };
 }
 
-main().catch((err) => {
-  console.error("Error en el scraper:", err);
-  process.exit(1);
-});
+async function main() {
+  const seeds = await collectProductSeedUrls();
+  const rateMs = Number(process.env.RATE_MS ?? 1500);
+  const maxUrls = Number(process.env.MAX_URLS ?? 40);
+  console.log(`🔎 ${seeds.length} URLs semilla (límite ${maxUrls}, rate ${rateMs}ms).`);
+  if (seeds.length === 0) {
+    console.log("No hay URLs semilla. Añade TARGET_SEEDS o pásalas como argumentos.");
+    return;
+  }
+  await runProductScrape();
+}
+
+const isDirectRun = import.meta.url === pathToFileURL(process.argv[1] ?? "").href;
+
+if (isDirectRun) {
+  main().catch((err) => {
+    console.error("Error en el scraper:", err);
+    process.exit(1);
+  });
+}

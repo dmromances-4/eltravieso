@@ -25,16 +25,19 @@ async function dispatchMessage(
   campaign: Campaign,
   recipient: string,
   userId: string,
+  preferredLocale?: string | null,
   preview = false,
 ) {
   if (campaign.channel === "EMAIL") {
     const html = campaign.bodyHtml ?? `<p>${campaign.bodyText.replace(/\n/g, "<br/>")}</p>`;
+    const locale = preferredLocale === "en" ? "en" : "es";
     return sendMarketingEmail({
       to: recipient,
       subject: campaign.subject ?? campaign.name,
       html: preview ? `[PREVIEW] ${html}` : html,
       text: preview ? `[PREVIEW] ${campaign.bodyText}` : campaign.bodyText,
       userId: preview ? undefined : userId,
+      locale,
     });
   }
   if (campaign.channel === "SMS") {
@@ -73,7 +76,13 @@ export async function sendCampaignToRecipients(
         messageId = record.id;
       }
 
-      const result = await dispatchMessage(campaign, recipient, user.userId, options?.preview);
+      const result = await dispatchMessage(
+        campaign,
+        recipient,
+        user.userId,
+        user.preferredLocale,
+        options?.preview,
+      );
       if (result.ok) {
         sent += 1;
         if (messageId) {
@@ -110,7 +119,7 @@ export async function runCampaignSend(campaignId: string, options?: { previewUse
   if (options?.previewUserId) {
     const user = await prisma.user.findUnique({
       where: { id: options.previewUserId },
-      select: { id: true, email: true, phone: true, name: true },
+      select: { id: true, email: true, phone: true, name: true, preferredLocale: true },
     });
     if (!user) throw new Error("Usuario no encontrado");
     recipients = [
@@ -119,6 +128,7 @@ export async function runCampaignSend(campaignId: string, options?: { previewUse
         email: user.email,
         phone: user.phone,
         name: user.name,
+        preferredLocale: user.preferredLocale,
       },
     ];
     return sendCampaignToRecipients(campaign, recipients, { preview: true });

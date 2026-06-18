@@ -5,6 +5,7 @@ export const brandColors = {
   red: "#A62125",
 } as const;
 
+/** Legacy dark surfaces (admin / venues brutalist). */
 export const surfaceColors = {
   night: "#0F0F0F",
   charcoal: "#141414",
@@ -12,6 +13,14 @@ export const surfaceColors = {
   strong: "#090909",
   steel: "#272727",
   smoke: "#B7B7B7",
+} as const;
+
+/** Public shell — light editorial theme. */
+export const lightSurfaces = {
+  page: "#FAFAFA",
+  panel: "#FFFFFF",
+  muted: "#F4F4F5",
+  border: "#E2E8F0",
 } as const;
 
 export const brandRadii = {
@@ -25,8 +34,8 @@ export const brandTypography = {
 } as const;
 
 export const brandShadows = {
-  card: "0 1px 0 rgba(255,255,255,0.04), 0 24px 48px rgba(0,0,0,0.35)",
-  subtle: "0 8px 32px rgba(0,0,0,0.25)",
+  card: "0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.08)",
+  subtle: "0 4px 24px rgba(15, 23, 42, 0.08)",
 } as const;
 
 export type BrandColorKey = keyof typeof brandColors;

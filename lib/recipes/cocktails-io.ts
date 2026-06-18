@@ -1,6 +1,8 @@
 import fs from "fs";
 import path from "path";
 import type { CocktailRecord } from "@/types/cocktail";
+import type { AppLocale } from "@/i18n/routing";
+import { getLocalizedCollection, mergeLocalizedFields } from "@/lib/i18n/content";
 
 export const COCKTAILS_PATH = path.join(process.cwd(), "data", "cocktails.json");
 export const AUDIT_REPORT_PATH = path.join(process.cwd(), "data", "cocktails-audit-report.json");
@@ -14,12 +16,22 @@ export function backupCocktailsJson(): string {
   return backupPath;
 }
 
-export function loadCocktails(): CocktailRecord[] {
+export function loadCocktails(locale: AppLocale = "es"): CocktailRecord[] {
   if (!fs.existsSync(COCKTAILS_PATH)) {
     return [];
   }
   const raw = JSON.parse(fs.readFileSync(COCKTAILS_PATH, "utf8")) as CocktailRecord[];
-  return raw.map(normalizeLegacyRecord);
+  const normalized = raw.map(normalizeLegacyRecord);
+  return getLocalizedCollection(normalized, locale, "cocktails");
+}
+
+export function getCocktailBySlug(slug: string, locale: AppLocale = "es"): CocktailRecord | undefined {
+  const recipes = loadCocktails(locale);
+  return recipes.find((r) => r.slug === slug);
+}
+
+export function localizeCocktail(recipe: CocktailRecord, locale: AppLocale): CocktailRecord {
+  return mergeLocalizedFields(recipe, locale, "cocktails");
 }
 
 export function saveCocktails(recipes: CocktailRecord[], options?: { skipBackup?: boolean }) {

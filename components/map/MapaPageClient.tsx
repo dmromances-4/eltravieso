@@ -1,17 +1,23 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { CONTINENT_LABELS } from "@/lib/venues/continents";
 import type { VenueContinent } from "@prisma/client";
 
-const VenueMap = dynamic(() => import("@/components/map/VenueMap"), {
-  ssr: false,
-  loading: () => (
-    <div className="flex h-[70vh] items-center justify-center rounded-[2rem] border border-white/10 bg-[#111] text-slate-400">
-      Cargando mapa…
+function MapLoadingFallback() {
+  const t = useTranslations("map");
+  return (
+    <div className="flex h-[70vh] items-center justify-center rounded-card border border-slate-200 bg-white text-slate-500 shadow-sm">
+      {t("loadingMap")}
     </div>
-  ),
+  );
+}
+
+const VenueMapShell = dynamic(() => import("@/components/map/VenueMapShell"), {
+  ssr: false,
+  loading: () => <MapLoadingFallback />,
 });
 
 type EditorialVenue = {
@@ -31,19 +37,22 @@ type ContinentalSection = {
 type Props = {
   editorialIndex?: EditorialVenue[];
   continentalSections?: ContinentalSection[];
+  initialSlug?: string | null;
 };
 
 function VenueList({ venues }: { venues: EditorialVenue[] }) {
+  const t = useTranslations("map");
+
   return (
     <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
       {venues.map((v) => (
         <li key={v.slug}>
           <Link
             href={`/locales/${v.slug}`}
-            className="block border-2 border-black bg-black px-4 py-3 font-mono text-sm transition hover:border-electric-yellow hover:text-electric-yellow"
+            className="block rounded-card border border-slate-200 bg-slate-50 px-4 py-3 font-mono text-sm text-slate-800 transition hover:border-electric-blue hover:bg-white"
           >
             {v.regionalRank ? (
-              <span className="text-electric-blue">#{v.regionalRank} regional</span>
+              <span className="text-electric-blue">{t("regionalRank", { rank: v.regionalRank })}</span>
             ) : (
               <span className="text-electric-yellow">#{v.worlds50bestRank}</span>
             )}{" "}
@@ -59,30 +68,30 @@ function VenueList({ venues }: { venues: EditorialVenue[] }) {
 export default function MapaPageClient({
   editorialIndex = [],
   continentalSections = [],
+  initialSlug = null,
 }: Props) {
+  const t = useTranslations("map");
+
   return (
-    <main className="min-h-screen bg-night pb-12 pt-28 text-white">
+    <main className="min-h-screen bg-[#FAFAFA] pb-12 pt-28 text-slate-900">
       <div className="mx-auto max-w-7xl space-y-8 px-6 sm:px-8">
         <section className="space-y-4">
-          <span className="inline-flex rounded-full border border-electric-yellow/20 bg-electric-yellow/5 px-4 py-2 text-xs uppercase tracking-[0.3em] text-electric-yellow">
-            Directorio
+          <span className="eyebrow inline-flex rounded-pill border border-electric-yellow/30 bg-electric-yellow/10 px-4 py-2">
+            {t("eyebrow")}
           </span>
-          <h1 className="font-display text-4xl font-bold tracking-tight sm:text-5xl">Guía de locales</h1>
-          <p className="max-w-2xl text-slate-400">
-            Coctelerías y restaurantes de la red El Travieso, más los destacados del ranking
-            World&apos;s 50 Best global y regional. Activa las capas y filtra por continente.
-          </p>
+          <h1 className="text-display">{t("title")}</h1>
+          <p className="max-w-2xl text-body">{t("lead")}</p>
         </section>
 
-        <VenueMap />
+        <VenueMapShell initialSlug={initialSlug} />
 
         {continentalSections.length > 0
           ? continentalSections.map((section) => (
               <section
                 key={section.continent}
-                className="border-4 border-black bg-zinc-900 p-6 shadow-[6px_6px_0px_#000000]"
+                className="rounded-card border border-slate-200 bg-white p-6 shadow-sm"
               >
-                <h2 className="mb-4 font-display text-2xl font-bold uppercase text-electric-yellow">
+                <h2 className="mb-4 font-display text-2xl font-bold text-slate-900">
                   {CONTINENT_LABELS[section.continent]}
                 </h2>
                 <VenueList venues={section.venues} />
@@ -91,9 +100,9 @@ export default function MapaPageClient({
           : null}
 
         {editorialIndex.length > 0 && continentalSections.length === 0 ? (
-          <section className="border-4 border-black bg-zinc-900 p-6 shadow-[6px_6px_0px_#000000]">
-            <h2 className="mb-4 font-display text-2xl font-bold uppercase text-electric-yellow">
-              Destacados World&apos;s 50 Best
+          <section className="rounded-card border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="mb-4 font-display text-2xl font-bold text-slate-900">
+              {t("worlds50Best")}
             </h2>
             <VenueList venues={editorialIndex} />
           </section>

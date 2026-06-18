@@ -54,6 +54,7 @@ export async function resolveCampaignRecipients(
       email: true,
       phone: true,
       name: true,
+      preferredLocale: true,
     },
   });
 
@@ -63,6 +64,7 @@ export async function resolveCampaignRecipients(
       email: user.email,
       phone: user.phone,
       name: user.name,
+      preferredLocale: user.preferredLocale,
     }))
     .filter((user) => {
       if (channel === "EMAIL") return Boolean(user.email);

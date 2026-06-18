@@ -23,6 +23,7 @@ export function applySeedContext(
     url: string;
     category: Worlds50BestCategory;
   },
+  listYear?: number | null,
 ): NormalizedVenueGuide {
   const ranking = buildRanking(
     seed.listScope,
@@ -32,9 +33,12 @@ export function applySeedContext(
     seed.url,
   );
 
+  const yearField = listYear != null ? { worlds50bestYear: listYear } : {};
+
   if (seed.listScope === "GLOBAL") {
     return {
       ...venue,
+      ...yearField,
       continent: "GLOBAL",
       listScope: "GLOBAL",
       listUrl: seed.url,
@@ -45,6 +49,7 @@ export function applySeedContext(
 
   return {
     ...venue,
+    ...yearField,
     continent: seed.continent,
     listScope: "REGIONAL",
     regionalRank: venue.worlds50bestRank,
@@ -74,10 +79,18 @@ export function mergeVenueGuides(
     country: existing.country ?? incoming.country,
     address: existing.address ?? incoming.address,
     photoUrl: existing.photoUrl ?? incoming.photoUrl,
-    history: existing.history ?? incoming.history,
-    verdict: existing.verdict ?? incoming.verdict,
-    chefName: existing.chefName ?? incoming.chefName,
-    externalWebsite: existing.externalWebsite ?? incoming.externalWebsite,
+    history: existing.history || incoming.history,
+    verdict: existing.verdict || incoming.verdict,
+    chefName: existing.chefName || incoming.chefName,
+    externalWebsite: existing.externalWebsite || incoming.externalWebsite,
+    googleBusinessId: existing.googleBusinessId ?? incoming.googleBusinessId,
+    tripadvisorPlaceId: existing.tripadvisorPlaceId ?? incoming.tripadvisorPlaceId,
+    tripadvisorUrl: existing.tripadvisorUrl ?? incoming.tripadvisorUrl,
+    tripadvisorRating: existing.tripadvisorRating ?? incoming.tripadvisorRating,
+    venueCode: existing.venueCode ?? incoming.venueCode,
+    worlds50bestRank: existing.worlds50bestRank,
+    worlds50bestCategory: existing.worlds50bestCategory,
+    worlds50bestYear: existing.worlds50bestYear ?? incoming.worlds50bestYear,
     additionalRankings: rankings,
     enrichmentSource: existing.enrichmentSource ?? incoming.enrichmentSource,
   };

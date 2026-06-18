@@ -5,6 +5,11 @@ export type DevHealthReport = {
   migrations: "ok" | "pending" | "unknown";
   ws: "ok" | "unreachable" | "skipped";
   authUrls: "ok" | "warning";
+  map: {
+    venuesWithCoords: number;
+    guideApi: "ok" | "error" | "skipped";
+    barsApi: "ok" | "error" | "skipped";
+  };
   warnings: string[];
   features: {
     pantallaTmdb: boolean;
@@ -50,6 +55,48 @@ async function checkWs(): Promise<DevHealthReport["ws"]> {
   }
 }
 
+async function checkMapHealth(): Promise<DevHealthReport["map"]> {
+  let venuesWithCoords = 0;
+  if (process.env.DATABASE_URL) {
+    try {
+      venuesWithCoords = await prisma.venueGuideEntry.count({
+        where: {
+          isPublished: true,
+          latitude: { not: null },
+          longitude: { not: null },
+        },
+      });
+      venuesWithCoords += await prisma.barProfile.count({
+        where: {
+          isPublicOnMap: true,
+          latitude: { not: null },
+          longitude: { not: null },
+        },
+      });
+    } catch {
+      // database check handles this
+    }
+  }
+
+  const baseUrl = (process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000").replace(/\/$/, "");
+  let guideApi: DevHealthReport["map"]["guideApi"] = "skipped";
+  let barsApi: DevHealthReport["map"]["barsApi"] = "skipped";
+
+  try {
+    const [guideRes, barsRes] = await Promise.all([
+      fetch(`${baseUrl}/api/venues/guide`, { signal: AbortSignal.timeout(4000) }),
+      fetch(`${baseUrl}/api/bars`, { signal: AbortSignal.timeout(4000) }),
+    ]);
+    guideApi = guideRes.ok ? "ok" : "error";
+    barsApi = barsRes.ok ? "ok" : "error";
+  } catch {
+    guideApi = "error";
+    barsApi = "error";
+  }
+
+  return { venuesWithCoords, guideApi, barsApi };
+}
+
 export async function getDevHealthReport(): Promise<DevHealthReport> {
   const warnings: string[] = [];
   let database: DevHealthReport["database"] = "error";
@@ -93,11 +140,22 @@ export async function getDevHealthReport(): Promise<DevHealthReport> {
     warnings.push("TMDB_API_KEY ausente — import Pantalla desactivado.");
   }
 
+  const map = await checkMapHealth();
+  if (map.venuesWithCoords === 0) {
+    warnings.push(
+      "Mapa sin pins: ejecuta npm run seed:venues && npm run geocode:venues -- --only-missing",
+    );
+  }
+  if (map.guideApi === "error" || map.barsApi === "error") {
+    warnings.push("APIs del mapa no responden. ¿npm run dev en localhost:3000?");
+  }
+
   return {
     database,
     migrations,
     ws,
     authUrls,
+    map,
     warnings,
     features: {
       pantallaTmdb: Boolean(process.env.TMDB_API_KEY),

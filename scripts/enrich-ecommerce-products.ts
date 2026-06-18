@@ -1,21 +1,13 @@
 import fs from "fs";
 import path from "path";
+import type { NormalizedProduct } from "./build-products";
+import { mergeProductsBySlug } from "@/lib/catalog/merge";
+import type { SyncPhaseResult } from "@/lib/catalog/sync-report";
+import { pathToFileURL } from "url";
 
 const PRODUCTS_PATH = path.resolve(process.cwd(), "data", "products.json");
 
-interface Product {
-  title: string;
-  slug: string;
-  description: string | null;
-  category: string;
-  priceCents: number;
-  imageUrl: string | null;
-  sourceUrl: string | null;
-  format: string;
-  volumeMl: number | null;
-}
-
-const NEW_PRODUCTS: Product[] = [
+export const ENRICH_ECOMMERCE_PRODUCTS: NormalizedProduct[] = [
   {
     title: "Ginebra Hayman's London Dry",
     slug: "ginebra-hayman-s-london-dry",
@@ -513,35 +505,56 @@ const NEW_PRODUCTS: Product[] = [
   }
 ];
 
-async function enrich() {
-  if (!fs.existsSync(PRODUCTS_PATH)) {
-    console.error(`No existe el archivo de productos en: ${PRODUCTS_PATH}`);
-    process.exit(1);
-  }
+export function mergeEnrichProducts(existing: NormalizedProduct[]): {
+  merged: NormalizedProduct[];
+  added: number;
+  skipped: number;
+} {
+  return mergeProductsBySlug(existing, ENRICH_ECOMMERCE_PRODUCTS, { mode: "insert-only" });
+}
 
-  const rawProducts = fs.readFileSync(PRODUCTS_PATH, "utf-8");
-  const products: Product[] = JSON.parse(rawProducts);
-  const existingSlugs = new Set(products.map(p => p.slug));
-
-  let addedCount = 0;
-  for (const newProduct of NEW_PRODUCTS) {
-    if (!existingSlugs.has(newProduct.slug)) {
-      products.push(newProduct);
-      existingSlugs.add(newProduct.slug);
-      addedCount++;
-      console.log(`  + Añadido: "${newProduct.title}" [slug: ${newProduct.slug}]`);
+export async function runEnrichEcommerceProducts(options?: {
+  dryRun?: boolean;
+  outputPath?: string;
+}): Promise<SyncPhaseResult> {
+  const outputPath = options?.outputPath ?? PRODUCTS_PATH;
+  let existing: NormalizedProduct[] = [];
+  try {
+    existing = JSON.parse(fs.readFileSync(outputPath, "utf-8")) as NormalizedProduct[];
+  } catch {
+    if (!options?.dryRun) {
+      console.error(`No existe el archivo de productos en: ${outputPath}`);
+      process.exit(1);
     }
   }
 
-  if (addedCount > 0) {
-    fs.writeFileSync(PRODUCTS_PATH, `${JSON.stringify(products, null, 2)}\n`, "utf-8");
-    console.log(`\n✓ Enriquecimiento completado: se añadieron ${addedCount} productos nuevos a data/products.json.`);
-  } else {
+  const { merged, added, skipped } = mergeEnrichProducts(existing);
+
+  for (const p of ENRICH_ECOMMERCE_PRODUCTS) {
+    if (added > 0 && !existing.some((e) => e.slug === p.slug)) {
+      console.log(`  + Añadido: "${p.title}" [slug: ${p.slug}]`);
+    }
+  }
+
+  if (!options?.dryRun && added > 0) {
+    fs.writeFileSync(outputPath, `${JSON.stringify(merged, null, 2)}\n`, "utf-8");
+    console.log(`\n✓ Enriquecimiento completado: se añadieron ${added} productos nuevos.`);
+  } else if (added === 0) {
     console.log("\nNo se añadieron productos nuevos; todos ya existían en el catálogo.");
   }
+
+  return { added, skipped, total: merged.length, errors: 0 };
 }
 
-enrich().catch(err => {
-  console.error("Error al enriquecer catálogo de productos:", err);
-  process.exit(1);
-});
+async function enrich() {
+  await runEnrichEcommerceProducts();
+}
+
+const isDirectRun = import.meta.url === pathToFileURL(process.argv[1] ?? "").href;
+
+if (isDirectRun) {
+  enrich().catch((err) => {
+    console.error("Error al enriquecer catálogo de productos:", err);
+    process.exit(1);
+  });
+}

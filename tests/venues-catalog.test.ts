@@ -23,6 +23,7 @@ describe("venues catalog DTOs", () => {
   it("maps guide entry to public DTO with regional fields", () => {
     const dto = guideToPublicDTO({
       id: "g1",
+      venueCode: "ET-LOC-00001",
       slug: "sips",
       name: "Sips",
       city: "Barcelona",
@@ -45,8 +46,24 @@ describe("venues catalog DTOs", () => {
       ],
       sourceUrl: baseGuide.sourceUrl,
       externalWebsite: null,
+      googleBusinessId: "ChIJN1t_tDeuEmsRUsoyG83frY4",
       tripadvisorUrl: "https://www.tripadvisor.es/Restaurant_Review-sips",
+      tripadvisorPlaceId: "d12345678",
       tripadvisorRating: 4.5,
+      establishmentTypes: [],
+      cuisineTypes: [],
+      starDishes: [],
+      idealFor: [],
+      venueFeatures: [],
+      neighborhood: null,
+      priceRange: null,
+      dailyMenuEnabled: false,
+      dailyMenuNote: null,
+      awards: [],
+      venuePreferences: [],
+      instagramUrl: null,
+      tiktokUrl: null,
+      geocodeConfidence: null,
       isPublished: true,
       barProfileId: null,
       source: "WORLDS_50_BEST",
@@ -58,9 +75,14 @@ describe("venues catalog DTOs", () => {
     });
 
     expect(dto.slug).toBe("sips");
+    expect(dto.venueCode).toBe("ET-LOC-00001");
+    expect(dto.googleBusinessId).toContain("ChIJ");
+    expect(dto.tripadvisorPlaceId).toBe("d12345678");
     expect(dto.regionalRank).toBe(2);
     expect(dto.additionalRankings).toHaveLength(1);
     expect(dto.tripadvisorUrl).toContain("tripadvisor");
+    expect(dto.establishmentTypes).toEqual([]);
+    expect(dto.dailyMenuEnabled).toBe(false);
   });
 
   it("returns null for affiliate bar without slug", () => {
@@ -79,6 +101,20 @@ describe("venues catalog DTOs", () => {
       signatureDrink: null,
       dressCode: null,
       vibeTags: [],
+      establishmentTypes: [],
+      cuisineTypes: [],
+      starDishes: [],
+      idealFor: [],
+      venueFeatures: [],
+      neighborhood: null,
+      priceRange: null,
+      dailyMenuEnabled: false,
+      dailyMenuNote: null,
+      awards: [],
+      venuePreferences: [],
+      instagramUrl: null,
+      tiktokUrl: null,
+      tripadvisorUrl: null,
       phone: null,
       email: null,
       latitude: null,
@@ -111,6 +147,20 @@ describe("venues catalog DTOs", () => {
       signatureDrink: null,
       dressCode: null,
       vibeTags: [],
+      establishmentTypes: [],
+      cuisineTypes: [],
+      starDishes: [],
+      idealFor: [],
+      venueFeatures: [],
+      neighborhood: null,
+      priceRange: null,
+      dailyMenuEnabled: false,
+      dailyMenuNote: null,
+      awards: [],
+      venuePreferences: [],
+      instagramUrl: null,
+      tiktokUrl: null,
+      tripadvisorUrl: null,
       phone: null,
       email: null,
       latitude: null,

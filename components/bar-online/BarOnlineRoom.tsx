@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useBarOnline, type RtcSignal } from "@/lib/realtime/useBarOnline";
 
 type SessionType = "CHAT" | "VIDEO_CALL" | "TASTING_EVENT";

@@ -1,3 +1,4 @@
+import type { AppLocale } from "@/i18n/routing";
 import ai from "@/lib/ai/provider";
 import prisma from "@/lib/prisma";
 import {
@@ -5,6 +6,8 @@ import {
   getCatalogRecipes,
   searchCatalog,
 } from "@/lib/recipes/catalog";
+import cocktailsJson from "@/data/cocktails.json";
+import type { CocktailRecord } from "@/types/cocktail";
 import { parseIngredientList, parseJsonObject, type IngredientItem } from "@/lib/recipes/parse";
 import { generateAndUploadRecipeCover } from "@/lib/recipes/generate-recipe-image";
 import { buildAgentStyleAppendix } from "@/lib/recipes/style-guide";
@@ -16,10 +19,45 @@ function parseNumber(value: unknown) {
   return Number.isFinite(numberValue) ? numberValue : null;
 }
 
+function normalizeTitle(value: string): string {
+  return value
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
+}
+
+const staticSlugs = new Set((cocktailsJson as CocktailRecord[]).map((r) => r.slug));
+
+async function slugExists(slug: string): Promise<boolean> {
+  if (staticSlugs.has(slug)) return true;
+  const existing = await prisma.recipe.findUnique({ where: { slug }, select: { id: true } });
+  return Boolean(existing);
+}
+
+async function findExistingRecipeByTitle(title: string): Promise<{ slug: string; title: string } | null> {
+  const normalized = normalizeTitle(title);
+  if (!normalized) return null;
+
+  const staticMatch = (cocktailsJson as CocktailRecord[]).find(
+    (r) => normalizeTitle(r.title) === normalized,
+  );
+  if (staticMatch) return { slug: staticMatch.slug, title: staticMatch.title };
+
+  const catalog = await getCatalogRecipes();
+  const catalogMatch = catalog.find((r) => normalizeTitle(r.title) === normalized);
+  if (catalogMatch) return { slug: catalogMatch.slug, title: catalogMatch.title };
+
+  const dbRecipes = await prisma.recipe.findMany({ select: { slug: true, title: true } });
+  const dbMatch = dbRecipes.find((r) => normalizeTitle(r.title) === normalized);
+  return dbMatch ?? null;
+}
+
 async function ensureUniqueSlug(baseSlug: string) {
   let slug = baseSlug;
   let index = 1;
-  while (await prisma.recipe.findUnique({ where: { slug } })) {
+  while (await slugExists(slug)) {
     slug = `${baseSlug}-${index}`;
     index += 1;
   }
@@ -48,8 +86,13 @@ async function resolveAuthorId(preferredUserId?: string | null) {
   return created.id;
 }
 
-function buildPrompt(promptText: string, catalogContext: string) {
-  return `Eres un mixólogo experto en vermutería premium. El cliente te envía un briefing en español (puede ser una idea, comentarios, restricciones o una adaptación de otra receta).
+function buildPrompt(promptText: string, catalogContext: string, locale: AppLocale = "es") {
+  const languageNote =
+    locale === "en"
+      ? "The client briefing may be in English. Respond with JSON field values in English."
+      : "El briefing del cliente está en español. Responde con los valores JSON en español.";
+
+  return `Eres un mixólogo experto en vermutería premium. ${languageNote}
 
 ${catalogContext}
 
@@ -82,8 +125,8 @@ Reglas estrictas:
 - slug solo minúsculas, guiones y sin acentos.`;
 }
 
-async function requestRecipeJson(prompt: string, maxTokens: number) {
-  const textRes = await ai.generateText(prompt, { maxTokens });
+async function requestRecipeJson(prompt: string, maxTokens: number, locale: AppLocale = "es") {
+  const textRes = await ai.generateText(prompt, { maxTokens, locale });
   const parsed = parseJsonObject(textRes.text);
   if (!parsed) {
     throw new Error("La IA no devolvió un JSON válido. Intenta de nuevo con más detalle.");
@@ -94,12 +137,13 @@ async function requestRecipeJson(prompt: string, maxTokens: number) {
 async function ensureIngredients(
   parsed: Record<string, unknown>,
   promptText: string,
+  locale: AppLocale = "es",
 ): Promise<IngredientItem[]> {
   let ingredients = parseIngredientList(parsed.ingredients ?? parsed.items);
   if (ingredients.length >= 3) return ingredients;
 
-  const repairPrompt = `Genera SOLO un JSON con la clave "ingredients": lista de al menos 4 objetos {name, amount} con cantidades exactas (ml, dashes, etc.) para este cóctel en español: ${parsed.title ?? promptText}. Sin texto adicional.`;
-  const repaired = await requestRecipeJson(repairPrompt, 500);
+  const repairPrompt = `Genera SOLO un JSON con la clave "ingredients": lista de al menos 4 objetos {name, amount} con cantidades exactas (ml, dashes, etc.) para este cóctel: ${parsed.title ?? promptText}. Sin texto adicional.`;
+  const repaired = await requestRecipeJson(repairPrompt, 500, locale);
   ingredients = parseIngredientList(repaired.ingredients ?? repaired.items);
   return ingredients;
 }
@@ -143,20 +187,27 @@ export type AgentRecipeResult = {
 
 export async function createRecipeFromPrompt(
   promptText: string,
-  options: { userId?: string | null } = {},
+  options: { userId?: string | null; locale?: AppLocale } = {},
 ): Promise<AgentRecipeResult> {
+  const locale = options.locale ?? "es";
   try {
-    const catalog = await getCatalogRecipes();
+    const catalog = await getCatalogRecipes(locale);
     const matches = searchCatalog(catalog, promptText, 6);
     const catalogContext = buildSearchContext(matches);
 
-    const parsed = await requestRecipeJson(buildPrompt(promptText, catalogContext), 900);
+    const parsed = await requestRecipeJson(buildPrompt(promptText, catalogContext, locale), 900, locale);
 
     const title = String(parsed.title ?? parsed.name ?? `Cóctel ${promptText.split(/\s+/).slice(0, 3).join(" ")}`).trim();
+    const existing = await findExistingRecipeByTitle(title);
+    if (existing) {
+      throw new Error(
+        `Ya existe una receta similar: «${existing.title}» (/recetas/${existing.slug}). Refina el briefing o edita esa ficha.`,
+      );
+    }
     const summary = String(parsed.summary ?? parsed.description ?? "Receta creada por el agente de barra.").trim();
     const glass = String(parsed.glass ?? parsed.glassType ?? parsed.serveIn ?? "Copa balón").trim();
     const method = String(parsed.method ?? parsed.instructions ?? "Mezclar, enfriar y servir.").trim();
-    const ingredients = await ensureIngredients(parsed, promptText);
+    const ingredients = await ensureIngredients(parsed, promptText, locale);
     const abv = parseNumber(parsed.abv);
     const cost = parseNumber(parsed.cost);
     const tasting = String(parsed.tasting ?? parsed.organolepticDesc ?? summary).trim();

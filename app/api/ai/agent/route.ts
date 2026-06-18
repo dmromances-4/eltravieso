@@ -3,6 +3,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { getAiStatus, isTextAiAvailable } from "@/lib/ai/availability";
 import { createRecipeFromPrompt } from "@/lib/recipes/agent";
+import { getRequestLocaleFromHeaders } from "@/lib/i18n/request-locale";
 import { checkRateLimit, getAiAgentRateLimits, getClientIp } from "@/lib/rate-limit";
 import { logServerError } from "@/lib/security/safe-error";
 
@@ -56,7 +57,11 @@ export async function POST(request: Request) {
       );
     }
 
-    const result = await createRecipeFromPrompt(promptText, { userId: session?.user?.id ?? null });
+    const locale = getRequestLocaleFromHeaders(request);
+    const result = await createRecipeFromPrompt(promptText, {
+      userId: session?.user?.id ?? null,
+      locale,
+    });
 
     return NextResponse.json(result);
   } catch (error: unknown) {

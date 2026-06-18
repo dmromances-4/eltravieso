@@ -1,7 +1,7 @@
 'use client'
 
-import Link from 'next/link'
 import { useSession } from 'next-auth/react'
+import { useTranslations } from 'next-intl'
 import type { ReactNode } from 'react'
 
 type RecipePremiumGateProps = {
@@ -11,6 +11,7 @@ type RecipePremiumGateProps = {
 }
 
 export default function RecipePremiumGate({ isPremium, lockedFallback, children }: RecipePremiumGateProps) {
+  const t = useTranslations('recipeDetail')
   const { data: session, status } = useSession()
   const isVip = Boolean(session?.user?.isVip)
 
@@ -19,7 +20,7 @@ export default function RecipePremiumGate({ isPremium, lockedFallback, children 
   if (status === 'loading') {
     return (
       <div className="rounded-[2rem] border border-white/10 bg-[#111111]/90 p-8 text-sm text-slate-400">
-        Comprobando acceso VIP…
+        {t('checkingVip')}
       </div>
     )
   }

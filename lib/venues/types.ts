@@ -17,6 +17,7 @@ export type VenueRanking = {
 
 export type VenuePublicDTO = {
   id: string;
+  venueCode: string | null;
   slug: string;
   name: string;
   city: string;
@@ -30,6 +31,19 @@ export type VenuePublicDTO = {
   signatureDrink: string | null;
   dressCode: string | null;
   vibeTags: string[];
+  establishmentTypes: string[];
+  cuisineTypes: string[];
+  starDishes: string[];
+  idealFor: string[];
+  venueFeatures: string[];
+  neighborhood: string | null;
+  priceRange: string | null;
+  dailyMenuEnabled: boolean;
+  dailyMenuNote: string | null;
+  awards: string[];
+  venuePreferences: string[];
+  instagramUrl: string | null;
+  tiktokUrl: string | null;
   phone: string | null;
   email: string | null;
   latitude: number | null;
@@ -42,7 +56,9 @@ export type VenuePublicDTO = {
   additionalRankings: VenueRanking[];
   sourceUrl: string | null;
   externalWebsite: string | null;
+  googleBusinessId: string | null;
   tripadvisorUrl: string | null;
+  tripadvisorPlaceId: string | null;
   tripadvisorRating: number | null;
   chefName: string | null;
   reservationProvider: ReservationProvider | null;
@@ -54,8 +70,11 @@ export type VenuePublicDTO = {
   bookingWidgetEnabled: boolean;
 };
 
+export type GeocodeConfidence = "high" | "medium" | "low";
+
 export type MapVenueDTO = {
   id: string;
+  venueCode: string | null;
   slug: string;
   name: string;
   venueType: string;
@@ -70,6 +89,11 @@ export type MapVenueDTO = {
   continent: VenueContinent | null;
   regionalRank: number | null;
   isPremium?: boolean;
+  geocodeConfidence?: GeocodeConfidence | null;
+  tripadvisorRating?: number | null;
+  history?: string | null;
+  verdict?: string | null;
+  externalWebsite?: string | null;
 };
 
 export type NormalizedVenueGuide = {
@@ -85,6 +109,7 @@ export type NormalizedVenueGuide = {
   chefName?: string | null;
   worlds50bestRank: number;
   worlds50bestCategory: Worlds50BestCategory;
+  worlds50bestYear?: number | null;
   continent?: VenueContinent;
   listScope?: VenueListScope;
   regionalRank?: number | null;
@@ -92,11 +117,27 @@ export type NormalizedVenueGuide = {
   listUrl?: string;
   sourceUrl: string;
   externalWebsite?: string | null;
+  googleBusinessId?: string | null;
   tripadvisorUrl?: string | null;
+  tripadvisorPlaceId?: string | null;
   tripadvisorRating?: number | null;
+  venueCode?: string | null;
   enrichmentSource?: string | null;
   latitude?: number | null;
   longitude?: number | null;
+  establishmentTypes?: string[];
+  cuisineTypes?: string[];
+  starDishes?: string[];
+  idealFor?: string[];
+  venueFeatures?: string[];
+  neighborhood?: string | null;
+  priceRange?: string | null;
+  dailyMenuEnabled?: boolean;
+  dailyMenuNote?: string | null;
+  awards?: string[];
+  venuePreferences?: string[];
+  instagramUrl?: string | null;
+  tiktokUrl?: string | null;
 };
 
 export function parseAdditionalRankings(value: unknown): VenueRanking[] {

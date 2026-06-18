@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { EditorialCard } from "@/components/ui/EditorialCard";
 import { MetaChip } from "@/components/ui/MetaChip";
 import { BOOK_COLLECTION_LABELS, type BookRecord } from "@/types/book";

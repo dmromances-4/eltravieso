@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { LiveCategory } from "@prisma/client";
 import { LIVE_CATEGORY_LABELS } from "@/lib/media/types";
 

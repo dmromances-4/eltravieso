@@ -311,6 +311,8 @@ Variables mínimas: `HOLDED_API_KEY`, `SHOPIFY_CLIENT_ID`/`SHOPIFY_CLIENT_SECRET
 
 ## Calidad y verificación
 
+Catálogo unificado (productos, recetas, locales): `npm run sync:catalog` — ver [`docs/MEMORIA-CODIGO.md`](docs/MEMORIA-CODIGO.md).
+
 ```bash
 npm run test          # Vitest (unitarios + E2E si SMOKE_BASE_URL está definido)
 npm run smoke         # Requiere dev server en localhost:3000

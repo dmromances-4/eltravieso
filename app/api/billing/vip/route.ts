@@ -1,39 +1,39 @@
-import { NextResponse } from 'next/server'
-import { getAuthSession } from '@/lib/auth/session'
-import { createSubscriptionCheckout } from '@/lib/stripe/api'
-import { getOrCreateStripeCustomer } from '@/lib/stripe/customer'
-import { clientSafeErrorMessage } from '@/lib/security/safe-error'
+import { NextResponse } from "next/server";
+import { getAuthSession } from "@/lib/auth/session";
+import { createSubscriptionCheckout } from "@/lib/stripe/api";
+import { getOrCreateStripeCustomer } from "@/lib/stripe/customer";
+import { clientSafeErrorMessage } from "@/lib/security/safe-error";
+import { jsonError } from "@/lib/i18n/api";
 
-export async function POST() {
-  const session = await getAuthSession()
+export async function POST(request: Request) {
+  const session = await getAuthSession();
   if (!session?.user?.id) {
-    return NextResponse.json({ error: 'Debes iniciar sesión' }, { status: 401 })
+    return jsonError(request, "loginRequired", 401);
   }
 
-  const priceId = process.env.STRIPE_VIP_PRICE_ID
+  const priceId = process.env.STRIPE_VIP_PRICE_ID;
   if (!priceId) {
-    return NextResponse.json({ error: 'Membresía VIP no configurada' }, { status: 503 })
+    return jsonError(request, "server", 503);
   }
 
   try {
-    const customerId = await getOrCreateStripeCustomer(session.user.id)
+    const customerId = await getOrCreateStripeCustomer(session.user.id);
     const checkout = await createSubscriptionCheckout({
       customerId,
       priceId,
       metadata: {
-        billingType: 'vip',
+        billingType: "vip",
         userId: session.user.id,
       },
-      successPath: '/cuenta/membresia',
-      cancelPath: '/cuenta/membresia',
-    })
+      successPath: "/cuenta/membresia",
+      cancelPath: "/cuenta/membresia",
+    });
 
-    return NextResponse.json({ url: checkout.url })
+    return NextResponse.json({ url: checkout.url });
   } catch (error) {
-    console.error('[BILLING_VIP]', error)
-    return NextResponse.json(
-      { error: clientSafeErrorMessage(error, 'No se pudo iniciar la suscripción') },
-      { status: 500 },
-    )
+    console.error("[BILLING_VIP]", error);
+    return jsonError(request, "paymentFailed", 500, {
+      detail: clientSafeErrorMessage(error, "paymentFailed"),
+    });
   }
 }

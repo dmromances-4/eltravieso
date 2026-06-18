@@ -4,9 +4,12 @@ import { readEnvKey } from "@/lib/recipes/cover-env";
 
 type GoogleGenAI = any;
 
+import type { AppLocale } from "@/i18n/routing";
+
 // ─── Types ────────────────────────────────────────────────────────────
 type TextResponse = { text: string };
 type ImageResponse = { url: string };
+type GenerateTextOptions = { maxTokens?: number; locale?: AppLocale };
 
 // ─── Provider Resolution ──────────────────────────────────────────────
 // Priority order: gemini → groq → openai → huggingface
@@ -14,6 +17,11 @@ type ImageResponse = { url: string };
 
 type TextProvider = "gemini" | "groq" | "openai" | "huggingface";
 type ImageProvider = "gemini" | "openai" | "huggingface";
+
+async function getOpenAIClient(apiKey: string, baseURL?: string) {
+  const { default: OpenAI } = await import("openai");
+  return new OpenAI(baseURL ? { apiKey, baseURL } : { apiKey });
+}
 
 function detectTextProvider(): TextProvider {
   const resolved = resolveTextProvider();
@@ -122,10 +130,7 @@ async function geminiGenerateImage(prompt: string): Promise<ImageResponse> {
 async function groqGenerateText(prompt: string, opts: { maxTokens?: number } = {}): Promise<TextResponse> {
   const apiKey = process.env.GROQ_API_KEY;
   if (!apiKey) throw new Error("Missing GROQ_API_KEY. Get a free key at https://console.groq.com");
-  // Lazy import OpenAI-compatible client to avoid crashing when package missing
-  // eslint-disable-next-line
-  const OpenAI = require("openai").default;
-  const client = new OpenAI({ apiKey, baseURL: "https://api.groq.com/openai/v1" });
+  const client = await getOpenAIClient(apiKey, "https://api.groq.com/openai/v1");
 
   const model = process.env.GROQ_MODEL ?? "llama-3.3-70b-versatile";
 
@@ -145,10 +150,7 @@ async function openaiGenerateText(prompt: string, opts: { maxTokens?: number } =
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
 
-  // Lazy import OpenAI to avoid hard dependency at startup
-  // eslint-disable-next-line
-  const OpenAI = require("openai").default;
-  const client = new OpenAI({ apiKey });
+  const client = await getOpenAIClient(apiKey);
   const response = await client.chat.completions.create({
     model: process.env.OPENAI_MODEL ?? "gpt-4o-mini",
     messages: [{ role: "user", content: prompt }],
@@ -162,10 +164,7 @@ async function openaiGenerateText(prompt: string, opts: { maxTokens?: number } =
 async function openaiGenerateImage(prompt: string): Promise<ImageResponse> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
-  // Lazy import OpenAI to avoid hard dependency at startup
-  // eslint-disable-next-line
-  const OpenAI = require("openai").default;
-  const client = new OpenAI({ apiKey });
+  const client = await getOpenAIClient(apiKey);
   const r = await client.images.generate({ model: process.env.OPENAI_IMAGE_MODEL ?? "gpt-image-1", prompt });
   const url = r.data?.[0]?.url ?? (r.data?.[0]?.b64_json ? `data:image/png;base64,${r.data[0].b64_json}` : "");
   return { url };
@@ -174,11 +173,8 @@ async function openaiGenerateImage(prompt: string): Promise<ImageResponse> {
 async function openaiGenerateImageWithReference(prompt: string, referenceBuffer: Buffer): Promise<ImageResponse> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
-  // eslint-disable-next-line
-  const OpenAI = require("openai").default;
-  // eslint-disable-next-line
-  const { toFile } = require("openai");
-  const client = new OpenAI({ apiKey });
+  const { toFile } = await import("openai");
+  const client = await getOpenAIClient(apiKey);
   const file = await toFile(referenceBuffer, "reference.png", { type: "image/png" });
   const r = await client.images.edit({
     model: process.env.OPENAI_IMAGE_MODEL ?? "gpt-image-1",
@@ -216,9 +212,7 @@ async function geminiAnalyzeImage(imageBuffer: Buffer, prompt: string, mime = "i
 async function openaiAnalyzeImage(imageBuffer: Buffer, prompt: string, mime = "image/jpeg"): Promise<TextResponse> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) throw new Error("Missing OPENAI_API_KEY.");
-  // eslint-disable-next-line
-  const OpenAI = require("openai").default;
-  const client = new OpenAI({ apiKey });
+  const client = await getOpenAIClient(apiKey);
   const dataUrl = `data:${mime};base64,${imageBuffer.toString("base64")}`;
   const response = await client.chat.completions.create({
     model: process.env.OPENAI_MODEL ?? "gpt-4o-mini",
@@ -282,7 +276,13 @@ async function huggingfaceGenerateImage(prompt: string): Promise<ImageResponse> 
 
 // ─── Text Generation Dispatch (with fallback chain) ───────────────────
 
-type TextGeneratorFn = (_p: string, _o: { maxTokens?: number }) => Promise<TextResponse>;
+type TextGeneratorFn = (_p: string, _o: GenerateTextOptions) => Promise<TextResponse>;
+
+function withLocalePrompt(prompt: string, locale?: AppLocale): string {
+  if (!locale || locale === "es") return prompt;
+  const language = locale === "en" ? "English" : locale;
+  return `Respond in ${language}. Keep brand names and proper nouns unchanged.\n\n${prompt}`;
+}
 
 const TEXT_GENERATORS: Record<TextProvider, TextGeneratorFn> = {
   gemini: geminiGenerateText,
@@ -293,17 +293,19 @@ const TEXT_GENERATORS: Record<TextProvider, TextGeneratorFn> = {
 
 const TEXT_FALLBACK_ORDER: TextProvider[] = ["gemini", "groq", "openai", "huggingface"];
 
-export async function generateText(prompt: string, opts: { maxTokens?: number } = {}): Promise<TextResponse> {
+export async function generateText(prompt: string, opts: GenerateTextOptions = {}): Promise<TextResponse> {
+  const localizedPrompt = withLocalePrompt(prompt, opts.locale);
+
   // Development mock mode: return a predictable response when AI_MOCK=true
   if (process.env.AI_MOCK === "true") {
-    return { text: `RESPUESTA_MOCK: Generación simulada para: ${prompt.slice(0, 120)}` };
+    return { text: `RESPUESTA_MOCK: Generación simulada para: ${localizedPrompt.slice(0, 120)}` };
   }
 
   const primary = detectTextProvider();
 
   // Try the primary provider first
   try {
-    return await TEXT_GENERATORS[primary](prompt, opts);
+    return await TEXT_GENERATORS[primary](localizedPrompt, opts);
   } catch (primaryError: any) {
     console.warn(`[AI] Primary provider "${primary}" failed: ${primaryError.message}. Trying fallbacks...`);
   }
@@ -323,7 +325,7 @@ export async function generateText(prompt: string, opts: { maxTokens?: number } 
 
     try {
       console.log(`[AI] Trying fallback: "${fallback}"...`);
-      return await TEXT_GENERATORS[fallback](prompt, opts);
+      return await TEXT_GENERATORS[fallback](localizedPrompt, opts);
     } catch (fallbackError: any) {
       console.warn(`[AI] Fallback "${fallback}" also failed: ${fallbackError.message}`);
     }

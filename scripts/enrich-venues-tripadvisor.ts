@@ -1,14 +1,12 @@
-// Enriquecimiento TripAdvisor para VenueGuideEntry (fallback cuando faltan datos).
-//
-// Nivel A — --suggest: genera CSV con enlaces de búsqueda humana (no hace fetch a /Search).
-// Nivel B — --import <csv>: importa slug,tripadvisorUrl,rating curados manualmente.
-// Nivel C — TRIPADVISOR_PLAYWRIGHT=true: automatización opcional en dev (no recomendado en prod).
-//
-// TripAdvisor robots.txt restringe scraping automatizado. Usar sugerencias + revisión humana.
-
 import fs from "fs";
 import path from "path";
 import prisma from "../lib/prisma";
+import {
+  parseTripadvisorPlaceIdFromUrl,
+  validateGoogleBusinessId,
+  validateTripadvisorPlaceId,
+} from "../lib/venues/external-ids";
+import { mapTripAdvisorEnrichment } from "../lib/venues/enrich-taxonomy-mapper";
 
 const SUGGESTIONS_OUT = path.resolve(process.cwd(), "data", "tripadvisor-suggestions.csv");
 
@@ -70,16 +68,44 @@ async function runSuggest() {
   console.log(`✓ ${rows.length} sugerencias en ${SUGGESTIONS_OUT}`);
 }
 
-function parseImportCsv(content: string): Array<{ slug: string; tripadvisorUrl: string; rating?: number }> {
+type ImportRow = {
+  slug: string;
+  tripadvisorUrl: string;
+  rating?: number;
+  address?: string;
+  tripadvisorPlaceId?: string;
+  googleBusinessId?: string;
+  priceLevel?: number;
+  cuisineLabels?: string[];
+  amenities?: string[];
+};
+
+function parseImportCsv(content: string): ImportRow[] {
   const lines = content.trim().split(/\r?\n/).slice(1);
-  const rows: Array<{ slug: string; tripadvisorUrl: string; rating?: number }> = [];
+  const rows: ImportRow[] = [];
 
   for (const line of lines) {
-    const parts = line.split(",").map((p) => p.trim());
+    if (!line.trim()) continue;
+    const parts = line.split(",").map((p) => p.trim().replace(/^"|"$/g, ""));
     if (parts.length < 2) continue;
-    const [slug, tripadvisorUrl, ratingStr] = parts;
+    const [slug, tripadvisorUrl, ratingStr, address, tripadvisorPlaceId, googleBusinessId, priceLevelStr, cuisineLabelsStr, amenitiesStr] = parts;
     const rating = ratingStr ? Number(ratingStr) : undefined;
-    rows.push({ slug, tripadvisorUrl, rating: Number.isFinite(rating) ? rating : undefined });
+    const priceLevel = priceLevelStr ? Number(priceLevelStr) : undefined;
+    rows.push({
+      slug,
+      tripadvisorUrl,
+      rating: Number.isFinite(rating) ? rating : undefined,
+      address: address || undefined,
+      tripadvisorPlaceId: tripadvisorPlaceId || undefined,
+      googleBusinessId: googleBusinessId || undefined,
+      priceLevel: Number.isFinite(priceLevel) ? priceLevel : undefined,
+      cuisineLabels: cuisineLabelsStr
+        ? cuisineLabelsStr.split("|").map((s) => s.trim()).filter(Boolean)
+        : undefined,
+      amenities: amenitiesStr
+        ? amenitiesStr.split("|").map((s) => s.trim()).filter(Boolean)
+        : undefined,
+    });
   }
 
   return rows;
@@ -95,12 +121,40 @@ async function runImport(file: string) {
   let updated = 0;
 
   for (const row of rows) {
+    const existing = await prisma.venueGuideEntry.findFirst({
+      where: { slug: row.slug },
+      select: { address: true, googleBusinessId: true, tripadvisorPlaceId: true },
+    });
+    if (!existing) continue;
+
+    const taFromUrl = parseTripadvisorPlaceIdFromUrl(row.tripadvisorUrl);
+    const taValidated = validateTripadvisorPlaceId(row.tripadvisorPlaceId ?? taFromUrl ?? "");
+    const gmbValidated = validateGoogleBusinessId(row.googleBusinessId ?? "");
+    if (!taValidated.ok) {
+      console.warn(`  ✗ ${row.slug}: ${taValidated.error}`);
+      continue;
+    }
+    if (!gmbValidated.ok) {
+      console.warn(`  ✗ ${row.slug}: ${gmbValidated.error}`);
+      continue;
+    }
+
+    const taxonomy = mapTripAdvisorEnrichment({
+      priceLevel: row.priceLevel,
+      cuisineLabels: row.cuisineLabels,
+      amenities: row.amenities,
+    });
+
     const result = await prisma.venueGuideEntry.updateMany({
       where: { slug: row.slug },
       data: {
         tripadvisorUrl: row.tripadvisorUrl,
         tripadvisorRating: row.rating ?? null,
+        tripadvisorPlaceId: taValidated.value || existing.tripadvisorPlaceId || null,
+        googleBusinessId: gmbValidated.value || existing.googleBusinessId || null,
+        address: existing.address ?? row.address ?? undefined,
         enrichmentSource: "tripadvisor",
+        ...taxonomy,
       },
     });
     if (result.count) updated += 1;
@@ -130,7 +184,11 @@ async function main() {
 
   console.log(`Uso:
   npx tsx scripts/enrich-venues-tripadvisor.ts --suggest
-  npx tsx scripts/enrich-venues-tripadvisor.ts --import data/tripadvisor-links.csv`);
+  npx tsx scripts/enrich-venues-tripadvisor.ts --import data/tripadvisor-curated.csv
+
+CSV import (columnas):
+  slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities
+  rating, address, IDs, priceLevel, cuisineLabels (pipe-separated) y amenities son opcionales`);
 }
 
 main()

@@ -6,8 +6,9 @@ import { runStoryQc } from "../qc/validate";
 import type { CocktailNarrativeProfile, StoryDraft } from "../types";
 import { loadGenerationQuotas, loadUniverseCategories } from "../taxonomy/universe";
 import {
+  formatStoryId,
   generateStoryDraft,
-  nextStoryId,
+  maxStoryNumber,
   selectCategoryForQuota,
   storySeed,
 } from "./generate-story";
@@ -75,6 +76,7 @@ export async function runGenerateStories(opts: GenerateStoriesOptions = {}): Pro
   let skipped = 0;
   const batchLimit = opts.limit ?? Math.max(0, targetTotal - existingStories.length);
   const throttle = getStoryAiThrottleMs();
+  let nextStoryNum = maxStoryNumber(existingStories.map((s) => s.storyId)) + 1;
 
   for (let i = 0; i < batchLimit; i += 1) {
     const storyIndex = existingStories.length + created + i;
@@ -99,7 +101,8 @@ export async function runGenerateStories(opts: GenerateStoriesOptions = {}): Pro
       category = categories.find((c) => c.id === opts.category) ?? category;
     }
 
-    const storyId = nextStoryId(existingStories.length + created);
+    const storyId = formatStoryId(nextStoryNum);
+    nextStoryNum += 1;
     if (!opts.force && progress.completedStoryIds.includes(storyId)) {
       skipped += 1;
       continue;
@@ -128,6 +131,8 @@ export async function runGenerateStories(opts: GenerateStoriesOptions = {}): Pro
       failed += 1;
       continue;
     }
+    draft.storyId = storyId;
+    draft.cocktailReference = profile.cocktailSlug;
 
     if (opts.discoverOnly || opts.dryRun) {
       console.log(JSON.stringify({ draft, qc }, null, 2));

@@ -1,5 +1,5 @@
 import prisma from "../lib/prisma";
-import { geocodeAddress, type GeocodeResult } from "../lib/geocoding/nominatim";
+import { geocodeVenue } from "../lib/geocoding/nominatim";
 
 type VenueRow = {
   id: string;
@@ -8,31 +8,35 @@ type VenueRow = {
   address: string | null;
   city: string;
   country: string | null;
+  geocodeConfidence: string | null;
 };
 
-async function geocodeVenue(venue: VenueRow): Promise<GeocodeResult | null> {
-  const base = { city: venue.city, country: venue.country ?? undefined, defaultCountry: null };
+const args = new Set(process.argv.slice(2));
+const retryLowConfidence = args.has("--retry-low-confidence");
 
-  const strategies: { address: string }[] = [];
-  if (venue.address) strategies.push({ address: venue.address });
-  strategies.push({ address: venue.name });
-  if (venue.city) strategies.push({ address: `${venue.name}, ${venue.city}` });
-
-  for (const { address } of strategies) {
-    const coords = await geocodeAddress({ ...base, address });
-    if (coords) return coords;
-  }
-
-  return null;
+async function geocodeRow(venue: VenueRow) {
+  return geocodeVenue({
+    name: venue.name,
+    address: venue.address,
+    city: venue.city,
+    country: venue.country,
+  });
 }
 
 async function main() {
   const limit = process.env.GEOCODE_LIMIT ? Number(process.env.GEOCODE_LIMIT) : undefined;
 
-  const missing = await prisma.venueGuideEntry.findMany({
+  const targets = await prisma.venueGuideEntry.findMany({
     where: {
       isPublished: true,
-      OR: [{ latitude: null }, { longitude: null }],
+      OR: retryLowConfidence
+        ? [
+            { latitude: null },
+            { longitude: null },
+            { geocodeConfidence: "low" },
+            { geocodeConfidence: null },
+          ]
+        : [{ latitude: null }, { longitude: null }],
     },
     select: {
       id: true,
@@ -41,23 +45,24 @@ async function main() {
       address: true,
       city: true,
       country: true,
+      geocodeConfidence: true,
     },
     orderBy: { slug: "asc" },
     ...(limit ? { take: limit } : {}),
   });
 
-  console.log(`🌍 Geocodificando ${missing.length} locales sin coordenadas…`);
+  console.log(`🌍 Geocodificando ${targets.length} locales…`);
 
   let updated = 0;
   let failed = 0;
 
-  for (let i = 0; i < missing.length; i += 1) {
-    const venue = missing[i];
-    const coords = await geocodeVenue(venue);
+  for (let i = 0; i < targets.length; i += 1) {
+    const venue = targets[i];
+    const coords = await geocodeRow(venue);
 
     if (!coords) {
       failed += 1;
-      console.warn(`  ✗ [${i + 1}/${missing.length}] ${venue.slug}`);
+      console.warn(`  ✗ [${i + 1}/${targets.length}] ${venue.slug}`);
       continue;
     }
 
@@ -66,10 +71,11 @@ async function main() {
       data: {
         latitude: coords.latitude,
         longitude: coords.longitude,
+        geocodeConfidence: coords.confidence,
       },
     });
     updated += 1;
-    console.log(`  ✓ [${i + 1}/${missing.length}] ${venue.slug}`);
+    console.log(`  ✓ [${i + 1}/${targets.length}] ${venue.slug} (${coords.confidence})`);
   }
 
   console.log(`✓ ${updated} geocodificados, ${failed} sin resultado`);

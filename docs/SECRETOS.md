@@ -36,6 +36,7 @@ Cursor ignora `.env.local` vía [`.cursorignore`](../.cursorignore) para reducir
 | Checkout / VIP | `STRIPE_SECRET_KEY`, `STRIPE_WEBHOOK_SECRET`, price IDs | Stripe Dashboard |
 | Campañas email | `RESEND_API_KEY`, `MARKETING_*` | `npm run check:marketing-prod` |
 | Bar Online multi-instancia | `REDIS_URL` | [`ESCALADO.md`](./ESCALADO.md) |
+| Mapa 3D satélite/terreno | `NEXT_PUBLIC_MAPTILER_API_KEY` (opcional; calles gratis sin clave) | [MapTiler](https://www.maptiler.com/cloud/) |
 
 ## Tabla por variable (`.env.example`)
 
@@ -50,6 +51,7 @@ Cursor ignora `.env.local` vía [`.cursorignore`](../.cursorignore) para reducir
 | `TMDB_API_KEY` | Pantalla | Opcional | Si usas `/pantalla` |
 | `STRIPE_*` | Pagos | Opcional | Si checkout activo |
 | `SUPABASE_*` | Storage | Opcional | Recomendado prod |
+| `NEXT_PUBLIC_MAPTILER_API_KEY` | Mapa 3D satélite | Opcional | Opcional |
 | `HOLDED_API_KEY` | Integraciones | Opcional | Por bar |
 | `SENTRY_*` | Observabilidad | Opcional | Recomendado prod |
 

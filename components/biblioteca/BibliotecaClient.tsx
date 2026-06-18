@@ -58,18 +58,21 @@ export default function BibliotecaClient({ books }: BibliotecaClientProps) {
   }, [books, query, activeCollection, activeLetter])
 
   const chipClass = (active: boolean) =>
+    cn('search-chip', active && 'search-chip-active');
+
+  const tabClass = (active: boolean) =>
     cn(
-      'rounded-pill px-3 py-1 text-xs font-medium transition-colors',
+      'rounded-pill px-3 py-1.5 text-xs font-medium transition-colors',
       active
-        ? 'bg-electric-yellow text-black'
-        : 'border border-white/15 text-slate-300 hover:border-electric-blue/40 hover:text-white',
-    )
+        ? 'bg-electric-yellow text-slate-900'
+        : 'border border-slate-200 text-slate-600 hover:border-electric-blue/40',
+    );
 
   return (
     <section className="space-y-8">
-      <div className="sticky top-24 z-30 space-y-4 rounded-card border border-white/10 bg-[#111111]/95 p-5 backdrop-blur-md">
+      <div className="sticky top-24 z-30 space-y-4 rounded-card border border-slate-200 bg-white/95 p-5 shadow-sm backdrop-blur-md">
         <div className="relative">
-          <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-slate-500">
+          <span className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-slate-400">
             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
           </span>
           <input
@@ -77,7 +80,7 @@ export default function BibliotecaClient({ books }: BibliotecaClientProps) {
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder="Busca por título, autor o tema…"
-            className="w-full rounded-pill border border-white/10 bg-[#0f0f0f] py-3 pl-11 pr-4 text-white outline-none transition-colors focus:border-electric-blue focus:ring-1 focus:ring-electric-blue placeholder:text-slate-600"
+            className="search-input"
           />
         </div>
 
@@ -87,7 +90,7 @@ export default function BibliotecaClient({ books }: BibliotecaClientProps) {
               key={item.label}
               type="button"
               onClick={() => setActiveCollection(item.id)}
-              className={chipClass(activeCollection === item.id)}
+              className={tabClass(activeCollection === item.id)}
             >
               {item.label}
             </button>
@@ -118,8 +121,8 @@ export default function BibliotecaClient({ books }: BibliotecaClientProps) {
           ))}
         </div>
       ) : (
-        <div className="rounded-card border border-white/10 bg-[#111111]/90 py-16 text-center">
-          <p className="text-slate-400">No encontramos libros que coincidan con tu búsqueda.</p>
+        <div className="rounded-card border border-slate-200 bg-white py-16 text-center shadow-sm">
+          <p className="text-slate-500">No encontramos libros que coincidan con tu búsqueda.</p>
           <button
             type="button"
             onClick={() => {
@@ -127,7 +130,7 @@ export default function BibliotecaClient({ books }: BibliotecaClientProps) {
               setActiveCollection(null)
               setActiveLetter(null)
             }}
-            className="mt-4 text-sm font-medium text-electric-blue hover:text-white"
+            className="mt-4 text-sm font-medium text-electric-blue hover:underline"
           >
             Limpiar filtros
           </button>

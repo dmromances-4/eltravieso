@@ -1,0 +1,17 @@
+{
+  "updated": "November 2024",
+  "sections": [
+    {
+      "title": "Use of the service",
+      "paragraphs": ["By using El Travieso you agree to these terms. You must be of legal drinking age in your jurisdiction."]
+    },
+    {
+      "title": "Purchases",
+      "paragraphs": ["Product prices, availability and shipping terms are shown at checkout. Stripe processes payments securely."]
+    },
+    {
+      "title": "User content",
+      "paragraphs": ["Recipes, blog posts and forum content you publish remain your responsibility. We may moderate content that violates the law or these terms."]
+    }
+  ]
+}

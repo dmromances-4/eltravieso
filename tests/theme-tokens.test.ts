@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { brandColors, brandRadii, brandShadows, brandTypography, surfaceColors } from "@/lib/theme/tokens";
+import { brandColors, brandRadii, brandShadows, brandTypography, lightSurfaces, surfaceColors } from "@/lib/theme/tokens";
 
 import tailwindConfig from "../tailwind.config";
 
@@ -60,12 +60,14 @@ describe("brand theme tokens", () => {
 
 
 
+  it("defines light surfaces for public shell", () => {
+    expect(lightSurfaces.page).toBe("#FAFAFA");
+    expect(lightSurfaces.panel).toBe("#FFFFFF");
+  });
+
   it("defines subtle shadows without neon as primary", () => {
-
-    expect(brandShadows.card).toContain("rgba(0,0,0");
-
+    expect(brandShadows.card).toContain("rgba(15, 23, 42");
     expect(brandShadows.subtle).toBeTruthy();
-
   });
 
 });

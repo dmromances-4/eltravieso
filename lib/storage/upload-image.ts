@@ -1,52 +1,13 @@
 import { mkdir, writeFile } from "fs/promises";
 import path from "path";
 import { assertAllowedUserImage, extensionForDetectedMime } from "./magic-bytes";
+import { resolveVideoBucket, uploadObjectBuffer } from "./object-storage";
 
 const MAX_BYTES = 5 * 1024 * 1024;
 const ALLOWED_TYPES = new Set(["image/jpeg", "image/png", "image/webp", "image/gif"]);
 
 function extensionForMime(mime: string) {
   return extensionForDetectedMime(mime);
-}
-
-async function uploadToSupabase(
-  buffer: Buffer,
-  folder: string,
-  filename: string,
-  mime: string,
-  bucket: string,
-): Promise<string | null> {
-  const SUPABASE_URL = process.env.SUPABASE_URL;
-  const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-
-  if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY) return null;
-
-  const objectPath = `${folder}/${filename}`;
-
-  const uploadRes = await fetch(`${SUPABASE_URL}/storage/v1/object/${bucket}/${objectPath}`, {
-    method: "POST",
-    headers: {
-      Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
-      apikey: SUPABASE_SERVICE_ROLE_KEY,
-      "Content-Type": mime,
-      "x-upsert": "true",
-    },
-    body: buffer,
-  });
-
-  if (!uploadRes.ok) {
-    console.error("Supabase upload failed:", await uploadRes.text());
-    return null;
-  }
-
-  return `${SUPABASE_URL}/storage/v1/object/public/${bucket}/${objectPath}`;
-}
-
-async function uploadToLocal(buffer: Buffer, subdir: string, filename: string): Promise<string> {
-  const dir = path.join(process.cwd(), "public", "uploads", subdir);
-  await mkdir(dir, { recursive: true });
-  await writeFile(path.join(dir, filename), buffer);
-  return `/uploads/${subdir}/${filename}`;
 }
 
 function extensionForMimeOrDefault(mime: string, fallback = "png") {
@@ -67,10 +28,14 @@ export async function uploadRecipeCoverBuffer(
   const filename = `${slug}.${ext}`;
   const bucket = process.env.SUPABASE_RECIPE_COVERS_BUCKET ?? "recipe-covers";
 
-  const remote = await uploadToSupabase(buffer, "covers", filename, mime, bucket);
-  if (remote) return remote;
-
-  return uploadToLocal(buffer, "recipe-covers", filename);
+  return uploadObjectBuffer({
+    buffer,
+    mime,
+    folder: "covers",
+    filename,
+    bucket,
+    localSubdir: "recipe-covers",
+  });
 }
 
 export async function uploadRecipeVideoBuffer(
@@ -79,12 +44,34 @@ export async function uploadRecipeVideoBuffer(
   mime = "video/mp4",
 ): Promise<string> {
   const filename = `${slug}.mp4`;
-  const bucket = process.env.SUPABASE_RECIPE_VIDEOS_BUCKET ?? "recipe-videos";
+  const bucket = resolveVideoBucket("recipe");
 
-  const remote = await uploadToSupabase(buffer, "videos", filename, mime, bucket);
-  if (remote) return remote;
+  return uploadObjectBuffer({
+    buffer,
+    mime,
+    folder: "videos",
+    filename,
+    bucket,
+    localSubdir: "recipe-videos",
+  });
+}
 
-  return uploadToLocal(buffer, "recipe-videos", filename);
+export async function uploadStoryEpisodeBuffer(
+  storyId: string,
+  buffer: Buffer,
+  mime = "video/mp4",
+): Promise<string> {
+  const filename = `${storyId}.mp4`;
+  const bucket = resolveVideoBucket("story");
+
+  return uploadObjectBuffer({
+    buffer,
+    mime,
+    folder: "episodes",
+    filename,
+    bucket,
+    localSubdir: "story-episodes",
+  });
 }
 
 export async function uploadImageFile(
@@ -105,10 +92,14 @@ export async function uploadImageFile(
   const filename = `${options.userId}-${Date.now()}.${ext}`;
   const bucket = options.bucket ?? process.env.SUPABASE_BUCKET ?? "uploads";
 
-  const remote = await uploadToSupabase(buffer, options.subdir, filename, verifiedMime, bucket);
-  if (remote) return remote;
-
-  return uploadToLocal(buffer, options.subdir, filename);
+  return uploadObjectBuffer({
+    buffer,
+    mime: verifiedMime,
+    folder: options.subdir,
+    filename,
+    bucket,
+    localSubdir: options.subdir,
+  });
 }
 
 export async function uploadUserAvatar(userId: string, file: File): Promise<string> {

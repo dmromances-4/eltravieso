@@ -1,8 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { EditorialCard } from "@/components/ui/EditorialCard";
 import { MetaChip } from "@/components/ui/MetaChip";
-import Link from "next/link";
 
 interface CocktailCardProps {
   title: string;
@@ -25,6 +26,7 @@ export default function CocktailCard({
   kcal,
   cover,
 }: CocktailCardProps) {
+  const t = useTranslations("recipeDetail");
   const preview = ingredients
     .slice(0, 3)
     .map((item) => item.replace(/\n|\r/g, " ").trim())
@@ -54,7 +56,7 @@ export default function CocktailCard({
             href={`/recetas/${slug}`}
             className="text-sm font-medium text-electric-blue transition-colors hover:text-white"
           >
-            Ver receta →
+            {t("viewRecipe")} →
           </Link>
         </div>
       }

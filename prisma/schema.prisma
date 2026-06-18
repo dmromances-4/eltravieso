@@ -261,6 +261,7 @@ model User {
   stripeSubscriptionId String?          @unique
   membershipStatus     MembershipStatus @default(NONE)
   membershipExpiresAt  DateTime?
+  preferredLocale      String           @default("es")
   createdAt            DateTime         @default(now())
   updatedAt            DateTime         @updatedAt
 
@@ -354,6 +355,9 @@ model Product {
   commissionRateBps Int                @default(2000)
   affiliateUrl      String?
   affiliatePlatform AffiliatePlatform  @default(NONE)
+  productCode       String?            @unique // ET-PROD-00001
+  encyclopediaSlug  String?
+  sourceUrl         String?
   metadata          Json?              // Flexible extra data (e.g. matchTerms: string[])
   createdAt         DateTime        @default(now())
   updatedAt         DateTime        @updatedAt
@@ -545,6 +549,8 @@ model BarProfile {
   taxId                String   @unique // CIF/NIF
   licenseNumber        String?           // Licencia de actividad
   googleBusinessId     String?
+  tripadvisorPlaceId   String?
+  venueCode            String?           @unique
   coverManagerUrl      String?           // iFrame URL
   theForkUrl           String?           // iFrame URL
   tpvProvider          String?           // "revo" | "lightspeed" | "square"
@@ -583,6 +589,20 @@ model BarProfile {
   signatureDrink       String?
   dressCode            String?
   vibeTags             String[]
+  establishmentTypes   String[] @default([])
+  cuisineTypes         String[] @default([])
+  starDishes           String[] @default([])
+  idealFor             String[] @default([])
+  venueFeatures        String[] @default([])
+  neighborhood         String?
+  priceRange           String?
+  dailyMenuEnabled     Boolean  @default(false)
+  dailyMenuNote        String?
+  awards               String[] @default([])
+  venuePreferences     String[] @default([])
+  instagramUrl         String?
+  tiktokUrl            String?
+  tripadvisorUrl       String?
   verdict              String?  @db.Text
   reservationProvider  ReservationProvider?
   reservationUrl       String?
@@ -631,11 +651,28 @@ model VenueGuideEntry {
   additionalRankings   Json?
   sourceUrl            String               @unique
   externalWebsite      String?
+  googleBusinessId     String?
   tripadvisorUrl       String?
+  tripadvisorPlaceId   String?
   tripadvisorRating    Float?
+  establishmentTypes   String[]             @default([])
+  cuisineTypes         String[]             @default([])
+  starDishes           String[]             @default([])
+  idealFor             String[]             @default([])
+  venueFeatures        String[]             @default([])
+  neighborhood         String?
+  priceRange           String?
+  dailyMenuEnabled     Boolean              @default(false)
+  dailyMenuNote        String?
+  awards               String[]             @default([])
+  venuePreferences     String[]             @default([])
+  instagramUrl         String?
+  tiktokUrl            String?
+  venueCode            String?              @unique
   enrichmentSource     String?
   latitude             Float?
   longitude            Float?
+  geocodeConfidence    String?
   isPublished          Boolean              @default(true)
   barProfileId         String?              @unique
   source               VenueSource          @default(WORLDS_50_BEST)
@@ -871,6 +908,7 @@ model Recipe {
   author      User            @relation(fields: [authorId], references: [id], name: "AuthorRecipes")
   favoritedBy User[]          @relation("UserFavorites")
   technical   TechnicalSheet?
+  translations RecipeTranslation[]
 
   @@index([slug])
   @@index([authorId])
@@ -889,6 +927,24 @@ model TechnicalSheet {
 
   // Relations
   recipe Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+}
+
+model RecipeTranslation {
+  id          String   @id @default(uuid())
+  recipeId    String
+  locale      String
+  title       String
+  summary     String?  @db.Text
+  glass       String?
+  ingredients String   @db.Text
+  method      String?  @db.Text
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  recipe Recipe @relation(fields: [recipeId], references: [id], onDelete: Cascade)
+
+  @@unique([recipeId, locale])
+  @@index([locale])
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1010,6 +1066,7 @@ model BlogPost {
   published   Boolean   @default(false)
   isPremium   Boolean   @default(false)
   publishedAt DateTime?
+  locale      String    @default("es")
   metadata    Json?
   authorId    String?
   createdAt   DateTime  @default(now())

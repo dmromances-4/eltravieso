@@ -47,6 +47,7 @@ export interface AlcoholAdvanced {
 
 export interface AlcoholRecord {
   id: string;
+  slug: string;
   family_id: string;
   category: string;
   subcategory: string;

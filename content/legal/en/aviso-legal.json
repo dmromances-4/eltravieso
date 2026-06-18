@@ -1,0 +1,29 @@
+{
+  "updated": "November 2024",
+  "sections": [
+    {
+      "title": "General information",
+      "paragraphs": [
+        "In compliance with applicable information society services legislation, this website is owned by El Travieso Vermouth S.L."
+      ],
+      "list": [
+        "Company name: El Travieso Vermouth S.L.",
+        "Tax ID: B-XXXXXXXX",
+        "Registered office: Calle Falsa 123, 28000 Madrid, Spain",
+        "Contact email: contacto@eltraviesovermut.com"
+      ]
+    },
+    {
+      "title": "Intellectual property",
+      "paragraphs": [
+        "All content on this website (text, images, recipes, branding and software) is protected by intellectual property law. Reproduction without written permission is prohibited."
+      ]
+    },
+    {
+      "title": "Liability",
+      "paragraphs": [
+        "El Travieso is not responsible for misuse of the information published on this site. Alcohol-related content is intended for adults of legal drinking age."
+      ]
+    }
+  ]
+}

@@ -1,4 +1,6 @@
 import booksData from "@/data/books.json";
+import type { AppLocale } from "@/i18n/routing";
+import { getLocalizedCollection, mergeLocalizedFields } from "@/lib/i18n/content";
 import type { BookCollection, BookRecord } from "@/types/book";
 
 const books = booksData as BookRecord[];
@@ -16,25 +18,32 @@ function firstLetter(title: string): string {
   return "#";
 }
 
-export function getAllBooks(): BookRecord[] {
-  return [...books].sort((a, b) => a.title.localeCompare(b.title, "es"));
+export function getAllBooks(locale: AppLocale = "es"): BookRecord[] {
+  return getLocalizedCollection(books, locale, "books").sort((a, b) =>
+    a.title.localeCompare(b.title, "es"),
+  );
 }
 
-export function getBookBySlug(slug: string): BookRecord | null {
-  return books.find((book) => book.slug === slug) ?? null;
+export function getBookBySlug(slug: string, locale: AppLocale = "es"): BookRecord | null {
+  const book = books.find((item) => item.slug === slug);
+  if (!book) return null;
+  return mergeLocalizedFields(book, locale, "books");
 }
 
-export function getBooksByCollection(collection: BookCollection | null): BookRecord[] {
-  const sorted = getAllBooks();
+export function getBooksByCollection(
+  collection: BookCollection | null,
+  locale: AppLocale = "es",
+): BookRecord[] {
+  const sorted = getAllBooks(locale);
   if (!collection) return sorted;
   return sorted.filter((book) => book.collection === collection);
 }
 
-export function searchBooks(query: string): BookRecord[] {
+export function searchBooks(query: string, locale: AppLocale = "es"): BookRecord[] {
   const normalizedQuery = normalizeText(query).trim();
-  if (!normalizedQuery) return getAllBooks();
+  if (!normalizedQuery) return getAllBooks(locale);
 
-  return getAllBooks().filter((book) => {
+  return getAllBooks(locale).filter((book) => {
     const haystack = normalizeText(
       [book.title, book.subtitle ?? "", book.authors.join(" "), book.summary, ...(book.tags ?? [])].join(" "),
     );
@@ -42,12 +51,15 @@ export function searchBooks(query: string): BookRecord[] {
   });
 }
 
-export function filterBooks(options: {
-  query?: string;
-  collection?: BookCollection | null;
-  letter?: string | null;
-}): BookRecord[] {
-  let result = options.query ? searchBooks(options.query) : getAllBooks();
+export function filterBooks(
+  options: {
+    query?: string;
+    collection?: BookCollection | null;
+    letter?: string | null;
+  },
+  locale: AppLocale = "es",
+): BookRecord[] {
+  let result = options.query ? searchBooks(options.query, locale) : getAllBooks(locale);
 
   if (options.collection) {
     result = result.filter((book) => book.collection === options.collection);
@@ -60,12 +72,12 @@ export function filterBooks(options: {
   return result;
 }
 
-export function getRelatedBooks(slug: string, limit = 3): BookRecord[] {
-  const current = getBookBySlug(slug);
+export function getRelatedBooks(slug: string, limit = 3, locale: AppLocale = "es"): BookRecord[] {
+  const current = getBookBySlug(slug, locale);
   if (!current) return [];
 
   const tagSet = new Set(current.tags ?? []);
-  return getAllBooks()
+  return getAllBooks(locale)
     .filter((book) => book.slug !== slug)
     .map((book) => {
       let score = 0;
@@ -81,8 +93,12 @@ export function getRelatedBooks(slug: string, limit = 3): BookRecord[] {
     .map(({ book }) => book);
 }
 
-export function getBooksForCocktailSlug(cocktailSlug: string, limit = 6): BookRecord[] {
-  return getAllBooks()
+export function getBooksForCocktailSlug(
+  cocktailSlug: string,
+  limit = 6,
+  locale: AppLocale = "es",
+): BookRecord[] {
+  return getAllBooks(locale)
     .filter((book) => book.cocktailSlugs?.includes(cocktailSlug))
     .slice(0, limit);
 }

@@ -1,0 +1,17 @@
+{
+  "updated": "Noviembre 2024",
+  "sections": [
+    {
+      "title": "Uso del servicio",
+      "paragraphs": ["Al usar El Travieso aceptas estos términos. Debes ser mayor de edad según la legislación de tu país."]
+    },
+    {
+      "title": "Compras",
+      "paragraphs": ["Los precios, disponibilidad y envíos se muestran en el checkout. Los pagos se procesan de forma segura con Stripe."]
+    },
+    {
+      "title": "Contenido de usuario",
+      "paragraphs": ["Las recetas, entradas de blog y mensajes del foro que publiques son tu responsabilidad. Podemos moderar contenido ilegal o contrario a estos términos."]
+    }
+  ]
+}

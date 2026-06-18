@@ -99,6 +99,19 @@ export function nextStoryId(existingCount: number): string {
   return `STORY-${String(existingCount + 1).padStart(4, "0")}`;
 }
 
+export function maxStoryNumber(storyIds: Iterable<string>): number {
+  let max = 0;
+  for (const id of storyIds) {
+    const m = /^STORY-(\d+)$/i.exec(id);
+    if (m) max = Math.max(max, Number(m[1]));
+  }
+  return max;
+}
+
+export function formatStoryId(n: number): string {
+  return `STORY-${String(n).padStart(4, "0")}`;
+}
+
 export function storySeed(cocktailSlug: string, storyIndex: number, categoryId: string): number {
   return hashSeed([cocktailSlug, String(storyIndex), categoryId]);
 }

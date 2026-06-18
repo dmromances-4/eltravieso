@@ -2,12 +2,18 @@
 
 import { useEffect, useState, type FormEvent } from "react";
 import MapPlanPanel from "@/components/account/MapPlanPanel";
+import VenueDetailFieldsSection, {
+  EMPTY_VENUE_DETAIL_FORM,
+  type VenueDetailFormState,
+} from "@/components/account/VenueDetailFieldsSection";
 
 type BarProfileData = {
   businessName: string;
   taxId: string;
   licenseNumber: string;
+  venueCode: string;
   googleBusinessId: string;
+  tripadvisorPlaceId: string;
   coverManagerUrl: string;
   theForkUrl: string;
   tpvProvider: string;
@@ -40,7 +46,9 @@ export default function BarSettingsForm() {
     businessName: "",
     taxId: "",
     licenseNumber: "",
+    venueCode: "",
     googleBusinessId: "",
+    tripadvisorPlaceId: "",
     coverManagerUrl: "",
     theForkUrl: "",
     tpvProvider: "",
@@ -77,6 +85,7 @@ export default function BarSettingsForm() {
   const [mapPlanExpiresAt, setMapPlanExpiresAt] = useState<string | null>(null);
   const [isPremium, setIsPremium] = useState(false);
   const [stripeSubscriptionId, setStripeSubscriptionId] = useState<string | null>(null);
+  const [venueDetail, setVenueDetail] = useState<VenueDetailFormState>(EMPTY_VENUE_DETAIL_FORM);
 
   useEffect(() => {
     async function loadBarProfile() {
@@ -89,7 +98,9 @@ export default function BarSettingsForm() {
               businessName: data.profile.businessName ?? "",
               taxId: data.profile.taxId ?? "",
               licenseNumber: data.profile.licenseNumber ?? "",
+              venueCode: data.profile.venueCode ?? "",
               googleBusinessId: data.profile.googleBusinessId ?? "",
+              tripadvisorPlaceId: data.profile.tripadvisorPlaceId ?? "",
               coverManagerUrl: data.profile.coverManagerUrl ?? "",
               theForkUrl: data.profile.theForkUrl ?? "",
               tpvProvider: data.profile.tpvProvider ?? "",
@@ -122,6 +133,22 @@ export default function BarSettingsForm() {
             setMapPlanExpiresAt(data.profile.mapPlanExpiresAt ?? null);
             setIsPremium(Boolean(data.profile.isPremium));
             setStripeSubscriptionId(data.profile.stripeSubscriptionId ?? null);
+            setVenueDetail({
+              establishmentTypes: data.profile.establishmentTypes ?? [],
+              cuisineTypes: data.profile.cuisineTypes ?? [],
+              starDishes: data.profile.starDishes ?? [],
+              idealFor: data.profile.idealFor ?? [],
+              venueFeatures: data.profile.venueFeatures ?? [],
+              neighborhood: data.profile.neighborhood ?? "",
+              priceRange: data.profile.priceRange ?? "",
+              dailyMenuEnabled: Boolean(data.profile.dailyMenuEnabled),
+              dailyMenuNote: data.profile.dailyMenuNote ?? "",
+              awards: data.profile.awards ?? [],
+              venuePreferences: data.profile.venuePreferences ?? [],
+              instagramUrl: data.profile.instagramUrl ?? "",
+              tiktokUrl: data.profile.tiktokUrl ?? "",
+              tripadvisorUrl: data.profile.tripadvisorUrl ?? "",
+            });
           }
         }
       } catch (err) {
@@ -139,7 +166,7 @@ export default function BarSettingsForm() {
     setMessage(null);
 
     try {
-      const payload = { ...formData };
+      const payload = { ...formData, ...venueDetail };
       if (!payload.tpvToken.trim()) {
         delete (payload as { tpvToken?: string }).tpvToken;
       }
@@ -261,6 +288,19 @@ export default function BarSettingsForm() {
             </div>
             <div>
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                Código El Travieso
+              </label>
+              <input
+                type="text"
+                name="venueCode"
+                value={formData.venueCode}
+                readOnly
+                className="w-full border-4 border-black bg-zinc-800 px-4 py-3 font-mono text-slate-300 shadow-[4px_4px_0px_#000000]"
+                placeholder="Se asigna al guardar"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
                 Google Business ID
               </label>
               <input
@@ -268,6 +308,20 @@ export default function BarSettingsForm() {
                 name="googleBusinessId"
                 value={formData.googleBusinessId}
                 onChange={handleInputChange}
+                placeholder="ChIJ… o ID numérico de ficha"
+                className="w-full border-4 border-black bg-black px-4 py-3 font-mono text-white focus:outline-none focus:border-electric-yellow shadow-[4px_4px_0px_#000000]"
+              />
+            </div>
+            <div>
+              <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
+                TripAdvisor ID
+              </label>
+              <input
+                type="text"
+                name="tripadvisorPlaceId"
+                value={formData.tripadvisorPlaceId}
+                onChange={handleInputChange}
+                placeholder="d12345678 o URL de la ficha"
                 className="w-full border-4 border-black bg-black px-4 py-3 font-mono text-white focus:outline-none focus:border-electric-yellow shadow-[4px_4px_0px_#000000]"
               />
             </div>
@@ -439,6 +493,15 @@ export default function BarSettingsForm() {
           ) : null}
         </div>
 
+        <VenueDetailFieldsSection
+          value={venueDetail}
+          dressCode={formData.dressCode}
+          theForkUrl={formData.theForkUrl}
+          onChange={(patch) => setVenueDetail((prev) => ({ ...prev, ...patch }))}
+          onDressCodeChange={(value) => setFormData((prev) => ({ ...prev, dressCode: value }))}
+          onTheForkUrlChange={(value) => setFormData((prev) => ({ ...prev, theForkUrl: value }))}
+        />
+
         {/* Sección: Lore del local (Guía pública) */}
         <div className="border-4 border-black bg-zinc-900 p-6 shadow-[6px_6px_0px_#000000]">
           <h2 className="mb-6 border-b-4 border-black pb-2 text-xl font-bold uppercase tracking-wider text-electric-red">
@@ -489,18 +552,6 @@ export default function BarSettingsForm() {
                 type="text"
                 name="signatureDrink"
                 value={formData.signatureDrink}
-                onChange={handleInputChange}
-                className="w-full border-4 border-black bg-black px-4 py-3 font-mono text-white shadow-[4px_4px_0px_#000000] focus:border-electric-yellow focus:outline-none"
-              />
-            </div>
-            <div>
-              <label className="mb-2 block text-xs font-bold uppercase tracking-wider text-slate-400">
-                Dress code
-              </label>
-              <input
-                type="text"
-                name="dressCode"
-                value={formData.dressCode}
                 onChange={handleInputChange}
                 className="w-full border-4 border-black bg-black px-4 py-3 font-mono text-white shadow-[4px_4px_0px_#000000] focus:border-electric-yellow focus:outline-none"
               />
@@ -638,8 +689,11 @@ export default function BarSettingsForm() {
           <h2 className="mb-6 border-b-4 border-black pb-2 text-xl font-bold uppercase tracking-wider text-electric-blue">
             📅 Central de Reservas (iFrames)
           </h2>
+          <p className="mb-6 text-xs text-slate-400">
+            TheFork (ficha o widget) se configura en Links y presencia online.
+          </p>
           <div className="grid gap-6 md:grid-cols-2">
-            <div>
+            <div className="md:col-span-2">
               <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
                 CoverManager Widget URL
               </label>
@@ -649,19 +703,6 @@ export default function BarSettingsForm() {
                 value={formData.coverManagerUrl}
                 onChange={handleInputChange}
                 placeholder="https://www.covermanager.com/reservation/module/..."
-                className="w-full border-4 border-black bg-black px-4 py-3 font-mono text-white focus:outline-none focus:border-electric-yellow shadow-[4px_4px_0px_#000000]"
-              />
-            </div>
-            <div>
-              <label className="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">
-                TheFork Widget URL
-              </label>
-              <input
-                type="url"
-                name="theForkUrl"
-                value={formData.theForkUrl}
-                onChange={handleInputChange}
-                placeholder="https://widgets.thefork.com/es/module/..."
                 className="w-full border-4 border-black bg-black px-4 py-3 font-mono text-white focus:outline-none focus:border-electric-yellow shadow-[4px_4px_0px_#000000]"
               />
             </div>

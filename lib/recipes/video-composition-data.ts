@@ -1,3 +1,4 @@
+import { existsSync } from "fs";
 import { buildVideoTimeline, type VideoTimeline } from "@/lib/recipes/video-timeline";
 import type { VideoBeat, MascotPose } from "@/lib/recipes/video-prompt";
 
@@ -31,6 +32,18 @@ export function methodToSteps(method: string): string[] {
     .filter(Boolean);
 }
 
+/** Omit broken placeholder covers so Remotion render does not fail on 404/SVG. */
+export function sanitizeCoverImageUrl(coverImageUrl?: string): string | undefined {
+  if (!coverImageUrl) return undefined;
+  if (coverImageUrl.endsWith(".svg")) return undefined;
+  if (coverImageUrl.startsWith("/uploads/")) {
+    const rel = coverImageUrl.replace(/^\//, "");
+    const abs = `${process.cwd()}/public/${rel}`;
+    if (!existsSync(abs)) return undefined;
+  }
+  return coverImageUrl;
+}
+
 export function recipeToVideoProps(input: {
   title: string;
   glass: string;
@@ -38,7 +51,8 @@ export function recipeToVideoProps(input: {
   method: string;
   coverImageUrl?: string;
 }): RecipeVideoProps {
-  const timeline = buildVideoTimeline(input);
+  const coverImageUrl = sanitizeCoverImageUrl(input.coverImageUrl);
+  const timeline = buildVideoTimeline({ ...input, coverImageUrl });
   const stepTexts = timeline.beats
     .filter((b) => b.kind === "step")
     .map((b) => b.text)
@@ -51,7 +65,7 @@ export function recipeToVideoProps(input: {
     glass: input.glass,
     ingredients: input.ingredients.slice(0, 8),
     steps: stepTexts.length ? stepTexts : ["Preparar y servir bien frío."],
-    coverImageUrl: input.coverImageUrl,
+    coverImageUrl,
     mascotPose: techniqueBeat?.mascotPose ?? inferMascotPose(input.method),
     introTagline: timeline.introTagline,
     liquidTone: timeline.liquidTone,
@@ -69,5 +83,5 @@ export function recipeToVideoTimeline(input: {
   method: string;
   coverImageUrl?: string;
 }): VideoTimeline {
-  return buildVideoTimeline(input);
+  return buildVideoTimeline({ ...input, coverImageUrl: sanitizeCoverImageUrl(input.coverImageUrl) });
 }

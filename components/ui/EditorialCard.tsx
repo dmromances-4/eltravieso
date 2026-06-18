@@ -1,5 +1,5 @@
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import Link from "next/link";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -35,9 +35,9 @@ export function EditorialCard({
   className,
 }: EditorialCardProps) {
   return (
-    <article className={cn("group flex flex-col overflow-hidden rounded-card border border-white/10 bg-[var(--surface-panel)] transition-colors hover:border-white/20", className)}>
+    <article className={cn("group flex flex-col overflow-hidden rounded-card border border-slate-200 bg-white transition-colors hover:border-slate-300 hover:shadow-subtle", className)}>
       <Link href={href} className="block">
-        <div className={cn("relative overflow-hidden bg-charcoal", aspects[aspect])}>
+        <div className={cn("relative overflow-hidden bg-slate-100", aspects[aspect])}>
           {imageSrc ? (
             <Image
               src={imageSrc}
@@ -47,7 +47,7 @@ export function EditorialCard({
               className="object-cover transition duration-500 group-hover:scale-[1.03]"
             />
           ) : (
-            <div className="flex h-full items-center justify-center text-4xl text-white/20">◆</div>
+            <div className="flex h-full items-center justify-center text-4xl text-slate-300">◆</div>
           )}
           {badge ? <div className="absolute left-3 top-3">{badge}</div> : null}
         </div>
@@ -55,12 +55,12 @@ export function EditorialCard({
       <div className="flex flex-1 flex-col gap-3 p-5">
         {subtitle ? <p className="text-xs font-medium text-electric-blue">{subtitle}</p> : null}
         <Link href={href}>
-          <h3 className="font-display text-xl font-semibold leading-snug text-white transition-colors group-hover:text-electric-yellow">
+          <h3 className="font-display text-xl font-semibold leading-snug text-slate-900 transition-colors group-hover:text-electric-blue">
             {title}
           </h3>
         </Link>
         {meta ? <div className="flex flex-wrap gap-2">{meta}</div> : null}
-        {footer ? <div className="mt-auto border-t border-white/5 pt-4">{footer}</div> : null}
+        {footer ? <div className="mt-auto border-t border-slate-100 pt-4">{footer}</div> : null}
       </div>
     </article>
   );

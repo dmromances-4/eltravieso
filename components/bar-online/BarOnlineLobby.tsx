@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, type FormEvent } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 type SessionType = "CHAT" | "VIDEO_CALL" | "TASTING_EVENT";
 

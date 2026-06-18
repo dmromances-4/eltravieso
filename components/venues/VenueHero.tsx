@@ -1,3 +1,4 @@
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { REGIONAL_LIST_LABELS } from "@/lib/venues/continents";
 import type { VenuePublicDTO } from "@/lib/venues/types";
@@ -96,6 +97,14 @@ export default function VenueHero({ venue }: Props) {
                 </span>
               ))}
             </div>
+          ) : null}
+          {venue.latitude != null && venue.longitude != null ? (
+            <Link
+              href={`/mapa?slug=${encodeURIComponent(venue.slug)}`}
+              className="inline-flex w-fit items-center rounded-full border-2 border-black bg-electric-blue px-5 py-2 font-mono text-xs font-bold uppercase tracking-wider text-white shadow-[3px_3px_0px_#000000] hover:bg-electric-yellow hover:text-black"
+            >
+              Ver en el mapa
+            </Link>
           ) : null}
         </div>
       </div>

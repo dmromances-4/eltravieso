@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import type { ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -10,7 +10,7 @@ type SurfaceCardProps = {
 
 export function SurfaceCard({ href, className, children }: SurfaceCardProps) {
   const classes = cn(
-    "rounded-card border border-white/10 bg-[var(--surface-panel)]/90 p-8 transition-all hover:border-electric-yellow/25 hover:bg-charcoal/95",
+    "rounded-card border border-slate-200 bg-white p-8 transition-all hover:border-electric-yellow/40 hover:shadow-subtle",
     className,
   );
 

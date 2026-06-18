@@ -1,0 +1,29 @@
+{
+  "updated": "Noviembre 2024",
+  "sections": [
+    {
+      "title": "Información general",
+      "paragraphs": [
+        "En cumplimiento de la Ley 34/2002, de Servicios de la Sociedad de la Información y de Comercio Electrónico (LSSI-CE), se informa que este sitio web es propiedad de El Travieso Vermut S.L."
+      ],
+      "list": [
+        "Denominación social: El Travieso Vermut S.L.",
+        "NIF: B-XXXXXXXX",
+        "Domicilio social: Calle Falsa 123, 28000 Madrid, España",
+        "Email de contacto: contacto@eltraviesovermut.com"
+      ]
+    },
+    {
+      "title": "Propiedad intelectual",
+      "paragraphs": [
+        "Todos los contenidos de este sitio web (textos, imágenes, recetas, marca y software) están protegidos por la legislación de propiedad intelectual. Queda prohibida su reproducción sin autorización expresa."
+      ]
+    },
+    {
+      "title": "Responsabilidad",
+      "paragraphs": [
+        "El Travieso no se hace responsable del uso indebido de la información publicada en el sitio. El contenido relacionado con alcohol está dirigido a mayores de edad."
+      ]
+    }
+  ]
+}

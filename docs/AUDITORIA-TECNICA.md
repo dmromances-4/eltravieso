@@ -908,7 +908,7 @@ Admin: middleware exige rol + 2FA verificado en token.
 
 11. **Storybook** para componentes marca (`BrandButton`, cards).
 12. **GraphQL BFF** solo si proliferan clientes móviles.
-13. **Internacionalización i18n** — Hoy contenido ES-first.
+13. **Internacionalización i18n** — **Implementado** (`next-intl`, rutas `/[locale]`, sidecars EN, APIs locale-aware). Ver `docs/GUIA-LOCALES.md` y `messages/`.
 14. **PWA offline** para recetas favoritas.
 
 ---

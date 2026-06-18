@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">El Travieso</string>
+    <string name="title_activity_main">El Travieso</string>
+    <string name="package_name">com.eltravieso.app</string>
+    <string name="custom_url_scheme">com.eltravieso.app</string>
+</resources>

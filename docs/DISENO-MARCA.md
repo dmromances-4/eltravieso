@@ -2,8 +2,7 @@
 
 
 
-Dirección visual: **editorial nocturno** — oscuro como marca vermut, limpio como Zara, contundente en hero como Vicio, catálogos legibles como Difford's.
-
+Dirección visual: **editorial claro** — fondos blancos como catálogo Difford's, acentos amarillo/azul/rojo dosificados, hero contundente con logo Travieso.
 
 
 ## Colores
@@ -56,19 +55,32 @@ Verificación: `npm run check:design` (falla si aparecen `#FFCC00`, `#00A3E0`, `
 
 
 
-## Superficies (tema oscuro)
+## Superficies (tema claro — shell público)
 
 
+- Fondo general: `#FAFAFA` / `#FFFFFF`
 
-- Fondo general: `#0A0A0A`
+- Paneles y cards: `#FFFFFF` + borde `slate-200` (`--surface-panel`)
 
-- Paneles: `#111111` (`--surface-panel`)
+- Texto principal: `text-slate-900`
 
-- Texto cuerpo: `text-slate-300`
+- Texto cuerpo: `text-slate-600` (`.text-body`)
 
-- Texto secundario: `text-slate-400`
+- Texto secundario: `text-slate-500`
+
+- Header / footer: `bg-white/95`, `border-slate-200`
 
 - Radios: `--radius-card` (1rem), `--radius-pill` (pill)
+
+- Búsqueda: utilidades `.search-input`, `.search-chip`, `.search-chip-active` en `globals.css`
+
+**Admin y cuenta** conservan tema oscuro (`.dark`, `surfaceColors` legacy) hasta fase 2.
+
+
+## Superficies oscuras (admin / cuenta)
+
+
+- Fondo: `#0A0A0A`, paneles `#111111` — ver `surfaceColors` en `lib/theme/tokens.ts`
 
 
 

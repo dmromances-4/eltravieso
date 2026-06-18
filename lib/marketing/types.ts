@@ -9,6 +9,7 @@ export type CampaignRecipient = {
   email: string | null;
   phone: string | null;
   name: string | null;
+  preferredLocale?: string | null;
 };
 
 export type SendCampaignResult = {

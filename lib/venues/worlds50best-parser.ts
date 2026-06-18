@@ -24,16 +24,31 @@ function stripHtml(html: string): string {
     .trim();
 }
 
+function escapeRegExp(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
 function metaContent(html: string, property: string): string | null {
-  const re = new RegExp(
-    `<meta[^>]+(?:property|name)=["']${property}["'][^>]+content=["']([^"']+)["']`,
-    "i",
-  );
-  const alt = new RegExp(
-    `<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${property}["']`,
-    "i",
-  );
-  return html.match(re)?.[1] ?? html.match(alt)?.[1] ?? null;
+  const key = escapeRegExp(property);
+  const patterns = [
+    new RegExp(
+      `<meta[^>]+(?:property|name)=["']${key}["'][^>]+content=["']([^"']+)["']`,
+      "i",
+    ),
+    new RegExp(
+      `<meta[^>]+content=["']([^"']+)["'][^>]+(?:property|name)=["']${key}["']`,
+      "i",
+    ),
+    new RegExp(
+      `<meta[^>]+(?:property|name)=["']${key}["'][^>]+content="([^"]+)"`,
+      "i",
+    ),
+  ];
+  for (const re of patterns) {
+    const match = html.match(re);
+    if (match?.[1]) return match[1];
+  }
+  return null;
 }
 
 function absolutizeUrl(path: string, base: string): string {
@@ -42,7 +57,31 @@ function absolutizeUrl(path: string, base: string): string {
   return `${base.replace(/\/$/, "")}${path.startsWith("/") ? "" : "/"}${path}`;
 }
 
+function isValidExternalUrl(href: string): boolean {
+  try {
+    const host = new URL(href).hostname.replace(/^www\./, "");
+    return !SOCIAL_HOSTS.some((s) => host.includes(s)) && !host.includes("theworlds50best.com");
+  } catch {
+    return false;
+  }
+}
+
 export type ParseListOptions = { maxRank?: number };
+
+export function parseListYear(html: string): number | null {
+  const sources = [
+    metaContent(html, "og:title"),
+    html.match(/<title>([^<]+)<\/title>/i)?.[1] ?? null,
+  ];
+
+  for (const source of sources) {
+    if (!source) continue;
+    const match = source.match(/\b(20\d{2})\b/);
+    if (match) return Number(match[1]);
+  }
+
+  return null;
+}
 
 export function parseListPage(
   html: string,
@@ -51,14 +90,14 @@ export function parseListPage(
 ): W50ListItem[] {
   const items: W50ListItem[] = [];
   const seenRanks = new Set<number>();
-  const chunks = html.split('<div class="list-item" >').slice(1);
+  const chunks = html.split(/<div class="list-item"\s*>/i).slice(1);
 
   for (const chunk of chunks) {
-    const rankMatch = chunk.match(/<p class="rank[^"]*" >(\d+)<\/p>/);
+    const rankMatch = chunk.match(/<p class="rank[^"]*"\s*>(\d+)<\/p>/i);
     const hrefMatch = chunk.match(/href="([^"]+)"/);
-    const nameMatch = chunk.match(/<h2>([^<]+)<\/h2>/);
-    const cityMatch = chunk.match(/<\/h2><\/a><p>([^<]+)<\/p>/);
-    const imgMatch = chunk.match(/data-src="([^"]+)"/);
+    const nameMatch = chunk.match(/<h2>([^<]+)<\/h2>/i);
+    const cityMatch = chunk.match(/<\/h2><\/a><p>([^<]+)<\/p>/i);
+    const imgMatch = chunk.match(/data-src="([^"]+)"/i);
 
     if (!rankMatch || !hrefMatch || !nameMatch) continue;
 
@@ -86,15 +125,53 @@ export function parseListPage(
 }
 
 function extractProfileBlock(html: string): string {
-  const m =
-    html.match(/<div class="content profile"[^>]*>([\s\S]*?)<\/div>\s*<\/div>/i) ??
-    html.match(/<div class="content profile"[^>]*>([\s\S]*?)<\/div>/i);
-  return m?.[1] ?? "";
+  const startMatch = html.match(/<div[^>]*class="[^"]*\bcontent profile\b[^"]*"/i);
+  if (!startMatch || startMatch.index == null) {
+    const articleMatch = html.match(/<div[^>]*data-clarity-region="article"[^>]*>/i);
+    if (!articleMatch || articleMatch.index == null) return "";
+    const start = articleMatch.index;
+    const endMarkers = [
+      '<h3 class="contact-list-title"',
+      'class="contact-list-title"',
+      '<div role="complementary"',
+    ];
+    let end = html.length;
+    for (const marker of endMarkers) {
+      const idx = html.indexOf(marker, start);
+      if (idx > start && idx < end) end = idx;
+    }
+    return html.slice(start, end);
+  }
+
+  const start = startMatch.index;
+  const endMarkers = [
+    '<h3 class="contact-list-title"',
+    'class="contact-list-title"',
+    '<div role="complementary"',
+  ];
+
+  let end = html.length;
+  for (const marker of endMarkers) {
+    const idx = html.indexOf(marker, start);
+    if (idx > start && idx < end) end = idx;
+  }
+
+  return html.slice(start, end);
+}
+
+function extractAddress(html: string): string | null {
+  const inProfile = html.match(/<p class="location[^"]*"[^>]*>([^<]+)</i);
+  if (inProfile) return stripHtml(inProfile[1]);
+
+  const inDiv = html.match(/<div class="location[^"]*"[^>]*>([^<]+)</i);
+  if (inDiv) return stripHtml(inDiv[1]);
+
+  return null;
 }
 
 function extractParagraphs(block: string): string[] {
   const paras: string[] = [];
-  const re = /<p[^>]*>([\s\S]*?)<\/p>/gi;
+  const re = /<p(?![^>]*class="location)[^>]*>([\s\S]*?)<\/p>/gi;
   let m: RegExpExecArray | null;
   while ((m = re.exec(block))) {
     const text = stripHtml(m[1]);
@@ -103,29 +180,60 @@ function extractParagraphs(block: string): string[] {
   return paras;
 }
 
-function extractExternalWebsite(block: string): string | null {
-  const links = [...block.matchAll(/<a[^>]+href="(https?:\/\/[^"]+)"[^>]*>/gi)];
-  for (const [, href] of links) {
-    try {
-      const host = new URL(href).hostname.replace(/^www\./, "");
-      if (!SOCIAL_HOSTS.some((s) => host.includes(s)) && !host.includes("theworlds50best.com")) {
-        return href;
-      }
-    } catch {
-      // ignore invalid URLs
+function extractIntroQuote(block: string): string | null {
+  const match = block.match(/<h3 class="intro-quote[^"]*"[^>]*>([\s\S]*?)<\/h3>/i);
+  return match ? stripHtml(match[1]) : null;
+}
+
+function extractExternalWebsite(html: string, profileBlock: string): string | null {
+  const blocks = [profileBlock, html];
+
+  for (const block of blocks) {
+    const websiteClass = block.match(
+      /<a[^>]+class="[^"]*website[^"]*"[^>]+href="(https?:\/\/[^"]+)"/i,
+    );
+    if (websiteClass && isValidExternalUrl(websiteClass[1])) return websiteClass[1];
+
+    const hrefFirst = block.match(
+      /<a[^>]+href="(https?:\/\/[^"]+)"[^>]*class="[^"]*website/i,
+    );
+    if (hrefFirst && isValidExternalUrl(hrefFirst[1])) return hrefFirst[1];
+
+    const links = [...block.matchAll(/<a[^>]+href="(https?:\/\/[^"]+)"[^>]*>/gi)];
+    for (const [, href] of links) {
+      if (isValidExternalUrl(href)) return href;
     }
   }
+
   return null;
 }
 
 function extractChefName(html: string, block: string): string | null {
-  const chefInBlock = block.match(/chef\s+([A-Za-zÀ-ÿ' .-]+)/i);
+  const chefTag = html.match(/class="chef[^"]*"[^>]*>([^<]+)</i);
+  if (chefTag) {
+    return stripHtml(chefTag[1])
+      .replace(/^chef\s+/i, "")
+      .trim()
+      .slice(0, 120);
+  }
+
+  const chefInBlock = block.match(/(?:chef|executive chef)\s+([A-Za-zÀ-ÿ' .-]+)/i);
   if (chefInBlock) return chefInBlock[1].trim().slice(0, 120);
 
-  const chefTag = html.match(/class="chef[^"]*"[^>]*>([^<]+)</i);
-  if (chefTag) return stripHtml(chefTag[1]);
-
   return null;
+}
+
+function extractJsonLd(html: string): Record<string, unknown> | null {
+  const match = html.match(
+    /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/i,
+  );
+  if (!match?.[1]) return null;
+  try {
+    const parsed = JSON.parse(match[1].trim()) as Record<string, unknown>;
+    return parsed;
+  } catch {
+    return null;
+  }
 }
 
 function parseCountryFromAddress(address: string): string | null {
@@ -140,19 +248,35 @@ export function parseDetailPage(
   baseUrl: string,
 ): NormalizedVenueGuide {
   const name = stripHtml(html.match(/<h1[^>]*>([^<]+)<\/h1>/i)?.[1] ?? listItem.name);
-  const locationMatch = html.match(/class="location[^"]*"[^>]*>([^<]+)</i);
-  const address = locationMatch ? stripHtml(locationMatch[1]) : null;
-
+  const address = extractAddress(html);
   const profileBlock = extractProfileBlock(html);
   const paragraphs = extractParagraphs(profileBlock);
-  const history = paragraphs.length ? paragraphs.join("\n\n") : null;
-  const verdict = paragraphs.find((p) => p.length > 80) ?? paragraphs[0] ?? null;
+  const introQuote = extractIntroQuote(profileBlock);
+  const jsonLd = extractJsonLd(html);
+  const jsonDescription =
+    typeof jsonLd?.description === "string" ? stripHtml(jsonLd.description) : null;
+  const verdict =
+    introQuote ??
+    paragraphs.find((p) => p.length > 80) ??
+    paragraphs[0] ??
+    jsonDescription ??
+    null;
+  const historyBody = paragraphs.join("\n\n");
+  const history =
+    introQuote && historyBody
+      ? historyBody
+      : historyBody || jsonDescription || null;
 
   const ogImage = metaContent(html, "og:image");
   const photoUrl = listItem.imageUrl ?? (ogImage ? absolutizeUrl(ogImage, baseUrl) : null);
 
   const sourceUrl = absolutizeUrl(listItem.detailPath, baseUrl);
   const slug = slugFromDetailPath(listItem.detailPath, category);
+
+  const jsonWebsite = typeof jsonLd?.url === "string" ? jsonLd.url : null;
+  const externalWebsite =
+    extractExternalWebsite(html, profileBlock) ??
+    (jsonWebsite && isValidExternalUrl(jsonWebsite) ? jsonWebsite : null);
 
   return {
     slug,
@@ -168,7 +292,7 @@ export function parseDetailPage(
     worlds50bestRank: listItem.rank,
     worlds50bestCategory: category,
     sourceUrl,
-    externalWebsite: extractExternalWebsite(profileBlock),
+    externalWebsite,
   };
 }
 

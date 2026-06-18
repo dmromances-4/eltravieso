@@ -24,13 +24,11 @@
 
  */
 
-import { execFile } from "child_process";
+import { runRemotionRender } from "../lib/remotion/exec-render";
 
 import { readFile, mkdir, rm, writeFile } from "fs/promises";
 
 import path from "path";
-
-import { promisify } from "util";
 
 import prisma from "../lib/prisma";
 
@@ -45,8 +43,6 @@ import { parseStoredIngredients } from "../lib/recipes/parse";
 import type { CocktailRecord } from "../types/cocktail";
 
 
-
-const execFileAsync = promisify(execFile);
 
 const COCKTAILS_PATH = path.join(process.cwd(), "data/cocktails.json");
 
@@ -204,7 +200,7 @@ function buildTarget(
 
 ): RecipeTarget {
 
-  const ingredientsRaw = parseStoredIngredients(recipe.ingredients);
+  const ingredientsRaw = parseStoredIngredients(recipe.ingredients as string | null | undefined);
 
   const ingredients = ingredientsRaw.length ? ingredientsRaw : staticFallback?.ingredients ?? [];
 
@@ -270,15 +266,7 @@ async function renderWithRemotionCli(slug: string, props: ReturnType<typeof reci
 
   await writeFile(propsPath, JSON.stringify(props));
 
-  await execFileAsync(
-
-    "npx",
-
-    ["remotion", "render", REMOTION_ENTRY, "RecipeTutorial", outputPath, `--props=${propsPath}`],
-
-    { cwd: process.cwd(), maxBuffer: 20 * 1024 * 1024 },
-
-  );
+  await runRemotionRender(REMOTION_ENTRY, "RecipeTutorial", outputPath, propsPath);
 
 }
 

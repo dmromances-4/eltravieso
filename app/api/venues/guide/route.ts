@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import type { VenueContinent } from "@prisma/client";
 import { listEditorialMapVenues } from "@/lib/venues/catalog";
+import { getRequestLocaleFromHeaders } from "@/lib/i18n/request-locale";
 
 export const dynamic = "force-dynamic";
 
@@ -22,7 +23,8 @@ export async function GET(request: NextRequest) {
         ? (continentParam as VenueContinent)
         : undefined;
 
-    const venues = await listEditorialMapVenues(continent);
+    const locale = getRequestLocaleFromHeaders(request);
+    const venues = await listEditorialMapVenues(continent, locale);
     return NextResponse.json({ venues });
   } catch (error) {
     console.error("[VENUES_GUIDE_GET_ERROR]:", error);

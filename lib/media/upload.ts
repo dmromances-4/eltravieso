@@ -1,6 +1,5 @@
 import { uploadImageFile } from "@/lib/storage/upload-image";
-import { mkdir, writeFile } from "fs/promises";
-import path from "path";
+import { resolveVideoBucket, uploadObjectBuffer } from "@/lib/storage/object-storage";
 
 const MAX_VIDEO_BYTES = 100 * 1024 * 1024;
 const VIDEO_TYPES = new Set(["video/mp4", "video/webm"]);
@@ -11,31 +10,15 @@ async function uploadVideoBuffer(
   filename: string,
   mime: string,
 ): Promise<string> {
-  const SUPABASE_URL = process.env.SUPABASE_URL;
-  const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  const bucket = process.env.SUPABASE_EVENT_VIDEOS_BUCKET ?? "event-videos";
-
-  if (SUPABASE_URL && SUPABASE_SERVICE_ROLE_KEY) {
-    const objectPath = `${subdir}/${filename}`;
-    const uploadRes = await fetch(`${SUPABASE_URL}/storage/v1/object/${bucket}/${objectPath}`, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${SUPABASE_SERVICE_ROLE_KEY}`,
-        apikey: SUPABASE_SERVICE_ROLE_KEY,
-        "Content-Type": mime,
-        "x-upsert": "true",
-      },
-      body: buffer,
-    });
-    if (uploadRes.ok) {
-      return `${SUPABASE_URL}/storage/v1/object/public/${bucket}/${objectPath}`;
-    }
-  }
-
-  const dir = path.join(process.cwd(), "public", "uploads", subdir);
-  await mkdir(dir, { recursive: true });
-  await writeFile(path.join(dir, filename), buffer);
-  return `/uploads/${subdir}/${filename}`;
+  const bucket = resolveVideoBucket("event");
+  return uploadObjectBuffer({
+    buffer,
+    mime,
+    folder: subdir,
+    filename,
+    bucket,
+    localSubdir: subdir,
+  });
 }
 
 export async function uploadMediaCover(userId: string, file: File) {

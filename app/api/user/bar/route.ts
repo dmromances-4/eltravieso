@@ -5,8 +5,14 @@ import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 import { geocodeAddress } from "@/lib/geocoding/nominatim";
 import { generateUniqueBarSlug } from "@/lib/venues/unique-slug";
-import { sanitizeBarProfileForClient } from "@/lib/security/bar-profile";
+import { ensureUniqueVenueCode } from "@/lib/venues/venue-code";
+import {
+  validateGoogleBusinessId,
+  validateTripadvisorPlaceId,
+} from "@/lib/venues/external-ids";
+import { parseVenueDetailFields } from "@/lib/venues/venue-detail-fields";
 import { parseSecretUpdate } from "@/lib/security/redact";
+import { sanitizeBarProfileForClient } from "@/lib/security/bar-profile";
 
 const RESERVATION_PROVIDERS = new Set<string>([
   "COVER_MANAGER",
@@ -66,6 +72,7 @@ export async function PATCH(request: Request) {
       taxId,
       licenseNumber,
       googleBusinessId,
+      tripadvisorPlaceId,
       coverManagerUrl,
       theForkUrl,
       tpvProvider,
@@ -97,6 +104,15 @@ export async function PATCH(request: Request) {
         { message: "Faltan campos obligatorios para registrar el local." },
         { status: 400 },
       );
+    }
+
+    const gmb = validateGoogleBusinessId(googleBusinessId);
+    if (!gmb.ok) {
+      return NextResponse.json({ message: gmb.error }, { status: 400 });
+    }
+    const ta = validateTripadvisorPlaceId(tripadvisorPlaceId);
+    if (!ta.ok) {
+      return NextResponse.json({ message: ta.error }, { status: 400 });
     }
 
     const existing = await prisma.barProfile.findUnique({
@@ -148,9 +164,17 @@ export async function PATCH(request: Request) {
       vibeTags: parseVibeTags(vibeTags),
       reservationProvider: parsedProvider,
       reservationUrl: reservationUrl?.trim() || null,
+      ...parseVenueDetailFields(body),
     };
 
     const tpvTokenUpdate = parseSecretUpdate(tpvToken);
+
+    let venueCode = existing?.venueCode ?? null;
+    if (!venueCode) {
+      venueCode = await ensureUniqueVenueCode(
+        existing?.id ? { barProfileId: existing.id } : undefined,
+      );
+    }
 
     const profile = await prisma.barProfile.upsert({
       where: { userId: session.user.id },
@@ -159,7 +183,9 @@ export async function PATCH(request: Request) {
         businessName,
         taxId,
         licenseNumber: licenseNumber || null,
-        googleBusinessId: googleBusinessId || null,
+        googleBusinessId: gmb.value || null,
+        tripadvisorPlaceId: ta.value || null,
+        venueCode,
         coverManagerUrl: coverManagerUrl || null,
         theForkUrl: theForkUrl || null,
         tpvProvider: tpvProvider || null,
@@ -185,7 +211,8 @@ export async function PATCH(request: Request) {
         businessName,
         taxId,
         licenseNumber: licenseNumber || null,
-        googleBusinessId: googleBusinessId || null,
+        googleBusinessId: gmb.value || null,
+        tripadvisorPlaceId: ta.value || null,
         coverManagerUrl: coverManagerUrl || null,
         theForkUrl: theForkUrl || null,
         tpvProvider: tpvProvider || null,
@@ -212,6 +239,30 @@ export async function PATCH(request: Request) {
         },
       },
     });
+
+    const linkedGuide = await prisma.venueGuideEntry.findFirst({
+      where: { barProfileId: profile.id },
+      select: {
+        id: true,
+        venueCode: true,
+        googleBusinessId: true,
+        tripadvisorPlaceId: true,
+        tripadvisorUrl: true,
+      },
+    });
+    if (linkedGuide) {
+      const detailFields = parseVenueDetailFields(body);
+      await prisma.venueGuideEntry.update({
+        where: { id: linkedGuide.id },
+        data: {
+          venueCode: linkedGuide.venueCode ?? venueCode,
+          googleBusinessId: linkedGuide.googleBusinessId ?? (gmb.value || null),
+          tripadvisorPlaceId: linkedGuide.tripadvisorPlaceId ?? (ta.value || null),
+          ...detailFields,
+          tripadvisorUrl: detailFields.tripadvisorUrl ?? linkedGuide.tripadvisorUrl,
+        },
+      });
+    }
 
     const user = await prisma.user.findUnique({
       where: { id: session.user.id },

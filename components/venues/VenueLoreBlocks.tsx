@@ -31,6 +31,12 @@ export default function VenueLoreBlocks({ venue }: Props) {
       <section className="border-4 border-black bg-black p-8 shadow-[6px_6px_0px_#000000]">
         <h2 className="mb-6 font-display text-3xl font-bold uppercase text-electric-blue">Intel</h2>
         <dl className="grid gap-4 font-mono text-sm sm:grid-cols-2">
+          {venue.venueCode ? (
+            <div>
+              <dt className="text-xs uppercase tracking-widest text-slate-500">Código local</dt>
+              <dd className="font-bold text-electric-yellow">{venue.venueCode}</dd>
+            </div>
+          ) : null}
           {venue.address ? (
             <div>
               <dt className="text-xs uppercase tracking-widest text-slate-500">Dirección</dt>
@@ -49,7 +55,7 @@ export default function VenueLoreBlocks({ venue }: Props) {
               <dd className="text-slate-200">{venue.signatureDrink}</dd>
             </div>
           ) : null}
-          {venue.dressCode ? (
+          {venue.dressCode && !venue.venuePreferences.includes("dress_code") ? (
             <div>
               <dt className="text-xs uppercase tracking-widest text-slate-500">Dress code</dt>
               <dd className="text-slate-200">{venue.dressCode}</dd>
@@ -67,18 +73,24 @@ export default function VenueLoreBlocks({ venue }: Props) {
               <dd className="text-slate-200">{venue.email}</dd>
             </div>
           ) : null}
-          {venue.tripadvisorUrl ? (
+          {venue.googleBusinessId ? (
             <div>
-              <dt className="text-xs uppercase tracking-widest text-slate-500">TripAdvisor</dt>
-              <dd>
-                <a
-                  href={venue.tripadvisorUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-electric-yellow underline"
-                >
-                  Ver en TripAdvisor
-                  {venue.tripadvisorRating != null ? ` (${venue.tripadvisorRating.toFixed(1)}★)` : ""}
+              <dt className="text-xs uppercase tracking-widest text-slate-500">Google Business</dt>
+              <dd className="text-slate-200">{venue.googleBusinessId}</dd>
+            </div>
+          ) : null}
+          {venue.tripadvisorPlaceId && !venue.tripadvisorUrl ? (
+            <div>
+              <dt className="text-xs uppercase tracking-widest text-slate-500">TripAdvisor ID</dt>
+              <dd className="text-slate-200">{venue.tripadvisorPlaceId}</dd>
+            </div>
+          ) : null}
+          {venue.sourceUrl ? (
+            <div className="sm:col-span-2">
+              <dt className="text-xs uppercase tracking-widest text-slate-500">Fuente</dt>
+              <dd className="truncate text-slate-400">
+                <a href={venue.sourceUrl} target="_blank" rel="noopener noreferrer" className="hover:text-electric-yellow">
+                  {venue.sourceUrl}
                 </a>
               </dd>
             </div>

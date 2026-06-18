@@ -1,14 +1,16 @@
 ---
-description: Guía de locales — mapa, fichas y pipeline de datos
-globs: lib/venues/**,lib/geocoding/**,app/mapa/**,app/locales/**,components/map/**,components/venues/**,scripts/scrape-worlds50best.ts,scripts/seed-venues-guide.ts,scripts/geocode-venues-guide.ts,scripts/enrich-venues-tripadvisor.ts,data/venues-worlds50best.json
+description: Guía de locales — mapa 3D, fichas y pipeline de datos
+globs: lib/venues/**,lib/geocoding/**,lib/map/**,app/mapa/**,app/locales/**,components/map/**,components/venues/**,scripts/scrape-worlds50best.ts,scripts/seed-venues-guide.ts,scripts/geocode-venues-guide.ts,scripts/enrich-venues-tripadvisor.ts,data/venues-worlds50best.json
 alwaysApply: false
 ---
 
 # Guía de locales
 
-- Mapa: `/mapa` · ficha pública: `/locales/[slug]`
+- Mapa: `/mapa` (globo MapLibre 3D; fallback Leaflet si no hay WebGL) · ficha: `/locales/[slug]`
+- Componentes mapa: `VenueMapShell` → `VenueGlobeMap` | `VenueMapLeaflet`; datos en `useVenueMapData.ts`
+- Estilos: `lib/map/styles.ts` — OpenFreeMap por defecto; MapTiler opcional (`NEXT_PUBLIC_MAPTILER_API_KEY`)
 - Catálogo: `lib/venues/catalog.ts` · reservas: `lib/venues/reservation.ts`
-- Pipeline: `scrape:venues` → `seed:venues` → `geocode:venues` → `enrich:tripadvisor`
-- Datos scrape: `data/venues-worlds50best.json`
+- Pipeline: `scrape:venues` (`--report`) → `seed:venues` → `geocode:venues` (`--only-missing`, `--retry-low-confidence`) → `enrich:tripadvisor`
+- Datos scrape: `data/venues-worlds50best.json` · parser: `lib/venues/worlds50best-parser.ts`
 - Bares afiliados editan lore en `/cuenta/bar`
 - Doc: `docs/GUIA-LOCALES.md`

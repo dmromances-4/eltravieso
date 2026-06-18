@@ -19,6 +19,8 @@ async function main() {
   console.log(`Migrations: ${report.migrations}`);
   console.log(`WebSocket:  ${report.ws}`);
   console.log(`Auth URLs:  ${report.authUrls}`);
+  console.log(`Map pins:   ${report.map.venuesWithCoords} locales con coords`);
+  console.log(`Map APIs:   guide=${report.map.guideApi} bars=${report.map.barsApi}`);
   console.log("\nFeatures:");
   console.log(`  Pantalla TMDB: ${report.features.pantallaTmdb ? "ok" : "off"}`);
   console.log(`  Bar Online:    ${report.features.barOnline ? "ok" : "off"}`);
