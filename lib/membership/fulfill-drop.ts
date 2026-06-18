@@ -1,6 +1,13 @@
-import type { DropFulfillmentStatus } from '@prisma/client'
+import type { DropFulfillmentStatus, MembershipStatus } from '@prisma/client'
 import prisma from '@/lib/prisma'
 import { createVipGiftOrder } from '@/lib/checkout/create-order'
+
+export class VipMembershipRequiredError extends Error {
+  constructor() {
+    super('Membresía VIP activa requerida para procesar el drop')
+    this.name = 'VipMembershipRequiredError'
+  }
+}
 
 export function vipDropAutoFulfillEnabled(): boolean {
   const flag = process.env.VIP_DROP_AUTO_FULFILL
@@ -14,6 +21,15 @@ export function userHasShippingAddress(user: {
   postalCode: string | null
 }): boolean {
   return Boolean(user.address?.trim() && user.city?.trim() && user.postalCode?.trim())
+}
+
+export function userHasActiveVipMembership(user: {
+  membershipStatus: MembershipStatus
+  membershipExpiresAt: Date | null
+}): boolean {
+  if (user.membershipStatus !== 'ACTIVE') return false
+  if (user.membershipExpiresAt && user.membershipExpiresAt < new Date()) return false
+  return true
 }
 
 export function dropFulfillmentStatusLabel(status: DropFulfillmentStatus): string {
@@ -97,11 +113,17 @@ export async function fulfillVipDrop(userId: string, dropMonth: string): Promise
       city: true,
       postalCode: true,
       country: true,
+      membershipStatus: true,
+      membershipExpiresAt: true,
     },
   })
 
   if (!user) {
     throw new Error(`Usuario ${userId} no encontrado`)
+  }
+
+  if (!userHasActiveVipMembership(user)) {
+    throw new VipMembershipRequiredError()
   }
 
   if (!userHasShippingAddress(user)) {
