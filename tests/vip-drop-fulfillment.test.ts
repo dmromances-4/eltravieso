@@ -1,6 +1,7 @@
 import { describe, expect, it, beforeEach, afterEach } from 'vitest'
 import {
   userHasShippingAddress,
+  userHasActiveVipMembership,
   dropFulfillmentStatusLabel,
   vipDropAutoFulfillEnabled,
 } from '@/lib/membership/fulfill-drop'
@@ -54,6 +55,35 @@ describe('vip-drop helpers', () => {
       expect(dropFulfillmentStatusLabel('PENDING_ADDRESS')).toContain('dirección')
       expect(dropFulfillmentStatusLabel('ORDER_CREATED')).toContain('preparación')
       expect(dropFulfillmentStatusLabel('FULFILLED')).toBe('Enviado')
+    })
+  })
+
+  describe('userHasActiveVipMembership', () => {
+    it('requires ACTIVE membership', () => {
+      expect(
+        userHasActiveVipMembership({
+          membershipStatus: 'NONE',
+          membershipExpiresAt: null,
+        })
+      ).toBe(false)
+    })
+
+    it('rejects expired memberships', () => {
+      expect(
+        userHasActiveVipMembership({
+          membershipStatus: 'ACTIVE',
+          membershipExpiresAt: new Date('2020-01-01T00:00:00.000Z'),
+        })
+      ).toBe(false)
+    })
+
+    it('accepts active memberships without an expiry', () => {
+      expect(
+        userHasActiveVipMembership({
+          membershipStatus: 'ACTIVE',
+          membershipExpiresAt: null,
+        })
+      ).toBe(true)
     })
   })
 

@@ -5,6 +5,7 @@ import {
   inferGarnish,
   inferLiquidTone,
 } from "@/lib/recipes/image-prompt";
+import { buildBrandedCoverSvg } from "@/lib/recipes/branded-cover-svg";
 
 describe("recipe-image-prompt", () => {
   const input = {
@@ -32,5 +33,12 @@ describe("recipe-image-prompt", () => {
     expect(prompt).toContain("Amber-red liquid");
     expect(prompt).toContain("Negroni");
     expect(prompt).toContain("do not copy branding");
+  });
+
+  it("builds a branded SVG placeholder for mock covers", () => {
+    const svg = buildBrandedCoverSvg(input);
+    expect(svg).toContain("<svg");
+    expect(svg).toContain("Negroni");
+    expect(svg).toContain("EL TRAVIESO");
   });
 });

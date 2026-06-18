@@ -1,7 +1,10 @@
 import { NextResponse } from 'next/server'
 import { getAuthSession } from '@/lib/auth/session'
-import { fulfillVipDrop } from '@/lib/membership/fulfill-drop'
-import { dropFulfillmentStatusLabel } from '@/lib/membership/fulfill-drop'
+import {
+  dropFulfillmentStatusLabel,
+  fulfillVipDrop,
+  VipMembershipRequiredError,
+} from '@/lib/membership/fulfill-drop'
 
 export async function POST() {
   try {
@@ -23,6 +26,10 @@ export async function POST() {
           : dropFulfillmentStatusLabel(result.status),
     })
   } catch (error) {
+    if (error instanceof VipMembershipRequiredError) {
+      return NextResponse.json({ message: error.message }, { status: 403 })
+    }
+
     const message = error instanceof Error ? error.message : 'Error al procesar drop'
     return NextResponse.json({ message }, { status: 500 })
   }
