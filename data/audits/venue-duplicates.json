@@ -1,0 +1,390 @@
+{
+  "generatedAt": "2026-06-19T12:23:23.422Z",
+  "totals": {
+    "guides": 600,
+    "bars": 1,
+    "duplicateSourceUrls": 0,
+    "duplicateVenueCodes": 0,
+    "duplicatePinRisk": 0,
+    "missingVenueCode": 0,
+    "missingCoords": 72
+  },
+  "duplicateSourceUrls": [],
+  "duplicateVenueCodes": {
+    "inGuides": [],
+    "inBars": [],
+    "crossUnlinked": []
+  },
+  "barGuideUnlinked": [
+    {
+      "barId": "ad7ba90b-d0c4-4982-97a0-65da9988ba10",
+      "slug": null,
+      "businessName": "Bar El Travieso (Demo)"
+    }
+  ],
+  "guideWithPublicBar": [],
+  "slugCollisions": [],
+  "missingVenueCode": [],
+  "missingCoords": [
+    {
+      "type": "guide",
+      "slug": "jigger-pony",
+      "name": "Jigger & Pony"
+    },
+    {
+      "type": "guide",
+      "slug": "narisawa-restaurant",
+      "name": "Narisawa"
+    },
+    {
+      "type": "guide",
+      "slug": "tresind-studio-restaurant",
+      "name": "Trèsind Studio"
+    },
+    {
+      "type": "guide",
+      "slug": "florilege-restaurant",
+      "name": "Florilège"
+    },
+    {
+      "type": "guide",
+      "slug": "lair",
+      "name": "Lair"
+    },
+    {
+      "type": "guide",
+      "slug": "modernhaus",
+      "name": "Modernhaus"
+    },
+    {
+      "type": "guide",
+      "slug": "three-x-co",
+      "name": "Three X Co"
+    },
+    {
+      "type": "guide",
+      "slug": "cmyk",
+      "name": "CMYK"
+    },
+    {
+      "type": "guide",
+      "slug": "offtrack",
+      "name": "Offtrack"
+    },
+    {
+      "type": "guide",
+      "slug": "boilermaker",
+      "name": "Boilermaker"
+    },
+    {
+      "type": "guide",
+      "slug": "to-infinity-and-beyond",
+      "name": "To Infinity & Beyond"
+    },
+    {
+      "type": "guide",
+      "slug": "moonrock",
+      "name": "Moonrock"
+    },
+    {
+      "type": "guide",
+      "slug": "cat-bite-club",
+      "name": "Cat Bite Club"
+    },
+    {
+      "type": "guide",
+      "slug": "kaito-del-valle",
+      "name": "Kaito del Valle"
+    },
+    {
+      "type": "guide",
+      "slug": "daisy-margarita-bar",
+      "name": "Daisy Margarita Bar"
+    },
+    {
+      "type": "guide",
+      "slug": "viceversa",
+      "name": "Viceversa"
+    },
+    {
+      "type": "guide",
+      "slug": "bandista",
+      "name": "Bandista"
+    },
+    {
+      "type": "guide",
+      "slug": "library-by-the-sea",
+      "name": "Library by the Sea"
+    },
+    {
+      "type": "guide",
+      "slug": "bon-vivants",
+      "name": "Bon Vivants"
+    },
+    {
+      "type": "guide",
+      "slug": "onjium-restaurant",
+      "name": "Onjium"
+    },
+    {
+      "type": "guide",
+      "slug": "born-restaurant",
+      "name": "Born"
+    },
+    {
+      "type": "guide",
+      "slug": "eatanic-garden-restaurant",
+      "name": "Eatanic Garden"
+    },
+    {
+      "type": "guide",
+      "slug": "maz-restaurant",
+      "name": "Maz"
+    },
+    {
+      "type": "guide",
+      "slug": "naar-restaurant",
+      "name": "Naar"
+    },
+    {
+      "type": "guide",
+      "slug": "florilege-restaurant-2",
+      "name": "Florilège"
+    },
+    {
+      "type": "guide",
+      "slug": "myoujyaku-restaurant",
+      "name": "Myoujyaku"
+    },
+    {
+      "type": "guide",
+      "slug": "narisawa-restaurant-2",
+      "name": "Narisawa"
+    },
+    {
+      "type": "guide",
+      "slug": "naeum-restaurant",
+      "name": "Nae:Um"
+    },
+    {
+      "type": "guide",
+      "slug": "7th-door-restaurant",
+      "name": "7th Door"
+    },
+    {
+      "type": "guide",
+      "slug": "arca-restaurant",
+      "name": "Arca"
+    },
+    {
+      "type": "guide",
+      "slug": "yum-cha-restaurant",
+      "name": "Yum Cha"
+    },
+    {
+      "type": "guide",
+      "slug": "diac-c3-a1-restaurant",
+      "name": "Diacá"
+    },
+    {
+      "type": "guide",
+      "slug": "oteque-restaurant",
+      "name": "Oteque"
+    },
+    {
+      "type": "guide",
+      "slug": "karai-by-mitsuharu-restaurant",
+      "name": "Karai by Mitsuharu"
+    },
+    {
+      "type": "guide",
+      "slug": "mil-restaurant",
+      "name": "Mil"
+    },
+    {
+      "type": "guide",
+      "slug": "dakar-nola-restaurant",
+      "name": "Dakar NOLA"
+    },
+    {
+      "type": "guide",
+      "slug": "taniere3-restaurant",
+      "name": "Tanière3"
+    },
+    {
+      "type": "guide",
+      "slug": "chubby-fish-restaurant",
+      "name": "Chubby Fish"
+    },
+    {
+      "type": "guide",
+      "slug": "addison-by-william-bradley-restaurant",
+      "name": "Addison by William Bradley"
+    },
+    {
+      "type": "guide",
+      "slug": "dogon-restaurant",
+      "name": "Dōgon by Kwame Onwuachi"
+    },
+    {
+      "type": "guide",
+      "slug": "atelier-crenn-restaurant",
+      "name": "Atelier Crenn"
+    },
+    {
+      "type": "guide",
+      "slug": "somni-restaurant",
+      "name": "Somni"
+    },
+    {
+      "type": "guide",
+      "slug": "jigger-pony-3",
+      "name": "Jigger & Pony"
+    },
+    {
+      "type": "guide",
+      "slug": "narisawa-restaurant-3",
+      "name": "Narisawa"
+    },
+    {
+      "type": "guide",
+      "slug": "tresind-studio-restaurant-2",
+      "name": "Trèsind Studio"
+    },
+    {
+      "type": "guide",
+      "slug": "florilege-restaurant-3",
+      "name": "Florilège"
+    },
+    {
+      "type": "guide",
+      "slug": "lair-2",
+      "name": "Lair"
+    },
+    {
+      "type": "guide",
+      "slug": "modernhaus-2",
+      "name": "Modernhaus"
+    },
+    {
+      "type": "guide",
+      "slug": "three-x-co-2",
+      "name": "Three X Co"
+    },
+    {
+      "type": "guide",
+      "slug": "cmyk-2",
+      "name": "CMYK"
+    },
+    {
+      "type": "guide",
+      "slug": "offtrack-2",
+      "name": "Offtrack"
+    },
+    {
+      "type": "guide",
+      "slug": "boilermaker-2",
+      "name": "Boilermaker"
+    },
+    {
+      "type": "guide",
+      "slug": "to-infinity-and-beyond-2",
+      "name": "To Infinity & Beyond"
+    },
+    {
+      "type": "guide",
+      "slug": "moonrock-2",
+      "name": "Moonrock"
+    },
+    {
+      "type": "guide",
+      "slug": "cat-bite-club-2",
+      "name": "Cat Bite Club"
+    },
+    {
+      "type": "guide",
+      "slug": "onjium-restaurant-2",
+      "name": "Onjium"
+    },
+    {
+      "type": "guide",
+      "slug": "born-restaurant-2",
+      "name": "Born"
+    },
+    {
+      "type": "guide",
+      "slug": "eatanic-garden-restaurant-2",
+      "name": "Eatanic Garden"
+    },
+    {
+      "type": "guide",
+      "slug": "maz-restaurant-2",
+      "name": "Maz"
+    },
+    {
+      "type": "guide",
+      "slug": "naar-restaurant-2",
+      "name": "Naar"
+    },
+    {
+      "type": "guide",
+      "slug": "myoujyaku-restaurant-2",
+      "name": "Myoujyaku"
+    },
+    {
+      "type": "guide",
+      "slug": "naeum-restaurant-2",
+      "name": "Nae:Um"
+    },
+    {
+      "type": "guide",
+      "slug": "7th-door-restaurant-2",
+      "name": "7th Door"
+    },
+    {
+      "type": "guide",
+      "slug": "dakar-nola-restaurant-2",
+      "name": "Dakar NOLA"
+    },
+    {
+      "type": "guide",
+      "slug": "taniere3-restaurant-2",
+      "name": "Tanière3"
+    },
+    {
+      "type": "guide",
+      "slug": "chubby-fish-restaurant-2",
+      "name": "Chubby Fish"
+    },
+    {
+      "type": "guide",
+      "slug": "addison-by-william-bradley-restaurant-2",
+      "name": "Addison by William Bradley"
+    },
+    {
+      "type": "guide",
+      "slug": "dogon-restaurant-2",
+      "name": "Dōgon by Kwame Onwuachi"
+    },
+    {
+      "type": "guide",
+      "slug": "atelier-crenn-restaurant-2",
+      "name": "Atelier Crenn"
+    },
+    {
+      "type": "guide",
+      "slug": "somni-restaurant-2",
+      "name": "Somni"
+    },
+    {
+      "type": "guide",
+      "slug": "florilege-restaurant-4",
+      "name": "Florilège"
+    },
+    {
+      "type": "guide",
+      "slug": "narisawa-restaurant-4",
+      "name": "Narisawa"
+    }
+  ]
+}

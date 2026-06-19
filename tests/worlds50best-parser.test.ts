@@ -1,7 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { describe, expect, it } from "vitest";
-import { parseDetailPage, parseListPage, parseListYear } from "@/lib/venues/worlds50best-parser";
+import { parseDetailPage, parseListPage, parseListYear, dedupeSlugs } from "@/lib/venues/worlds50best-parser";
+import type { NormalizedVenueGuide } from "@/lib/venues/types";
 
 const fixtures = path.join(process.cwd(), "tests/fixtures/w50best");
 
@@ -77,5 +78,50 @@ describe("worlds50best parser", () => {
     expect(venue.chefName).toBe("Rasmus Kofoed");
     expect(venue.externalWebsite).toBe("https://www.geranium.dk/");
     expect(venue.verdict).toContain("Nordic cuisine");
+  });
+});
+
+function minimalGuide(overrides: Partial<NormalizedVenueGuide> & Pick<NormalizedVenueGuide, "slug" | "sourceUrl">): NormalizedVenueGuide {
+  return {
+    name: "Test",
+    city: "City",
+    venueType: "cocteleria",
+    worlds50bestRank: 1,
+    worlds50bestCategory: "BARS",
+    ...overrides,
+  };
+}
+
+describe("dedupeSlugs", () => {
+  it("assigns numeric suffixes on collision instead of stacking category suffix", () => {
+    const venues = dedupeSlugs([
+      minimalGuide({ slug: "maido-restaurant", sourceUrl: "https://example.com/a", worlds50bestCategory: "RESTAURANTS" }),
+      minimalGuide({ slug: "maido-restaurant", sourceUrl: "https://example.com/b", worlds50bestCategory: "RESTAURANTS" }),
+      minimalGuide({ slug: "maido-restaurant", sourceUrl: "https://example.com/c", worlds50bestCategory: "RESTAURANTS" }),
+    ]);
+
+    expect(venues.map((v) => v.slug)).toEqual([
+      "maido-restaurant",
+      "maido-restaurant-2",
+      "maido-restaurant-3",
+    ]);
+  });
+
+  it("keeps unique slugs unchanged", () => {
+    const venues = dedupeSlugs([
+      minimalGuide({ slug: "bar-leone", sourceUrl: "https://example.com/a" }),
+      minimalGuide({ slug: "sips", sourceUrl: "https://example.com/b" }),
+    ]);
+    expect(venues[0].slug).toBe("bar-leone");
+    expect(venues[1].slug).toBe("sips");
+  });
+
+  it("never produces double category suffixes", () => {
+    const venues = dedupeSlugs([
+      minimalGuide({ slug: "coa-bar", sourceUrl: "https://example.com/a" }),
+      minimalGuide({ slug: "coa-bar", sourceUrl: "https://example.com/b" }),
+    ]);
+    expect(venues[1].slug).toBe("coa-bar-2");
+    expect(venues.some((v) => /-(bar|restaurant)-(bar|restaurant)/.test(v.slug))).toBe(false);
   });
 });

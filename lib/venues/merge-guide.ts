@@ -59,6 +59,58 @@ export function applySeedContext(
   };
 }
 
+function pickStringArray(existing?: string[], incoming?: string[]): string[] {
+  if (incoming?.length) return incoming;
+  if (existing?.length) return existing;
+  return [];
+}
+
+function pickNullable<T>(existing: T | null | undefined, incoming: T | null | undefined): T | null | undefined {
+  return incoming ?? existing ?? null;
+}
+
+/** Preserva taxonomía y preferencias del registro existente si el incoming viene vacío (p. ej. JSON sin enrich). */
+export function mergeVenueGuideDetailFields(
+  existing: NormalizedVenueGuide,
+  incoming: NormalizedVenueGuide,
+): Pick<
+  NormalizedVenueGuide,
+  | "establishmentTypes"
+  | "cuisineTypes"
+  | "starDishes"
+  | "idealFor"
+  | "venueFeatures"
+  | "neighborhood"
+  | "priceRange"
+  | "dailyMenuEnabled"
+  | "dailyMenuNote"
+  | "awards"
+  | "venuePreferences"
+  | "instagramUrl"
+  | "tiktokUrl"
+> {
+  return {
+    establishmentTypes: pickStringArray(existing.establishmentTypes, incoming.establishmentTypes),
+    cuisineTypes: pickStringArray(existing.cuisineTypes, incoming.cuisineTypes),
+    starDishes: pickStringArray(existing.starDishes, incoming.starDishes),
+    idealFor: pickStringArray(existing.idealFor, incoming.idealFor),
+    venueFeatures: pickStringArray(existing.venueFeatures, incoming.venueFeatures),
+    neighborhood: pickNullable(existing.neighborhood, incoming.neighborhood) as string | null | undefined,
+    priceRange: pickNullable(existing.priceRange, incoming.priceRange) as string | null | undefined,
+    dailyMenuEnabled: Boolean(incoming.dailyMenuEnabled || existing.dailyMenuEnabled),
+    dailyMenuNote: pickNullable(existing.dailyMenuNote, incoming.dailyMenuNote) as string | null | undefined,
+    awards: pickStringArray(existing.awards, incoming.awards),
+    venuePreferences: pickStringArray(existing.venuePreferences, incoming.venuePreferences),
+    instagramUrl: pickNullable(existing.instagramUrl, incoming.instagramUrl) as string | null | undefined,
+    tiktokUrl: pickNullable(existing.tiktokUrl, incoming.tiktokUrl) as string | null | undefined,
+  };
+}
+
+function pickEnrichmentSource(existing?: string | null, incoming?: string | null): string | null | undefined {
+  if (existing && existing !== "worlds50best") return existing;
+  return incoming ?? existing;
+}
+
 export function mergeVenueGuides(
   existing: NormalizedVenueGuide | undefined,
   incoming: NormalizedVenueGuide,
@@ -72,8 +124,11 @@ export function mergeVenueGuides(
     }
   }
 
+  const detail = mergeVenueGuideDetailFields(existing, incoming);
+
   const merged: NormalizedVenueGuide = {
     ...existing,
+    ...detail,
     name: existing.name || incoming.name,
     city: existing.city || incoming.city,
     country: existing.country ?? incoming.country,
@@ -92,7 +147,9 @@ export function mergeVenueGuides(
     worlds50bestCategory: existing.worlds50bestCategory,
     worlds50bestYear: existing.worlds50bestYear ?? incoming.worlds50bestYear,
     additionalRankings: rankings,
-    enrichmentSource: existing.enrichmentSource ?? incoming.enrichmentSource,
+    enrichmentSource: pickEnrichmentSource(existing.enrichmentSource, incoming.enrichmentSource),
+    latitude: existing.latitude ?? incoming.latitude,
+    longitude: existing.longitude ?? incoming.longitude,
   };
 
   if (incoming.listScope === "GLOBAL") {

@@ -3223,7 +3223,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-leone-bar",
+    "slug": "bar-leone-2",
     "name": "Bar Leone",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -3253,7 +3253,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "zest-bar",
+    "slug": "zest-2",
     "name": "Zest",
     "city": "Seoul",
     "country": "Seoul",
@@ -3283,7 +3283,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "jigger-pony-bar",
+    "slug": "jigger-pony-2",
     "name": "Jigger & Pony",
     "city": "Singapore",
     "country": "Singapore",
@@ -3313,7 +3313,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-us-bar",
+    "slug": "bar-us-2",
     "name": "Bar Us",
     "city": "Bangkok",
     "country": "Thailand",
@@ -3463,7 +3463,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-benfiddich-bar",
+    "slug": "bar-benfiddich-2",
     "name": "Bar Benfiddich",
     "city": "Tokyo",
     "country": "160-0023 Tokyo",
@@ -3703,7 +3703,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "coa-bar",
+    "slug": "coa-2",
     "name": "Coa",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -3733,7 +3733,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "virtu-bar",
+    "slug": "virtu-2",
     "name": "Virtù",
     "city": "Tokyo",
     "country": "Tokyo 100-0004",
@@ -3763,7 +3763,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bkk-social-club-bar",
+    "slug": "bkk-social-club-2",
     "name": "BKK Social Club",
     "city": "Bangkok",
     "country": "Bangkok",
@@ -3913,7 +3913,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "nutmeg-clove-bar",
+    "slug": "nutmeg-clove-2",
     "name": "Nutmeg & Clove",
     "city": "Singapore",
     "country": "Singapore",
@@ -4723,7 +4723,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sip-guzzle-bar",
+    "slug": "sip-guzzle-2",
     "name": "Sip & Guzzle",
     "city": "New York",
     "country": "United States",
@@ -4843,7 +4843,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "tlecan-bar",
+    "slug": "tlecan-2",
     "name": "Tlecān",
     "city": "Mexico City",
     "country": "Mexico",
@@ -4873,7 +4873,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "jewel-of-the-south-bar",
+    "slug": "jewel-of-the-south-2",
     "name": "Jewel of the South",
     "city": "New Orleans",
     "country": "70112",
@@ -4963,7 +4963,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "superbueno-bar",
+    "slug": "superbueno-2",
     "name": "Superbueno",
     "city": "New York",
     "country": "NY 10003",
@@ -5053,7 +5053,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "handshake-speakeasy-bar",
+    "slug": "handshake-speakeasy-2",
     "name": "Handshake Speakeasy",
     "city": "Mexico City",
     "country": "06600",
@@ -5683,7 +5683,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "overstory-bar",
+    "slug": "overstory-2",
     "name": "Overstory",
     "city": "New York",
     "country": "10005",
@@ -5743,7 +5743,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "double-chicken-please-bar",
+    "slug": "double-chicken-please-2",
     "name": "Double Chicken Please",
     "city": "New York",
     "country": "10002",
@@ -6223,7 +6223,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-chairman-restaurant-restaurant",
+    "slug": "the-chairman-restaurant-2",
     "name": "The Chairman",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -6253,7 +6253,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "wing-restaurant-restaurant",
+    "slug": "wing-restaurant-2",
     "name": "Wing",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -6283,7 +6283,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "gaggan-restaurant-restaurant",
+    "slug": "gaggan-restaurant-2",
     "name": "Gaggan",
     "city": "Bangkok",
     "country": "Thailand",
@@ -6313,7 +6313,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mingles-restaurant-restaurant",
+    "slug": "mingles-restaurant-2",
     "name": "Mingles",
     "city": "Seoul",
     "country": "19",
@@ -6343,7 +6343,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "nusara-restaurant-restaurant",
+    "slug": "nusara-restaurant-2",
     "name": "Nusara",
     "city": "Bangkok",
     "country": "Thailand",
@@ -6553,7 +6553,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sorn-restaurant-restaurant",
+    "slug": "sorn-restaurant-2",
     "name": "Sorn",
     "city": "Bangkok",
     "country": "Thailand",
@@ -6583,7 +6583,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "la-cime-restaurant-restaurant",
+    "slug": "la-cime-restaurant-2",
     "name": "La Cime",
     "city": "Osaka",
     "country": "Japan",
@@ -6673,7 +6673,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sezanne-restaurant-restaurant",
+    "slug": "sezanne-restaurant-2",
     "name": "Sézanne",
     "city": "Tokyo",
     "country": "Japan",
@@ -6733,7 +6733,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "suhring-restaurant-restaurant",
+    "slug": "suhring-restaurant-2",
     "name": "Sühring",
     "city": "Bangkok",
     "country": "Thailand",
@@ -6763,7 +6763,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "odette-restaurant-restaurant",
+    "slug": "odette-restaurant-2",
     "name": "Odette",
     "city": "Singapore",
     "country": "Singapore 178957",
@@ -6943,7 +6943,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "potong-restaurant-restaurant",
+    "slug": "potong-restaurant-2",
     "name": "Potong",
     "city": "Bangkok",
     "country": "Thailand",
@@ -7123,7 +7123,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "florilege-restaurant-restaurant",
+    "slug": "florilege-restaurant-2",
     "name": "Florilège",
     "city": "Tokyo",
     "country": "5 Chome−10−7",
@@ -7273,7 +7273,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-du-restaurant-restaurant",
+    "slug": "le-du-restaurant-2",
     "name": "Le Du",
     "city": "Bangkok",
     "country": "Thailand",
@@ -7303,7 +7303,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "narisawa-restaurant-restaurant",
+    "slug": "narisawa-restaurant-2",
     "name": "Narisawa",
     "city": "Tokyo",
     "country": "2 Chome−6−15",
@@ -7753,7 +7753,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "kjolle-restaurant-restaurant",
+    "slug": "kjolle-restaurant-2",
     "name": "Kjolle",
     "city": "Lima",
     "country": "Peru",
@@ -7813,7 +7813,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "merito-restaurant-restaurant",
+    "slug": "m-c3-a9rito-restaurant",
     "name": "Mérito",
     "city": "Lima",
     "country": "Peru",
@@ -7843,7 +7843,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "celele-restaurant-restaurant",
+    "slug": "celele-restaurant-2",
     "name": "Celele",
     "city": "Cartagena",
     "country": "Colombia",
@@ -7873,7 +7873,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "borago-restaurant-restaurant",
+    "slug": "borag-c3-b3-restaurant",
     "name": "Boragó",
     "city": "Santiago",
     "country": "Chile",
@@ -7903,7 +7903,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "quintonil-restaurant-restaurant",
+    "slug": "quintonil-restaurant-2",
     "name": "Quintonil",
     "city": "Mexico City",
     "country": "Mexico",
@@ -8023,7 +8023,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mayta-restaurant-restaurant",
+    "slug": "mayta-restaurant-2",
     "name": "Mayta",
     "city": "Lima",
     "country": "Peru",
@@ -8083,7 +8083,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "lasai-restaurant-restaurant",
+    "slug": "lasai-restaurant-2",
     "name": "Lasai",
     "city": "Rio de Janeiro",
     "country": "Humaitá Rio de Janeiro / RJ – 22260-210",
@@ -8173,7 +8173,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "villa-torel-restaurant",
+    "slug": "villa-tor-c3-a9l-restaurant",
     "name": "Villa Torél",
     "city": "Ensenada",
     "country": "Mexico",
@@ -8593,7 +8593,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "maximo-restaurant",
+    "slug": "m-c3-a1ximo-restaurant",
     "name": "Máximo",
     "city": "Mexico City",
     "country": "Mexico",
@@ -8803,7 +8803,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "diaca-restaurant",
+    "slug": "diac-c3-a1-restaurant",
     "name": "Diacá",
     "city": "Guatemala City",
     "country": "Camra de La Construcción",
@@ -8863,7 +8863,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "rosetta-restaurant-restaurant",
+    "slug": "rosetta-restaurant-2",
     "name": "Rosetta",
     "city": "Mexico City",
     "country": "Mexico",
@@ -9403,7 +9403,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "atomix-restaurant-restaurant",
+    "slug": "atomix-restaurant-2",
     "name": "Atomix",
     "city": "New York",
     "country": "USA",
@@ -10723,7 +10723,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-leone-bar-bar",
+    "slug": "bar-leone-3",
     "name": "Bar Leone",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -10752,7 +10752,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "handshake-speakeasy-bar-bar",
+    "slug": "handshake-speakeasy-3",
     "name": "Handshake Speakeasy",
     "city": "Mexico City",
     "country": "Mexico",
@@ -10781,7 +10781,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sips-bar",
+    "slug": "sips-2",
     "name": "Sips",
     "city": "Barcelona",
     "country": "Spain",
@@ -10818,7 +10818,7 @@
     "regionalRank": 2
   },
   {
-    "slug": "paradiso-bar",
+    "slug": "paradiso-2",
     "name": "Paradiso",
     "city": "Barcelona",
     "country": "Spain",
@@ -10855,7 +10855,7 @@
     "regionalRank": 4
   },
   {
-    "slug": "tayer-elementary-bar",
+    "slug": "tayer-elementary-2",
     "name": "Tayēr + Elementary",
     "city": "London",
     "country": "UK",
@@ -10892,7 +10892,7 @@
     "regionalRank": 6
   },
   {
-    "slug": "connaught-bar-bar",
+    "slug": "connaught-bar-2",
     "name": "Connaught Bar",
     "city": "London",
     "country": "UK",
@@ -10929,7 +10929,7 @@
     "regionalRank": 8
   },
   {
-    "slug": "moebius-milano-bar",
+    "slug": "moebius-milano-2",
     "name": "Moebius Milano",
     "city": "Milan",
     "country": "Italy",
@@ -10966,7 +10966,7 @@
     "regionalRank": 10
   },
   {
-    "slug": "line-bar",
+    "slug": "line-2",
     "name": "Line",
     "city": "Athens",
     "country": "Greece",
@@ -11003,7 +11003,7 @@
     "regionalRank": 12
   },
   {
-    "slug": "jigger-pony-bar-bar",
+    "slug": "jigger-pony-3",
     "name": "Jigger & Pony",
     "city": "Singapore",
     "country": "Singapore 088539",
@@ -11032,7 +11032,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "tres-monos-bar",
+    "slug": "tres-monos-2",
     "name": "Tres Monos",
     "city": "Buenos Aires",
     "country": "Argentina",
@@ -11061,7 +11061,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "alquimico-bar",
+    "slug": "alquimico-2",
     "name": "Alquímico",
     "city": "Cartagena",
     "country": "Colombia",
@@ -11090,7 +11090,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "superbueno-bar-bar",
+    "slug": "superbueno-3",
     "name": "Superbueno",
     "city": "New York",
     "country": "NY 10003",
@@ -11119,7 +11119,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "lady-bee-bar",
+    "slug": "lady-bee-2",
     "name": "Lady Bee",
     "city": "Lima",
     "country": "Peru",
@@ -11148,7 +11148,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "himkok-bar",
+    "slug": "himkok-2",
     "name": "Himkok",
     "city": "Oslo",
     "country": "Norway",
@@ -11185,7 +11185,7 @@
     "regionalRank": 14
   },
   {
-    "slug": "bar-us-bar-bar",
+    "slug": "bar-us-3",
     "name": "Bar Us",
     "city": "Bangkok",
     "country": "Thailand",
@@ -11214,7 +11214,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "zest-bar-bar",
+    "slug": "zest-3",
     "name": "Zest",
     "city": "Seoul",
     "country": "Korea",
@@ -11243,7 +11243,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-nouveau-bar",
+    "slug": "bar-nouveau-2",
     "name": "Bar Nouveau",
     "city": "Paris",
     "country": "France",
@@ -11280,7 +11280,7 @@
     "regionalRank": 16
   },
   {
-    "slug": "bar-benfiddich-bar-bar",
+    "slug": "bar-benfiddich-3",
     "name": "Bar Benfiddich",
     "city": "Tokyo",
     "country": "Japan",
@@ -11309,7 +11309,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "caretakers-cottage-bar",
+    "slug": "caretakers-cottage-2",
     "name": "Caretaker's Cottage",
     "city": "Melbourne",
     "country": "Australia",
@@ -11338,7 +11338,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-cambridge-public-house-bar",
+    "slug": "the-cambridge-public-house-2",
     "name": "The Cambridge Public House",
     "city": "Paris",
     "country": "France",
@@ -11375,7 +11375,7 @@
     "regionalRank": 18
   },
   {
-    "slug": "satans-whiskers-bar",
+    "slug": "satans-whiskers-2",
     "name": "Satan's Whiskers",
     "city": "London",
     "country": "UK",
@@ -11412,7 +11412,7 @@
     "regionalRank": 20
   },
   {
-    "slug": "locale-firenze-bar",
+    "slug": "locale-firenze-2",
     "name": "Locale Firenze",
     "city": "Florence",
     "country": "Italy",
@@ -11449,7 +11449,7 @@
     "regionalRank": 22
   },
   {
-    "slug": "tlecan-bar-bar",
+    "slug": "tlecan-3",
     "name": "Tlecān",
     "city": "Mexico City",
     "country": "Mexico",
@@ -11478,7 +11478,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "tan-tan-bar",
+    "slug": "tan-tan-2",
     "name": "Tan Tan",
     "city": "São Paulo",
     "country": "Brazil",
@@ -11507,7 +11507,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mirror-bar-bar",
+    "slug": "mirror-bar-2",
     "name": "Mirror Bar",
     "city": "Bratislava",
     "country": "Slovakia",
@@ -11544,7 +11544,7 @@
     "regionalRank": 24
   },
   {
-    "slug": "cochinchina-bar",
+    "slug": "cochinchina-2",
     "name": "CoChinChina",
     "city": "Buenos Aires",
     "country": "Argentina",
@@ -11573,7 +11573,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "baba-au-rum-bar",
+    "slug": "baba-au-rum-2",
     "name": "Baba au Rum",
     "city": "Athens",
     "country": "Greece",
@@ -11610,7 +11610,7 @@
     "regionalRank": 26
   },
   {
-    "slug": "nouvelle-vague-bar",
+    "slug": "nouvelle-vague-2",
     "name": "Nouvelle Vague",
     "city": "Tirana",
     "country": "Albania",
@@ -11639,7 +11639,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "hope-sesame-bar",
+    "slug": "hope-sesame-2",
     "name": "Hope & Sesame",
     "city": "Guangzhou",
     "country": "Guangzhou",
@@ -11668,7 +11668,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "danico-bar",
+    "slug": "danico-2",
     "name": "Danico",
     "city": "Paris",
     "country": "France",
@@ -11705,7 +11705,7 @@
     "regionalRank": 28
   },
   {
-    "slug": "scarfes-bar-bar",
+    "slug": "scarfes-bar-2",
     "name": "Scarfes Bar",
     "city": "London",
     "country": "UK",
@@ -11742,7 +11742,7 @@
     "regionalRank": 30
   },
   {
-    "slug": "svanen-bar",
+    "slug": "svanen-2",
     "name": "Svanen",
     "city": "Oslo",
     "country": "Norway",
@@ -11779,7 +11779,7 @@
     "regionalRank": 32
   },
   {
-    "slug": "sastreria-martinez-bar",
+    "slug": "sastreria-martinez-2",
     "name": "Sastrería Martinez",
     "city": "Lima",
     "country": "Peru",
@@ -11808,7 +11808,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "panda-sons-bar",
+    "slug": "panda-sons-2",
     "name": "Panda & Sons",
     "city": "Edinburgh",
     "country": "UK",
@@ -11845,7 +11845,7 @@
     "regionalRank": 34
   },
   {
-    "slug": "roda-huset-bar",
+    "slug": "roda-huset-2",
     "name": "Röda Huset",
     "city": "Stockholm",
     "country": "Sweden",
@@ -11882,7 +11882,7 @@
     "regionalRank": 36
   },
   {
-    "slug": "mimi-kakushi-bar",
+    "slug": "mimi-kakushi-2",
     "name": "Mimi Kakushi",
     "city": "Dubai",
     "country": "UAE",
@@ -11911,7 +11911,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "salmon-guru-bar",
+    "slug": "salmon-guru-2",
     "name": "Salmon Guru",
     "city": "Madrid",
     "country": "Spain",
@@ -11948,7 +11948,7 @@
     "regionalRank": 38
   },
   {
-    "slug": "coa-bar-bar",
+    "slug": "coa-3",
     "name": "Coa",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -11977,7 +11977,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sip-guzzle-bar-bar",
+    "slug": "sip-guzzle-3",
     "name": "Sip & Guzzle",
     "city": "New York",
     "country": "United States",
@@ -12006,7 +12006,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "drink-kong-bar",
+    "slug": "drink-kong-2",
     "name": "Drink Kong",
     "city": "Rome",
     "country": "Italy",
@@ -12043,7 +12043,7 @@
     "regionalRank": 40
   },
   {
-    "slug": "double-chicken-please-bar-bar",
+    "slug": "double-chicken-please-3",
     "name": "Double Chicken Please",
     "city": "New York",
     "country": "USA",
@@ -12072,7 +12072,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "maybe-sammy-bar",
+    "slug": "maybe-sammy-2",
     "name": "Maybe Sammy",
     "city": "Sydney",
     "country": "Australia",
@@ -12101,7 +12101,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "1930-bar",
+    "slug": "1930-2",
     "name": "1930",
     "city": "Milan",
     "country": "Italy",
@@ -12138,7 +12138,7 @@
     "regionalRank": 42
   },
   {
-    "slug": "jewel-of-the-south-bar-bar",
+    "slug": "jewel-of-the-south-3",
     "name": "Jewel of the South",
     "city": "New Orleans",
     "country": "USA",
@@ -12167,7 +12167,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "virtu-bar-bar",
+    "slug": "virtu-3",
     "name": "Virtù",
     "city": "Tokyo",
     "country": "Tokyo 100-0004",
@@ -12196,7 +12196,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "overstory-bar-bar",
+    "slug": "overstory-3",
     "name": "Overstory",
     "city": "New York",
     "country": "USA",
@@ -12225,7 +12225,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-bar-in-front-of-the-bar-bar",
+    "slug": "the-bar-in-front-of-the-bar-2",
     "name": "The Bar in Front of the Bar",
     "city": "Athens",
     "country": "Greece",
@@ -12262,7 +12262,7 @@
     "regionalRank": 44
   },
   {
-    "slug": "the-bellwood-bar",
+    "slug": "the-bellwood-2",
     "name": "The Bellwood",
     "city": "Tokyo",
     "country": "Japan",
@@ -12291,7 +12291,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bkk-social-club-bar-bar",
+    "slug": "bkk-social-club-3",
     "name": "BKK Social Club",
     "city": "Bangkok",
     "country": "Thailand",
@@ -12320,7 +12320,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "nutmeg-clove-bar-bar",
+    "slug": "nutmeg-clove-3",
     "name": "Nutmeg & Clove",
     "city": "Singapore",
     "country": "Singapore",
@@ -12349,7 +12349,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "maido-restaurant-restaurant",
+    "slug": "maido-restaurant-2",
     "name": "Maido",
     "city": "Lima",
     "country": "Peru",
@@ -12378,7 +12378,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "asador-etxebarri-restaurant-restaurant",
+    "slug": "asador-etxebarri-restaurant-2",
     "name": "Asador Etxebarri",
     "city": "Atxondo",
     "country": "Spain",
@@ -12407,7 +12407,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "quintonil-restaurant-restaurant-restaurant",
+    "slug": "quintonil-restaurant-3",
     "name": "Quintonil",
     "city": "Mexico City",
     "country": "Mexico",
@@ -12436,7 +12436,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "diverxo-restaurant-restaurant",
+    "slug": "diverxo-restaurant-2",
     "name": "Diverxo",
     "city": "Madrid",
     "country": "Spain",
@@ -12465,7 +12465,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "alchemist-restaurant-restaurant",
+    "slug": "alchemist-restaurant-2",
     "name": "Alchemist",
     "city": "Copenhagen",
     "country": "Denmark",
@@ -12494,7 +12494,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "gaggan-restaurant-restaurant-restaurant",
+    "slug": "gaggan-restaurant-3",
     "name": "Gaggan",
     "city": "Bangkok",
     "country": "Thailand",
@@ -12523,7 +12523,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sezanne-restaurant-restaurant-restaurant",
+    "slug": "sezanne-restaurant-3",
     "name": "Sézanne",
     "city": "Tokyo",
     "country": "Japan",
@@ -12552,7 +12552,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "table-by-bruno-verjus-restaurant-restaurant",
+    "slug": "table-by-bruno-verjus-restaurant-2",
     "name": "Table by Bruno Verjus",
     "city": "Paris",
     "country": "France",
@@ -12581,7 +12581,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "kjolle-restaurant-restaurant-restaurant",
+    "slug": "kjolle-restaurant-3",
     "name": "Kjolle",
     "city": "Lima",
     "country": "Peru",
@@ -12610,7 +12610,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "don-restaurant-restaurant",
+    "slug": "don-restaurant-2",
     "name": "Don Julio",
     "city": "Buenos Aires",
     "country": "Argentina",
@@ -12639,7 +12639,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "wing-restaurant-restaurant-restaurant",
+    "slug": "wing-restaurant-3",
     "name": "Wing",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -12668,7 +12668,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "atomix-restaurant-restaurant-restaurant",
+    "slug": "atomix-restaurant-3",
     "name": "Atomix",
     "city": "New York",
     "country": "USA",
@@ -12697,7 +12697,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "potong-restaurant-restaurant-restaurant",
+    "slug": "potong-restaurant-3",
     "name": "Potong",
     "city": "Bangkok",
     "country": "Thailand",
@@ -12726,7 +12726,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "plenitude-restaurant-restaurant",
+    "slug": "plenitude-restaurant-2",
     "name": "Plénitude",
     "city": "Paris",
     "country": "France",
@@ -12755,7 +12755,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "ikoyi-restaurant-restaurant",
+    "slug": "ikoyi-restaurant-2",
     "name": "Ikoyi",
     "city": "London",
     "country": "UK",
@@ -12784,7 +12784,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "lido-84-restaurant-restaurant",
+    "slug": "lido-84-restaurant-2",
     "name": "Lido 84",
     "city": "Gardone Riviera",
     "country": "Italy",
@@ -12813,7 +12813,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sorn-restaurant-restaurant-restaurant",
+    "slug": "sorn-restaurant-3",
     "name": "Sorn",
     "city": "Bangkok",
     "country": "Thailand",
@@ -12842,7 +12842,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "reale-restaurant-restaurant",
+    "slug": "reale-restaurant-2",
     "name": "Reale",
     "city": "Castel di Sangro",
     "country": "Italy",
@@ -12871,7 +12871,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-chairman-restaurant-restaurant-restaurant",
+    "slug": "the-chairman-restaurant-3",
     "name": "The Chairman",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -12900,7 +12900,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "atelier-moessmer-norbert-niederkofler-restaurant-restaurant",
+    "slug": "atelier-moessmer-norbert-niederkofler-restaurant-2",
     "name": "Atelier Moessmer Norbert Niederkofler",
     "city": "Brunico",
     "country": "39031",
@@ -12929,7 +12929,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "narisawa-restaurant-restaurant-restaurant",
+    "slug": "narisawa-restaurant-3",
     "name": "Narisawa",
     "city": "Tokyo",
     "country": "2 Chome−6−15",
@@ -12958,7 +12958,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "suhring-restaurant-restaurant-restaurant",
+    "slug": "suhring-restaurant-3",
     "name": "Sühring",
     "city": "Bangkok",
     "country": "Bangkok 10120",
@@ -12987,7 +12987,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "borago-restaurant-restaurant-restaurant",
+    "slug": "borago-restaurant-2",
     "name": "Boragó",
     "city": "Santiago",
     "country": "Chile",
@@ -13016,7 +13016,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "elkano-restaurant-restaurant",
+    "slug": "elkano-restaurant-2",
     "name": "Elkano",
     "city": "Getaria",
     "country": "Spain",
@@ -13045,7 +13045,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "odette-restaurant-restaurant-restaurant",
+    "slug": "odette-restaurant-3",
     "name": "Odette",
     "city": "Singapore",
     "country": "Singapore 178957",
@@ -13074,7 +13074,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "merito-restaurant-restaurant-restaurant",
+    "slug": "merito-restaurant-2",
     "name": "Mérito",
     "city": "Lima",
     "country": "Peru",
@@ -13103,7 +13103,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "tresind-studio-restaurant-restaurant",
+    "slug": "tresind-studio-restaurant-2",
     "name": "Trèsind Studio",
     "city": "Dubai",
     "country": null,
@@ -13132,7 +13132,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "lasai-restaurant-restaurant-restaurant",
+    "slug": "lasai-restaurant-3",
     "name": "Lasai",
     "city": "Rio de Janeiro",
     "country": "Humaitá Rio de Janeiro / RJ – 22260-210",
@@ -13161,7 +13161,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mingles-restaurant-restaurant-restaurant",
+    "slug": "mingles-restaurant-3",
     "name": "Mingles",
     "city": "Seoul",
     "country": "19",
@@ -13190,7 +13190,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-du-restaurant-restaurant-restaurant",
+    "slug": "le-du-restaurant-3",
     "name": "Le Du",
     "city": "Bangkok",
     "country": "Thailand",
@@ -13219,7 +13219,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-calandre-restaurant-restaurant",
+    "slug": "le-calandre-restaurant-2",
     "name": "Le Calandre",
     "city": "Rubano",
     "country": "35030 Rubano (PD)",
@@ -13248,7 +13248,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "piazza-duomo-restaurant-restaurant",
+    "slug": "piazza-duomo-restaurant-2",
     "name": "Piazza Duomo",
     "city": "Alba",
     "country": "Italy",
@@ -13277,7 +13277,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "steirereck-restaurant-restaurant",
+    "slug": "steirereck-restaurant-2",
     "name": "Steirereck",
     "city": "Vienna",
     "country": "Austria",
@@ -13306,7 +13306,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "enigma-restaurant-restaurant",
+    "slug": "enigma-restaurant-2",
     "name": "Enigma",
     "city": "Barcelona",
     "country": "8015",
@@ -13335,7 +13335,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "nusara-restaurant-restaurant-restaurant",
+    "slug": "nusara-restaurant-3",
     "name": "Nusara",
     "city": "Bangkok",
     "country": "Thailand",
@@ -13364,7 +13364,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "florilege-restaurant-restaurant-restaurant",
+    "slug": "florilege-restaurant-3",
     "name": "Florilège",
     "city": "Tokyo",
     "country": "5 Chome−10−7",
@@ -13393,7 +13393,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "orfali-bros-restaurant-restaurant",
+    "slug": "orfali-bros-restaurant-2",
     "name": "Orfali Bros",
     "city": "Dubai",
     "country": null,
@@ -13422,7 +13422,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "frantzen-restaurant-restaurant",
+    "slug": "frantzen-restaurant-2",
     "name": "Frantzén",
     "city": "Stockholm",
     "country": "Sweden",
@@ -13451,7 +13451,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mayta-restaurant-restaurant-restaurant",
+    "slug": "mayta-restaurant-3",
     "name": "Mayta",
     "city": "Lima",
     "country": "Peru",
@@ -13480,7 +13480,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "septime-restaurant-restaurant",
+    "slug": "septime-restaurant-2",
     "name": "Septime",
     "city": "Paris",
     "country": "France",
@@ -13509,7 +13509,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "kadeau-restaurant-restaurant",
+    "slug": "kadeau-restaurant-2",
     "name": "Kadeau",
     "city": "Copenhagen",
     "country": "1408 København",
@@ -13538,7 +13538,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "belcanto-restaurant-restaurant",
+    "slug": "belcanto-restaurant-2",
     "name": "Belcanto",
     "city": "Lisbon",
     "country": "Portugal",
@@ -13567,7 +13567,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "uliassi-restaurant-restaurant",
+    "slug": "uliassi-restaurant-2",
     "name": "Uliassi",
     "city": "Senigallia",
     "country": "Italy",
@@ -13596,7 +13596,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "la-cime-restaurant-restaurant-restaurant",
+    "slug": "la-cime-restaurant-3",
     "name": "La Cime",
     "city": "Osaka",
     "country": "Japan",
@@ -13625,7 +13625,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "arpege-restaurant-restaurant",
+    "slug": "arpege-restaurant-2",
     "name": "Arpège",
     "city": "Paris",
     "country": "France",
@@ -13654,7 +13654,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "rosetta-restaurant-restaurant-restaurant",
+    "slug": "rosetta-restaurant-3",
     "name": "Rosetta",
     "city": "Mexico City",
     "country": "Mexico",
@@ -13683,7 +13683,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "vyn-restaurant-restaurant",
+    "slug": "vyn-restaurant-2",
     "name": "Vyn",
     "city": "Skillinge",
     "country": "272 92 Simrishamn",
@@ -13712,7 +13712,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "celele-restaurant-restaurant-restaurant",
+    "slug": "celele-restaurant-3",
     "name": "Celele",
     "city": "Cartagena",
     "country": "Colombia",
@@ -13741,7 +13741,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "kol-restaurant-restaurant",
+    "slug": "kol-restaurant-2",
     "name": "Kol",
     "city": "London",
     "country": "UK",
@@ -13770,7 +13770,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "restaurant-jan-restaurant-restaurant",
+    "slug": "restaurant-jan-restaurant-2",
     "name": "Jan",
     "city": "Munich",
     "country": "Germany",
@@ -13799,7 +13799,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-leone-bar-bar",
+    "slug": "bar-leone-4",
     "name": "Bar Leone",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -13829,7 +13829,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "zest-bar-bar",
+    "slug": "zest-4",
     "name": "Zest",
     "city": "Seoul",
     "country": "Seoul",
@@ -13859,7 +13859,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "jigger-pony-bar-bar",
+    "slug": "jigger-pony-4",
     "name": "Jigger & Pony",
     "city": "Singapore",
     "country": "Singapore",
@@ -13889,7 +13889,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-us-bar-bar",
+    "slug": "bar-us-4",
     "name": "Bar Us",
     "city": "Bangkok",
     "country": "Thailand",
@@ -13919,7 +13919,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "dry-wave-cocktail-studio-bar",
+    "slug": "dry-wave-cocktail-studio-2",
     "name": "Dry Wave Cocktail Studio",
     "city": "Bangkok",
     "country": null,
@@ -13949,7 +13949,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "cham-bar-bar",
+    "slug": "cham-bar-2",
     "name": "Bar Cham",
     "city": "Seoul",
     "country": "Seoul",
@@ -13979,7 +13979,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "hope-and-sesame-bar",
+    "slug": "hope-and-sesame-2",
     "name": "Hope & Sesame",
     "city": "Guangzhou",
     "country": "Guangzhou",
@@ -14009,7 +14009,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "lair-bar",
+    "slug": "lair-2",
     "name": "Lair",
     "city": "New Delhi",
     "country": null,
@@ -14039,7 +14039,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-benfiddich-bar-bar",
+    "slug": "bar-benfiddich-4",
     "name": "Bar Benfiddich",
     "city": "Tokyo",
     "country": "160-0023 Tokyo",
@@ -14069,7 +14069,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "penrose-bar",
+    "slug": "penrose-2",
     "name": "Penrose",
     "city": "Kuala Lumpur",
     "country": "50000 Kuala Lumpur",
@@ -14099,7 +14099,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "argo-bar",
+    "slug": "argo-2",
     "name": "Argo",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -14129,7 +14129,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "modernhaus-bar",
+    "slug": "modernhaus-2",
     "name": "Modernhaus",
     "city": "Jakarta",
     "country": null,
@@ -14159,7 +14159,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "alice-bar",
+    "slug": "alice-2",
     "name": "Alice",
     "city": "Seoul",
     "country": "Seoul",
@@ -14189,7 +14189,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "smoke-and-bitters-bar",
+    "slug": "smoke-and-bitters-2",
     "name": "Smoke & Bitters",
     "city": "Hiriketiya",
     "country": "Hiriketiya",
@@ -14219,7 +14219,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "three-x-co-bar",
+    "slug": "three-x-co-2",
     "name": "Three X Co",
     "city": "Kuala Lumpur",
     "country": null,
@@ -14249,7 +14249,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "cmyk-bar",
+    "slug": "cmyk-2",
     "name": "CMYK",
     "city": "Changsha",
     "country": "452370",
@@ -14279,7 +14279,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "coa-bar-bar",
+    "slug": "coa-4",
     "name": "Coa",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -14309,7 +14309,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "virtu-bar-bar",
+    "slug": "virtu-4",
     "name": "Virtù",
     "city": "Tokyo",
     "country": "Tokyo 100-0004",
@@ -14339,7 +14339,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bkk-social-club-bar-bar",
+    "slug": "bkk-social-club-4",
     "name": "BKK Social Club",
     "city": "Bangkok",
     "country": "Bangkok",
@@ -14369,7 +14369,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "vender-bar",
+    "slug": "vender-2",
     "name": "Vender",
     "city": "Taichung",
     "country": "Taichung",
@@ -14399,7 +14399,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mo-bar-shenzhen-bar",
+    "slug": "mo-bar-shenzhen-2",
     "name": "MO Bar Shenzhen",
     "city": "Shenzhen",
     "country": "China",
@@ -14429,7 +14429,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-st-regis-bar-jakarta-bar",
+    "slug": "the-st-regis-bar-jakarta-2",
     "name": "The St. Regis Bar",
     "city": "Jakarta",
     "country": "Indonesia",
@@ -14459,7 +14459,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "offtrack-bar",
+    "slug": "offtrack-2",
     "name": "Offtrack",
     "city": "Singapore",
     "country": "Singapore 059290",
@@ -14489,7 +14489,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "nutmeg-clove-bar-bar",
+    "slug": "nutmeg-clove-4",
     "name": "Nutmeg & Clove",
     "city": "Singapore",
     "country": "Singapore",
@@ -14519,7 +14519,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "yakoboku-bar",
+    "slug": "yakoboku-2",
     "name": "Yakoboku",
     "city": "Kumamoto",
     "country": "〒",
@@ -14549,7 +14549,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "god-bangkok-bar",
+    "slug": "god-bangkok-2",
     "name": "G.O.D",
     "city": "Bangkok",
     "country": "Bangkok 10100",
@@ -14579,7 +14579,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "penicillin-bar",
+    "slug": "penicillin-2",
     "name": "Penicillin",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -14609,7 +14609,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "soka-bar",
+    "slug": "soka-2",
     "name": "Soka",
     "city": "Bengaluru",
     "country": "India",
@@ -14639,7 +14639,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "vesper-bar",
+    "slug": "vesper-2",
     "name": "Vesper",
     "city": "Bangkok",
     "country": "Bangkok",
@@ -14669,7 +14669,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "boilermaker-bar",
+    "slug": "boilermaker-2",
     "name": "Boilermaker",
     "city": "Goa",
     "country": "India",
@@ -14699,7 +14699,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "zlb23-bar",
+    "slug": "zlb23-2",
     "name": "ZLB23",
     "city": "Bengaluru",
     "country": "India",
@@ -14729,7 +14729,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-savory-project-bar",
+    "slug": "the-savory-project-2",
     "name": "The Savory Project",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -14759,7 +14759,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "gokan-bar",
+    "slug": "gokan-2",
     "name": "Gokan",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -14789,7 +14789,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "carrots-bar-bar",
+    "slug": "carrots-bar-2",
     "name": "Carrots Bar",
     "city": "Jakarta",
     "country": "Indonesia",
@@ -14819,7 +14819,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "barc-bar",
+    "slug": "barc-2",
     "name": "Barc",
     "city": "Kathmandu",
     "country": "Nepal",
@@ -14849,7 +14849,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "punch-room-tokyo-bar",
+    "slug": "punch-room-tokyo-2",
     "name": "Punch Room Tokyo",
     "city": "Tokyo",
     "country": "〒104-0061",
@@ -14879,7 +14879,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-spirit-forward-bar",
+    "slug": "bar-spirit-forward-2",
     "name": "Bar Spirit Forward",
     "city": "Bengaluru",
     "country": "India",
@@ -14909,7 +14909,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "cosmo-pony-bar",
+    "slug": "cosmo-pony-2",
     "name": "Cosmo Pony",
     "city": "Jakarta",
     "country": "Indonesia",
@@ -14939,7 +14939,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-trigona-bar",
+    "slug": "bar-trigona-2",
     "name": "Bar Trigona",
     "city": "Kuala Lumpur",
     "country": "50450 Kuala Lumpur",
@@ -14969,7 +14969,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-public-house-bar",
+    "slug": "the-public-house-2",
     "name": "The Public House",
     "city": "Taipei",
     "country": "10681",
@@ -14999,7 +14999,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "to-infinity-and-beyond-bar",
+    "slug": "to-infinity-and-beyond-2",
     "name": "To Infinity & Beyond",
     "city": "Taipei",
     "country": "Taiwan 106",
@@ -15029,7 +15029,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "moonrock-bar",
+    "slug": "moonrock-2",
     "name": "Moonrock",
     "city": "Tainan",
     "country": "Taiwan 704",
@@ -15059,7 +15059,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "opium-bar",
+    "slug": "opium-2",
     "name": "Opium",
     "city": "Bangkok",
     "country": "Thailand",
@@ -15089,7 +15089,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "cat-bite-club-bar",
+    "slug": "cat-bite-club-2",
     "name": "Cat Bite Club",
     "city": "Singapore",
     "country": "Singapore 089534",
@@ -15119,7 +15119,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "native-bar",
+    "slug": "native-2",
     "name": "Native",
     "city": "Singapore",
     "country": "Singapore 069878",
@@ -15149,7 +15149,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "lamp-bar-bar",
+    "slug": "lamp-bar-2",
     "name": "Lamp Bar",
     "city": "Nara",
     "country": "Japan",
@@ -15179,7 +15179,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "reka-bar",
+    "slug": "reka-2",
     "name": "Reka",
     "city": "Kuala Lumpur",
     "country": "Malaysia",
@@ -15209,7 +15209,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-sathorn-bar",
+    "slug": "bar-sathorn-2",
     "name": "Bar Sathorn",
     "city": "Bangkok",
     "country": "Thailand",
@@ -15239,7 +15239,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bar-libre-bar",
+    "slug": "bar-libre-2",
     "name": "Bar Libre",
     "city": "Tokyo",
     "country": "Japan",
@@ -15269,7 +15269,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-chamber-bar",
+    "slug": "le-chamber-2",
     "name": "Le Chamber",
     "city": "Seoul",
     "country": "Seoul",
@@ -15299,7 +15299,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-chairman-restaurant-restaurant-restaurant",
+    "slug": "the-chairman-restaurant-4",
     "name": "The Chairman",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -15329,7 +15329,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "wing-restaurant-restaurant-restaurant",
+    "slug": "wing-restaurant-4",
     "name": "Wing",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -15359,7 +15359,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "gaggan-restaurant-restaurant-restaurant",
+    "slug": "gaggan-restaurant-4",
     "name": "Gaggan",
     "city": "Bangkok",
     "country": "Thailand",
@@ -15389,7 +15389,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mingles-restaurant-restaurant-restaurant",
+    "slug": "mingles-restaurant-4",
     "name": "Mingles",
     "city": "Seoul",
     "country": "19",
@@ -15419,7 +15419,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "nusara-restaurant-restaurant-restaurant",
+    "slug": "nusara-restaurant-4",
     "name": "Nusara",
     "city": "Bangkok",
     "country": "Thailand",
@@ -15449,7 +15449,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "meet-the-bund-restaurant-restaurant",
+    "slug": "meet-the-bund-restaurant-2",
     "name": "Meet the Bund",
     "city": "Shanghai",
     "country": "China",
@@ -15479,7 +15479,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "chef-tams-seasons-restaurant-restaurant",
+    "slug": "chef-tams-seasons-restaurant-2",
     "name": "Chef Tam's Seasons",
     "city": "Macau",
     "country": "Macau",
@@ -15509,7 +15509,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "gaggan-at-louis-vuitton-restaurant-restaurant",
+    "slug": "gaggan-at-louis-vuitton-restaurant-2",
     "name": "Gaggan at Louis Vuitton",
     "city": "Bangkok",
     "country": "Thailand",
@@ -15539,7 +15539,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "ling-long-restaurant-restaurant",
+    "slug": "ling-long-restaurant-2",
     "name": "Ling Long",
     "city": "Shanghai",
     "country": "200002 China",
@@ -15569,7 +15569,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "ru-yuan-restaurant-restaurant",
+    "slug": "ru-yuan-restaurant-2",
     "name": "Ru Yuan",
     "city": "Hangzhou",
     "country": "Hangzhou",
@@ -15599,7 +15599,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "fu-he-hui-restaurant-restaurant",
+    "slug": "fu-he-hui-restaurant-2",
     "name": "Fu He Hui",
     "city": "Shanghai",
     "country": "Shanghai",
@@ -15629,7 +15629,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sorn-restaurant-restaurant-restaurant",
+    "slug": "sorn-restaurant-4",
     "name": "Sorn",
     "city": "Bangkok",
     "country": "Thailand",
@@ -15659,7 +15659,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "la-cime-restaurant-restaurant-restaurant",
+    "slug": "la-cime-restaurant-4",
     "name": "La Cime",
     "city": "Osaka",
     "country": "Japan",
@@ -15689,7 +15689,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "onjium-restaurant-restaurant",
+    "slug": "onjium-restaurant-2",
     "name": "Onjium",
     "city": "Seoul",
     "country": "49 4층",
@@ -15719,7 +15719,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "masque-restaurant-restaurant",
+    "slug": "masque-restaurant-2",
     "name": "Masque",
     "city": "Mumbai",
     "country": "Mumbai 400011",
@@ -15749,7 +15749,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sezanne-restaurant-restaurant-restaurant",
+    "slug": "sezanne-restaurant-4",
     "name": "Sézanne",
     "city": "Tokyo",
     "country": "Japan",
@@ -15779,7 +15779,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "lamdre-restaurant-restaurant",
+    "slug": "lamdre-restaurant-2",
     "name": "Lamdre",
     "city": "Beijing",
     "country": "Beijing",
@@ -15809,7 +15809,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "suhring-restaurant-restaurant-restaurant",
+    "slug": "suhring-restaurant-4",
     "name": "Sühring",
     "city": "Bangkok",
     "country": "Thailand",
@@ -15839,7 +15839,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "odette-restaurant-restaurant-restaurant",
+    "slug": "odette-restaurant-4",
     "name": "Odette",
     "city": "Singapore",
     "country": "Singapore 178957",
@@ -15869,7 +15869,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "seroja-restaurant-restaurant",
+    "slug": "seroja-restaurant-2",
     "name": "Seroja",
     "city": "Singapore",
     "country": "189356",
@@ -15899,7 +15899,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sazenka-restaurant-restaurant",
+    "slug": "sazenka-restaurant-2",
     "name": "Sazenka",
     "city": "Tokyo",
     "country": "Japan",
@@ -15929,7 +15929,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "logy-restaurant-restaurant",
+    "slug": "logy-restaurant-2",
     "name": "Logy",
     "city": "Taipei",
     "country": "Taiwan",
@@ -15959,7 +15959,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "born-restaurant-restaurant",
+    "slug": "born-restaurant-2",
     "name": "Born",
     "city": "Singapore",
     "country": "Singapore 088804",
@@ -15989,7 +15989,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "neighborhood-restaurant-restaurant",
+    "slug": "neighborhood-restaurant-2",
     "name": "Neighborhood",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -16019,7 +16019,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "potong-restaurant-restaurant-restaurant",
+    "slug": "potong-restaurant-4",
     "name": "Potong",
     "city": "Bangkok",
     "country": "Thailand",
@@ -16049,7 +16049,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "eatanic-garden-restaurant-restaurant",
+    "slug": "eatanic-garden-restaurant-2",
     "name": "Eatanic Garden",
     "city": "Seoul",
     "country": "South Korea 06142",
@@ -16079,7 +16079,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "ms-maria-mr-singh-restaurant-restaurant",
+    "slug": "ms-maria-mr-singh-restaurant-2",
     "name": "Ms. Maria & Mr. Singh",
     "city": "Bangkok",
     "country": "Bangkok 10110",
@@ -16109,7 +16109,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "maz-restaurant-restaurant",
+    "slug": "maz-restaurant-2",
     "name": "Maz",
     "city": "Tokyo",
     "country": "1-3 東京ガーデンテラス 3F",
@@ -16139,7 +16139,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "102-house-restaurant-restaurant",
+    "slug": "102-house-restaurant-2",
     "name": "102 House",
     "city": "Shanghai",
     "country": "Shanghai",
@@ -16169,7 +16169,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "naar-restaurant-restaurant",
+    "slug": "naar-restaurant-2",
     "name": "Naar",
     "city": "Kasauli",
     "country": "District Solan Himachal Pradesh 173206",
@@ -16199,7 +16199,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "florilege-restaurant-restaurant-restaurant",
+    "slug": "florilege-restaurant-4",
     "name": "Florilège",
     "city": "Tokyo",
     "country": "5 Chome−10−7",
@@ -16229,7 +16229,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "estro-restaurant-restaurant",
+    "slug": "estro-restaurant-2",
     "name": "Estro",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -16259,7 +16259,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "myoujyaku-restaurant-restaurant",
+    "slug": "myoujyaku-restaurant-2",
     "name": "Myoujyaku",
     "city": "Tokyo",
     "country": "3 Chome−2−34 B1F",
@@ -16289,7 +16289,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "crony-restaurant-restaurant",
+    "slug": "crony-restaurant-2",
     "name": "Crony",
     "city": "Tokyo",
     "country": "Japan",
@@ -16319,7 +16319,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "caprice-restaurant-restaurant",
+    "slug": "caprice-restaurant-2",
     "name": "Caprice",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -16349,7 +16349,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-du-restaurant-restaurant-restaurant",
+    "slug": "le-du-restaurant-4",
     "name": "Le Du",
     "city": "Bangkok",
     "country": "Thailand",
@@ -16379,7 +16379,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "narisawa-restaurant-restaurant-restaurant",
+    "slug": "narisawa-restaurant-4",
     "name": "Narisawa",
     "city": "Tokyo",
     "country": "2 Chome−6−15",
@@ -16409,7 +16409,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "les-amis-restaurant-restaurant",
+    "slug": "les-amis-restaurant-2",
     "name": "Les Amis",
     "city": "Singapore",
     "country": "Singapore 228208",
@@ -16439,7 +16439,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "au-jardin-restaurant-restaurant",
+    "slug": "au-jardin-restaurant-2",
     "name": "Au Jardin",
     "city": "Penang",
     "country": "Malaysia",
@@ -16469,7 +16469,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "labyrinth-restaurant-restaurant",
+    "slug": "labyrinth-restaurant-2",
     "name": "Labyrinth",
     "city": "Singapore",
     "country": "039802",
@@ -16499,7 +16499,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mosu-restaurant-restaurant",
+    "slug": "mosu-restaurant-2",
     "name": "Mosu",
     "city": "Seoul",
     "country": "Seoul",
@@ -16529,7 +16529,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "august-restaurant-restaurant",
+    "slug": "august-restaurant-2",
     "name": "August",
     "city": "Jakarta",
     "country": "Jakarta 12190",
@@ -16559,7 +16559,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "bium-restaurant-restaurant",
+    "slug": "bium-restaurant-2",
     "name": "Bium",
     "city": "Seoul",
     "country": "Seoul",
@@ -16589,7 +16589,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "locavore-nxt-restaurant-restaurant",
+    "slug": "locavore-nxt-restaurant-2",
     "name": "Locavore NXT",
     "city": "Ubud",
     "country": "Bali",
@@ -16619,7 +16619,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "naeum-restaurant-restaurant",
+    "slug": "naeum-restaurant-2",
     "name": "Nae:Um",
     "city": "Singapore",
     "country": "Singapore 068615",
@@ -16649,7 +16649,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mono-restaurant-restaurant",
+    "slug": "mono-restaurant-2",
     "name": "Mono",
     "city": "Hong Kong",
     "country": "Hong Kong",
@@ -16679,7 +16679,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "wana-yook-restaurant-restaurant",
+    "slug": "wana-yook-restaurant-2",
     "name": "Wana Yook",
     "city": "Bangkok",
     "country": "Thailand",
@@ -16709,7 +16709,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "la-bourriche-133-restaurant-restaurant",
+    "slug": "la-bourriche-133-restaurant-2",
     "name": "La Bourriche 133",
     "city": "Shanghai",
     "country": "China",
@@ -16739,7 +16739,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "7th-door-restaurant-restaurant",
+    "slug": "7th-door-restaurant-2",
     "name": "7th Door",
     "city": "Seoul",
     "country": "41 4층",
@@ -16769,7 +16769,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "jl-studio-restaurant-restaurant",
+    "slug": "jl-studio-restaurant-2",
     "name": "JL Studio",
     "city": "Taichung",
     "country": "408",
@@ -16799,7 +16799,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "smyth-restaurant-restaurant",
+    "slug": "smyth-restaurant-2",
     "name": "Smyth",
     "city": "Chicago",
     "country": "United States",
@@ -16829,7 +16829,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "eight-restaurant-restaurant",
+    "slug": "eight-restaurant-2",
     "name": "Eight",
     "city": "Calgary",
     "country": "Canada",
@@ -16859,7 +16859,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "restaurant-pearl-morissette-restaurant-restaurant",
+    "slug": "restaurant-pearl-morissette-restaurant-2",
     "name": "Restaurant Pearl Morissette",
     "city": "Lincoln",
     "country": "Canada",
@@ -16889,7 +16889,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "dakar-nola-restaurant-restaurant",
+    "slug": "dakar-nola-restaurant-2",
     "name": "Dakar NOLA",
     "city": "New Orleans",
     "country": "LA 70118",
@@ -16919,7 +16919,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mon-lapin-restaurant-restaurant",
+    "slug": "mon-lapin-restaurant-2",
     "name": "Mon Lapin",
     "city": "Montreal",
     "country": "Canada",
@@ -16949,7 +16949,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "albi-restaurant-restaurant",
+    "slug": "albi-restaurant-2",
     "name": "Albi",
     "city": "Washington DC",
     "country": "United States",
@@ -16979,7 +16979,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "atomix-restaurant-restaurant-restaurant",
+    "slug": "atomix-restaurant-4",
     "name": "Atomix",
     "city": "New York",
     "country": "USA",
@@ -17009,7 +17009,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "quetzal-restaurant-restaurant",
+    "slug": "quetzal-restaurant-2",
     "name": "Quetzal",
     "city": "Toronto",
     "country": "M5T 1T1",
@@ -17039,7 +17039,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "taniere3-restaurant-restaurant",
+    "slug": "taniere3-restaurant-2",
     "name": "Tanière3",
     "city": "Quebec City",
     "country": "Canada",
@@ -17069,7 +17069,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "cesar-restaurant-restaurant",
+    "slug": "cesar-restaurant-2",
     "name": "César",
     "city": "New York",
     "country": "United States",
@@ -17099,7 +17099,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "kalaya-restaurant-restaurant",
+    "slug": "kalaya-restaurant-2",
     "name": "Kalaya",
     "city": "Philadelphia",
     "country": "United States",
@@ -17129,7 +17129,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-veau-dor-restaurant-restaurant",
+    "slug": "le-veau-dor-restaurant-2",
     "name": "Le Veau d'Or",
     "city": "New York",
     "country": "United States",
@@ -17159,7 +17159,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-bernadin-restaurant-restaurant",
+    "slug": "le-bernadin-restaurant-2",
     "name": "Le Bernardin",
     "city": "New York",
     "country": "United States",
@@ -17189,7 +17189,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "kabawa-restaurant-restaurant",
+    "slug": "kabawa-restaurant-2",
     "name": "Kabawa",
     "city": "New York",
     "country": "United States",
@@ -17219,7 +17219,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "le-violon-restaurant-restaurant",
+    "slug": "le-violon-restaurant-2",
     "name": "Le Violon",
     "city": "Montreal",
     "country": "Canada",
@@ -17249,7 +17249,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "singlethread-restaurant-restaurant",
+    "slug": "singlethread-restaurant-2",
     "name": "SingleThread",
     "city": "Healdsburg",
     "country": "United States",
@@ -17279,7 +17279,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "published-on-main-restaurant-restaurant",
+    "slug": "published-on-main-restaurant-2",
     "name": "Published on Main",
     "city": "Vancouver",
     "country": "Canada",
@@ -17309,7 +17309,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "jungsik-restaurant-restaurant",
+    "slug": "jungsik-restaurant-2",
     "name": "Jungsik",
     "city": "New York",
     "country": "United States",
@@ -17339,7 +17339,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "penny-restaurant-restaurant",
+    "slug": "penny-restaurant-2",
     "name": "Penny",
     "city": "New York",
     "country": "United States",
@@ -17369,7 +17369,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "emerils-restaurant-restaurant",
+    "slug": "emerils-restaurant-2",
     "name": "Emeril's",
     "city": "New Orleans",
     "country": "United States",
@@ -17399,7 +17399,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "chubby-fish-restaurant-restaurant",
+    "slug": "chubby-fish-restaurant-2",
     "name": "Chubby Fish",
     "city": "Charleston",
     "country": "United States",
@@ -17429,7 +17429,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "saison-restaurant-restaurant",
+    "slug": "saison-restaurant-2",
     "name": "Saison",
     "city": "San Francisco",
     "country": "United States",
@@ -17459,7 +17459,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "aska-restaurant-restaurant",
+    "slug": "aska-restaurant-2",
     "name": "Aska",
     "city": "New York",
     "country": "United States",
@@ -17489,7 +17489,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "moon-rabbit-restaurant-restaurant",
+    "slug": "moon-rabbit-restaurant-2",
     "name": "Moon Rabbit",
     "city": "Washington DC",
     "country": "United States",
@@ -17519,7 +17519,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "edulis-restaurant-restaurant",
+    "slug": "edulis-restaurant-2",
     "name": "Edulis",
     "city": "Toronto",
     "country": "Ontario",
@@ -17549,7 +17549,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "holbox-restaurant-restaurant",
+    "slug": "holbox-restaurant-2",
     "name": "Holbox",
     "city": "Los Angeles",
     "country": "United States",
@@ -17579,7 +17579,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "beba-restaurant-restaurant",
+    "slug": "beba-restaurant-2",
     "name": "Beba",
     "city": "Montreal",
     "country": "Canada",
@@ -17609,7 +17609,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "mhel-restaurant-restaurant",
+    "slug": "mhel-restaurant-2",
     "name": "Mhel",
     "city": "Toronto",
     "country": "Canada",
@@ -17639,7 +17639,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "avize-restaurant-restaurant",
+    "slug": "avize-restaurant-2",
     "name": "Avize",
     "city": "Atlanta",
     "country": "GA 30318",
@@ -17669,7 +17669,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "acamaya-restaurant-restaurant",
+    "slug": "acamaya-restaurant-2",
     "name": "Acamaya",
     "city": "New Orleans",
     "country": "LA 70117",
@@ -17699,7 +17699,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "addison-by-william-bradley-restaurant-restaurant",
+    "slug": "addison-by-william-bradley-restaurant-2",
     "name": "Addison by William Bradley",
     "city": "San Diego",
     "country": "United States",
@@ -17729,7 +17729,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "providence-restaurant-restaurant",
+    "slug": "providence-restaurant-2",
     "name": "Providence",
     "city": "Los Angeles",
     "country": "United States",
@@ -17759,7 +17759,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "benu-restaurant-restaurant",
+    "slug": "benu-restaurant-2",
     "name": "Benu",
     "city": "San Francisco",
     "country": "United States",
@@ -17789,7 +17789,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sabayon-restaurant-restaurant",
+    "slug": "sabayon-restaurant-2",
     "name": "Sabayon",
     "city": "Montreal",
     "country": "Canada",
@@ -17819,7 +17819,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "annalena-restaurant-restaurant",
+    "slug": "annalena-restaurant-2",
     "name": "AnnaLena",
     "city": "Vancouver",
     "country": "Canada",
@@ -17849,7 +17849,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "corima-restaurant-restaurant",
+    "slug": "corima-restaurant-2",
     "name": "Corima",
     "city": "New York",
     "country": "United States",
@@ -17879,7 +17879,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "dogon-restaurant-restaurant",
+    "slug": "dogon-restaurant-2",
     "name": "Dōgon by Kwame Onwuachi",
     "city": "Washington DC",
     "country": "United States",
@@ -17909,7 +17909,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "torrisi-restaurant-restaurant",
+    "slug": "torrisi-restaurant-2",
     "name": "Torrisi",
     "city": "New York",
     "country": "United States",
@@ -17939,7 +17939,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "tatiana-by-kwame-onwuachi-restaurant-restaurant",
+    "slug": "tatiana-by-kwame-onwuachi-restaurant-2",
     "name": "Tatiana by Kwame Onwuachi",
     "city": "New York",
     "country": "United States",
@@ -17969,7 +17969,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "friday-saturday-sunday-restaurant-restaurant",
+    "slug": "friday-saturday-sunday-restaurant-2",
     "name": "Friday Saturday Sunday",
     "city": "Philadelphia",
     "country": "United States",
@@ -17999,7 +17999,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "semma-restaurant-restaurant",
+    "slug": "semma-restaurant-2",
     "name": "Semma",
     "city": "New York",
     "country": "United States",
@@ -18029,7 +18029,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "pascual-restaurant-restaurant",
+    "slug": "pascual-restaurant-2",
     "name": "Pascual",
     "city": "Washington DC",
     "country": "United States",
@@ -18059,7 +18059,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "gramercy-tavern-restaurant-restaurant",
+    "slug": "gramercy-tavern-restaurant-2",
     "name": "Gramercy Tavern",
     "city": "New York",
     "country": "United States",
@@ -18089,7 +18089,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "atelier-crenn-restaurant-restaurant",
+    "slug": "atelier-crenn-restaurant-2",
     "name": "Atelier Crenn",
     "city": "San Francisco",
     "country": "United States",
@@ -18119,7 +18119,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "sons-daughters-restaurant-restaurant",
+    "slug": "sons-daughters-restaurant-2",
     "name": "Sons & Daughters",
     "city": "San Francisco",
     "country": "United States",
@@ -18149,7 +18149,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "somni-restaurant-restaurant",
+    "slug": "somni-restaurant-2",
     "name": "Somni",
     "city": "Los Angeles",
     "country": "United States",
@@ -18179,7 +18179,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "wild-ble-restaurant-restaurant",
+    "slug": "wild-ble-restaurant-2",
     "name": "Wild Blue",
     "city": "Whistler",
     "country": "Canada",
@@ -18209,7 +18209,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "the-pine-restaurant-restaurant",
+    "slug": "the-pine-restaurant-2",
     "name": "The Pine",
     "city": "Collingwood",
     "country": "Canada",
@@ -18239,7 +18239,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "kato-restaurant-restaurant",
+    "slug": "kato-restaurant-2",
     "name": "Kato",
     "city": "Los Angeles",
     "country": "United States",
@@ -18269,7 +18269,7 @@
     "enrichmentSource": "worlds50best"
   },
   {
-    "slug": "dianes-place-restaurant-restaurant",
+    "slug": "dianes-place-restaurant-2",
     "name": "Diane's Place",
     "city": "Minneapolis",
     "country": "United States",

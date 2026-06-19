@@ -32,32 +32,98 @@ Admin puede forzar plan: `PATCH /api/admin/bars/[id]/map-plan`.
 
 ## Pipeline de datos
 
+**Orden recomendado:** consolidar BD existente **antes** de scrapear locales nuevos. El scrape de World's 50 Best solo añade/actualiza entradas en JSON por `sourceUrl`; no rellena `venuePreferences`.
+
+### Fase 1 — Auditoría y códigos (sin scrape)
+
 ```bash
-# 1. Scrape editorial desde theworlds50best.com
-npm run scrape:venues
-# Informe de cobertura de campos:
-npm run scrape:venues -- --report
-# → data/venues-worlds50best.json
+npm run check:local
+npm run audit:venue-duplicates
+# → data/audits/venue-duplicates.json
+# → data/audits/venue-profile-completeness.json
 
-# 2. Importar a Prisma (VenueGuideEntry)
-npm run seed:venues
-npm run backfill:venue-codes
-
-# 3. Geocodificar direcciones (Nominatim, query compuesta + confidence)
-npm run geocode:venues -- --limit 50
-# Solo faltantes o baja confianza:
-npm run geocode:venues -- --only-missing
-npm run geocode:venues -- --retry-low-confidence
-
-# 4. Sugerencias TripAdvisor (CSV de revisión manual)
-npm run enrich:tripadvisor -- --suggest
-# → data/tripadvisor-suggestions.csv
-
-# 5. Importar CSV curado (TripAdvisor + IDs externos)
-npm run enrich:tripadvisor -- --import data/tripadvisor-curated.csv
+npm run backfill:venue-codes   # ET-LOC-* donde falte
 ```
 
+### Migración de slugs (si hay colisiones o sufijos duplicados)
+
+Si el JSON tiene slugs malformados (`maido-restaurant-restaurant`, `coa-bar-bar`) por listas globales + regionales:
+
+```bash
+npm run fix:venue-slugs -- --dry-run   # informe sin escribir
+npm run fix:venue-slugs                # JSON + BD por sourceUrl
+# → data/audits/venue-slug-migration.json
+```
+
+Recalcula slugs desde `sourceUrl` + categoría y asigna sufijos numéricos (`-2`, `-3`) en colisión. **Las URLs `/locales/[slug]` cambian** en los afectados; el informe lista `oldSlug → newSlug`.
+
+Tras la migración: `npm run seed:venues` (debe dar 600 upserts, 0 omitidos).
+
+### Fase 2 — Geocodificar y sincronizar JSON → BD
+
+```bash
+# Geocodificar direcciones (Nominatim, ~1,1 s/request; cientos de locales ≈ 10–15 min)
+npm run geocode:venues
+npm run geocode:venues -- --only-missing
+npm run geocode:venues -- --retry-low-confidence
+GEOCODE_LIMIT=50 npm run geocode:venues   # prueba con límite
+
+# Importar JSON a Prisma (merge seguro: no pisa taxonomía TripAdvisor ni venueCode)
+npm run seed:venues
+npm run audit:venue-duplicates
+```
+
+**Regla anti-pérdida:** `seed:venues` fusiona con el registro Prisma existente (`mergeVenueGuides` + `mergeVenueGuideDetailFields`). Arrays vacíos del JSON **no** sobrescriben `venuePreferences`, `cuisineTypes`, etc. ya importados.
+
 Opcional al seed: `SEED_VENUES_GEOCODE=true` para geocodificar durante el import.
+
+### Fase 3 — Preferencias y taxonomía (TripAdvisor)
+
+1. Generar sugerencias de búsqueda (ya enlazadas por `slug`):
+
+```bash
+npm run enrich:tripadvisor -- --suggest
+# → data/tripadvisor-suggestions.csv
+```
+
+2. Curar manualmente: copia filas verificadas a `data/tripadvisor-curated.csv` (plantilla en `data/tripadvisor-curated.csv.example`).
+
+3. Importar preferencias y taxonomía:
+
+```bash
+npm run enrich:tripadvisor -- --import data/tripadvisor-curated.csv
+npm run audit:venue-duplicates
+```
+
+Sin CSV curado, `venuePreferences` no se rellenan de forma masiva (el scrape W50Best no las incluye).
+
+### Fase 4 — Scrape para locales nuevos (usuario, al final)
+
+Solo cuando `audit:venue-duplicates` muestre 0 duplicados críticos de `sourceUrl` / `ET-LOC`:
+
+```bash
+npm run scrape:venues
+npm run scrape:venues -- --report
+npm run seed:venues
+npm run backfill:venue-codes
+npm run geocode:venues
+npm run audit:venue-duplicates
+# → data/venues-worlds50best.json
+```
+
+### Checklist de ficha completa (`VenueGuideEntry`)
+
+| Bloque | Campos | Fuente típica |
+|--------|--------|----------------|
+| Identidad | `venueCode`, `slug`, `name`, `sourceUrl` | `backfill:venue-codes`, scrape |
+| Ubicación | `address`, `city`, `country`, `latitude`, `longitude`, `geocodeConfidence` | scrape + `geocode:venues` |
+| Editorial | `photoUrl`, `history` o `verdict`, `chefName`, `externalWebsite` | scrape `--detail-only` |
+| Ranking | `worlds50bestRank`, `continent`, `additionalRankings` | scrape |
+| Taxonomía | `establishmentTypes`, `cuisineTypes`, `idealFor`, `venueFeatures`, `priceRange` | TripAdvisor CSV / manual |
+| Preferencias | `venuePreferences[]` | TripAdvisor `amenities` → `enrich-taxonomy-mapper.ts` |
+| Enlaces | `tripadvisorUrl`, `instagramUrl`, `tiktokUrl` | CSV / cuenta bar |
+
+Informe: `data/audits/venue-profile-completeness.json` (gaps por slug).
 
 ## Identificadores de catálogo
 
@@ -150,6 +216,9 @@ Componentes: `VenueMapShell.tsx` (orquestador), `VenueGlobeMap.tsx`, `VenueMapLe
 ## Archivos clave
 
 - `lib/venues/catalog.ts` — lectura y filtros del catálogo
+- `lib/venues/merge-guide.ts`, `guide-from-db.ts` — merge seguro JSON ↔ BD
+- `lib/venues/worlds50best-parser.ts` — `dedupeSlugs` con sufijos numéricos
+- `scripts/fix-venue-slugs.ts` — migración de slugs por `sourceUrl`
 - `lib/venues/reservation.ts` — enlaces de reserva
 - `lib/geocoding/nominatim.ts` — geocodificación
 - `components/map/MapaPageClient.tsx`, `VenueMapShell.tsx`, `VenueGlobeMap.tsx`

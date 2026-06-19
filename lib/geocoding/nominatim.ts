@@ -83,7 +83,8 @@ export async function geocodeVenue(parts: {
   city: string;
   country?: string | null;
 }): Promise<GeocodeResult | null> {
-  const base = { city: parts.city, country: parts.country ?? undefined, defaultCountry: null };
+  const country = parts.country ?? undefined;
+  const base = { city: parts.city, country, defaultCountry: null };
 
   const strategies: Array<{ address: string; confidence: GeocodeConfidence; name?: string }> = [];
 
@@ -97,12 +98,32 @@ export async function geocodeVenue(parts: {
       address: `${parts.name}, ${parts.address}`,
       confidence: "high",
     });
+    if (country) {
+      strategies.push({
+        address: `${parts.address}, ${parts.city}, ${country}`,
+        confidence: "high",
+      });
+    }
+  }
+
+  if (country) {
+    strategies.push({
+      address: `${parts.name}, ${parts.city}, ${country}`,
+      confidence: parts.address ? "medium" : "high",
+    });
   }
 
   strategies.push({
     address: `${parts.name}, ${parts.city}`,
     confidence: parts.address ? "medium" : "low",
   });
+
+  if (parts.city && country) {
+    strategies.push({
+      address: `${parts.city}, ${country}`,
+      confidence: "low",
+    });
+  }
 
   if (parts.city) {
     strategies.push({ address: parts.name, confidence: "low" });

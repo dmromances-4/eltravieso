@@ -296,13 +296,26 @@ export function parseDetailPage(
   };
 }
 
+function nextUniqueSlug(baseSlug: string, used: Set<string>): string {
+  if (!used.has(baseSlug)) {
+    used.add(baseSlug);
+    return baseSlug;
+  }
+
+  let n = 2;
+  while (used.has(`${baseSlug}-${n}`)) {
+    n += 1;
+  }
+  const candidate = `${baseSlug}-${n}`;
+  used.add(candidate);
+  return candidate;
+}
+
 export function dedupeSlugs(venues: NormalizedVenueGuide[]): NormalizedVenueGuide[] {
-  const seen = new Map<string, number>();
-  return venues.map((v) => {
-    const count = seen.get(v.slug) ?? 0;
-    seen.set(v.slug, count + 1);
-    if (count === 0) return v;
-    const suffix = v.worlds50bestCategory === "BARS" ? "-bar" : "-restaurant";
-    return { ...v, slug: `${v.slug}${suffix}` };
+  const used = new Set<string>();
+  return venues.map((venue) => {
+    const slug = nextUniqueSlug(venue.slug, used);
+    if (slug === venue.slug) return venue;
+    return { ...venue, slug };
   });
 }

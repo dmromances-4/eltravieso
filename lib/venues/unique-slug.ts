@@ -30,6 +30,18 @@ export function slugFromDetailPath(detailPath: string, category: "BARS" | "RESTA
   return category === "BARS" ? base : `${base}-restaurant`;
 }
 
+export function slugFromSourceUrl(
+  sourceUrl: string,
+  category: "BARS" | "RESTAURANTS",
+): string {
+  try {
+    const pathname = new URL(sourceUrl).pathname;
+    return slugFromDetailPath(pathname, category);
+  } catch {
+    return category === "BARS" ? "venue" : "venue-restaurant";
+  }
+}
+
 export function normalizeVenueKey(name: string, city: string): string {
   return `${slugify(name)}::${slugify(city)}`;
 }

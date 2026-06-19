@@ -1,0 +1,1764 @@
+{
+  "generatedAt": "2026-06-19T12:00:37.101Z",
+  "dryRun": false,
+  "totals": {
+    "venues": 600,
+    "migrations": 292,
+    "malformedBefore": 205,
+    "malformedAfter": 0
+  },
+  "migrations": [
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/bar-leone.html",
+      "oldSlug": "bar-leone-bar",
+      "newSlug": "bar-leone-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/zest.html",
+      "oldSlug": "zest-bar",
+      "newSlug": "zest-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/jigger-pony.html",
+      "oldSlug": "jigger-pony-bar",
+      "newSlug": "jigger-pony-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/bar-us.html",
+      "oldSlug": "bar-us-bar",
+      "newSlug": "bar-us-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/bar-benfiddich.html",
+      "oldSlug": "bar-benfiddich-bar",
+      "newSlug": "bar-benfiddich-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/coa.html",
+      "oldSlug": "coa-bar",
+      "newSlug": "coa-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/virtu.html",
+      "oldSlug": "virtu-bar",
+      "newSlug": "virtu-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/bkk-social-club.html",
+      "oldSlug": "bkk-social-club-bar",
+      "newSlug": "bkk-social-club-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/asia/the-list/nutmeg-clove.html",
+      "oldSlug": "nutmeg-clove-bar",
+      "newSlug": "nutmeg-clove-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/northamerica/the-list/sip-guzzle.html",
+      "oldSlug": "sip-guzzle-bar",
+      "newSlug": "sip-guzzle-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/northamerica/the-list/tlecan.html",
+      "oldSlug": "tlecan-bar",
+      "newSlug": "tlecan-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/northamerica/the-list/jewel-of-the-south.html",
+      "oldSlug": "jewel-of-the-south-bar",
+      "newSlug": "jewel-of-the-south-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/northamerica/the-list/superbueno.html",
+      "oldSlug": "superbueno-bar",
+      "newSlug": "superbueno-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/northamerica/the-list/handshake-speakeasy.html",
+      "oldSlug": "handshake-speakeasy-bar",
+      "newSlug": "handshake-speakeasy-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/northamerica/the-list/overstory.html",
+      "oldSlug": "overstory-bar",
+      "newSlug": "overstory-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/northamerica/the-list/double-chicken-please.html",
+      "oldSlug": "double-chicken-please-bar",
+      "newSlug": "double-chicken-please-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/The-Chairman.html",
+      "oldSlug": "the-chairman-restaurant-restaurant",
+      "newSlug": "the-chairman-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Wing.html",
+      "oldSlug": "wing-restaurant-restaurant",
+      "newSlug": "wing-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Gaggan.html",
+      "oldSlug": "gaggan-restaurant-restaurant",
+      "newSlug": "gaggan-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/mingles.html",
+      "oldSlug": "mingles-restaurant-restaurant",
+      "newSlug": "mingles-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Nusara.html",
+      "oldSlug": "nusara-restaurant-restaurant",
+      "newSlug": "nusara-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Sorn.html",
+      "oldSlug": "sorn-restaurant-restaurant",
+      "newSlug": "sorn-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/La-Cime.html",
+      "oldSlug": "la-cime-restaurant-restaurant",
+      "newSlug": "la-cime-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/sezanne.html",
+      "oldSlug": "sezanne-restaurant-restaurant",
+      "newSlug": "sezanne-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Suhring.html",
+      "oldSlug": "suhring-restaurant-restaurant",
+      "newSlug": "suhring-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Odette.html",
+      "oldSlug": "odette-restaurant-restaurant",
+      "newSlug": "odette-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Potong.html",
+      "oldSlug": "potong-restaurant-restaurant",
+      "newSlug": "potong-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/florilege.html",
+      "oldSlug": "florilege-restaurant-restaurant",
+      "newSlug": "florilege-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Le-Du.html",
+      "oldSlug": "le-du-restaurant-restaurant",
+      "newSlug": "le-du-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/asia/en/the-list/Narisawa.html",
+      "oldSlug": "narisawa-restaurant-restaurant",
+      "newSlug": "narisawa-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Kjolle.html",
+      "oldSlug": "kjolle-restaurant-restaurant",
+      "newSlug": "kjolle-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Mérito.html",
+      "oldSlug": "merito-restaurant-restaurant",
+      "newSlug": "m-c3-a9rito-restaurant",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Celele.html",
+      "oldSlug": "celele-restaurant-restaurant",
+      "newSlug": "celele-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Boragó.html",
+      "oldSlug": "borago-restaurant-restaurant",
+      "newSlug": "borag-c3-b3-restaurant",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Quintonil.html",
+      "oldSlug": "quintonil-restaurant-restaurant",
+      "newSlug": "quintonil-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Mayta.html",
+      "oldSlug": "mayta-restaurant-restaurant",
+      "newSlug": "mayta-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Lasai.html",
+      "oldSlug": "lasai-restaurant-restaurant",
+      "newSlug": "lasai-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Villa-Torél.html",
+      "oldSlug": "villa-torel-restaurant",
+      "newSlug": "villa-tor-c3-a9l-restaurant",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Máximo.html",
+      "oldSlug": "maximo-restaurant",
+      "newSlug": "m-c3-a1ximo-restaurant",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Diacá.html",
+      "oldSlug": "diaca-restaurant",
+      "newSlug": "diac-c3-a1-restaurant",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/latinamerica/en/the-list/Rosetta.html",
+      "oldSlug": "rosetta-restaurant-restaurant",
+      "newSlug": "rosetta-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/northamerica/en/the-list/atomix.html",
+      "oldSlug": "atomix-restaurant-restaurant",
+      "newSlug": "atomix-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-leone.html",
+      "oldSlug": "bar-leone-bar-bar",
+      "newSlug": "bar-leone-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/handshake-speakeasy.html",
+      "oldSlug": "handshake-speakeasy-bar-bar",
+      "newSlug": "handshake-speakeasy-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/sips.html",
+      "oldSlug": "sips-bar",
+      "newSlug": "sips-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/paradiso.html",
+      "oldSlug": "paradiso-bar",
+      "newSlug": "paradiso-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tayer-elementary.html",
+      "oldSlug": "tayer-elementary-bar",
+      "newSlug": "tayer-elementary-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/connaught-bar.html",
+      "oldSlug": "connaught-bar-bar",
+      "newSlug": "connaught-bar-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/moebius-milano.html",
+      "oldSlug": "moebius-milano-bar",
+      "newSlug": "moebius-milano-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/line.html",
+      "oldSlug": "line-bar",
+      "newSlug": "line-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/jigger-pony.html",
+      "oldSlug": "jigger-pony-bar-bar",
+      "newSlug": "jigger-pony-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tres-monos.html",
+      "oldSlug": "tres-monos-bar",
+      "newSlug": "tres-monos-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/alquimico.html",
+      "oldSlug": "alquimico-bar",
+      "newSlug": "alquimico-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/superbueno.html",
+      "oldSlug": "superbueno-bar-bar",
+      "newSlug": "superbueno-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/lady-bee.html",
+      "oldSlug": "lady-bee-bar",
+      "newSlug": "lady-bee-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/himkok.html",
+      "oldSlug": "himkok-bar",
+      "newSlug": "himkok-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-us.html",
+      "oldSlug": "bar-us-bar-bar",
+      "newSlug": "bar-us-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/zest.html",
+      "oldSlug": "zest-bar-bar",
+      "newSlug": "zest-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-nouveau.html",
+      "oldSlug": "bar-nouveau-bar",
+      "newSlug": "bar-nouveau-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-benfiddich.html",
+      "oldSlug": "bar-benfiddich-bar-bar",
+      "newSlug": "bar-benfiddich-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/caretakers-cottage.html",
+      "oldSlug": "caretakers-cottage-bar",
+      "newSlug": "caretakers-cottage-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/the-cambridge-public-house.html",
+      "oldSlug": "the-cambridge-public-house-bar",
+      "newSlug": "the-cambridge-public-house-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/satans-whiskers.html",
+      "oldSlug": "satans-whiskers-bar",
+      "newSlug": "satans-whiskers-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/locale-firenze.html",
+      "oldSlug": "locale-firenze-bar",
+      "newSlug": "locale-firenze-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tlecan.html",
+      "oldSlug": "tlecan-bar-bar",
+      "newSlug": "tlecan-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tan-tan.html",
+      "oldSlug": "tan-tan-bar",
+      "newSlug": "tan-tan-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/mirror-bar.html",
+      "oldSlug": "mirror-bar-bar",
+      "newSlug": "mirror-bar-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/cochinchina.html",
+      "oldSlug": "cochinchina-bar",
+      "newSlug": "cochinchina-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/baba-au-rum.html",
+      "oldSlug": "baba-au-rum-bar",
+      "newSlug": "baba-au-rum-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/nouvelle-vague.html",
+      "oldSlug": "nouvelle-vague-bar",
+      "newSlug": "nouvelle-vague-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/hope-sesame.html",
+      "oldSlug": "hope-sesame-bar",
+      "newSlug": "hope-sesame-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/danico.html",
+      "oldSlug": "danico-bar",
+      "newSlug": "danico-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/scarfes-bar.html",
+      "oldSlug": "scarfes-bar-bar",
+      "newSlug": "scarfes-bar-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/svanen.html",
+      "oldSlug": "svanen-bar",
+      "newSlug": "svanen-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/sastreria-martinez.html",
+      "oldSlug": "sastreria-martinez-bar",
+      "newSlug": "sastreria-martinez-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/panda-sons.html",
+      "oldSlug": "panda-sons-bar",
+      "newSlug": "panda-sons-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/roda-huset.html",
+      "oldSlug": "roda-huset-bar",
+      "newSlug": "roda-huset-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/mimi-kakushi.html",
+      "oldSlug": "mimi-kakushi-bar",
+      "newSlug": "mimi-kakushi-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/salmon-guru.html",
+      "oldSlug": "salmon-guru-bar",
+      "newSlug": "salmon-guru-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/coa.html",
+      "oldSlug": "coa-bar-bar",
+      "newSlug": "coa-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/sip-guzzle.html",
+      "oldSlug": "sip-guzzle-bar-bar",
+      "newSlug": "sip-guzzle-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/drink-kong.html",
+      "oldSlug": "drink-kong-bar",
+      "newSlug": "drink-kong-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/double-chicken-please.html",
+      "oldSlug": "double-chicken-please-bar-bar",
+      "newSlug": "double-chicken-please-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/maybe-sammy.html",
+      "oldSlug": "maybe-sammy-bar",
+      "newSlug": "maybe-sammy-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/1930.html",
+      "oldSlug": "1930-bar",
+      "newSlug": "1930-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/jewel-of-the-south.html",
+      "oldSlug": "jewel-of-the-south-bar-bar",
+      "newSlug": "jewel-of-the-south-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/virtu.html",
+      "oldSlug": "virtu-bar-bar",
+      "newSlug": "virtu-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/overstory.html",
+      "oldSlug": "overstory-bar-bar",
+      "newSlug": "overstory-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/the-bar-in-front-of-the-bar.html",
+      "oldSlug": "the-bar-in-front-of-the-bar-bar",
+      "newSlug": "the-bar-in-front-of-the-bar-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/the-bellwood.html",
+      "oldSlug": "the-bellwood-bar",
+      "newSlug": "the-bellwood-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bkk-social-club.html",
+      "oldSlug": "bkk-social-club-bar-bar",
+      "newSlug": "bkk-social-club-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/nutmeg-clove.html",
+      "oldSlug": "nutmeg-clove-bar-bar",
+      "newSlug": "nutmeg-clove-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/maido.html",
+      "oldSlug": "maido-restaurant-restaurant",
+      "newSlug": "maido-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/Asador-Etxebarri.html",
+      "oldSlug": "asador-etxebarri-restaurant-restaurant",
+      "newSlug": "asador-etxebarri-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/quintonil.html",
+      "oldSlug": "quintonil-restaurant-restaurant-restaurant",
+      "newSlug": "quintonil-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/diverxo.html",
+      "oldSlug": "diverxo-restaurant-restaurant",
+      "newSlug": "diverxo-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/alchemist.html",
+      "oldSlug": "alchemist-restaurant-restaurant",
+      "newSlug": "alchemist-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/gaggan.html",
+      "oldSlug": "gaggan-restaurant-restaurant-restaurant",
+      "newSlug": "gaggan-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/sezanne.html",
+      "oldSlug": "sezanne-restaurant-restaurant-restaurant",
+      "newSlug": "sezanne-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/table-by-bruno-verjus.html",
+      "oldSlug": "table-by-bruno-verjus-restaurant-restaurant",
+      "newSlug": "table-by-bruno-verjus-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/kjolle.html",
+      "oldSlug": "kjolle-restaurant-restaurant-restaurant",
+      "newSlug": "kjolle-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/don.html",
+      "oldSlug": "don-restaurant-restaurant",
+      "newSlug": "don-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/wing.html",
+      "oldSlug": "wing-restaurant-restaurant-restaurant",
+      "newSlug": "wing-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/atomix.html",
+      "oldSlug": "atomix-restaurant-restaurant-restaurant",
+      "newSlug": "atomix-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/potong.html",
+      "oldSlug": "potong-restaurant-restaurant-restaurant",
+      "newSlug": "potong-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/plenitude.html",
+      "oldSlug": "plenitude-restaurant-restaurant",
+      "newSlug": "plenitude-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/ikoyi.html",
+      "oldSlug": "ikoyi-restaurant-restaurant",
+      "newSlug": "ikoyi-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/lido-84.html",
+      "oldSlug": "lido-84-restaurant-restaurant",
+      "newSlug": "lido-84-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/sorn.html",
+      "oldSlug": "sorn-restaurant-restaurant-restaurant",
+      "newSlug": "sorn-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/reale.html",
+      "oldSlug": "reale-restaurant-restaurant",
+      "newSlug": "reale-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/the-chairman.html",
+      "oldSlug": "the-chairman-restaurant-restaurant-restaurant",
+      "newSlug": "the-chairman-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/atelier-moessmer-norbert-niederkofler.html",
+      "oldSlug": "atelier-moessmer-norbert-niederkofler-restaurant-restaurant",
+      "newSlug": "atelier-moessmer-norbert-niederkofler-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/narisawa.html",
+      "oldSlug": "narisawa-restaurant-restaurant-restaurant",
+      "newSlug": "narisawa-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/suhring.html",
+      "oldSlug": "suhring-restaurant-restaurant-restaurant",
+      "newSlug": "suhring-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/borago.html",
+      "oldSlug": "borago-restaurant-restaurant-restaurant",
+      "newSlug": "borago-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/elkano.html",
+      "oldSlug": "elkano-restaurant-restaurant",
+      "newSlug": "elkano-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/odette.html",
+      "oldSlug": "odette-restaurant-restaurant-restaurant",
+      "newSlug": "odette-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/merito.html",
+      "oldSlug": "merito-restaurant-restaurant-restaurant",
+      "newSlug": "merito-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/tresind-studio.html",
+      "oldSlug": "tresind-studio-restaurant-restaurant",
+      "newSlug": "tresind-studio-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/lasai.html",
+      "oldSlug": "lasai-restaurant-restaurant-restaurant",
+      "newSlug": "lasai-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/mingles.html",
+      "oldSlug": "mingles-restaurant-restaurant-restaurant",
+      "newSlug": "mingles-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/le-du.html",
+      "oldSlug": "le-du-restaurant-restaurant-restaurant",
+      "newSlug": "le-du-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/le-calandre.html",
+      "oldSlug": "le-calandre-restaurant-restaurant",
+      "newSlug": "le-calandre-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/piazza-duomo.html",
+      "oldSlug": "piazza-duomo-restaurant-restaurant",
+      "newSlug": "piazza-duomo-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/steirereck.html",
+      "oldSlug": "steirereck-restaurant-restaurant",
+      "newSlug": "steirereck-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/enigma.html",
+      "oldSlug": "enigma-restaurant-restaurant",
+      "newSlug": "enigma-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/nusara.html",
+      "oldSlug": "nusara-restaurant-restaurant-restaurant",
+      "newSlug": "nusara-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/florilege.html",
+      "oldSlug": "florilege-restaurant-restaurant-restaurant",
+      "newSlug": "florilege-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/orfali-bros.html",
+      "oldSlug": "orfali-bros-restaurant-restaurant",
+      "newSlug": "orfali-bros-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/frantzen.html",
+      "oldSlug": "frantzen-restaurant-restaurant",
+      "newSlug": "frantzen-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/mayta.html",
+      "oldSlug": "mayta-restaurant-restaurant-restaurant",
+      "newSlug": "mayta-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/septime.html",
+      "oldSlug": "septime-restaurant-restaurant",
+      "newSlug": "septime-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/kadeau.html",
+      "oldSlug": "kadeau-restaurant-restaurant",
+      "newSlug": "kadeau-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/belcanto.html",
+      "oldSlug": "belcanto-restaurant-restaurant",
+      "newSlug": "belcanto-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/uliassi.html",
+      "oldSlug": "uliassi-restaurant-restaurant",
+      "newSlug": "uliassi-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/la-cime.html",
+      "oldSlug": "la-cime-restaurant-restaurant-restaurant",
+      "newSlug": "la-cime-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/arpege.html",
+      "oldSlug": "arpege-restaurant-restaurant",
+      "newSlug": "arpege-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/rosetta.html",
+      "oldSlug": "rosetta-restaurant-restaurant-restaurant",
+      "newSlug": "rosetta-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/vyn.html",
+      "oldSlug": "vyn-restaurant-restaurant",
+      "newSlug": "vyn-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/celele.html",
+      "oldSlug": "celele-restaurant-restaurant-restaurant",
+      "newSlug": "celele-restaurant-3",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/kol.html",
+      "oldSlug": "kol-restaurant-restaurant",
+      "newSlug": "kol-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/restaurant-jan.html",
+      "oldSlug": "restaurant-jan-restaurant-restaurant",
+      "newSlug": "restaurant-jan-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-leone.html",
+      "oldSlug": "bar-leone-bar-bar",
+      "newSlug": "bar-leone-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/zest.html",
+      "oldSlug": "zest-bar-bar",
+      "newSlug": "zest-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/jigger-pony.html",
+      "oldSlug": "jigger-pony-bar-bar",
+      "newSlug": "jigger-pony-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-us.html",
+      "oldSlug": "bar-us-bar-bar",
+      "newSlug": "bar-us-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/dry-wave-cocktail-studio.html",
+      "oldSlug": "dry-wave-cocktail-studio-bar",
+      "newSlug": "dry-wave-cocktail-studio-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/cham-bar.html",
+      "oldSlug": "cham-bar-bar",
+      "newSlug": "cham-bar-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/hope-and-sesame.html",
+      "oldSlug": "hope-and-sesame-bar",
+      "newSlug": "hope-and-sesame-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/lair.html",
+      "oldSlug": "lair-bar",
+      "newSlug": "lair-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-benfiddich.html",
+      "oldSlug": "bar-benfiddich-bar-bar",
+      "newSlug": "bar-benfiddich-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/penrose.html",
+      "oldSlug": "penrose-bar",
+      "newSlug": "penrose-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/argo.html",
+      "oldSlug": "argo-bar",
+      "newSlug": "argo-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/modernhaus.html",
+      "oldSlug": "modernhaus-bar",
+      "newSlug": "modernhaus-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/alice.html",
+      "oldSlug": "alice-bar",
+      "newSlug": "alice-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/smoke-and-bitters.html",
+      "oldSlug": "smoke-and-bitters-bar",
+      "newSlug": "smoke-and-bitters-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/Three-X-Co.html",
+      "oldSlug": "three-x-co-bar",
+      "newSlug": "three-x-co-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/CMYK.html",
+      "oldSlug": "cmyk-bar",
+      "newSlug": "cmyk-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/coa.html",
+      "oldSlug": "coa-bar-bar",
+      "newSlug": "coa-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/virtu.html",
+      "oldSlug": "virtu-bar-bar",
+      "newSlug": "virtu-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bkk-social-club.html",
+      "oldSlug": "bkk-social-club-bar-bar",
+      "newSlug": "bkk-social-club-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/vender.html",
+      "oldSlug": "vender-bar",
+      "newSlug": "vender-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/mo-bar-shenzhen.html",
+      "oldSlug": "mo-bar-shenzhen-bar",
+      "newSlug": "mo-bar-shenzhen-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/the-st-regis-bar-jakarta.html",
+      "oldSlug": "the-st-regis-bar-jakarta-bar",
+      "newSlug": "the-st-regis-bar-jakarta-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/offtrack.html",
+      "oldSlug": "offtrack-bar",
+      "newSlug": "offtrack-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/nutmeg-clove.html",
+      "oldSlug": "nutmeg-clove-bar-bar",
+      "newSlug": "nutmeg-clove-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/yakoboku.html",
+      "oldSlug": "yakoboku-bar",
+      "newSlug": "yakoboku-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/god-bangkok.html",
+      "oldSlug": "god-bangkok-bar",
+      "newSlug": "god-bangkok-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/penicillin.html",
+      "oldSlug": "penicillin-bar",
+      "newSlug": "penicillin-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/soka.html",
+      "oldSlug": "soka-bar",
+      "newSlug": "soka-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/vesper.html",
+      "oldSlug": "vesper-bar",
+      "newSlug": "vesper-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/boilermaker.html",
+      "oldSlug": "boilermaker-bar",
+      "newSlug": "boilermaker-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/ZLB23.html",
+      "oldSlug": "zlb23-bar",
+      "newSlug": "zlb23-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/the-savory-project.html",
+      "oldSlug": "the-savory-project-bar",
+      "newSlug": "the-savory-project-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/gokan.html",
+      "oldSlug": "gokan-bar",
+      "newSlug": "gokan-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/carrots-bar.html",
+      "oldSlug": "carrots-bar-bar",
+      "newSlug": "carrots-bar-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/barc.html",
+      "oldSlug": "barc-bar",
+      "newSlug": "barc-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/punch-room-tokyo.html",
+      "oldSlug": "punch-room-tokyo-bar",
+      "newSlug": "punch-room-tokyo-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-spirit-forward.html",
+      "oldSlug": "bar-spirit-forward-bar",
+      "newSlug": "bar-spirit-forward-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/cosmo-pony.html",
+      "oldSlug": "cosmo-pony-bar",
+      "newSlug": "cosmo-pony-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-trigona.html",
+      "oldSlug": "bar-trigona-bar",
+      "newSlug": "bar-trigona-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/the-public-house.html",
+      "oldSlug": "the-public-house-bar",
+      "newSlug": "the-public-house-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/to-infinity-and-beyond.html",
+      "oldSlug": "to-infinity-and-beyond-bar",
+      "newSlug": "to-infinity-and-beyond-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/moonrock.html",
+      "oldSlug": "moonrock-bar",
+      "newSlug": "moonrock-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/opium.html",
+      "oldSlug": "opium-bar",
+      "newSlug": "opium-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/cat-bite-club.html",
+      "oldSlug": "cat-bite-club-bar",
+      "newSlug": "cat-bite-club-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/native.html",
+      "oldSlug": "native-bar",
+      "newSlug": "native-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/lamp-bar.html",
+      "oldSlug": "lamp-bar-bar",
+      "newSlug": "lamp-bar-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/reka.html",
+      "oldSlug": "reka-bar",
+      "newSlug": "reka-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-sathorn.html",
+      "oldSlug": "bar-sathorn-bar",
+      "newSlug": "bar-sathorn-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-libre.html",
+      "oldSlug": "bar-libre-bar",
+      "newSlug": "bar-libre-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/le-chamber.html",
+      "oldSlug": "le-chamber-bar",
+      "newSlug": "le-chamber-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/The-Chairman.html",
+      "oldSlug": "the-chairman-restaurant-restaurant-restaurant",
+      "newSlug": "the-chairman-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Wing.html",
+      "oldSlug": "wing-restaurant-restaurant-restaurant",
+      "newSlug": "wing-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Gaggan.html",
+      "oldSlug": "gaggan-restaurant-restaurant-restaurant",
+      "newSlug": "gaggan-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/mingles.html",
+      "oldSlug": "mingles-restaurant-restaurant-restaurant",
+      "newSlug": "mingles-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Nusara.html",
+      "oldSlug": "nusara-restaurant-restaurant-restaurant",
+      "newSlug": "nusara-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Meet-The-Bund.html",
+      "oldSlug": "meet-the-bund-restaurant-restaurant",
+      "newSlug": "meet-the-bund-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Chef-Tams-Seasons.html",
+      "oldSlug": "chef-tams-seasons-restaurant-restaurant",
+      "newSlug": "chef-tams-seasons-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/gaggan-at-louis-vuitton.html",
+      "oldSlug": "gaggan-at-louis-vuitton-restaurant-restaurant",
+      "newSlug": "gaggan-at-louis-vuitton-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/ling-long.html",
+      "oldSlug": "ling-long-restaurant-restaurant",
+      "newSlug": "ling-long-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Ru-Yuan.html",
+      "oldSlug": "ru-yuan-restaurant-restaurant",
+      "newSlug": "ru-yuan-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Fu-He-Hui.html",
+      "oldSlug": "fu-he-hui-restaurant-restaurant",
+      "newSlug": "fu-he-hui-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Sorn.html",
+      "oldSlug": "sorn-restaurant-restaurant-restaurant",
+      "newSlug": "sorn-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/La-Cime.html",
+      "oldSlug": "la-cime-restaurant-restaurant-restaurant",
+      "newSlug": "la-cime-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/onjium.html",
+      "oldSlug": "onjium-restaurant-restaurant",
+      "newSlug": "onjium-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Masque.html",
+      "oldSlug": "masque-restaurant-restaurant",
+      "newSlug": "masque-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/sezanne.html",
+      "oldSlug": "sezanne-restaurant-restaurant-restaurant",
+      "newSlug": "sezanne-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/lamdre.html",
+      "oldSlug": "lamdre-restaurant-restaurant",
+      "newSlug": "lamdre-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Suhring.html",
+      "oldSlug": "suhring-restaurant-restaurant-restaurant",
+      "newSlug": "suhring-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Odette.html",
+      "oldSlug": "odette-restaurant-restaurant-restaurant",
+      "newSlug": "odette-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/seroja.html",
+      "oldSlug": "seroja-restaurant-restaurant",
+      "newSlug": "seroja-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Sazenka.html",
+      "oldSlug": "sazenka-restaurant-restaurant",
+      "newSlug": "sazenka-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Logy.html",
+      "oldSlug": "logy-restaurant-restaurant",
+      "newSlug": "logy-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Born.html",
+      "oldSlug": "born-restaurant-restaurant",
+      "newSlug": "born-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Neighborhood.html",
+      "oldSlug": "neighborhood-restaurant-restaurant",
+      "newSlug": "neighborhood-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Potong.html",
+      "oldSlug": "potong-restaurant-restaurant-restaurant",
+      "newSlug": "potong-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/eatanic-garden.html",
+      "oldSlug": "eatanic-garden-restaurant-restaurant",
+      "newSlug": "eatanic-garden-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Ms-Maria-Mr-Singh.html",
+      "oldSlug": "ms-maria-mr-singh-restaurant-restaurant",
+      "newSlug": "ms-maria-mr-singh-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/maz.html",
+      "oldSlug": "maz-restaurant-restaurant",
+      "newSlug": "maz-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/102-house.html",
+      "oldSlug": "102-house-restaurant-restaurant",
+      "newSlug": "102-house-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Naar.html",
+      "oldSlug": "naar-restaurant-restaurant",
+      "newSlug": "naar-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/florilege.html",
+      "oldSlug": "florilege-restaurant-restaurant-restaurant",
+      "newSlug": "florilege-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/estro.html",
+      "oldSlug": "estro-restaurant-restaurant",
+      "newSlug": "estro-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/myoujyaku.html",
+      "oldSlug": "myoujyaku-restaurant-restaurant",
+      "newSlug": "myoujyaku-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/crony.html",
+      "oldSlug": "crony-restaurant-restaurant",
+      "newSlug": "crony-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Caprice.html",
+      "oldSlug": "caprice-restaurant-restaurant",
+      "newSlug": "caprice-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Le-Du.html",
+      "oldSlug": "le-du-restaurant-restaurant-restaurant",
+      "newSlug": "le-du-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Narisawa.html",
+      "oldSlug": "narisawa-restaurant-restaurant-restaurant",
+      "newSlug": "narisawa-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Les-amis.html",
+      "oldSlug": "les-amis-restaurant-restaurant",
+      "newSlug": "les-amis-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Au-Jardin.html",
+      "oldSlug": "au-jardin-restaurant-restaurant",
+      "newSlug": "au-jardin-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Labyrinth.html",
+      "oldSlug": "labyrinth-restaurant-restaurant",
+      "newSlug": "labyrinth-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Mosu.html",
+      "oldSlug": "mosu-restaurant-restaurant",
+      "newSlug": "mosu-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/August.html",
+      "oldSlug": "august-restaurant-restaurant",
+      "newSlug": "august-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Bium.html",
+      "oldSlug": "bium-restaurant-restaurant",
+      "newSlug": "bium-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Locavore-NXT.html",
+      "oldSlug": "locavore-nxt-restaurant-restaurant",
+      "newSlug": "locavore-nxt-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Naeum.html",
+      "oldSlug": "naeum-restaurant-restaurant",
+      "newSlug": "naeum-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/mono.html",
+      "oldSlug": "mono-restaurant-restaurant",
+      "newSlug": "mono-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Wana-Yook.html",
+      "oldSlug": "wana-yook-restaurant-restaurant",
+      "newSlug": "wana-yook-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/La-Bourriche-133.html",
+      "oldSlug": "la-bourriche-133-restaurant-restaurant",
+      "newSlug": "la-bourriche-133-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/7th-door.html",
+      "oldSlug": "7th-door-restaurant-restaurant",
+      "newSlug": "7th-door-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/jl-studio.html",
+      "oldSlug": "jl-studio-restaurant-restaurant",
+      "newSlug": "jl-studio-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/smyth.html",
+      "oldSlug": "smyth-restaurant-restaurant",
+      "newSlug": "smyth-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/eight.html",
+      "oldSlug": "eight-restaurant-restaurant",
+      "newSlug": "eight-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/restaurant-pearl-morissette.html",
+      "oldSlug": "restaurant-pearl-morissette-restaurant-restaurant",
+      "newSlug": "restaurant-pearl-morissette-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/dakar-nola.html",
+      "oldSlug": "dakar-nola-restaurant-restaurant",
+      "newSlug": "dakar-nola-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/mon-lapin.html",
+      "oldSlug": "mon-lapin-restaurant-restaurant",
+      "newSlug": "mon-lapin-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/albi.html",
+      "oldSlug": "albi-restaurant-restaurant",
+      "newSlug": "albi-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/atomix.html",
+      "oldSlug": "atomix-restaurant-restaurant-restaurant",
+      "newSlug": "atomix-restaurant-4",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/quetzal.html",
+      "oldSlug": "quetzal-restaurant-restaurant",
+      "newSlug": "quetzal-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/taniere3.html",
+      "oldSlug": "taniere3-restaurant-restaurant",
+      "newSlug": "taniere3-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/cesar.html",
+      "oldSlug": "cesar-restaurant-restaurant",
+      "newSlug": "cesar-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/kalaya.html",
+      "oldSlug": "kalaya-restaurant-restaurant",
+      "newSlug": "kalaya-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/le-veau-dor.html",
+      "oldSlug": "le-veau-dor-restaurant-restaurant",
+      "newSlug": "le-veau-dor-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/le-bernadin.html",
+      "oldSlug": "le-bernadin-restaurant-restaurant",
+      "newSlug": "le-bernadin-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/kabawa.html",
+      "oldSlug": "kabawa-restaurant-restaurant",
+      "newSlug": "kabawa-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/le-violon.html",
+      "oldSlug": "le-violon-restaurant-restaurant",
+      "newSlug": "le-violon-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/singlethread.html",
+      "oldSlug": "singlethread-restaurant-restaurant",
+      "newSlug": "singlethread-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/published-on-main.html",
+      "oldSlug": "published-on-main-restaurant-restaurant",
+      "newSlug": "published-on-main-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/jungsik.html",
+      "oldSlug": "jungsik-restaurant-restaurant",
+      "newSlug": "jungsik-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/penny.html",
+      "oldSlug": "penny-restaurant-restaurant",
+      "newSlug": "penny-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/emerils.html",
+      "oldSlug": "emerils-restaurant-restaurant",
+      "newSlug": "emerils-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/chubby-fish.html",
+      "oldSlug": "chubby-fish-restaurant-restaurant",
+      "newSlug": "chubby-fish-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/saison.html",
+      "oldSlug": "saison-restaurant-restaurant",
+      "newSlug": "saison-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/aska.html",
+      "oldSlug": "aska-restaurant-restaurant",
+      "newSlug": "aska-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/moon-rabbit.html",
+      "oldSlug": "moon-rabbit-restaurant-restaurant",
+      "newSlug": "moon-rabbit-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/edulis.html",
+      "oldSlug": "edulis-restaurant-restaurant",
+      "newSlug": "edulis-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/holbox.html",
+      "oldSlug": "holbox-restaurant-restaurant",
+      "newSlug": "holbox-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/beba.html",
+      "oldSlug": "beba-restaurant-restaurant",
+      "newSlug": "beba-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/mhel.html",
+      "oldSlug": "mhel-restaurant-restaurant",
+      "newSlug": "mhel-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/avize.html",
+      "oldSlug": "avize-restaurant-restaurant",
+      "newSlug": "avize-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/acamaya.html",
+      "oldSlug": "acamaya-restaurant-restaurant",
+      "newSlug": "acamaya-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Addison-by-William-Bradley.html",
+      "oldSlug": "addison-by-william-bradley-restaurant-restaurant",
+      "newSlug": "addison-by-william-bradley-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/providence.html",
+      "oldSlug": "providence-restaurant-restaurant",
+      "newSlug": "providence-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/benu.html",
+      "oldSlug": "benu-restaurant-restaurant",
+      "newSlug": "benu-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/sabayon.html",
+      "oldSlug": "sabayon-restaurant-restaurant",
+      "newSlug": "sabayon-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/annalena.html",
+      "oldSlug": "annalena-restaurant-restaurant",
+      "newSlug": "annalena-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/corima.html",
+      "oldSlug": "corima-restaurant-restaurant",
+      "newSlug": "corima-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/dogon.html",
+      "oldSlug": "dogon-restaurant-restaurant",
+      "newSlug": "dogon-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Torrisi.html",
+      "oldSlug": "torrisi-restaurant-restaurant",
+      "newSlug": "torrisi-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Tatiana-by-Kwame-Onwuachi.html",
+      "oldSlug": "tatiana-by-kwame-onwuachi-restaurant-restaurant",
+      "newSlug": "tatiana-by-kwame-onwuachi-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/friday-saturday-sunday.html",
+      "oldSlug": "friday-saturday-sunday-restaurant-restaurant",
+      "newSlug": "friday-saturday-sunday-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Semma.html",
+      "oldSlug": "semma-restaurant-restaurant",
+      "newSlug": "semma-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/pascual.html",
+      "oldSlug": "pascual-restaurant-restaurant",
+      "newSlug": "pascual-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Gramercy-Tavern.html",
+      "oldSlug": "gramercy-tavern-restaurant-restaurant",
+      "newSlug": "gramercy-tavern-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/atelier-crenn.html",
+      "oldSlug": "atelier-crenn-restaurant-restaurant",
+      "newSlug": "atelier-crenn-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Sons-Daughters.html",
+      "oldSlug": "sons-daughters-restaurant-restaurant",
+      "newSlug": "sons-daughters-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/somni.html",
+      "oldSlug": "somni-restaurant-restaurant",
+      "newSlug": "somni-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/wild-ble.html",
+      "oldSlug": "wild-ble-restaurant-restaurant",
+      "newSlug": "wild-ble-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/The-Pine.html",
+      "oldSlug": "the-pine-restaurant-restaurant",
+      "newSlug": "the-pine-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/kato.html",
+      "oldSlug": "kato-restaurant-restaurant",
+      "newSlug": "kato-restaurant-2",
+      "changed": true
+    },
+    {
+      "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Dianes-Place.html",
+      "oldSlug": "dianes-place-restaurant-restaurant",
+      "newSlug": "dianes-place-restaurant-2",
+      "changed": true
+    }
+  ]
+}

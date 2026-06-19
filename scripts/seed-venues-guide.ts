@@ -4,6 +4,7 @@ import type { Prisma } from "@prisma/client";
 import prisma from "../lib/prisma";
 import { geocodeVenue } from "../lib/geocoding/nominatim";
 import { mergeVenueGuides } from "../lib/venues/merge-guide";
+import { venueGuideEntryToNormalized } from "../lib/venues/guide-from-db";
 import { ensureUniqueVenueCode } from "../lib/venues/venue-code";
 import { normalizeVenueKey } from "../lib/venues/unique-slug";
 import type { NormalizedVenueGuide } from "../lib/venues/types";
@@ -122,6 +123,16 @@ export async function seedVenuesGuide(options: SeedVenuesOptions = {}): Promise<
     let longitude = venue.longitude ?? null;
     let geocodeConfidence: string | null = null;
 
+    const existing = await prisma.venueGuideEntry.findUnique({
+      where: { sourceUrl: venue.sourceUrl },
+    });
+
+    if (existing) {
+      if (latitude == null) latitude = existing.latitude;
+      if (longitude == null) longitude = existing.longitude;
+      geocodeConfidence = existing.geocodeConfidence;
+    }
+
     if (geocode && (latitude == null || longitude == null)) {
       const coords = await geocodeVenue({
         name: venue.name,
@@ -148,61 +159,10 @@ export async function seedVenuesGuide(options: SeedVenuesOptions = {}): Promise<
       }
     }
 
-    const existing = await prisma.venueGuideEntry.findUnique({
-      where: { sourceUrl: venue.sourceUrl },
-    });
-
     let mergedVenue = venue;
     if (existing) {
-      const existingNormalized: NormalizedVenueGuide = {
-        slug: existing.slug,
-        name: existing.name,
-        city: existing.city,
-        country: existing.country,
-        address: existing.address,
-        venueType: existing.venueType,
-        photoUrl: existing.photoUrl,
-        history: existing.history,
-        verdict: existing.verdict,
-        chefName: existing.chefName,
-        worlds50bestRank: existing.worlds50bestRank,
-        worlds50bestCategory: existing.worlds50bestCategory,
-        worlds50bestYear: existing.worlds50bestYear,
-        continent: existing.continent ?? undefined,
-        listScope: existing.listScope,
-        regionalRank: existing.regionalRank,
-        additionalRankings: Array.isArray(existing.additionalRankings)
-          ? (existing.additionalRankings as NormalizedVenueGuide["additionalRankings"])
-          : [],
-        sourceUrl: existing.sourceUrl,
-        externalWebsite: existing.externalWebsite,
-        tripadvisorUrl: existing.tripadvisorUrl,
-        tripadvisorPlaceId: existing.tripadvisorPlaceId,
-        tripadvisorRating: existing.tripadvisorRating,
-        googleBusinessId: existing.googleBusinessId,
-        venueCode: existing.venueCode,
-        enrichmentSource: existing.enrichmentSource,
-        latitude: existing.latitude,
-        longitude: existing.longitude,
-      };
+      const existingNormalized = venueGuideEntryToNormalized(existing);
       mergedVenue = mergeVenueGuides(existingNormalized, venue);
-      if (latitude == null && existing.latitude != null) latitude = existing.latitude;
-      if (longitude == null && existing.longitude != null) longitude = existing.longitude;
-      if (!mergedVenue.tripadvisorUrl && existing.tripadvisorUrl) {
-        mergedVenue.tripadvisorUrl = existing.tripadvisorUrl;
-      }
-      if (mergedVenue.tripadvisorRating == null && existing.tripadvisorRating != null) {
-        mergedVenue.tripadvisorRating = existing.tripadvisorRating;
-      }
-      if (!mergedVenue.venueCode && existing.venueCode) {
-        mergedVenue.venueCode = existing.venueCode;
-      }
-      if (!mergedVenue.googleBusinessId && existing.googleBusinessId) {
-        mergedVenue.googleBusinessId = existing.googleBusinessId;
-      }
-      if (!mergedVenue.tripadvisorPlaceId && existing.tripadvisorPlaceId) {
-        mergedVenue.tripadvisorPlaceId = existing.tripadvisorPlaceId;
-      }
     }
 
     if (!mergedVenue.venueCode) {

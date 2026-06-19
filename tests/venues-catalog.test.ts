@@ -198,4 +198,26 @@ describe("merge rankings", () => {
     expect(merged.regionalRank).toBe(2);
     expect(merged.additionalRankings?.length).toBeGreaterThanOrEqual(2);
   });
+
+  it("preserves taxonomy when incoming JSON has empty arrays", () => {
+    const enriched: NormalizedVenueGuide = {
+      ...baseGuide,
+      venuePreferences: ["vegan", "wheelchair"],
+      cuisineTypes: ["japonesa"],
+      enrichmentSource: "tripadvisor",
+    };
+    const fromScrape: NormalizedVenueGuide = {
+      ...baseGuide,
+      history: "Nueva historia del scrape",
+      venuePreferences: [],
+      cuisineTypes: [],
+      enrichmentSource: "worlds50best",
+    };
+
+    const merged = mergeVenueGuides(enriched, fromScrape);
+    expect(merged.venuePreferences).toEqual(["vegan", "wheelchair"]);
+    expect(merged.cuisineTypes).toEqual(["japonesa"]);
+    expect(merged.history).toBe("Nueva historia del scrape");
+    expect(merged.enrichmentSource).toBe("tripadvisor");
+  });
 });
