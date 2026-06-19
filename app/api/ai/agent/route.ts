@@ -2,8 +2,10 @@ import { NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { getAiStatus, isTextAiAvailable } from "@/lib/ai/availability";
-import { createRecipeFromPrompt } from "@/lib/recipes/agent";
+import { createRecipeFromPrompt, saveGeneratedRecipe, type GeneratedRecipe } from "@/lib/recipes/agent";
 import { checkRateLimit, getAiAgentRateLimits, getClientIp } from "@/lib/rate-limit";
+import { buildRequestContext, mergeRequestContext, runWithRequestContext } from "@/lib/observability/request-context";
+import { withSentrySpan } from "@/lib/observability/sentry-span";
 import { logServerError } from "@/lib/security/safe-error";
 
 export async function GET() {
@@ -18,8 +20,12 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  return runWithRequestContext(buildRequestContext(request), async () => {
   try {
     const session = await getServerSession(authOptions);
+    if (session?.user?.id) {
+      mergeRequestContext({ userId: session.user.id });
+    }
     const rateKey = `ai-agent:${session?.user?.id ?? getClientIp(request)}`;
     const rate = checkRateLimit(rateKey, getAiAgentRateLimits(Boolean(session?.user?.id)));
 
@@ -47,6 +53,29 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json();
+    const mode = body.mode === "save" || body.recipe ? "save" : "preview";
+
+    // Modo guardar: persiste una receta ya previsualizada (sin regenerarla).
+    if (mode === "save") {
+      const recipe = body.recipe as GeneratedRecipe | undefined;
+      if (!recipe || !recipe.title || !Array.isArray(recipe.ingredients) || recipe.ingredients.length < 3) {
+        return NextResponse.json(
+          { message: "Falta la receta a guardar o está incompleta. Genera una previsualización primero." },
+          { status: 400 },
+        );
+      }
+
+      const saved = await withSentrySpan(
+        "ai-agent.save_recipe",
+        "ai",
+        () => saveGeneratedRecipe(recipe, { userId: session?.user?.id ?? null }),
+        { userId: session?.user?.id ?? "anonymous" },
+      );
+
+      return NextResponse.json(saved);
+    }
+
+    // Modo previsualizar (por defecto): estudia la petición y genera sin guardar.
     const promptText = String(body.prompt ?? body.text ?? body.comment ?? "").trim();
 
     if (!promptText) {
@@ -56,12 +85,18 @@ export async function POST(request: Request) {
       );
     }
 
-    const result = await createRecipeFromPrompt(promptText, { userId: session?.user?.id ?? null });
+    const result = await withSentrySpan(
+      "ai-agent.create_recipe",
+      "ai",
+      () => createRecipeFromPrompt(promptText),
+      { userId: session?.user?.id ?? "anonymous" },
+    );
 
-    return NextResponse.json(result);
+    return NextResponse.json({ ...result, saved: false, viewUrl: null });
   } catch (error: unknown) {
-    logServerError("ai-agent", error);
+    logServerError("ai-agent", error, { path: new URL(request.url).pathname });
     const message = error instanceof Error ? error.message : "Error al generar la receta.";
     return NextResponse.json({ message }, { status: 500 });
   }
+  });
 }

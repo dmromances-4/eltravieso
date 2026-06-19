@@ -1,4 +1,4 @@
-export type NavLinkItem = { name: string; href: string };
+export type NavLinkItem = { name: string; href: string; description?: string };
 
 export const NAV_GROUPS = {
   discover: {
@@ -14,16 +14,16 @@ export const NAV_GROUPS = {
   pro: {
     label: "Pro",
     links: [
-      { name: "Barra IA", href: "/pro/tech-generator" },
-      { name: "Mapa", href: "/mapa" },
-      { name: "Pantalla", href: "/pantalla" },
+      { name: "Barra IA", href: "/pro/tech-generator", description: "Genera recetas con IA" },
+      { name: "Mapa", href: "/mapa", description: "Locales y coctelería" },
+      { name: "Pantalla", href: "/pantalla", description: "Series, podcasts y directo" },
     ],
   },
   community: {
     label: "Comunidad",
     links: [
-      { name: "Bar Online", href: "/bar-online" },
-      { name: "Comunidad", href: "/comunidad" },
+      { name: "Bar Online", href: "/bar-online", description: "Salas en directo" },
+      { name: "Comunidad", href: "/comunidad", description: "Foro y conversación" },
     ],
   },
-} as const;
+} satisfies Record<string, { label: string; links: NavLinkItem[] }>;

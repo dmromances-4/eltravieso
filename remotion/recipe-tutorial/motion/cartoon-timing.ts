@@ -7,7 +7,7 @@ export type CartoonMotionInput = {
   squash?: number;
 };
 
-export const SNAPPY_SPRING: SpringConfig = { damping: 12, stiffness: 200 };
+export const SNAPPY_SPRING: Partial<SpringConfig> = { damping: 12, stiffness: 200 };
 
 export function snappyEntrance(frame: number, fps: number): number {
   return spring({ frame, fps, config: SNAPPY_SPRING });

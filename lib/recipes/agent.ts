@@ -8,6 +8,11 @@ import {
 import { parseIngredientList, parseJsonObject, type IngredientItem } from "@/lib/recipes/parse";
 import { generateAndUploadRecipeCover } from "@/lib/recipes/generate-recipe-image";
 import { buildAgentStyleAppendix } from "@/lib/recipes/style-guide";
+import { analyzeRequest, type RequestIntent } from "@/lib/recipes/intent";
+import { scaleRecipe } from "@/lib/recipes/scaling";
+import { buildCocktailNarrativeProfile } from "@/lib/story-universe/cocktail/build-profile";
+import { persistCocktailProfiles } from "@/lib/story-universe/cocktail/persist-profiles";
+import type { CocktailRecord } from "@/types/cocktail";
 import { slugify } from "@/lib/utils/slug";
 
 function parseNumber(value: unknown) {
@@ -48,34 +53,110 @@ async function resolveAuthorId(preferredUserId?: string | null) {
   return created.id;
 }
 
-function buildPrompt(promptText: string, catalogContext: string) {
-  return `Eres un mixólogo experto en vermutería premium. El cliente te envía un briefing en español (puede ser una idea, comentarios, restricciones o una adaptación de otra receta).
+// ─────────────────────────────────────────────────────────────────────────────
+// Construcción del prompt según la intención estudiada
+// ─────────────────────────────────────────────────────────────────────────────
+
+function sweetnessGuidance(intent: RequestIntent): string {
+  switch (intent.sweetness) {
+    case "dulce":
+      return "Perfil DULCE: usa licores/alcoholes dulces (vermut rojo, ron, licores de frutas, crema), zumos naturales y siropes (azúcar, granadina, agave). Equilibra para que sea goloso pero no empalague.";
+    case "seco":
+      return "Perfil SECO: minimiza azúcares y siropes; prioriza destilados secos, vermut seco y cítrico justo. Nada empalagoso.";
+    case "amargo":
+      return "Perfil AMARGO: incorpora bitters, Campari/aperitivos amargos o vermut, con un toque de dulzor solo para equilibrar.";
+    case "acido":
+      return "Perfil ÁCIDO/CÍTRICO: cítricos frescos (lima, limón, pomelo) y un punto de sirope para equilibrar la acidez; refrescante.";
+    default:
+      return "Perfil EQUILIBRADO: equilibrio clásico entre alcohol, dulzor y acidez.";
+  }
+}
+
+function effectGuidance(intent: RequestIntent): string {
+  switch (intent.effect) {
+    case "fuerte":
+      return "EFECTO POTENTE (el cliente quiere que 'pegue'): aumenta la proporción de destilados, reduce mezclas/zumos diluyentes, ABV objetivo ~25-30%. Incluye un aviso de consumo responsable en las notas de cata.";
+    case "ligero":
+      return "EFECTO LIGERO / ANTI-RESACA: baja graduación (ABV objetivo ~6-10%), prioriza destilados limpios (sin congéneres altos), añade soda/agua/tónica e ingredientes hidratantes (agua de coco, cítricos), evita mezclas muy azucaradas. Recomienda beber agua. Esto reduce la probabilidad de resaca, no la elimina.";
+    case "sin_alcohol":
+      return "SIN ALCOHOL (mocktail): cero destilados. Construye sabor con zumos, infusiones, soda, siropes y bitters sin alcohol o vermut 0,0. ABV = 0.";
+    default:
+      return "Graduación estándar de coctelería (ABV ~12-20%).";
+  }
+}
+
+function difficultyGuidance(intent: RequestIntent): string {
+  switch (intent.difficulty) {
+    case "facil":
+      return "DIFICULTAD FÁCIL: pocos ingredientes (3-5), sin técnicas complejas (nada de clarificados ni infusiones largas); construcción directa en vaso o jarra. Pensado para preparar rápido.";
+    case "avanzada":
+      return "DIFICULTAD AVANZADA: técnica de autor (batido/doble colado, infusiones, espumas, garnish elaborado) bien explicada paso a paso.";
+    default:
+      return "DIFICULTAD MEDIA: equilibrio entre vistosidad y facilidad.";
+  }
+}
+
+function themeGuidance(intent: RequestIntent): string {
+  if (!intent.theme) return "";
+  return `TEMÁTICA / INSPIRACIÓN: el cóctel debe evocar "${intent.theme}". El nombre y el concepto (summary) deben transmitir ese universo mediante colores, ingredientes y narrativa SIN usar marcas registradas ni nombres protegidos de forma literal. Inspírate en su atmósfera (paleta de color, símbolos, sensaciones), no copies logotipos ni personajes con nombre propio registrado.`;
+}
+
+function batchGuidance(intent: RequestIntent): string {
+  if (intent.kind !== "batch") return "";
+  const isSangria = /sangr|ponche|punch|clerico|tinto de verano/i.test(
+    `${intent.theme ?? ""} ${intent.rationale}`,
+  );
+  const target = intent.volumeLiters
+    ? `${intent.volumeLiters} litros totales`
+    : intent.servings
+      ? `${intent.servings} personas`
+      : "un grupo";
+  return `PREPARACIÓN PARA COMPARTIR (${isSangria ? "tipo sangría/ponche" : "batch/jarra"}), objetivo: ${target}. IMPORTANTE: da la receta para UNA sola ración (una copa/vaso). El sistema escalará las cantidades automáticamente; tú solo defines la fórmula base por ración con cantidades exactas. Diseña algo que aguante bien preparado en volumen y servido con hielo.`;
+}
+
+function buildPrompt(promptText: string, catalogContext: string, intent: RequestIntent) {
+  const guidanceBlocks = [
+    sweetnessGuidance(intent),
+    effectGuidance(intent),
+    difficultyGuidance(intent),
+    themeGuidance(intent),
+    batchGuidance(intent),
+  ]
+    .filter(Boolean)
+    .map((line) => `- ${line}`)
+    .join("\n");
+
+  return `Eres un mixólogo experto en vermutería premium El Travieso. Has ESTUDIADO la petición del cliente y la has interpretado así: ${intent.rationale}.
 
 ${catalogContext}
 
-Briefing del cliente:
+Briefing original del cliente:
 """
 ${promptText}
 """
 
-Responde ÚNICAMENTE con un JSON válido (sin markdown ni texto extra) con esta estructura exacta:
+Directrices derivadas de tu análisis (cúmplelas todas):
+${guidanceBlocks}
+
+Responde ÚNICAMENTE con un JSON válido (sin markdown ni texto extra) con esta estructura exacta. Da las cantidades SIEMPRE para UNA ración:
 ${buildAgentStyleAppendix()}
 
 {
   "title": "nombre del cóctel",
-  "summary": "2-3 frases de concepto",
+  "summary": "2-3 frases de concepto (refleja la temática si la hay)",
   "glass": "tipo de vaso específico (ej: copa balón, vaso old fashioned, copa martini)",
-  "ingredients": [{"name": "ingrediente", "amount": "cantidad exacta con unidad (ej: 60 ml, 2 dashes, 15 g)"}],
+  "ingredients": [{"name": "ingrediente", "amount": "cantidad exacta por ración con unidad (ej: 60 ml, 2 dashes, 15 g)"}],
   "method": "1. Primer paso\\n2. Segundo paso\\n3. Tercer paso",
-  "abv": número o null,
-  "cost": número en EUR o null,
+  "abv": número (% por copa, coherente con el efecto pedido) o null,
+  "cost": número en EUR por ración o null,
+  "prepTimeMins": número de minutos de preparación por ración o null,
   "slug": "slug-corto-en-minusculas",
   "tasting": "notas organolépticas breves"
 }
 
 Reglas estrictas:
 - NO inventes marcas ni productos inexistentes; usa ingredientes reales de coctelería.
-- ingredients debe tener al menos 3 elementos con cantidades exactas y unidades (ml, cl, dashes, gotas, unidades).
+- ingredients debe tener al menos 3 elementos con cantidades exactas y unidades (ml, cl, dashes, gotas, unidades) POR RACIÓN.
 - glass debe ser un tipo de vaso concreto, nunca genérico como "copa" sin especificar.
 - method debe ser pasos numerados, uno por línea.
 - Prioriza vermut rojo El Travieso / Strucchi cuando encaje.
@@ -124,7 +205,19 @@ function validateRecipeOutput(
   }
 }
 
-export type AgentRecipeResult = {
+function difficultyToInt(intent: RequestIntent): number {
+  switch (intent.difficulty) {
+    case "facil":
+      return 1;
+    case "avanzada":
+      return 5;
+    default:
+      return 3;
+  }
+}
+
+/** Receta generada por el agente, lista para previsualizar o guardar. */
+export interface GeneratedRecipe {
   title: string;
   summary: string;
   glass: string;
@@ -132,100 +225,174 @@ export type AgentRecipeResult = {
   method: string;
   abv: number | null;
   cost: number | null;
+  prepTimeMins: number | null;
+  servings: number;
+  difficulty: number;
+  tags: string[];
   slug: string;
   tasting: string;
+  /** Notas de preparación por lote (solo en batch). */
+  batchNotes: string[];
+  /** Cómo se interpretó la petición. */
+  intent: RequestIntent;
+  matches: Array<{ title: string; slug: string; ingredients: string[] }>;
+}
+
+export type AgentRecipeResult = GeneratedRecipe & {
   saved: boolean;
   savedAsUser: boolean;
-  viewUrl: string;
-  matches: Array<{ title: string; slug: string; ingredients: string[] }>;
+  viewUrl: string | null;
   message: string;
 };
 
+/**
+ * Estudia la petición y genera la receta (con escalado si procede) SIN guardarla.
+ * Pensado para previsualizar; la persistencia se hace luego con saveGeneratedRecipe.
+ */
 export async function createRecipeFromPrompt(
   promptText: string,
+): Promise<GeneratedRecipe> {
+  const [catalog, intent] = await Promise.all([
+    getCatalogRecipes(),
+    analyzeRequest(promptText),
+  ]);
+
+  const matches = searchCatalog(catalog, promptText, 6);
+  const catalogContext = buildSearchContext(matches);
+
+  const maxTokens = intent.difficulty === "avanzada" ? 1100 : 900;
+  const parsed = await requestRecipeJson(buildPrompt(promptText, catalogContext, intent), maxTokens);
+
+  const title = String(parsed.title ?? parsed.name ?? `Cóctel ${promptText.split(/\s+/).slice(0, 3).join(" ")}`).trim();
+  const summary = String(parsed.summary ?? parsed.description ?? "Receta creada por el agente de barra.").trim();
+  const glass = String(parsed.glass ?? parsed.glassType ?? parsed.serveIn ?? "Copa balón").trim();
+  const method = String(parsed.method ?? parsed.instructions ?? "Mezclar, enfriar y servir.").trim();
+  const baseIngredients = await ensureIngredients(parsed, promptText);
+  const abv = intent.effect === "sin_alcohol" ? 0 : (parseNumber(parsed.abv) ?? intent.targetAbv);
+  const cost = parseNumber(parsed.cost);
+  const prepTimeMins = parseNumber(parsed.prepTimeMins);
+  const tasting = String(parsed.tasting ?? parsed.organolepticDesc ?? summary).trim();
+  const requestedSlug = String(parsed.slug || slugify(title) || `coctel-${Date.now()}`).trim();
+
+  validateRecipeOutput(title, method, glass, baseIngredients);
+
+  // Escalado determinista para batch / volumen / nº de personas.
+  const isSangria = /sangr|ponche|punch|clerico|tinto de verano/i.test(
+    `${title} ${summary} ${intent.theme ?? ""}`,
+  );
+  const scaled = scaleRecipe(baseIngredients, {
+    servings: intent.servings,
+    volumeLiters: intent.volumeLiters,
+    isSangria,
+  });
+
+  const finalMethod =
+    scaled.batchNotes.length > 0
+      ? `${method}\n\nPreparación por lote:\n${scaled.batchNotes.map((n, i) => `${i + 1}. ${n}`).join("\n")}`
+      : method;
+
+  return {
+    title,
+    summary,
+    glass,
+    ingredients: scaled.ingredients,
+    method: finalMethod,
+    abv: abv != null ? Math.round(abv) : null,
+    cost: cost != null && scaled.factor !== 1 ? Math.round(cost * scaled.factor * 100) / 100 : cost,
+    prepTimeMins: prepTimeMins != null ? Math.round(prepTimeMins) : null,
+    servings: scaled.servings,
+    difficulty: difficultyToInt(intent),
+    tags: intent.tags,
+    slug: slugify(requestedSlug) || slugify(title),
+    tasting,
+    batchNotes: scaled.batchNotes,
+    intent,
+    matches: matches.map((recipe) => ({
+      title: recipe.title,
+      slug: recipe.slug,
+      ingredients: recipe.ingredients.slice(0, 4),
+    })),
+  };
+}
+
+/**
+ * Persiste una receta ya generada (modo "Guardar" tras previsualizar).
+ * Genera portada y, si es temática, el perfil narrativo del story-universe.
+ */
+export async function saveGeneratedRecipe(
+  recipe: GeneratedRecipe,
   options: { userId?: string | null } = {},
 ): Promise<AgentRecipeResult> {
-  try {
-    const catalog = await getCatalogRecipes();
-    const matches = searchCatalog(catalog, promptText, 6);
-    const catalogContext = buildSearchContext(matches);
+  const slug = await ensureUniqueSlug(recipe.slug || `coctel-${Date.now()}`);
+  const authorId = await resolveAuthorId(options.userId);
+  const savedAsUser = Boolean(options.userId);
 
-    const parsed = await requestRecipeJson(buildPrompt(promptText, catalogContext), 900);
-
-    const title = String(parsed.title ?? parsed.name ?? `Cóctel ${promptText.split(/\s+/).slice(0, 3).join(" ")}`).trim();
-    const summary = String(parsed.summary ?? parsed.description ?? "Receta creada por el agente de barra.").trim();
-    const glass = String(parsed.glass ?? parsed.glassType ?? parsed.serveIn ?? "Copa balón").trim();
-    const method = String(parsed.method ?? parsed.instructions ?? "Mezclar, enfriar y servir.").trim();
-    const ingredients = await ensureIngredients(parsed, promptText);
-    const abv = parseNumber(parsed.abv);
-    const cost = parseNumber(parsed.cost);
-    const tasting = String(parsed.tasting ?? parsed.organolepticDesc ?? summary).trim();
-    const requestedSlug = String(parsed.slug || slugify(title) || `coctel-${Date.now()}`).trim();
-    const slug = await ensureUniqueSlug(slugify(requestedSlug) || slugify(title));
-
-    validateRecipeOutput(title, method, glass, ingredients);
-
-    const authorId = await resolveAuthorId(options.userId);
-    const savedAsUser = Boolean(options.userId);
-
-    const created = await prisma.recipe.create({
-      data: {
-        title,
-        slug,
-        summary,
-        glass,
-        ingredients: JSON.stringify(ingredients),
-        method,
-        authorId,
-        technical: {
-          create: {
-            costCents: cost != null ? Math.round(cost * 100) : null,
-            abv: abv ?? undefined,
-            tasting,
-          },
+  const created = await prisma.recipe.create({
+    data: {
+      title: recipe.title,
+      slug,
+      summary: recipe.summary,
+      glass: recipe.glass,
+      ingredients: JSON.stringify(recipe.ingredients),
+      method: recipe.method,
+      authorId,
+      difficulty: recipe.difficulty,
+      prepTimeMins: recipe.prepTimeMins ?? undefined,
+      servings: recipe.servings,
+      tags: recipe.tags,
+      technical: {
+        create: {
+          costCents: recipe.cost != null ? Math.round(recipe.cost * 100) : null,
+          abv: recipe.abv ?? undefined,
+          tasting: recipe.tasting,
         },
       },
+    },
+  });
+
+  // Portada (no bloqueante).
+  try {
+    const imageUrl = await generateAndUploadRecipeCover(slug, {
+      title: recipe.title,
+      glass: recipe.glass,
+      ingredients: recipe.ingredients.map((i) => `${i.amount} ${i.name}`.trim()),
+      method: recipe.method,
     });
-
-    try {
-      const imageUrl = await generateAndUploadRecipeCover(slug, {
-        title,
-        glass,
-        ingredients: ingredients.map((i) => `${i.amount} ${i.name}`.trim()),
-        method,
-      });
-      await prisma.recipe.update({
-        where: { id: created.id },
-        data: { imageUrl },
-      });
-    } catch (imageError) {
-      console.warn("[agent] Cover image generation failed:", imageError);
-    }
-
-    return {
-      title,
-      summary,
-      glass,
-      ingredients,
-      method,
-      abv,
-      cost,
-      slug,
-      tasting,
-      saved: true,
-      savedAsUser,
-      viewUrl: `/recetas/${slug}`,
-      matches: matches.map((recipe) => ({
-        title: recipe.title,
-        slug: recipe.slug,
-        ingredients: recipe.ingredients.slice(0, 4),
-      })),
-      message: savedAsUser
-        ? "Receta creada y guardada en tu cuenta y publicada en el recetario."
-        : "Receta creada y publicada en el recetario.",
-    };
-  } catch (error) {
-    if (error instanceof Error) throw error;
-    throw new Error("Error inesperado al generar la receta.");
+    await prisma.recipe.update({ where: { id: created.id }, data: { imageUrl } });
+  } catch (imageError) {
+    console.warn("[agent] Cover image generation failed:", imageError);
   }
+
+  // Integración story-universe: las recetas temáticas entran en el universo narrativo.
+  if (recipe.intent.theme) {
+    try {
+      const record: CocktailRecord = {
+        id: created.id,
+        title: recipe.title,
+        slug,
+        rating: 8,
+        glass: recipe.glass,
+        ingredients: recipe.ingredients.map((i) => `${i.amount} ${i.name}`.trim()),
+        method: recipe.method,
+        abv: recipe.abv != null ? `${recipe.abv}%` : "—",
+        kcal: 120,
+        cover: "/cocktail-placeholder.svg",
+      };
+      const profile = buildCocktailNarrativeProfile(record);
+      await persistCocktailProfiles([profile]);
+    } catch (profileError) {
+      console.warn("[agent] Narrative profile generation failed:", profileError);
+    }
+  }
+
+  return {
+    ...recipe,
+    slug,
+    saved: true,
+    savedAsUser,
+    viewUrl: `/recetas/${slug}`,
+    message: savedAsUser
+      ? "Receta guardada en tu cuenta y publicada en el recetario."
+      : "Receta publicada en el recetario.",
+  };
 }

@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server'
 import { getAuthSession } from '@/lib/auth/session'
 import { createSubscriptionCheckout } from '@/lib/stripe/api'
 import { getOrCreateStripeCustomer } from '@/lib/stripe/customer'
-import { clientSafeErrorMessage } from '@/lib/security/safe-error'
+import { clientSafeErrorMessage, logServerError } from '@/lib/security/safe-error'
 import prisma from '@/lib/prisma'
 import type { MapPlanTier } from '@prisma/client'
 
@@ -64,7 +64,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ url: checkout.url })
   } catch (error) {
-    console.error('[BILLING_MAP_PLAN]', error)
+    logServerError('billing-map-plan', error)
     return NextResponse.json(
       { error: clientSafeErrorMessage(error, 'No se pudo iniciar el plan del mapa') },
       { status: 500 },

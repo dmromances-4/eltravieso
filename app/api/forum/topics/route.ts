@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import prisma from "@/lib/prisma";
 import { requireCurrentUser } from "@/lib/auth/session";
 import { ensureUniqueForumSlug } from "@/lib/forum/slug";
@@ -17,7 +18,7 @@ export async function GET() {
 
     return NextResponse.json({ topics });
   } catch (error) {
-    console.error("[FORUM_TOPICS_GET]", error);
+    logServerError('forum-topics', error);
     return NextResponse.json({ message: "Error al cargar temas." }, { status: 500 });
   }
 }

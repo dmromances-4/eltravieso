@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
@@ -33,7 +34,7 @@ export async function GET() {
     });
     return NextResponse.json({ listings });
   } catch (error: any) {
-    console.error("[LISTINGS_GET_ERROR]:", error);
+    logServerError('marketplace-listings', error);
     return NextResponse.json({ message: error.message || "Error al obtener tus artículos." }, { status: 500 });
   }
 }
@@ -85,7 +86,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ message: "Artículo enviado a revisión.", listing }, { status: 201 });
   } catch (error: any) {
-    console.error("[LISTINGS_POST_ERROR]:", error);
+    logServerError('marketplace-listings', error);
     return NextResponse.json({ message: error.message || "Error al crear el artículo." }, { status: 500 });
   }
 }

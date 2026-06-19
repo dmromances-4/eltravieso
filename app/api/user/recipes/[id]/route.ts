@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
@@ -45,7 +46,7 @@ export async function PATCH(
 
     return NextResponse.json({ recipe: updated });
   } catch (error: any) {
-    console.error("[RECIPE_VIDEO_PATCH_ERROR]:", error);
+    logServerError('user-recipe', error);
     return NextResponse.json(
       { message: error.message || "Error al actualizar el vídeo." },
       { status: 500 }

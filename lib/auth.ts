@@ -4,6 +4,7 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import prisma from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { verifyTwoFactorToken } from "@/lib/auth/two-factor";
+import { auditEvent, hashAuditIdentifier } from "@/lib/observability/audit";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(prisma),
@@ -25,12 +26,20 @@ export const authOptions: NextAuthOptions = {
         });
 
         if (!user) {
+          void auditEvent({
+            action: "auth.login.failure",
+            metadata: { reason: "invalid_credentials", emailHash: hashAuditIdentifier(credentials.email) },
+          });
           throw new Error("Email o contraseña incorrectos.");
         }
 
         const isPasswordValid = await bcrypt.compare(credentials.password, user.password);
 
         if (!isPasswordValid) {
+          void auditEvent({
+            action: "auth.login.failure",
+            metadata: { reason: "invalid_credentials", emailHash: hashAuditIdentifier(credentials.email) },
+          });
           throw new Error("Email o contraseña incorrectos.");
         }
 
@@ -46,6 +55,11 @@ export const authOptions: NextAuthOptions = {
 
           const isValidToken = await verifyTwoFactorToken(user.twoFactorSecret, credentials.token2fa);
           if (!isValidToken) {
+            void auditEvent({
+              action: "auth.2fa.failure",
+              actorId: user.id,
+              metadata: { emailHash: hashAuditIdentifier(credentials.email) },
+            });
             throw new Error("Código 2FA incorrecto.");
           }
           twoFactorVerified = true;
@@ -134,6 +148,18 @@ export const authOptions: NextAuthOptions = {
   },
   pages: {
     signIn: "/login",
+  },
+  events: {
+    async signIn({ user }) {
+      if (!user?.id) return;
+      await auditEvent({
+        action: "auth.login.success",
+        actorId: user.id,
+        actorEmail: user.email ?? null,
+        resourceType: "User",
+        resourceId: user.id,
+      });
+    },
   },
   secret: process.env.NEXTAUTH_SECRET,
 };

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { AdminApiError, adminApiErrorResponse, requireAdminUser } from "@/lib/auth/admin-api";
-import { clientSafeErrorMessage } from "@/lib/security/safe-error";
+import {clientSafeErrorMessage, logServerError } from "@/lib/security/safe-error";
 
 function typeForCategory(category: string): "CONSUMABLE" | "MERCH" | "CONSERVA" {
   if (category === "CONSERVA_LATERIO") return "CONSERVA";
@@ -90,7 +90,7 @@ export async function PATCH(request: Request, { params }: { params: { id: string
 
     return NextResponse.json({ message: "Acción no válida (approve | reject)." }, { status: 400 });
   } catch (error: unknown) {
-    console.error("[LISTING_REVIEW_ERROR]:", error);
+    logServerError('marketplace-listing', error);
     return NextResponse.json(
       { message: clientSafeErrorMessage(error, "Error al revisar el artículo.") },
       { status: 500 },

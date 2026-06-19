@@ -3,6 +3,12 @@ type RateLimitEntry = {
   resetAt: number;
 };
 
+import { getClientIp as getRequestClientIp } from "@/lib/observability/request-context";
+import { auditEvent } from "@/lib/observability/audit";
+
+export function getClientIp(request: Request): string {
+  return getRequestClientIp(request) ?? "unknown";
+}
 const memoryStore = new Map<string, RateLimitEntry>();
 
 export type RateLimitOptions = {
@@ -115,16 +121,16 @@ export function rateLimitResponse(retryAfterSec: number, message = "Demasiadas s
   };
 }
 
-export function getClientIp(request: Request): string {
-  const forwarded = request.headers.get("x-forwarded-for");
-  if (forwarded) return forwarded.split(",")[0]?.trim() || "unknown";
-  return request.headers.get("x-real-ip") ?? "unknown";
-}
-
 export async function enforceRateLimit(request: Request, scope: string, options: RateLimitOptions) {
   const ip = getClientIp(request);
   const result = await checkRateLimitAsync(`${scope}:${ip}`, options);
   if (!result.allowed) {
+    void auditEvent({
+      action: "rate_limit.exceeded",
+      ip,
+      request,
+      metadata: { scope, retryAfterSec: result.retryAfterSec },
+    });
     return rateLimitResponse(result.retryAfterSec);
   }
   return null;
@@ -133,11 +139,15 @@ export async function enforceRateLimit(request: Request, scope: string, options:
 export async function enforceUserRateLimit(userId: string, scope: string, options: RateLimitOptions) {
   const result = await checkRateLimitAsync(`${scope}:user:${userId}`, options);
   if (!result.allowed) {
+    void auditEvent({
+      action: "rate_limit.exceeded",
+      actorId: userId,
+      metadata: { scope, retryAfterSec: result.retryAfterSec },
+    });
     return rateLimitResponse(result.retryAfterSec);
   }
   return null;
 }
-
 export const RATE_LIMITS = {
   register: { max: 5, windowMs: 60 * 60 * 1000 },
   checkout: { max: 10, windowMs: 60 * 1000 },

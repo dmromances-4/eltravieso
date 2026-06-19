@@ -3,6 +3,8 @@ import prisma from "@/lib/prisma";
 import bcrypt from "bcryptjs";
 import { normalizeEmail, validateEmail, validateName, validatePassword } from "@/lib/validations/user";
 import { enforceRateLimit, RATE_LIMITS } from "@/lib/rate-limit";
+import { logServerError } from "@/lib/security/safe-error";
+import { auditEvent } from "@/lib/observability/audit";
 
 export async function POST(req: Request) {
   const limited = await enforceRateLimit(req, "register", RATE_LIMITS.register);
@@ -63,12 +65,21 @@ export async function POST(req: Request) {
       select: { id: true, email: true, name: true },
     });
 
+    void auditEvent({
+      action: "auth.register",
+      actorId: user.id,
+      actorEmail: user.email,
+      resourceType: "User",
+      resourceId: user.id,
+      request: req,
+    });
+
     return NextResponse.json(
       { message: "Cuenta creada correctamente.", user },
       { status: 201 },
     );
   } catch (error) {
-    console.error("Error en registro:", error);
+    logServerError('auth-register', error);
     return NextResponse.json({ message: "Error interno del servidor." }, { status: 500 });
   }
 }

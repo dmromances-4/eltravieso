@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import type { VenueContinent } from "@prisma/client";
 import { listEditorialMapVenues } from "@/lib/venues/catalog";
 
@@ -25,7 +26,7 @@ export async function GET(request: NextRequest) {
     const venues = await listEditorialMapVenues(continent);
     return NextResponse.json({ venues });
   } catch (error) {
-    console.error("[VENUES_GUIDE_GET_ERROR]:", error);
+    logServerError('venues-guide', error);
     return NextResponse.json({ message: "Error al cargar destacados." }, { status: 500 });
   }
 }

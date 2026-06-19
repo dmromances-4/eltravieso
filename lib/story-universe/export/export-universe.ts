@@ -20,13 +20,13 @@ export async function exportStoryUniverseJson(): Promise<string> {
     knowledgeVersion: process.env.STORY_KNOWLEDGE_VERSION ?? "1",
     cocktails: profiles,
     stories,
-    scripts: scripts.map((s) => ({ storyId: s.story.storyId, ...s, story: undefined })),
-    storyboards: storyboards.map((b) => ({ storyId: b.story.storyId, scenes: b.scenes, story: undefined })),
-    prompts: prompts.map((p) => ({
-      storyId: p.story.storyId,
-      sceneNumber: p.sceneNumber,
-      prompts: p.prompts,
-      story: undefined,
+    scripts: scripts.map(({ story, ...s }) => ({ ...s, storyId: story.storyId })),
+    storyboards: storyboards.map(({ story, scenes, ...b }) => ({ ...b, storyId: story.storyId, scenes })),
+    prompts: prompts.map(({ story, sceneNumber, prompts: scenePrompts, ...p }) => ({
+      ...p,
+      storyId: story.storyId,
+      sceneNumber,
+      prompts: scenePrompts,
     })),
   };
 

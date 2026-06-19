@@ -10,7 +10,7 @@ type SurfaceCardProps = {
 
 export function SurfaceCard({ href, className, children }: SurfaceCardProps) {
   const classes = cn(
-    "rounded-card border border-white/10 bg-[var(--surface-panel)]/90 p-8 transition-all hover:border-electric-yellow/25 hover:bg-charcoal/95",
+    "rounded-card border border-white/10 bg-[var(--surface-panel)]/90 p-8 transition-all hover:border-electric-yellow/25 hover:bg-charcoal/95 min-h-[8rem]",
     className,
   );
 
@@ -18,6 +18,12 @@ export function SurfaceCard({ href, className, children }: SurfaceCardProps) {
     return (
       <Link href={href} className={cn("group block", classes)}>
         {children}
+        <span
+          aria-hidden
+          className="mt-4 inline-block text-sm text-slate-500 transition-all group-hover:translate-x-0.5 group-hover:text-electric-yellow"
+        >
+          →
+        </span>
       </Link>
     );
   }

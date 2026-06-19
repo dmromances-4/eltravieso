@@ -1,5 +1,6 @@
 import * as Sentry from "@sentry/node";
 import { getBaseNodeOptions } from "./options";
+import { beforeSendEvent } from "../observability/sentry-redact";
 
 let initialized = false;
 
@@ -12,6 +13,7 @@ export function initRealtimeSentry() {
       initialScope: {
         tags: { service: "bar-online-realtime" },
       },
+      beforeSend: beforeSendEvent,
     }),
   );
 

@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 import { useCart } from '@/lib/cart/CartContext'
 import { NavGroup } from '@/components/ui/NavGroup'
-import { NAV_GROUPS } from '@/lib/navigation/groups'
+import { NAV_GROUPS, type NavLinkItem } from '@/lib/navigation/groups'
 import { cn } from '@/lib/utils'
 
 export default function Header() {
@@ -30,6 +30,15 @@ export default function Header() {
     setIsMobileMenuOpen(false)
   }, [pathname])
 
+  useEffect(() => {
+    if (!isMobileMenuOpen) return
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.body.style.overflow = prev
+    }
+  }, [isMobileMenuOpen])
+
   return (
     <>
       <motion.header
@@ -46,17 +55,21 @@ export default function Header() {
             <span className="transition-colors group-hover:text-electric-yellow">El Travieso</span>
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex">
+          <nav className="hidden items-center gap-8 md:flex">
             <NavGroup label={NAV_GROUPS.discover.label} links={[...NAV_GROUPS.discover.links]} />
             <NavGroup label={NAV_GROUPS.pro.label} links={[...NAV_GROUPS.pro.links]} />
             <NavGroup label={NAV_GROUPS.community.label} links={[...NAV_GROUPS.community.links]} />
           </nav>
 
           <div className="z-50 flex items-center gap-3">
-            <Link href="/cart" className="relative p-2 text-white transition-colors hover:text-electric-yellow" aria-label={`Carrito${cartCount > 0 ? ` (${cartCount})` : ''}`}>
+            <Link
+              href="/cart"
+              className="relative flex min-h-11 min-w-11 items-center justify-center text-white transition-colors hover:text-electric-yellow"
+              aria-label={`Carrito${cartCount > 0 ? ` (${cartCount})` : ''}`}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
               {cartCount > 0 ? (
-                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-[1rem] items-center justify-center rounded-pill bg-electric-yellow px-1 text-[10px] font-bold text-black">
+                <span className="absolute right-0.5 top-0.5 flex h-4 min-w-[1rem] items-center justify-center rounded-pill bg-electric-yellow px-1 text-[10px] font-bold text-black">
                   {cartCount > 99 ? '99+' : cartCount}
                 </span>
               ) : null}
@@ -83,7 +96,13 @@ export default function Header() {
               </Link>
             )}
 
-            <button type="button" className="p-2 text-white lg:hidden" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} aria-label="Menú">
+            <button
+              type="button"
+              className="flex min-h-11 min-w-11 items-center justify-center text-white md:hidden"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Menú"
+              aria-expanded={isMobileMenuOpen}
+            >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 {isMobileMenuOpen ? (
                   <>
@@ -105,39 +124,54 @@ export default function Header() {
 
       <AnimatePresence>
         {isMobileMenuOpen ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-40 bg-[#0a0a0a]/98 pt-24 backdrop-blur-xl lg:hidden"
-          >
-            <nav className="section-shell space-y-8 pb-12">
-              {Object.values(NAV_GROUPS).map((group) => (
-                <div key={group.label}>
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500">{group.label}</p>
-                  <div className="space-y-1">
-                    {group.links.map((link) => (
-                      <Link
-                        key={link.href}
-                        href={link.href}
-                        className={cn(
-                          'block rounded-card px-4 py-3 text-base font-medium transition-colors',
-                          pathname === link.href ? 'bg-electric-yellow/10 text-electric-yellow' : 'text-slate-200 hover:bg-white/5',
-                        )}
-                      >
-                        {link.name}
-                      </Link>
-                    ))}
+          <>
+            <motion.button
+              type="button"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              aria-label="Cerrar menú"
+              className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
+              onClick={() => setIsMobileMenuOpen(false)}
+            />
+            <motion.div
+              initial={{ opacity: 0, x: '100%' }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: '100%' }}
+              transition={{ type: 'spring', damping: 28, stiffness: 280 }}
+              className="fixed inset-y-0 right-0 z-40 w-full max-w-sm overflow-y-auto border-l border-white/10 bg-[#0a0a0a]/98 pt-24 backdrop-blur-xl md:hidden"
+            >
+              <nav className="section-shell space-y-8 pb-12">
+                {Object.values(NAV_GROUPS).map((group) => (
+                  <div key={group.label}>
+                    <p className="mb-3 text-xs font-semibold uppercase tracking-wide text-slate-500">{group.label}</p>
+                    <div className="space-y-1">
+                      {(group.links as NavLinkItem[]).map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          className={cn(
+                            'block min-h-[44px] rounded-card px-4 py-3 transition-colors',
+                            pathname === link.href ? 'bg-electric-yellow/10 text-electric-yellow' : 'text-slate-200 hover:bg-white/5',
+                          )}
+                        >
+                          <span className="block text-base font-medium">{link.name}</span>
+                          {link.description ? (
+                            <span className="mt-0.5 block text-xs text-slate-500">{link.description}</span>
+                          ) : null}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
+                ))}
+                <div className="border-t border-white/10 pt-6">
+                  <Link href={isAuthenticated ? '/cuenta' : '/login'} className="text-sm font-medium text-electric-blue">
+                    {isAuthenticated ? 'Mi cuenta' : 'Entrar o registrarse'}
+                  </Link>
                 </div>
-              ))}
-              <div className="border-t border-white/10 pt-6">
-                <Link href={isAuthenticated ? '/cuenta' : '/login'} className="text-sm font-medium text-electric-blue">
-                  {isAuthenticated ? 'Mi cuenta' : 'Entrar o registrarse'}
-                </Link>
-              </div>
-            </nav>
-          </motion.div>
+              </nav>
+            </motion.div>
+          </>
         ) : null}
       </AnimatePresence>
     </>

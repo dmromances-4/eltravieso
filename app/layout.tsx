@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Montserrat, Playfair_Display } from 'next/font/google'
 import type { ReactNode } from 'react'
+import { headers } from 'next/headers'
 import './globals.css'
 import ScrollProvider from '@/components/ScrollProvider'
 import Providers from '@/components/Providers'
@@ -32,8 +33,13 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const requestId = headers().get('x-request-id')
+
   return (
     <html lang="es" className={cn(montserrat.variable, playfair.variable, montserrat.className, "dark font-sans")}>
+      <head>
+        {requestId ? <meta name="x-request-id" content={requestId} /> : null}
+      </head>
       <body className="min-h-screen bg-night text-white antialiased">
         <Providers>
           <AgeGateModal />

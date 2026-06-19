@@ -190,7 +190,7 @@ function buildTarget(
 
     glass: string | null;
 
-    ingredients: unknown;
+    ingredients: string;
 
     method: string | null;
 

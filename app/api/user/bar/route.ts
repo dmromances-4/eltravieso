@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import { getServerSession } from "next-auth/next";
 import type { ReservationProvider } from "@prisma/client";
 import { authOptions } from "@/lib/auth";
@@ -47,7 +48,7 @@ export async function GET() {
       profile: profile ? sanitizeBarProfileForClient(profile) : null,
     });
   } catch (error: unknown) {
-    console.error("[BAR_PROFILE_GET_ERROR]:", error);
+    logServerError('user-bar', error);
     const message = error instanceof Error ? error.message : "Error al obtener el perfil de bar.";
     return NextResponse.json({ message }, { status: 500 });
   }
@@ -229,7 +230,7 @@ export async function PATCH(request: Request) {
       profile: sanitizeBarProfileForClient(profile),
     });
   } catch (error: unknown) {
-    console.error("[BAR_PROFILE_PATCH_ERROR]:", error);
+    logServerError('user-bar', error);
     const message = error instanceof Error ? error.message : "Error al actualizar el perfil de bar.";
     return NextResponse.json({ message }, { status: 500 });
   }

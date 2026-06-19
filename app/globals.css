@@ -166,6 +166,10 @@
   .neon-focus {
     @apply transition-all focus:border-electric-yellow focus:outline-none focus:ring-1 focus:ring-electric-yellow;
   }
+
+  .pb-cookie-safe {
+    padding-bottom: 8rem;
+  }
 }
 
 @layer components {

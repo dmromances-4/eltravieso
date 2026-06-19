@@ -1,6 +1,7 @@
 import type { AiTextProvider } from "@/lib/ai/availability";
 import { resolveTextProvider } from "@/lib/ai/availability";
 import { readEnvKey } from "@/lib/recipes/cover-env";
+import { withSentrySpan } from "@/lib/observability/sentry-span";
 
 type GoogleGenAI = any;
 
@@ -294,6 +295,10 @@ const TEXT_GENERATORS: Record<TextProvider, TextGeneratorFn> = {
 const TEXT_FALLBACK_ORDER: TextProvider[] = ["gemini", "groq", "openai", "huggingface"];
 
 export async function generateText(prompt: string, opts: { maxTokens?: number } = {}): Promise<TextResponse> {
+  return withSentrySpan(
+    "ai.generate_text",
+    "ai",
+    async () => {
   // Development mock mode: return a predictable response when AI_MOCK=true
   if (process.env.AI_MOCK === "true") {
     return { text: `RESPUESTA_MOCK: Generación simulada para: ${prompt.slice(0, 120)}` };
@@ -332,6 +337,17 @@ export async function generateText(prompt: string, opts: { maxTokens?: number } 
   throw new Error(
     "All AI text providers failed. Configure at least one API key: GEMINI_API_KEY (free), GROQ_API_KEY (free), OPENAI_API_KEY, or HUGGINGFACE_API_KEY."
   );
+    },
+    { provider: detectTextProviderSafe() },
+  );
+}
+
+function detectTextProviderSafe(): string {
+  try {
+    return detectTextProvider();
+  } catch {
+    return "none";
+  }
 }
 
 // ─── Image Generation Dispatch (with fallback chain) ──────────────────

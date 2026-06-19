@@ -1,9 +1,11 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import bcrypt from "bcryptjs";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 import { validatePassword } from "@/lib/validations/user";
+import { auditEvent } from "@/lib/observability/audit";
 
 export async function POST(request: Request) {
   const session = await getServerSession(authOptions);
@@ -46,9 +48,17 @@ export async function POST(request: Request) {
       data: { password: hashedPassword },
     });
 
+    void auditEvent({
+      action: "auth.password.change",
+      actorId: user.id,
+      resourceType: "User",
+      resourceId: user.id,
+      request,
+    });
+
     return NextResponse.json({ message: "Contraseña actualizada correctamente." });
   } catch (error) {
-    console.error("Error updating password:", error);
+    logServerError('user-password', error);
     return NextResponse.json({ message: "Error al cambiar la contraseña." }, { status: 500 });
   }
 }

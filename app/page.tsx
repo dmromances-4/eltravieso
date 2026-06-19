@@ -39,42 +39,54 @@ export default function Home() {
           </BrandLinkButton>
         </div>
 
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          <SurfaceCard href="/recetas">
-            <h3 className="text-lg font-semibold text-white">Recetas</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-400">Catálogo editorial con fichas completas.</p>
-          </SurfaceCard>
-          <SurfaceCard href="/alcoholes">
-            <h3 className="text-lg font-semibold text-white">Alcoholes</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-400">Origen, notas y contexto de cada destilado.</p>
-          </SurfaceCard>
-          <SurfaceCard href="/biblioteca">
-            <h3 className="text-lg font-semibold text-white">Biblioteca</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-400">Libros de referencia para la barra y la coctelería.</p>
-          </SurfaceCard>
-          <SurfaceCard href="/shop">
-            <h3 className="text-lg font-semibold text-white">Tienda</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-400">Vermut, packs y regalos con actitud.</p>
-          </SurfaceCard>
-          <SurfaceCard href="/blog">
-            <h3 className="text-lg font-semibold text-white">Blog</h3>
-            <p className="mt-2 text-sm leading-7 text-slate-400">Tendencias y notas para profesionales.</p>
-          </SurfaceCard>
-        </div>
+        <div className="space-y-10">
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">Explorar</h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <SurfaceCard href="/recetas">
+                <h3 className="text-lg font-semibold text-white">Recetas</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-400">Catálogo editorial con fichas completas.</p>
+              </SurfaceCard>
+              <SurfaceCard href="/alcoholes">
+                <h3 className="text-lg font-semibold text-white">Alcoholes</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-400">Origen, notas y contexto de cada destilado.</p>
+              </SurfaceCard>
+              <SurfaceCard href="/biblioteca">
+                <h3 className="text-lg font-semibold text-white">Biblioteca</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-400">Libros de referencia para la barra y la coctelería.</p>
+              </SurfaceCard>
+              <SurfaceCard href="/shop">
+                <h3 className="text-lg font-semibold text-white">Tienda</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-400">Vermut, packs y regalos con actitud.</p>
+              </SurfaceCard>
+              <SurfaceCard href="/blog">
+                <h3 className="text-lg font-semibold text-white">Blog</h3>
+                <p className="mt-2 text-sm leading-7 text-slate-400">Tendencias y notas para profesionales.</p>
+              </SurfaceCard>
+            </div>
+          </div>
 
-        <div className="mt-4 grid gap-4 sm:grid-cols-3">
-          <SurfaceCard href="/pro/tech-generator" className="sm:col-span-1 hover:border-electric-red/30">
-            <h3 className="text-lg font-semibold text-white">Barra IA</h3>
-            <p className="mt-2 text-sm text-slate-400">Genera recetas y fichas técnicas.</p>
-          </SurfaceCard>
-          <SurfaceCard href="/mapa" className="sm:col-span-1">
-            <h3 className="text-lg font-semibold text-white">Mapa</h3>
-            <p className="mt-2 text-sm text-slate-400">Locales y coctelería de referencia.</p>
-          </SurfaceCard>
-          <SurfaceCard href="/pantalla" className="sm:col-span-1">
-            <h3 className="text-lg font-semibold text-white">Pantalla</h3>
-            <p className="mt-2 text-sm text-slate-400">Series, podcasts y directo.</p>
-          </SurfaceCard>
+          <div>
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wide text-slate-500">Herramientas pro</h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              <SurfaceCard href="/pro/tech-generator" className="hover:border-electric-yellow/40">
+                <h3 className="text-lg font-semibold text-white">Barra IA</h3>
+                <p className="mt-2 text-sm text-slate-400">Genera recetas y fichas técnicas con IA.</p>
+              </SurfaceCard>
+              <SurfaceCard href="/bar-online" className="hover:border-electric-red/30">
+                <h3 className="text-lg font-semibold text-white">Bar Online</h3>
+                <p className="mt-2 text-sm text-slate-400">Salas en directo con chat y videollamada.</p>
+              </SurfaceCard>
+              <SurfaceCard href="/mapa">
+                <h3 className="text-lg font-semibold text-white">Mapa</h3>
+                <p className="mt-2 text-sm text-slate-400">Locales y coctelería de referencia.</p>
+              </SurfaceCard>
+              <SurfaceCard href="/pantalla">
+                <h3 className="text-lg font-semibold text-white">Pantalla</h3>
+                <p className="mt-2 text-sm text-slate-400">Series, podcasts y directo.</p>
+              </SurfaceCard>
+            </div>
+          </div>
         </div>
       </Section>
 

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
@@ -47,7 +48,7 @@ export async function GET(request: Request) {
 
     return NextResponse.redirect(new URL("/cuenta/integraciones?shopify=connected", request.url));
   } catch (error) {
-    console.error("[SHOPIFY_OAUTH_CALLBACK]", error);
+    logServerError('shopify-oauth', error);
     return NextResponse.redirect(
       new URL("/cuenta/integraciones?shopify=error&reason=oauth_failed", request.url),
     );

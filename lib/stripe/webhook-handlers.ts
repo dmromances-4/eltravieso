@@ -4,6 +4,8 @@ import { getStripe } from '@/lib/stripe/api'
 import { applyMapPlanFields, mapPlanFromPriceId } from '@/lib/billing/map-plan'
 import { confirmOrderFromStripeSession } from '@/lib/checkout/create-order'
 import { fulfillVipDrop } from '@/lib/membership/fulfill-drop'
+import { withSentrySpan } from '@/lib/observability/sentry-span'
+import { auditEvent } from '@/lib/observability/audit'
 import type { MapPlanTier, MembershipStatus } from '@prisma/client'
 
 function subscriptionPeriodEnd(subscription: Stripe.Subscription): Date | null {
@@ -124,9 +126,20 @@ async function handleCheckoutSessionCompleted(session: Stripe.Checkout.Session) 
     stripeSessionId,
     stripePaymentId: paymentIntentId,
   })
+
+  void auditEvent({
+    action: 'checkout.completed',
+    resourceType: 'Order',
+    resourceId: orderId ?? stripeSessionId,
+    metadata: { stripeSessionId, paymentIntentId },
+  })
 }
 
 export async function processStripeWebhookEvent(event: Stripe.Event) {
+  return withSentrySpan(
+    `stripe.webhook.${event.type}`,
+    'stripe.webhook',
+    async () => {
   switch (event.type) {
     case 'checkout.session.completed':
       await handleCheckoutSessionCompleted(event.data.object as Stripe.Checkout.Session)
@@ -144,6 +157,9 @@ export async function processStripeWebhookEvent(event: Stripe.Event) {
     default:
       break
   }
+    },
+    { eventType: event.type, eventId: event.id },
+  )
 }
 
 export async function buildHoldedOrderFromSession(session: Stripe.Checkout.Session) {

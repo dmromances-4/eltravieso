@@ -2,9 +2,14 @@ import { NextResponse } from "next/server";
 import { handleTpvStockWebhook } from "@/lib/wholesale/reposition";
 import prisma from "@/lib/prisma";
 import { verifyTpvSignature } from "@/lib/tpv/verify-signature";
+import { auditEvent } from "@/lib/observability/audit";
+import { buildRequestContext, runWithRequestContext } from "@/lib/observability/request-context";
+import { buildWebhookDedupeId } from "@/lib/observability/webhook-dedupe";
+import { isWebhookProcessed, markWebhookProcessed } from "@/lib/observability/webhook-idempotency";
 import { logServerError } from "@/lib/security/safe-error";
 
 export async function POST(req: Request) {
+  return runWithRequestContext(buildRequestContext(req), async () => {
   try {
     const signature = req.headers.get("x-tpv-signature");
     const provider = req.headers.get("x-tpv-provider")?.toLowerCase();
@@ -59,6 +64,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Invalid TPV signature" }, { status: 401 });
     }
 
+    const eventId = buildWebhookDedupeId("tpv", rawBody, `${provider}:${barProfile.id}`);
+    if (await isWebhookProcessed(eventId)) {
+      return NextResponse.json({ success: true, duplicate: true });
+    }
+
     let sku = "";
     let unitsSold = 0;
 
@@ -104,6 +114,16 @@ export async function POST(req: Request) {
       provider,
     );
 
+    void auditEvent({
+      action: "webhook.tpv.received",
+      request: req,
+      resourceType: "BarProfile",
+      resourceId: barProfile.id,
+      metadata: { provider, sku, unitsSold },
+    });
+
+    await markWebhookProcessed(eventId, "tpv");
+
     return NextResponse.json({
       success: true,
       provider,
@@ -119,8 +139,9 @@ export async function POST(req: Request) {
       },
     });
   } catch (error) {
-    logServerError("tpv-webhook", error);
+    logServerError("tpv-webhook", error, { path: new URL(req.url).pathname });
     const message = error instanceof Error ? error.message : "Internal Server Error";
     return NextResponse.json({ error: message }, { status: 500 });
   }
+  });
 }

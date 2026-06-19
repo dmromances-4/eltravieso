@@ -16,6 +16,19 @@ type SearchMatch = {
   href: string;
 };
 
+type RequestIntent = {
+  kind: "single" | "batch";
+  servings: number | null;
+  volumeLiters: number | null;
+  sweetness: string;
+  effect: string;
+  difficulty: string;
+  theme: string | null;
+  targetAbv: number | null;
+  tags: string[];
+  rationale: string;
+};
+
 type AgentResult = {
   title?: string;
   summary?: string;
@@ -24,18 +37,28 @@ type AgentResult = {
   method?: string;
   abv?: number | null;
   cost?: number | null;
+  prepTimeMins?: number | null;
+  servings?: number;
+  difficulty?: number;
+  tags?: string[];
+  batchNotes?: string[];
+  intent?: RequestIntent;
   slug?: string;
   tasting?: string;
-  viewUrl?: string;
+  viewUrl?: string | null;
+  saved?: boolean;
   message?: string;
   matches?: SearchMatch[];
 };
+
+const DIFFICULTY_LABELS: Record<number, string> = { 1: "Fácil", 2: "Fácil", 3: "Media", 4: "Avanzada", 5: "Avanzada" };
 
 function TechGeneratorContent() {
   const searchParams = useSearchParams();
   const [promptText, setPromptText] = useState("");
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<AgentResult | null>(null);
+  const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
   const [aiStatus, setAiStatus] = useState<AiStatusResponse | null>(null);
   const [statusLoading, setStatusLoading] = useState(true);
@@ -124,14 +147,36 @@ function TechGeneratorContent() {
     }
   };
 
+  const handleSave = async () => {
+    if (!result || result.saved) return;
+    setSaving(true);
+    setError("");
+    try {
+      const res = await fetch("/api/ai/agent", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ mode: "save", recipe: result }),
+      });
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.message || "Error al guardar la receta");
+      }
+      setResult({ ...result, ...data, saved: true });
+    } catch (err: unknown) {
+      setError(err instanceof Error ? err.message : "Error al guardar");
+    } finally {
+      setSaving(false);
+    }
+  };
+
   const agentReady = !statusLoading && aiStatus?.available;
   const hasIngredients = Array.isArray(result?.ingredients) && result.ingredients.length > 0;
 
   return (
-    <div className="min-h-screen bg-zinc-950 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-zinc-950 pt-32 pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-white sm:text-5xl">Barra Inteligente</h1>
+          <h1 className="text-4xl font-extrabold text-white sm:text-5xl">Barra IA</h1>
           <p className="mt-4 text-xl text-zinc-400">
             Busca en el recetario, escribe tu briefing y crea recetas nuevas con IA.
           </p>
@@ -213,13 +258,13 @@ function TechGeneratorContent() {
                   {loading ? (
                     <>
                       <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
-                      Creando receta…
+                      Estudiando la petición…
                     </>
                   ) : (
-                    "Crear receta"
+                    "Estudiar petición y crear"
                   )}
                 </button>
-                <p className="text-sm text-zinc-500">Se publica en /recetas con ingredientes, método y tipo de vaso.</p>
+                <p className="text-sm text-zinc-500">Previsualiza la receta; se publica en /recetas solo cuando pulses Guardar.</p>
               </div>
             </form>
           </div>
@@ -234,9 +279,53 @@ function TechGeneratorContent() {
         {result ? (
           <div className="bg-zinc-900 shadow overflow-hidden sm:rounded-2xl border border-zinc-800">
             <div className="px-5 py-5 sm:px-6 border-b border-zinc-800">
-              <h3 className="text-2xl font-bold text-white">{result.title}</h3>
-              {result.slug ? <p className="mt-1 text-sm text-zinc-400">Slug: {result.slug}</p> : null}
-              {result.message ? <p className="mt-2 text-sm text-emerald-300">{result.message}</p> : null}
+              <div className="flex flex-wrap items-start justify-between gap-3">
+                <div>
+                  <p className="text-xs uppercase tracking-[0.2em] text-zinc-500">
+                    {result.saved ? "Receta publicada" : "Previsualización · aún no guardada"}
+                  </p>
+                  <h3 className="mt-1 text-2xl font-bold text-white">{result.title}</h3>
+                </div>
+                {!result.saved ? (
+                  <button
+                    type="button"
+                    onClick={handleSave}
+                    disabled={saving}
+                    className="inline-flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-colors hover:brightness-110 disabled:opacity-50"
+                  >
+                    {saving ? (
+                      <>
+                        <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                        Guardando…
+                      </>
+                    ) : (
+                      "Guardar y publicar"
+                    )}
+                  </button>
+                ) : null}
+              </div>
+
+              {result.intent?.rationale ? (
+                <p className="mt-3 rounded-xl border border-zinc-800 bg-zinc-950/70 px-4 py-3 text-sm text-zinc-300">
+                  <span className="font-semibold text-zinc-400">Cómo he interpretado tu petición: </span>
+                  {result.intent.rationale}
+                </p>
+              ) : null}
+
+              {Array.isArray(result.tags) && result.tags.length > 0 ? (
+                <div className="mt-3 flex flex-wrap gap-2">
+                  {result.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="rounded-full border border-zinc-700 bg-zinc-900 px-3 py-1 text-xs text-zinc-300"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+              ) : null}
+
+              {result.message ? <p className="mt-3 text-sm text-emerald-300">{result.message}</p> : null}
               {result.viewUrl ? (
                 <Link href={result.viewUrl} className="mt-3 inline-flex text-sm font-semibold text-red-400 hover:text-red-300">
                   Ver en el recetario →
@@ -296,22 +385,38 @@ function TechGeneratorContent() {
                   </div>
                 ) : null}
 
-                {result.cost || result.abv ? (
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    {result.cost ? (
-                      <div className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
-                        <dt className="text-sm font-semibold text-zinc-400">Coste estimado</dt>
-                        <dd className="mt-2 text-lg font-semibold text-emerald-300">{result.cost} €</dd>
-                      </div>
-                    ) : null}
-                    {result.abv ? (
-                      <div className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
-                        <dt className="text-sm font-semibold text-zinc-400">ABV</dt>
-                        <dd className="mt-2 text-lg font-semibold text-red-400">{result.abv}%</dd>
-                      </div>
-                    ) : null}
-                  </div>
-                ) : null}
+                <div className="grid gap-4 sm:grid-cols-3">
+                  {result.servings ? (
+                    <div className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
+                      <dt className="text-sm font-semibold text-zinc-400">Raciones</dt>
+                      <dd className="mt-2 text-lg font-semibold text-white">{result.servings}</dd>
+                    </div>
+                  ) : null}
+                  {result.difficulty ? (
+                    <div className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
+                      <dt className="text-sm font-semibold text-zinc-400">Dificultad</dt>
+                      <dd className="mt-2 text-lg font-semibold text-white">{DIFFICULTY_LABELS[result.difficulty] ?? result.difficulty}</dd>
+                    </div>
+                  ) : null}
+                  {result.prepTimeMins ? (
+                    <div className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
+                      <dt className="text-sm font-semibold text-zinc-400">Preparación</dt>
+                      <dd className="mt-2 text-lg font-semibold text-white">{result.prepTimeMins} min</dd>
+                    </div>
+                  ) : null}
+                  {result.cost ? (
+                    <div className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
+                      <dt className="text-sm font-semibold text-zinc-400">Coste estimado</dt>
+                      <dd className="mt-2 text-lg font-semibold text-emerald-300">{result.cost} €</dd>
+                    </div>
+                  ) : null}
+                  {result.abv != null ? (
+                    <div className="rounded-3xl border border-zinc-800 bg-zinc-900/80 p-5">
+                      <dt className="text-sm font-semibold text-zinc-400">ABV</dt>
+                      <dd className="mt-2 text-lg font-semibold text-red-400">{result.abv}%</dd>
+                    </div>
+                  ) : null}
+                </div>
               </dl>
             </div>
           </div>
@@ -325,7 +430,7 @@ export default function TechGeneratorPage() {
   return (
     <Suspense
       fallback={
-        <div className="min-h-screen bg-zinc-950 py-24 text-center text-zinc-400">Cargando Barra Inteligente…</div>
+        <div className="min-h-screen bg-zinc-950 pt-32 pb-12 text-center text-zinc-400">Cargando Barra IA…</div>
       }
     >
       <TechGeneratorContent />

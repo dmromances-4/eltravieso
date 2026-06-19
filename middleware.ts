@@ -5,9 +5,35 @@ import { isAdmin2faRequired } from "@/lib/auth/admin-2fa-policy";
 
 const ADMIN_PREFIX = "/admin";
 
+function ensureRequestId(request: NextRequest): string {
+  return request.headers.get("x-request-id") ?? crypto.randomUUID();
+}
+
+function withRequestIdHeaders(request: NextRequest, requestId: string): Headers {
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-request-id", requestId);
+  return requestHeaders;
+}
+
+function attachRequestId(response: NextResponse, requestId: string): NextResponse {
+  response.headers.set("x-request-id", requestId);
+  return response;
+}
+
 export async function middleware(request: NextRequest) {
+  const requestId = ensureRequestId(request);
+  const requestHeaders = withRequestIdHeaders(request, requestId);
+
+  const nextWithRequestId = () =>
+    attachRequestId(
+      NextResponse.next({
+        request: { headers: requestHeaders },
+      }),
+      requestId,
+    );
+
   if (!request.nextUrl.pathname.startsWith(ADMIN_PREFIX)) {
-    return NextResponse.next();
+    return nextWithRequestId();
   }
 
   const token = await getToken({
@@ -19,7 +45,7 @@ export async function middleware(request: NextRequest) {
     const login = new URL("/login", request.url);
     login.searchParams.set("callbackUrl", request.nextUrl.pathname);
     login.searchParams.set("admin", "1");
-    return NextResponse.redirect(login);
+    return attachRequestId(NextResponse.redirect(login), requestId);
   }
 
   if (isAdmin2faRequired()) {
@@ -27,7 +53,7 @@ export async function middleware(request: NextRequest) {
       const setup = new URL("/setup-2fa", request.url);
       setup.searchParams.set("require", "admin");
       setup.searchParams.set("callbackUrl", request.nextUrl.pathname);
-      return NextResponse.redirect(setup);
+      return attachRequestId(NextResponse.redirect(setup), requestId);
     }
 
     if (!token.twoFactorVerified) {
@@ -35,13 +61,15 @@ export async function middleware(request: NextRequest) {
       login.searchParams.set("callbackUrl", request.nextUrl.pathname);
       login.searchParams.set("admin", "1");
       login.searchParams.set("error", "2fa");
-      return NextResponse.redirect(login);
+      return attachRequestId(NextResponse.redirect(login), requestId);
     }
   }
 
-  return NextResponse.next();
+  return nextWithRequestId();
 }
 
 export const config = {
-  matcher: ["/admin/:path*"],
+  matcher: [
+    "/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico)$).*)",
+  ],
 };

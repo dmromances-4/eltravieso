@@ -28,7 +28,7 @@ export default function DevEnvironmentBanner() {
   return (
     <div
       role="status"
-      className="fixed bottom-0 inset-x-0 z-[100] border-t border-white/10 bg-[#151515]/95 px-4 py-3 text-sm backdrop-blur-md"
+      className="fixed bottom-0 inset-x-0 z-40 border-t border-white/10 bg-[#151515]/95 px-4 py-3 text-sm backdrop-blur-md"
     >
       <div className="section-shell flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
