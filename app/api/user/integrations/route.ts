@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
@@ -229,7 +230,7 @@ export async function PATCH(request: Request) {
       tpvWebhookUrl: profile.tpvWebhookUrl,
     });
   } catch (error) {
-    console.error("[INTEGRATIONS_PATCH_ERROR]:", error);
+    logServerError('user-integrations', error);
     return NextResponse.json({ message: "Error al guardar la integración." }, { status: 500 });
   }
 }

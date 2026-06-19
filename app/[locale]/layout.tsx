@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import type { ReactNode } from "react";
+import { headers } from "next/headers";
 import ScrollProvider from "@/components/ScrollProvider";
 import Providers from "@/components/Providers";
 import AgeGateModal from "@/components/AgeGateModal";
@@ -69,6 +70,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const requestId = headers().get("x-request-id");
 
   return (
     <html
@@ -80,6 +82,9 @@ export default async function LocaleLayout({ children, params }: Props) {
         "dark font-sans",
       )}
     >
+      <head>
+        {requestId ? <meta name="x-request-id" content={requestId} /> : null}
+      </head>
       <body className="min-h-screen bg-night pb-[env(safe-area-inset-bottom)] text-white antialiased pt-[env(safe-area-inset-top)]">
         <NextIntlClientProvider messages={messages}>
           <Providers>

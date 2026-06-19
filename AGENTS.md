@@ -320,6 +320,18 @@ npm run lint          # ESLint activo en build
 npm run build
 ```
 
+**Dependencias nativas (Rollup/Vitest):** instala siempre en la misma plataforma donde ejecutas tests. Si `node_modules` viene de macOS y corres tests en Linux (sandbox Cursor, CI), Vitest fallará por binarios nativos ausentes.
+
+```bash
+# macOS (desarrollo local)
+npm ci && npm run test
+
+# Linux (sandbox, agentes remotos, CI)
+npm run test:ci
+```
+
+CI en GitHub Actions: [`.github/workflows/ci.yml`](.github/workflows/ci.yml) (`ubuntu-latest`, `npm ci`, lint + test).
+
 E2E opcional: `SMOKE_BASE_URL=http://localhost:3000 npm run test`
 
 ## Producción

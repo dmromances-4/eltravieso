@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import prisma from "@/lib/prisma";
 
 type RouteContext = { params: { slug: string } };
@@ -29,7 +30,7 @@ export async function GET(_request: Request, { params }: RouteContext) {
 
     return NextResponse.json({ topic });
   } catch (error) {
-    console.error("[FORUM_TOPIC_GET]", error);
+    logServerError('forum-topic', error);
     return NextResponse.json({ message: "Error al cargar el tema." }, { status: 500 });
   }
 }

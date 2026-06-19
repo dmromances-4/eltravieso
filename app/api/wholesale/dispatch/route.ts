@@ -4,7 +4,7 @@ import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 import { dispatchWholesaleOrder } from "@/lib/wholesale/fifo-dispatch";
 import { assertWholesaleDispatchAccess, AuthorizationError } from "@/lib/security/authorization";
-import { clientSafeErrorMessage } from "@/lib/security/safe-error";
+import {clientSafeErrorMessage, logServerError } from "@/lib/security/safe-error";
 
 export async function POST(request: Request) {
   const session = await getServerSession(authOptions);
@@ -46,7 +46,7 @@ export async function POST(request: Request) {
     if (error instanceof AuthorizationError) {
       return NextResponse.json({ message: error.message }, { status: error.status });
     }
-    console.error("[WHOLESALE_DISPATCH_ERROR]:", error);
+    logServerError('wholesale-dispatch', error);
     return NextResponse.json(
       { message: clientSafeErrorMessage(error, "Error al despachar el pedido mayorista.") },
       { status: 500 },

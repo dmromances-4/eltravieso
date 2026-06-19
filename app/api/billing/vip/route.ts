@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { getAuthSession } from "@/lib/auth/session";
 import { createSubscriptionCheckout } from "@/lib/stripe/api";
 import { getOrCreateStripeCustomer } from "@/lib/stripe/customer";
-import { clientSafeErrorMessage } from "@/lib/security/safe-error";
+import { clientSafeErrorMessage, logServerError } from "@/lib/security/safe-error";
 import { jsonError } from "@/lib/i18n/api";
 
 export async function POST(request: Request) {
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
 
     return NextResponse.json({ url: checkout.url });
   } catch (error) {
-    console.error("[BILLING_VIP]", error);
+    logServerError("billing-vip", error);
     return jsonError(request, "paymentFailed", 500, {
       detail: clientSafeErrorMessage(error, "paymentFailed"),
     });

@@ -3,23 +3,13 @@ import type Stripe from 'stripe'
 import { getStripe } from '@/lib/stripe/api'
 import { syncSaleToHolded } from '@/lib/holded/api'
 import { buildHoldedOrderFromSession, processStripeWebhookEvent } from '@/lib/stripe/webhook-handlers'
-import prisma from '@/lib/prisma'
-import { clientSafeErrorMessage } from '@/lib/security/safe-error'
-
-async function markWebhookProcessed(eventId: string, source: string): Promise<boolean> {
-  try {
-    await prisma.processedWebhook.create({
-      data: { eventId, source },
-    })
-    return true
-  } catch (error) {
-    const code = (error as { code?: string })?.code
-    if (code === 'P2002') return false
-    throw error
-  }
-}
+import { buildRequestContext, runWithRequestContext } from '@/lib/observability/request-context'
+import { isWebhookProcessed, markWebhookProcessed } from '@/lib/observability/webhook-idempotency'
+import { auditEvent } from '@/lib/observability/audit'
+import { clientSafeErrorMessage, logServerError } from '@/lib/security/safe-error'
 
 export async function POST(request: Request) {
+  return runWithRequestContext(buildRequestContext(request), async () => {
   const rawBody = await request.text()
   const signature = request.headers.get('stripe-signature')
   const webhookSecret = process.env.STRIPE_WEBHOOK_SECRET
@@ -29,7 +19,7 @@ export async function POST(request: Request) {
   }
 
   if (!webhookSecret) {
-    console.error('[STRIPE_WEBHOOK] STRIPE_WEBHOOK_SECRET is not configured')
+    logServerError('stripe-webhook', new Error('STRIPE_WEBHOOK_SECRET is not configured'))
     return NextResponse.json({ error: 'Webhook not configured' }, { status: 503 })
   }
 
@@ -37,16 +27,21 @@ export async function POST(request: Request) {
   try {
     event = getStripe().webhooks.constructEvent(rawBody, signature, webhookSecret)
   } catch (error) {
-    console.error('[STRIPE_WEBHOOK] Signature verification failed:', error)
+    logServerError('stripe-webhook', error, { extra: { phase: 'signature_verification' } })
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 })
   }
 
-  const alreadyProcessed = await prisma.processedWebhook.findUnique({
-    where: { eventId: event.id },
-  })
-  if (alreadyProcessed) {
+  if (await isWebhookProcessed(event.id)) {
     return NextResponse.json({ received: true, duplicate: true })
   }
+
+  void auditEvent({
+    action: 'webhook.stripe.received',
+    request,
+    resourceType: 'StripeEvent',
+    resourceId: event.id,
+    metadata: { eventType: event.type },
+  })
 
   try {
     await processStripeWebhookEvent(event)
@@ -64,10 +59,11 @@ export async function POST(request: Request) {
     await markWebhookProcessed(event.id, 'stripe')
     return NextResponse.json({ received: true })
   } catch (error) {
-    console.error('[STRIPE_WEBHOOK] Processing failed:', error)
+    logServerError('stripe-webhook', error, { extra: { eventId: event.id, eventType: event.type } })
     return NextResponse.json(
       { error: clientSafeErrorMessage(error, 'Error procesando el webhook') },
       { status: 500 },
     )
   }
+  })
 }

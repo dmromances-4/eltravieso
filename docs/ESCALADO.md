@@ -134,7 +134,16 @@ Ver [`docs/BAR-ONLINE.md`](./BAR-ONLINE.md) para desarrollo local (`npm run dev:
 | `sentry.edge.config.ts` | Middleware `/admin` |
 | `lib/sentry/init-realtime.ts` | Servidor Bar Online |
 
-Errores centralizados en [`lib/security/safe-error.ts`](../lib/security/safe-error.ts) (`logServerError`).
+Errores centralizados en [`lib/security/safe-error.ts`](../lib/security/safe-error.ts) (`logServerError`). Guía operativa completa: [`docs/OBSERVABILIDAD.md`](./OBSERVABILIDAD.md).
+
+### Alertas recomendadas
+
+| Prioridad | Condición |
+|-----------|-----------|
+| P0 | Errores checkout / stripe-webhook > umbral |
+| P1 | Pico `auth.login.failure` |
+| P1 | Latencia P95 agente IA |
+| P2 | Errores `bar-online-realtime` |
 
 ### Pasos en sentry.io
 
@@ -152,7 +161,7 @@ SENTRY_DSN=https://...@....ingest.sentry.io/... npm run dev
 # Provocar error en checkout o agente IA y comprobar evento en Sentry Issues
 ```
 
-Muestreo: `tracesSampleRate` 10% en producción, 100% en dev ([`lib/sentry/options.ts`](../lib/sentry/options.ts)).
+Muestreo: `SENTRY_TRACES_SAMPLE_RATE` (default 0.1 prod, 1.0 dev) en [`lib/sentry/options.ts`](../lib/sentry/options.ts).
 
 ## Checklist pre-producción
 

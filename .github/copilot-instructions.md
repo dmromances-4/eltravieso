@@ -20,6 +20,7 @@ Purpose: Help AI agents make safe, accurate edits in this Next.js 14 App Router 
   - `npm run start:ws` → production Socket.IO server
   - `npm run lint` → `next lint` (ESLint runs during `npm run build`)
   - `npm run test` → Vitest unit tests; set `SMOKE_BASE_URL` for E2E smoke tests
+  - `npm run test:ci` → fresh `npm ci` + Prisma generate + Vitest (use on Linux sandbox/CI; do not reuse macOS `node_modules`)
   - `npm run smoke` → `scripts/smoke-routes.ts` (requires dev server)
   - `npm run seed:cocktails` → `ts-node scripts/seed-cocktails.ts`
   - `npm run seed:conservas` → seed canned goods demo data

@@ -1,4 +1,5 @@
-import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import { randomUUID } from "crypto";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
@@ -22,7 +23,7 @@ export async function GET() {
 
     return NextResponse.json({ sessions });
   } catch (error: any) {
-    console.error("[BAR_ONLINE_GET_ERROR]:", error);
+    logServerError('bar-online', error);
     return NextResponse.json(
       { message: error.message || "Error al obtener las sesiones." },
       { status: 500 }
@@ -96,7 +97,7 @@ export async function POST(request: Request) {
       { status: 201 }
     );
   } catch (error: any) {
-    console.error("[BAR_ONLINE_POST_ERROR]:", error);
+    logServerError('bar-online', error);
     return NextResponse.json(
       { message: error.message || "Error al crear la sesión." },
       { status: 500 }

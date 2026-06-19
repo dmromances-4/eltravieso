@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import prisma from "@/lib/prisma";
 import { requireAdminUser, adminApiErrorResponse } from "@/lib/auth/admin-api";
+import { auditAdminAction } from "@/lib/observability/audit";
 
 type RouteContext = { params: { id: string } };
 
@@ -25,7 +26,7 @@ export async function GET(_request: Request, { params }: RouteContext) {
 
 export async function PATCH(request: Request, { params }: RouteContext) {
   try {
-    await requireAdminUser();
+    const admin = await requireAdminUser();
     const body = await request.json();
 
     const existing = await prisma.product.findUnique({
@@ -88,6 +89,12 @@ export async function PATCH(request: Request, { params }: RouteContext) {
     const updated = await prisma.product.findUnique({
       where: { id: params.id },
       include: { variants: true },
+    });
+
+    void auditAdminAction(admin, "admin.product.update", {
+      request,
+      resourceType: "Product",
+      resourceId: params.id,
     });
 
     return NextResponse.json({ product: updated ?? product, message: "Producto actualizado." });

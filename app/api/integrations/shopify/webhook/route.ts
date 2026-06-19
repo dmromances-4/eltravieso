@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import prisma from "@/lib/prisma";
 import { verifyShopifyWebhookHmac, syncShopifyCatalog } from "@/lib/integrations/shopify";
 
@@ -29,7 +30,7 @@ export async function POST(request: Request) {
     try {
       await syncShopifyCatalog(profile.id);
     } catch (error) {
-      console.error("[SHOPIFY_WEBHOOK_SYNC]", error);
+      logServerError('shopify-webhook', error);
     }
   }
 

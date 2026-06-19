@@ -12,7 +12,9 @@ export async function POST(request: Request) {
       attribution?: string;
     };
 
-    if (!body.slug?.trim() || !body.url?.trim()) {
+    const slug = body.slug?.trim();
+    const url = body.url?.trim();
+    if (!slug || !url) {
       return NextResponse.json({ message: "slug y url son obligatorios." }, { status: 400 });
     }
 

@@ -4,6 +4,7 @@ import { authOptions } from "@/lib/auth";
 import prisma from "@/lib/prisma";
 import { evaluateAdminAccess, type AdminAccessDeniedReason } from "@/lib/auth/admin-access";
 import { isAdmin2faRequired } from "@/lib/auth/admin-2fa-policy";
+import { logServerError } from "@/lib/security/safe-error";
 
 export class AdminApiError extends Error {
   constructor(
@@ -54,10 +55,11 @@ export async function isAdminUser(userId: string): Promise<boolean> {
   return Boolean(user.isTwoFactorEnabled);
 }
 
-export function adminApiErrorResponse(error: unknown) {
+export function adminApiErrorResponse(error: unknown, scope = "admin-api") {
   if (error instanceof AdminApiError) {
     return NextResponse.json({ message: error.message }, { status: error.status });
   }
+  logServerError(scope, error);
   const message = error instanceof Error ? error.message : "Error interno";
   const status = message === "UNAUTHORIZED" ? 401 : message === "FORBIDDEN" ? 403 : 500;
   return NextResponse.json({ message }, { status });

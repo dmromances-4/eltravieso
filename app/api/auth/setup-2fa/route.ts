@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import prisma from "@/lib/prisma";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
@@ -54,7 +55,7 @@ export async function POST() {
 
     return NextResponse.json({ qrCodeUrl, secret });
   } catch (error) {
-    console.error("Error setup-2fa:", error);
+    logServerError('auth-setup-2fa', error);
     return NextResponse.json({ message: "Error interno del servidor" }, { status: 500 });
   }
 }
@@ -89,7 +90,7 @@ export async function PUT(req: Request) {
       role: user.role,
     });
   } catch (error) {
-    console.error("Error validando 2FA:", error);
+    logServerError('auth-setup-2fa', error);
     return NextResponse.json({ message: "Error interno del servidor" }, { status: 500 });
   }
 }
@@ -135,7 +136,7 @@ export async function DELETE(req: Request) {
 
     return NextResponse.json({ message: "2FA desactivado correctamente." });
   } catch (error) {
-    console.error("Error desactivando 2FA:", error);
+    logServerError('auth-setup-2fa', error);
     return NextResponse.json({ message: "Error interno del servidor" }, { status: 500 });
   }
 }

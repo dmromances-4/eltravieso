@@ -7,6 +7,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { io, type Socket } from "socket.io-client";
+import { buildBarOnlineHandshakeQuery } from "@/lib/observability/client-trace";
 
 const WS_URL =
   process.env.NEXT_PUBLIC_WS_URL ?? "http://localhost:3001";
@@ -60,9 +61,15 @@ export function useBarOnline(roomId: string | null): UseBarOnlineResult {
   useEffect(() => {
     if (!roomId) return;
 
+    const requestId =
+      typeof document !== "undefined"
+        ? document.querySelector('meta[name="x-request-id"]')?.getAttribute("content") ?? undefined
+        : undefined;
+
     const socket = io(WS_URL, {
       withCredentials: true,
       transports: ["websocket", "polling"],
+      query: buildBarOnlineHandshakeQuery(requestId),
     });
     socketRef.current = socket;
 

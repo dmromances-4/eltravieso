@@ -44,6 +44,15 @@ export default function CookieBanner() {
     setConsent(stored);
   }, []);
 
+  useEffect(() => {
+    if (consent !== 'unknown') {
+      document.body.classList.remove('pb-cookie-safe')
+      return
+    }
+    document.body.classList.add('pb-cookie-safe')
+    return () => document.body.classList.remove('pb-cookie-safe')
+  }, [consent])
+
   const handleAcceptAll = () => {
     writeCookieConsent("accepted", {
       essential: true,

@@ -1,23 +1,9 @@
-// ─────────────────────────────────────────────────────────────────────────────
-// BarOnline realtime server — standalone Socket.IO process.
-//
-// Next.js route handlers can't host long-lived WebSocket connections, so this
-// runs as its own Node process (npm run dev:ws / start:ws). It backs presence
-// and pub/sub on Redis (Upstash) via @socket.io/redis-adapter when REDIS_URL is
-// set, falling back to a single-instance in-memory store for local dev.
-//
-// Responsibilities:
-//   - Authenticate the handshake against the NextAuth JWT cookie.
-//   - Track room presence (in Redis, never in PostgreSQL).
-//   - Relay chat messages within a room.
-//   - Relay WebRTC signaling (offer/answer/ICE) for VIDEO_CALL sessions.
-// ─────────────────────────────────────────────────────────────────────────────
-
 import { createServer } from "http";
 import { randomUUID } from "crypto";
 import { Server, type Socket } from "socket.io";
 import { getToken } from "next-auth/jwt";
 import { initRealtimeSentry, Sentry } from "../../lib/sentry/init-realtime.js";
+import { logRealtimeEvent, withSocketHandler } from "../../lib/observability/realtime-log.js";
 import {
   createMemoryPresenceStore,
   createRedisPresenceStore,
@@ -60,10 +46,26 @@ function userRoom(userId: string) {
   return `user:${userId}`;
 }
 
+function captureSocketError(error: unknown, context: { eventName: string; userId?: string; roomId?: string }) {
+  Sentry.withScope((scope) => {
+    scope.setTag("scope", "bar-online-realtime");
+    scope.setTag("socketEvent", context.eventName);
+    if (context.userId) scope.setTag("userId", context.userId);
+    if (context.roomId) scope.setTag("roomId", context.roomId);
+    Sentry.captureException(error);
+  });
+  logRealtimeEvent("error", "socket.handler.failed", {
+    eventName: context.eventName,
+    userId: context.userId,
+    roomId: context.roomId,
+    error: error instanceof Error ? error.message : String(error),
+  });
+}
+
 async function bootstrap() {
   if (!NEXTAUTH_SECRET) {
     console.warn(
-      "[realtime] NEXTAUTH_SECRET is not set — handshake auth will reject every connection."
+      "[realtime] NEXTAUTH_SECRET is not set — handshake auth will reject every connection.",
     );
   }
 
@@ -100,33 +102,56 @@ async function bootstrap() {
   } else {
     presence = createMemoryPresenceStore();
     console.warn(
-      "[realtime] REDIS_URL not set — running single-instance with in-memory presence."
+      "[realtime] REDIS_URL not set — running single-instance with in-memory presence.",
     );
   }
 
-  // ── Handshake authentication via the NextAuth JWT cookie ──
   io.use(async (socket, next) => {
-    try {
-      const token = await getToken({
-        req: socket.request as never,
-        secret: NEXTAUTH_SECRET,
+    const request = socket.request as {
+      headers: Record<string, string | string[] | undefined>;
+      _query?: Record<string, string>;
+    };
+    const query = request._query ?? {};
+    const sentryTrace =
+      (typeof request.headers["sentry-trace"] === "string" ? request.headers["sentry-trace"] : undefined) ??
+      query["sentry-trace"];
+    const baggage =
+      (typeof request.headers.baggage === "string" ? request.headers.baggage : undefined) ?? query.baggage;
+
+    const authenticate = async () =>
+      Sentry.startSpan({ name: "bar_online.handshake", op: "auth" }, async () => {
+        try {
+          const token = await getToken({
+            req: socket.request as never,
+            secret: NEXTAUTH_SECRET,
+          });
+
+          if (!token?.id) {
+            logRealtimeEvent("warn", "bar_online.auth.failure", {
+              reason: "missing_token",
+              requestId: query["x-request-id"],
+            });
+            return next(new Error("UNAUTHORIZED"));
+          }
+
+          socket.user = {
+            userId: String(token.id),
+            name: (token.name as string | undefined) ?? "Invitado",
+          };
+          socket.join(userRoom(socket.user.userId));
+          return next();
+        } catch (error) {
+          captureSocketError(error, { eventName: "handshake" });
+          return next(new Error("UNAUTHORIZED"));
+        }
       });
 
-      if (!token?.id) {
-        return next(new Error("UNAUTHORIZED"));
-      }
+    if (sentryTrace || baggage) {
+      return Sentry.continueTrace({ sentryTrace, baggage }, authenticate);
+    }
 
-      socket.user = {
-        userId: String(token.id),
-        name: (token.name as string | undefined) ?? "Invitado",
-      };
-      socket.join(userRoom(socket.user.userId));
-      next();
-    } catch (error) {
-      Sentry.captureException(error);
-      console.error("[realtime] handshake auth failed:", error);
-      next(new Error("UNAUTHORIZED"));
-    }  });
+    return authenticate();
+  });
 
   io.on("connection", (socket: Socket) => {
     const user = socket.user!;
@@ -137,30 +162,40 @@ async function bootstrap() {
       io.to(roomId).emit("presence:update", { roomId, members });
     }
 
-    socket.on("room:join", async ({ roomId }: JoinPayload) => {
-      if (!roomId) return;
-      try {
-        const { assertBarOnlineRoomAccess } = await import("../../lib/realtime/room-access.js");
-        await assertBarOnlineRoomAccess(user.userId, roomId);
-      } catch {
-        socket.emit("room:error", { roomId, message: "No tienes acceso a esta sala." });
-        return;
-      }
-      socket.join(roomId);
-      joinedRooms.add(roomId);
-      await presence.add(roomId, socket.id, user);
-      await broadcastPresence(roomId);
-      socket.to(roomId).emit("room:user-joined", { roomId, user });
-    });
+    socket.on(
+      "room:join",
+      withSocketHandler("room:join", async ({ roomId }: JoinPayload) => {
+        if (!roomId) return;
+        try {
+          const { assertBarOnlineRoomAccess } = await import("../../lib/realtime/room-access.js");
+          await assertBarOnlineRoomAccess(user.userId, roomId);
+        } catch {
+          socket.emit("room:error", { roomId, message: "No tienes acceso a esta sala." });
+          return;
+        }
+        socket.join(roomId);
+        joinedRooms.add(roomId);
+        await presence.add(roomId, socket.id, user);
+        await broadcastPresence(roomId);
+        socket.to(roomId).emit("room:user-joined", { roomId, user });
+        logRealtimeEvent("info", "bar_online.room.join", {
+          userId: user.userId,
+          roomId,
+        });
+      }, (error, ctx) => captureSocketError(error, { ...ctx, userId: user.userId })),
+    );
 
-    socket.on("room:leave", async ({ roomId }: JoinPayload) => {
-      if (!roomId) return;
-      socket.leave(roomId);
-      joinedRooms.delete(roomId);
-      await presence.remove(roomId, socket.id);
-      await broadcastPresence(roomId);
-      socket.to(roomId).emit("room:user-left", { roomId, user });
-    });
+    socket.on(
+      "room:leave",
+      withSocketHandler("room:leave", async ({ roomId }: JoinPayload) => {
+        if (!roomId) return;
+        socket.leave(roomId);
+        joinedRooms.delete(roomId);
+        await presence.remove(roomId, socket.id);
+        await broadcastPresence(roomId);
+        socket.to(roomId).emit("room:user-left", { roomId, user });
+      }, (error, ctx) => captureSocketError(error, { ...ctx, userId: user.userId })),
+    );
 
     socket.on("chat:message", ({ roomId, text }: ChatPayload) => {
       const trimmed = (text ?? "").toString().slice(0, 2000).trim();
@@ -175,7 +210,6 @@ async function bootstrap() {
       });
     });
 
-    // WebRTC signaling passthrough — media stays peer-to-peer.
     socket.on("rtc:signal", ({ roomId, targetId, data }: SignalPayload) => {
       if (!roomId || !targetId) return;
       io.to(userRoom(targetId)).emit("rtc:signal", {
@@ -186,13 +220,16 @@ async function bootstrap() {
       });
     });
 
-    socket.on("disconnect", async () => {
-      for (const roomId of joinedRooms) {
-        await presence.remove(roomId, socket.id);
-        await broadcastPresence(roomId);
-        socket.to(roomId).emit("room:user-left", { roomId, user });
-      }
-    });
+    socket.on(
+      "disconnect",
+      withSocketHandler("disconnect", async () => {
+        for (const roomId of joinedRooms) {
+          await presence.remove(roomId, socket.id);
+          await broadcastPresence(roomId);
+          socket.to(roomId).emit("room:user-left", { roomId, user });
+        }
+      }, (error, ctx) => captureSocketError(error, { ...ctx, userId: user.userId })),
+    );
   });
 
   httpServer.listen(PORT, () => {
@@ -203,6 +240,8 @@ async function bootstrap() {
 
 bootstrap().catch((error) => {
   Sentry.captureException(error);
-  console.error("[realtime] fatal bootstrap error:", error);
+  logRealtimeEvent("error", "bar_online.bootstrap.failed", {
+    error: error instanceof Error ? error.message : String(error),
+  });
   Sentry.flush(2000).finally(() => process.exit(1));
 });

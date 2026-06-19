@@ -8,6 +8,21 @@ import { stripLocalePrefix, withLocalePrefix } from "@/lib/i18n/locale";
 
 const intlMiddleware = createMiddleware(routing);
 
+function ensureRequestId(request: NextRequest): string {
+  return request.headers.get("x-request-id") ?? crypto.randomUUID();
+}
+
+function withRequestIdHeaders(request: NextRequest, requestId: string): Headers {
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-request-id", requestId);
+  return requestHeaders;
+}
+
+function attachRequestId(response: NextResponse, requestId: string): NextResponse {
+  response.headers.set("x-request-id", requestId);
+  return response;
+}
+
 function isAdminPath(pathname: string): boolean {
   return stripLocalePrefix(pathname).startsWith("/admin");
 }
@@ -18,7 +33,7 @@ function localizedPath(pathname: string, locale: string, request: NextRequest): 
   return new URL(target, request.url);
 }
 
-async function handleAdminAuth(request: NextRequest): Promise<NextResponse | null> {
+async function handleAdminAuth(request: NextRequest, requestId: string): Promise<NextResponse | null> {
   const pathname = request.nextUrl.pathname;
   if (!isAdminPath(pathname)) return null;
 
@@ -33,7 +48,7 @@ async function handleAdminAuth(request: NextRequest): Promise<NextResponse | nul
     const login = localizedPath("/login", locale, request);
     login.searchParams.set("callbackUrl", pathname);
     login.searchParams.set("admin", "1");
-    return NextResponse.redirect(login);
+    return attachRequestId(NextResponse.redirect(login), requestId);
   }
 
   if (isAdmin2faRequired()) {
@@ -41,7 +56,7 @@ async function handleAdminAuth(request: NextRequest): Promise<NextResponse | nul
       const setup = localizedPath("/setup-2fa", locale, request);
       setup.searchParams.set("require", "admin");
       setup.searchParams.set("callbackUrl", pathname);
-      return NextResponse.redirect(setup);
+      return attachRequestId(NextResponse.redirect(setup), requestId);
     }
 
     if (!token.twoFactorVerified) {
@@ -49,7 +64,7 @@ async function handleAdminAuth(request: NextRequest): Promise<NextResponse | nul
       login.searchParams.set("callbackUrl", pathname);
       login.searchParams.set("admin", "1");
       login.searchParams.set("error", "2fa");
-      return NextResponse.redirect(login);
+      return attachRequestId(NextResponse.redirect(login), requestId);
     }
   }
 
@@ -57,10 +72,19 @@ async function handleAdminAuth(request: NextRequest): Promise<NextResponse | nul
 }
 
 export default async function middleware(request: NextRequest) {
-  const adminResponse = await handleAdminAuth(request);
+  const requestId = ensureRequestId(request);
+  const requestHeaders = withRequestIdHeaders(request, requestId);
+
+  const adminResponse = await handleAdminAuth(request, requestId);
   if (adminResponse) return adminResponse;
 
-  return intlMiddleware(request);
+  const intlRequest = new NextRequest(request.url, {
+    headers: requestHeaders,
+    method: request.method,
+  });
+
+  const response = intlMiddleware(intlRequest);
+  return attachRequestId(response, requestId);
 }
 
 export const config = {

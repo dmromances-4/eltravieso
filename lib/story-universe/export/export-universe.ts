@@ -21,8 +21,9 @@ export async function exportStoryUniverseJson(): Promise<string> {
     cocktails: profiles,
     stories,
     scripts: scripts.map(({ story, ...s }) => ({ ...s, storyId: story.storyId })),
-    storyboards: storyboards.map(({ story, scenes }) => ({ storyId: story.storyId, scenes })),
-    prompts: prompts.map(({ story, sceneNumber, prompts: scenePrompts }) => ({
+    storyboards: storyboards.map(({ story, scenes, ...b }) => ({ ...b, storyId: story.storyId, scenes })),
+    prompts: prompts.map(({ story, sceneNumber, prompts: scenePrompts, ...p }) => ({
+      ...p,
       storyId: story.storyId,
       sceneNumber,
       prompts: scenePrompts,

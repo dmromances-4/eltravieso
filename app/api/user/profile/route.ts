@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { logServerError } from '@/lib/security/safe-error';
 import bcrypt from "bcryptjs";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
@@ -121,7 +122,7 @@ export async function PATCH(request: Request) {
       user: serializeUserProfile(user),
     });
   } catch (error) {
-    console.error("Error updating profile:", error);
+    logServerError('user-profile', error);
     return NextResponse.json({ message: "Error al actualizar el perfil." }, { status: 500 });
   }
 }

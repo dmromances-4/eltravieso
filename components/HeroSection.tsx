@@ -37,6 +37,35 @@ export default function HeroSection({
               {t('ctaShop')}
             </BrandLinkButton>
           </div>
+          <nav
+            aria-label="Herramientas pro"
+            className="flex flex-wrap items-center gap-x-1 gap-y-1 text-sm font-medium"
+          >
+            <Link
+              href="/pro/tech-generator"
+              className="rounded-md px-2 py-2 text-electric-blue transition-colors hover:text-electric-yellow"
+            >
+              Barra IA
+            </Link>
+            <span className="text-slate-600" aria-hidden>
+              ·
+            </span>
+            <Link
+              href="/bar-online"
+              className="rounded-md px-2 py-2 text-electric-blue transition-colors hover:text-electric-yellow"
+            >
+              Bar Online
+            </Link>
+            <span className="text-slate-600" aria-hidden>
+              ·
+            </span>
+            <Link
+              href="/mapa"
+              className="rounded-md px-2 py-2 text-electric-blue transition-colors hover:text-electric-yellow"
+            >
+              Mapa
+            </Link>
+          </nav>
         </div>
 
         <Link
