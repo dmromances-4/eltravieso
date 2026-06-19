@@ -1,6 +1,5 @@
 import createMiddleware from "next-intl/middleware";
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 import { isAdmin2faRequired } from "@/lib/auth/admin-2fa-policy";
 import { routing } from "@/i18n/routing";

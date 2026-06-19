@@ -18,9 +18,6 @@ export async function POST(request: Request) {
       return NextResponse.json({ message: "slug y url son obligatorios." }, { status: 400 });
     }
 
-    const slug = body.slug.trim();
-    const url = body.url.trim();
-
     const recipes = loadCocktails();
     const recipe = recipes.find((r) => r.slug === slug);
     const title = recipe?.title ?? slug;
