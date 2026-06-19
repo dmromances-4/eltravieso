@@ -45,7 +45,21 @@ npm run audit:venue-duplicates
 npm run backfill:venue-codes   # ET-LOC-* donde falte
 ```
 
-### Migración de slugs (si hay colisiones o sufijos duplicados)
+### Unificación canónica (duplicados global + regional)
+
+El mismo local puede aparecer en listas GLOBAL y REGIONAL con `sourceUrl` distintos. Unificar **antes** de scrapear de nuevo:
+
+```bash
+npm run unify:venues -- --dry-run   # informe sin escribir
+npm run unify:venues                # JSON + BD; fusiona por nombre+ciudad+categoría
+# → data/audits/venue-canonical-merge.json
+npm run seed:venues
+npm run audit:venue-duplicates      # logicalDuplicates debe ser 0
+```
+
+Criterio: **1 local físico = 1 ficha** (~300–350 entradas tras unificar ~600 sourceUrls). Los slugs absorbidos redirigen vía `lib/venues/slug-redirects.ts`.
+
+### Migración de slugs (sufijos numéricos malformados)
 
 Si el JSON tiene slugs malformados (`maido-restaurant-restaurant`, `coa-bar-bar`) por listas globales + regionales:
 
@@ -217,8 +231,9 @@ Componentes: `VenueMapShell.tsx` (orquestador), `VenueGlobeMap.tsx`, `VenueMapLe
 
 - `lib/venues/catalog.ts` — lectura y filtros del catálogo
 - `lib/venues/merge-guide.ts`, `guide-from-db.ts` — merge seguro JSON ↔ BD
-- `lib/venues/worlds50best-parser.ts` — `dedupeSlugs` con sufijos numéricos
-- `scripts/fix-venue-slugs.ts` — migración de slugs por `sourceUrl`
+- `lib/venues/canonical-venue.ts` — unificación por identidad (nombre+ciudad+categoría)
+- `lib/venues/slug-redirects.ts` — redirects de slugs absorbidos
+- `scripts/unify-venues.ts` — pipeline de dedup canónico
 - `lib/venues/reservation.ts` — enlaces de reserva
 - `lib/geocoding/nominatim.ts` — geocodificación
 - `components/map/MapaPageClient.tsx`, `VenueMapShell.tsx`, `VenueGlobeMap.tsx`

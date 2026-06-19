@@ -27,6 +27,7 @@ import {
   parseListPage,
   parseListYear,
 } from "../lib/venues/worlds50best-parser";
+import { unifyVenueList } from "../lib/venues/canonical-venue";
 import type { NormalizedVenueGuide } from "../lib/venues/types";
 
 const USER_AGENT = "ElTraviesoBot/1.0 (+catalogacion-interna; guia-locales)";
@@ -359,7 +360,7 @@ export async function runVenueScrape(options: VenueScrapeOptions = {}): Promise<
 
   console.log(`🔎 Scrape World's 50 Best (${seeds.length} listas)`);
 
-  const existing = ctx.detailOnly ? loadExisting(outputPath) : [];
+  const existing = loadExisting(outputPath);
   const initialCount = existing.length;
   const bySource = new Map(existing.map((v) => [v.sourceUrl, v]));
 
@@ -387,16 +388,20 @@ export async function runVenueScrape(options: VenueScrapeOptions = {}): Promise<
     }
   }
 
-  const merged = dedupeSlugs([...bySource.values()]);
+  const unified = unifyVenueList([...bySource.values()]);
+  const merged = dedupeSlugs(unified.venues);
   const added = Math.max(0, merged.length - initialCount);
 
   if (!options.dryRun) {
     ensureDir(path.dirname(outputPath));
+    if (fs.existsSync(outputPath)) {
+      fs.copyFileSync(outputPath, `${outputPath}.bak`);
+    }
     fs.writeFileSync(outputPath, JSON.stringify(merged, null, 2), "utf-8");
   }
 
   console.log(
-    `✓ ${merged.length} locales en ${outputPath} (${mergedCount} merges por sourceUrl)`,
+    `✓ ${merged.length} locales en ${outputPath} (${mergedCount} merges por sourceUrl, ${unified.identityMergeCount} por identidad)`,
   );
   printCoverageReport(merged);
   console.log("  Importar a DB: npm run seed:venues");

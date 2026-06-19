@@ -19,6 +19,7 @@
     "scrape:venues": "tsx scripts/scrape-worlds50best.ts",
     "seed:venues": "tsx scripts/seed-venues-guide.ts",
     "fix:venue-slugs": "tsx scripts/fix-venue-slugs.ts",
+    "unify:venues": "tsx scripts/unify-venues.ts",
     "backfill:venue-codes": "tsx scripts/backfill-venue-codes.ts",
     "geocode:venues": "tsx scripts/geocode-venues-guide.ts",
     "enrich:tripadvisor": "tsx scripts/enrich-venues-tripadvisor.ts --suggest",

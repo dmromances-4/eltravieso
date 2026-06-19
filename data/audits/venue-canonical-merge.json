@@ -1,0 +1,2619 @@
+{
+  "generatedAt": "2026-06-19T12:52:51.744Z",
+  "dryRun": false,
+  "totals": {
+    "inputVenues": 600,
+    "canonicalVenues": 309,
+    "identityMergeCount": 291,
+    "mergeGroups": 225
+  },
+  "merges": [
+    {
+      "identityKey": "bar-leone::hong-kong::BARS",
+      "canonicalSlug": "bar-leone-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-leone.html",
+      "mergedSlugs": [
+        "bar-leone",
+        "bar-leone-2",
+        "bar-leone-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/bar-leone.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/bar-leone.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-leone.html"
+      ]
+    },
+    {
+      "identityKey": "handshake-speakeasy::mexico-city::BARS",
+      "canonicalSlug": "handshake-speakeasy-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/handshake-speakeasy.html",
+      "mergedSlugs": [
+        "handshake-speakeasy",
+        "handshake-speakeasy-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/handshake-speakeasy.html",
+        "https://www.theworlds50best.com/bars/northamerica/the-list/handshake-speakeasy.html"
+      ]
+    },
+    {
+      "identityKey": "sips::barcelona::BARS",
+      "canonicalSlug": "sips-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/sips.html",
+      "mergedSlugs": [
+        "sips"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/sips.html"
+      ]
+    },
+    {
+      "identityKey": "paradiso::barcelona::BARS",
+      "canonicalSlug": "paradiso-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/paradiso.html",
+      "mergedSlugs": [
+        "paradiso"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/paradiso.html"
+      ]
+    },
+    {
+      "identityKey": "tayer-elementary::london::BARS",
+      "canonicalSlug": "tayer-elementary-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tayer-elementary.html",
+      "mergedSlugs": [
+        "tayer-elementary"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/tayer-elementary.html"
+      ]
+    },
+    {
+      "identityKey": "connaught-bar::london::BARS",
+      "canonicalSlug": "connaught-bar-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/connaught-bar.html",
+      "mergedSlugs": [
+        "connaught-bar"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/connaught-bar.html"
+      ]
+    },
+    {
+      "identityKey": "moebius-milano::milan::BARS",
+      "canonicalSlug": "moebius-milano-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/moebius-milano.html",
+      "mergedSlugs": [
+        "moebius-milano"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/moebius-milano.html"
+      ]
+    },
+    {
+      "identityKey": "line::athens::BARS",
+      "canonicalSlug": "line-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/line.html",
+      "mergedSlugs": [
+        "line"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/line.html"
+      ]
+    },
+    {
+      "identityKey": "jigger-pony::singapore::BARS",
+      "canonicalSlug": "jigger-pony-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/jigger-pony.html",
+      "mergedSlugs": [
+        "jigger-pony",
+        "jigger-pony-2",
+        "jigger-pony-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/jigger-pony.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/jigger-pony.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/jigger-pony.html"
+      ]
+    },
+    {
+      "identityKey": "tres-monos::buenos-aires::BARS",
+      "canonicalSlug": "tres-monos-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tres-monos.html",
+      "mergedSlugs": [
+        "tres-monos"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/tres-monos.html"
+      ]
+    },
+    {
+      "identityKey": "alquimico::cartagena::BARS",
+      "canonicalSlug": "alquimico-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/alquimico.html",
+      "mergedSlugs": [
+        "alquimico"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/alquimico.html"
+      ]
+    },
+    {
+      "identityKey": "superbueno::new-york::BARS",
+      "canonicalSlug": "superbueno-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/superbueno.html",
+      "mergedSlugs": [
+        "superbueno",
+        "superbueno-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/superbueno.html",
+        "https://www.theworlds50best.com/bars/northamerica/the-list/superbueno.html"
+      ]
+    },
+    {
+      "identityKey": "lady-bee::lima::BARS",
+      "canonicalSlug": "lady-bee-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/lady-bee.html",
+      "mergedSlugs": [
+        "lady-bee"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/lady-bee.html"
+      ]
+    },
+    {
+      "identityKey": "himkok::oslo::BARS",
+      "canonicalSlug": "himkok-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/himkok.html",
+      "mergedSlugs": [
+        "himkok"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/himkok.html"
+      ]
+    },
+    {
+      "identityKey": "bar-us::bangkok::BARS",
+      "canonicalSlug": "bar-us-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-us.html",
+      "mergedSlugs": [
+        "bar-us",
+        "bar-us-2",
+        "bar-us-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/bar-us.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/bar-us.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-us.html"
+      ]
+    },
+    {
+      "identityKey": "zest::seoul::BARS",
+      "canonicalSlug": "zest-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/zest.html",
+      "mergedSlugs": [
+        "zest",
+        "zest-2",
+        "zest-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/zest.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/zest.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/zest.html"
+      ]
+    },
+    {
+      "identityKey": "bar-nouveau::paris::BARS",
+      "canonicalSlug": "bar-nouveau-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-nouveau.html",
+      "mergedSlugs": [
+        "bar-nouveau"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/bar-nouveau.html"
+      ]
+    },
+    {
+      "identityKey": "bar-benfiddich::tokyo::BARS",
+      "canonicalSlug": "bar-benfiddich-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-benfiddich.html",
+      "mergedSlugs": [
+        "bar-benfiddich",
+        "bar-benfiddich-2",
+        "bar-benfiddich-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/bar-benfiddich.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/bar-benfiddich.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-benfiddich.html"
+      ]
+    },
+    {
+      "identityKey": "caretaker-s-cottage::melbourne::BARS",
+      "canonicalSlug": "caretakers-cottage-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/caretakers-cottage.html",
+      "mergedSlugs": [
+        "caretakers-cottage"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/caretakers-cottage.html"
+      ]
+    },
+    {
+      "identityKey": "the-cambridge-public-house::paris::BARS",
+      "canonicalSlug": "the-cambridge-public-house-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/the-cambridge-public-house.html",
+      "mergedSlugs": [
+        "the-cambridge-public-house"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/the-cambridge-public-house.html"
+      ]
+    },
+    {
+      "identityKey": "satan-s-whiskers::london::BARS",
+      "canonicalSlug": "satans-whiskers-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/satans-whiskers.html",
+      "mergedSlugs": [
+        "satans-whiskers"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/satans-whiskers.html"
+      ]
+    },
+    {
+      "identityKey": "locale-firenze::florence::BARS",
+      "canonicalSlug": "locale-firenze-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/locale-firenze.html",
+      "mergedSlugs": [
+        "locale-firenze"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/locale-firenze.html"
+      ]
+    },
+    {
+      "identityKey": "tlecan::mexico-city::BARS",
+      "canonicalSlug": "tlecan-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tlecan.html",
+      "mergedSlugs": [
+        "tlecan",
+        "tlecan-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/tlecan.html",
+        "https://www.theworlds50best.com/bars/northamerica/the-list/tlecan.html"
+      ]
+    },
+    {
+      "identityKey": "tan-tan::sao-paulo::BARS",
+      "canonicalSlug": "tan-tan-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tan-tan.html",
+      "mergedSlugs": [
+        "tan-tan"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/tan-tan.html"
+      ]
+    },
+    {
+      "identityKey": "mirror-bar::bratislava::BARS",
+      "canonicalSlug": "mirror-bar-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/mirror-bar.html",
+      "mergedSlugs": [
+        "mirror-bar"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/mirror-bar.html"
+      ]
+    },
+    {
+      "identityKey": "cochinchina::buenos-aires::BARS",
+      "canonicalSlug": "cochinchina-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/cochinchina.html",
+      "mergedSlugs": [
+        "cochinchina"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/cochinchina.html"
+      ]
+    },
+    {
+      "identityKey": "baba-au-rum::athens::BARS",
+      "canonicalSlug": "baba-au-rum-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/baba-au-rum.html",
+      "mergedSlugs": [
+        "baba-au-rum"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/baba-au-rum.html"
+      ]
+    },
+    {
+      "identityKey": "nouvelle-vague::tirana::BARS",
+      "canonicalSlug": "nouvelle-vague-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/nouvelle-vague.html",
+      "mergedSlugs": [
+        "nouvelle-vague"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/nouvelle-vague.html"
+      ]
+    },
+    {
+      "identityKey": "hope-sesame::guangzhou::BARS",
+      "canonicalSlug": "hope-sesame-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/hope-sesame.html",
+      "mergedSlugs": [
+        "hope-sesame",
+        "hope-and-sesame",
+        "hope-and-sesame-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/hope-sesame.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/hope-and-sesame.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/hope-and-sesame.html"
+      ]
+    },
+    {
+      "identityKey": "danico::paris::BARS",
+      "canonicalSlug": "danico-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/danico.html",
+      "mergedSlugs": [
+        "danico"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/danico.html"
+      ]
+    },
+    {
+      "identityKey": "scarfes-bar::london::BARS",
+      "canonicalSlug": "scarfes-bar-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/scarfes-bar.html",
+      "mergedSlugs": [
+        "scarfes-bar"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/scarfes-bar.html"
+      ]
+    },
+    {
+      "identityKey": "svanen::oslo::BARS",
+      "canonicalSlug": "svanen-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/svanen.html",
+      "mergedSlugs": [
+        "svanen"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/svanen.html"
+      ]
+    },
+    {
+      "identityKey": "sastreria-martinez::lima::BARS",
+      "canonicalSlug": "sastreria-martinez-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/sastreria-martinez.html",
+      "mergedSlugs": [
+        "sastreria-martinez"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/sastreria-martinez.html"
+      ]
+    },
+    {
+      "identityKey": "panda-sons::edinburgh::BARS",
+      "canonicalSlug": "panda-sons-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/panda-sons.html",
+      "mergedSlugs": [
+        "panda-sons"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/panda-sons.html"
+      ]
+    },
+    {
+      "identityKey": "roda-huset::stockholm::BARS",
+      "canonicalSlug": "roda-huset-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/roda-huset.html",
+      "mergedSlugs": [
+        "roda-huset"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/roda-huset.html"
+      ]
+    },
+    {
+      "identityKey": "mimi-kakushi::dubai::BARS",
+      "canonicalSlug": "mimi-kakushi-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/mimi-kakushi.html",
+      "mergedSlugs": [
+        "mimi-kakushi"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/mimi-kakushi.html"
+      ]
+    },
+    {
+      "identityKey": "salmon-guru::madrid::BARS",
+      "canonicalSlug": "salmon-guru-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/salmon-guru.html",
+      "mergedSlugs": [
+        "salmon-guru"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/salmon-guru.html"
+      ]
+    },
+    {
+      "identityKey": "coa::hong-kong::BARS",
+      "canonicalSlug": "coa-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/coa.html",
+      "mergedSlugs": [
+        "coa",
+        "coa-2",
+        "coa-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/coa.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/coa.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/coa.html"
+      ]
+    },
+    {
+      "identityKey": "sip-guzzle::new-york::BARS",
+      "canonicalSlug": "sip-guzzle-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/sip-guzzle.html",
+      "mergedSlugs": [
+        "sip-guzzle",
+        "sip-guzzle-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/sip-guzzle.html",
+        "https://www.theworlds50best.com/bars/northamerica/the-list/sip-guzzle.html"
+      ]
+    },
+    {
+      "identityKey": "drink-kong::rome::BARS",
+      "canonicalSlug": "drink-kong-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/drink-kong.html",
+      "mergedSlugs": [
+        "drink-kong"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/drink-kong.html"
+      ]
+    },
+    {
+      "identityKey": "double-chicken-please::new-york::BARS",
+      "canonicalSlug": "double-chicken-please-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/double-chicken-please.html",
+      "mergedSlugs": [
+        "double-chicken-please",
+        "double-chicken-please-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/double-chicken-please.html",
+        "https://www.theworlds50best.com/bars/northamerica/the-list/double-chicken-please.html"
+      ]
+    },
+    {
+      "identityKey": "maybe-sammy::sydney::BARS",
+      "canonicalSlug": "maybe-sammy-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/maybe-sammy.html",
+      "mergedSlugs": [
+        "maybe-sammy"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/maybe-sammy.html"
+      ]
+    },
+    {
+      "identityKey": "1930::milan::BARS",
+      "canonicalSlug": "1930-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/1930.html",
+      "mergedSlugs": [
+        "1930"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/1930.html"
+      ]
+    },
+    {
+      "identityKey": "jewel-of-the-south::new-orleans::BARS",
+      "canonicalSlug": "jewel-of-the-south-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/jewel-of-the-south.html",
+      "mergedSlugs": [
+        "jewel-of-the-south",
+        "jewel-of-the-south-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/jewel-of-the-south.html",
+        "https://www.theworlds50best.com/bars/northamerica/the-list/jewel-of-the-south.html"
+      ]
+    },
+    {
+      "identityKey": "virtu::tokyo::BARS",
+      "canonicalSlug": "virtu-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/virtu.html",
+      "mergedSlugs": [
+        "virtu",
+        "virtu-2",
+        "virtu-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/virtu.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/virtu.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/virtu.html"
+      ]
+    },
+    {
+      "identityKey": "overstory::new-york::BARS",
+      "canonicalSlug": "overstory-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/overstory.html",
+      "mergedSlugs": [
+        "overstory",
+        "overstory-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/overstory.html",
+        "https://www.theworlds50best.com/bars/northamerica/the-list/overstory.html"
+      ]
+    },
+    {
+      "identityKey": "the-bar-in-front-of-the-bar::athens::BARS",
+      "canonicalSlug": "the-bar-in-front-of-the-bar-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/the-bar-in-front-of-the-bar.html",
+      "mergedSlugs": [
+        "the-bar-in-front-of-the-bar"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/the-bar-in-front-of-the-bar.html"
+      ]
+    },
+    {
+      "identityKey": "the-bellwood::tokyo::BARS",
+      "canonicalSlug": "the-bellwood-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/the-bellwood.html",
+      "mergedSlugs": [
+        "the-bellwood"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/the-bellwood.html"
+      ]
+    },
+    {
+      "identityKey": "bkk-social-club::bangkok::BARS",
+      "canonicalSlug": "bkk-social-club-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bkk-social-club.html",
+      "mergedSlugs": [
+        "bkk-social-club",
+        "bkk-social-club-2",
+        "bkk-social-club-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/bkk-social-club.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/bkk-social-club.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/bkk-social-club.html"
+      ]
+    },
+    {
+      "identityKey": "nutmeg-clove::singapore::BARS",
+      "canonicalSlug": "nutmeg-clove-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/nutmeg-clove.html",
+      "mergedSlugs": [
+        "nutmeg-clove",
+        "nutmeg-clove-2",
+        "nutmeg-clove-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/the-list/nutmeg-clove.html",
+        "https://www.theworlds50best.com/bars/asia/the-list/nutmeg-clove.html",
+        "https://www.theworlds50best.com/bars/best-in-asia/the-list/nutmeg-clove.html"
+      ]
+    },
+    {
+      "identityKey": "maido::lima::RESTAURANTS",
+      "canonicalSlug": "maido-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/maido.html",
+      "mergedSlugs": [
+        "maido-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/maido.html"
+      ]
+    },
+    {
+      "identityKey": "asador-etxebarri::atxondo::RESTAURANTS",
+      "canonicalSlug": "asador-etxebarri-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/Asador-Etxebarri.html",
+      "mergedSlugs": [
+        "asador-etxebarri-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/Asador-Etxebarri.html"
+      ]
+    },
+    {
+      "identityKey": "quintonil::mexico-city::RESTAURANTS",
+      "canonicalSlug": "quintonil-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/quintonil.html",
+      "mergedSlugs": [
+        "quintonil-restaurant",
+        "quintonil-restaurant-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/quintonil.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Quintonil.html"
+      ]
+    },
+    {
+      "identityKey": "diverxo::madrid::RESTAURANTS",
+      "canonicalSlug": "diverxo-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/diverxo.html",
+      "mergedSlugs": [
+        "diverxo-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/diverxo.html"
+      ]
+    },
+    {
+      "identityKey": "alchemist::copenhagen::RESTAURANTS",
+      "canonicalSlug": "alchemist-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/alchemist.html",
+      "mergedSlugs": [
+        "alchemist-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/alchemist.html"
+      ]
+    },
+    {
+      "identityKey": "gaggan::bangkok::RESTAURANTS",
+      "canonicalSlug": "gaggan-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/gaggan.html",
+      "mergedSlugs": [
+        "gaggan-restaurant",
+        "gaggan-restaurant-2",
+        "gaggan-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/gaggan.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Gaggan.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Gaggan.html"
+      ]
+    },
+    {
+      "identityKey": "sezanne::tokyo::RESTAURANTS",
+      "canonicalSlug": "sezanne-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/sezanne.html",
+      "mergedSlugs": [
+        "sezanne-restaurant",
+        "sezanne-restaurant-2",
+        "sezanne-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/sezanne.html",
+        "https://www.theworlds50best.com/asia/en/the-list/sezanne.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/sezanne.html"
+      ]
+    },
+    {
+      "identityKey": "table-by-bruno-verjus::paris::RESTAURANTS",
+      "canonicalSlug": "table-by-bruno-verjus-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/table-by-bruno-verjus.html",
+      "mergedSlugs": [
+        "table-by-bruno-verjus-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/table-by-bruno-verjus.html"
+      ]
+    },
+    {
+      "identityKey": "kjolle::lima::RESTAURANTS",
+      "canonicalSlug": "kjolle-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/kjolle.html",
+      "mergedSlugs": [
+        "kjolle-restaurant",
+        "kjolle-restaurant-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/kjolle.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Kjolle.html"
+      ]
+    },
+    {
+      "identityKey": "don-julio::buenos-aires::RESTAURANTS",
+      "canonicalSlug": "don-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/don.html",
+      "mergedSlugs": [
+        "don-restaurant",
+        "don-julio-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/don.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Don-Julio.html"
+      ]
+    },
+    {
+      "identityKey": "wing::hong-kong::RESTAURANTS",
+      "canonicalSlug": "wing-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/wing.html",
+      "mergedSlugs": [
+        "wing-restaurant",
+        "wing-restaurant-2",
+        "wing-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/wing.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Wing.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Wing.html"
+      ]
+    },
+    {
+      "identityKey": "atomix::new-york::RESTAURANTS",
+      "canonicalSlug": "atomix-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/atomix.html",
+      "mergedSlugs": [
+        "atomix-restaurant",
+        "atomix-restaurant-2",
+        "atomix-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/atomix.html",
+        "https://www.theworlds50best.com/northamerica/en/the-list/atomix.html",
+        "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/atomix.html"
+      ]
+    },
+    {
+      "identityKey": "potong::bangkok::RESTAURANTS",
+      "canonicalSlug": "potong-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/potong.html",
+      "mergedSlugs": [
+        "potong-restaurant",
+        "potong-restaurant-2",
+        "potong-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/potong.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Potong.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Potong.html"
+      ]
+    },
+    {
+      "identityKey": "plenitude::paris::RESTAURANTS",
+      "canonicalSlug": "plenitude-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/plenitude.html",
+      "mergedSlugs": [
+        "plenitude-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/plenitude.html"
+      ]
+    },
+    {
+      "identityKey": "ikoyi::london::RESTAURANTS",
+      "canonicalSlug": "ikoyi-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/ikoyi.html",
+      "mergedSlugs": [
+        "ikoyi-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/ikoyi.html"
+      ]
+    },
+    {
+      "identityKey": "lido-84::gardone-riviera::RESTAURANTS",
+      "canonicalSlug": "lido-84-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/lido-84.html",
+      "mergedSlugs": [
+        "lido-84-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/lido-84.html"
+      ]
+    },
+    {
+      "identityKey": "sorn::bangkok::RESTAURANTS",
+      "canonicalSlug": "sorn-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/sorn.html",
+      "mergedSlugs": [
+        "sorn-restaurant",
+        "sorn-restaurant-2",
+        "sorn-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/sorn.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Sorn.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Sorn.html"
+      ]
+    },
+    {
+      "identityKey": "reale::castel-di-sangro::RESTAURANTS",
+      "canonicalSlug": "reale-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/reale.html",
+      "mergedSlugs": [
+        "reale-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/reale.html"
+      ]
+    },
+    {
+      "identityKey": "the-chairman::hong-kong::RESTAURANTS",
+      "canonicalSlug": "the-chairman-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/the-chairman.html",
+      "mergedSlugs": [
+        "the-chairman-restaurant",
+        "the-chairman-restaurant-2",
+        "the-chairman-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/the-chairman.html",
+        "https://www.theworlds50best.com/asia/en/the-list/The-Chairman.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/The-Chairman.html"
+      ]
+    },
+    {
+      "identityKey": "atelier-moessmer-norbert-niederkofler::brunico::RESTAURANTS",
+      "canonicalSlug": "atelier-moessmer-norbert-niederkofler-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/atelier-moessmer-norbert-niederkofler.html",
+      "mergedSlugs": [
+        "atelier-moessmer-norbert-niederkofler-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/atelier-moessmer-norbert-niederkofler.html"
+      ]
+    },
+    {
+      "identityKey": "narisawa::tokyo::RESTAURANTS",
+      "canonicalSlug": "narisawa-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/narisawa.html",
+      "mergedSlugs": [
+        "narisawa-restaurant",
+        "narisawa-restaurant-2",
+        "narisawa-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/narisawa.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Narisawa.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Narisawa.html"
+      ]
+    },
+    {
+      "identityKey": "suhring::bangkok::RESTAURANTS",
+      "canonicalSlug": "suhring-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/suhring.html",
+      "mergedSlugs": [
+        "suhring-restaurant",
+        "suhring-restaurant-2",
+        "suhring-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/suhring.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Suhring.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Suhring.html"
+      ]
+    },
+    {
+      "identityKey": "borago::santiago::RESTAURANTS",
+      "canonicalSlug": "borago-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/borago.html",
+      "mergedSlugs": [
+        "borago-restaurant",
+        "borag-c3-b3-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/borago.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Boragó.html"
+      ]
+    },
+    {
+      "identityKey": "elkano::getaria::RESTAURANTS",
+      "canonicalSlug": "elkano-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/elkano.html",
+      "mergedSlugs": [
+        "elkano-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/elkano.html"
+      ]
+    },
+    {
+      "identityKey": "odette::singapore::RESTAURANTS",
+      "canonicalSlug": "odette-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/odette.html",
+      "mergedSlugs": [
+        "odette-restaurant",
+        "odette-restaurant-2",
+        "odette-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/odette.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Odette.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Odette.html"
+      ]
+    },
+    {
+      "identityKey": "merito::lima::RESTAURANTS",
+      "canonicalSlug": "merito-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/merito.html",
+      "mergedSlugs": [
+        "merito-restaurant",
+        "m-c3-a9rito-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/merito.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Mérito.html"
+      ]
+    },
+    {
+      "identityKey": "tresind-studio::dubai::RESTAURANTS",
+      "canonicalSlug": "tresind-studio-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/tresind-studio.html",
+      "mergedSlugs": [
+        "tresind-studio-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/tresind-studio.html"
+      ]
+    },
+    {
+      "identityKey": "lasai::rio-de-janeiro::RESTAURANTS",
+      "canonicalSlug": "lasai-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/lasai.html",
+      "mergedSlugs": [
+        "lasai-restaurant",
+        "lasai-restaurant-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/lasai.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Lasai.html"
+      ]
+    },
+    {
+      "identityKey": "mingles::seoul::RESTAURANTS",
+      "canonicalSlug": "mingles-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/mingles.html",
+      "mergedSlugs": [
+        "mingles-restaurant",
+        "mingles-restaurant-2",
+        "mingles-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/mingles.html",
+        "https://www.theworlds50best.com/asia/en/the-list/mingles.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/mingles.html"
+      ]
+    },
+    {
+      "identityKey": "le-du::bangkok::RESTAURANTS",
+      "canonicalSlug": "le-du-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/le-du.html",
+      "mergedSlugs": [
+        "le-du-restaurant",
+        "le-du-restaurant-2",
+        "le-du-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/le-du.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Le-Du.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Le-Du.html"
+      ]
+    },
+    {
+      "identityKey": "le-calandre::rubano::RESTAURANTS",
+      "canonicalSlug": "le-calandre-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/le-calandre.html",
+      "mergedSlugs": [
+        "le-calandre-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/le-calandre.html"
+      ]
+    },
+    {
+      "identityKey": "piazza-duomo::alba::RESTAURANTS",
+      "canonicalSlug": "piazza-duomo-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/piazza-duomo.html",
+      "mergedSlugs": [
+        "piazza-duomo-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/piazza-duomo.html"
+      ]
+    },
+    {
+      "identityKey": "steirereck::vienna::RESTAURANTS",
+      "canonicalSlug": "steirereck-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/steirereck.html",
+      "mergedSlugs": [
+        "steirereck-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/steirereck.html"
+      ]
+    },
+    {
+      "identityKey": "enigma::barcelona::RESTAURANTS",
+      "canonicalSlug": "enigma-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/enigma.html",
+      "mergedSlugs": [
+        "enigma-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/enigma.html"
+      ]
+    },
+    {
+      "identityKey": "nusara::bangkok::RESTAURANTS",
+      "canonicalSlug": "nusara-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/nusara.html",
+      "mergedSlugs": [
+        "nusara-restaurant",
+        "nusara-restaurant-2",
+        "nusara-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/nusara.html",
+        "https://www.theworlds50best.com/asia/en/the-list/Nusara.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Nusara.html"
+      ]
+    },
+    {
+      "identityKey": "florilege::tokyo::RESTAURANTS",
+      "canonicalSlug": "florilege-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/florilege.html",
+      "mergedSlugs": [
+        "florilege-restaurant",
+        "florilege-restaurant-2",
+        "florilege-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/florilege.html",
+        "https://www.theworlds50best.com/asia/en/the-list/florilege.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/florilege.html"
+      ]
+    },
+    {
+      "identityKey": "orfali-bros::dubai::RESTAURANTS",
+      "canonicalSlug": "orfali-bros-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/orfali-bros.html",
+      "mergedSlugs": [
+        "orfali-bros-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/orfali-bros.html"
+      ]
+    },
+    {
+      "identityKey": "frantzen::stockholm::RESTAURANTS",
+      "canonicalSlug": "frantzen-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/frantzen.html",
+      "mergedSlugs": [
+        "frantzen-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/frantzen.html"
+      ]
+    },
+    {
+      "identityKey": "mayta::lima::RESTAURANTS",
+      "canonicalSlug": "mayta-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/mayta.html",
+      "mergedSlugs": [
+        "mayta-restaurant",
+        "mayta-restaurant-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/mayta.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Mayta.html"
+      ]
+    },
+    {
+      "identityKey": "septime::paris::RESTAURANTS",
+      "canonicalSlug": "septime-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/septime.html",
+      "mergedSlugs": [
+        "septime-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/septime.html"
+      ]
+    },
+    {
+      "identityKey": "kadeau::copenhagen::RESTAURANTS",
+      "canonicalSlug": "kadeau-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/kadeau.html",
+      "mergedSlugs": [
+        "kadeau-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/kadeau.html"
+      ]
+    },
+    {
+      "identityKey": "belcanto::lisbon::RESTAURANTS",
+      "canonicalSlug": "belcanto-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/belcanto.html",
+      "mergedSlugs": [
+        "belcanto-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/belcanto.html"
+      ]
+    },
+    {
+      "identityKey": "uliassi::senigallia::RESTAURANTS",
+      "canonicalSlug": "uliassi-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/uliassi.html",
+      "mergedSlugs": [
+        "uliassi-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/uliassi.html"
+      ]
+    },
+    {
+      "identityKey": "la-cime::osaka::RESTAURANTS",
+      "canonicalSlug": "la-cime-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/la-cime.html",
+      "mergedSlugs": [
+        "la-cime-restaurant",
+        "la-cime-restaurant-2",
+        "la-cime-restaurant-4"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/la-cime.html",
+        "https://www.theworlds50best.com/asia/en/the-list/La-Cime.html",
+        "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/La-Cime.html"
+      ]
+    },
+    {
+      "identityKey": "arpege::paris::RESTAURANTS",
+      "canonicalSlug": "arpege-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/arpege.html",
+      "mergedSlugs": [
+        "arpege-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/arpege.html"
+      ]
+    },
+    {
+      "identityKey": "rosetta::mexico-city::RESTAURANTS",
+      "canonicalSlug": "rosetta-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/rosetta.html",
+      "mergedSlugs": [
+        "rosetta-restaurant",
+        "rosetta-restaurant-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/rosetta.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Rosetta.html"
+      ]
+    },
+    {
+      "identityKey": "vyn::skillinge::RESTAURANTS",
+      "canonicalSlug": "vyn-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/vyn.html",
+      "mergedSlugs": [
+        "vyn-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/vyn.html"
+      ]
+    },
+    {
+      "identityKey": "celele::cartagena::RESTAURANTS",
+      "canonicalSlug": "celele-restaurant-3",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/celele.html",
+      "mergedSlugs": [
+        "celele-restaurant",
+        "celele-restaurant-2"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/celele.html",
+        "https://www.theworlds50best.com/latinamerica/en/the-list/Celele.html"
+      ]
+    },
+    {
+      "identityKey": "kol::london::RESTAURANTS",
+      "canonicalSlug": "kol-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/kol.html",
+      "mergedSlugs": [
+        "kol-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/kol.html"
+      ]
+    },
+    {
+      "identityKey": "jan::munich::RESTAURANTS",
+      "canonicalSlug": "restaurant-jan-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/restaurant-jan.html",
+      "mergedSlugs": [
+        "restaurant-jan-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/the-list/restaurant-jan.html"
+      ]
+    },
+    {
+      "identityKey": "dry-wave-cocktail-studio::bangkok::BARS",
+      "canonicalSlug": "dry-wave-cocktail-studio-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/dry-wave-cocktail-studio.html",
+      "mergedSlugs": [
+        "dry-wave-cocktail-studio"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/dry-wave-cocktail-studio.html"
+      ]
+    },
+    {
+      "identityKey": "bar-cham::seoul::BARS",
+      "canonicalSlug": "cham-bar-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/cham-bar.html",
+      "mergedSlugs": [
+        "cham-bar"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/cham-bar.html"
+      ]
+    },
+    {
+      "identityKey": "lair::new-delhi::BARS",
+      "canonicalSlug": "lair-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/lair.html",
+      "mergedSlugs": [
+        "lair"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/lair.html"
+      ]
+    },
+    {
+      "identityKey": "penrose::kuala-lumpur::BARS",
+      "canonicalSlug": "penrose-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/penrose.html",
+      "mergedSlugs": [
+        "penrose"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/penrose.html"
+      ]
+    },
+    {
+      "identityKey": "argo::hong-kong::BARS",
+      "canonicalSlug": "argo-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/argo.html",
+      "mergedSlugs": [
+        "argo"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/argo.html"
+      ]
+    },
+    {
+      "identityKey": "modernhaus::jakarta::BARS",
+      "canonicalSlug": "modernhaus-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/modernhaus.html",
+      "mergedSlugs": [
+        "modernhaus"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/modernhaus.html"
+      ]
+    },
+    {
+      "identityKey": "alice::seoul::BARS",
+      "canonicalSlug": "alice-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/alice.html",
+      "mergedSlugs": [
+        "alice"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/alice.html"
+      ]
+    },
+    {
+      "identityKey": "smoke-bitters::hiriketiya::BARS",
+      "canonicalSlug": "smoke-and-bitters-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/smoke-and-bitters.html",
+      "mergedSlugs": [
+        "smoke-and-bitters"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/smoke-and-bitters.html"
+      ]
+    },
+    {
+      "identityKey": "three-x-co::kuala-lumpur::BARS",
+      "canonicalSlug": "three-x-co-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/Three-X-Co.html",
+      "mergedSlugs": [
+        "three-x-co"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/Three-X-Co.html"
+      ]
+    },
+    {
+      "identityKey": "cmyk::changsha::BARS",
+      "canonicalSlug": "cmyk-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/CMYK.html",
+      "mergedSlugs": [
+        "cmyk"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/CMYK.html"
+      ]
+    },
+    {
+      "identityKey": "vender::taichung::BARS",
+      "canonicalSlug": "vender-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/vender.html",
+      "mergedSlugs": [
+        "vender"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/vender.html"
+      ]
+    },
+    {
+      "identityKey": "mo-bar-shenzhen::shenzhen::BARS",
+      "canonicalSlug": "mo-bar-shenzhen-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/mo-bar-shenzhen.html",
+      "mergedSlugs": [
+        "mo-bar-shenzhen"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/mo-bar-shenzhen.html"
+      ]
+    },
+    {
+      "identityKey": "the-st-regis-bar::jakarta::BARS",
+      "canonicalSlug": "the-st-regis-bar-jakarta-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/the-st-regis-bar-jakarta.html",
+      "mergedSlugs": [
+        "the-st-regis-bar-jakarta"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/the-st-regis-bar-jakarta.html"
+      ]
+    },
+    {
+      "identityKey": "offtrack::singapore::BARS",
+      "canonicalSlug": "offtrack-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/offtrack.html",
+      "mergedSlugs": [
+        "offtrack"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/offtrack.html"
+      ]
+    },
+    {
+      "identityKey": "yakoboku::kumamoto::BARS",
+      "canonicalSlug": "yakoboku-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/yakoboku.html",
+      "mergedSlugs": [
+        "yakoboku"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/yakoboku.html"
+      ]
+    },
+    {
+      "identityKey": "g-o-d::bangkok::BARS",
+      "canonicalSlug": "god-bangkok-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/god-bangkok.html",
+      "mergedSlugs": [
+        "god-bangkok"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/god-bangkok.html"
+      ]
+    },
+    {
+      "identityKey": "penicillin::hong-kong::BARS",
+      "canonicalSlug": "penicillin-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/penicillin.html",
+      "mergedSlugs": [
+        "penicillin"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/penicillin.html"
+      ]
+    },
+    {
+      "identityKey": "soka::bengaluru::BARS",
+      "canonicalSlug": "soka-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/soka.html",
+      "mergedSlugs": [
+        "soka"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/soka.html"
+      ]
+    },
+    {
+      "identityKey": "vesper::bangkok::BARS",
+      "canonicalSlug": "vesper-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/vesper.html",
+      "mergedSlugs": [
+        "vesper"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/vesper.html"
+      ]
+    },
+    {
+      "identityKey": "boilermaker::goa::BARS",
+      "canonicalSlug": "boilermaker-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/boilermaker.html",
+      "mergedSlugs": [
+        "boilermaker"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/boilermaker.html"
+      ]
+    },
+    {
+      "identityKey": "zlb23::bengaluru::BARS",
+      "canonicalSlug": "zlb23-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/ZLB23.html",
+      "mergedSlugs": [
+        "zlb23"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/ZLB23.html"
+      ]
+    },
+    {
+      "identityKey": "the-savory-project::hong-kong::BARS",
+      "canonicalSlug": "the-savory-project-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/the-savory-project.html",
+      "mergedSlugs": [
+        "the-savory-project"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/the-savory-project.html"
+      ]
+    },
+    {
+      "identityKey": "gokan::hong-kong::BARS",
+      "canonicalSlug": "gokan-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/gokan.html",
+      "mergedSlugs": [
+        "gokan"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/gokan.html"
+      ]
+    },
+    {
+      "identityKey": "carrots-bar::jakarta::BARS",
+      "canonicalSlug": "carrots-bar-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/carrots-bar.html",
+      "mergedSlugs": [
+        "carrots-bar"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/carrots-bar.html"
+      ]
+    },
+    {
+      "identityKey": "barc::kathmandu::BARS",
+      "canonicalSlug": "barc-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/barc.html",
+      "mergedSlugs": [
+        "barc"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/barc.html"
+      ]
+    },
+    {
+      "identityKey": "punch-room-tokyo::tokyo::BARS",
+      "canonicalSlug": "punch-room-tokyo-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/punch-room-tokyo.html",
+      "mergedSlugs": [
+        "punch-room-tokyo"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/punch-room-tokyo.html"
+      ]
+    },
+    {
+      "identityKey": "bar-spirit-forward::bengaluru::BARS",
+      "canonicalSlug": "bar-spirit-forward-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-spirit-forward.html",
+      "mergedSlugs": [
+        "bar-spirit-forward"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/bar-spirit-forward.html"
+      ]
+    },
+    {
+      "identityKey": "cosmo-pony::jakarta::BARS",
+      "canonicalSlug": "cosmo-pony-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/cosmo-pony.html",
+      "mergedSlugs": [
+        "cosmo-pony"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/cosmo-pony.html"
+      ]
+    },
+    {
+      "identityKey": "bar-trigona::kuala-lumpur::BARS",
+      "canonicalSlug": "bar-trigona-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-trigona.html",
+      "mergedSlugs": [
+        "bar-trigona"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/bar-trigona.html"
+      ]
+    },
+    {
+      "identityKey": "the-public-house::taipei::BARS",
+      "canonicalSlug": "the-public-house-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/the-public-house.html",
+      "mergedSlugs": [
+        "the-public-house"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/the-public-house.html"
+      ]
+    },
+    {
+      "identityKey": "to-infinity-beyond::taipei::BARS",
+      "canonicalSlug": "to-infinity-and-beyond-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/to-infinity-and-beyond.html",
+      "mergedSlugs": [
+        "to-infinity-and-beyond"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/to-infinity-and-beyond.html"
+      ]
+    },
+    {
+      "identityKey": "moonrock::tainan::BARS",
+      "canonicalSlug": "moonrock-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/moonrock.html",
+      "mergedSlugs": [
+        "moonrock"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/moonrock.html"
+      ]
+    },
+    {
+      "identityKey": "opium::bangkok::BARS",
+      "canonicalSlug": "opium-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/opium.html",
+      "mergedSlugs": [
+        "opium"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/opium.html"
+      ]
+    },
+    {
+      "identityKey": "cat-bite-club::singapore::BARS",
+      "canonicalSlug": "cat-bite-club-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/cat-bite-club.html",
+      "mergedSlugs": [
+        "cat-bite-club"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/cat-bite-club.html"
+      ]
+    },
+    {
+      "identityKey": "native::singapore::BARS",
+      "canonicalSlug": "native-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/native.html",
+      "mergedSlugs": [
+        "native"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/native.html"
+      ]
+    },
+    {
+      "identityKey": "lamp-bar::nara::BARS",
+      "canonicalSlug": "lamp-bar-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/lamp-bar.html",
+      "mergedSlugs": [
+        "lamp-bar"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/lamp-bar.html"
+      ]
+    },
+    {
+      "identityKey": "reka::kuala-lumpur::BARS",
+      "canonicalSlug": "reka-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/reka.html",
+      "mergedSlugs": [
+        "reka"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/reka.html"
+      ]
+    },
+    {
+      "identityKey": "bar-sathorn::bangkok::BARS",
+      "canonicalSlug": "bar-sathorn-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-sathorn.html",
+      "mergedSlugs": [
+        "bar-sathorn"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/bar-sathorn.html"
+      ]
+    },
+    {
+      "identityKey": "bar-libre::tokyo::BARS",
+      "canonicalSlug": "bar-libre-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/bar-libre.html",
+      "mergedSlugs": [
+        "bar-libre"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/bar-libre.html"
+      ]
+    },
+    {
+      "identityKey": "le-chamber::seoul::BARS",
+      "canonicalSlug": "le-chamber-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/bars/best-in-asia/the-list/le-chamber.html",
+      "mergedSlugs": [
+        "le-chamber"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/bars/asia/the-list/le-chamber.html"
+      ]
+    },
+    {
+      "identityKey": "meet-the-bund::shanghai::RESTAURANTS",
+      "canonicalSlug": "meet-the-bund-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Meet-The-Bund.html",
+      "mergedSlugs": [
+        "meet-the-bund-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Meet-The-Bund.html"
+      ]
+    },
+    {
+      "identityKey": "chef-tam-s-seasons::macau::RESTAURANTS",
+      "canonicalSlug": "chef-tams-seasons-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Chef-Tams-Seasons.html",
+      "mergedSlugs": [
+        "chef-tams-seasons-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Chef-Tams-Seasons.html"
+      ]
+    },
+    {
+      "identityKey": "gaggan-at-louis-vuitton::bangkok::RESTAURANTS",
+      "canonicalSlug": "gaggan-at-louis-vuitton-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/gaggan-at-louis-vuitton.html",
+      "mergedSlugs": [
+        "gaggan-at-louis-vuitton-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/gaggan-at-louis-vuitton.html"
+      ]
+    },
+    {
+      "identityKey": "ling-long::shanghai::RESTAURANTS",
+      "canonicalSlug": "ling-long-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/ling-long.html",
+      "mergedSlugs": [
+        "ling-long-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/ling-long.html"
+      ]
+    },
+    {
+      "identityKey": "ru-yuan::hangzhou::RESTAURANTS",
+      "canonicalSlug": "ru-yuan-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Ru-Yuan.html",
+      "mergedSlugs": [
+        "ru-yuan-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Ru-Yuan.html"
+      ]
+    },
+    {
+      "identityKey": "fu-he-hui::shanghai::RESTAURANTS",
+      "canonicalSlug": "fu-he-hui-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Fu-He-Hui.html",
+      "mergedSlugs": [
+        "fu-he-hui-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Fu-He-Hui.html"
+      ]
+    },
+    {
+      "identityKey": "onjium::seoul::RESTAURANTS",
+      "canonicalSlug": "onjium-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/onjium.html",
+      "mergedSlugs": [
+        "onjium-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/onjium.html"
+      ]
+    },
+    {
+      "identityKey": "masque::mumbai::RESTAURANTS",
+      "canonicalSlug": "masque-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Masque.html",
+      "mergedSlugs": [
+        "masque-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Masque.html"
+      ]
+    },
+    {
+      "identityKey": "lamdre::beijing::RESTAURANTS",
+      "canonicalSlug": "lamdre-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/lamdre.html",
+      "mergedSlugs": [
+        "lamdre-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/lamdre.html"
+      ]
+    },
+    {
+      "identityKey": "seroja::singapore::RESTAURANTS",
+      "canonicalSlug": "seroja-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/seroja.html",
+      "mergedSlugs": [
+        "seroja-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/seroja.html"
+      ]
+    },
+    {
+      "identityKey": "sazenka::tokyo::RESTAURANTS",
+      "canonicalSlug": "sazenka-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Sazenka.html",
+      "mergedSlugs": [
+        "sazenka-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Sazenka.html"
+      ]
+    },
+    {
+      "identityKey": "logy::taipei::RESTAURANTS",
+      "canonicalSlug": "logy-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Logy.html",
+      "mergedSlugs": [
+        "logy-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Logy.html"
+      ]
+    },
+    {
+      "identityKey": "born::singapore::RESTAURANTS",
+      "canonicalSlug": "born-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Born.html",
+      "mergedSlugs": [
+        "born-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Born.html"
+      ]
+    },
+    {
+      "identityKey": "neighborhood::hong-kong::RESTAURANTS",
+      "canonicalSlug": "neighborhood-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Neighborhood.html",
+      "mergedSlugs": [
+        "neighborhood-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Neighborhood.html"
+      ]
+    },
+    {
+      "identityKey": "eatanic-garden::seoul::RESTAURANTS",
+      "canonicalSlug": "eatanic-garden-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/eatanic-garden.html",
+      "mergedSlugs": [
+        "eatanic-garden-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/eatanic-garden.html"
+      ]
+    },
+    {
+      "identityKey": "ms-maria-mr-singh::bangkok::RESTAURANTS",
+      "canonicalSlug": "ms-maria-mr-singh-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Ms-Maria-Mr-Singh.html",
+      "mergedSlugs": [
+        "ms-maria-mr-singh-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Ms-Maria-Mr-Singh.html"
+      ]
+    },
+    {
+      "identityKey": "maz::tokyo::RESTAURANTS",
+      "canonicalSlug": "maz-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/maz.html",
+      "mergedSlugs": [
+        "maz-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/maz.html"
+      ]
+    },
+    {
+      "identityKey": "102-house::shanghai::RESTAURANTS",
+      "canonicalSlug": "102-house-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/102-house.html",
+      "mergedSlugs": [
+        "102-house-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/102-house.html"
+      ]
+    },
+    {
+      "identityKey": "naar::kasauli::RESTAURANTS",
+      "canonicalSlug": "naar-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Naar.html",
+      "mergedSlugs": [
+        "naar-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Naar.html"
+      ]
+    },
+    {
+      "identityKey": "estro::hong-kong::RESTAURANTS",
+      "canonicalSlug": "estro-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/estro.html",
+      "mergedSlugs": [
+        "estro-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/estro.html"
+      ]
+    },
+    {
+      "identityKey": "myoujyaku::tokyo::RESTAURANTS",
+      "canonicalSlug": "myoujyaku-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/myoujyaku.html",
+      "mergedSlugs": [
+        "myoujyaku-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/myoujyaku.html"
+      ]
+    },
+    {
+      "identityKey": "crony::tokyo::RESTAURANTS",
+      "canonicalSlug": "crony-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/crony.html",
+      "mergedSlugs": [
+        "crony-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/crony.html"
+      ]
+    },
+    {
+      "identityKey": "caprice::hong-kong::RESTAURANTS",
+      "canonicalSlug": "caprice-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Caprice.html",
+      "mergedSlugs": [
+        "caprice-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Caprice.html"
+      ]
+    },
+    {
+      "identityKey": "les-amis::singapore::RESTAURANTS",
+      "canonicalSlug": "les-amis-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Les-amis.html",
+      "mergedSlugs": [
+        "les-amis-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Les-amis.html"
+      ]
+    },
+    {
+      "identityKey": "au-jardin::penang::RESTAURANTS",
+      "canonicalSlug": "au-jardin-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Au-Jardin.html",
+      "mergedSlugs": [
+        "au-jardin-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Au-Jardin.html"
+      ]
+    },
+    {
+      "identityKey": "labyrinth::singapore::RESTAURANTS",
+      "canonicalSlug": "labyrinth-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Labyrinth.html",
+      "mergedSlugs": [
+        "labyrinth-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Labyrinth.html"
+      ]
+    },
+    {
+      "identityKey": "mosu::seoul::RESTAURANTS",
+      "canonicalSlug": "mosu-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Mosu.html",
+      "mergedSlugs": [
+        "mosu-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Mosu.html"
+      ]
+    },
+    {
+      "identityKey": "august::jakarta::RESTAURANTS",
+      "canonicalSlug": "august-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/August.html",
+      "mergedSlugs": [
+        "august-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/August.html"
+      ]
+    },
+    {
+      "identityKey": "bium::seoul::RESTAURANTS",
+      "canonicalSlug": "bium-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Bium.html",
+      "mergedSlugs": [
+        "bium-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Bium.html"
+      ]
+    },
+    {
+      "identityKey": "locavore-nxt::ubud::RESTAURANTS",
+      "canonicalSlug": "locavore-nxt-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Locavore-NXT.html",
+      "mergedSlugs": [
+        "locavore-nxt-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Locavore-NXT.html"
+      ]
+    },
+    {
+      "identityKey": "nae-um::singapore::RESTAURANTS",
+      "canonicalSlug": "naeum-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Naeum.html",
+      "mergedSlugs": [
+        "naeum-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Naeum.html"
+      ]
+    },
+    {
+      "identityKey": "mono::hong-kong::RESTAURANTS",
+      "canonicalSlug": "mono-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/mono.html",
+      "mergedSlugs": [
+        "mono-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/mono.html"
+      ]
+    },
+    {
+      "identityKey": "wana-yook::bangkok::RESTAURANTS",
+      "canonicalSlug": "wana-yook-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/Wana-Yook.html",
+      "mergedSlugs": [
+        "wana-yook-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/Wana-Yook.html"
+      ]
+    },
+    {
+      "identityKey": "la-bourriche-133::shanghai::RESTAURANTS",
+      "canonicalSlug": "la-bourriche-133-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/La-Bourriche-133.html",
+      "mergedSlugs": [
+        "la-bourriche-133-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/La-Bourriche-133.html"
+      ]
+    },
+    {
+      "identityKey": "7th-door::seoul::RESTAURANTS",
+      "canonicalSlug": "7th-door-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/7th-door.html",
+      "mergedSlugs": [
+        "7th-door-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/7th-door.html"
+      ]
+    },
+    {
+      "identityKey": "jl-studio::taichung::RESTAURANTS",
+      "canonicalSlug": "jl-studio-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-asia/the-list/jl-studio.html",
+      "mergedSlugs": [
+        "jl-studio-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/asia/en/the-list/jl-studio.html"
+      ]
+    },
+    {
+      "identityKey": "smyth::chicago::RESTAURANTS",
+      "canonicalSlug": "smyth-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/smyth.html",
+      "mergedSlugs": [
+        "smyth-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/smyth.html"
+      ]
+    },
+    {
+      "identityKey": "eight::calgary::RESTAURANTS",
+      "canonicalSlug": "eight-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/eight.html",
+      "mergedSlugs": [
+        "eight-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/eight.html"
+      ]
+    },
+    {
+      "identityKey": "restaurant-pearl-morissette::lincoln::RESTAURANTS",
+      "canonicalSlug": "restaurant-pearl-morissette-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/restaurant-pearl-morissette.html",
+      "mergedSlugs": [
+        "restaurant-pearl-morissette-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/restaurant-pearl-morissette.html"
+      ]
+    },
+    {
+      "identityKey": "dakar-nola::new-orleans::RESTAURANTS",
+      "canonicalSlug": "dakar-nola-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/dakar-nola.html",
+      "mergedSlugs": [
+        "dakar-nola-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/dakar-nola.html"
+      ]
+    },
+    {
+      "identityKey": "mon-lapin::montreal::RESTAURANTS",
+      "canonicalSlug": "mon-lapin-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/mon-lapin.html",
+      "mergedSlugs": [
+        "mon-lapin-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/mon-lapin.html"
+      ]
+    },
+    {
+      "identityKey": "albi::washington-dc::RESTAURANTS",
+      "canonicalSlug": "albi-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/albi.html",
+      "mergedSlugs": [
+        "albi-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/albi.html"
+      ]
+    },
+    {
+      "identityKey": "quetzal::toronto::RESTAURANTS",
+      "canonicalSlug": "quetzal-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/quetzal.html",
+      "mergedSlugs": [
+        "quetzal-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/quetzal.html"
+      ]
+    },
+    {
+      "identityKey": "taniere3::quebec-city::RESTAURANTS",
+      "canonicalSlug": "taniere3-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/taniere3.html",
+      "mergedSlugs": [
+        "taniere3-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/taniere3.html"
+      ]
+    },
+    {
+      "identityKey": "cesar::new-york::RESTAURANTS",
+      "canonicalSlug": "cesar-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/cesar.html",
+      "mergedSlugs": [
+        "cesar-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/cesar.html"
+      ]
+    },
+    {
+      "identityKey": "kalaya::philadelphia::RESTAURANTS",
+      "canonicalSlug": "kalaya-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/kalaya.html",
+      "mergedSlugs": [
+        "kalaya-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/kalaya.html"
+      ]
+    },
+    {
+      "identityKey": "le-veau-d-or::new-york::RESTAURANTS",
+      "canonicalSlug": "le-veau-dor-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/le-veau-dor.html",
+      "mergedSlugs": [
+        "le-veau-dor-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/le-veau-dor.html"
+      ]
+    },
+    {
+      "identityKey": "le-bernardin::new-york::RESTAURANTS",
+      "canonicalSlug": "le-bernadin-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/le-bernadin.html",
+      "mergedSlugs": [
+        "le-bernadin-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/le-bernadin.html"
+      ]
+    },
+    {
+      "identityKey": "kabawa::new-york::RESTAURANTS",
+      "canonicalSlug": "kabawa-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/kabawa.html",
+      "mergedSlugs": [
+        "kabawa-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/kabawa.html"
+      ]
+    },
+    {
+      "identityKey": "le-violon::montreal::RESTAURANTS",
+      "canonicalSlug": "le-violon-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/le-violon.html",
+      "mergedSlugs": [
+        "le-violon-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/le-violon.html"
+      ]
+    },
+    {
+      "identityKey": "singlethread::healdsburg::RESTAURANTS",
+      "canonicalSlug": "singlethread-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/singlethread.html",
+      "mergedSlugs": [
+        "singlethread-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/singlethread.html"
+      ]
+    },
+    {
+      "identityKey": "published-on-main::vancouver::RESTAURANTS",
+      "canonicalSlug": "published-on-main-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/published-on-main.html",
+      "mergedSlugs": [
+        "published-on-main-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/published-on-main.html"
+      ]
+    },
+    {
+      "identityKey": "jungsik::new-york::RESTAURANTS",
+      "canonicalSlug": "jungsik-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/jungsik.html",
+      "mergedSlugs": [
+        "jungsik-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/jungsik.html"
+      ]
+    },
+    {
+      "identityKey": "penny::new-york::RESTAURANTS",
+      "canonicalSlug": "penny-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/penny.html",
+      "mergedSlugs": [
+        "penny-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/penny.html"
+      ]
+    },
+    {
+      "identityKey": "emeril-s::new-orleans::RESTAURANTS",
+      "canonicalSlug": "emerils-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/emerils.html",
+      "mergedSlugs": [
+        "emerils-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/emerils.html"
+      ]
+    },
+    {
+      "identityKey": "chubby-fish::charleston::RESTAURANTS",
+      "canonicalSlug": "chubby-fish-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/chubby-fish.html",
+      "mergedSlugs": [
+        "chubby-fish-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/chubby-fish.html"
+      ]
+    },
+    {
+      "identityKey": "saison::san-francisco::RESTAURANTS",
+      "canonicalSlug": "saison-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/saison.html",
+      "mergedSlugs": [
+        "saison-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/saison.html"
+      ]
+    },
+    {
+      "identityKey": "aska::new-york::RESTAURANTS",
+      "canonicalSlug": "aska-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/aska.html",
+      "mergedSlugs": [
+        "aska-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/aska.html"
+      ]
+    },
+    {
+      "identityKey": "moon-rabbit::washington-dc::RESTAURANTS",
+      "canonicalSlug": "moon-rabbit-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/moon-rabbit.html",
+      "mergedSlugs": [
+        "moon-rabbit-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/moon-rabbit.html"
+      ]
+    },
+    {
+      "identityKey": "edulis::toronto::RESTAURANTS",
+      "canonicalSlug": "edulis-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/edulis.html",
+      "mergedSlugs": [
+        "edulis-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/edulis.html"
+      ]
+    },
+    {
+      "identityKey": "holbox::los-angeles::RESTAURANTS",
+      "canonicalSlug": "holbox-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/holbox.html",
+      "mergedSlugs": [
+        "holbox-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/holbox.html"
+      ]
+    },
+    {
+      "identityKey": "beba::montreal::RESTAURANTS",
+      "canonicalSlug": "beba-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/beba.html",
+      "mergedSlugs": [
+        "beba-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/beba.html"
+      ]
+    },
+    {
+      "identityKey": "mhel::toronto::RESTAURANTS",
+      "canonicalSlug": "mhel-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/mhel.html",
+      "mergedSlugs": [
+        "mhel-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/mhel.html"
+      ]
+    },
+    {
+      "identityKey": "avize::atlanta::RESTAURANTS",
+      "canonicalSlug": "avize-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/avize.html",
+      "mergedSlugs": [
+        "avize-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/avize.html"
+      ]
+    },
+    {
+      "identityKey": "acamaya::new-orleans::RESTAURANTS",
+      "canonicalSlug": "acamaya-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/acamaya.html",
+      "mergedSlugs": [
+        "acamaya-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/acamaya.html"
+      ]
+    },
+    {
+      "identityKey": "addison-by-william-bradley::san-diego::RESTAURANTS",
+      "canonicalSlug": "addison-by-william-bradley-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Addison-by-William-Bradley.html",
+      "mergedSlugs": [
+        "addison-by-william-bradley-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/Addison-by-William-Bradley.html"
+      ]
+    },
+    {
+      "identityKey": "providence::los-angeles::RESTAURANTS",
+      "canonicalSlug": "providence-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/providence.html",
+      "mergedSlugs": [
+        "providence-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/providence.html"
+      ]
+    },
+    {
+      "identityKey": "benu::san-francisco::RESTAURANTS",
+      "canonicalSlug": "benu-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/benu.html",
+      "mergedSlugs": [
+        "benu-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/benu.html"
+      ]
+    },
+    {
+      "identityKey": "sabayon::montreal::RESTAURANTS",
+      "canonicalSlug": "sabayon-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/sabayon.html",
+      "mergedSlugs": [
+        "sabayon-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/sabayon.html"
+      ]
+    },
+    {
+      "identityKey": "annalena::vancouver::RESTAURANTS",
+      "canonicalSlug": "annalena-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/annalena.html",
+      "mergedSlugs": [
+        "annalena-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/annalena.html"
+      ]
+    },
+    {
+      "identityKey": "corima::new-york::RESTAURANTS",
+      "canonicalSlug": "corima-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/corima.html",
+      "mergedSlugs": [
+        "corima-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/corima.html"
+      ]
+    },
+    {
+      "identityKey": "dogon-by-kwame-onwuachi::washington-dc::RESTAURANTS",
+      "canonicalSlug": "dogon-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/dogon.html",
+      "mergedSlugs": [
+        "dogon-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/dogon.html"
+      ]
+    },
+    {
+      "identityKey": "torrisi::new-york::RESTAURANTS",
+      "canonicalSlug": "torrisi-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Torrisi.html",
+      "mergedSlugs": [
+        "torrisi-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/Torrisi.html"
+      ]
+    },
+    {
+      "identityKey": "tatiana-by-kwame-onwuachi::new-york::RESTAURANTS",
+      "canonicalSlug": "tatiana-by-kwame-onwuachi-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Tatiana-by-Kwame-Onwuachi.html",
+      "mergedSlugs": [
+        "tatiana-by-kwame-onwuachi-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/Tatiana-by-Kwame-Onwuachi.html"
+      ]
+    },
+    {
+      "identityKey": "friday-saturday-sunday::philadelphia::RESTAURANTS",
+      "canonicalSlug": "friday-saturday-sunday-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/friday-saturday-sunday.html",
+      "mergedSlugs": [
+        "friday-saturday-sunday-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/friday-saturday-sunday.html"
+      ]
+    },
+    {
+      "identityKey": "semma::new-york::RESTAURANTS",
+      "canonicalSlug": "semma-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Semma.html",
+      "mergedSlugs": [
+        "semma-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/Semma.html"
+      ]
+    },
+    {
+      "identityKey": "pascual::washington-dc::RESTAURANTS",
+      "canonicalSlug": "pascual-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/pascual.html",
+      "mergedSlugs": [
+        "pascual-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/pascual.html"
+      ]
+    },
+    {
+      "identityKey": "gramercy-tavern::new-york::RESTAURANTS",
+      "canonicalSlug": "gramercy-tavern-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Gramercy-Tavern.html",
+      "mergedSlugs": [
+        "gramercy-tavern-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/Gramercy-Tavern.html"
+      ]
+    },
+    {
+      "identityKey": "atelier-crenn::san-francisco::RESTAURANTS",
+      "canonicalSlug": "atelier-crenn-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/atelier-crenn.html",
+      "mergedSlugs": [
+        "atelier-crenn-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/atelier-crenn.html"
+      ]
+    },
+    {
+      "identityKey": "sons-daughters::san-francisco::RESTAURANTS",
+      "canonicalSlug": "sons-daughters-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Sons-Daughters.html",
+      "mergedSlugs": [
+        "sons-daughters-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/Sons-Daughters.html"
+      ]
+    },
+    {
+      "identityKey": "somni::los-angeles::RESTAURANTS",
+      "canonicalSlug": "somni-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/somni.html",
+      "mergedSlugs": [
+        "somni-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/somni.html"
+      ]
+    },
+    {
+      "identityKey": "wild-blue::whistler::RESTAURANTS",
+      "canonicalSlug": "wild-ble-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/wild-ble.html",
+      "mergedSlugs": [
+        "wild-ble-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/wild-ble.html"
+      ]
+    },
+    {
+      "identityKey": "the-pine::collingwood::RESTAURANTS",
+      "canonicalSlug": "the-pine-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/The-Pine.html",
+      "mergedSlugs": [
+        "the-pine-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/The-Pine.html"
+      ]
+    },
+    {
+      "identityKey": "kato::los-angeles::RESTAURANTS",
+      "canonicalSlug": "kato-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/kato.html",
+      "mergedSlugs": [
+        "kato-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/kato.html"
+      ]
+    },
+    {
+      "identityKey": "diane-s-place::minneapolis::RESTAURANTS",
+      "canonicalSlug": "dianes-place-restaurant-2",
+      "canonicalSourceUrl": "https://www.theworlds50best.com/restaurants/best-in-north-america/the-list/Dianes-Place.html",
+      "mergedSlugs": [
+        "dianes-place-restaurant"
+      ],
+      "mergedSourceUrls": [
+        "https://www.theworlds50best.com/northamerica/en/the-list/Dianes-Place.html"
+      ]
+    }
+  ]
+}

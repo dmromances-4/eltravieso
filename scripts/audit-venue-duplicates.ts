@@ -7,6 +7,7 @@
 import { config } from "dotenv";
 import { resolve } from "path";
 import prisma from "@/lib/prisma";
+import { venueIdentityKeyFromParts } from "@/lib/venues/canonical-venue";
 import { writeAuditReport } from "./lib/audit-output";
 
 config({ path: resolve(process.cwd(), ".env.local") });
@@ -32,6 +33,7 @@ type GuideRow = {
   venuePreferences: string[];
   priceRange: string | null;
   tripadvisorUrl: string | null;
+  worlds50bestCategory: string;
 };
 
 function hasTaxonomy(g: GuideRow): boolean {
@@ -91,6 +93,7 @@ async function main() {
       venuePreferences: true,
       priceRange: true,
       tripadvisorUrl: true,
+      worlds50bestCategory: true,
     },
     orderBy: { createdAt: "asc" },
   });
@@ -244,6 +247,28 @@ async function main() {
     duplicateVenueCodesInBars.length +
     crossVenueCodeConflicts.length;
 
+  const identityGroups = new Map<string, GuideRow[]>();
+  for (const guide of guides) {
+    if (!guide.name?.trim() || !guide.city?.trim()) continue;
+    const key = venueIdentityKeyFromParts(
+      guide.name,
+      guide.city,
+      guide.worlds50bestCategory as "BARS" | "RESTAURANTS",
+    );
+    const list = identityGroups.get(key) ?? [];
+    list.push(guide);
+    identityGroups.set(key, list);
+  }
+
+  const logicalDuplicates = [...identityGroups.entries()]
+    .filter(([, list]) => list.length > 1)
+    .map(([identityKey, entries]) => ({
+      identityKey,
+      count: entries.length,
+      slugs: entries.map((e) => e.slug),
+      names: entries.map((e) => e.name),
+    }));
+
   const report = {
     generatedAt: new Date().toISOString(),
     totals: {
@@ -251,6 +276,7 @@ async function main() {
       bars: bars.length,
       duplicateSourceUrls: duplicateSourceUrls.length,
       duplicateVenueCodes: duplicateVenueCodesTotal,
+      logicalDuplicates: logicalDuplicates.length,
       duplicatePinRisk: guideWithPublicBar.filter((g) => g.duplicatePinRisk).length,
       missingVenueCode: missingVenueCode.length,
       missingCoords: missingCoords.length,
@@ -266,6 +292,7 @@ async function main() {
     slugCollisions,
     missingVenueCode,
     missingCoords,
+    logicalDuplicates,
   };
 
   const dupPath = writeAuditReport("venue-duplicates.json", report);
@@ -275,6 +302,7 @@ async function main() {
   console.log(`✓ Informe completitud: ${compPath}`);
   console.log(`  Riesgo pin duplicado: ${report.totals.duplicatePinRisk}`);
   console.log(`  ET-LOC duplicados: ${report.totals.duplicateVenueCodes}`);
+  console.log(`  Duplicados lógicos (nombre+ciudad): ${report.totals.logicalDuplicates}`);
   console.log(`  Sin coords: ${missingCoords.length}`);
   console.log(
     `  Completitud (publicadas): ${completenessReport.totals.fullyComplete}/${publishedGuides.length} (${completenessReport.totals.fullyCompletePct}%)`,

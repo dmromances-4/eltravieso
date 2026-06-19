@@ -37,4 +37,13 @@ describe("dedupeMapVenues", () => {
     expect(result).toHaveLength(1);
     expect(result[0].id).toBe("b1");
   });
+
+  it("dedupes editorial pins with same name and city but different slug", () => {
+    const editorial = [
+      venue({ id: "g1", slug: "bar-leone", layer: "editorial", name: "Bar Leone", city: "Hong Kong" }),
+      venue({ id: "g2", slug: "bar-leone-2", layer: "editorial", name: "Bar Leone", city: "Hong Kong" }),
+    ];
+    const result = dedupeMapVenues([], editorial);
+    expect(result).toHaveLength(1);
+  });
 });

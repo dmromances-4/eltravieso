@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-06-19T12:23:23.422Z",
+  "generatedAt": "2026-06-19T12:58:09.930Z",
   "totals": {
-    "guides": 600,
+    "guides": 309,
     "bars": 1,
     "duplicateSourceUrls": 0,
     "duplicateVenueCodes": 0,
+    "logicalDuplicates": 0,
     "duplicatePinRisk": 0,
     "missingVenueCode": 0,
-    "missingCoords": 72
+    "missingCoords": 39
   },
   "duplicateSourceUrls": [],
   "duplicateVenueCodes": {
@@ -26,71 +27,6 @@
   "slugCollisions": [],
   "missingVenueCode": [],
   "missingCoords": [
-    {
-      "type": "guide",
-      "slug": "jigger-pony",
-      "name": "Jigger & Pony"
-    },
-    {
-      "type": "guide",
-      "slug": "narisawa-restaurant",
-      "name": "Narisawa"
-    },
-    {
-      "type": "guide",
-      "slug": "tresind-studio-restaurant",
-      "name": "Trèsind Studio"
-    },
-    {
-      "type": "guide",
-      "slug": "florilege-restaurant",
-      "name": "Florilège"
-    },
-    {
-      "type": "guide",
-      "slug": "lair",
-      "name": "Lair"
-    },
-    {
-      "type": "guide",
-      "slug": "modernhaus",
-      "name": "Modernhaus"
-    },
-    {
-      "type": "guide",
-      "slug": "three-x-co",
-      "name": "Three X Co"
-    },
-    {
-      "type": "guide",
-      "slug": "cmyk",
-      "name": "CMYK"
-    },
-    {
-      "type": "guide",
-      "slug": "offtrack",
-      "name": "Offtrack"
-    },
-    {
-      "type": "guide",
-      "slug": "boilermaker",
-      "name": "Boilermaker"
-    },
-    {
-      "type": "guide",
-      "slug": "to-infinity-and-beyond",
-      "name": "To Infinity & Beyond"
-    },
-    {
-      "type": "guide",
-      "slug": "moonrock",
-      "name": "Moonrock"
-    },
-    {
-      "type": "guide",
-      "slug": "cat-bite-club",
-      "name": "Cat Bite Club"
-    },
     {
       "type": "guide",
       "slug": "kaito-del-valle",
@@ -123,56 +59,6 @@
     },
     {
       "type": "guide",
-      "slug": "onjium-restaurant",
-      "name": "Onjium"
-    },
-    {
-      "type": "guide",
-      "slug": "born-restaurant",
-      "name": "Born"
-    },
-    {
-      "type": "guide",
-      "slug": "eatanic-garden-restaurant",
-      "name": "Eatanic Garden"
-    },
-    {
-      "type": "guide",
-      "slug": "maz-restaurant",
-      "name": "Maz"
-    },
-    {
-      "type": "guide",
-      "slug": "naar-restaurant",
-      "name": "Naar"
-    },
-    {
-      "type": "guide",
-      "slug": "florilege-restaurant-2",
-      "name": "Florilège"
-    },
-    {
-      "type": "guide",
-      "slug": "myoujyaku-restaurant",
-      "name": "Myoujyaku"
-    },
-    {
-      "type": "guide",
-      "slug": "narisawa-restaurant-2",
-      "name": "Narisawa"
-    },
-    {
-      "type": "guide",
-      "slug": "naeum-restaurant",
-      "name": "Nae:Um"
-    },
-    {
-      "type": "guide",
-      "slug": "7th-door-restaurant",
-      "name": "7th Door"
-    },
-    {
-      "type": "guide",
       "slug": "arca-restaurant",
       "name": "Arca"
     },
@@ -200,46 +86,6 @@
       "type": "guide",
       "slug": "mil-restaurant",
       "name": "Mil"
-    },
-    {
-      "type": "guide",
-      "slug": "dakar-nola-restaurant",
-      "name": "Dakar NOLA"
-    },
-    {
-      "type": "guide",
-      "slug": "taniere3-restaurant",
-      "name": "Tanière3"
-    },
-    {
-      "type": "guide",
-      "slug": "chubby-fish-restaurant",
-      "name": "Chubby Fish"
-    },
-    {
-      "type": "guide",
-      "slug": "addison-by-william-bradley-restaurant",
-      "name": "Addison by William Bradley"
-    },
-    {
-      "type": "guide",
-      "slug": "dogon-restaurant",
-      "name": "Dōgon by Kwame Onwuachi"
-    },
-    {
-      "type": "guide",
-      "slug": "atelier-crenn-restaurant",
-      "name": "Atelier Crenn"
-    },
-    {
-      "type": "guide",
-      "slug": "somni-restaurant",
-      "name": "Somni"
-    },
-    {
-      "type": "guide",
-      "slug": "jigger-pony-3",
-      "name": "Jigger & Pony"
     },
     {
       "type": "guide",
@@ -375,16 +221,7 @@
       "type": "guide",
       "slug": "somni-restaurant-2",
       "name": "Somni"
-    },
-    {
-      "type": "guide",
-      "slug": "florilege-restaurant-4",
-      "name": "Florilège"
-    },
-    {
-      "type": "guide",
-      "slug": "narisawa-restaurant-4",
-      "name": "Narisawa"
     }
-  ]
+  ],
+  "logicalDuplicates": []
 }

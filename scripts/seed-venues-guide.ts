@@ -1,14 +1,13 @@
 import fs from "fs";
 import path from "path";
-import type { Prisma } from "@prisma/client";
 import prisma from "../lib/prisma";
 import { geocodeVenue } from "../lib/geocoding/nominatim";
 import { mergeVenueGuides } from "../lib/venues/merge-guide";
 import { venueGuideEntryToNormalized } from "../lib/venues/guide-from-db";
+import { venueGuideToDbFields } from "../lib/venues/guide-to-db";
 import { ensureUniqueVenueCode } from "../lib/venues/venue-code";
 import { normalizeVenueKey } from "../lib/venues/unique-slug";
 import type { NormalizedVenueGuide } from "../lib/venues/types";
-
 import type { SyncPhaseResult } from "../lib/catalog/sync-report";
 import { pathToFileURL } from "url";
 
@@ -31,48 +30,8 @@ function venueToDbFields(
   geocodeConfidence: string | null,
 ) {
   return {
-    slug: venue.slug,
-    name: venue.name,
-    city: venue.city,
-    country: venue.country ?? null,
-    address: venue.address ?? null,
-    venueType: venue.venueType,
-    photoUrl: venue.photoUrl ?? null,
-    history: venue.history ?? null,
-    verdict: venue.verdict ?? null,
-    chefName: venue.chefName ?? null,
-    worlds50bestRank: venue.worlds50bestRank,
-    worlds50bestCategory: venue.worlds50bestCategory,
-    worlds50bestYear: venue.worlds50bestYear ?? null,
-    continent: venue.continent ?? null,
-    listScope: venue.listScope ?? "GLOBAL",
-    regionalRank: venue.regionalRank ?? null,
-    additionalRankings: (venue.additionalRankings ?? []) as Prisma.InputJsonValue,
-    sourceUrl: venue.sourceUrl,
-    externalWebsite: venue.externalWebsite ?? null,
-    googleBusinessId: venue.googleBusinessId ?? null,
-    tripadvisorUrl: venue.tripadvisorUrl ?? null,
-    tripadvisorPlaceId: venue.tripadvisorPlaceId ?? null,
-    tripadvisorRating: venue.tripadvisorRating ?? null,
-    venueCode: venue.venueCode ?? null,
-    enrichmentSource: venue.enrichmentSource ?? "worlds50best",
-    latitude,
-    longitude,
-    geocodeConfidence,
+    ...venueGuideToDbFields(venue, { latitude, longitude, geocodeConfidence }),
     scrapedAt: new Date(),
-    establishmentTypes: venue.establishmentTypes ?? [],
-    cuisineTypes: venue.cuisineTypes ?? [],
-    starDishes: venue.starDishes ?? [],
-    idealFor: venue.idealFor ?? [],
-    venueFeatures: venue.venueFeatures ?? [],
-    neighborhood: venue.neighborhood ?? null,
-    priceRange: venue.priceRange ?? null,
-    dailyMenuEnabled: venue.dailyMenuEnabled ?? false,
-    dailyMenuNote: venue.dailyMenuNote ?? null,
-    awards: venue.awards ?? [],
-    venuePreferences: venue.venuePreferences ?? [],
-    instagramUrl: venue.instagramUrl ?? null,
-    tiktokUrl: venue.tiktokUrl ?? null,
   };
 }
 

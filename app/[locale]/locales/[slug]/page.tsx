@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Link } from "@/i18n/navigation";
+import { Link, redirect } from "@/i18n/navigation";
 import { notFound } from "next/navigation";
 import VenueHero from "@/components/venues/VenueHero";
 import VenueDetailBlocks from "@/components/venues/VenueDetailBlocks";
@@ -7,6 +7,7 @@ import VenueLoreBlocks from "@/components/venues/VenueLoreBlocks";
 import ReservationWidget from "@/components/venues/ReservationWidget";
 import { getPublicVenueBySlug, listAllPublicVenueSlugs } from "@/lib/venues/catalog";
 import { resolveReservationConfig } from "@/lib/venues/reservation";
+import { resolveCanonicalVenueSlug } from "@/lib/venues/slug-redirects";
 import type { AppLocale } from "@/i18n/routing";
 
 export const revalidate = 3600;
@@ -76,6 +77,11 @@ function buildJsonLd(venue: NonNullable<Awaited<ReturnType<typeof getPublicVenue
 }
 
 export default async function LocalePage({ params }: Props) {
+  const canonicalSlug = resolveCanonicalVenueSlug(params.slug);
+  if (canonicalSlug) {
+    redirect({ href: `/locales/${canonicalSlug}`, locale: params.locale });
+  }
+
   const venue = await getPublicVenueBySlug(params.slug, params.locale);
   if (!venue) notFound();
 
