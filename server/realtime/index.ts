@@ -1,3 +1,5 @@
+import { config as loadEnv } from "dotenv";
+import { resolve } from "path";
 import { createServer } from "http";
 import { randomUUID } from "crypto";
 import { Server, type Socket } from "socket.io";
@@ -9,6 +11,9 @@ import {
   createRedisPresenceStore,
   type PresenceStore,
 } from "./presence.js";
+
+loadEnv({ path: resolve(process.cwd(), ".env.local") });
+loadEnv({ path: resolve(process.cwd(), ".env") });
 
 initRealtimeSentry();
 const PORT = Number(process.env.PORT ?? process.env.WS_PORT ?? 3001);
