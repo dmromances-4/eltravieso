@@ -9,6 +9,7 @@ import { ensureUniqueVenueCode } from "../lib/venues/venue-code";
 import { normalizeVenueKey } from "../lib/venues/unique-slug";
 import type { NormalizedVenueGuide } from "../lib/venues/types";
 import type { SyncPhaseResult } from "../lib/catalog/sync-report";
+import { requireDbPreflight } from "../lib/db-preflight";
 import { pathToFileURL } from "url";
 
 export const VENUES_DATA_FILE = path.resolve(process.cwd(), "data", "venues-worlds50best.json");
@@ -60,6 +61,8 @@ export type SeedVenuesOptions = {
 };
 
 export async function seedVenuesGuide(options: SeedVenuesOptions = {}): Promise<SyncPhaseResult> {
+  await requireDbPreflight("seed:venues");
+
   const dataFile = options.dataFile ?? DATA_FILE;
   const geocode = options.geocode ?? GEOCODE;
 
@@ -141,7 +144,8 @@ export async function seedVenuesGuide(options: SeedVenuesOptions = {}): Promise<
       upserted += 1;
       if (!existing) created += 1;
     } catch (err) {
-      console.warn(`  omitido ${venue.slug}:`, (err as Error).message.slice(0, 120));
+      const message = (err as Error).message;
+      console.warn(`  omitido ${venue.slug}:`, message.slice(0, 200));
       skipped += 1;
     }
   }

@@ -1,6 +1,7 @@
 import type { Worlds50BestCategory } from "@prisma/client";
 import { mergeVenueGuides } from "@/lib/venues/merge-guide";
 import type { NormalizedVenueGuide } from "@/lib/venues/types";
+import { normalizeCanonicalRegions } from "@/lib/venues/region-tags";
 import { normalizeVenueKey } from "@/lib/venues/unique-slug";
 
 export type VenueCanonicalMerge = {
@@ -64,6 +65,10 @@ export function pickCanonicalVenue(siblings: NormalizedVenueGuide[]): Normalized
   return [...siblings].sort(compareCanonicalCandidates)[0];
 }
 
+function finalizeMergedVenue(venue: NormalizedVenueGuide): NormalizedVenueGuide {
+  return normalizeCanonicalRegions(venue);
+}
+
 export function mergeVenueSiblings(siblings: NormalizedVenueGuide[]): NormalizedVenueGuide {
   if (siblings.length === 0) {
     throw new Error("mergeVenueSiblings requires at least one venue");
@@ -78,11 +83,11 @@ export function mergeVenueSiblings(siblings: NormalizedVenueGuide[]): Normalized
     undefined,
   )!;
 
-  return {
+  return finalizeMergedVenue({
     ...merged,
     slug: winner.slug,
     sourceUrl: winner.sourceUrl,
-  };
+  });
 }
 
 export function unifyVenueList(venues: NormalizedVenueGuide[]): UnifyVenueListResult {

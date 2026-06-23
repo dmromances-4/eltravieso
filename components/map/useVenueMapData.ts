@@ -6,6 +6,7 @@ import type { ContinentFilter } from "@/lib/venues/continents";
 import type { MapVenueDTO } from "@/lib/venues/types";
 import { dedupeMapVenues } from "@/lib/venues/map-dedup";
 import { haversineKm } from "@/lib/map/haversine";
+import { matchesMapVenueSearch } from "@/lib/venues/sort-editorial-index";
 
 export type UserPosition = { lat: number; lng: number };
 
@@ -19,7 +20,7 @@ async function fetchVenueList(url: string): Promise<MapVenueDTO[]> {
   return (data.venues ?? data.bars ?? []) as MapVenueDTO[];
 }
 
-export function useVenueMapData() {
+export function useVenueMapData(searchQuery = "") {
   const [affiliates, setAffiliates] = useState<MapVenueDTO[]>([]);
   const [editorial, setEditorial] = useState<MapVenueDTO[]>([]);
   const [showAffiliates, setShowAffiliates] = useState(true);
@@ -73,9 +74,16 @@ export function useVenueMapData() {
   }, [deduped, showAffiliates, showEditorial]);
 
   const visibleVenues = useMemo(() => {
-    if (!hideLowConfidence) return baseVisible;
-    return baseVisible.filter((v) => v.geocodeConfidence !== "low");
-  }, [baseVisible, hideLowConfidence]);
+    let out = baseVisible;
+    if (hideLowConfidence) {
+      out = out.filter((v) => v.geocodeConfidence !== "low");
+    }
+    const q = searchQuery.trim();
+    if (q) {
+      out = out.filter((v) => matchesMapVenueSearch(v, q));
+    }
+    return out;
+  }, [baseVisible, hideLowConfidence, searchQuery]);
 
   const venuesSortedByDistance = useMemo(() => {
     if (!userPosition) return [];

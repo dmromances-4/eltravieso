@@ -22,6 +22,8 @@ async function main() {
     password: "postgres",
     port: PORT,
     persistent: true,
+    // Windows: el cluster por defecto usa WIN1252 y rompe seed con CJK/acentos.
+    initdbFlags: ["--encoding=UTF8", "--locale=C"],
   });
 
   if (!alreadyInitialised) {
@@ -31,6 +33,14 @@ async function main() {
 
   await pg.start();
   console.log(`[local-db] PostgreSQL escuchando en localhost:${PORT}`);
+
+  const encodingRow = await pg.getPgClient().query("SHOW server_encoding");
+  const serverEncoding = encodingRow.rows[0]?.server_encoding as string | undefined;
+  if (serverEncoding && serverEncoding !== "UTF8") {
+    console.warn(
+      `[local-db] AVISO: server_encoding=${serverEncoding}. Para UTF-8, borra .localpg/ y reinicia npm run db:local`,
+    );
+  }
 
   try {
     await pg.createDatabase(DB_NAME);

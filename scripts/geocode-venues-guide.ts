@@ -1,5 +1,10 @@
+import path from "path";
+import { config } from "dotenv";
 import prisma from "../lib/prisma";
 import { geocodeVenue } from "../lib/geocoding/nominatim";
+
+config({ path: path.resolve(process.cwd(), ".env.local") });
+config({ path: path.resolve(process.cwd(), ".env") });
 
 type VenueRow = {
   id: string;
@@ -13,6 +18,7 @@ type VenueRow = {
 
 const args = new Set(process.argv.slice(2));
 const retryLowConfidence = args.has("--retry-low-confidence");
+const onlyMissing = args.has("--only-missing") || !retryLowConfidence;
 
 async function geocodeRow(venue: VenueRow) {
   return geocodeVenue({
@@ -36,7 +42,9 @@ async function main() {
             { geocodeConfidence: "low" },
             { geocodeConfidence: null },
           ]
-        : [{ latitude: null }, { longitude: null }],
+        : onlyMissing
+          ? [{ latitude: null }, { longitude: null }]
+          : [{ latitude: null }, { longitude: null }],
     },
     select: {
       id: true,

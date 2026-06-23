@@ -71,6 +71,7 @@ describe("canonical venue", () => {
     expect(merged.slug).toBe("bar-leone");
     expect(merged.additionalRankings?.length).toBeGreaterThanOrEqual(2);
     expect(merged.regionalRank).toBe(1);
+    expect(merged.continent).toBe("GLOBAL");
   });
 
   it("merges taxonomy from richer sibling", () => {

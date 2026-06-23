@@ -28,7 +28,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -37,9 +39,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/102house_shanghai",
     "tiktokUrl": null
   },
   {
@@ -91,8 +95,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 42,
-    "establishmentTypes": [],
+    "regionalRank": 21,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -101,9 +107,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -135,7 +143,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -144,9 +154,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/7thdoor_official",
     "tiktokUrl": null
   },
   {
@@ -178,7 +190,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -187,9 +201,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/acasadoporcobar",
     "tiktokUrl": null
   },
   {
@@ -221,7 +237,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -230,9 +248,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/acamayanola",
     "tiktokUrl": null
   },
   {
@@ -264,7 +284,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -273,9 +295,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/addisonrestaurant",
     "tiktokUrl": null
   },
   {
@@ -307,7 +331,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -316,9 +342,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/afluenterestaurante",
     "tiktokUrl": null
   },
   {
@@ -350,7 +378,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -359,9 +389,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/albiwashdc",
     "tiktokUrl": null
   },
   {
@@ -393,7 +425,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -402,9 +436,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restalcalde",
     "tiktokUrl": null
   },
   {
@@ -435,7 +471,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -444,10 +482,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/restaurantalchemist",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "alice-2",
@@ -478,7 +519,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -487,9 +530,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -520,7 +565,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -529,10 +576,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "angels-share",
@@ -563,7 +613,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -572,9 +624,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -606,7 +660,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -615,9 +671,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -649,7 +707,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -658,9 +718,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/arambururesto",
     "tiktokUrl": null
   },
   {
@@ -692,7 +754,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -701,9 +765,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/aramirestaurante",
     "tiktokUrl": null
   },
   {
@@ -735,7 +801,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -744,9 +812,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/arcatulum",
     "tiktokUrl": null
   },
   {
@@ -778,7 +848,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -787,9 +859,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/argobarhk",
     "tiktokUrl": null
   },
   {
@@ -820,7 +894,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -829,10 +905,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/alain_passard",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "asador-etxebarri-restaurant-2",
@@ -862,7 +941,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -871,10 +952,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/asadoretxebarrioficial",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "aska-restaurant-2",
@@ -905,7 +989,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -914,9 +1000,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/askanyc",
     "tiktokUrl": null
   },
   {
@@ -948,7 +1036,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -957,9 +1047,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/atelier.crenn",
     "tiktokUrl": null
   },
   {
@@ -990,7 +1082,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -999,10 +1093,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/atelier_moessmer_nn",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "atomix-restaurant-3",
@@ -1019,7 +1116,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/atomix.html",
     "externalWebsite": "https://www.atomixnyc.com/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -1039,7 +1136,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1048,9 +1147,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/atomixnyc",
     "tiktokUrl": null,
     "regionalRank": 7
   },
@@ -1083,7 +1184,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1092,9 +1195,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1126,7 +1231,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1135,9 +1242,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -1169,7 +1278,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1178,9 +1289,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/august_jkt",
     "tiktokUrl": null
   },
   {
@@ -1212,7 +1325,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1221,9 +1336,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/avize.atl",
     "tiktokUrl": null
   },
   {
@@ -1275,8 +1392,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 26,
-    "establishmentTypes": [],
+    "regionalRank": 13,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1285,9 +1404,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1319,7 +1440,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1328,9 +1451,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/baltrabar",
     "tiktokUrl": null
   },
   {
@@ -1362,7 +1487,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1371,9 +1498,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1391,7 +1520,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-benfiddich.html",
     "externalWebsite": "https://www.ameblo.jp/kayama0927",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -1411,7 +1540,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1420,9 +1551,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 9
   },
@@ -1441,7 +1574,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-leone.html",
     "externalWebsite": "https://www.barleonehk.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -1461,7 +1594,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1470,9 +1605,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 1
   },
@@ -1505,7 +1642,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1514,9 +1653,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1548,7 +1689,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1557,9 +1700,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/barmadonnabk",
     "tiktokUrl": null
   },
   {
@@ -1591,7 +1736,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1600,9 +1747,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1654,8 +1803,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 16,
-    "establishmentTypes": [],
+    "regionalRank": 8,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1664,9 +1815,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1698,7 +1851,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1707,9 +1862,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1741,7 +1898,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1750,9 +1909,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1784,7 +1945,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1793,9 +1956,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -1827,7 +1992,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1836,9 +2003,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/barspiritforward.blr",
     "tiktokUrl": null
   },
   {
@@ -1870,7 +2039,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1879,9 +2050,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/bartrigona",
     "tiktokUrl": null
   },
   {
@@ -1899,7 +2072,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bar-us.html",
     "externalWebsite": "https://www.us-bar.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -1919,7 +2092,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1928,9 +2103,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 4
   },
@@ -1963,7 +2140,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -1972,9 +2151,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2006,7 +2187,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2015,9 +2198,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurantbeba",
     "tiktokUrl": null
   },
   {
@@ -2049,7 +2234,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2058,9 +2245,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2091,7 +2280,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2100,10 +2291,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/belcanto_joseavillez",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "benu-restaurant-2",
@@ -2134,7 +2328,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2143,9 +2339,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/benu_sf",
     "tiktokUrl": null
   },
   {
@@ -2177,7 +2375,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2186,9 +2386,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2220,7 +2422,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2229,9 +2433,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2263,7 +2469,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2272,9 +2480,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/biumseoul",
     "tiktokUrl": null
   },
   {
@@ -2292,7 +2502,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/bkk-social-club.html",
     "externalWebsite": "https://www.fourseasons.com/bangkok/dining/lounges/bkk-social-club/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -2312,7 +2522,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2321,9 +2533,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 19
   },
@@ -2356,7 +2570,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2365,9 +2581,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2399,7 +2617,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2408,9 +2628,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/bonvivantsbahamas",
     "tiktokUrl": null
   },
   {
@@ -2428,7 +2650,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/borago.html",
     "externalWebsite": "https://borago.cl/en/welcome/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -2448,7 +2670,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2457,9 +2681,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://instagram.com/theworlds50best",
     "tiktokUrl": null,
     "regionalRank": 6
   },
@@ -2492,7 +2718,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2501,9 +2729,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurantborn",
     "tiktokUrl": null
   },
   {
@@ -2535,7 +2765,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2544,9 +2776,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2578,7 +2812,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2587,9 +2823,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/cafelatrovamiami",
     "tiktokUrl": null
   },
   {
@@ -2621,7 +2859,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2630,9 +2870,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -2664,7 +2906,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2673,9 +2917,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/capricehongkong",
     "tiktokUrl": null
   },
   {
@@ -2706,7 +2952,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2715,10 +2963,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/caretakers.cottage",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "carrots-bar-2",
@@ -2749,7 +3000,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2758,9 +3011,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2792,7 +3047,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2801,9 +3058,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/casalascujas",
     "tiktokUrl": null
   },
   {
@@ -2835,7 +3094,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2844,9 +3105,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -2864,7 +3127,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/celele.html",
     "externalWebsite": "https://celelerestaurante.com/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -2884,7 +3147,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2893,9 +3158,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/celele_restaurante",
     "tiktokUrl": null,
     "regionalRank": 5
   },
@@ -2928,7 +3195,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2937,9 +3206,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/cesar.newyork",
     "tiktokUrl": null
   },
   {
@@ -2971,7 +3242,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -2980,9 +3253,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -3014,7 +3289,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3023,9 +3300,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/cheftamsseasons",
     "tiktokUrl": null
   },
   {
@@ -3057,7 +3336,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3066,9 +3347,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/chubbyfishchs",
     "tiktokUrl": null
   },
   {
@@ -3100,7 +3383,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3109,9 +3394,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/civwrksto",
     "tiktokUrl": null
   },
   {
@@ -3143,7 +3430,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3152,9 +3441,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -3186,7 +3477,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3195,9 +3488,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/cmyk.china",
     "tiktokUrl": null
   },
   {
@@ -3215,7 +3510,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/coa.html",
     "externalWebsite": "https://coa.com.hk/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -3235,7 +3530,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3244,9 +3541,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/COAhongkong",
     "tiktokUrl": null,
     "regionalRank": 17
   },
@@ -3278,7 +3577,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3287,10 +3588,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "connaught-bar-2",
@@ -3341,8 +3645,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 8,
-    "establishmentTypes": [],
+    "regionalRank": 4,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3351,9 +3657,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -3385,7 +3693,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3394,9 +3704,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/corderoccs",
     "tiktokUrl": null
   },
   {
@@ -3428,7 +3740,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3437,9 +3751,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -3471,7 +3787,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3480,9 +3798,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/cosme.pe",
     "tiktokUrl": null
   },
   {
@@ -3514,7 +3834,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3523,9 +3845,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -3587,7 +3911,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3596,9 +3922,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/michi_crony",
     "tiktokUrl": null
   },
   {
@@ -3630,7 +3958,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3639,9 +3969,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -3673,7 +4005,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3682,9 +4016,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/daisy.losangeles",
     "tiktokUrl": null
   },
   {
@@ -3716,7 +4052,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3725,9 +4063,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/dakarnola",
     "tiktokUrl": null
   },
   {
@@ -3779,8 +4119,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 28,
-    "establishmentTypes": [],
+    "regionalRank": 14,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3789,9 +4131,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/danicoparis",
     "tiktokUrl": null
   },
   {
@@ -3823,7 +4167,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3832,9 +4178,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/demo.magnolia",
     "tiktokUrl": null
   },
   {
@@ -3896,7 +4244,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3905,9 +4255,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/dianesplacemn",
     "tiktokUrl": null
   },
   {
@@ -3938,7 +4290,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3947,10 +4301,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/dabizdiverxo",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "dogon-restaurant-2",
@@ -3981,7 +4338,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -3990,9 +4349,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/salamanderhoteldc",
     "tiktokUrl": null
   },
   {
@@ -4010,7 +4371,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/don.html",
     "externalWebsite": "https://www.parrilladonjulio.com/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -4030,7 +4391,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4039,9 +4402,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/donjulioparrilla",
     "tiktokUrl": null,
     "regionalRank": 3
   },
@@ -4060,7 +4425,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/double-chicken-please.html",
     "externalWebsite": "https://doublechickenplease.com/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -4080,7 +4445,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4089,9 +4456,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/doublechickenpleasenyc",
     "tiktokUrl": null,
     "regionalRank": 35
   },
@@ -4144,8 +4513,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 40,
-    "establishmentTypes": [],
+    "regionalRank": 20,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4154,9 +4525,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/drinkkongbar",
     "tiktokUrl": null
   },
   {
@@ -4188,7 +4561,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4197,9 +4572,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -4231,7 +4608,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4240,9 +4619,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/eatanicgarden",
     "tiktokUrl": null
   },
   {
@@ -4274,7 +4655,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4283,9 +4666,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/edulisrestaurant",
     "tiktokUrl": null
   },
   {
@@ -4317,7 +4702,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4326,9 +4713,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/eight_cdn",
     "tiktokUrl": null
   },
   {
@@ -4360,7 +4749,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4369,9 +4760,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/elchato_rest",
     "tiktokUrl": null
   },
   {
@@ -4403,7 +4796,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4412,9 +4807,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/elgalloaltanero",
     "tiktokUrl": null
   },
   {
@@ -4476,7 +4873,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4485,9 +4884,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/elpreferidodepalermo",
     "tiktokUrl": null
   },
   {
@@ -4518,7 +4919,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4527,10 +4930,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/elkano_jatetxea",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "emerils-restaurant-2",
@@ -4561,7 +4967,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4570,9 +4978,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -4604,7 +5014,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4613,9 +5025,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -4646,7 +5060,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4655,10 +5071,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/enigma_albertadria",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "estro-restaurant-2",
@@ -4689,7 +5108,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4698,9 +5119,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/estro.hk",
     "tiktokUrl": null
   },
   {
@@ -4732,7 +5155,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4741,9 +5166,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/evvai_sp",
     "tiktokUrl": null
   },
   {
@@ -4775,7 +5202,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4784,9 +5213,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/faunarestaurante",
     "tiktokUrl": null
   },
   {
@@ -4804,7 +5235,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/florilege.html",
     "externalWebsite": "https://www.aoyama-florilege.jp/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -4824,7 +5255,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4833,9 +5266,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurant_florilege",
     "tiktokUrl": null,
     "regionalRank": 31
   },
@@ -4868,7 +5303,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4877,9 +5314,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/fomabar.mx",
     "tiktokUrl": null
   },
   {
@@ -4910,7 +5349,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4919,10 +5360,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://instagram.com/restaurantfrantzen",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "friday-saturday-sunday-restaurant-2",
@@ -4953,7 +5397,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -4962,9 +5408,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/friday.saturday.sunday",
     "tiktokUrl": null
   },
   {
@@ -4996,7 +5444,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5005,9 +5455,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/fuhehui",
     "tiktokUrl": null
   },
   {
@@ -5039,7 +5491,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5048,9 +5502,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -5068,7 +5524,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/gaggan.html",
     "externalWebsite": "http://gaggananand.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -5088,7 +5544,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5097,9 +5555,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/gaggan_anand",
     "tiktokUrl": null,
     "regionalRank": 3
   },
@@ -5132,7 +5592,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5141,9 +5603,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -5175,7 +5639,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5184,9 +5650,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/Gokan.HK",
     "tiktokUrl": null
   },
   {
@@ -5218,7 +5686,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5227,9 +5697,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/gramercytavern",
     "tiktokUrl": null
   },
   {
@@ -5261,7 +5733,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5270,9 +5744,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/gus_sipanddip",
     "tiktokUrl": null
   },
   {
@@ -5290,7 +5766,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/handshake-speakeasy.html",
     "externalWebsite": "https://handshake.bar/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -5310,7 +5786,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5319,9 +5797,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/handshake_bar",
     "tiktokUrl": null,
     "regionalRank": 12
   },
@@ -5374,8 +5854,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 14,
-    "establishmentTypes": [],
+    "regionalRank": 7,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5384,9 +5866,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -5418,7 +5902,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5427,9 +5913,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/holboxlosangeles",
     "tiktokUrl": null
   },
   {
@@ -5447,7 +5935,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/hope-sesame.html",
     "externalWebsite": "https://hopeandsesame.cn/home/hope-sesame-guangzhou/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -5467,7 +5955,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5476,9 +5966,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/hopeandsesame",
     "tiktokUrl": null,
     "regionalRank": 7
   },
@@ -5511,7 +6003,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5520,9 +6014,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/humonegro_bog",
     "tiktokUrl": null
   },
   {
@@ -5554,7 +6050,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5563,9 +6061,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/huniikmid",
     "tiktokUrl": null
   },
   {
@@ -5596,7 +6096,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5605,10 +6107,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/ikoyi_london",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "jewel-of-the-south-3",
@@ -5625,7 +6130,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/jewel-of-the-south.html",
     "externalWebsite": "https://www.jewelnola.com/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -5645,7 +6150,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5654,9 +6161,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/jewelnola",
     "tiktokUrl": null,
     "regionalRank": 6
   },
@@ -5675,7 +6184,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/jigger-pony.html",
     "externalWebsite": "https://www.jiggerandpony.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -5695,7 +6204,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5704,9 +6215,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 3
   },
@@ -5739,7 +6252,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5748,9 +6263,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/jlstudio_tw",
     "tiktokUrl": null
   },
   {
@@ -5782,7 +6299,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5791,9 +6310,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -5825,7 +6346,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5834,9 +6357,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -5868,7 +6393,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5877,9 +6404,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/jungsik_nyc",
     "tiktokUrl": null
   },
   {
@@ -5911,7 +6440,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5920,9 +6451,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/kabawa",
     "tiktokUrl": null
   },
   {
@@ -5953,7 +6486,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -5962,10 +6497,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/restaurantkadeau",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "kaito-del-valle",
@@ -5996,7 +6534,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6005,9 +6545,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/kaitodelvalle",
     "tiktokUrl": null
   },
   {
@@ -6039,7 +6581,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6048,9 +6592,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/kalayaphilly",
     "tiktokUrl": null
   },
   {
@@ -6082,7 +6628,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6091,9 +6639,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -6125,7 +6675,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6134,9 +6686,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/katorestaurant",
     "tiktokUrl": null
   },
   {
@@ -6154,7 +6708,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/kjolle.html",
     "externalWebsite": "https://kjolle.com/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -6174,7 +6728,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6183,9 +6739,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/kjollerest",
     "tiktokUrl": null,
     "regionalRank": 2
   },
@@ -6217,7 +6775,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6226,10 +6786,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/kol.restaurant",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "kumiko",
@@ -6260,7 +6823,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6269,9 +6834,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/barkumiko",
     "tiktokUrl": null
   },
   {
@@ -6303,7 +6870,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6312,9 +6881,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/labourriche133_modernseafood",
     "tiktokUrl": null
   },
   {
@@ -6332,7 +6903,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/la-cime.html",
     "externalWebsite": "https://www.la-cime.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -6352,7 +6923,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6361,9 +6934,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/lacime_japan",
     "tiktokUrl": null,
     "regionalRank": 13
   },
@@ -6396,7 +6971,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6405,9 +6982,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/lafactoriapr",
     "tiktokUrl": null
   },
   {
@@ -6439,7 +7018,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6448,9 +7029,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/lamarcebicherialima",
     "tiktokUrl": null
   },
   {
@@ -6482,7 +7065,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6491,9 +7076,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurantlabyrinth",
     "tiktokUrl": null
   },
   {
@@ -6524,7 +7111,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6533,10 +7122,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "lair-2",
@@ -6567,7 +7159,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6576,9 +7170,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -6610,7 +7206,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6619,9 +7217,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/lamdre_beijing",
     "tiktokUrl": null
   },
   {
@@ -6653,7 +7253,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6662,9 +7264,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -6682,7 +7286,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/lasai.html",
     "externalWebsite": "https://lasai.com.br/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -6702,7 +7306,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6711,9 +7317,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurantelasai",
     "tiktokUrl": null,
     "regionalRank": 13
   },
@@ -6746,7 +7354,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6755,9 +7365,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/ericripert",
     "tiktokUrl": null
   },
   {
@@ -6788,7 +7400,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6797,10 +7411,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/alajmo",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "le-chamber-2",
@@ -6831,7 +7448,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6840,9 +7459,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -6860,7 +7481,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/le-du.html",
     "externalWebsite": "https://www.ledubkk.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -6880,7 +7501,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6889,9 +7512,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/ledubkk",
     "tiktokUrl": null,
     "regionalRank": 36
   },
@@ -6924,7 +7549,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6933,9 +7560,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/leveaudor",
     "tiktokUrl": null
   },
   {
@@ -6967,7 +7596,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -6976,9 +7607,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/leviolonmontreal",
     "tiktokUrl": null
   },
   {
@@ -7010,7 +7643,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7019,9 +7654,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/leorestaurantcol",
     "tiktokUrl": null
   },
   {
@@ -7053,7 +7690,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7062,9 +7701,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/lesamisrestaurant",
     "tiktokUrl": null
   },
   {
@@ -7096,7 +7737,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7105,9 +7748,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/librarybartoronto",
     "tiktokUrl": null
   },
   {
@@ -7139,7 +7784,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7148,9 +7795,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/librarybytheseagc",
     "tiktokUrl": null
   },
   {
@@ -7182,7 +7831,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7191,9 +7842,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/limantourmx",
     "tiktokUrl": null
   },
   {
@@ -7224,7 +7877,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7233,10 +7888,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/ristorantelido84",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "line-2",
@@ -7287,8 +7945,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 12,
-    "establishmentTypes": [],
+    "regionalRank": 6,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7297,9 +7957,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -7331,7 +7993,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7340,9 +8004,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurant_linglong",
     "tiktokUrl": null
   },
   {
@@ -7394,8 +8060,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 22,
-    "establishmentTypes": [],
+    "regionalRank": 11,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7404,9 +8072,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -7438,7 +8108,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7447,9 +8119,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/locavorenxt",
     "tiktokUrl": null
   },
   {
@@ -7481,7 +8155,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7490,9 +8166,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/logy.tw",
     "tiktokUrl": null
   },
   {
@@ -7524,7 +8202,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7533,9 +8213,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/maximobistrot",
     "tiktokUrl": null
   },
   {
@@ -7566,7 +8248,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7575,10 +8259,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/mitsuharu_maido",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "maison-premiere",
@@ -7609,7 +8296,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7618,9 +8307,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -7652,7 +8343,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7661,9 +8354,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/maitopanama",
     "tiktokUrl": null
   },
   {
@@ -7695,7 +8390,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7704,9 +8401,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/manuelrestaurante",
     "tiktokUrl": null
   },
   {
@@ -7738,7 +8437,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7747,9 +8448,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/martinys_nyc",
     "tiktokUrl": null
   },
   {
@@ -7781,7 +8484,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7790,9 +8495,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://instagram.com/masquerestaurant",
     "tiktokUrl": null
   },
   {
@@ -7823,7 +8530,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7832,10 +8541,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "mayta-restaurant-3",
@@ -7852,7 +8564,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/mayta.html",
     "externalWebsite": "https://www.maytalima.com/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -7872,7 +8584,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7881,9 +8595,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/callao_cocinaperuana_pe",
     "tiktokUrl": null,
     "regionalRank": 11
   },
@@ -7916,7 +8632,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7925,9 +8643,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/maz.tokyo",
     "tiktokUrl": null
   },
   {
@@ -7959,7 +8679,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -7968,9 +8690,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/mecenasbar",
     "tiktokUrl": null
   },
   {
@@ -8002,7 +8726,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8011,9 +8737,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/meetthebund_sh",
     "tiktokUrl": null
   },
   {
@@ -8045,7 +8773,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8054,9 +8784,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/mercado24gt",
     "tiktokUrl": null
   },
   {
@@ -8074,7 +8806,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/merito.html",
     "externalWebsite": "https://www.meritorestaurante.com/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -8094,7 +8826,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8103,9 +8837,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/meritorest",
     "tiktokUrl": null,
     "regionalRank": 4
   },
@@ -8138,7 +8874,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8147,9 +8885,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -8181,7 +8921,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8190,9 +8932,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://www.instagram.com/milcentro",
     "tiktokUrl": null
   },
   {
@@ -8223,7 +8967,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8232,10 +8978,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/mimikakushi",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "mingles-restaurant-3",
@@ -8252,7 +9001,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/mingles.html",
     "externalWebsite": "http://www.restaurant-mingles.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -8272,7 +9021,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8281,9 +9032,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/mingles_restaurant",
     "tiktokUrl": null,
     "regionalRank": 4
   },
@@ -8316,7 +9069,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8325,9 +9080,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -8379,8 +9136,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 24,
-    "establishmentTypes": [],
+    "regionalRank": 12,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8389,9 +9148,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -8423,7 +9184,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8432,9 +9195,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -8466,7 +9231,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8475,9 +9242,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -8529,8 +9298,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 10,
-    "establishmentTypes": [],
+    "regionalRank": 5,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8539,9 +9310,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -8573,7 +9346,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8582,9 +9357,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/vinmonlapin",
     "tiktokUrl": null
   },
   {
@@ -8616,7 +9393,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8625,9 +9404,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/monorestaurant",
     "tiktokUrl": null
   },
   {
@@ -8659,7 +9440,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8668,9 +9451,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/MoonrabbitDC",
     "tiktokUrl": null
   },
   {
@@ -8702,7 +9487,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8711,9 +9498,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -8745,7 +9534,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8754,9 +9545,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -8788,7 +9581,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8797,9 +9592,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/mothercocktailbar",
     "tiktokUrl": null
   },
   {
@@ -8831,7 +9628,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8840,9 +9639,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -8874,7 +9675,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8883,9 +9686,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -8917,7 +9722,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8926,9 +9733,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurantnaar",
     "tiktokUrl": null
   },
   {
@@ -8960,7 +9769,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -8969,9 +9780,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/naeum.sg",
     "tiktokUrl": null
   },
   {
@@ -8989,7 +9802,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/narisawa.html",
     "externalWebsite": "https://www.narisawa-yoshihiro-en.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -9009,7 +9822,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9018,9 +9833,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurantnarisawa",
     "tiktokUrl": null,
     "regionalRank": 37
   },
@@ -9053,7 +9870,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9062,9 +9881,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/nativebarsg",
     "tiktokUrl": null
   },
   {
@@ -9096,7 +9917,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9105,9 +9928,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -9139,7 +9964,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9148,9 +9975,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -9182,7 +10011,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9191,9 +10022,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/xniniogordox",
     "tiktokUrl": null
   },
   {
@@ -9224,7 +10057,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9233,10 +10068,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "nuema-restaurant",
@@ -9267,7 +10105,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9276,9 +10116,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/nuema_restaurante",
     "tiktokUrl": null
   },
   {
@@ -9296,7 +10138,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/nusara.html",
     "externalWebsite": "https://www.nusarabkk.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -9316,7 +10158,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9325,9 +10169,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/nusarabkk",
     "tiktokUrl": null,
     "regionalRank": 5
   },
@@ -9346,7 +10192,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/nutmeg-clove.html",
     "externalWebsite": "https://www.nutmegclove.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -9366,7 +10212,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9375,9 +10223,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 24
   },
@@ -9396,7 +10246,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/odette.html",
     "externalWebsite": "https://www.odetterestaurant.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -9416,7 +10266,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9425,9 +10277,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/odetterestaurant",
     "tiktokUrl": null,
     "regionalRank": 19
   },
@@ -9460,7 +10314,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9469,9 +10325,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -9503,7 +10361,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9512,9 +10372,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/onjium_restaurant",
     "tiktokUrl": null
   },
   {
@@ -9546,7 +10408,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9555,9 +10419,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -9588,7 +10454,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9597,10 +10465,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/orfalibros_bistro",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "osso-restaurant",
@@ -9631,7 +10502,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9640,9 +10513,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/ossocarnes",
     "tiktokUrl": null
   },
   {
@@ -9674,7 +10549,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9683,9 +10560,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/oteque_rj",
     "tiktokUrl": null
   },
   {
@@ -9703,7 +10582,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/overstory.html",
     "externalWebsite": "https://www.overstory-nyc.com/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -9723,7 +10602,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9732,9 +10613,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/overstory",
     "tiktokUrl": null,
     "regionalRank": 33
   },
@@ -9767,7 +10650,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9776,9 +10661,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -9830,8 +10717,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 34,
-    "establishmentTypes": [],
+    "regionalRank": 17,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9840,9 +10729,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/thecocktailpanda",
     "tiktokUrl": null
   },
   {
@@ -9894,8 +10785,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 4,
-    "establishmentTypes": [],
+    "regionalRank": 2,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9904,9 +10797,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -9938,7 +10833,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9947,9 +10844,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/pascual.dc",
     "tiktokUrl": null
   },
   {
@@ -9981,7 +10880,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -9990,9 +10891,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -10024,7 +10927,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10033,9 +10938,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/penny_newyork",
     "tiktokUrl": null
   },
   {
@@ -10067,7 +10974,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10076,9 +10985,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -10109,7 +11020,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10118,10 +11031,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/PiazzaDuomoAlba",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "plenitude-restaurant-2",
@@ -10151,7 +11067,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10160,10 +11078,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/plenitude.paris",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "potong-restaurant-3",
@@ -10180,7 +11101,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/potong.html",
     "externalWebsite": "https://www.restaurantpotong.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -10200,7 +11121,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10209,9 +11132,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurant.potong",
     "tiktokUrl": null,
     "regionalRank": 25
   },
@@ -10244,7 +11169,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10253,9 +11180,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -10287,7 +11216,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10296,9 +11227,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -10330,7 +11263,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10339,9 +11274,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/providencela",
     "tiktokUrl": null
   },
   {
@@ -10373,7 +11310,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10382,9 +11321,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -10416,7 +11357,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10425,9 +11368,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -10459,7 +11404,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10468,9 +11415,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/quetzaltoronto",
     "tiktokUrl": null
   },
   {
@@ -10488,7 +11437,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/quintonil.html",
     "externalWebsite": "https://quintonil.com/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -10508,7 +11457,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10517,9 +11468,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/rest_quintonil",
     "tiktokUrl": null,
     "regionalRank": 7
   },
@@ -10552,7 +11505,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10561,9 +11516,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -10594,7 +11551,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10603,10 +11562,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/ristorantereale",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "reka-2",
@@ -10637,7 +11599,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10646,9 +11610,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -10679,7 +11645,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10688,10 +11656,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/janhartwig_official",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "restaurant-pearl-morissette-restaurant-2",
@@ -10722,7 +11693,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10731,9 +11704,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurant_pearlmorissette",
     "tiktokUrl": null
   },
   {
@@ -10785,8 +11760,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 36,
-    "establishmentTypes": [],
+    "regionalRank": 18,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10795,9 +11772,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -10815,7 +11794,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/rosetta.html",
     "externalWebsite": "https://rosetta.com.mx/",
-    "continent": "LATIN_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -10835,7 +11814,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10844,9 +11825,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restauranterosetta",
     "tiktokUrl": null,
     "regionalRank": 39
   },
@@ -10879,7 +11862,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10888,9 +11873,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/ruyuan_hangzhou",
     "tiktokUrl": null
   },
   {
@@ -10922,7 +11909,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10931,9 +11920,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/sabayon.mtl",
     "tiktokUrl": null
   },
   {
@@ -10965,7 +11956,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -10974,9 +11967,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/saisonsf",
     "tiktokUrl": null
   },
   {
@@ -11028,8 +12023,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 38,
-    "establishmentTypes": [],
+    "regionalRank": 19,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11038,9 +12035,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -11071,7 +12070,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11080,10 +12081,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "satans-whiskers-2",
@@ -11134,8 +12138,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 20,
-    "establishmentTypes": [],
+    "regionalRank": 10,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11144,9 +12150,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -11178,7 +12186,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11187,9 +12197,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/sazenka",
     "tiktokUrl": null
   },
   {
@@ -11241,8 +12253,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 30,
-    "establishmentTypes": [],
+    "regionalRank": 15,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11251,9 +12265,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -11285,7 +12301,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11294,9 +12312,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/schmuck.ny",
     "tiktokUrl": null
   },
   {
@@ -11328,7 +12348,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11337,9 +12359,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/selvaoaxaca",
     "tiktokUrl": null
   },
   {
@@ -11371,7 +12395,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11380,9 +12406,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/semmanyc",
     "tiktokUrl": null
   },
   {
@@ -11413,7 +12441,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11422,10 +12452,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/septimeparis",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "seroja-restaurant-2",
@@ -11456,7 +12489,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11465,9 +12500,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://www.instagram.com/seroja.sg",
     "tiktokUrl": null
   },
   {
@@ -11499,7 +12536,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11508,9 +12547,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/servicebardc",
     "tiktokUrl": null
   },
   {
@@ -11528,7 +12569,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/sezanne.html",
     "externalWebsite": "https://www.sezanne.tokyo/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -11548,7 +12589,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11557,9 +12600,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/sezannetokyo",
     "tiktokUrl": null,
     "regionalRank": 16
   },
@@ -11592,7 +12637,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11601,9 +12648,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "http://www.instagram.com/sikwa.cr",
     "tiktokUrl": null
   },
   {
@@ -11635,7 +12684,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11644,9 +12695,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/singlethreadfarms",
     "tiktokUrl": null
   },
   {
@@ -11664,7 +12717,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/sip-guzzle.html",
     "externalWebsite": "https://www.sipandguzzlenyc.com/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -11684,7 +12737,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11693,9 +12748,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 1
   },
@@ -11741,8 +12798,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 2,
-    "establishmentTypes": [],
+    "regionalRank": 1,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11751,9 +12810,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -11785,7 +12846,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11794,9 +12857,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/smoke.bitters",
     "tiktokUrl": null
   },
   {
@@ -11828,7 +12893,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11837,9 +12904,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/smythchicago",
     "tiktokUrl": null
   },
   {
@@ -11871,7 +12940,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11880,9 +12951,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -11914,7 +12987,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11923,9 +12998,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/somnirestaurant",
     "tiktokUrl": null
   },
   {
@@ -11957,7 +13034,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -11966,9 +13045,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/sonsanddaughterssf",
     "tiktokUrl": null
   },
   {
@@ -11986,7 +13067,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/sorn.html",
     "externalWebsite": "https://uk.linkedin.com/company/theworlds50best",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -12006,7 +13087,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12015,9 +13098,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/sornfinesouthern",
     "tiktokUrl": null,
     "regionalRank": 12
   },
@@ -12049,7 +13134,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12058,10 +13145,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/steirereck_stadtpark",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "sublime-restaurant",
@@ -12092,7 +13182,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12101,9 +13193,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/sublimerestaurantegt",
     "tiktokUrl": null
   },
   {
@@ -12121,7 +13215,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/suhring.html",
     "externalWebsite": "https://restaurantsuhring.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -12141,7 +13235,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12150,9 +13246,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/restaurant_suhring",
     "tiktokUrl": null,
     "regionalRank": 18
   },
@@ -12171,7 +13269,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/superbueno.html",
     "externalWebsite": "https://www.superbuenonyc.com/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -12191,7 +13289,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12200,9 +13300,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 9
   },
@@ -12255,8 +13357,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 32,
-    "establishmentTypes": [],
+    "regionalRank": 16,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12265,9 +13369,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -12298,7 +13404,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12307,10 +13415,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/bruno_verjus",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "tan-tan-2",
@@ -12340,7 +13451,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12349,10 +13462,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "taniere3-restaurant-2",
@@ -12383,7 +13499,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12392,9 +13510,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/taniere3",
     "tiktokUrl": null
   },
   {
@@ -12426,7 +13546,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12435,9 +13557,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/theworlds50best",
     "tiktokUrl": null
   },
   {
@@ -12489,8 +13613,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 6,
-    "establishmentTypes": [],
+    "regionalRank": 3,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12499,9 +13625,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -12553,8 +13681,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 44,
-    "establishmentTypes": [],
+    "regionalRank": 22,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12563,9 +13693,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -12596,7 +13728,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12605,10 +13739,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "the-cambridge-public-house-2",
@@ -12659,8 +13796,10 @@
       }
     ],
     "enrichmentSource": "derived",
-    "regionalRank": 18,
-    "establishmentTypes": [],
+    "regionalRank": 9,
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12669,9 +13808,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/thecambridge_paris",
     "tiktokUrl": null
   },
   {
@@ -12689,7 +13830,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/the-chairman.html",
     "externalWebsite": "http://thechairmangroup.com/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -12709,7 +13850,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12718,9 +13861,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/thechairmanrestauranthk",
     "tiktokUrl": null,
     "regionalRank": 1
   },
@@ -12753,7 +13898,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12762,9 +13909,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -12796,7 +13945,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12805,9 +13956,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/the_pine",
     "tiktokUrl": null
   },
   {
@@ -12839,7 +13992,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12848,9 +14003,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/thepublichouse_taipei",
     "tiktokUrl": null
   },
   {
@@ -12882,7 +14039,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12891,9 +14050,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -12925,7 +14086,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12934,9 +14097,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -12968,7 +14133,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -12977,9 +14144,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -12997,7 +14166,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/tlecan.html",
     "externalWebsite": "https://tlecan.com/",
-    "continent": "NORTH_AMERICA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -13017,7 +14186,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13026,9 +14197,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 5
   },
@@ -13061,7 +14234,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13070,9 +14245,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -13104,7 +14281,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13113,9 +14292,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/majorfoodgroup",
     "tiktokUrl": null
   },
   {
@@ -13146,7 +14327,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13155,10 +14338,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/50bestbars",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "trescha-restaurant",
@@ -13189,7 +14375,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13198,9 +14386,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/trescharestaurant",
     "tiktokUrl": null
   },
   {
@@ -13231,7 +14421,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13240,10 +14432,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/tresindstudio",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "true-laurel",
@@ -13274,7 +14469,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13283,9 +14480,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -13317,7 +14516,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13326,9 +14527,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/tuju_sp",
     "tiktokUrl": null
   },
   {
@@ -13359,7 +14562,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13368,10 +14573,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/ristoranteuliassi",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "vender-2",
@@ -13402,7 +14610,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13411,9 +14621,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -13445,7 +14657,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13454,9 +14668,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/vesperbkk",
     "tiktokUrl": null
   },
   {
@@ -13488,7 +14704,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13497,9 +14715,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -13531,7 +14751,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13540,9 +14762,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/villatorelmx",
     "tiktokUrl": null
   },
   {
@@ -13560,7 +14784,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/virtu.html",
     "externalWebsite": "https://www.fourseasons.com/otemachi/dining/restaurants/virtu/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -13580,7 +14804,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13589,9 +14815,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null,
     "regionalRank": 18
   },
@@ -13623,7 +14851,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13632,10 +14862,13 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
-    "tiktokUrl": null
+    "instagramUrl": "https://www.instagram.com/danielberlinrestaurant",
+    "tiktokUrl": null,
+    "regionalRank": null
   },
   {
     "slug": "wana-yook-restaurant-2",
@@ -13666,7 +14899,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13675,9 +14910,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/wana.yook",
     "tiktokUrl": null
   },
   {
@@ -13709,7 +14946,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13718,9 +14957,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/wildbluerestaurant",
     "tiktokUrl": null
   },
   {
@@ -13738,7 +14979,7 @@
     "worlds50bestCategory": "RESTAURANTS",
     "sourceUrl": "https://www.theworlds50best.com/restaurants/best-in-the-world/the-list/wing.html",
     "externalWebsite": "http://wingrestaurant.hk/",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/list/1-50",
     "additionalRankings": [
@@ -13758,7 +14999,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13767,9 +15010,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/wingrestaurant_hk",
     "tiktokUrl": null,
     "regionalRank": 2
   },
@@ -13802,7 +15047,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13811,9 +15058,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   },
   {
@@ -13845,7 +15094,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "restaurante"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13854,9 +15105,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/yumchacl",
     "tiktokUrl": null
   },
   {
@@ -13874,7 +15127,7 @@
     "worlds50bestCategory": "BARS",
     "sourceUrl": "https://www.theworlds50best.com/bars/best-in-the-world/the-list/zest.html",
     "externalWebsite": "https://uk.linkedin.com/company/50bestbars",
-    "continent": "ASIA",
+    "continent": "GLOBAL",
     "listScope": "GLOBAL",
     "listUrl": "https://www.theworlds50best.com/bars/list/1-50",
     "additionalRankings": [
@@ -13894,7 +15147,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13903,9 +15158,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://www.instagram.com/zest.seoul",
     "tiktokUrl": null,
     "regionalRank": 2
   },
@@ -13938,7 +15195,9 @@
       }
     ],
     "enrichmentSource": "worlds50best",
-    "establishmentTypes": [],
+    "establishmentTypes": [
+      "cocteleria"
+    ],
     "cuisineTypes": [],
     "starDishes": [],
     "idealFor": [],
@@ -13947,9 +15206,11 @@
     "priceRange": null,
     "dailyMenuEnabled": false,
     "dailyMenuNote": null,
-    "awards": [],
+    "awards": [
+      "worlds50best"
+    ],
     "venuePreferences": [],
-    "instagramUrl": null,
+    "instagramUrl": "https://instagram.com/50bestbars",
     "tiktokUrl": null
   }
 ]

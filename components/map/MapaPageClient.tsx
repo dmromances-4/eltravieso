@@ -1,24 +1,34 @@
 "use client";
 
-import dynamic from "next/dynamic";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
-import { CONTINENT_LABELS } from "@/lib/venues/continents";
-import type { VenueContinent } from "@prisma/client";
+import VenueDirectorySearch from "@/components/map/VenueDirectorySearch";
+import MapErrorBoundary from "@/components/map/MapErrorBoundary";
+import VenueMapShell from "@/components/map/VenueMapShell";
+import { labelForVenueOption } from "@/lib/venues/taxonomy";
+import {
+  filterEditorialIndexVenues,
+  sortEditorialIndexVenues,
+} from "@/lib/venues/sort-editorial-index";
 
-function MapLoadingFallback() {
+const INDEX_PAGE_SIZE = 50;
+
+function MapChunkError({ retry }: { retry: () => void }) {
   const t = useTranslations("map");
   return (
-    <div className="flex h-[70vh] items-center justify-center rounded-card border border-slate-200 bg-white text-slate-500 shadow-sm">
-      {t("loadingMap")}
+    <div className="flex h-[70vh] flex-col items-center justify-center gap-4 rounded-card border border-slate-200 bg-white p-8 text-center shadow-sm">
+      <p className="text-slate-700">{t("loadError")}</p>
+      <button
+        type="button"
+        onClick={retry}
+        className="rounded-pill border border-electric-yellow bg-electric-yellow/20 px-6 py-2 text-sm font-bold uppercase tracking-widest text-slate-900 transition hover:bg-electric-yellow/40"
+      >
+        {t("retry")}
+      </button>
     </div>
   );
 }
-
-const VenueMapShell = dynamic(() => import("@/components/map/VenueMapShell"), {
-  ssr: false,
-  loading: () => <MapLoadingFallback />,
-});
 
 type EditorialVenue = {
   slug: string;
@@ -26,22 +36,35 @@ type EditorialVenue = {
   city: string;
   worlds50bestRank: number;
   worlds50bestCategory: string;
+  listScope?: string;
   regionalRank?: number | null;
-};
-
-type ContinentalSection = {
-  continent: VenueContinent;
-  venues: EditorialVenue[];
+  regionTags?: string[];
+  venuePreferences?: string[];
 };
 
 type Props = {
-  editorialIndex?: EditorialVenue[];
-  continentalSections?: ContinentalSection[];
   initialSlug?: string | null;
 };
 
+function VenueListSkeleton() {
+  return (
+    <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3" aria-hidden>
+      {Array.from({ length: 9 }).map((_, i) => (
+        <li
+          key={i}
+          className="h-20 animate-pulse rounded-card border border-slate-200 bg-slate-100"
+        />
+      ))}
+    </ul>
+  );
+}
+
 function VenueList({ venues }: { venues: EditorialVenue[] }) {
   const t = useTranslations("map");
+
+  if (venues.length === 0) {
+    return <p className="font-mono text-sm text-slate-500">{t("noResults")}</p>;
+  }
 
   return (
     <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
@@ -51,13 +74,40 @@ function VenueList({ venues }: { venues: EditorialVenue[] }) {
             href={`/locales/${v.slug}`}
             className="block rounded-card border border-slate-200 bg-slate-50 px-4 py-3 font-mono text-sm text-slate-800 transition hover:border-electric-blue hover:bg-white"
           >
-            {v.regionalRank ? (
-              <span className="text-electric-blue">{t("regionalRank", { rank: v.regionalRank })}</span>
-            ) : (
-              <span className="text-electric-yellow">#{v.worlds50bestRank}</span>
-            )}{" "}
+            <span className="text-electric-yellow">#{v.worlds50bestRank}</span>{" "}
             {v.name}
-            <span className="block text-xs text-slate-500">{v.city}</span>
+            <span className="block text-xs text-slate-500">
+              {v.city}
+              {v.worlds50bestCategory ? (
+                <span className="ml-2 uppercase tracking-wide text-slate-400">
+                  · {v.worlds50bestCategory}
+                </span>
+              ) : null}
+            </span>
+            {v.regionTags && v.regionTags.length > 0 ? (
+              <span className="mt-1 flex flex-wrap gap-1">
+                {v.regionTags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="rounded-pill border border-electric-blue/30 bg-electric-blue/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-electric-blue"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </span>
+            ) : null}
+            {v.venuePreferences && v.venuePreferences.length > 0 ? (
+              <span className="mt-1 flex flex-wrap gap-1">
+                {v.venuePreferences.slice(0, 4).map((pref) => (
+                  <span
+                    key={pref}
+                    className="rounded-pill border border-slate-300 bg-white px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-slate-600"
+                  >
+                    {labelForVenueOption(pref)}
+                  </span>
+                ))}
+              </span>
+            ) : null}
           </Link>
         </li>
       ))}
@@ -65,12 +115,66 @@ function VenueList({ venues }: { venues: EditorialVenue[] }) {
   );
 }
 
-export default function MapaPageClient({
-  editorialIndex = [],
-  continentalSections = [],
-  initialSlug = null,
-}: Props) {
+export default function MapaPageClient({ initialSlug = null }: Props) {
   const t = useTranslations("map");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [editorialIndex, setEditorialIndex] = useState<EditorialVenue[]>([]);
+  const [indexLoading, setIndexLoading] = useState(true);
+  const [indexError, setIndexError] = useState<string | null>(null);
+  const [indexReloadToken, setIndexReloadToken] = useState(0);
+  const [showAllList, setShowAllList] = useState(false);
+  const [mapChunkKey, setMapChunkKey] = useState(0);
+
+  const handleSearchChange = useCallback((value: string) => {
+    setSearchQuery(value);
+    setShowAllList(false);
+  }, []);
+
+  useEffect(() => {
+    let cancelled = false;
+    setIndexLoading(true);
+    setIndexError(null);
+
+    void (async () => {
+      try {
+        const response = await fetch("/api/venues/index");
+        if (!response.ok) {
+          const payload = (await response.json().catch(() => ({}))) as { message?: string };
+          throw new Error(payload.message ?? `HTTP ${response.status}`);
+        }
+        const data = (await response.json()) as { venues?: EditorialVenue[] };
+        if (!cancelled) {
+          setEditorialIndex(data.venues ?? []);
+        }
+      } catch (err) {
+        if (!cancelled) {
+          const message = err instanceof Error ? err.message : t("indexLoadError");
+          setIndexError(message);
+          setEditorialIndex([]);
+        }
+      } finally {
+        if (!cancelled) setIndexLoading(false);
+      }
+    })();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [indexReloadToken, t]);
+
+  const filteredVenues = useMemo(
+    () =>
+      sortEditorialIndexVenues(filterEditorialIndexVenues(editorialIndex, searchQuery)),
+    [editorialIndex, searchQuery],
+  );
+
+  const isSearching = Boolean(searchQuery.trim());
+  const visibleListVenues = useMemo(() => {
+    if (isSearching || showAllList) return filteredVenues;
+    return filteredVenues.slice(0, INDEX_PAGE_SIZE);
+  }, [filteredVenues, isSearching, showAllList]);
+
+  const hasMore = !isSearching && !showAllList && visibleListVenues.length < filteredVenues.length;
 
   return (
     <main className="min-h-screen bg-[#FAFAFA] pb-12 pt-28 text-slate-900">
@@ -83,30 +187,64 @@ export default function MapaPageClient({
           <p className="max-w-2xl text-body">{t("lead")}</p>
         </section>
 
-        <VenueMapShell initialSlug={initialSlug} />
+        <VenueDirectorySearch
+          value={searchQuery}
+          onChange={handleSearchChange}
+          resultCount={isSearching ? filteredVenues.length : undefined}
+        />
 
-        {continentalSections.length > 0
-          ? continentalSections.map((section) => (
-              <section
-                key={section.continent}
-                className="rounded-card border border-slate-200 bg-white p-6 shadow-sm"
+        <MapErrorBoundary
+          key={mapChunkKey}
+          fallback={({ retry }) => (
+            <MapChunkError
+              retry={() => {
+                retry();
+                setMapChunkKey((k) => k + 1);
+              }}
+            />
+          )}
+        >
+          <VenueMapShell initialSlug={initialSlug} searchQuery={searchQuery} />
+        </MapErrorBoundary>
+
+        <section className="rounded-card border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
+            <h2 className="font-display text-2xl font-bold text-slate-900">{t("worlds50Best")}</h2>
+            {!indexLoading && !indexError ? (
+              <span className="font-mono text-xs text-slate-500">
+                {visibleListVenues.length} / {filteredVenues.length}
+              </span>
+            ) : null}
+          </div>
+          {indexLoading ? (
+            <VenueListSkeleton />
+          ) : indexError ? (
+            <div className="space-y-3 text-center">
+              <p className="text-sm text-slate-600">{t("indexLoadError")}</p>
+              <p className="font-mono text-xs text-slate-500">{indexError}</p>
+              <button
+                type="button"
+                onClick={() => setIndexReloadToken((n) => n + 1)}
+                className="rounded-pill border border-electric-yellow bg-electric-yellow/20 px-6 py-2 text-sm font-bold uppercase tracking-widest text-slate-900 transition hover:bg-electric-yellow/40"
               >
-                <h2 className="mb-4 font-display text-2xl font-bold text-slate-900">
-                  {CONTINENT_LABELS[section.continent]}
-                </h2>
-                <VenueList venues={section.venues} />
-              </section>
-            ))
-          : null}
-
-        {editorialIndex.length > 0 && continentalSections.length === 0 ? (
-          <section className="rounded-card border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="mb-4 font-display text-2xl font-bold text-slate-900">
-              {t("worlds50Best")}
-            </h2>
-            <VenueList venues={editorialIndex} />
-          </section>
-        ) : null}
+                {t("retry")}
+              </button>
+            </div>
+          ) : (
+            <>
+              <VenueList venues={visibleListVenues} />
+              {hasMore ? (
+                <button
+                  type="button"
+                  onClick={() => setShowAllList(true)}
+                  className="mt-4 w-full rounded-card border border-slate-200 bg-slate-50 py-3 font-mono text-sm font-semibold text-slate-700 transition hover:border-electric-blue hover:bg-white"
+                >
+                  {t("showAll")} ({filteredVenues.length})
+                </button>
+              ) : null}
+            </>
+          )}
+        </section>
       </div>
     </main>
   );

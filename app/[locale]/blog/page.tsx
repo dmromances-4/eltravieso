@@ -1,12 +1,29 @@
-import { Link } from "@/i18n/navigation";
 import type { Metadata } from "next";
-import prisma from "@/lib/prisma";
 import { getTranslations } from "next-intl/server";
+import BlogSectionTabs from "@/components/blog/BlogSectionTabs";
+import BlogPodcastCard from "@/components/blog/BlogPodcastCard";
+import BlogVideoCard from "@/components/blog/BlogVideoCard";
+import BlogVoicesSection from "@/components/blog/BlogVoicesSection";
+import BlogWrittenCard from "@/components/blog/BlogWrittenCard";
+import {
+  listCuratedItems,
+  listFeaturedAuthors,
+  listWrittenPosts,
+} from "@/lib/blog/catalog";
 import type { AppLocale } from "@/i18n/routing";
+import type { BlogSection } from "@/types/editorial-author";
 
 export const dynamic = "force-dynamic";
 
-type Props = { params: { locale: AppLocale } };
+type Props = {
+  params: { locale: AppLocale };
+  searchParams: { section?: string };
+};
+
+function parseSection(value?: string): BlogSection {
+  if (value === "video" || value === "podcast") return value;
+  return "written";
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale: params.locale, namespace: "nav" });
@@ -19,82 +36,82 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function BlogPage({ params }: Props) {
-  const posts = await prisma.blogPost.findMany({
-    where: { published: true, locale: params.locale },
-    orderBy: { publishedAt: "desc" },
-    include: {
-      author: { select: { name: true } },
-    },
-  });
+export default async function BlogPage({ params, searchParams }: Props) {
+  const section = parseSection(searchParams.section);
+  const t = await getTranslations({ locale: params.locale, namespace: "blog" });
+
+  const [featuredAuthors, writtenPosts, videoItems, podcastItems] = await Promise.all([
+    listFeaturedAuthors(8),
+    section === "written" ? listWrittenPosts(params.locale) : Promise.resolve([]),
+    section === "video" ? listCuratedItems("VIDEO", params.locale) : Promise.resolve([]),
+    section === "podcast" ? listCuratedItems("PODCAST", params.locale) : Promise.resolve([]),
+  ]);
+
+  const emptyMessage =
+    section === "written"
+      ? t("emptyWritten")
+      : section === "video"
+        ? t("emptyVideo")
+        : t("emptyPodcast");
 
   return (
     <main className="min-h-screen bg-[#FAFAFA] pt-32 pb-24 text-slate-900">
       <div className="mx-auto max-w-7xl px-6 sm:px-8">
-        <div className="mb-16 space-y-4">
+        <div className="mb-12 space-y-4">
           <p className="inline-flex rounded-full border border-electric-blue/20 bg-electric-blue/5 px-4 py-2 text-xs font-bold uppercase tracking-[0.3em] text-electric-blue">
             Cultura Canalla
           </p>
           <h1 className="text-5xl font-display font-bold tracking-tight text-white sm:text-6xl">
             Diario de un <span className="text-electric-yellow italic pr-2">Travieso</span>.
           </h1>
-          <p className="max-w-2xl text-lg leading-8 text-slate-400">
-            Historias de barra, secretos de destilación y todo lo que no te cuentan sobre el vermut.
-          </p>
+          <p className="max-w-2xl text-lg leading-8 text-slate-400">{t("lead")}</p>
         </div>
 
-        {posts.length === 0 ? (
-          <p className="text-slate-400">Pronto habrá artículos publicados por la comunidad.</p>
-        ) : (
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {posts.map((post) => (
-              <Link
-                key={post.id}
-                href={`/blog/${post.slug}`}
-                className="group relative flex flex-col overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#121212] transition-all duration-300 hover:-translate-y-2 hover:border-electric-blue/30 hover:shadow-[0_0_40px_rgba(43,135,185,0.15)]"
-              >
-                {post.coverUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={post.coverUrl} alt="" className="h-48 w-full object-cover" />
-                ) : null}
-                <div className="flex flex-grow flex-col p-8">
-                  <div className="mb-6 flex items-center justify-between">
-                    <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[10px] font-bold uppercase tracking-widest text-slate-400">
-                      {(post.publishedAt ?? post.createdAt).toLocaleDateString("es-ES", {
-                        month: "long",
-                        year: "numeric",
-                      })}
-                    </span>
-                    <div className="flex items-center gap-2">
-                      {post.isPremium ? (
-                        <span className="rounded-full border border-electric-red/40 bg-electric-red/10 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-electric-red">
-                          VIP
-                        </span>
-                      ) : null}
-                      <span className="text-xs uppercase tracking-widest text-electric-yellow">Leer →</span>
-                    </div>
-                  </div>
+        <div className="mb-12">
+          <BlogSectionTabs active={section} />
+        </div>
 
-                  <h2 className="mb-4 font-display text-2xl font-bold text-white transition-colors group-hover:text-electric-blue">
-                    {post.title}
-                  </h2>
+        <BlogVoicesSection
+          authors={featuredAuthors}
+          title={t("voices")}
+          viewAllHref="/blog/autores"
+          viewAllLabel={t("allAuthors")}
+        />
 
-                  {post.excerpt ? (
-                    <p className="mb-8 line-clamp-3 text-sm leading-relaxed text-slate-400">{post.excerpt}</p>
-                  ) : null}
+        {section === "written" && (
+          writtenPosts.length === 0 ? (
+            <p className="text-slate-400">{emptyMessage}</p>
+          ) : (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {writtenPosts.map((post) => (
+                <BlogWrittenCard key={post.id} post={post} excerptBadge={t("excerptBadge")} />
+              ))}
+            </div>
+          )
+        )}
 
-                  <div className="mt-auto flex items-center gap-3 border-t border-white/10 pt-6">
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-electric-yellow/20 font-display font-bold text-electric-yellow">
-                      {(post.author?.name ?? "U").charAt(0)}
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-slate-300">
-                      {post.author?.name ?? "Autor"}
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
+        {section === "video" && (
+          videoItems.length === 0 ? (
+            <p className="text-slate-400">{emptyMessage}</p>
+          ) : (
+            <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+              {videoItems.map((item) => (
+                <BlogVideoCard key={item.id} item={item} />
+              ))}
+            </div>
+          )
+        )}
+
+        {section === "podcast" && (
+          podcastItems.length === 0 ? (
+            <p className="text-slate-400">{emptyMessage}</p>
+          ) : (
+            <div className="grid gap-6 md:grid-cols-2">
+              {podcastItems.map((item) => (
+                <BlogPodcastCard key={item.id} item={item} episodeLabel={t("episode")} />
+              ))}
+            </div>
+          )
         )}
       </div>
     </main>

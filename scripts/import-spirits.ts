@@ -27,13 +27,17 @@ import {
   type ImportedSpirit,
   type SpiritsRetailerId,
 } from "@/lib/products/spirits-import";
+import { mergeSpiritRecords } from "@/lib/alcohol/spirit-id";
+import type { AlcoholRecord } from "@/types/alcohol";
 
 const USER_AGENT = "ElTraviesoBot/1.0 (+catalogacion-interna; contacto@eltravieso.local)";
 const RATE_MS = Number(process.env.RATE_MS ?? 1500);
 const MAX_PAGES_PER_CATEGORY = Number(process.env.MAX_PAGES_PER_CATEGORY ?? 3);
+const CHECKPOINT_EVERY = Number(process.env.SPIRITS_CHECKPOINT_EVERY ?? 100);
 const CACHE_DIR = path.resolve(process.cwd(), ".scrape-cache", "spirits");
 const OUTPUT = path.resolve(process.cwd(), "data", "spirits-import.json");
 const PRODUCTS_OUTPUT = path.resolve(process.cwd(), "data", "products.json");
+const ENCYCLOPEDIA_OUTPUT = path.resolve(process.cwd(), "data", "alcohol-encyclopedia.json");
 
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
@@ -230,9 +234,11 @@ async function discoverUrlsForSource(sourceId: SpiritsRetailerId, maxUrls: numbe
 async function importFromUrls(
   urls: string[],
   retailerId: SpiritsRetailerId | "manual",
-  limit: number
+  limit: number,
+  onCheckpoint?: (batch: ImportedSpirit[]) => void,
 ): Promise<ImportedSpirit[]> {
   const results: ImportedSpirit[] = [];
+  let sinceCheckpoint = 0;
   const retailer =
     retailerId === "manual"
       ? SPIRITS_RETAILERS.decantalo
@@ -262,10 +268,18 @@ async function importFromUrls(
     if (product.priceCents <= 0 && !product.description) continue;
 
     results.push(product);
+    sinceCheckpoint += 1;
+    if (onCheckpoint && sinceCheckpoint >= CHECKPOINT_EVERY) {
+      onCheckpoint(results.slice(-sinceCheckpoint));
+      sinceCheckpoint = 0;
+    }
     console.log(
       `  ✓ ${product.title} — ${(product.priceCents / 100).toFixed(2)}€` +
         (product.metadata?.spiritType ? ` [${product.metadata.spiritType}]` : "")
     );
+  }
+  if (onCheckpoint && sinceCheckpoint > 0) {
+    onCheckpoint(results.slice(-sinceCheckpoint));
   }
   return results;
 }
@@ -304,6 +318,17 @@ function collectDecantaloBodebocaUrlsFromCatalog(limit: number): string[] {
   return urls;
 }
 
+function persistSpiritsBatch(
+  output: string,
+  batch: ImportedSpirit[],
+  overwrite: boolean,
+): { merged: ImportedSpirit[]; added: number; updated: number } {
+  const existing = loadJson<ImportedSpirit[]>(output, []);
+  const result = mergeSpiritCatalog(existing, batch, { overwrite });
+  fs.writeFileSync(output, `${JSON.stringify(result.merged, null, 2)}\n`, "utf-8");
+  return result;
+}
+
 async function main() {
   const args = parseArgs(process.argv.slice(2));
   console.log(
@@ -312,10 +337,22 @@ async function main() {
   );
 
   const imported: ImportedSpirit[] = [];
+  let checkpointAdded = 0;
+  let checkpointUpdated = 0;
+
+  const checkpoint =
+    args.dryRun
+      ? undefined
+      : (batch: ImportedSpirit[]) => {
+          const { merged, added, updated } = persistSpiritsBatch(args.output, batch, args.overwrite);
+          checkpointAdded += added;
+          checkpointUpdated += updated;
+          console.log(`  💾 checkpoint → ${merged.length} refs (+${added} nuevas)`);
+        };
 
   if (args.urls.length > 0) {
     console.log(`\n📎 ${args.urls.length} URLs manuales`);
-    imported.push(...(await importFromUrls(args.urls, "manual", args.limit)));
+    imported.push(...(await importFromUrls(args.urls, "manual", args.limit, checkpoint)));
   }
 
   for (const sourceId of args.sources) {
@@ -339,7 +376,7 @@ async function main() {
       console.log(`  🔎 ${urls.length} URLs de producto descubiertas`);
     }
 
-    const batch = await importFromUrls(urls, sourceId, args.limit - imported.length);
+    const batch = await importFromUrls(urls, sourceId, args.limit - imported.length, checkpoint);
     imported.push(...batch);
   }
 
@@ -354,12 +391,15 @@ async function main() {
     return;
   }
 
-  const existingSpirits = loadJson<ImportedSpirit[]>(args.output, []);
-  const { merged, added, updated } = mergeSpiritCatalog(existingSpirits, imported, {
-    overwrite: args.overwrite,
-  });
-  fs.writeFileSync(args.output, `${JSON.stringify(merged, null, 2)}\n`, "utf-8");
-  console.log(`✓ ${args.output} → ${merged.length} refs (+${added} nuevas, ~${updated} actualizadas)`);
+  if (checkpointAdded > 0) {
+    const merged = loadJson<ImportedSpirit[]>(args.output, []);
+    console.log(
+      `✓ ${args.output} → ${merged.length} refs (+${checkpointAdded} nuevas en checkpoints, ~${checkpointUpdated} actualizadas)`,
+    );
+  } else {
+    const { merged, added, updated } = persistSpiritsBatch(args.output, imported, args.overwrite);
+    console.log(`✓ ${args.output} → ${merged.length} refs (+${added} nuevas, ~${updated} actualizadas)`);
+  }
 
   if (args.merge) {
     const existingProducts = loadJson<ImportedSpirit[]>(PRODUCTS_OUTPUT, []);
@@ -370,7 +410,20 @@ async function main() {
     console.log(
       `✓ ${PRODUCTS_OUTPUT} → ${productMerge.merged.length} productos (+${productMerge.added} nuevos)`
     );
-    console.log("  Siguiente paso: npm run db:setup  (o seed de catálogo en dev)");
+
+    const existingEncyclopedia = loadJson<AlcoholRecord[]>(ENCYCLOPEDIA_OUTPUT, []);
+    const spiritsForEncyclopedia = loadJson<ImportedSpirit[]>(args.output, []);
+    const encyclopediaMerge = mergeSpiritRecords(existingEncyclopedia, spiritsForEncyclopedia);
+    fs.writeFileSync(
+      ENCYCLOPEDIA_OUTPUT,
+      `${JSON.stringify(encyclopediaMerge.merged, null, 2)}\n`,
+      "utf-8",
+    );
+    console.log(
+      `✓ ${ENCYCLOPEDIA_OUTPUT} → ${encyclopediaMerge.merged.length} entradas ` +
+        `(+${encyclopediaMerge.added} nuevas, ~${encyclopediaMerge.updated} actualizadas)`,
+    );
+    console.log("  Siguiente paso: npm run generate:spirit-images -- --write");
   }
 }
 

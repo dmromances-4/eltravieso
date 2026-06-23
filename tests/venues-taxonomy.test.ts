@@ -62,13 +62,18 @@ describe("tripadvisor taxonomy mapper", () => {
   it("maps price level and amenities to slugs", () => {
     const mapped = mapTripAdvisorEnrichment({
       priceLevel: 2,
-      cuisineLabels: ["japanese"],
-      amenities: ["wheelchair_accessible", "vegan_options"],
+      cuisineLabels: ["japanese", "cantonese"],
+      amenities: ["wheelchair_accessible", "vegan_options", "kids_welcome"],
+      features: ["outdoor_seating", "date_night"],
     });
     expect(mapped.priceRange).toBe("range_15_30");
     expect(mapped.cuisineTypes).toContain("japonesa");
+    expect(mapped.cuisineTypes).toContain("asiatica");
     expect(mapped.venuePreferences).toContain("wheelchair");
     expect(mapped.venuePreferences).toContain("vegan");
+    expect(mapped.venuePreferences).toContain("kids_welcome");
+    expect(mapped.idealFor).toContain("romantico");
+    expect(mapped.venueFeatures).toContain("terraza_exterior");
   });
 });
 

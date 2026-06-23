@@ -10,6 +10,7 @@ import alcoholData from "@/data/alcohol-encyclopedia.json";
 import prisma from "@/lib/prisma";
 import { normalizeTitle, writeAuditReport } from "./lib/audit-output";
 import type { AlcoholRecord } from "@/types/alcohol";
+import { findDuplicateSpiritGroups } from "@/lib/alcohol/spirit-id";
 
 config({ path: resolve(process.cwd(), ".env.local") });
 config({ path: resolve(process.cwd(), ".env") });
@@ -68,6 +69,8 @@ async function main() {
     (p) => p.slug.includes("categoria-") || p.category === "VERMUT" && p.slug.startsWith("categoria"),
   );
 
+  const encyclopediaDuplicateGroups = findDuplicateSpiritGroups(alcohols);
+
   const report = {
     generatedAt: new Date().toISOString(),
     totals: {
@@ -75,11 +78,13 @@ async function main() {
       ingredientStubs: ingredientStubs.length,
       duplicateSlugs: duplicateSlugs.length,
       encyclopediaMatches: encyclopediaMatches.length,
+      encyclopediaDuplicateGroups: encyclopediaDuplicateGroups.length,
       missingProductCode: products.filter((p) => !p.productCode).length,
     },
     duplicateSlugs,
     ingredientStubs: ingredientStubs.map((p) => ({ slug: p.slug, title: p.title, isActive: p.isActive })),
     encyclopediaMatches,
+    encyclopediaDuplicateGroups,
     junkCategories: junkCategories.map((p) => ({ slug: p.slug, title: p.title, category: p.category })),
   };
 

@@ -10,7 +10,10 @@ type AdminPost = {
   published: boolean;
   isPremium: boolean;
   updatedAt: string;
+  ingestionType: string | null;
+  sourceUrl: string | null;
   author: { email: string | null; name: string | null } | null;
+  editorialAuthor: { name: string } | null;
 };
 
 export default function AdminPostsList({ posts }: { posts: AdminPost[] }) {
@@ -48,7 +51,7 @@ export default function AdminPostsList({ posts }: { posts: AdminPost[] }) {
           <div>
             <p className="font-semibold text-white">{post.title}</p>
             <p className="mt-1 text-xs text-slate-500">
-              {post.author?.name ?? post.author?.email ?? "Sin autor"} ·{" "}
+              {post.editorialAuthor?.name ?? post.author?.name ?? post.author?.email ?? "Sin autor"} ·{" "}
               {post.published ? (
                 <span className="text-emerald-400">Publicado</span>
               ) : (
@@ -56,9 +59,22 @@ export default function AdminPostsList({ posts }: { posts: AdminPost[] }) {
               )}
               {post.isPremium ? (
                 <span className="ml-2 text-electric-red">VIP</span>
+              ) : null}
+              {post.ingestionType === "syndicated" ? (
+                <span className="ml-2 text-electric-blue">Syndicated</span>
               ) : null}{" "}
               · {new Date(post.updatedAt).toLocaleDateString("es-ES")}
             </p>
+            {post.sourceUrl ? (
+              <a
+                href={post.sourceUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block truncate text-xs text-slate-600 hover:text-electric-blue"
+              >
+                {post.sourceUrl}
+              </a>
+            ) : null}
           </div>
           <div className="flex flex-wrap gap-2">
             <Link

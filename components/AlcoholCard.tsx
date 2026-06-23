@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import type { AlcoholRecord } from '@/types/alcohol'
+import { Link } from '@/i18n/navigation'
 import { AnimatePresence, motion } from 'framer-motion'
 import { MetaChip } from '@/components/ui/MetaChip'
 import { cn } from '@/lib/utils'
@@ -35,7 +36,9 @@ export default function AlcoholCard({ alcohol }: AlcoholCardProps) {
             {subcategory ? <span className="text-xs text-slate-500">{subcategory}</span> : null}
           </div>
           <h3 className="font-display text-2xl font-semibold text-white transition-colors group-hover:text-electric-yellow">
-            {identity.name_exact}
+            <Link href={`/alcoholes/${alcohol.slug}`} className="hover:underline">
+              {identity.name_exact}
+            </Link>
           </h3>
           <p className="text-sm text-slate-400">
             {identity.brand} · {identity.producer}
@@ -61,12 +64,19 @@ export default function AlcoholCard({ alcohol }: AlcoholCardProps) {
           </div>
         </div>
 
-        <button
-          type="button"
-          onClick={() => setIsExpanded(!isExpanded)}
-          className="flex w-full items-center justify-between rounded-pill border border-white/10 bg-charcoal px-5 py-3 text-sm font-medium text-white transition-colors hover:border-electric-blue/30 focus:outline-none focus:ring-2 focus:ring-electric-blue/40"
-        >
-          <span>{isExpanded ? 'Ocultar detalles' : 'Ver ficha técnica completa'}</span>
+        <div className="mb-4 flex flex-col gap-2 sm:flex-row">
+          <Link
+            href={`/alcoholes/${alcohol.slug}`}
+            className="inline-flex items-center justify-center rounded-pill border border-electric-blue/40 px-4 py-2 text-xs font-bold uppercase tracking-widest text-electric-blue transition hover:bg-electric-blue/10"
+          >
+            Ver ficha
+          </Link>
+          <button
+            type="button"
+            onClick={() => setIsExpanded(!isExpanded)}
+            className="flex flex-1 items-center justify-between rounded-pill border border-white/10 bg-charcoal px-5 py-3 text-sm font-medium text-white transition-colors hover:border-electric-blue/30 focus:outline-none focus:ring-2 focus:ring-electric-blue/40"
+          >
+            <span>{isExpanded ? 'Ocultar detalles' : 'Vista rápida'}</span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -82,6 +92,7 @@ export default function AlcoholCard({ alcohol }: AlcoholCardProps) {
             <polyline points="6 9 12 15 18 9" />
           </svg>
         </button>
+        </div>
 
         <AnimatePresence>
           {isExpanded ? (

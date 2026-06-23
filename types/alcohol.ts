@@ -61,4 +61,10 @@ export interface AlcoholRecord {
   market: AlcoholMarket;
   didactic: AlcoholDidactic;
   advanced: AlcoholAdvanced;
+  imageUrl?: string | null;
+  sourceUrl?: string;
+  sourceRetailer?: string;
+  productCode?: string;
+  updatedAt?: string;
+  linkedProductSlug?: string;
 }

@@ -1,6 +1,7 @@
 import type { VenueContinent, VenueListScope, Worlds50BestCategory } from "@prisma/client";
 import type { NormalizedVenueGuide, VenueRanking } from "@/lib/venues/types";
-
+import { normalizeCanonicalRegions } from "@/lib/venues/region-tags";
+import { enrichGuideFromScrape } from "@/lib/venues/venue-profile-sync";
 function rankingKey(r: VenueRanking): string {
   return `${r.scope}:${r.continent}:${r.category}:${r.rank}`;
 }
@@ -115,7 +116,7 @@ export function mergeVenueGuides(
   existing: NormalizedVenueGuide | undefined,
   incoming: NormalizedVenueGuide,
 ): NormalizedVenueGuide {
-  if (!existing) return { ...incoming };
+  if (!existing) return enrichGuideFromScrape(incoming);
 
   const rankings = [...(existing.additionalRankings ?? [])];
   for (const r of incoming.additionalRankings ?? []) {
@@ -164,10 +165,13 @@ export function mergeVenueGuides(
       merged.regionalRank == null
         ? regionalRank
         : Math.min(merged.regionalRank, regionalRank);
-    if (!merged.continent || merged.continent === "GLOBAL") {
+    const hasGlobal =
+      merged.listScope === "GLOBAL" ||
+      rankings.some((r) => r.scope === "GLOBAL");
+    if (!hasGlobal && (!merged.continent || merged.continent === "GLOBAL")) {
       merged.continent = incoming.continent;
     }
   }
 
-  return merged;
+  return enrichGuideFromScrape(normalizeCanonicalRegions(merged));
 }

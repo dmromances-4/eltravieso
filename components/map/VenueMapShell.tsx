@@ -15,9 +15,10 @@ import VenueMapLeaflet from "@/components/map/VenueMapLeaflet";
 
 type Props = {
   initialSlug?: string | null;
+  searchQuery?: string;
 };
 
-export default function VenueMapShell({ initialSlug = null }: Props) {
+export default function VenueMapShell({ initialSlug = null, searchQuery = "" }: Props) {
   const t = useTranslations("map");
   const {
     affiliates,
@@ -41,7 +42,7 @@ export default function VenueMapShell({ initialSlug = null }: Props) {
     findVenueBySlug,
     hasRawData,
     hasMapPins,
-  } = useVenueMapData();
+  } = useVenueMapData(searchQuery);
 
   const globeRef = useRef<VenueGlobeMapHandle>(null);
   const [canWebGL, setCanWebGL] = useState(true);
@@ -51,14 +52,15 @@ export default function VenueMapShell({ initialSlug = null }: Props) {
   const [selected, setSelected] = useState<MapVenueDTO | null>(null);
   const [locating, setLocating] = useState(false);
   const [deepLinkHandled, setDeepLinkHandled] = useState(false);
+  const [mapLibreFailed, setMapLibreFailed] = useState(false);
 
   useEffect(() => {
     setCanWebGL(hasWebGLSupport());
     setReduceMotion(prefersReducedMotion());
   }, []);
 
-  const useLeaflet = !canWebGL || reduceMotion;
-  const useMapLibre = canWebGL && !reduceMotion;
+  const useLeaflet = !canWebGL || reduceMotion || mapLibreFailed;
+  const useMapLibre = canWebGL && !reduceMotion && !mapLibreFailed;
   const useGlobe = useMapLibre && viewMode === "globe";
   const useFlatMapLibre = useMapLibre && viewMode === "flat2d";
 
@@ -88,6 +90,14 @@ export default function VenueMapShell({ initialSlug = null }: Props) {
     );
   };
 
+  const handleMapError = () => {
+    if (mapStyle === "streets" && !mapLibreFailed) {
+      setMapLibreFailed(true);
+      return;
+    }
+    setViewMode("flat2d");
+  };
+
   const handleSelectVenue = (venue: MapVenueDTO | null) => {
     if (!venue) {
       setSelected(null);
@@ -99,8 +109,33 @@ export default function VenueMapShell({ initialSlug = null }: Props) {
 
   if (loading) {
     return (
-      <div className="flex h-[70vh] items-center justify-center rounded-card border border-slate-200 bg-white text-slate-500 shadow-sm">
-        {t("loadingVenues")}
+      <div className="space-y-4">
+        <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+          <VenueMapControls
+            affiliatesCount={affiliates.length}
+            editorialCount={editorial.length}
+            showAffiliates={showAffiliates}
+            showEditorial={showEditorial}
+            onToggleAffiliates={setShowAffiliates}
+            onToggleEditorial={setShowEditorial}
+            continent={continent}
+            onContinentChange={setContinent}
+            hideLowConfidence={hideLowConfidence}
+            onHideLowConfidenceChange={setHideLowConfidence}
+            onLocateUser={useMapLibre ? handleLocateUser : undefined}
+            locating={locating}
+          />
+          <MapStyleToggle
+            mapStyle={mapStyle}
+            onMapStyleChange={setMapStyle}
+            viewMode={viewMode}
+            onViewModeChange={setViewMode}
+            globeAvailable={useMapLibre}
+          />
+        </div>
+        <div className="flex h-[70vh] items-center justify-center rounded-card border border-slate-200 bg-white text-slate-500 shadow-sm">
+          {t("loadingVenues")}
+        </div>
       </div>
     );
   }
@@ -183,7 +218,7 @@ export default function VenueMapShell({ initialSlug = null }: Props) {
                 selectedId={selected?.id ?? null}
                 onSelectVenue={handleSelectVenue}
                 flyContinent={flyContinent}
-                onMapError={() => setViewMode("flat2d")}
+                onMapError={handleMapError}
               />
             ) : useFlatMapLibre ? (
               <VenueGlobeMap
@@ -195,7 +230,7 @@ export default function VenueMapShell({ initialSlug = null }: Props) {
                 selectedId={selected?.id ?? null}
                 onSelectVenue={handleSelectVenue}
                 flyContinent={flyContinent}
-                onMapError={() => setViewMode("flat2d")}
+                onMapError={handleMapError}
               />
             ) : (
               <VenueMapLeaflet

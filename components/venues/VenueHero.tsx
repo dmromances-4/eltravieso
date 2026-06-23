@@ -1,6 +1,7 @@
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { REGIONAL_LIST_LABELS } from "@/lib/venues/continents";
+import { labelForVenueOption } from "@/lib/venues/taxonomy";
+import { buildRegionTags } from "@/lib/venues/region-tags";
 import type { VenuePublicDTO } from "@/lib/venues/types";
 
 const VENUE_LABELS: Record<string, string> = {
@@ -15,28 +16,27 @@ const CATEGORY_LABELS = {
   RESTAURANTS: "World's 50 Best Restaurants",
 } as const;
 
-function regionalBadgeLabel(venue: VenuePublicDTO): string | null {
-  const regional = venue.additionalRankings.find((r) => r.scope === "REGIONAL");
-  if (regional) {
-    const label =
-      REGIONAL_LIST_LABELS[regional.continent]?.[regional.category] ??
-      `${regional.continent} ${regional.category}`;
-    return `#${regional.rank} ${label}`;
-  }
+function regionalBadgeLabels(venue: VenuePublicDTO): string[] {
+  const tags = buildRegionTags(venue.additionalRankings, venue.worlds50bestCategory);
+  if (tags.length > 0) return tags;
   if (venue.regionalRank && venue.continent && venue.continent !== "GLOBAL") {
-    const label =
-      REGIONAL_LIST_LABELS[venue.continent]?.[venue.worlds50bestCategory ?? "BARS"] ??
-      venue.continent;
-    return `#${venue.regionalRank} ${label}`;
+    return [`#${venue.regionalRank} ${venue.continent}`];
   }
-  return null;
+  return [];
 }
 
 type Props = { venue: VenuePublicDTO };
 
 export default function VenueHero({ venue }: Props) {
-  const typeLabel = VENUE_LABELS[venue.venueType] ?? venue.venueType;
-  const regionalBadge = regionalBadgeLabel(venue);
+  const typeLabel =
+    venue.establishmentTypes.length > 0
+      ? venue.establishmentTypes.map((id) => labelForVenueOption(id)).join(" · ")
+      : (VENUE_LABELS[venue.venueType] ?? venue.venueType);
+  const regionalBadges = regionalBadgeLabels(venue);
+  const heroTags =
+    venue.vibeTags.length > 0
+      ? venue.vibeTags
+      : [...venue.idealFor, ...venue.venueFeatures].map((id) => labelForVenueOption(id));
 
   return (
     <section className="border-4 border-black bg-zinc-900 shadow-[10px_10px_0px_#000000]">
@@ -67,11 +67,14 @@ export default function VenueHero({ venue }: Props) {
                   : "World's 50 Best"}
               </span>
             ) : null}
-            {regionalBadge ? (
-              <span className="inline-flex w-fit border-4 border-black bg-electric-blue px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-black shadow-[4px_4px_0px_#000000]">
-                {regionalBadge}
+            {regionalBadges.map((badge) => (
+              <span
+                key={badge}
+                className="inline-flex w-fit border-4 border-black bg-electric-blue px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-black shadow-[4px_4px_0px_#000000]"
+              >
+                {badge}
               </span>
-            ) : null}
+            ))}
             {venue.isPremium ? (
               <span className="inline-flex w-fit border-4 border-black bg-electric-red px-4 py-2 font-mono text-xs font-bold uppercase tracking-widest text-white shadow-[4px_4px_0px_#000000]">
                 Top del Barrio
@@ -86,9 +89,9 @@ export default function VenueHero({ venue }: Props) {
             {venue.city}
             {venue.country ? `, ${venue.country}` : ""}
           </p>
-          {venue.vibeTags.length > 0 ? (
+          {heroTags.length > 0 ? (
             <div className="flex flex-wrap gap-2">
-              {venue.vibeTags.map((tag) => (
+              {heroTags.map((tag) => (
                 <span
                   key={tag}
                   className="border-2 border-black bg-black px-3 py-1 font-mono text-xs uppercase text-electric-yellow"

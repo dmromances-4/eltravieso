@@ -1,4 +1,5 @@
 import type { Prisma } from "@prisma/client";
+import { normalizeUnicodeNfc } from "@/lib/db-url";
 import type { NormalizedVenueGuide } from "@/lib/venues/types";
 
 export function venueGuideToDbFields(
@@ -11,15 +12,15 @@ export function venueGuideToDbFields(
 ) {
   return {
     slug: venue.slug,
-    name: venue.name,
-    city: venue.city,
-    country: venue.country ?? null,
-    address: venue.address ?? null,
+    name: normalizeUnicodeNfc(venue.name) ?? venue.name,
+    city: normalizeUnicodeNfc(venue.city) ?? venue.city,
+    country: normalizeUnicodeNfc(venue.country ?? null),
+    address: normalizeUnicodeNfc(venue.address ?? null),
     venueType: venue.venueType,
     photoUrl: venue.photoUrl ?? null,
-    history: venue.history ?? null,
-    verdict: venue.verdict ?? null,
-    chefName: venue.chefName ?? null,
+    history: normalizeUnicodeNfc(venue.history ?? null),
+    verdict: normalizeUnicodeNfc(venue.verdict ?? null),
+    chefName: normalizeUnicodeNfc(venue.chefName ?? null),
     worlds50bestRank: venue.worlds50bestRank,
     worlds50bestCategory: venue.worlds50bestCategory,
     worlds50bestYear: venue.worlds50bestYear ?? null,
@@ -43,10 +44,10 @@ export function venueGuideToDbFields(
     starDishes: venue.starDishes ?? [],
     idealFor: venue.idealFor ?? [],
     venueFeatures: venue.venueFeatures ?? [],
-    neighborhood: venue.neighborhood ?? null,
+    neighborhood: normalizeUnicodeNfc(venue.neighborhood ?? null),
     priceRange: venue.priceRange ?? null,
     dailyMenuEnabled: venue.dailyMenuEnabled ?? false,
-    dailyMenuNote: venue.dailyMenuNote ?? null,
+    dailyMenuNote: normalizeUnicodeNfc(venue.dailyMenuNote ?? null),
     awards: venue.awards ?? [],
     venuePreferences: venue.venuePreferences ?? [],
     instagramUrl: venue.instagramUrl ?? null,

@@ -1,0 +1,51 @@
+slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities,features,awards
+maido-restaurant-2,https://tripadvisor.es/Restaurant_Review-g294316-d1759465-Reviews-Maido-Lima_Lima_Region.html,,"San Martín 399, Miraflores, Lima, Peru",d1759465,ChIJObzkJx_IBZERAQaFKNwiTws,2,japanese|peruvian,accepts_credit_cards,,worlds50best
+bar-leone-3,https://tripadvisor.es/Restaurant_Review-g294217-d31393007-Reviews-Bar_Leone-Hong_Kong.html,,"15 Bridges St, Central, Hong Kong",d31393007,ChIJqyyPsGUBBDQRE5twNod5Lk8,2,italian,accepts_credit_cards,,worlds50best
+asador-etxebarri-restaurant-2,,,"San Juan Plaza, 1, 48291 Axpe, Bizkaia, Spain",,,2,americana|american,accepts_credit_cards,,worlds50best
+handshake-speakeasy-3,,,"C. Amberes 65, Juárez, Cuauhtémoc, 06600 Mexico City, Mexico",,,2,,accepts_credit_cards,,worlds50best
+quintonil-restaurant-3,,,"Newton 55, Polanco, 11560, Mexico City, Mexico",,ChIJbS8EZf8B0oURwwD8B0MpqK0,2,mexican,accepts_credit_cards,groups|scenic_view,worlds50best
+sips-2,,,"C/ de Muntaner, 108, 08036 Barcelona, Spain",,ChIJVeGtVgijpBIRGhWNVpFekW0,2,,accepts_credit_cards,romantic,worlds50best
+diverxo-restaurant-2,,,"NH Eurobuilding, C. del Padre Damián, 23, 28036 Madrid, Spain",,ChIJfUIagAMpQg0RRYLx9K82nJc,2,japanese|italian|india|griega|indian|greek,accepts_credit_cards,,worlds50best|michelin
+paradiso-2,,,"Carrer de Rera Palau, 4, 08003 Barcelona, Spain",,ChIJUxwdO_6ipBIRdMGRVDsolaM,2,,accepts_credit_cards,,worlds50best
+tayer-elementary-2,,,"152 Old St, London EC1V 9BW, UK",,ChIJP72YPh8ddkgRHAMOeJp_gEI,2,,accepts_credit_cards,,worlds50best
+alchemist-restaurant-2,,,"Refshalevej 173C, 1432 Copenhagen, Denmark",,,2,seafood,reservations|accepts_credit_cards,,worlds50best
+gaggan-restaurant-3,,,"68 Sukhumvit 31, Khlong Tan Nuea, Watthana, Bangkok 10110, Thailand",,,2,japanese|french|thai|india|indian,accepts_credit_cards,romantic|groups,worlds50best
+connaught-bar-2,,,"Connaught, Carlos Pl, London W1K 2A, UK",,,2,,accepts_credit_cards,,worlds50best
+moebius-milano-2,,,"Via Alfredo Cappellini, 25, 20124 Milano MI, Italy",,ChIJSVm3PfbHhkcRPeDWzSh9BS8,2,french|fusion,accepts_credit_cards,romantic,worlds50best
+sezanne-restaurant-3,,,"1 Chome-11-1 Marunouchi, Chiyoda City, Tokyo 100-6277, Japan",,,2,french,accepts_credit_cards,scenic_view,worlds50best
+line-2,,,"Agathodemonos 37, Orestou 1, 118 53 Athens, Greece",,,2,mediterranean|griega|greek,accepts_credit_cards,,worlds50best
+table-by-bruno-verjus-restaurant-2,,,"3 rue de Prague, 75012 Paris, France",,ChIJoSONvAVy5kcRiFFvBHOUYv8,2,french|asian,wheelchair_accessible|accepts_credit_cards,,worlds50best
+jigger-pony-3,,,"165 Tg Pagar Rd, Amara Hotel, Singapore 088539",,,2,,accepts_credit_cards,,worlds50best
+kjolle-restaurant-3,,,"Av. Pedro de Osma 301, Barranco,15063 Lima, Peru",,,2,peruvian,accepts_credit_cards,,worlds50best
+don-restaurant-2,,,"Guatemala 4691, Palermo Viejo, Buenos Aires, Argentina",,ChIJoYl36oa1vJURWWhqD9z3UV8,3,,reservations|accepts_credit_cards,romantic,worlds50best
+tres-monos-2,,,"Guatemala 4899, C1425 Buenos Aires, Argentina",,ChIJo7CuuHu1vJUR9DoRRpMQDNs,2,,accepts_credit_cards,,worlds50best
+wing-restaurant-3,,,"29/F The Wellington, 198 Wellington St, Central, Hong Kong",,,2,french|asian,accepts_credit_cards,,worlds50best
+alquimico-2,,,"Cl. del Colegio #34-24, Cartagena de Indias, Colombia",,ChIJ7zMvlZ8v9o4RWCwfENTkEbc,2,,accepts_credit_cards,,worlds50best
+atomix-restaurant-3,,,"104 E. 30th St. New York, NY 10016, USA",,,3,asian,wheelchair_accessible|accepts_credit_cards,romantic,worlds50best
+superbueno-3,,,"13 1st Ave., New York, NY 10003",,ChIJbXN71WhZwokRNTk55-ScVWY,2,mexican|americana|american,accepts_credit_cards,,worlds50best
+potong-restaurant-3,,,"422 Vanich Rd. Samphanthawong Bangkok, 10100, Thailand",,,3,japanese|thai|asian|americana|american,live_music|accepts_credit_cards,live_music,worlds50best
+lady-bee-2,,,"Av. Ernesto Diez Canseco 329, Miraflores 15074, Peru",,,2,peruvian,accepts_credit_cards,,worlds50best
+plenitude-restaurant-2,,,"Cheval Blanc Paris 8, Quai du Louvre, 75001 Paris, France",,,3,seafood,accepts_credit_cards,,worlds50best
+himkok-2,,,"Storgata 27, 0184 Oslo, Norway",,ChIJUyV7KGJuQUYRohEJQ-fnslw,3,,accepts_credit_cards,outdoor_seating,worlds50best
+ikoyi-restaurant-2,,,"180 The Strand, London, Greater London, WC2R 1EA, UK",,ChIJkw2CZtEEdkgRgiNBxbdniHE,2,asian,accepts_credit_cards,,worlds50best
+bar-us-3,,,"1/37 Floor, 1 Soi Sukhumvit 26, Khlong Tan, Khlong Toei, Bangkok 10110, Thailand",,,3,thai,accepts_credit_cards,romantic,worlds50best
+zest-3,,,"B1 26 KR 55 Dosan-daero 55-gil, Gangnam-gu, Seoul, Korea",,ChIJ9eN6-_GlfDUR5SGWDB7YNkw,3,asian,accepts_credit_cards,,worlds50best
+lido-84-restaurant-2,,,"Corso Zanardelli 196, 25083, Gardone Riviera (BS), Italy",,ChIJx7BJHCKMgUcRA7aurgztHrQ,4,italian,good_for_children|accepts_credit_cards,family|outdoor_seating|scenic_view,worlds50best
+bar-nouveau-2,,,"5 Rue des Haudriettes, 75003 Paris, France",,ChIJ4YqD5chv5kcRf4-j_pVUvnc,3,french,reservations|accepts_credit_cards,romantic,worlds50best
+sorn-restaurant-3,,,"56 Soi Sukhumvit 26, Klongton Khlong Toei, Bangkok 10110, Thailand",,,3,thai,accepts_credit_cards,,worlds50best
+reale-restaurant-2,,,"Piana Santa Liberata, 67031, Castel di Sangro (AQ), Italy",,ChIJnxxH1W96MBMRSkUGag8Oltc,4,italian,accepts_credit_cards,,worlds50best
+bar-benfiddich-3,,,"9F, 1 Chome-13-7, Nishishinjuku, Shinjuku City, 160-0023 Tokyo, Japan",,ChIJZUTGW9GMGGAROJ7G4sU221Q,3,,accepts_credit_cards,,worlds50best
+the-chairman-restaurant-3,,,"3rd Floor, The Wellington, 198 Wellington St, Central, Hong Kong",,ChIJhcOtY3wABDQR39uGw41EIYM,3,asian,accepts_credit_cards,,worlds50best
+caretakers-cottage-2,,,"139-141 Little Lonsdale St, Melbourne VIC 3000, Australia",,ChIJI_RgtUND1moRnACbclQN7Bg,2,,accepts_credit_cards,,worlds50best
+atelier-moessmer-norbert-niederkofler-restaurant-2,,,"Via Walther von der Vogelweide, Brunico, 39031",,ChIJf6LW4bcheEcRuUfcDFw1q30,4,,accepts_credit_cards,outdoor_seating,worlds50best
+the-cambridge-public-house-2,,,"8 Rue de Poitou, 75003 Paris, France",,ChIJf1PlS6hv5kcRfxnt_fDSpyE,2,french,accepts_credit_cards,,worlds50best
+satans-whiskers-2,,,"343 Cambridge Heath Rd, London E2 9RA, UK",,ChIJf9GjdNscdkgRPi-9Fxb6iDo,2,,accepts_credit_cards,,worlds50best
+narisawa-restaurant-3,,,"Japan, 〒107-0062 Tokyo, Minato City, Minamiaoyama, 2 Chome−6−15",,,3,japanese|french|asian|vegan,vegan_options|vegetarian_friendly|accepts_credit_cards,,worlds50best
+suhring-restaurant-3,,,"10 Yen Akat Soi 3, Chongnonsi, Yannawa, Bangkok 10120",,,3,,accepts_credit_cards,,worlds50best|michelin
+locale-firenze-2,,,"Via delle Seggiole, 12r, 50122 Florence, Italy",,,3,italian,accepts_credit_cards,,worlds50best
+tlecan-3,,,"Av. Álvaro Obregón 228-Local 2, Roma Nte., Cuauhtémoc, 06700 Ciudad de México, CDMX, Mexico",,ChIJRbtqqOX_0YURJkwQEFZd2cs,3,mexican,accepts_credit_cards,romantic,worlds50best
+borago-restaurant-2,,,"San José María Escrivá de Balaguer 5970, Región Metropolitana, Santiago, 7640804, Chile",,ChIJxSErG0jPYpYRoyEeWBQK0Dk,4,,accepts_credit_cards,,worlds50best
+tan-tan-2,,,"R. Fradique Coutinho, 153 - Pinheiros, São Paulo - SP, 05416-010, Brazil",,,3,japanese,accepts_credit_cards,romantic,worlds50best
+elkano-restaurant-2,,,"Herrerieta Kalea, 2, 20808 Getaria, Gipuzkoa, Spain",,,3,seafood,accepts_credit_cards,,worlds50best|michelin
+odette-restaurant-3,,,"1 St Andrew's Rd, #01-04 National Gallery, Singapore 178957",,,3,japanese|french,accepts_credit_cards,,worlds50best
+mirror-bar-2,,,"Radisson Blu Carlton Hotel, Bratislava, Hviezdoslavovo námestie 3, 811 02 Bratislava, Slovakia",,ChIJDWebZPGJbEcRFar4JUg0LkY,3,,accepts_credit_cards,,worlds50best

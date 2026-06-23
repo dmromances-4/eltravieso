@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-19T12:58:09.928Z",
+  "generatedAt": "2026-06-23T07:41:54.621Z",
   "scope": "published_guides",
   "totals": {
     "guides": 309,
@@ -8,560 +8,97 @@
     "fullyCompletePct": 0,
     "withPhoto": 309,
     "withEditorial": 306,
-    "withCoords": 270,
-    "withTaxonomy": 0,
+    "withCoords": 268,
+    "withTaxonomy": 309,
     "withPreferences": 0
   },
   "gapCounts": {
     "venueCode": 0,
     "photoUrl": 0,
     "historyOrVerdict": 3,
-    "coords": 39,
-    "taxonomy": 309,
+    "coords": 41,
+    "taxonomy": 0,
     "venuePreferences": 309,
     "tripadvisorUrl": 309
   },
   "incomplete": [
     {
-      "slug": "bar-mauro",
-      "name": "Bar Mauro",
-      "venueCode": "ET-LOC-00152",
+      "slug": "102-house-restaurant-2",
+      "name": "102 House",
+      "venueCode": "ET-LOC-00001",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "bar-snack",
-      "name": "Bar Snack",
-      "venueCode": "ET-LOC-00153",
+      "slug": "1930-2",
+      "name": "1930",
+      "venueCode": "ET-LOC-00002",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "schmuck",
-      "name": "Schmuck",
-      "venueCode": "ET-LOC-00154",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-keefer-bar",
-      "name": "The Keefer Bar",
-      "venueCode": "ET-LOC-00157",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-pompette",
-      "name": "Bar Pompette",
-      "venueCode": "ET-LOC-00158",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "el-gallo-altanero",
-      "name": "El Gallo Altanero",
-      "venueCode": "ET-LOC-00160",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "kumiko",
-      "name": "Kumiko",
-      "venueCode": "ET-LOC-00161",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "form-matter",
-      "name": "Form + Matter",
-      "venueCode": "ET-LOC-00163",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "true-laurel",
-      "name": "True Laurel",
-      "venueCode": "ET-LOC-00164",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "clemente-bar",
-      "name": "Clemente Bar",
-      "venueCode": "ET-LOC-00165",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "best-intentions",
-      "name": "Best Intentions",
-      "venueCode": "ET-LOC-00166",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "june-on-cambie",
-      "name": "June on Cambie",
-      "venueCode": "ET-LOC-00167",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mecenas",
-      "name": "Mecenas",
-      "venueCode": "ET-LOC-00168",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "library-bar",
-      "name": "Library Bar",
-      "venueCode": "ET-LOC-00169",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "licoreria-limantour",
-      "name": "Licorería Limantour",
-      "venueCode": "ET-LOC-00170",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cure",
-      "name": "Cure",
-      "venueCode": "ET-LOC-00171",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mother",
-      "name": "Mother",
-      "venueCode": "ET-LOC-00172",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "martinys",
-      "name": "Martiny's",
-      "venueCode": "ET-LOC-00173",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bekeb",
-      "name": "Bekeb",
-      "venueCode": "ET-LOC-00174",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "kaito-del-valle",
-      "name": "Kaito del Valle",
-      "venueCode": "ET-LOC-00175",
+      "slug": "7th-door-restaurant-2",
+      "name": "7th Door",
+      "venueCode": "ET-LOC-00003",
       "gaps": [
         "coords",
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "la-factoria",
-      "name": "La Factoría",
-      "venueCode": "ET-LOC-00176",
+      "slug": "a-casa-do-porco-restaurant",
+      "name": "A Casa do Porco",
+      "venueCode": "ET-LOC-00004",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "gus-sip-dip",
-      "name": "Gus' Sip & Dip",
-      "venueCode": "ET-LOC-00177",
+      "slug": "acamaya-restaurant-2",
+      "name": "Acamaya",
+      "venueCode": "ET-LOC-00005",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "mirate",
-      "name": "Mírate",
-      "venueCode": "ET-LOC-00178",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "civil-works",
-      "name": "Civil Works",
-      "venueCode": "ET-LOC-00179",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bisous",
-      "name": "Bisous",
-      "venueCode": "ET-LOC-00180",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "angels-share",
-      "name": "Angel's Share",
-      "venueCode": "ET-LOC-00181",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "prophecy",
-      "name": "Prophecy",
-      "venueCode": "ET-LOC-00182",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "press-club",
-      "name": "Press Club",
-      "venueCode": "ET-LOC-00184",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-madonna",
-      "name": "Bar Madonna",
-      "venueCode": "ET-LOC-00186",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "attaboy",
-      "name": "Attaboy",
-      "venueCode": "ET-LOC-00187",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "botanist-bar",
-      "name": "Botanist Bar",
-      "venueCode": "ET-LOC-00188",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "service-bar",
-      "name": "Service Bar",
-      "venueCode": "ET-LOC-00189",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "maison-premiere",
-      "name": "Maison Premiere",
-      "venueCode": "ET-LOC-00190",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "pacific-cocktail-haven",
-      "name": "Pacific Cocktail Haven",
-      "venueCode": "ET-LOC-00191",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cafe-la-trova",
-      "name": "Café La Trova",
-      "venueCode": "ET-LOC-00192",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "selva",
-      "name": "Selva",
-      "venueCode": "ET-LOC-00193",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "daisy-margarita-bar",
-      "name": "Daisy Margarita Bar",
-      "venueCode": "ET-LOC-00194",
+      "slug": "addison-by-william-bradley-restaurant-2",
+      "name": "Addison by William Bradley",
+      "venueCode": "ET-LOC-00006",
       "gaps": [
         "coords",
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "employees-only",
-      "name": "Employees Only",
-      "venueCode": "ET-LOC-00195",
+      "slug": "afluente-restaurant",
+      "name": "Afluente",
+      "venueCode": "ET-LOC-00007",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "viceversa",
-      "name": "Viceversa",
-      "venueCode": "ET-LOC-00196",
+      "slug": "albi-restaurant-2",
+      "name": "Albi",
+      "venueCode": "ET-LOC-00008",
       "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bandista",
-      "name": "Bandista",
-      "venueCode": "ET-LOC-00197",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "baltra-bar",
-      "name": "Baltra Bar",
-      "venueCode": "ET-LOC-00198",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "library-by-the-sea",
-      "name": "Library by the Sea",
-      "venueCode": "ET-LOC-00199",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bon-vivants",
-      "name": "Bon Vivants",
-      "venueCode": "ET-LOC-00200",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "el-chato-restaurant",
-      "name": "El Chato",
-      "venueCode": "ET-LOC-00251",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "tuju-restaurant",
-      "name": "Tuju",
-      "venueCode": "ET-LOC-00258",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cosme-restaurant",
-      "name": "Cosme",
-      "venueCode": "ET-LOC-00259",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "nuema-restaurant",
-      "name": "Nuema",
-      "venueCode": "ET-LOC-00260",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "nelita-restaurant",
-      "name": "Nelita",
-      "venueCode": "ET-LOC-00262",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "casa-las-cujas-restaurant",
-      "name": "Casa Las Cujas",
-      "venueCode": "ET-LOC-00264",
-      "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -570,20 +107,1006 @@
     {
       "slug": "alcalde-restaurant",
       "name": "Alcalde",
-      "venueCode": "ET-LOC-00265",
+      "venueCode": "ET-LOC-00009",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "villa-tor-c3-a9l-restaurant",
-      "name": "Villa Torél",
-      "venueCode": "ET-LOC-00266",
+      "slug": "alchemist-restaurant-2",
+      "name": "Alchemist",
+      "venueCode": "ET-LOC-00010",
       "gaps": [
-        "taxonomy",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "alice-2",
+      "name": "Alice",
+      "venueCode": "ET-LOC-00011",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "alquimico-2",
+      "name": "Alquímico",
+      "venueCode": "ET-LOC-00012",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "angels-share",
+      "name": "Angel's Share",
+      "venueCode": "ET-LOC-00013",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "annalena-restaurant-2",
+      "name": "AnnaLena",
+      "venueCode": "ET-LOC-00014",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "aramburu-restaurant",
+      "name": "Aramburu",
+      "venueCode": "ET-LOC-00015",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "arami-restaurant",
+      "name": "Arami",
+      "venueCode": "ET-LOC-00016",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "arca-restaurant",
+      "name": "Arca",
+      "venueCode": "ET-LOC-00017",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "argo-2",
+      "name": "Argo",
+      "venueCode": "ET-LOC-00018",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "arpege-restaurant-2",
+      "name": "Arpège",
+      "venueCode": "ET-LOC-00019",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "asador-etxebarri-restaurant-2",
+      "name": "Asador Etxebarri",
+      "venueCode": "ET-LOC-00020",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "aska-restaurant-2",
+      "name": "Aska",
+      "venueCode": "ET-LOC-00021",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "atelier-crenn-restaurant-2",
+      "name": "Atelier Crenn",
+      "venueCode": "ET-LOC-00022",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "atelier-moessmer-norbert-niederkofler-restaurant-2",
+      "name": "Atelier Moessmer Norbert Niederkofler",
+      "venueCode": "ET-LOC-00023",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "atomix-restaurant-3",
+      "name": "Atomix",
+      "venueCode": "ET-LOC-00024",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "attaboy",
+      "name": "Attaboy",
+      "venueCode": "ET-LOC-00025",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "au-jardin-restaurant-2",
+      "name": "Au Jardin",
+      "venueCode": "ET-LOC-00026",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "august-restaurant-2",
+      "name": "August",
+      "venueCode": "ET-LOC-00027",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "avize-restaurant-2",
+      "name": "Avize",
+      "venueCode": "ET-LOC-00028",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "baba-au-rum-2",
+      "name": "Baba au Rum",
+      "venueCode": "ET-LOC-00029",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "baltra-bar",
+      "name": "Baltra Bar",
+      "venueCode": "ET-LOC-00030",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bandista",
+      "name": "Bandista",
+      "venueCode": "ET-LOC-00031",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-benfiddich-3",
+      "name": "Bar Benfiddich",
+      "venueCode": "ET-LOC-00032",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-leone-3",
+      "name": "Bar Leone",
+      "venueCode": "ET-LOC-00033",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-libre-2",
+      "name": "Bar Libre",
+      "venueCode": "ET-LOC-00034",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-madonna",
+      "name": "Bar Madonna",
+      "venueCode": "ET-LOC-00035",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-mauro",
+      "name": "Bar Mauro",
+      "venueCode": "ET-LOC-00036",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-nouveau-2",
+      "name": "Bar Nouveau",
+      "venueCode": "ET-LOC-00037",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-pompette",
+      "name": "Bar Pompette",
+      "venueCode": "ET-LOC-00038",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-sathorn-2",
+      "name": "Bar Sathorn",
+      "venueCode": "ET-LOC-00039",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-snack",
+      "name": "Bar Snack",
+      "venueCode": "ET-LOC-00040",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-spirit-forward-2",
+      "name": "Bar Spirit Forward",
+      "venueCode": "ET-LOC-00041",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-trigona-2",
+      "name": "Bar Trigona",
+      "venueCode": "ET-LOC-00042",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bar-us-3",
+      "name": "Bar Us",
+      "venueCode": "ET-LOC-00043",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "barc-2",
+      "name": "Barc",
+      "venueCode": "ET-LOC-00044",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "beba-restaurant-2",
+      "name": "Beba",
+      "venueCode": "ET-LOC-00045",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bekeb",
+      "name": "Bekeb",
+      "venueCode": "ET-LOC-00046",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "belcanto-restaurant-2",
+      "name": "Belcanto",
+      "venueCode": "ET-LOC-00047",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "benu-restaurant-2",
+      "name": "Benu",
+      "venueCode": "ET-LOC-00048",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "best-intentions",
+      "name": "Best Intentions",
+      "venueCode": "ET-LOC-00049",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bisous",
+      "name": "Bisous",
+      "venueCode": "ET-LOC-00050",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bium-restaurant-2",
+      "name": "Bium",
+      "venueCode": "ET-LOC-00051",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bkk-social-club-3",
+      "name": "BKK Social Club",
+      "venueCode": "ET-LOC-00052",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "boilermaker-2",
+      "name": "Boilermaker",
+      "venueCode": "ET-LOC-00053",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "bon-vivants",
+      "name": "Bon Vivants",
+      "venueCode": "ET-LOC-00054",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "borago-restaurant-2",
+      "name": "Boragó",
+      "venueCode": "ET-LOC-00055",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "born-restaurant-2",
+      "name": "Born",
+      "venueCode": "ET-LOC-00056",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "botanist-bar",
+      "name": "Botanist Bar",
+      "venueCode": "ET-LOC-00057",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cafe-la-trova",
+      "name": "Café La Trova",
+      "venueCode": "ET-LOC-00058",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cantina-del-tigre-restaurant",
+      "name": "Cantina del Tigre",
+      "venueCode": "ET-LOC-00059",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "caprice-restaurant-2",
+      "name": "Caprice",
+      "venueCode": "ET-LOC-00060",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "caretakers-cottage-2",
+      "name": "Caretaker's Cottage",
+      "venueCode": "ET-LOC-00061",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "carrots-bar-2",
+      "name": "Carrots Bar",
+      "venueCode": "ET-LOC-00062",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "casa-las-cujas-restaurant",
+      "name": "Casa Las Cujas",
+      "venueCode": "ET-LOC-00063",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cat-bite-club-2",
+      "name": "Cat Bite Club",
+      "venueCode": "ET-LOC-00064",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "celele-restaurant-3",
+      "name": "Celele",
+      "venueCode": "ET-LOC-00065",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cesar-restaurant-2",
+      "name": "César",
+      "venueCode": "ET-LOC-00066",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cham-bar-2",
+      "name": "Bar Cham",
+      "venueCode": "ET-LOC-00067",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "chef-tams-seasons-restaurant-2",
+      "name": "Chef Tam's Seasons",
+      "venueCode": "ET-LOC-00068",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "chubby-fish-restaurant-2",
+      "name": "Chubby Fish",
+      "venueCode": "ET-LOC-00069",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "civil-works",
+      "name": "Civil Works",
+      "venueCode": "ET-LOC-00070",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "clemente-bar",
+      "name": "Clemente Bar",
+      "venueCode": "ET-LOC-00071",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cmyk-2",
+      "name": "CMYK",
+      "venueCode": "ET-LOC-00072",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "coa-3",
+      "name": "Coa",
+      "venueCode": "ET-LOC-00073",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cochinchina-2",
+      "name": "CoChinChina",
+      "venueCode": "ET-LOC-00074",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "connaught-bar-2",
+      "name": "Connaught Bar",
+      "venueCode": "ET-LOC-00075",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cordero-restaurant",
+      "name": "Cordero",
+      "venueCode": "ET-LOC-00076",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "corima-restaurant-2",
+      "name": "Corima",
+      "venueCode": "ET-LOC-00077",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cosme-restaurant",
+      "name": "Cosme",
+      "venueCode": "ET-LOC-00078",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cosmo-pony-2",
+      "name": "Cosmo Pony",
+      "venueCode": "ET-LOC-00079",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "crizia-restaurant",
+      "name": "Crizia",
+      "venueCode": "ET-LOC-00080",
+      "gaps": [
+        "historyOrVerdict",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "crony-restaurant-2",
+      "name": "Crony",
+      "venueCode": "ET-LOC-00081",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "cure",
+      "name": "Cure",
+      "venueCode": "ET-LOC-00082",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "daisy-margarita-bar",
+      "name": "Daisy Margarita Bar",
+      "venueCode": "ET-LOC-00083",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "dakar-nola-restaurant-2",
+      "name": "Dakar NOLA",
+      "venueCode": "ET-LOC-00084",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "danico-2",
+      "name": "Danico",
+      "venueCode": "ET-LOC-00085",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "demo-magnolia-restaurant",
+      "name": "Demo Magnolia",
+      "venueCode": "ET-LOC-00086",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "diac-c3-a1-restaurant",
+      "name": "Diacá",
+      "venueCode": "ET-LOC-00087",
+      "gaps": [
+        "historyOrVerdict",
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "dianes-place-restaurant-2",
+      "name": "Diane's Place",
+      "venueCode": "ET-LOC-00088",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "diverxo-restaurant-2",
+      "name": "Diverxo",
+      "venueCode": "ET-LOC-00089",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "dogon-restaurant-2",
+      "name": "Dōgon by Kwame Onwuachi",
+      "venueCode": "ET-LOC-00090",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "don-restaurant-2",
+      "name": "Don Julio",
+      "venueCode": "ET-LOC-00091",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "double-chicken-please-3",
+      "name": "Double Chicken Please",
+      "venueCode": "ET-LOC-00092",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "drink-kong-2",
+      "name": "Drink Kong",
+      "venueCode": "ET-LOC-00093",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "dry-wave-cocktail-studio-2",
+      "name": "Dry Wave Cocktail Studio",
+      "venueCode": "ET-LOC-00094",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "eatanic-garden-restaurant-2",
+      "name": "Eatanic Garden",
+      "venueCode": "ET-LOC-00095",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "edulis-restaurant-2",
+      "name": "Edulis",
+      "venueCode": "ET-LOC-00096",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "eight-restaurant-2",
+      "name": "Eight",
+      "venueCode": "ET-LOC-00097",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "el-chato-restaurant",
+      "name": "El Chato",
+      "venueCode": "ET-LOC-00098",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "el-gallo-altanero",
+      "name": "El Gallo Altanero",
+      "venueCode": "ET-LOC-00099",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "el-mercado-restaurant",
+      "name": "El Mercado",
+      "venueCode": "ET-LOC-00100",
+      "gaps": [
+        "historyOrVerdict",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "el-preferido-de-palermo-restaurant",
+      "name": "El Preferido de Palermo",
+      "venueCode": "ET-LOC-00101",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "elkano-restaurant-2",
+      "name": "Elkano",
+      "venueCode": "ET-LOC-00102",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "emerils-restaurant-2",
+      "name": "Emeril's",
+      "venueCode": "ET-LOC-00103",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "employees-only",
+      "name": "Employees Only",
+      "venueCode": "ET-LOC-00104",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "enigma-restaurant-2",
+      "name": "Enigma",
+      "venueCode": "ET-LOC-00105",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "estro-restaurant-2",
+      "name": "Estro",
+      "venueCode": "ET-LOC-00106",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "evvai-restaurant",
+      "name": "Evvai",
+      "venueCode": "ET-LOC-00107",
+      "gaps": [
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -592,9 +1115,644 @@
     {
       "slug": "fauna-restaurant",
       "name": "Fauna",
-      "venueCode": "ET-LOC-00267",
+      "venueCode": "ET-LOC-00108",
       "gaps": [
-        "taxonomy",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "florilege-restaurant-3",
+      "name": "Florilège",
+      "venueCode": "ET-LOC-00109",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "form-matter",
+      "name": "Form + Matter",
+      "venueCode": "ET-LOC-00110",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "frantzen-restaurant-2",
+      "name": "Frantzén",
+      "venueCode": "ET-LOC-00111",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "friday-saturday-sunday-restaurant-2",
+      "name": "Friday Saturday Sunday",
+      "venueCode": "ET-LOC-00112",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "fu-he-hui-restaurant-2",
+      "name": "Fu He Hui",
+      "venueCode": "ET-LOC-00113",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "gaggan-at-louis-vuitton-restaurant-2",
+      "name": "Gaggan at Louis Vuitton",
+      "venueCode": "ET-LOC-00114",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "gaggan-restaurant-3",
+      "name": "Gaggan",
+      "venueCode": "ET-LOC-00115",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "god-bangkok-2",
+      "name": "G.O.D",
+      "venueCode": "ET-LOC-00116",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "gokan-2",
+      "name": "Gokan",
+      "venueCode": "ET-LOC-00117",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "gramercy-tavern-restaurant-2",
+      "name": "Gramercy Tavern",
+      "venueCode": "ET-LOC-00118",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "gus-sip-dip",
+      "name": "Gus' Sip & Dip",
+      "venueCode": "ET-LOC-00119",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "handshake-speakeasy-3",
+      "name": "Handshake Speakeasy",
+      "venueCode": "ET-LOC-00120",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "himkok-2",
+      "name": "Himkok",
+      "venueCode": "ET-LOC-00121",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "holbox-restaurant-2",
+      "name": "Holbox",
+      "venueCode": "ET-LOC-00122",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "hope-sesame-2",
+      "name": "Hope & Sesame",
+      "venueCode": "ET-LOC-00123",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "humo-negro-restaurant",
+      "name": "Humo Negro",
+      "venueCode": "ET-LOC-00124",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "huniik-restaurant",
+      "name": "Huniik",
+      "venueCode": "ET-LOC-00125",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "ikoyi-restaurant-2",
+      "name": "Ikoyi",
+      "venueCode": "ET-LOC-00126",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "jewel-of-the-south-3",
+      "name": "Jewel of the South",
+      "venueCode": "ET-LOC-00127",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "jigger-pony-3",
+      "name": "Jigger & Pony",
+      "venueCode": "ET-LOC-00128",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "jl-studio-restaurant-2",
+      "name": "JL Studio",
+      "venueCode": "ET-LOC-00129",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "julia-restaurant",
+      "name": "Julia",
+      "venueCode": "ET-LOC-00130",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "june-on-cambie",
+      "name": "June on Cambie",
+      "venueCode": "ET-LOC-00131",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "jungsik-restaurant-2",
+      "name": "Jungsik",
+      "venueCode": "ET-LOC-00132",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kabawa-restaurant-2",
+      "name": "Kabawa",
+      "venueCode": "ET-LOC-00133",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kadeau-restaurant-2",
+      "name": "Kadeau",
+      "venueCode": "ET-LOC-00134",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kaito-del-valle",
+      "name": "Kaito del Valle",
+      "venueCode": "ET-LOC-00135",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kalaya-restaurant-2",
+      "name": "Kalaya",
+      "venueCode": "ET-LOC-00136",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "karai-by-mitsuharu-restaurant",
+      "name": "Karai by Mitsuharu",
+      "venueCode": "ET-LOC-00137",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kato-restaurant-2",
+      "name": "Kato",
+      "venueCode": "ET-LOC-00138",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kjolle-restaurant-3",
+      "name": "Kjolle",
+      "venueCode": "ET-LOC-00139",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kol-restaurant-2",
+      "name": "Kol",
+      "venueCode": "ET-LOC-00140",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "kumiko",
+      "name": "Kumiko",
+      "venueCode": "ET-LOC-00141",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "la-bourriche-133-restaurant-2",
+      "name": "La Bourriche 133",
+      "venueCode": "ET-LOC-00142",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "la-cime-restaurant-3",
+      "name": "La Cime",
+      "venueCode": "ET-LOC-00143",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "la-factoria",
+      "name": "La Factoría",
+      "venueCode": "ET-LOC-00144",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "la-mar-restaurant",
+      "name": "La Mar",
+      "venueCode": "ET-LOC-00145",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "labyrinth-restaurant-2",
+      "name": "Labyrinth",
+      "venueCode": "ET-LOC-00146",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "lady-bee-2",
+      "name": "Lady Bee",
+      "venueCode": "ET-LOC-00147",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "lair-2",
+      "name": "Lair",
+      "venueCode": "ET-LOC-00148",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "lamdre-restaurant-2",
+      "name": "Lamdre",
+      "venueCode": "ET-LOC-00149",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "lamp-bar-2",
+      "name": "Lamp Bar",
+      "venueCode": "ET-LOC-00150",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "lasai-restaurant-3",
+      "name": "Lasai",
+      "venueCode": "ET-LOC-00151",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "le-bernadin-restaurant-2",
+      "name": "Le Bernardin",
+      "venueCode": "ET-LOC-00152",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "le-calandre-restaurant-2",
+      "name": "Le Calandre",
+      "venueCode": "ET-LOC-00153",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "le-chamber-2",
+      "name": "Le Chamber",
+      "venueCode": "ET-LOC-00154",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "le-du-restaurant-3",
+      "name": "Le Du",
+      "venueCode": "ET-LOC-00155",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "le-veau-dor-restaurant-2",
+      "name": "Le Veau d'Or",
+      "venueCode": "ET-LOC-00156",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "le-violon-restaurant-2",
+      "name": "Le Violon",
+      "venueCode": "ET-LOC-00157",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "leo-restaurant",
+      "name": "Leo",
+      "venueCode": "ET-LOC-00158",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "les-amis-restaurant-2",
+      "name": "Les Amis",
+      "venueCode": "ET-LOC-00159",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "library-bar",
+      "name": "Library Bar",
+      "venueCode": "ET-LOC-00160",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "library-by-the-sea",
+      "name": "Library by the Sea",
+      "venueCode": "ET-LOC-00161",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "licoreria-limantour",
+      "name": "Licorería Limantour",
+      "venueCode": "ET-LOC-00162",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "lido-84-restaurant-2",
+      "name": "Lido 84",
+      "venueCode": "ET-LOC-00163",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "line-2",
+      "name": "Line",
+      "venueCode": "ET-LOC-00164",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "ling-long-restaurant-2",
+      "name": "Ling Long",
+      "venueCode": "ET-LOC-00165",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "locale-firenze-2",
+      "name": "Locale Firenze",
+      "venueCode": "ET-LOC-00166",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "locavore-nxt-restaurant-2",
+      "name": "Locavore NXT",
+      "venueCode": "ET-LOC-00167",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "logy-restaurant-2",
+      "name": "Logy",
+      "venueCode": "ET-LOC-00168",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "m-c3-a1ximo-restaurant",
+      "name": "Máximo",
+      "venueCode": "ET-LOC-00169",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "maido-restaurant-2",
+      "name": "Maido",
+      "venueCode": "ET-LOC-00170",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "maison-premiere",
+      "name": "Maison Premiere",
+      "venueCode": "ET-LOC-00171",
+      "gaps": [
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -603,9 +1761,980 @@
     {
       "slug": "maito-restaurant",
       "name": "Maito",
+      "venueCode": "ET-LOC-00172",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "manuel-restaurant",
+      "name": "Manuel",
+      "venueCode": "ET-LOC-00173",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "martinys",
+      "name": "Martiny's",
+      "venueCode": "ET-LOC-00174",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "masque-restaurant-2",
+      "name": "Masque",
+      "venueCode": "ET-LOC-00175",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "maybe-sammy-2",
+      "name": "Maybe Sammy",
+      "venueCode": "ET-LOC-00176",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mayta-restaurant-3",
+      "name": "Mayta",
+      "venueCode": "ET-LOC-00177",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "maz-restaurant-2",
+      "name": "Maz",
+      "venueCode": "ET-LOC-00178",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mecenas",
+      "name": "Mecenas",
+      "venueCode": "ET-LOC-00179",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "meet-the-bund-restaurant-2",
+      "name": "Meet the Bund",
+      "venueCode": "ET-LOC-00180",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mercado-24-restaurant",
+      "name": "Mercado 24",
+      "venueCode": "ET-LOC-00181",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "merito-restaurant-2",
+      "name": "Mérito",
+      "venueCode": "ET-LOC-00182",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mhel-restaurant-2",
+      "name": "Mhel",
+      "venueCode": "ET-LOC-00183",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mil-restaurant",
+      "name": "Mil",
+      "venueCode": "ET-LOC-00184",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mimi-kakushi-2",
+      "name": "Mimi Kakushi",
+      "venueCode": "ET-LOC-00185",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mingles-restaurant-3",
+      "name": "Mingles",
+      "venueCode": "ET-LOC-00186",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mirate",
+      "name": "Mírate",
+      "venueCode": "ET-LOC-00187",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mirror-bar-2",
+      "name": "Mirror Bar",
+      "venueCode": "ET-LOC-00188",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mo-bar-shenzhen-2",
+      "name": "MO Bar Shenzhen",
+      "venueCode": "ET-LOC-00189",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "modernhaus-2",
+      "name": "Modernhaus",
+      "venueCode": "ET-LOC-00190",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "moebius-milano-2",
+      "name": "Moebius Milano",
+      "venueCode": "ET-LOC-00191",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mon-lapin-restaurant-2",
+      "name": "Mon Lapin",
+      "venueCode": "ET-LOC-00192",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mono-restaurant-2",
+      "name": "Mono",
+      "venueCode": "ET-LOC-00193",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "moon-rabbit-restaurant-2",
+      "name": "Moon Rabbit",
+      "venueCode": "ET-LOC-00194",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "moonrock-2",
+      "name": "Moonrock",
+      "venueCode": "ET-LOC-00195",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mosu-restaurant-2",
+      "name": "Mosu",
+      "venueCode": "ET-LOC-00196",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "mother",
+      "name": "Mother",
+      "venueCode": "ET-LOC-00197",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "ms-maria-mr-singh-restaurant-2",
+      "name": "Ms. Maria & Mr. Singh",
+      "venueCode": "ET-LOC-00198",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "myoujyaku-restaurant-2",
+      "name": "Myoujyaku",
+      "venueCode": "ET-LOC-00199",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "naar-restaurant-2",
+      "name": "Naar",
+      "venueCode": "ET-LOC-00200",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "naeum-restaurant-2",
+      "name": "Nae:Um",
+      "venueCode": "ET-LOC-00201",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "narisawa-restaurant-3",
+      "name": "Narisawa",
+      "venueCode": "ET-LOC-00202",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "native-2",
+      "name": "Native",
+      "venueCode": "ET-LOC-00203",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "neighborhood-restaurant-2",
+      "name": "Neighborhood",
+      "venueCode": "ET-LOC-00204",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "nelita-restaurant",
+      "name": "Nelita",
+      "venueCode": "ET-LOC-00205",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "nino-gordo-restaurant",
+      "name": "Niño Gordo",
+      "venueCode": "ET-LOC-00206",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "nouvelle-vague-2",
+      "name": "Nouvelle Vague",
+      "venueCode": "ET-LOC-00207",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "nuema-restaurant",
+      "name": "Nuema",
+      "venueCode": "ET-LOC-00208",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "nusara-restaurant-3",
+      "name": "Nusara",
+      "venueCode": "ET-LOC-00209",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "nutmeg-clove-3",
+      "name": "Nutmeg & Clove",
+      "venueCode": "ET-LOC-00210",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "odette-restaurant-3",
+      "name": "Odette",
+      "venueCode": "ET-LOC-00211",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "offtrack-2",
+      "name": "Offtrack",
+      "venueCode": "ET-LOC-00212",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "onjium-restaurant-2",
+      "name": "Onjium",
+      "venueCode": "ET-LOC-00213",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "opium-2",
+      "name": "Opium",
+      "venueCode": "ET-LOC-00214",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "orfali-bros-restaurant-2",
+      "name": "Orfali Bros",
+      "venueCode": "ET-LOC-00215",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "osso-restaurant",
+      "name": "Osso",
+      "venueCode": "ET-LOC-00216",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "oteque-restaurant",
+      "name": "Oteque",
+      "venueCode": "ET-LOC-00217",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "overstory-3",
+      "name": "Overstory",
+      "venueCode": "ET-LOC-00218",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "pacific-cocktail-haven",
+      "name": "Pacific Cocktail Haven",
+      "venueCode": "ET-LOC-00219",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "panda-sons-2",
+      "name": "Panda & Sons",
+      "venueCode": "ET-LOC-00220",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "paradiso-2",
+      "name": "Paradiso",
+      "venueCode": "ET-LOC-00221",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "pascual-restaurant-2",
+      "name": "Pascual",
+      "venueCode": "ET-LOC-00222",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "penicillin-2",
+      "name": "Penicillin",
+      "venueCode": "ET-LOC-00223",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "penny-restaurant-2",
+      "name": "Penny",
+      "venueCode": "ET-LOC-00224",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "penrose-2",
+      "name": "Penrose",
+      "venueCode": "ET-LOC-00225",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "piazza-duomo-restaurant-2",
+      "name": "Piazza Duomo",
+      "venueCode": "ET-LOC-00226",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "plenitude-restaurant-2",
+      "name": "Plénitude",
+      "venueCode": "ET-LOC-00227",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "potong-restaurant-3",
+      "name": "Potong",
+      "venueCode": "ET-LOC-00228",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "press-club",
+      "name": "Press Club",
+      "venueCode": "ET-LOC-00229",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "prophecy",
+      "name": "Prophecy",
+      "venueCode": "ET-LOC-00230",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "providence-restaurant-2",
+      "name": "Providence",
+      "venueCode": "ET-LOC-00231",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "published-on-main-restaurant-2",
+      "name": "Published on Main",
+      "venueCode": "ET-LOC-00232",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "punch-room-tokyo-2",
+      "name": "Punch Room Tokyo",
+      "venueCode": "ET-LOC-00233",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "quetzal-restaurant-2",
+      "name": "Quetzal",
+      "venueCode": "ET-LOC-00234",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "quintonil-restaurant-3",
+      "name": "Quintonil",
+      "venueCode": "ET-LOC-00235",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "rafael-restaurant",
+      "name": "Rafael",
+      "venueCode": "ET-LOC-00236",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "reale-restaurant-2",
+      "name": "Reale",
+      "venueCode": "ET-LOC-00237",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "reka-2",
+      "name": "Reka",
+      "venueCode": "ET-LOC-00238",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "restaurant-jan-restaurant-2",
+      "name": "Jan",
+      "venueCode": "ET-LOC-00239",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "restaurant-pearl-morissette-restaurant-2",
+      "name": "Restaurant Pearl Morissette",
+      "venueCode": "ET-LOC-00240",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "roda-huset-2",
+      "name": "Röda Huset",
+      "venueCode": "ET-LOC-00241",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "rosetta-restaurant-3",
+      "name": "Rosetta",
+      "venueCode": "ET-LOC-00242",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "ru-yuan-restaurant-2",
+      "name": "Ru Yuan",
+      "venueCode": "ET-LOC-00243",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sabayon-restaurant-2",
+      "name": "Sabayon",
+      "venueCode": "ET-LOC-00244",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "saison-restaurant-2",
+      "name": "Saison",
+      "venueCode": "ET-LOC-00245",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "salmon-guru-2",
+      "name": "Salmon Guru",
+      "venueCode": "ET-LOC-00246",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sastreria-martinez-2",
+      "name": "Sastrería Martinez",
+      "venueCode": "ET-LOC-00247",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "satans-whiskers-2",
+      "name": "Satan's Whiskers",
+      "venueCode": "ET-LOC-00248",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sazenka-restaurant-2",
+      "name": "Sazenka",
+      "venueCode": "ET-LOC-00249",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "scarfes-bar-2",
+      "name": "Scarfes Bar",
+      "venueCode": "ET-LOC-00250",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "schmuck",
+      "name": "Schmuck",
+      "venueCode": "ET-LOC-00251",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "selva",
+      "name": "Selva",
+      "venueCode": "ET-LOC-00252",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "semma-restaurant-2",
+      "name": "Semma",
+      "venueCode": "ET-LOC-00253",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "septime-restaurant-2",
+      "name": "Septime",
+      "venueCode": "ET-LOC-00254",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "seroja-restaurant-2",
+      "name": "Seroja",
+      "venueCode": "ET-LOC-00255",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "service-bar",
+      "name": "Service Bar",
+      "venueCode": "ET-LOC-00256",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sezanne-restaurant-3",
+      "name": "Sézanne",
+      "venueCode": "ET-LOC-00257",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sikwa-restaurant",
+      "name": "Sikwa",
+      "venueCode": "ET-LOC-00258",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "singlethread-restaurant-2",
+      "name": "SingleThread",
+      "venueCode": "ET-LOC-00259",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sip-guzzle-3",
+      "name": "Sip & Guzzle",
+      "venueCode": "ET-LOC-00260",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sips-2",
+      "name": "Sips",
+      "venueCode": "ET-LOC-00261",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "smoke-and-bitters-2",
+      "name": "Smoke & Bitters",
+      "venueCode": "ET-LOC-00262",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "smyth-restaurant-2",
+      "name": "Smyth",
+      "venueCode": "ET-LOC-00263",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "soka-2",
+      "name": "Soka",
+      "venueCode": "ET-LOC-00264",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "somni-restaurant-2",
+      "name": "Somni",
+      "venueCode": "ET-LOC-00265",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sons-daughters-restaurant-2",
+      "name": "Sons & Daughters",
+      "venueCode": "ET-LOC-00266",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "sorn-restaurant-3",
+      "name": "Sorn",
+      "venueCode": "ET-LOC-00267",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "steirereck-restaurant-2",
+      "name": "Steirereck",
       "venueCode": "ET-LOC-00268",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -616,1128 +2745,6 @@
       "name": "Sublime",
       "venueCode": "ET-LOC-00269",
       "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "evvai-restaurant",
-      "name": "Evvai",
-      "venueCode": "ET-LOC-00270",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "nino-gordo-restaurant",
-      "name": "Niño Gordo",
-      "venueCode": "ET-LOC-00271",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "arca-restaurant",
-      "name": "Arca",
-      "venueCode": "ET-LOC-00272",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "leo-restaurant",
-      "name": "Leo",
-      "venueCode": "ET-LOC-00273",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "el-preferido-de-palermo-restaurant",
-      "name": "El Preferido de Palermo",
-      "venueCode": "ET-LOC-00274",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "a-casa-do-porco-restaurant",
-      "name": "A Casa do Porco",
-      "venueCode": "ET-LOC-00275",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "la-mar-restaurant",
-      "name": "La Mar",
-      "venueCode": "ET-LOC-00276",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "el-mercado-restaurant",
-      "name": "El Mercado",
-      "venueCode": "ET-LOC-00277",
-      "gaps": [
-        "historyOrVerdict",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "yum-cha-restaurant",
-      "name": "Yum Cha",
-      "venueCode": "ET-LOC-00278",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cordero-restaurant",
-      "name": "Cordero",
-      "venueCode": "ET-LOC-00279",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "m-c3-a1ximo-restaurant",
-      "name": "Máximo",
-      "venueCode": "ET-LOC-00280",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "demo-magnolia-restaurant",
-      "name": "Demo Magnolia",
-      "venueCode": "ET-LOC-00281",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "huniik-restaurant",
-      "name": "Huniik",
-      "venueCode": "ET-LOC-00282",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "rafael-restaurant",
-      "name": "Rafael",
-      "venueCode": "ET-LOC-00283",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "afluente-restaurant",
-      "name": "Afluente",
-      "venueCode": "ET-LOC-00284",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "aramburu-restaurant",
-      "name": "Aramburu",
-      "venueCode": "ET-LOC-00285",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "trescha-restaurant",
-      "name": "Trescha",
-      "venueCode": "ET-LOC-00286",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "diac-c3-a1-restaurant",
-      "name": "Diacá",
-      "venueCode": "ET-LOC-00287",
-      "gaps": [
-        "historyOrVerdict",
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "oteque-restaurant",
-      "name": "Oteque",
-      "venueCode": "ET-LOC-00288",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "crizia-restaurant",
-      "name": "Crizia",
-      "venueCode": "ET-LOC-00290",
-      "gaps": [
-        "historyOrVerdict",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "humo-negro-restaurant",
-      "name": "Humo Negro",
-      "venueCode": "ET-LOC-00291",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mercado-24-restaurant",
-      "name": "Mercado 24",
-      "venueCode": "ET-LOC-00292",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sikwa-restaurant",
-      "name": "Sikwa",
-      "venueCode": "ET-LOC-00293",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "osso-restaurant",
-      "name": "Osso",
-      "venueCode": "ET-LOC-00294",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "karai-by-mitsuharu-restaurant",
-      "name": "Karai by Mitsuharu",
-      "venueCode": "ET-LOC-00295",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "manuel-restaurant",
-      "name": "Manuel",
-      "venueCode": "ET-LOC-00296",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cantina-del-tigre-restaurant",
-      "name": "Cantina del Tigre",
-      "venueCode": "ET-LOC-00297",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "arami-restaurant",
-      "name": "Arami",
-      "venueCode": "ET-LOC-00298",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mil-restaurant",
-      "name": "Mil",
-      "venueCode": "ET-LOC-00299",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "julia-restaurant",
-      "name": "Julia",
-      "venueCode": "ET-LOC-00300",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-leone-3",
-      "name": "Bar Leone",
-      "venueCode": "ET-LOC-00351",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "handshake-speakeasy-3",
-      "name": "Handshake Speakeasy",
-      "venueCode": "ET-LOC-00352",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sips-2",
-      "name": "Sips",
-      "venueCode": "ET-LOC-00353",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "paradiso-2",
-      "name": "Paradiso",
-      "venueCode": "ET-LOC-00354",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "tayer-elementary-2",
-      "name": "Tayēr + Elementary",
-      "venueCode": "ET-LOC-00355",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "connaught-bar-2",
-      "name": "Connaught Bar",
-      "venueCode": "ET-LOC-00356",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "moebius-milano-2",
-      "name": "Moebius Milano",
-      "venueCode": "ET-LOC-00357",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "line-2",
-      "name": "Line",
-      "venueCode": "ET-LOC-00358",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "jigger-pony-3",
-      "name": "Jigger & Pony",
-      "venueCode": "ET-LOC-00359",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "tres-monos-2",
-      "name": "Tres Monos",
-      "venueCode": "ET-LOC-00360",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "alquimico-2",
-      "name": "Alquímico",
-      "venueCode": "ET-LOC-00361",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "superbueno-3",
-      "name": "Superbueno",
-      "venueCode": "ET-LOC-00362",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "lady-bee-2",
-      "name": "Lady Bee",
-      "venueCode": "ET-LOC-00363",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "himkok-2",
-      "name": "Himkok",
-      "venueCode": "ET-LOC-00364",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-us-3",
-      "name": "Bar Us",
-      "venueCode": "ET-LOC-00365",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "zest-3",
-      "name": "Zest",
-      "venueCode": "ET-LOC-00366",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-nouveau-2",
-      "name": "Bar Nouveau",
-      "venueCode": "ET-LOC-00367",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-benfiddich-3",
-      "name": "Bar Benfiddich",
-      "venueCode": "ET-LOC-00368",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "caretakers-cottage-2",
-      "name": "Caretaker's Cottage",
-      "venueCode": "ET-LOC-00369",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-cambridge-public-house-2",
-      "name": "The Cambridge Public House",
-      "venueCode": "ET-LOC-00370",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "satans-whiskers-2",
-      "name": "Satan's Whiskers",
-      "venueCode": "ET-LOC-00371",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "locale-firenze-2",
-      "name": "Locale Firenze",
-      "venueCode": "ET-LOC-00372",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "tlecan-3",
-      "name": "Tlecān",
-      "venueCode": "ET-LOC-00373",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "tan-tan-2",
-      "name": "Tan Tan",
-      "venueCode": "ET-LOC-00374",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mirror-bar-2",
-      "name": "Mirror Bar",
-      "venueCode": "ET-LOC-00375",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cochinchina-2",
-      "name": "CoChinChina",
-      "venueCode": "ET-LOC-00376",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "baba-au-rum-2",
-      "name": "Baba au Rum",
-      "venueCode": "ET-LOC-00377",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "nouvelle-vague-2",
-      "name": "Nouvelle Vague",
-      "venueCode": "ET-LOC-00378",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "hope-sesame-2",
-      "name": "Hope & Sesame",
-      "venueCode": "ET-LOC-00379",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "danico-2",
-      "name": "Danico",
-      "venueCode": "ET-LOC-00380",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "scarfes-bar-2",
-      "name": "Scarfes Bar",
-      "venueCode": "ET-LOC-00381",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "svanen-2",
-      "name": "Svanen",
-      "venueCode": "ET-LOC-00382",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sastreria-martinez-2",
-      "name": "Sastrería Martinez",
-      "venueCode": "ET-LOC-00383",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "panda-sons-2",
-      "name": "Panda & Sons",
-      "venueCode": "ET-LOC-00384",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "roda-huset-2",
-      "name": "Röda Huset",
-      "venueCode": "ET-LOC-00385",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mimi-kakushi-2",
-      "name": "Mimi Kakushi",
-      "venueCode": "ET-LOC-00386",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "salmon-guru-2",
-      "name": "Salmon Guru",
-      "venueCode": "ET-LOC-00387",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "coa-3",
-      "name": "Coa",
-      "venueCode": "ET-LOC-00388",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sip-guzzle-3",
-      "name": "Sip & Guzzle",
-      "venueCode": "ET-LOC-00389",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "drink-kong-2",
-      "name": "Drink Kong",
-      "venueCode": "ET-LOC-00390",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "double-chicken-please-3",
-      "name": "Double Chicken Please",
-      "venueCode": "ET-LOC-00391",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "maybe-sammy-2",
-      "name": "Maybe Sammy",
-      "venueCode": "ET-LOC-00392",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "1930-2",
-      "name": "1930",
-      "venueCode": "ET-LOC-00393",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "jewel-of-the-south-3",
-      "name": "Jewel of the South",
-      "venueCode": "ET-LOC-00394",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "virtu-3",
-      "name": "Virtù",
-      "venueCode": "ET-LOC-00395",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "overstory-3",
-      "name": "Overstory",
-      "venueCode": "ET-LOC-00396",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-bar-in-front-of-the-bar-2",
-      "name": "The Bar in Front of the Bar",
-      "venueCode": "ET-LOC-00397",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-bellwood-2",
-      "name": "The Bellwood",
-      "venueCode": "ET-LOC-00398",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bkk-social-club-3",
-      "name": "BKK Social Club",
-      "venueCode": "ET-LOC-00399",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "nutmeg-clove-3",
-      "name": "Nutmeg & Clove",
-      "venueCode": "ET-LOC-00400",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "maido-restaurant-2",
-      "name": "Maido",
-      "venueCode": "ET-LOC-00401",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "asador-etxebarri-restaurant-2",
-      "name": "Asador Etxebarri",
-      "venueCode": "ET-LOC-00402",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "quintonil-restaurant-3",
-      "name": "Quintonil",
-      "venueCode": "ET-LOC-00403",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "diverxo-restaurant-2",
-      "name": "Diverxo",
-      "venueCode": "ET-LOC-00404",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "alchemist-restaurant-2",
-      "name": "Alchemist",
-      "venueCode": "ET-LOC-00405",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "gaggan-restaurant-3",
-      "name": "Gaggan",
-      "venueCode": "ET-LOC-00406",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sezanne-restaurant-3",
-      "name": "Sézanne",
-      "venueCode": "ET-LOC-00407",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "table-by-bruno-verjus-restaurant-2",
-      "name": "Table by Bruno Verjus",
-      "venueCode": "ET-LOC-00408",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "kjolle-restaurant-3",
-      "name": "Kjolle",
-      "venueCode": "ET-LOC-00409",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "don-restaurant-2",
-      "name": "Don Julio",
-      "venueCode": "ET-LOC-00410",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "wing-restaurant-3",
-      "name": "Wing",
-      "venueCode": "ET-LOC-00411",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "atomix-restaurant-3",
-      "name": "Atomix",
-      "venueCode": "ET-LOC-00412",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "potong-restaurant-3",
-      "name": "Potong",
-      "venueCode": "ET-LOC-00413",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "plenitude-restaurant-2",
-      "name": "Plénitude",
-      "venueCode": "ET-LOC-00414",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "ikoyi-restaurant-2",
-      "name": "Ikoyi",
-      "venueCode": "ET-LOC-00415",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "lido-84-restaurant-2",
-      "name": "Lido 84",
-      "venueCode": "ET-LOC-00416",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sorn-restaurant-3",
-      "name": "Sorn",
-      "venueCode": "ET-LOC-00417",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "reale-restaurant-2",
-      "name": "Reale",
-      "venueCode": "ET-LOC-00418",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-chairman-restaurant-3",
-      "name": "The Chairman",
-      "venueCode": "ET-LOC-00419",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "atelier-moessmer-norbert-niederkofler-restaurant-2",
-      "name": "Atelier Moessmer Norbert Niederkofler",
-      "venueCode": "ET-LOC-00420",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "narisawa-restaurant-3",
-      "name": "Narisawa",
-      "venueCode": "ET-LOC-00421",
-      "gaps": [
-        "coords",
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -1746,1250 +2753,48 @@
     {
       "slug": "suhring-restaurant-3",
       "name": "Sühring",
-      "venueCode": "ET-LOC-00422",
+      "venueCode": "ET-LOC-00270",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "borago-restaurant-2",
-      "name": "Boragó",
-      "venueCode": "ET-LOC-00423",
+      "slug": "superbueno-3",
+      "name": "Superbueno",
+      "venueCode": "ET-LOC-00271",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "elkano-restaurant-2",
-      "name": "Elkano",
-      "venueCode": "ET-LOC-00424",
+      "slug": "svanen-2",
+      "name": "Svanen",
+      "venueCode": "ET-LOC-00272",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "odette-restaurant-3",
-      "name": "Odette",
-      "venueCode": "ET-LOC-00425",
+      "slug": "table-by-bruno-verjus-restaurant-2",
+      "name": "Table by Bruno Verjus",
+      "venueCode": "ET-LOC-00273",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "merito-restaurant-2",
-      "name": "Mérito",
-      "venueCode": "ET-LOC-00426",
+      "slug": "tan-tan-2",
+      "name": "Tan Tan",
+      "venueCode": "ET-LOC-00274",
       "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "tresind-studio-restaurant-2",
-      "name": "Trèsind Studio",
-      "venueCode": "ET-LOC-00427",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "lasai-restaurant-3",
-      "name": "Lasai",
-      "venueCode": "ET-LOC-00428",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mingles-restaurant-3",
-      "name": "Mingles",
-      "venueCode": "ET-LOC-00429",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "le-du-restaurant-3",
-      "name": "Le Du",
-      "venueCode": "ET-LOC-00430",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "le-calandre-restaurant-2",
-      "name": "Le Calandre",
-      "venueCode": "ET-LOC-00431",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "piazza-duomo-restaurant-2",
-      "name": "Piazza Duomo",
-      "venueCode": "ET-LOC-00432",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "steirereck-restaurant-2",
-      "name": "Steirereck",
-      "venueCode": "ET-LOC-00433",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "enigma-restaurant-2",
-      "name": "Enigma",
-      "venueCode": "ET-LOC-00434",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "nusara-restaurant-3",
-      "name": "Nusara",
-      "venueCode": "ET-LOC-00435",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "florilege-restaurant-3",
-      "name": "Florilège",
-      "venueCode": "ET-LOC-00436",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "orfali-bros-restaurant-2",
-      "name": "Orfali Bros",
-      "venueCode": "ET-LOC-00437",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "frantzen-restaurant-2",
-      "name": "Frantzén",
-      "venueCode": "ET-LOC-00438",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mayta-restaurant-3",
-      "name": "Mayta",
-      "venueCode": "ET-LOC-00439",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "septime-restaurant-2",
-      "name": "Septime",
-      "venueCode": "ET-LOC-00440",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "kadeau-restaurant-2",
-      "name": "Kadeau",
-      "venueCode": "ET-LOC-00441",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "belcanto-restaurant-2",
-      "name": "Belcanto",
-      "venueCode": "ET-LOC-00442",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "uliassi-restaurant-2",
-      "name": "Uliassi",
-      "venueCode": "ET-LOC-00443",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "la-cime-restaurant-3",
-      "name": "La Cime",
-      "venueCode": "ET-LOC-00444",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "arpege-restaurant-2",
-      "name": "Arpège",
-      "venueCode": "ET-LOC-00445",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "rosetta-restaurant-3",
-      "name": "Rosetta",
-      "venueCode": "ET-LOC-00446",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "vyn-restaurant-2",
-      "name": "Vyn",
-      "venueCode": "ET-LOC-00447",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "celele-restaurant-3",
-      "name": "Celele",
-      "venueCode": "ET-LOC-00448",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "kol-restaurant-2",
-      "name": "Kol",
-      "venueCode": "ET-LOC-00449",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "restaurant-jan-restaurant-2",
-      "name": "Jan",
-      "venueCode": "ET-LOC-00450",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "dry-wave-cocktail-studio-2",
-      "name": "Dry Wave Cocktail Studio",
-      "venueCode": "ET-LOC-00451",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cham-bar-2",
-      "name": "Bar Cham",
-      "venueCode": "ET-LOC-00452",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "lair-2",
-      "name": "Lair",
-      "venueCode": "ET-LOC-00454",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "penrose-2",
-      "name": "Penrose",
-      "venueCode": "ET-LOC-00455",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "argo-2",
-      "name": "Argo",
-      "venueCode": "ET-LOC-00456",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "modernhaus-2",
-      "name": "Modernhaus",
-      "venueCode": "ET-LOC-00457",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "alice-2",
-      "name": "Alice",
-      "venueCode": "ET-LOC-00458",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "smoke-and-bitters-2",
-      "name": "Smoke & Bitters",
-      "venueCode": "ET-LOC-00459",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "three-x-co-2",
-      "name": "Three X Co",
-      "venueCode": "ET-LOC-00460",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cmyk-2",
-      "name": "CMYK",
-      "venueCode": "ET-LOC-00461",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "vender-2",
-      "name": "Vender",
-      "venueCode": "ET-LOC-00462",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mo-bar-shenzhen-2",
-      "name": "MO Bar Shenzhen",
-      "venueCode": "ET-LOC-00463",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-st-regis-bar-jakarta-2",
-      "name": "The St. Regis Bar",
-      "venueCode": "ET-LOC-00464",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "offtrack-2",
-      "name": "Offtrack",
-      "venueCode": "ET-LOC-00465",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "yakoboku-2",
-      "name": "Yakoboku",
-      "venueCode": "ET-LOC-00466",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "god-bangkok-2",
-      "name": "G.O.D",
-      "venueCode": "ET-LOC-00467",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "penicillin-2",
-      "name": "Penicillin",
-      "venueCode": "ET-LOC-00468",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "soka-2",
-      "name": "Soka",
-      "venueCode": "ET-LOC-00469",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "vesper-2",
-      "name": "Vesper",
-      "venueCode": "ET-LOC-00470",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "boilermaker-2",
-      "name": "Boilermaker",
-      "venueCode": "ET-LOC-00471",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "zlb23-2",
-      "name": "ZLB23",
-      "venueCode": "ET-LOC-00472",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-savory-project-2",
-      "name": "The Savory Project",
-      "venueCode": "ET-LOC-00473",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "gokan-2",
-      "name": "Gokan",
-      "venueCode": "ET-LOC-00474",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "carrots-bar-2",
-      "name": "Carrots Bar",
-      "venueCode": "ET-LOC-00475",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "barc-2",
-      "name": "Barc",
-      "venueCode": "ET-LOC-00476",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "punch-room-tokyo-2",
-      "name": "Punch Room Tokyo",
-      "venueCode": "ET-LOC-00477",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-spirit-forward-2",
-      "name": "Bar Spirit Forward",
-      "venueCode": "ET-LOC-00478",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cosmo-pony-2",
-      "name": "Cosmo Pony",
-      "venueCode": "ET-LOC-00479",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-trigona-2",
-      "name": "Bar Trigona",
-      "venueCode": "ET-LOC-00480",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "the-public-house-2",
-      "name": "The Public House",
-      "venueCode": "ET-LOC-00481",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "to-infinity-and-beyond-2",
-      "name": "To Infinity & Beyond",
-      "venueCode": "ET-LOC-00482",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "moonrock-2",
-      "name": "Moonrock",
-      "venueCode": "ET-LOC-00483",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "opium-2",
-      "name": "Opium",
-      "venueCode": "ET-LOC-00484",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cat-bite-club-2",
-      "name": "Cat Bite Club",
-      "venueCode": "ET-LOC-00485",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "native-2",
-      "name": "Native",
-      "venueCode": "ET-LOC-00486",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "lamp-bar-2",
-      "name": "Lamp Bar",
-      "venueCode": "ET-LOC-00487",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "reka-2",
-      "name": "Reka",
-      "venueCode": "ET-LOC-00488",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-sathorn-2",
-      "name": "Bar Sathorn",
-      "venueCode": "ET-LOC-00489",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bar-libre-2",
-      "name": "Bar Libre",
-      "venueCode": "ET-LOC-00490",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "le-chamber-2",
-      "name": "Le Chamber",
-      "venueCode": "ET-LOC-00491",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "meet-the-bund-restaurant-2",
-      "name": "Meet the Bund",
-      "venueCode": "ET-LOC-00492",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "chef-tams-seasons-restaurant-2",
-      "name": "Chef Tam's Seasons",
-      "venueCode": "ET-LOC-00493",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "gaggan-at-louis-vuitton-restaurant-2",
-      "name": "Gaggan at Louis Vuitton",
-      "venueCode": "ET-LOC-00494",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "ling-long-restaurant-2",
-      "name": "Ling Long",
-      "venueCode": "ET-LOC-00495",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "ru-yuan-restaurant-2",
-      "name": "Ru Yuan",
-      "venueCode": "ET-LOC-00496",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "fu-he-hui-restaurant-2",
-      "name": "Fu He Hui",
-      "venueCode": "ET-LOC-00497",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "onjium-restaurant-2",
-      "name": "Onjium",
-      "venueCode": "ET-LOC-00498",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "masque-restaurant-2",
-      "name": "Masque",
-      "venueCode": "ET-LOC-00499",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "lamdre-restaurant-2",
-      "name": "Lamdre",
-      "venueCode": "ET-LOC-00500",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "seroja-restaurant-2",
-      "name": "Seroja",
-      "venueCode": "ET-LOC-00501",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sazenka-restaurant-2",
-      "name": "Sazenka",
-      "venueCode": "ET-LOC-00502",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "logy-restaurant-2",
-      "name": "Logy",
-      "venueCode": "ET-LOC-00503",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "born-restaurant-2",
-      "name": "Born",
-      "venueCode": "ET-LOC-00504",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "neighborhood-restaurant-2",
-      "name": "Neighborhood",
-      "venueCode": "ET-LOC-00505",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "eatanic-garden-restaurant-2",
-      "name": "Eatanic Garden",
-      "venueCode": "ET-LOC-00506",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "ms-maria-mr-singh-restaurant-2",
-      "name": "Ms. Maria & Mr. Singh",
-      "venueCode": "ET-LOC-00507",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "maz-restaurant-2",
-      "name": "Maz",
-      "venueCode": "ET-LOC-00508",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "102-house-restaurant-2",
-      "name": "102 House",
-      "venueCode": "ET-LOC-00509",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "naar-restaurant-2",
-      "name": "Naar",
-      "venueCode": "ET-LOC-00510",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "estro-restaurant-2",
-      "name": "Estro",
-      "venueCode": "ET-LOC-00511",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "myoujyaku-restaurant-2",
-      "name": "Myoujyaku",
-      "venueCode": "ET-LOC-00512",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "crony-restaurant-2",
-      "name": "Crony",
-      "venueCode": "ET-LOC-00513",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "caprice-restaurant-2",
-      "name": "Caprice",
-      "venueCode": "ET-LOC-00514",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "les-amis-restaurant-2",
-      "name": "Les Amis",
-      "venueCode": "ET-LOC-00515",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "au-jardin-restaurant-2",
-      "name": "Au Jardin",
-      "venueCode": "ET-LOC-00516",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "labyrinth-restaurant-2",
-      "name": "Labyrinth",
-      "venueCode": "ET-LOC-00517",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mosu-restaurant-2",
-      "name": "Mosu",
-      "venueCode": "ET-LOC-00518",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "august-restaurant-2",
-      "name": "August",
-      "venueCode": "ET-LOC-00519",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "bium-restaurant-2",
-      "name": "Bium",
-      "venueCode": "ET-LOC-00520",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "locavore-nxt-restaurant-2",
-      "name": "Locavore NXT",
-      "venueCode": "ET-LOC-00521",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "naeum-restaurant-2",
-      "name": "Nae:Um",
-      "venueCode": "ET-LOC-00522",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mono-restaurant-2",
-      "name": "Mono",
-      "venueCode": "ET-LOC-00523",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "wana-yook-restaurant-2",
-      "name": "Wana Yook",
-      "venueCode": "ET-LOC-00524",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "la-bourriche-133-restaurant-2",
-      "name": "La Bourriche 133",
-      "venueCode": "ET-LOC-00525",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "7th-door-restaurant-2",
-      "name": "7th Door",
-      "venueCode": "ET-LOC-00526",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "jl-studio-restaurant-2",
-      "name": "JL Studio",
-      "venueCode": "ET-LOC-00527",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "smyth-restaurant-2",
-      "name": "Smyth",
-      "venueCode": "ET-LOC-00528",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "eight-restaurant-2",
-      "name": "Eight",
-      "venueCode": "ET-LOC-00529",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "restaurant-pearl-morissette-restaurant-2",
-      "name": "Restaurant Pearl Morissette",
-      "venueCode": "ET-LOC-00530",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "dakar-nola-restaurant-2",
-      "name": "Dakar NOLA",
-      "venueCode": "ET-LOC-00531",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mon-lapin-restaurant-2",
-      "name": "Mon Lapin",
-      "venueCode": "ET-LOC-00532",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "albi-restaurant-2",
-      "name": "Albi",
-      "venueCode": "ET-LOC-00533",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "quetzal-restaurant-2",
-      "name": "Quetzal",
-      "venueCode": "ET-LOC-00534",
-      "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -2998,332 +2803,9 @@
     {
       "slug": "taniere3-restaurant-2",
       "name": "Tanière3",
-      "venueCode": "ET-LOC-00535",
+      "venueCode": "ET-LOC-00275",
       "gaps": [
         "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "cesar-restaurant-2",
-      "name": "César",
-      "venueCode": "ET-LOC-00536",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "kalaya-restaurant-2",
-      "name": "Kalaya",
-      "venueCode": "ET-LOC-00537",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "le-veau-dor-restaurant-2",
-      "name": "Le Veau d'Or",
-      "venueCode": "ET-LOC-00538",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "le-bernadin-restaurant-2",
-      "name": "Le Bernardin",
-      "venueCode": "ET-LOC-00539",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "kabawa-restaurant-2",
-      "name": "Kabawa",
-      "venueCode": "ET-LOC-00540",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "le-violon-restaurant-2",
-      "name": "Le Violon",
-      "venueCode": "ET-LOC-00541",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "singlethread-restaurant-2",
-      "name": "SingleThread",
-      "venueCode": "ET-LOC-00542",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "published-on-main-restaurant-2",
-      "name": "Published on Main",
-      "venueCode": "ET-LOC-00543",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "jungsik-restaurant-2",
-      "name": "Jungsik",
-      "venueCode": "ET-LOC-00544",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "penny-restaurant-2",
-      "name": "Penny",
-      "venueCode": "ET-LOC-00545",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "emerils-restaurant-2",
-      "name": "Emeril's",
-      "venueCode": "ET-LOC-00546",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "chubby-fish-restaurant-2",
-      "name": "Chubby Fish",
-      "venueCode": "ET-LOC-00547",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "saison-restaurant-2",
-      "name": "Saison",
-      "venueCode": "ET-LOC-00548",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "aska-restaurant-2",
-      "name": "Aska",
-      "venueCode": "ET-LOC-00549",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "moon-rabbit-restaurant-2",
-      "name": "Moon Rabbit",
-      "venueCode": "ET-LOC-00550",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "edulis-restaurant-2",
-      "name": "Edulis",
-      "venueCode": "ET-LOC-00551",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "holbox-restaurant-2",
-      "name": "Holbox",
-      "venueCode": "ET-LOC-00552",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "beba-restaurant-2",
-      "name": "Beba",
-      "venueCode": "ET-LOC-00553",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "mhel-restaurant-2",
-      "name": "Mhel",
-      "venueCode": "ET-LOC-00554",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "avize-restaurant-2",
-      "name": "Avize",
-      "venueCode": "ET-LOC-00555",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "acamaya-restaurant-2",
-      "name": "Acamaya",
-      "venueCode": "ET-LOC-00556",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "addison-by-william-bradley-restaurant-2",
-      "name": "Addison by William Bradley",
-      "venueCode": "ET-LOC-00557",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "providence-restaurant-2",
-      "name": "Providence",
-      "venueCode": "ET-LOC-00558",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "benu-restaurant-2",
-      "name": "Benu",
-      "venueCode": "ET-LOC-00559",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "sabayon-restaurant-2",
-      "name": "Sabayon",
-      "venueCode": "ET-LOC-00560",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "annalena-restaurant-2",
-      "name": "AnnaLena",
-      "venueCode": "ET-LOC-00561",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "corima-restaurant-2",
-      "name": "Corima",
-      "venueCode": "ET-LOC-00562",
-      "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "dogon-restaurant-2",
-      "name": "Dōgon by Kwame Onwuachi",
-      "venueCode": "ET-LOC-00563",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "torrisi-restaurant-2",
-      "name": "Torrisi",
-      "venueCode": "ET-LOC-00564",
-      "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -3332,99 +2814,68 @@
     {
       "slug": "tatiana-by-kwame-onwuachi-restaurant-2",
       "name": "Tatiana by Kwame Onwuachi",
-      "venueCode": "ET-LOC-00565",
+      "venueCode": "ET-LOC-00276",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "friday-saturday-sunday-restaurant-2",
-      "name": "Friday Saturday Sunday",
-      "venueCode": "ET-LOC-00566",
+      "slug": "tayer-elementary-2",
+      "name": "Tayēr + Elementary",
+      "venueCode": "ET-LOC-00277",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "semma-restaurant-2",
-      "name": "Semma",
-      "venueCode": "ET-LOC-00567",
+      "slug": "the-bar-in-front-of-the-bar-2",
+      "name": "The Bar in Front of the Bar",
+      "venueCode": "ET-LOC-00278",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "pascual-restaurant-2",
-      "name": "Pascual",
-      "venueCode": "ET-LOC-00568",
+      "slug": "the-bellwood-2",
+      "name": "The Bellwood",
+      "venueCode": "ET-LOC-00279",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "gramercy-tavern-restaurant-2",
-      "name": "Gramercy Tavern",
-      "venueCode": "ET-LOC-00569",
+      "slug": "the-cambridge-public-house-2",
+      "name": "The Cambridge Public House",
+      "venueCode": "ET-LOC-00280",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "atelier-crenn-restaurant-2",
-      "name": "Atelier Crenn",
-      "venueCode": "ET-LOC-00570",
+      "slug": "the-chairman-restaurant-3",
+      "name": "The Chairman",
+      "venueCode": "ET-LOC-00281",
       "gaps": [
-        "coords",
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "sons-daughters-restaurant-2",
-      "name": "Sons & Daughters",
-      "venueCode": "ET-LOC-00571",
+      "slug": "the-keefer-bar",
+      "name": "The Keefer Bar",
+      "venueCode": "ET-LOC-00282",
       "gaps": [
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "somni-restaurant-2",
-      "name": "Somni",
-      "venueCode": "ET-LOC-00572",
-      "gaps": [
-        "coords",
-        "taxonomy",
-        "venuePreferences",
-        "tripadvisorUrl"
-      ],
-      "complete": false
-    },
-    {
-      "slug": "wild-ble-restaurant-2",
-      "name": "Wild Blue",
-      "venueCode": "ET-LOC-00573",
-      "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
@@ -3433,31 +2884,273 @@
     {
       "slug": "the-pine-restaurant-2",
       "name": "The Pine",
-      "venueCode": "ET-LOC-00574",
+      "venueCode": "ET-LOC-00283",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "kato-restaurant-2",
-      "name": "Kato",
-      "venueCode": "ET-LOC-00575",
+      "slug": "the-public-house-2",
+      "name": "The Public House",
+      "venueCode": "ET-LOC-00284",
       "gaps": [
-        "taxonomy",
         "venuePreferences",
         "tripadvisorUrl"
       ],
       "complete": false
     },
     {
-      "slug": "dianes-place-restaurant-2",
-      "name": "Diane's Place",
-      "venueCode": "ET-LOC-00576",
+      "slug": "the-savory-project-2",
+      "name": "The Savory Project",
+      "venueCode": "ET-LOC-00285",
       "gaps": [
-        "taxonomy",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "the-st-regis-bar-jakarta-2",
+      "name": "The St. Regis Bar",
+      "venueCode": "ET-LOC-00286",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "three-x-co-2",
+      "name": "Three X Co",
+      "venueCode": "ET-LOC-00287",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "tlecan-3",
+      "name": "Tlecān",
+      "venueCode": "ET-LOC-00288",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "to-infinity-and-beyond-2",
+      "name": "To Infinity & Beyond",
+      "venueCode": "ET-LOC-00289",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "torrisi-restaurant-2",
+      "name": "Torrisi",
+      "venueCode": "ET-LOC-00290",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "tres-monos-2",
+      "name": "Tres Monos",
+      "venueCode": "ET-LOC-00291",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "trescha-restaurant",
+      "name": "Trescha",
+      "venueCode": "ET-LOC-00292",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "tresind-studio-restaurant-2",
+      "name": "Trèsind Studio",
+      "venueCode": "ET-LOC-00293",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "true-laurel",
+      "name": "True Laurel",
+      "venueCode": "ET-LOC-00294",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "tuju-restaurant",
+      "name": "Tuju",
+      "venueCode": "ET-LOC-00295",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "uliassi-restaurant-2",
+      "name": "Uliassi",
+      "venueCode": "ET-LOC-00296",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "vender-2",
+      "name": "Vender",
+      "venueCode": "ET-LOC-00297",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "vesper-2",
+      "name": "Vesper",
+      "venueCode": "ET-LOC-00298",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "viceversa",
+      "name": "Viceversa",
+      "venueCode": "ET-LOC-00299",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "villa-tor-c3-a9l-restaurant",
+      "name": "Villa Torél",
+      "venueCode": "ET-LOC-00300",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "virtu-3",
+      "name": "Virtù",
+      "venueCode": "ET-LOC-00301",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "vyn-restaurant-2",
+      "name": "Vyn",
+      "venueCode": "ET-LOC-00302",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "wana-yook-restaurant-2",
+      "name": "Wana Yook",
+      "venueCode": "ET-LOC-00303",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "wild-ble-restaurant-2",
+      "name": "Wild Blue",
+      "venueCode": "ET-LOC-00304",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "wing-restaurant-3",
+      "name": "Wing",
+      "venueCode": "ET-LOC-00305",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "yakoboku-2",
+      "name": "Yakoboku",
+      "venueCode": "ET-LOC-00306",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "yum-cha-restaurant",
+      "name": "Yum Cha",
+      "venueCode": "ET-LOC-00307",
+      "gaps": [
+        "coords",
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "zest-3",
+      "name": "Zest",
+      "venueCode": "ET-LOC-00308",
+      "gaps": [
+        "venuePreferences",
+        "tripadvisorUrl"
+      ],
+      "complete": false
+    },
+    {
+      "slug": "zlb23-2",
+      "name": "ZLB23",
+      "venueCode": "ET-LOC-00309",
+      "gaps": [
         "venuePreferences",
         "tripadvisorUrl"
       ],

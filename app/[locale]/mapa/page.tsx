@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import MapaPageClient from "@/components/map/MapaPageClient";
-import { listEditorialVenuesByContinent } from "@/lib/venues/catalog";
 import type { AppLocale } from "@/i18n/routing";
 
 export const revalidate = 3600;
@@ -22,9 +21,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function MapaPage({ params, searchParams }: Props) {
+export default function MapaPage({ params, searchParams }: Props) {
   setRequestLocale(params.locale);
-  const continentalSections = await listEditorialVenuesByContinent(50, params.locale);
   const initialSlug = searchParams?.slug?.trim() || null;
-  return <MapaPageClient continentalSections={continentalSections} initialSlug={initialSlug} />;
+  return <MapaPageClient initialSlug={initialSlug} />;
 }

@@ -9,6 +9,7 @@ export default async function AdminPostsPage() {
     orderBy: { updatedAt: "desc" },
     include: {
       author: { select: { email: true, name: true } },
+      editorialAuthor: { select: { name: true } },
     },
   });
 
@@ -19,7 +20,10 @@ export default async function AdminPostsPage() {
     published: post.published,
     isPremium: post.isPremium,
     updatedAt: post.updatedAt.toISOString(),
+    ingestionType: post.ingestionType,
+    sourceUrl: post.sourceUrl,
     author: post.author,
+    editorialAuthor: post.editorialAuthor,
   }));
 
   return (

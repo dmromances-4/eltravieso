@@ -23,6 +23,8 @@ const checks: Check[] = [
   { name: "Shop", path: "/shop", expectStatus: 200 },
   { name: "Comunidad", path: "/comunidad", expectStatus: 200 },
   { name: "Blog", path: "/blog", expectStatus: 200 },
+  { name: "Blog video section", path: "/blog?section=video", expectStatus: 200 },
+  { name: "Blog autores", path: "/blog/autores", expectStatus: 200 },
   { name: "Mapa", path: "/mapa", expectStatus: 200 },
   { name: "Mapa EN", path: "/en/mapa", expectStatus: 200 },
   { name: "Mapa deep link", path: "/mapa?slug=sips", expectStatus: 200 },

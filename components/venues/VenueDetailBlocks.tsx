@@ -24,7 +24,10 @@ function TagList({ items }: { items: string[] }) {
 }
 
 function PreferenceGroups({ venue }: { venue: VenuePublicDTO }) {
-  if (venue.venuePreferences.length === 0) return null;
+  const hasPrefs = venue.venuePreferences.length > 0;
+  const hasDressCode = Boolean(venue.dressCode?.trim());
+
+  if (!hasPrefs && !hasDressCode) return null;
 
   return (
     <section className="border-4 border-black bg-zinc-900 p-8 shadow-[6px_6px_0px_#000000]">
@@ -43,6 +46,11 @@ function PreferenceGroups({ venue }: { venue: VenuePublicDTO }) {
           );
         })}
         {venue.venuePreferences.includes("dress_code") && venue.dressCode ? (
+          <p className="font-mono text-sm text-slate-300">
+            <span className="text-slate-500">Dress code: </span>
+            {venue.dressCode}
+          </p>
+        ) : hasDressCode && !venue.venuePreferences.includes("dress_code") ? (
           <p className="font-mono text-sm text-slate-300">
             <span className="text-slate-500">Dress code: </span>
             {venue.dressCode}
@@ -66,7 +74,10 @@ export default function VenueDetailBlocks({ venue }: Props) {
     venue.awards.length > 0;
   const hasLinks = venue.instagramUrl || venue.tiktokUrl || venue.tripadvisorUrl || venue.theForkUrl;
 
-  if (!hasIdentity && !hasAmbiance && !hasValue && !hasLinks && venue.venuePreferences.length === 0) {
+  const hasPrefsSection =
+    venue.venuePreferences.length > 0 || Boolean(venue.dressCode?.trim());
+
+  if (!hasIdentity && !hasAmbiance && !hasValue && !hasLinks && !hasPrefsSection) {
     return null;
   }
 

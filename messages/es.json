@@ -310,7 +310,10 @@
     "continent": "Continente",
     "layer": "Capa",
     "searchPlaceholder": "Buscar local…",
-    "noResults": "No hay locales con estos filtros."
+    "noResults": "No hay locales con estos filtros.",
+    "loadMore": "Cargar más",
+    "showAll": "Mostrar todos",
+    "indexLoadError": "No se pudo cargar el directorio de locales."
   },
   "barOnline": {
     "title": "Bar Online",
@@ -403,6 +406,32 @@
     "terms": {
       "title": "Términos y condiciones",
       "metaDescription": "Términos y condiciones de uso del sitio."
+    }
+  },
+  "blog": {
+    "lead": "Historias de barra, secretos de destilación y las mejores voces gastronómicas de habla hispana.",
+    "voices": "Voces",
+    "voicesLead": "Escritores, críticos y narradores que definen la cultura líquida y la mesa en español.",
+    "allAuthors": "Todas las voces",
+    "backToBlog": "Volver al blog",
+    "authorProfile": "Perfil editorial",
+    "excerptBadge": "Extracto",
+    "readFullArticle": "Leer el artículo completo",
+    "watchOriginal": "Ver en el canal original",
+    "listenOriginal": "Escuchar en la fuente original",
+    "episode": "Episodio",
+    "duration": "Duración",
+    "originalSource": "fuente original",
+    "syndicationNotice": "Extracto publicado originalmente por {author} en {where}.",
+    "videoNotice": "Vídeo de {author}. Reproducido con enlace al canal original.",
+    "podcastNotice": "Episodio de podcast de {author}.",
+    "emptyWritten": "Pronto habrá artículos publicados por la comunidad y voces editoriales.",
+    "emptyVideo": "Aún no hay vídeos curados. Ejecuta sync:blog-syndication --kind video.",
+    "emptyPodcast": "Aún no hay episodios curados. Ejecuta sync:blog-syndication --kind podcast.",
+    "sections": {
+      "written": "Escrito",
+      "video": "Vídeo",
+      "podcast": "Podcast"
     }
   },
   "emails": {

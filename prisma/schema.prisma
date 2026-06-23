@@ -1055,30 +1055,103 @@ model StoryAnimationPrompt {
 // COMMUNITY — BLOG, FORUM, BAR ONLINE
 // ═══════════════════════════════════════════════════════════════════════════════
 
+enum EditorialAuthorTier {
+  COCKTAIL
+  GASTRONOMY
+  BOTH
+}
+
+enum EditorialContentKind {
+  VIDEO
+  PODCAST
+}
+
+model EditorialAuthor {
+  id               String              @id @default(uuid())
+  slug             String              @unique
+  name             String
+  tagline          String?
+  bio              String              @db.Text
+  country          String?
+  city             String?
+  specialties      String[]            @default([])
+  tier             EditorialAuthorTier @default(GASTRONOMY)
+  avatarUrl        String?
+  websiteUrl       String?
+  substackUrl      String?
+  twitterUrl       String?
+  writtenFeedUrls  String[]            @default([])
+  youtubeChannelId String?
+  podcastFeedUrls  String[]            @default([])
+  featured         Boolean             @default(false)
+  sortOrder        Int                 @default(0)
+  metadata         Json?
+  createdAt        DateTime            @default(now())
+  updatedAt        DateTime            @updatedAt
+
+  posts         BlogPost[]
+  curatedItems  EditorialCuratedItem[]
+
+  @@index([featured])
+  @@index([sortOrder])
+}
+
 model BlogPost {
-  id          String    @id @default(uuid())
-  title       String
-  slug        String    @unique
-  content     String    @db.Text
-  excerpt     String?   @db.Text
-  coverUrl    String?
-  tags        String[]
-  published   Boolean   @default(false)
-  isPremium   Boolean   @default(false)
-  publishedAt DateTime?
-  locale      String    @default("es")
-  metadata    Json?
-  authorId    String?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  id                String    @id @default(uuid())
+  title             String
+  slug              String    @unique
+  content           String    @db.Text
+  excerpt           String?   @db.Text
+  coverUrl          String?
+  tags              String[]
+  published         Boolean   @default(false)
+  isPremium         Boolean   @default(false)
+  publishedAt       DateTime?
+  locale            String    @default("es")
+  metadata          Json?
+  authorId          String?
+  editorialAuthorId String?
+  sourceUrl         String?   @unique
+  sourcePublishedAt DateTime?
+  ingestionType     String?
+  canonicalUrl      String?
+  createdAt         DateTime  @default(now())
+  updatedAt         DateTime  @updatedAt
 
   // Relations
-  author User? @relation(fields: [authorId], references: [id])
+  author          User?            @relation(fields: [authorId], references: [id])
+  editorialAuthor EditorialAuthor? @relation(fields: [editorialAuthorId], references: [id])
 
   @@index([slug])
   @@index([published])
   @@index([authorId])
+  @@index([editorialAuthorId])
   @@index([isPremium])
+  @@index([ingestionType])
+}
+
+model EditorialCuratedItem {
+  id                String               @id @default(uuid())
+  slug              String               @unique
+  kind              EditorialContentKind
+  title             String
+  summary           String?              @db.Text
+  embedUrl          String?
+  sourceUrl         String               @unique
+  coverUrl          String?
+  durationSecs      Int?
+  publishedAt       DateTime?
+  locale            String               @default("es")
+  editorialAuthorId String
+  metadata          Json?
+  createdAt         DateTime             @default(now())
+  updatedAt         DateTime             @updatedAt
+
+  editorialAuthor EditorialAuthor @relation(fields: [editorialAuthorId], references: [id])
+
+  @@index([kind])
+  @@index([editorialAuthorId])
+  @@index([publishedAt])
 }
 
 model ForumTopic {

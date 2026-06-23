@@ -10,6 +10,7 @@ const PUBLIC_PATHS = [
   "/alcoholes",
   "/biblioteca",
   "/blog",
+  "/blog/autores",
   "/mapa",
   "/pantalla",
   "/bar-online",

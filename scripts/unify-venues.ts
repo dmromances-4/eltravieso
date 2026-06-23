@@ -5,7 +5,6 @@
  */
 
 import { config } from "dotenv";
-import { execSync } from "child_process";
 import fs from "fs";
 import path from "path";
 import { resolve } from "path";
@@ -20,7 +19,7 @@ import {
 } from "@/lib/venues/canonical-venue";
 import { venueGuideEntryToNormalized } from "@/lib/venues/guide-from-db";
 import { venueGuideToDbFields } from "@/lib/venues/guide-to-db";
-import { mergeVenueGuides } from "@/lib/venues/merge-guide";
+import { normalizeCanonicalRegions } from "@/lib/venues/region-tags";
 import type { NormalizedVenueGuide } from "@/lib/venues/types";
 import { writeAuditReport } from "./lib/audit-output";
 import { VENUES_DATA_FILE } from "./seed-venues-guide";
@@ -28,7 +27,6 @@ import { VENUES_DATA_FILE } from "./seed-venues-guide";
 config({ path: resolve(process.cwd(), ".env.local") });
 config({ path: resolve(process.cwd(), ".env") });
 
-const RESTORE_COMMIT = "6570f3d";
 const dryRun = process.argv.includes("--dry-run");
 
 function loadJson(file: string): NormalizedVenueGuide[] {
@@ -36,20 +34,7 @@ function loadJson(file: string): NormalizedVenueGuide[] {
 }
 
 function restoreBaseJson(current: NormalizedVenueGuide[]): NormalizedVenueGuide[] {
-  if (current.length >= 500) return current;
-
-  console.log(`  JSON con ${current.length} entradas — restaurando desde ${RESTORE_COMMIT}…`);
-  const raw = execSync(`git show ${RESTORE_COMMIT}:data/venues-worlds50best.json`, {
-    encoding: "utf-8",
-    maxBuffer: 50 * 1024 * 1024,
-  });
-  const base = JSON.parse(raw) as NormalizedVenueGuide[];
-  const bySource = new Map(current.map((v) => [v.sourceUrl, v]));
-
-  return base.map((venue) => {
-    const richer = bySource.get(venue.sourceUrl);
-    return richer ? mergeVenueGuides(venue, richer) : venue;
-  });
+  return current;
 }
 
 function backupFiles(dataFile: string, timestamp: string) {
@@ -59,6 +44,30 @@ function backupFiles(dataFile: string, timestamp: string) {
   if (fs.existsSync(dataFile)) {
     fs.copyFileSync(dataFile, `${dataFile}.${timestamp}.bak`);
   }
+}
+
+async function normalizeAllDatabase(isDryRun: boolean): Promise<number> {
+  const rows = await prisma.venueGuideEntry.findMany();
+  let updated = 0;
+
+  for (const row of rows) {
+    const normalized = normalizeCanonicalRegions(venueGuideEntryToNormalized(row));
+    const coords = {
+      latitude: row.latitude,
+      longitude: row.longitude,
+      geocodeConfidence: row.geocodeConfidence,
+    };
+
+    if (!isDryRun) {
+      await prisma.venueGuideEntry.update({
+        where: { id: row.id },
+        data: venueGuideToDbFields(normalized, coords),
+      });
+    }
+    updated += 1;
+  }
+
+  return updated;
 }
 
 async function unifyDatabase(
@@ -151,7 +160,9 @@ export async function unifyVenues(options: { dryRun?: boolean } = {}) {
   backupFiles(dataFile, timestamp);
 
   const base = restoreBaseJson(current);
-  const { venues: unified, merges, identityMergeCount } = unifyVenueList(base);
+  const { venues: unified, merges, identityMergeCount } = unifyVenueList(
+    base.map((v) => normalizeCanonicalRegions(v)),
+  );
 
   const report = {
     generatedAt: new Date().toISOString(),
@@ -177,7 +188,8 @@ export async function unifyVenues(options: { dryRun?: boolean } = {}) {
   }
 
   const dbResult = await unifyDatabase(unified, timestamp, isDryRun);
-  console.log(`  BD: ${dbResult.updated} actualizados, ${dbResult.deleted} eliminados${isDryRun ? " (dry-run)" : ""}`);
+  const normalized = await normalizeAllDatabase(isDryRun);
+  console.log(`  BD: ${dbResult.updated} fusionados, ${dbResult.deleted} eliminados, ${normalized} regiones normalizadas${isDryRun ? " (dry-run)" : ""}`);
 
   return report;
 }

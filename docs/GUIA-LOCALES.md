@@ -6,10 +6,12 @@ Mapa interactivo y fichas SEO de bares y restaurantes destacados (World's 50 Bes
 
 | Ruta | Descripción |
 |------|-------------|
-| `/mapa` | Globo 3D MapLibre (fallback Leaflet 2D) con filtros y clustering |
+| `/mapa` | Globo 3D MapLibre (fallback Leaflet 2D) con filtros, búsqueda client-side y clustering |
 | `/locales/[slug]` | Ficha pública del local |
 
 > **Nota i18n:** el segmento `/locales/` en la URL es la **ficha del local** (venue), no el idioma. El idioma va en el prefijo opcional: `/en/mapa`, `/en/locales/[slug]`. Español por defecto sin prefijo (`/mapa`). Ver [`docs/GUIA-I18N.md`](GUIA-I18N.md).
+
+**Índice en `/mapa`:** orden editorial BARS → RESTAURANTS, luego rank global World's 50 Best y nombre; la búsqueda filtra lista y pins del mapa en el cliente.
 
 ## Cuenta de bar (afiliados)
 
@@ -33,6 +35,21 @@ Admin puede forzar plan: `PATCH /api/admin/bars/[id]/map-plan`.
 ## Pipeline de datos
 
 **Orden recomendado:** consolidar BD existente **antes** de scrapear locales nuevos. El scrape de World's 50 Best solo añade/actualiza entradas en JSON por `sourceUrl`; no rellena `venuePreferences`.
+
+### Requisitos previos (Windows)
+
+| Paso | Comando | Notas |
+|------|---------|-------|
+| Base de datos | `docker compose up -d postgres` **o** `npm run db:local` | Sin BD: `Can't reach database server at localhost:5433` |
+| `DATABASE_URL` | `.env.local` | Docker → puerto **5432**; embedded → **5433** |
+| Migraciones | `npx prisma migrate deploy` | Tras primera vez con BD nueva |
+| UTF-8 | Docker (recomendado en Windows) | Embedded Postgres antiguo puede usar `WIN1252` y fallar con locales asiáticos |
+
+Si `seed:venues` omite locales con error `WIN1252` / `22P05`: borra `.localpg/` y reinicia `npm run db:local`, o cambia a Docker en puerto 5432.
+
+`enrich:google` requiere `GOOGLE_PLACES_API_KEY` en `.env.local` (Places API **New**; no usar ADC/`setup_adc.sh`).
+
+Variables opcionales: `GOOGLE_PLACES_RATE_MS` (default 200), `GOOGLE_PLACES_AUTO_MIN_SCORE` (default 0.88), `GOOGLE_ENRICH_LIMIT`.
 
 ### Fase 1 — Auditoría y códigos (sin scrape)
 
@@ -111,6 +128,54 @@ npm run audit:venue-duplicates
 
 Sin CSV curado, `venuePreferences` no se rellenan de forma masiva (el scrape W50Best no las incluye).
 
+### Fase 3b — Google Places (opcional)
+
+Requiere `GOOGLE_PLACES_API_KEY` en `.env.local` con **Places API (New)** activada en Google Cloud. No uses ADC ni `setup_adc.sh` — el proyecto autentica con API key (`X-Goog-Api-Key`). **Nunca commitees la clave** (solo en `.env.local`, gitignored).
+
+```bash
+# Prueba de conexión
+npm run enrich:google -- --dry-run --limit=5
+
+# Sugerencias para revisión manual
+npm run enrich:google -- --suggest
+# → data/google-places-suggestions.csv
+# Copia filas verificadas a data/google-places-curated.csv (slug,googleBusinessId)
+
+# Importar IDs curados + enriquecer taxonomía/ubicación/web
+npm run enrich:google -- --import data/google-places-curated.csv
+
+# Auto-asignación solo alta confianza (score >= GOOGLE_PLACES_AUTO_MIN_SCORE)
+npm run enrich:google -- --discover --auto --dry-run --limit=50
+npm run enrich:google -- --discover --auto
+
+# Rellenar huecos en locales que ya tienen Place ID
+npm run enrich:google -- --only-missing
+```
+
+Campos que rellena (solo si faltan): `googleBusinessId`, `address`, coords, `externalWebsite`, `neighborhood`, `priceRange`, `establishmentTypes`, `venuePreferences`, `venueFeatures`. No pisa `photoUrl`, `history`, `verdict` ni taxonomía TripAdvisor existente.
+
+**Sin Google Places API:** usa heurísticas editoriales + CSV TripAdvisor (manual o `--taxonomy-only`).
+
+#### Enriquecimiento automático desde texto W50 (sin API)
+
+```bash
+npm run enrich:editorial -- --dry-run
+npm run enrich:editorial
+npm run enrich:editorial -- --limit=50
+```
+
+Módulo: `lib/venues/enrich-editorial-heuristics.ts`. Deriva `cuisineTypes`, `idealFor`, `venueFeatures`, `starDishes` y `awards` desde `history`/`verdict`. También se aplica al scrape vía `enrichGuideFromScrape`.
+
+#### Plantilla CSV TripAdvisor asistida
+
+```bash
+npm run prepare:tripadvisor-curated -- --limit=25 --europe
+# → data/tripadvisor-curated.csv (rellena tripadvisorUrl manualmente)
+
+# Solo taxonomía/preferencias (sin URL TripAdvisor aún):
+npm run enrich:tripadvisor -- --import data/tripadvisor-curated.csv --taxonomy-only
+```
+
 ### Fase 4 — Scrape para locales nuevos (usuario, al final)
 
 Solo cuando `audit:venue-duplicates` muestre 0 duplicados críticos de `sourceUrl` / `ET-LOC`:
@@ -162,8 +227,8 @@ npm run enrich:tripadvisor -- --import data/tripadvisor-curated.csv
 Plantilla CSV import:
 
 ```csv
-slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities
-sips,https://www.tripadvisor.es/...,4.5,,d12345678,ChIJ...,2,japanese|spanish,wheelchair_accessible|vegan_options
+slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities,features,awards
+sips,https://www.tripadvisor.es/...,4.5,,d12345678,ChIJ...,2,japanese|spanish,wheelchair_accessible|vegan_options,outdoor_seating|romantic,michelin
 ```
 
 Los afiliados editan Google y TripAdvisor en `/cuenta/bar`. El código `ET-LOC-*` se asigna automáticamente al guardar.
@@ -184,12 +249,14 @@ UI: edición en `/cuenta/bar` (`VenueDetailFieldsSection`), ficha pública `Venu
 
 Enriquecimiento futuro:
 
-- TripAdvisor: `lib/venues/enrich-taxonomy-mapper.ts` + columnas opcionales en CSV import (`priceLevel`, `cuisineLabels`, `amenities` separados por `|`)
-- Google Places: stub `lib/venues/enrich-google-places.ts` (`GOOGLE_PLACES_API_KEY`)
+- TripAdvisor: `lib/venues/enrich-taxonomy-mapper.ts` + columnas opcionales en CSV import (`priceLevel`, `cuisineLabels`, `amenities`, `features`, `awards` separados por `|`)
+- Heurísticas editoriales: `lib/venues/enrich-editorial-heuristics.ts` + `npm run enrich:editorial`
+- Google Places: `lib/venues/enrich-google-places.ts` + `lib/venues/google-place-match.ts` + `npm run enrich:google` (`--suggest`, `--import`, `--discover --auto`, `--only-missing`)
+- Unificación legacy ↔ taxonomía: `lib/venues/venue-profile-sync.ts` (venueType → establishmentTypes, vibeTags → idealFor/features, dressCode → dress_code)
 
 ```csv
-slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities
-sips,https://www.tripadvisor.es/...,4.5,,d12345678,ChIJ...,2,japanese|spanish,wheelchair_accessible|vegan_options
+slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities,features,awards
+sips,https://www.tripadvisor.es/...,4.5,,d12345678,ChIJ...,2,japanese|spanish,wheelchair_accessible|vegan_options,outdoor_seating|romantic,michelin
 ```
 
 ## Mapa 3D (MapLibre)

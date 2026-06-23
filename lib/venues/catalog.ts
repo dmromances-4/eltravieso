@@ -8,7 +8,10 @@ import {
   type VenuePublicDTO,
 } from "@/lib/venues/types";
 import { mergeVenueDetailFields } from "@/lib/venues/venue-detail-merge";
+import { applyVenueProfileSync } from "@/lib/venues/venue-profile-sync";
 import { dedupeMapVenues } from "@/lib/venues/map-dedup";
+import { buildRegionTags, primaryIndexContinent } from "@/lib/venues/region-tags";
+import { sortEditorialIndexVenues } from "@/lib/venues/sort-editorial-index";
 
 const venueDetailSelect = {
   establishmentTypes: true,
@@ -135,7 +138,7 @@ export function barToPublicDTO(
   const tripadvisorPlaceId = bar.tripadvisorPlaceId ?? bar.guideEntry?.tripadvisorPlaceId ?? null;
   const detail = mergeVenueDetailFields(bar, bar.guideEntry ?? null);
 
-  return {
+  return applyVenueProfileSync({
     id: bar.id,
     venueCode,
     slug: bar.slug,
@@ -176,13 +179,13 @@ export function barToPublicDTO(
     isPremium: bar.isPremium,
     mapPlan: bar.mapPlan,
     bookingWidgetEnabled: bar.bookingWidgetEnabled,
-  };
+  });
 }
 
 export function guideToPublicDTO(entry: VenueGuideEntry): VenuePublicDTO {
   const detail = mergeVenueDetailFields(null, entry);
 
-  return {
+  return applyVenueProfileSync({
     id: entry.id,
     venueCode: entry.venueCode,
     slug: entry.slug,
@@ -223,7 +226,7 @@ export function guideToPublicDTO(entry: VenueGuideEntry): VenuePublicDTO {
     isPremium: false,
     mapPlan: "FREE",
     bookingWidgetEnabled: false,
-  };
+  });
 }
 
 export async function getPublicVenueBySlug(
@@ -431,9 +434,73 @@ export async function listAllMapVenues(
   return dedupeMapVenues(affiliates, editorial);
 }
 
+export type EditorialIndexVenue = {
+  slug: string;
+  name: string;
+  city: string;
+  venueType: string;
+  worlds50bestRank: number;
+  worlds50bestCategory: string;
+  listScope: string;
+  regionalRank: number | null;
+  regionTags: string[];
+  venuePreferences: string[];
+};
+
 export async function listEditorialVenuesForIndex(
   limit = 50,
   continent?: VenueContinent | null,
+  locale: AppLocale = "es",
+): Promise<EditorialIndexVenue[]> {
+  const rows = await prisma.venueGuideEntry.findMany({
+    where: { isPublished: true },
+    select: {
+      slug: true,
+      name: true,
+      city: true,
+      venueType: true,
+      worlds50bestRank: true,
+      worlds50bestCategory: true,
+      listScope: true,
+      continent: true,
+      regionalRank: true,
+      additionalRankings: true,
+      venuePreferences: true,
+    },
+    orderBy: [
+      { listScope: "asc" },
+      { worlds50bestCategory: "asc" },
+      { worlds50bestRank: "asc" },
+      { regionalRank: "asc" },
+      { name: "asc" },
+    ],
+  });
+
+  const filtered = continent
+    ? rows.filter((e) => venueMatchesContinent(continent, e.continent, e.additionalRankings))
+    : rows;
+
+  const mapped = filtered.map((row) => {
+    const dto: EditorialIndexVenue = {
+      slug: row.slug,
+      name: row.name,
+      city: row.city,
+      venueType: row.venueType,
+      worlds50bestRank: row.worlds50bestRank,
+      worlds50bestCategory: row.worlds50bestCategory,
+      listScope: row.listScope,
+      regionalRank: row.regionalRank,
+      regionTags: buildRegionTags(row.additionalRankings, row.worlds50bestCategory),
+      venuePreferences: row.venuePreferences ?? [],
+    };
+    return localizeVenueDto(dto, locale);
+  });
+
+  return sortEditorialIndexVenues(mapped).slice(0, limit);
+}
+
+export async function listEditorialVenuesByContinent(
+  limitPerContinent = 50,
   locale: AppLocale = "es",
 ) {
   const rows = await prisma.venueGuideEntry.findMany({
@@ -445,26 +512,21 @@ export async function listEditorialVenuesForIndex(
       venueType: true,
       worlds50bestRank: true,
       worlds50bestCategory: true,
+      listScope: true,
       continent: true,
       regionalRank: true,
       additionalRankings: true,
+      venuePreferences: true,
     },
-    orderBy: [{ regionalRank: "asc" }, { worlds50bestRank: "asc" }],
+    orderBy: [
+      { listScope: "asc" },
+      { worlds50bestCategory: "asc" },
+      { worlds50bestRank: "asc" },
+      { regionalRank: "asc" },
+      { name: "asc" },
+    ],
   });
 
-  const filtered = continent
-    ? rows.filter((e) => venueMatchesContinent(continent, e.continent, e.additionalRankings))
-    : rows;
-
-  return filtered
-    .slice(0, limit)
-    .map(({ additionalRankings: _a, ...rest }) => localizeVenueDto(rest, locale));
-}
-
-export async function listEditorialVenuesByContinent(
-  limitPerContinent = 50,
-  locale: AppLocale = "es",
-) {
   const continents: VenueContinent[] = [
     "GLOBAL",
     "EUROPE",
@@ -473,12 +535,38 @@ export async function listEditorialVenuesByContinent(
     "LATIN_AMERICA",
   ];
 
-  const sections = await Promise.all(
-    continents.map(async (continent) => ({
-      continent,
-      venues: await listEditorialVenuesForIndex(limitPerContinent, continent, locale),
-    })),
+  const buckets = new Map<VenueContinent, EditorialIndexVenue[]>(
+    continents.map((c) => [c, []]),
   );
 
-  return sections.filter((s) => s.venues.length > 0);
+  for (const row of rows) {
+    const primary = primaryIndexContinent(row.continent, row.additionalRankings);
+    const bucket = buckets.get(primary);
+    if (!bucket || bucket.length >= limitPerContinent) continue;
+
+    bucket.push(
+      localizeVenueDto(
+        {
+          slug: row.slug,
+          name: row.name,
+          city: row.city,
+          venueType: row.venueType,
+          worlds50bestRank: row.worlds50bestRank,
+          worlds50bestCategory: row.worlds50bestCategory,
+          listScope: row.listScope,
+          regionalRank: row.regionalRank,
+          regionTags: buildRegionTags(row.additionalRankings, row.worlds50bestCategory),
+          venuePreferences: row.venuePreferences ?? [],
+        },
+        locale,
+      ),
+    );
+  }
+
+  return continents
+    .map((continent) => ({
+      continent,
+      venues: sortEditorialIndexVenues(buckets.get(continent) ?? []),
+    }))
+    .filter((s) => s.venues.length > 0);
 }

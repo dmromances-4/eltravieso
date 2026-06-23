@@ -1,5 +1,6 @@
 import type { Worlds50BestCategory } from "@prisma/client";
 import { slugFromDetailPath } from "@/lib/venues/unique-slug";
+import { enrichGuideFromScrape } from "@/lib/venues/venue-profile-sync";
 import type { NormalizedVenueGuide } from "@/lib/venues/types";
 
 export type W50ListItem = {
@@ -241,6 +242,19 @@ function parseCountryFromAddress(address: string): string | null {
   return parts.length > 1 ? parts[parts.length - 1] : null;
 }
 
+function extractSocialLinks(html: string): { instagramUrl: string | null; tiktokUrl: string | null } {
+  const instagramMatch = html.match(
+    /href="(https?:\/\/(?:www\.)?instagram\.com\/[a-zA-Z0-9._]+)\/?"/i,
+  );
+  const tiktokMatch = html.match(
+    /href="(https?:\/\/(?:www\.)?tiktok\.com\/@[a-zA-Z0-9._]+)\/?"/i,
+  );
+  return {
+    instagramUrl: instagramMatch?.[1] ?? null,
+    tiktokUrl: tiktokMatch?.[1] ?? null,
+  };
+}
+
 export function parseDetailPage(
   html: string,
   listItem: W50ListItem,
@@ -278,7 +292,9 @@ export function parseDetailPage(
     extractExternalWebsite(html, profileBlock) ??
     (jsonWebsite && isValidExternalUrl(jsonWebsite) ? jsonWebsite : null);
 
-  return {
+  const social = extractSocialLinks(html);
+
+  return enrichGuideFromScrape({
     slug,
     name,
     city: listItem.city,
@@ -293,7 +309,10 @@ export function parseDetailPage(
     worlds50bestCategory: category,
     sourceUrl,
     externalWebsite,
-  };
+    instagramUrl: social.instagramUrl,
+    tiktokUrl: social.tiktokUrl,
+    enrichmentSource: "worlds50best",
+  });
 }
 
 function nextUniqueSlug(baseSlug: string, used: Set<string>): string {

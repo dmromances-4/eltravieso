@@ -59,7 +59,8 @@ Imagina el proyecto como un local con varias plantas:
 | Agente IA | `/pro/tech-generator` | Profesionales | Generar receta con IA |
 | Biblioteca | `/biblioteca` | Todos | Libros de coctelería |
 | Alcoholes | `/alcoholes` | Todos | Enciclopedia de destilados |
-| Blog | `/blog` | Todos | Artículos editoriales |
+| Ficha alcohol | `/alcoholes/[slug]` | Todos | Ficha editorial (JSON canónico `data/alcohol-encyclopedia.json`, IDs `SP-*`) |
+| Blog | `/blog` | Todos | Hub editorial: Escrito / Vídeo / Podcast + voces hispanas (`docs/BLOG-EDITORIAL.md`) |
 | Comunidad | `/comunidad` | Usuarios | Foro de temas |
 | Mapa | `/mapa` | Todos | Globo 3D interactivo de locales (capas, filtros, enlace desde ficha) |
 | Ficha local | `/locales/[slug]` | Todos | Detalle de un bar/restaurante (gastronomía, preferencias, links) |
@@ -178,6 +179,7 @@ MARKETING_MOCK=true npm run smoke:marketing
 | `npm run scrape:products` | Scrapear URLs de productos |
 | `npm run scrape:venues` | Scrapear World's 50 Best |
 | `npm run import:spirits` | Importar destilados de retailers |
+| `npm run merge:alcohol-encyclopedia` | Fusionar `spirits-import.json` → `alcohol-encyclopedia.json` (IDs `SP-*`, dedup por `sourceUrl`) |
 | `npm run import:tmdb` | Importar cine/series en Pantalla |
 | `npm run sync:podcast-feeds` | Sincronizar podcasts RSS |
 

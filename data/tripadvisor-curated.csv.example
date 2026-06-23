@@ -1,2 +1,2 @@
-slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities
-sips,https://www.tripadvisor.es/Restaurant_Review-g187497-d12345678-Reviews-Sips-Barcelona_Catalonia.html,4.5,,d12345678,ChIJ...,2,japanese|spanish,wheelchair_accessible|vegan_options
+slug,tripadvisorUrl,rating,address,tripadvisorPlaceId,googleBusinessId,priceLevel,cuisineLabels,amenities,features,awards
+sips,https://www.tripadvisor.es/Restaurant_Review-g187497-d12345678-Reviews-Sips-Barcelona_Catalonia.html,4.5,,d12345678,ChIJ...,2,japanese|spanish,wheelchair_accessible|vegan_options,outdoor_seating|romantic,michelin
