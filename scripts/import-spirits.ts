@@ -318,6 +318,35 @@ function collectDecantaloBodebocaUrlsFromCatalog(limit: number): string[] {
   return urls;
 }
 
+function writeJsonAtomic(file: string, data: unknown): void {
+  const dir = path.dirname(file);
+  ensureDir(dir);
+  const tmp = path.join(dir, `.${path.basename(file)}.${process.pid}.tmp`);
+  const payload = `${JSON.stringify(data, null, 2)}\n`;
+  let lastError: unknown;
+  for (let attempt = 0; attempt < 8; attempt++) {
+    try {
+      fs.writeFileSync(tmp, payload, "utf-8");
+      if (fs.existsSync(file)) fs.rmSync(file, { force: true });
+      fs.renameSync(tmp, file);
+      return;
+    } catch (err) {
+      lastError = err;
+      try {
+        if (fs.existsSync(tmp)) fs.rmSync(tmp, { force: true });
+      } catch {
+        // ignore cleanup errors
+      }
+      const waitMs = 500 * (attempt + 1);
+      const start = Date.now();
+      while (Date.now() - start < waitMs) {
+        // brief pause before retry (OneDrive lock)
+      }
+    }
+  }
+  throw lastError;
+}
+
 function persistSpiritsBatch(
   output: string,
   batch: ImportedSpirit[],
@@ -325,7 +354,7 @@ function persistSpiritsBatch(
 ): { merged: ImportedSpirit[]; added: number; updated: number } {
   const existing = loadJson<ImportedSpirit[]>(output, []);
   const result = mergeSpiritCatalog(existing, batch, { overwrite });
-  fs.writeFileSync(output, `${JSON.stringify(result.merged, null, 2)}\n`, "utf-8");
+  writeJsonAtomic(output, result.merged);
   return result;
 }
 
@@ -406,7 +435,7 @@ async function main() {
     const productMerge = mergeSpiritCatalog(existingProducts, imported, {
       overwrite: args.overwrite,
     });
-    fs.writeFileSync(PRODUCTS_OUTPUT, `${JSON.stringify(productMerge.merged, null, 2)}\n`, "utf-8");
+    writeJsonAtomic(PRODUCTS_OUTPUT, productMerge.merged);
     console.log(
       `✓ ${PRODUCTS_OUTPUT} → ${productMerge.merged.length} productos (+${productMerge.added} nuevos)`
     );
@@ -414,11 +443,7 @@ async function main() {
     const existingEncyclopedia = loadJson<AlcoholRecord[]>(ENCYCLOPEDIA_OUTPUT, []);
     const spiritsForEncyclopedia = loadJson<ImportedSpirit[]>(args.output, []);
     const encyclopediaMerge = mergeSpiritRecords(existingEncyclopedia, spiritsForEncyclopedia);
-    fs.writeFileSync(
-      ENCYCLOPEDIA_OUTPUT,
-      `${JSON.stringify(encyclopediaMerge.merged, null, 2)}\n`,
-      "utf-8",
-    );
+    writeJsonAtomic(ENCYCLOPEDIA_OUTPUT, encyclopediaMerge.merged);
     console.log(
       `✓ ${ENCYCLOPEDIA_OUTPUT} → ${encyclopediaMerge.merged.length} entradas ` +
         `(+${encyclopediaMerge.added} nuevas, ~${encyclopediaMerge.updated} actualizadas)`,

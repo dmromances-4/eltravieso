@@ -9,6 +9,7 @@
 import fs from "fs";
 import path from "path";
 import alcoholData from "@/data/alcohol-encyclopedia.json";
+import { writeJsonAtomic } from "@/lib/alcohol/write-json-atomic";
 import type { AlcoholRecord } from "@/types/alcohol";
 import type { ImportedSpirit } from "@/lib/products/spirits-import";
 import {
@@ -43,7 +44,7 @@ function main() {
     return;
   }
 
-  fs.writeFileSync(CANON, `${JSON.stringify(merged, null, 2)}\n`, "utf8");
+  writeJsonAtomic(CANON, merged);
   console.log(`\nGuardado: ${CANON} (${merged.length} entradas)`);
 }
 

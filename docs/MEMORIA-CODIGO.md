@@ -180,6 +180,8 @@ MARKETING_MOCK=true npm run smoke:marketing
 | `npm run scrape:venues` | Scrapear World's 50 Best |
 | `npm run import:spirits` | Importar destilados de retailers |
 | `npm run merge:alcohol-encyclopedia` | Fusionar `spirits-import.json` → `alcohol-encyclopedia.json` (IDs `SP-*`, dedup por `sourceUrl`) |
+| `npm run audit:alcohol-encyclopedia` | Auditoría IDs, duplicados y cobertura del JSON canónico |
+| `npm run normalize:alcohol-encyclopedia` | Normalizar `productCode`, fusionar variantes estuche y rellenar ABV/imágenes |
 | `npm run import:tmdb` | Importar cine/series en Pantalla |
 | `npm run sync:podcast-feeds` | Sincronizar podcasts RSS |
 

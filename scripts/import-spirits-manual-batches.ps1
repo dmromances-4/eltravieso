@@ -23,7 +23,7 @@ for ($i = 0; $i -lt $all.Count; $i += $batchSize) {
   $end = [Math]::Min($i + $batchSize - 1, $all.Count - 1)
   $chunk = $all[$i..$end]
   $batchNum = [int]($i / $batchSize) + 1
-  Write-Host "=== Lote $batchNum — $($chunk.Count) URLs ==="
+  Write-Host "=== Lote $batchNum - $($chunk.Count) URLs ==="
   $log = Join-Path $root "logs\import-manual-batch-$batchNum.log"
   npm run import:spirits -- --urls @chunk --limit 6000 2>&1 | Tee-Object -FilePath $log -Append
   Start-Sleep -Seconds 15

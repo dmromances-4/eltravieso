@@ -123,7 +123,7 @@ export function importedSpiritToRecord(
       history_context_short: spirit.description?.slice(0, 120) ?? "—",
     },
     imageUrl: spirit.imageUrl ?? null,
-    sourceUrl: spirit.sourceUrl ?? spirit.metadata?.sourceUrl,
+    sourceUrl: spirit.sourceUrl ?? undefined,
     sourceRetailer: spirit.metadata?.retailer,
     linkedProductSlug: spirit.slug,
     updatedAt: new Date().toISOString(),
@@ -154,7 +154,7 @@ export function mergeSpiritRecords(
   let skippedDuplicates = 0;
 
   for (const spirit of incoming) {
-    const sourceUrl = spirit.sourceUrl ?? spirit.metadata?.sourceUrl;
+    const sourceUrl = spirit.sourceUrl ?? undefined;
     const identityKey = spiritIdentityKey({
       brand: spirit.metadata?.brand ?? spirit.title,
       name: spirit.title,

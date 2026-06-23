@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Link } from "@/i18n/navigation";
 import { getAlcoholBySlug, getAllAlcohols } from "@/lib/alcohol/catalog";
+import { formatAbv, isPlaceholderValue } from "@/lib/alcohol/format-abv";
 import SpiritCoverImage from "@/components/alcoholes/SpiritCoverImage";
 import { MetaChip } from "@/components/ui/MetaChip";
 import type { AppLocale } from "@/i18n/routing";
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!spirit) return { title: "Destilado no encontrado" };
   return {
     title: `${spirit.identity.name_exact} | Enciclopedia del Alcohol`,
-    description: spirit.didactic.history_context_short || spirit.didactic.history_context,
+    description: spirit.advanced.history_context_short || spirit.didactic.history_context,
     alternates: {
       languages: { es: `/alcoholes/${params.slug}`, en: `/en/alcoholes/${params.slug}` },
     },
@@ -33,6 +34,11 @@ export default function AlcoholDetailPage({ params }: Props) {
   if (!spirit) notFound();
 
   const code = spirit.productCode ?? spirit.id;
+  const abvLabel = formatAbv(spirit.technical.abv);
+  const showSensory =
+    !isPlaceholderValue(spirit.sensory.sight) ||
+    !isPlaceholderValue(spirit.sensory.nose) ||
+    !isPlaceholderValue(spirit.sensory.palate);
 
   return (
     <main className="min-h-screen bg-[#FAFAFA] pt-28 pb-24 text-slate-900">
@@ -51,7 +57,8 @@ export default function AlcoholDetailPage({ params }: Props) {
               <p className="eyebrow">{spirit.category}</p>
               <h1 className="text-display">{spirit.identity.name_exact}</h1>
               <p className="text-lg text-electric-blue">
-                {spirit.identity.brand} · {spirit.technical.abv}% ABV
+                {spirit.identity.brand}
+                {abvLabel ? ` · ${abvLabel}` : null}
               </p>
               <p className="font-mono text-xs uppercase tracking-widest text-slate-500">{code}</p>
               <div className="flex flex-wrap gap-2">
@@ -77,23 +84,31 @@ export default function AlcoholDetailPage({ params }: Props) {
               <p className="text-sm text-slate-400">{spirit.denomination_of_origin}</p>
             </section>
 
+            {showSensory ? (
             <section className="space-y-4 rounded-card border border-white/10 bg-[var(--surface-panel)] p-6 sm:p-8">
               <h2 className="text-title">Notas de cata</h2>
               <ul className="space-y-2 text-body text-slate-300">
-                <li>
-                  <span className="text-slate-500">Vista: </span>
-                  {spirit.sensory.sight}
-                </li>
-                <li>
-                  <span className="text-slate-500">Nariz: </span>
-                  {spirit.sensory.nose}
-                </li>
-                <li>
-                  <span className="text-slate-500">Boca: </span>
-                  {spirit.sensory.palate}
-                </li>
+                {!isPlaceholderValue(spirit.sensory.sight) ? (
+                  <li>
+                    <span className="text-slate-500">Vista: </span>
+                    {spirit.sensory.sight}
+                  </li>
+                ) : null}
+                {!isPlaceholderValue(spirit.sensory.nose) ? (
+                  <li>
+                    <span className="text-slate-500">Nariz: </span>
+                    {spirit.sensory.nose}
+                  </li>
+                ) : null}
+                {!isPlaceholderValue(spirit.sensory.palate) ? (
+                  <li>
+                    <span className="text-slate-500">Boca: </span>
+                    {spirit.sensory.palate}
+                  </li>
+                ) : null}
               </ul>
             </section>
+            ) : null}
 
             <section className="space-y-4 rounded-card border border-white/10 bg-[var(--surface-panel)] p-6 sm:p-8">
               <h2 className="text-title">Mixología</h2>

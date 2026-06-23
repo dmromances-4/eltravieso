@@ -62,6 +62,8 @@
     "import:tmdb": "tsx scripts/import-tmdb.ts",
     "import:spirits": "tsx scripts/import-spirits.ts",
     "merge:alcohol-encyclopedia": "tsx scripts/merge-alcohol-encyclopedia.ts",
+    "audit:alcohol-encyclopedia": "tsx scripts/audit-alcohol-encyclopedia.ts",
+    "normalize:alcohol-encyclopedia": "tsx scripts/normalize-alcohol-encyclopedia.ts",
     "generate:spirit-images": "tsx scripts/generate-spirit-images.ts",
     "sync:podcast-feeds": "tsx scripts/sync-podcast-feeds.ts",
     "seed:blog-authors": "tsx --env-file=.env.local scripts/seed-blog-authors.ts",
