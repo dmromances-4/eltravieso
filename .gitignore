@@ -39,6 +39,11 @@ public/uploads/
 .tmp/
 .tmp-recipe-videos/
 
+# Utilidades locales de disco / temporales (no commitear)
+.tmp-*
+FORMATEAR-WD-ELEMENTS-ADMIN.bat
+scripts/fix-wd-elements.ps1
+
 # Archivos pesados
 public/images/*
 !public/images/logo.png

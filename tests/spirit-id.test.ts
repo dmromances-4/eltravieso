@@ -98,4 +98,33 @@ describe("spirit-id", () => {
       volumeMl: 700,
     })).toContain("nueva");
   });
+
+  it("skips -estuche import when base slug already exists", () => {
+    const existing: AlcoholRecord[] = [
+      {
+        ...baseRecord,
+        slug: "don-julio-anejo",
+        id: "SP-0100",
+        productCode: "SP-0100",
+        sourceUrl: "https://example.com/don-julio-anejo",
+      },
+    ];
+    const incoming: ImportedSpirit[] = [
+      {
+        title: "Don Julio Añejo (Estuche)",
+        slug: "don-julio-anejo-estuche",
+        description: "Tequila",
+        category: "ALCOHOL",
+        priceCents: 5000,
+        sourceUrl: "https://example.com/don-julio-anejo-estuche",
+        format: "UNIT",
+        volumeMl: 700,
+        metadata: { retailer: "vilaviniteca", brand: "Don Julio" },
+      },
+    ];
+    const { merged, added, skippedDuplicates } = mergeSpiritRecords(existing, incoming);
+    expect(merged).toHaveLength(1);
+    expect(added).toBe(0);
+    expect(skippedDuplicates).toBe(1);
+  });
 });

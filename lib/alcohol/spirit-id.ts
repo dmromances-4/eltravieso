@@ -1,5 +1,6 @@
 import type { AlcoholRecord } from "@/types/alcohol";
 import type { ImportedSpirit } from "@/lib/products/spirits-import";
+import { baseSlugForPackaging } from "@/lib/alcohol/normalize-encyclopedia";
 
 function normalizeText(value: string): string {
   return value
@@ -155,6 +156,19 @@ export function mergeSpiritRecords(
 
   for (const spirit of incoming) {
     const sourceUrl = spirit.sourceUrl ?? undefined;
+    const packagingBase = baseSlugForPackaging(spirit.slug);
+    if (packagingBase && bySlug.has(packagingBase)) {
+      const canonical = bySlug.get(packagingBase)!;
+      if (spirit.imageUrl && !canonical.imageUrl) {
+        canonical.imageUrl = spirit.imageUrl;
+        canonical.updatedAt = new Date().toISOString();
+        updated += 1;
+      } else {
+        skippedDuplicates += 1;
+      }
+      continue;
+    }
+
     const identityKey = spiritIdentityKey({
       brand: spirit.metadata?.brand ?? spirit.title,
       name: spirit.title,

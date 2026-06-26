@@ -4,6 +4,7 @@ import { useMemo, useState } from 'react';
 import AlcoholCard from '@/components/AlcoholCard';
 import type { AlcoholRecord } from '@/types/alcohol';
 
+const INDEX_PAGE_SIZE = 60;
 const LETTERS = ['#', ...'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('')];
 
 function normalizeText(value: string) {
@@ -60,6 +61,10 @@ export default function AlcoholesClient({ alcohols }: AlcoholesClientProps) {
       return true;
     });
   }, [alcohols, query, activeLetter, activeCategory]);
+
+  const [showAll, setShowAll] = useState(false);
+  const hasActiveFilter = Boolean(query.trim() || activeLetter || activeCategory);
+  const visible = hasActiveFilter || showAll ? filtered : filtered.slice(0, INDEX_PAGE_SIZE);
 
   return (
     <div className="mx-auto max-w-7xl px-6 sm:px-8">
@@ -144,10 +149,22 @@ export default function AlcoholesClient({ alcohols }: AlcoholesClientProps) {
       </div>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        {filtered.map((alcohol) => (
-          <AlcoholCard key={alcohol.id} alcohol={alcohol} />
+        {visible.map((alcohol) => (
+          <AlcoholCard key={alcohol.slug} alcohol={alcohol} />
         ))}
       </div>
+
+      {!hasActiveFilter && !showAll && filtered.length > INDEX_PAGE_SIZE ? (
+        <div className="mt-10 flex justify-center">
+          <button
+            type="button"
+            onClick={() => setShowAll(true)}
+            className="rounded-pill border border-electric-blue/40 bg-electric-blue/10 px-8 py-3 text-sm font-bold uppercase tracking-widest text-electric-blue transition hover:bg-electric-blue/20"
+          >
+            Mostrar todos ({filtered.length})
+          </button>
+        </div>
+      ) : null}
 
       {filtered.length === 0 && (
         <p className="py-12 text-center text-slate-400">No hay resultados para tu búsqueda.</p>

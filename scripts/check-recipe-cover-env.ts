@@ -2,6 +2,7 @@
 /**
  * Valida claves de portadas (Gemini, Pexels, Unsplash) con ping real a cada API.
  * Uso: npm run check:recipe-covers
+ *      npm run check:recipe-covers -- --quick   (sin prueba de generación Imagen)
  */
 import { config } from "dotenv";
 import { resolve } from "path";
@@ -12,7 +13,7 @@ config({ path: resolve(process.cwd(), ".env") });
 
 type CheckResult = { name: string; status: "ok" | "warn" | "fail" | "skip"; detail: string };
 
-async function checkGemini(): Promise<CheckResult> {
+async function checkGemini(quick: boolean): Promise<CheckResult> {
   const key = readEnvKey("GEMINI_API_KEY");
   if (!key) {
     return {
@@ -25,6 +26,32 @@ async function checkGemini(): Promise<CheckResult> {
   const hint = geminiKeyFormatHint(key);
   if (hint) {
     return { name: "GEMINI_API_KEY", status: "warn", detail: hint };
+  }
+
+  if (quick) {
+    try {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models?key=${encodeURIComponent(key)}`;
+      const res = await fetch(url, { signal: AbortSignal.timeout(10000) });
+      if (res.status === 200) {
+        return { name: "GEMINI_API_KEY", status: "ok", detail: "Clave presente (check rápido, API responde 200)." };
+      }
+      if (res.status === 400 || res.status === 403) {
+        const body = await res.text();
+        const snippet = body.slice(0, 120).replace(/\s+/g, " ");
+        return {
+          name: "GEMINI_API_KEY",
+          status: "fail",
+          detail: `Rechazada (${res.status}). ${snippet || "Revisa la clave en AI Studio."}`,
+        };
+      }
+      return { name: "GEMINI_API_KEY", status: "warn", detail: `Respuesta inesperada HTTP ${res.status}.` };
+    } catch (error) {
+      return {
+        name: "GEMINI_API_KEY",
+        status: "warn",
+        detail: `No se pudo verificar en red: ${error instanceof Error ? error.message : error}`,
+      };
+    }
   }
 
   try {
@@ -162,14 +189,65 @@ async function checkUnsplash(): Promise<CheckResult> {
   }
 }
 
+async function checkSupabase(): Promise<CheckResult> {
+  const url = readEnvKey("SUPABASE_URL");
+  const key = readEnvKey("SUPABASE_SERVICE_ROLE_KEY");
+  const bucket = process.env.SUPABASE_RECIPE_COVERS_BUCKET ?? "recipe-covers";
+
+  if (!url || !key) {
+    return {
+      name: "SUPABASE_STORAGE",
+      status: "fail",
+      detail: "Faltan SUPABASE_URL o SUPABASE_SERVICE_ROLE_KEY en .env.local.",
+    };
+  }
+
+  try {
+    const listUrl = `${url.replace(/\/$/, "")}/storage/v1/bucket`;
+    const res = await fetch(listUrl, {
+      headers: { Authorization: `Bearer ${key}`, apikey: key },
+      signal: AbortSignal.timeout(10000),
+    });
+    if (!res.ok) {
+      return {
+        name: "SUPABASE_STORAGE",
+        status: "fail",
+        detail: `Storage API HTTP ${res.status}.`,
+      };
+    }
+    const buckets = (await res.json()) as { name: string }[];
+    const found = buckets.some((b) => b.name === bucket);
+    return {
+      name: "SUPABASE_STORAGE",
+      status: found ? "ok" : "warn",
+      detail: found
+        ? `Bucket "${bucket}" disponible.`
+        : `API OK pero bucket "${bucket}" no listado (créalo en Supabase).`,
+    };
+  } catch (error) {
+    return {
+      name: "SUPABASE_STORAGE",
+      status: "warn",
+      detail: `Error de red: ${error instanceof Error ? error.message : error}`,
+    };
+  }
+}
+
 async function main() {
+  const quick = process.argv.includes("--quick");
   console.log("\n=== Portadas de recetas — check claves ===\n");
+  if (quick) console.log("(modo --quick: sin prueba de generación Imagen)\n");
 
   if (process.env.AI_MOCK === "true") {
     console.log("⚠ AI_MOCK=true — el batch usará SVG de marca, no Gemini/Imagen.\n");
   }
 
-  const results = await Promise.all([checkGemini(), checkPexels(), checkUnsplash()]);
+  const results = await Promise.all([
+    checkGemini(quick),
+    checkPexels(),
+    checkUnsplash(),
+    checkSupabase(),
+  ]);
   let hasFail = false;
 
   for (const r of results) {
